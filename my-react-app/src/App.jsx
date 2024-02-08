@@ -26,8 +26,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="monster"> 
-        <Route index element={<Monster />} action={monsterAction}></Route>
+      <Route path="monster" action={monsterAction}> 
+        <Route index element={<Monster />}></Route>
         <Route path=":mobId" element={<MonsterDetail />}></Route>
       </Route > 
 
