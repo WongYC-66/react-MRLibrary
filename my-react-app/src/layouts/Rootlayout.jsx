@@ -140,8 +140,8 @@ export default function RootLayout() {
         <Breadcrumbs/>
 
       </header>
-      <main className="text-bg-secondary p-4  flex-fill">
-        <div className="p-4 mx-3 bg-body-tertiary rounded-5">
+      <main className="text-bg-secondary p-4 flex-fill d-flex justify-content-center">
+        <div className="tab-card container p-4 mx-3 bg-body-tertiary rounded-5">
           <Outlet />
         </div>
       </main>

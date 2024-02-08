@@ -5,6 +5,7 @@ import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 import Image from "react-bootstrap/Image"
+import Pagination from 'react-bootstrap/Pagination';
 // 
 import data_mob from "../../data/data_Mob.json"
 import data_mobStats from "../../data/data_MobStats.json"
@@ -56,7 +57,7 @@ export default function Monster() {
             // https://maplelegends.com/static/images/lib/monster/0100100.png
             return (
                 <tr>
-                    <td><Image src={imgUrl} fluid/></td>
+                    <td><Image src={imgUrl} fluid alt="Image not found" /></td>
                     <td>{x[1].name}</td>
                     <td>{x[1].level}</td>
                     <td>{x[1].exp}0</td>
@@ -71,8 +72,8 @@ export default function Monster() {
     }
 
     return (
-        <div className="monster">
-            {/* { name && <p>Hi, {name}!</p>} */}
+        <div className="monster d-flex flex-column">
+            {/* DropDown filter and Search input and Button */}
             <Form method="post" action="/monster">
 
                 <Table className="text-center" borderless>
@@ -110,11 +111,11 @@ export default function Monster() {
                     </tbody>
                 </Table>
 
-                <div className="d-flex">
+                <div className="d-flex px-2">
                     <FormBS.Control
+                        className="me-3"
                         type="search"
                         placeholder=" Search ..."
-                        className="me-3"
                         aria-label="Search"
                         data-bs-theme="light"
                         name="searchName"
@@ -140,6 +141,15 @@ export default function Monster() {
                 </tbody>
             </Table>
 
+            {/* Pagination */}
+            <Pagination className="d-flex justify-content-center">
+                <Pagination.First />
+                <Pagination.Item>{1}</Pagination.Item>
+                <Pagination.Item active>{12}</Pagination.Item>
+                <Pagination.Item>{13}</Pagination.Item>
+                <Pagination.Item>{20}</Pagination.Item>
+                <Pagination.Last />
+            </Pagination>
         </div>
 
     )
