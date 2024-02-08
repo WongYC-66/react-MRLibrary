@@ -1,5 +1,5 @@
-import { useSearchParams, Form, redirect } from "react-router-dom"
-import { useEffect } from "react"
+import { useSearchParams, Form, redirect, useLocation, Link } from "react-router-dom"
+import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
@@ -11,7 +11,8 @@ import data_mob from "../../data/data_Mob.json"
 import data_mobStats from "../../data/data_MobStats.json"
 
 export default function Monster() {
-    // console.log(...searchParams)
+    const [searchParams] = useSearchParams()
+
     useEffect(() => {
         Object.entries(data_mob).forEach(mob => {
             const mobId = mob[0]
@@ -23,7 +24,6 @@ export default function Monster() {
     }, [])
 
     const filterMobList = (data_mobStats) => {
-        const [searchParams] = useSearchParams()
         if (searchParams.size) { // If URL has query param, filter ...
             const filterOption = Object.fromEntries([...searchParams.entries()])
             const searchTerm = filterOption.search.toLowerCase()
@@ -50,13 +50,16 @@ export default function Monster() {
     }
 
     const renderMobList = (data_mobStats) => {
-        data_mobStats = data_mobStats.slice(0, 10)
+        const pageNum = Object.fromEntries([...searchParams.entries()]).page || 1
+        console.log({pageNum})
+        data_mobStats = data_mobStats.slice((pageNum - 1) * 10 , 10)
+
         console.log(data_mobStats)
         return data_mobStats.map(x => {
             const imgUrl = `https://maplelegends.com/static/images/lib/monster/${x[0].padStart(7, 0)}.png`
             // https://maplelegends.com/static/images/lib/monster/0100100.png
             return (
-                <tr>
+                <tr key={x[0]}>
                     <td><Image src={imgUrl} fluid alt="Image not found" /></td>
                     <td>{x[1].name}</td>
                     <td>{x[1].level}</td>
@@ -69,6 +72,38 @@ export default function Monster() {
 
     const updateResult = (data_mobStats) => {
         return renderMobList(filterMobList(data_mobStats))
+    }
+
+    const updatePagination = (data_mobStats) => {
+        const [searchParams] = useSearchParams()
+        const currentPage = Number(Object.fromEntries([...searchParams.entries()])?.page) || 1
+
+        const urlPathname = useLocation().pathname
+        const urlSearch = useLocation().search || `?filter=any&order=id&sort=ascending&search=`
+        const lastPageIndex = Math.ceil(filterMobList(data_mobStats).length / 10)
+
+        let pageButtonArr = []
+        for (let i = -1; i < 4; i++) {
+            if (currentPage + i > lastPageIndex) return
+            const obj = {
+                pathname: `${urlPathname}`,
+                search: `?page=${currentPage + i}&${urlSearch.slice(1,)}`,
+                text: currentPage + i
+            }
+            pageButtonArr.push(obj)
+        }
+        pageButtonArr = pageButtonArr.filter(x => x.text >= 1)
+        // console.log({ lastPageIndex, pageButtonArr })
+
+        return (
+            <>
+                {/* <Pagination.First /> */}
+                {pageButtonArr.map(x =>
+                    <Pagination.Item href={x.pathname + x.search} key={x.text}>{x.text}</Pagination.Item>
+                )}
+
+                {/* <Pagination.Last /> */}
+            </>);
     }
 
     return (
@@ -143,12 +178,7 @@ export default function Monster() {
 
             {/* Pagination */}
             <Pagination className="d-flex justify-content-center">
-                <Pagination.First />
-                <Pagination.Item>{1}</Pagination.Item>
-                <Pagination.Item active>{12}</Pagination.Item>
-                <Pagination.Item>{13}</Pagination.Item>
-                <Pagination.Item>{20}</Pagination.Item>
-                <Pagination.Last />
+                {updatePagination(data_mobStats)}
             </Pagination>
         </div>
 
@@ -170,6 +200,6 @@ export const monsterAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = `/monster?filter=${submission.filterBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
+    const actionUrl = `/monster?page=1&filter=${submission.filterBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
     return redirect(actionUrl)
 }
