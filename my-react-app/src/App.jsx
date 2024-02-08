@@ -8,6 +8,7 @@ import {
 // pages
 import Home from './pages/Home.jsx'
 import Monster, { monsterAction } from './pages/Monster.jsx'
+import MonsterDetail from './pages/MonsterDetail.jsx'
 import Faq from './pages/help/Faq.jsx'
 import Contact from './pages/help/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -25,7 +26,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="monster" element={<Monster />} action={monsterAction} > 
+      <Route path="monster"> 
+        <Route index element={<Monster />} action={monsterAction}></Route>
+        <Route path=":mobId" element={<MonsterDetail />}></Route>
       </Route > 
 
       {/* <Route path="careers" element={< CareersLayout />} errorElement={< CareersError />}>

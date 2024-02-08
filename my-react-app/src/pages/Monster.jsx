@@ -1,4 +1,4 @@
-import { useSearchParams, Form, redirect, useLocation } from "react-router-dom"
+import { useSearchParams, Form, redirect, useLocation, NavLink, Link } from "react-router-dom"
 import { LinkContainer } from 'react-router-bootstrap'
 import { useState, useEffect } from "react"
 // 
@@ -63,12 +63,21 @@ export default function Monster() {
         filteredMobList = filteredMobList.slice(sliceStartIndex, sliceEndIndex)
 
         return filteredMobList.map(x => {
-            const imgUrl = `https://maplelegends.com/static/images/lib/monster/${x[0].padStart(7, 0)}.png`
+            const mobId = x[0]
+            const imgUrl = `https://maplelegends.com/static/images/lib/monster/${mobId.padStart(7, 0)}.png`
             // https://maplelegends.com/static/images/lib/monster/0100100.png
             return (
                 <tr key={x[0]}>
-                    <td><Image src={imgUrl} fluid alt="Image not found" /></td>
-                    <td>{x[1].name}</td>
+                    <td>
+                        <Link to={`/monster/id=${mobId}`}>
+                            <Image src={imgUrl} fluid alt="Image not found" />
+                        </Link>
+                    </td>
+                    <td>
+                        <Link to={`/monster/id=${mobId}`}>
+                            {x[1].name}
+                        </Link>
+                    </td>
                     <td>{x[1].level}</td>
                     <td>{parseInt(x[1].exp * 3.2)}</td>
                     <td>{x[1].maxHP}</td>
@@ -82,7 +91,6 @@ export default function Monster() {
     }
 
     const updatePagination = () => {
-        console.log('running update_pagination...')
         const [searchParams] = useSearchParams()
         const currentPage = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
 
@@ -103,8 +111,8 @@ export default function Monster() {
 
         return (
             <>
-                <LinkContainer to={{ pathname: urlPathname, search: `?page=1&${urlSearch.slice(1,).replace(/page=\d+&/, "")}`}} key={1}>
-                    <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;"/>
+                <LinkContainer to={{ pathname: urlPathname, search: `?page=1&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key={1}>
+                    <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" />
                 </LinkContainer>
 
                 {pageButtonArr.map(x =>
@@ -113,7 +121,7 @@ export default function Monster() {
                     </LinkContainer>
                 )}
 
-                <LinkContainer to={{ pathname: urlPathname, search: `?page=${lastPageIndex}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}`}} key={lastPageIndex}>
+                <LinkContainer to={{ pathname: urlPathname, search: `?page=${lastPageIndex}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key={lastPageIndex}>
                     <Pagination.Last />
                 </LinkContainer>
             </>);
@@ -193,6 +201,7 @@ export default function Monster() {
             <Pagination className="d-flex justify-content-center">
                 {updatePagination()}
             </Pagination>
+
         </div>
 
     )
