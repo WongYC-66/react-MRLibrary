@@ -155,7 +155,7 @@ export function MapIdDataFormatting(obj) {
 
             y.children.forEach(z => {            // streetName, mapName, mapDesc
                 let property = z.attributes.name
-                if(property !== "streetName" && property !== "mapName") return // stops if not
+                if (property !== "streetName" && property !== "mapName") return // stops if not
                 let propertyValue = legacyTextCheck(z.attributes.value)
                 newObj[property] = propertyValue
             })
@@ -175,21 +175,21 @@ export function GearStatsDataFormatting(objArr) {
 
     objArr.forEach(x => {
         x = x.root
-        const itemId = parseInt(x.attributes.name.split('.')[0]) 
+        const itemId = parseInt(x.attributes.name.split('.')[0])
         // 
         // if(itemId != "1452017") return
         console.log(`formatting : ${itemId}`)
         // console.log(x)
         // console.log(inspect(x, { colors: true, depth: Infinity }));
-        const stats = {} 
+        const stats = {}
         // 
         const unwantedStats = ["icon", "iconRaw", "cash", "medalTag", "notSale", "price", "tradeBlock"]
-        x = x.children.find(y => y.attributes.name === "info") 
+        x = x.children.find(y => y.attributes.name === "info")
         x.children.forEach(y => {
             // console.log(y)
             let key = y.attributes.name
             let value = y.attributes.value
-            if(unwantedStats.some(z => key === z)) return // if property is one of unwantedStats, skip
+            if (unwantedStats.some(z => key === z)) return // if property is one of unwantedStats, skip
             stats[key] = value  // {key1 : value1, key2: value2}
         })
         //  Category are based on item Id range
@@ -210,22 +210,22 @@ export function MobStatsDataFormatting(objArr) {
     console.log("running MobStatsDataFormatting")
     const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
     let x = objArr[0]
-    
+
     objArr.forEach(x => {
         x = x.root
-        const mobId = parseInt(x.attributes.name.split('.')[0]) 
+        const mobId = parseInt(x.attributes.name.split('.')[0])
         // if(mobId != 8800002) return
         console.log(`formatting : ${mobId}`)
-        const stats = {} 
+        const stats = {}
         // console.log(inspect(x, { colors: true, depth: Infinity }));
         // 
-        const unwantedStats = ["skill", "default", "publicReward", "explosiveReward", "summonType", "fs", "hpTagColor", "hpTagBgcolor", "buff", "defaultHP", "defaultMP", "rareItemDropLevel", "category", "noFlip", "hpRecovery", "mpRecovery", "noFlip", "firstAttack", "noregen", "bodyAttack", "speed"]
-        x = x.children.find(y => y.attributes.name === "info") 
+        const unwantedStats = ["skill", "default", "publicReward", "explosiveReward", "summonType", "fs", "hpTagColor", "hpTagBgcolor", "buff", "defaultHP", "defaultMP", "rareItemDropLevel", "category", "noFlip", "noFlip", "firstAttack", "noregen", "bodyAttack"]
+        x = x.children.find(y => y.attributes.name === "info")
         x.children.forEach(y => {
             // console.log(y)
             let key = y.attributes.name
             let value = y.attributes.value
-            if(unwantedStats.some(z => key === z)) return // if property is one of unwantedStats, skip
+            if (unwantedStats.some(z => key === z)) return // if property is one of unwantedStats, skip
             stats[key] = value  // {key1 : value1, key2: value2}
         })
         simpleData[mobId] = stats // {id : {key1 : value1, key2: value2}}
@@ -233,6 +233,37 @@ export function MobStatsDataFormatting(objArr) {
     return simpleData
 }
 
+export function MapMobCountDataFormatting(objArr) {
+    // for img.xml from Map.Wz ONLY
+    // Create better data-structure
+    console.log("running MapMobCountDataFormatting")
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    // let x = objArr[0].root.children
+    // console.log(x)
+
+    // return
+
+    objArr.forEach(x => {
+        x = x.root
+        const mapId = parseInt(x.attributes.name.split('.')[0])
+        // if (mapId != 240040511) return
+        console.log(`formatting : ${mapId}`)
+        const stats = {}
+        // console.log(inspect(x, { colors: true, depth: Infinity }));
+        // 
+        x = x.children.find(y => y.attributes.name === "life")
+        if(!x) return
+        x = x.children.map(y => y.children.find(z => z.attributes.value.match(/.{7}/))).map(y => y.attributes.value)
+        if(x.length <= 0) return
+        x.forEach(y => stats[y] = (stats[y] || 0) + 1)
+        // console.log(stats)
+        simpleData[mapId] = stats // {id : {key1 : value1, key2: value2}}
+        return
+    })
+    console.log(simpleData)
+    return simpleData
+}
 // module.exports = {
 //     MBdataFormatting,
 //     MobIdDataFormatting,
