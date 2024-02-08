@@ -13,11 +13,11 @@ import Image from 'react-bootstrap/Image'
 
 export default function RootLayout() {
   return (
-    <div className="root-layout bg-body-tertiary d-flex flex-column vh-100" data-bs-theme="dark">
+    <div className="root-layout bg-body-tertiary d-flex flex-column vh-100 " data-bs-theme="dark">
 
       <ScrollRestoration />
 
-      <header>
+      <header >
         {/* <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
           <NavLink to="help">Help</NavLink>
@@ -26,7 +26,7 @@ export default function RootLayout() {
         <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
           <Container fluid>
             <LinkContainer to="/">
-              <Navbar.Brand className="w-25" ><Image src="/logov5.webp" fluid /></Navbar.Brand>
+              <Navbar.Brand className="w-25" ><Image src="/logov5.webp" width="175px"/></Navbar.Brand>
             </LinkContainer>
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -141,7 +141,7 @@ export default function RootLayout() {
 
       </header>
       <main className="text-bg-secondary p-4 flex-fill d-flex justify-content-center">
-        <div className="tab-card container p-4 mx-3 bg-body-tertiary rounded-5">
+        <div className="tab-card container-sm p-4 mx-4 bg-body-tertiary rounded-5">
           <Outlet />
         </div>
       </main>
