@@ -34,7 +34,7 @@ export const careerDetailsLoader = async ({ params }) => {
     return res
 }
 
-import { careers } from "../../../data/db.json"
+// import { careers } from "../../../data/db.json"
 const fetchDetailsSimulation = (id, millisec) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => resolve(careers[id]), millisec)

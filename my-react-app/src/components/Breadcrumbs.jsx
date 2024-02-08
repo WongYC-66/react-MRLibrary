@@ -1,26 +1,28 @@
-import { useLocation, Link } from "react-router-dom"
-
+import { useLocation } from "react-router-dom"
+// 
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { LinkContainer } from 'react-router-bootstrap'
+// 
 export default function Breadcrumbs() {
     const location = useLocation()
-    // console.log(location)
     let currentLink = ''
-
     const crumbs = location.pathname.split('/')
         .filter(crumb => crumb !== '')
         .map(crumb => {
             currentLink += `/${crumb}`
-            // console.log(currentLink)
-
             return (
-                <div className="crumb" key={crumb}>
-                    <Link to={currentLink}>{crumb}</Link>
-                </div>
+                <LinkContainer to={currentLink} key={crumb}>
+                    <Breadcrumb.Item >{crumb}</Breadcrumb.Item>
+                </LinkContainer>
             )
         })
 
     return (
-        <div className="breadcrumbs">
-            {crumbs}
-        </div>
+        <Breadcrumb className="ps-3">
+            <LinkContainer to="/">
+                <Breadcrumb.Item>home</Breadcrumb.Item>
+            </LinkContainer>
+            {crumbs}             {/* render breadcrumb from url location  */}
+        </Breadcrumb>
     )
 }
