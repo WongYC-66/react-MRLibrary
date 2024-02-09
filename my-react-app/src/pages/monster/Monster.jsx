@@ -8,8 +8,8 @@ import Table from "react-bootstrap/Table"
 import Image from "react-bootstrap/Image"
 import Pagination from 'react-bootstrap/Pagination';
 // 
-import data_mob from "../../data/data_Mob.json"
-import data_mobStats from "../../data/data_MobStats.json"
+import data_mob from "../../../data/data_Mob.json"
+import data_mobStats from "../../../data/data_MobStats.json"
 
 export default function Monster() {
     const [mobLibrary, setMobLibrary] = useState({})
@@ -211,14 +211,14 @@ const renderImageWithMobId = (mobId) => {
     const ImageComponent = <Image src="abc" id={`image-${mobId}`} fluid alt="Image not found" />
 
     findGoodImgUrl({ id: mobId }).then(x => {
-        console.log("resolving x , src will be :", x)
+        // console.log("resolving x , src will be :", x)
         document.getElementById(`image-${mobId}`).src = x
     })
 
     return ImageComponent
 }
 
-import data_fixMobImg from "../fixImgData/data_fixMobImg.json"
+import data_fixMobImg from "./data_fixMobImg.json"
 const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x), Object.values(x)]))
 const findGoodImgUrl = ({ id }) => {
 

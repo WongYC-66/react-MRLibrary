@@ -12,11 +12,11 @@ import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 // 
-import data_mob from "../../data/data_Mob.json"
-import data_mobStats from "../../data/data_MobStats.json"
-import data_MB from "../../data/data_MB.json"
-import data_MapMobCount from "../../data/data_MapMobCount.json"
-import data_Map from "../../data/data_Map.json"
+import data_mob from "../../../data/data_Mob.json"
+import data_mobStats from "../../../data/data_MobStats.json"
+import data_MB from "../../../data/data_MB.json"
+import data_MapMobCount from "../../../data/data_MapMobCount.json"
+import data_Map from "../../../data/data_Map.json"
 
 export default function MonsterDetail() {
 
@@ -182,10 +182,10 @@ const renderTableOfMap = (mapArr) => {
     )
 }
 
-import data_Eqp from "../../data/data_Eqp.json"
-import data_Consume from "../../data/data_Consume.json"
-import data_Ins from "../../data/data_Ins.json"
-import data_Etc from "../../data/data_Etc.json"
+import data_Eqp from "../../../data/data_Eqp.json"
+import data_Consume from "../../../data/data_Consume.json"
+import data_Ins from "../../../data/data_Ins.json"
+import data_Etc from "../../../data/data_Etc.json"
 const renderSortedDrops = (dropsArr) => {
     if (!dropsArr) return ""
     const EquipDrops = []

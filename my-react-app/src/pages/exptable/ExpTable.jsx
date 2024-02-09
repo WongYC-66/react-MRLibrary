@@ -1,6 +1,6 @@
 import Table from 'react-bootstrap/Table';
 // 
-import data_ExpTable from "../../data/data_ExpTable.json"
+import data_ExpTable from "../../../data/data_ExpTable.json"
 
 export default function ExpTable() {
 
