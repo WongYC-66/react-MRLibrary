@@ -253,13 +253,56 @@ export function MapMobCountDataFormatting(objArr) {
         // console.log(inspect(x, { colors: true, depth: Infinity }));
         // 
         x = x.children.find(y => y.attributes.name === "life")
-        if(!x) return
+        if (!x) return
         x = x.children.map(y => y.children.find(z => z.attributes.value.match(/.{7}/))).map(y => y.attributes.value)
-        if(x.length <= 0) return
+        if (x.length <= 0) return
         x.forEach(y => stats[y] = (stats[y] || 0) + 1)
         // console.log(stats)
         simpleData[mapId] = stats // {id : {key1 : value1, key2: value2}}
         return
+    })
+    console.log(simpleData)
+    return simpleData
+}
+
+export function ItemStatsDataFormatting(objArr) {
+    // for img.xml from Item.Wz ONLY
+    // Create better data-structure
+    console.log("running ItemStatsDataFormatting")
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    // return
+
+    objArr.forEach(x => {
+        x = x.root.children
+        x.forEach(y => {
+            // item
+            const stats = {}
+            const itemId = parseInt(y.attributes.name)
+            console.log(`formatting : ${itemId}`)
+            // if (itemId !== 2002010) return
+            y = y.children
+            const unwantedStats = ["icon", "iconRaw"]
+            const info = y.find(z => z.attributes.name === 'info').children
+            info.forEach(z => {
+                if (unwantedStats.includes(z.attributes.name)) return
+                let key = z.attributes.name
+                let value = z.attributes.value
+                stats[key] = value
+            })
+            // 
+            const spec = y.find(z => z.attributes.name === 'spec')?.children
+            spec && spec.forEach(z => {
+                if (unwantedStats.includes(z.attributes.name)) return
+                let key = z.attributes.name
+                let value = z.attributes.value
+                stats[key] = value
+                
+            })
+            // console.log(stats)
+            simpleData[itemId] = stats // {id : {key1 : value1, key2: value2}}
+        })
+        // 
     })
     console.log(simpleData)
     return simpleData

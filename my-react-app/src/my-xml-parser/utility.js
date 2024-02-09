@@ -42,6 +42,9 @@ export async function parseXMLinBulk(dirPath, option = "") {
     if(option === "Map"){
         subPaths = ["Map0", "Map1", "Map2", "Map3", "Map5", "Map6", "Map7", "Map8", "Map9"]
     }
+    if(option === "Items"){
+        subPaths = ["Consume", "Install", "Etc"]
+    }
     // const subPaths = ["Weapon"] // debugging purpose only
 
     // get list of xml path from 

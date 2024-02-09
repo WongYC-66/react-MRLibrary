@@ -18,6 +18,7 @@ import { MBdataFormatting,
     MapIdDataFormatting,
     GearStatsDataFormatting,
     MapMobCountDataFormatting,
+    ItemStatsDataFormatting
 } from './dataFormatting.js';
 
 async function MB() {
@@ -86,6 +87,12 @@ async function Map_MobCount() {
     diskWriter(path.join(__dirname, "../../data/", 'data_MapMobCount.json'), simpleData)
 }
 
+async function ItemStats() {
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Items"), "Items")
+    const simpleData = ItemStatsDataFormatting(objArr)
+    diskWriter(path.join(__dirname, "../../data/", 'data_ItemStats.json'), simpleData)
+}
+
 function main() {
     // MB()
     // MB_MapOnly()
@@ -96,8 +103,9 @@ function main() {
     // Ins()
     // Maps()
     // GearStats() // Read multiple IMG files in multiple folders
+    // MobStats()
     // Map_MobCount()
-    Map_MobCount()
+    ItemStats()
 }
 
 main()
