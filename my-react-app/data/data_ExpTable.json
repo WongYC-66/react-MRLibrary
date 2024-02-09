@@ -1,0 +1,1002 @@
+[
+    {
+        "level": " 1 ",
+        "exp": " 15 ",
+        "accumulatedExp": " -   "
+    },
+    {
+        "level": " 2 ",
+        "exp": " 34 ",
+        "accumulatedExp": " 15 "
+    },
+    {
+        "level": " 3 ",
+        "exp": " 57 ",
+        "accumulatedExp": " 49 "
+    },
+    {
+        "level": " 4 ",
+        "exp": " 92 ",
+        "accumulatedExp": " 106 "
+    },
+    {
+        "level": " 5 ",
+        "exp": " 135 ",
+        "accumulatedExp": " 198 "
+    },
+    {
+        "level": " 6 ",
+        "exp": " 372 ",
+        "accumulatedExp": " 333 "
+    },
+    {
+        "level": " 7 ",
+        "exp": " 560 ",
+        "accumulatedExp": " 705 "
+    },
+    {
+        "level": " 8 ",
+        "exp": " 840 ",
+        "accumulatedExp": " 1,265 "
+    },
+    {
+        "level": " 9 ",
+        "exp": " 1,242 ",
+        "accumulatedExp": " 2,105 "
+    },
+    {
+        "level": " 10 ",
+        "exp": " 1,144 ",
+        "accumulatedExp": " 3,347 "
+    },
+    {
+        "level": " 11 ",
+        "exp": " 1,573 ",
+        "accumulatedExp": " 4,491 "
+    },
+    {
+        "level": " 12 ",
+        "exp": " 2,144 ",
+        "accumulatedExp": " 6,064 "
+    },
+    {
+        "level": " 13 ",
+        "exp": " 2,800 ",
+        "accumulatedExp": " 8,208 "
+    },
+    {
+        "level": " 14 ",
+        "exp": " 3,640 ",
+        "accumulatedExp": " 11,008 "
+    },
+    {
+        "level": " 15 ",
+        "exp": " 4,700 ",
+        "accumulatedExp": " 14,648 "
+    },
+    {
+        "level": " 16 ",
+        "exp": " 5,893 ",
+        "accumulatedExp": " 19,348 "
+    },
+    {
+        "level": " 17 ",
+        "exp": " 7,360 ",
+        "accumulatedExp": " 25,241 "
+    },
+    {
+        "level": " 18 ",
+        "exp": " 9,144 ",
+        "accumulatedExp": " 32,601 "
+    },
+    {
+        "level": " 19 ",
+        "exp": " 11,120 ",
+        "accumulatedExp": " 41,745 "
+    },
+    {
+        "level": " 20 ",
+        "exp": " 13,477 ",
+        "accumulatedExp": " 52,865 "
+    },
+    {
+        "level": " 21 ",
+        "exp": " 16,268 ",
+        "accumulatedExp": " 66,342 "
+    },
+    {
+        "level": " 22 ",
+        "exp": " 19,320 ",
+        "accumulatedExp": " 82,610 "
+    },
+    {
+        "level": " 23 ",
+        "exp": " 22,880 ",
+        "accumulatedExp": " 101,930 "
+    },
+    {
+        "level": " 24 ",
+        "exp": " 27,008 ",
+        "accumulatedExp": " 124,810 "
+    },
+    {
+        "level": " 25 ",
+        "exp": " 31,477 ",
+        "accumulatedExp": " 151,818 "
+    },
+    {
+        "level": " 26 ",
+        "exp": " 36,600 ",
+        "accumulatedExp": " 183,295 "
+    },
+    {
+        "level": " 27 ",
+        "exp": " 42,444 ",
+        "accumulatedExp": " 219,895 "
+    },
+    {
+        "level": " 28 ",
+        "exp": " 48,720 ",
+        "accumulatedExp": " 262,339 "
+    },
+    {
+        "level": " 29 ",
+        "exp": " 55,813 ",
+        "accumulatedExp": " 311,059 "
+    },
+    {
+        "level": " 30 ",
+        "exp": " 63,800 ",
+        "accumulatedExp": " 366,872 "
+    },
+    {
+        "level": " 31 ",
+        "exp": " 86,784 ",
+        "accumulatedExp": " 430,672 "
+    },
+    {
+        "level": " 32 ",
+        "exp": " 98,208 ",
+        "accumulatedExp": " 517,456 "
+    },
+    {
+        "level": " 33 ",
+        "exp": " 110,932 ",
+        "accumulatedExp": " 615,664 "
+    },
+    {
+        "level": " 34 ",
+        "exp": " 124,432 ",
+        "accumulatedExp": " 726,596 "
+    },
+    {
+        "level": " 35 ",
+        "exp": " 139,372 ",
+        "accumulatedExp": " 851,028 "
+    },
+    {
+        "level": " 36 ",
+        "exp": " 155,865 ",
+        "accumulatedExp": " 990,400 "
+    },
+    {
+        "level": " 37 ",
+        "exp": " 173,280 ",
+        "accumulatedExp": " 1,146,265 "
+    },
+    {
+        "level": " 38 ",
+        "exp": " 192,400 ",
+        "accumulatedExp": " 1,319,545 "
+    },
+    {
+        "level": " 39 ",
+        "exp": " 213,345 ",
+        "accumulatedExp": " 1,511,945 "
+    },
+    {
+        "level": " 40 ",
+        "exp": " 235,372 ",
+        "accumulatedExp": " 1,725,290 "
+    },
+    {
+        "level": " 41 ",
+        "exp": " 259,392 ",
+        "accumulatedExp": " 1,960,662 "
+    },
+    {
+        "level": " 42 ",
+        "exp": " 285,532 ",
+        "accumulatedExp": " 2,220,054 "
+    },
+    {
+        "level": " 43 ",
+        "exp": " 312,928 ",
+        "accumulatedExp": " 2,505,586 "
+    },
+    {
+        "level": " 44 ",
+        "exp": " 342,624 ",
+        "accumulatedExp": " 2,818,514 "
+    },
+    {
+        "level": " 45 ",
+        "exp": " 374,760 ",
+        "accumulatedExp": " 3,161,138 "
+    },
+    {
+        "level": " 46 ",
+        "exp": " 408,336 ",
+        "accumulatedExp": " 3,535,898 "
+    },
+    {
+        "level": " 47 ",
+        "exp": " 445,544 ",
+        "accumulatedExp": " 3,944,234 "
+    },
+    {
+        "level": " 48 ",
+        "exp": " 483,532 ",
+        "accumulatedExp": " 4,389,778 "
+    },
+    {
+        "level": " 49 ",
+        "exp": " 524,160 ",
+        "accumulatedExp": " 4,873,310 "
+    },
+    {
+        "level": " 50 ",
+        "exp": " 567,772 ",
+        "accumulatedExp": " 5,397,470 "
+    },
+    {
+        "level": " 51 ",
+        "exp": " 598,886 ",
+        "accumulatedExp": " 5,965,242 "
+    },
+    {
+        "level": " 52 ",
+        "exp": " 631,704 ",
+        "accumulatedExp": " 6,564,128 "
+    },
+    {
+        "level": " 53 ",
+        "exp": " 666,321 ",
+        "accumulatedExp": " 7,195,832 "
+    },
+    {
+        "level": " 54 ",
+        "exp": " 702,836 ",
+        "accumulatedExp": " 7,862,153 "
+    },
+    {
+        "level": " 55 ",
+        "exp": " 741,351 ",
+        "accumulatedExp": " 8,564,989 "
+    },
+    {
+        "level": " 56 ",
+        "exp": " 781,976 ",
+        "accumulatedExp": " 9,306,340 "
+    },
+    {
+        "level": " 57 ",
+        "exp": " 824,828 ",
+        "accumulatedExp": " 10,088,316 "
+    },
+    {
+        "level": " 58 ",
+        "exp": " 870,028 ",
+        "accumulatedExp": " 10,913,144 "
+    },
+    {
+        "level": " 59 ",
+        "exp": " 917,625 ",
+        "accumulatedExp": " 11,783,172 "
+    },
+    {
+        "level": " 60 ",
+        "exp": " 967,995 ",
+        "accumulatedExp": " 12,700,797 "
+    },
+    {
+        "level": " 61 ",
+        "exp": " 1,021,041 ",
+        "accumulatedExp": " 13,668,792 "
+    },
+    {
+        "level": " 62 ",
+        "exp": " 1,076,994 ",
+        "accumulatedExp": " 14,689,833 "
+    },
+    {
+        "level": " 63 ",
+        "exp": " 1,136,013 ",
+        "accumulatedExp": " 15,766,827 "
+    },
+    {
+        "level": " 64 ",
+        "exp": " 1,198,266 ",
+        "accumulatedExp": " 16,902,840 "
+    },
+    {
+        "level": " 65 ",
+        "exp": " 1,263,930 ",
+        "accumulatedExp": " 18,101,106 "
+    },
+    {
+        "level": " 66 ",
+        "exp": " 1,333,194 ",
+        "accumulatedExp": " 19,365,036 "
+    },
+    {
+        "level": " 67 ",
+        "exp": " 1,406,252 ",
+        "accumulatedExp": " 20,698,230 "
+    },
+    {
+        "level": " 68 ",
+        "exp": " 1,483,314 ",
+        "accumulatedExp": " 22,104,482 "
+    },
+    {
+        "level": " 69 ",
+        "exp": " 1,564,600 ",
+        "accumulatedExp": " 23,587,796 "
+    },
+    {
+        "level": " 70 ",
+        "exp": " 1,650,340 ",
+        "accumulatedExp": " 25,152,396 "
+    },
+    {
+        "level": " 71 ",
+        "exp": " 1,740,778 ",
+        "accumulatedExp": " 26,802,736 "
+    },
+    {
+        "level": " 72 ",
+        "exp": " 1,836,173 ",
+        "accumulatedExp": " 28,543,514 "
+    },
+    {
+        "level": " 73 ",
+        "exp": " 1,936,794 ",
+        "accumulatedExp": " 30,379,687 "
+    },
+    {
+        "level": " 74 ",
+        "exp": " 2,042,930 ",
+        "accumulatedExp": " 32,316,481 "
+    },
+    {
+        "level": " 75 ",
+        "exp": " 2,154,882 ",
+        "accumulatedExp": " 34,359,411 "
+    },
+    {
+        "level": " 76 ",
+        "exp": " 2,272,970 ",
+        "accumulatedExp": " 36,514,293 "
+    },
+    {
+        "level": " 77 ",
+        "exp": " 2,397,528 ",
+        "accumulatedExp": " 38,787,263 "
+    },
+    {
+        "level": " 78 ",
+        "exp": " 2,528,912 ",
+        "accumulatedExp": " 41,184,791 "
+    },
+    {
+        "level": " 79 ",
+        "exp": " 2,667,496 ",
+        "accumulatedExp": " 43,713,703 "
+    },
+    {
+        "level": " 80 ",
+        "exp": " 2,813,674 ",
+        "accumulatedExp": " 46,381,199 "
+    },
+    {
+        "level": " 81 ",
+        "exp": " 2,967,863 ",
+        "accumulatedExp": " 49,194,873 "
+    },
+    {
+        "level": " 82 ",
+        "exp": " 3,130,502 ",
+        "accumulatedExp": " 52,162,736 "
+    },
+    {
+        "level": " 83 ",
+        "exp": " 3,302,053 ",
+        "accumulatedExp": " 55,293,238 "
+    },
+    {
+        "level": " 84 ",
+        "exp": " 3,483,005 ",
+        "accumulatedExp": " 58,595,291 "
+    },
+    {
+        "level": " 85 ",
+        "exp": " 3,673,873 ",
+        "accumulatedExp": " 62,078,296 "
+    },
+    {
+        "level": " 86 ",
+        "exp": " 3,875,201 ",
+        "accumulatedExp": " 65,752,169 "
+    },
+    {
+        "level": " 87 ",
+        "exp": " 4,087,562 ",
+        "accumulatedExp": " 69,627,370 "
+    },
+    {
+        "level": " 88 ",
+        "exp": " 4,311,559 ",
+        "accumulatedExp": " 73,714,932 "
+    },
+    {
+        "level": " 89 ",
+        "exp": " 4,547,832 ",
+        "accumulatedExp": " 78,026,491 "
+    },
+    {
+        "level": " 90 ",
+        "exp": " 4,797,053 ",
+        "accumulatedExp": " 82,574,323 "
+    },
+    {
+        "level": " 91 ",
+        "exp": " 5,059,931 ",
+        "accumulatedExp": " 87,371,376 "
+    },
+    {
+        "level": " 92 ",
+        "exp": " 5,337,215 ",
+        "accumulatedExp": " 92,431,307 "
+    },
+    {
+        "level": " 93 ",
+        "exp": " 5,629,694 ",
+        "accumulatedExp": " 97,768,522 "
+    },
+    {
+        "level": " 94 ",
+        "exp": " 5,938,202 ",
+        "accumulatedExp": " 103,398,216 "
+    },
+    {
+        "level": " 95 ",
+        "exp": " 6,263,614 ",
+        "accumulatedExp": " 109,336,418 "
+    },
+    {
+        "level": " 96 ",
+        "exp": " 6,606,860 ",
+        "accumulatedExp": " 115,600,032 "
+    },
+    {
+        "level": " 97 ",
+        "exp": " 6,968,915 ",
+        "accumulatedExp": " 122,206,892 "
+    },
+    {
+        "level": " 98 ",
+        "exp": " 7,350,811 ",
+        "accumulatedExp": " 129,175,807 "
+    },
+    {
+        "level": " 99 ",
+        "exp": " 7,753,635 ",
+        "accumulatedExp": " 136,526,618 "
+    },
+    {
+        "level": " 100 ",
+        "exp": " 8,178,534 ",
+        "accumulatedExp": " 144,280,253 "
+    },
+    {
+        "level": " 101 ",
+        "exp": " 8,626,718 ",
+        "accumulatedExp": " 152,458,787 "
+    },
+    {
+        "level": " 102 ",
+        "exp": " 9,099,462 ",
+        "accumulatedExp": " 161,085,505 "
+    },
+    {
+        "level": " 103 ",
+        "exp": " 9,598,112 ",
+        "accumulatedExp": " 170,184,967 "
+    },
+    {
+        "level": " 104 ",
+        "exp": " 10,124,088 ",
+        "accumulatedExp": " 179,783,079 "
+    },
+    {
+        "level": " 105 ",
+        "exp": " 10,678,888 ",
+        "accumulatedExp": " 189,907,167 "
+    },
+    {
+        "level": " 106 ",
+        "exp": " 11,264,090 ",
+        "accumulatedExp": " 200,586,055 "
+    },
+    {
+        "level": " 107 ",
+        "exp": " 11,881,362 ",
+        "accumulatedExp": " 211,850,145 "
+    },
+    {
+        "level": " 108 ",
+        "exp": " 12,532,461 ",
+        "accumulatedExp": " 223,731,507 "
+    },
+    {
+        "level": " 109 ",
+        "exp": " 13,219,239 ",
+        "accumulatedExp": " 236,263,968 "
+    },
+    {
+        "level": " 110 ",
+        "exp": " 13,943,653 ",
+        "accumulatedExp": " 249,483,207 "
+    },
+    {
+        "level": " 111 ",
+        "exp": " 14,707,765 ",
+        "accumulatedExp": " 263,426,860 "
+    },
+    {
+        "level": " 112 ",
+        "exp": " 15,513,750 ",
+        "accumulatedExp": " 278,134,625 "
+    },
+    {
+        "level": " 113 ",
+        "exp": " 16,363,902 ",
+        "accumulatedExp": " 293,648,375 "
+    },
+    {
+        "level": " 114 ",
+        "exp": " 17,260,644 ",
+        "accumulatedExp": " 310,012,277 "
+    },
+    {
+        "level": " 115 ",
+        "exp": " 18,206,527 ",
+        "accumulatedExp": " 327,272,921 "
+    },
+    {
+        "level": " 116 ",
+        "exp": " 19,204,245 ",
+        "accumulatedExp": " 345,479,448 "
+    },
+    {
+        "level": " 117 ",
+        "exp": " 20,256,637 ",
+        "accumulatedExp": " 364,683,693 "
+    },
+    {
+        "level": " 118 ",
+        "exp": " 21,366,700 ",
+        "accumulatedExp": " 384,940,330 "
+    },
+    {
+        "level": " 119 ",
+        "exp": " 22,537,594 ",
+        "accumulatedExp": " 406,307,030 "
+    },
+    {
+        "level": " 120 ",
+        "exp": " 23,772,654 ",
+        "accumulatedExp": " 428,844,624 "
+    },
+    {
+        "level": " 121 ",
+        "exp": " 25,075,395 ",
+        "accumulatedExp": " 452,617,278 "
+    },
+    {
+        "level": " 122 ",
+        "exp": " 26,449,526 ",
+        "accumulatedExp": " 477,692,673 "
+    },
+    {
+        "level": " 123 ",
+        "exp": " 27,898,960 ",
+        "accumulatedExp": " 504,142,199 "
+    },
+    {
+        "level": " 124 ",
+        "exp": " 29,427,822 ",
+        "accumulatedExp": " 532,041,159 "
+    },
+    {
+        "level": " 125 ",
+        "exp": " 31,040,466 ",
+        "accumulatedExp": " 561,468,981 "
+    },
+    {
+        "level": " 126 ",
+        "exp": " 32,741,483 ",
+        "accumulatedExp": " 592,509,447 "
+    },
+    {
+        "level": " 127 ",
+        "exp": " 34,535,716 ",
+        "accumulatedExp": " 625,250,930 "
+    },
+    {
+        "level": " 128 ",
+        "exp": " 36,428,273 ",
+        "accumulatedExp": " 659,786,646 "
+    },
+    {
+        "level": " 129 ",
+        "exp": " 38,424,542 ",
+        "accumulatedExp": " 696,214,919 "
+    },
+    {
+        "level": " 130 ",
+        "exp": " 40,530,206 ",
+        "accumulatedExp": " 734,639,461 "
+    },
+    {
+        "level": " 131 ",
+        "exp": " 42,751,262 ",
+        "accumulatedExp": " 775,169,667 "
+    },
+    {
+        "level": " 132 ",
+        "exp": " 45,094,030 ",
+        "accumulatedExp": " 817,920,929 "
+    },
+    {
+        "level": " 133 ",
+        "exp": " 47,565,183 ",
+        "accumulatedExp": " 863,014,959 "
+    },
+    {
+        "level": " 134 ",
+        "exp": " 50,171,755 ",
+        "accumulatedExp": " 910,580,142 "
+    },
+    {
+        "level": " 135 ",
+        "exp": " 52,921,167 ",
+        "accumulatedExp": " 960,751,897 "
+    },
+    {
+        "level": " 136 ",
+        "exp": " 55,821,246 ",
+        "accumulatedExp": " 1,013,673,064 "
+    },
+    {
+        "level": " 137 ",
+        "exp": " 58,880,250 ",
+        "accumulatedExp": " 1,069,494,310 "
+    },
+    {
+        "level": " 138 ",
+        "exp": " 62,106,888 ",
+        "accumulatedExp": " 1,128,374,560 "
+    },
+    {
+        "level": " 139 ",
+        "exp": " 65,510,344 ",
+        "accumulatedExp": " 1,190,481,448 "
+    },
+    {
+        "level": " 140 ",
+        "exp": " 69,100,311 ",
+        "accumulatedExp": " 1,255,991,792 "
+    },
+    {
+        "level": " 141 ",
+        "exp": " 72,887,008 ",
+        "accumulatedExp": " 1,325,092,103 "
+    },
+    {
+        "level": " 142 ",
+        "exp": " 76,881,216 ",
+        "accumulatedExp": " 1,397,979,111 "
+    },
+    {
+        "level": " 143 ",
+        "exp": " 81,094,306 ",
+        "accumulatedExp": " 1,474,860,327 "
+    },
+    {
+        "level": " 144 ",
+        "exp": " 85,594,273 ",
+        "accumulatedExp": " 1,555,954,633 "
+    },
+    {
+        "level": " 145 ",
+        "exp": " 90,225,770 ",
+        "accumulatedExp": " 1,641,548,906 "
+    },
+    {
+        "level": " 146 ",
+        "exp": " 95,170,142 ",
+        "accumulatedExp": " 1,731,774,676 "
+    },
+    {
+        "level": " 147 ",
+        "exp": " 100,385,466 ",
+        "accumulatedExp": " 1,826,944,818 "
+    },
+    {
+        "level": " 148 ",
+        "exp": " 105,886,589 ",
+        "accumulatedExp": " 1,927,330,284 "
+    },
+    {
+        "level": " 149 ",
+        "exp": " 111,689,174 ",
+        "accumulatedExp": " 2,033,216,873 "
+    },
+    {
+        "level": " 150 ",
+        "exp": " 117,809,740 ",
+        "accumulatedExp": " 2,144,906,047 "
+    },
+    {
+        "level": " 151 ",
+        "exp": " 124,265,714 ",
+        "accumulatedExp": " 2,262,715,787 "
+    },
+    {
+        "level": " 152 ",
+        "exp": " 131,075,474 ",
+        "accumulatedExp": " 2,386,981,501 "
+    },
+    {
+        "level": " 153 ",
+        "exp": " 138,258,410 ",
+        "accumulatedExp": " 2,518,056,975 "
+    },
+    {
+        "level": " 154 ",
+        "exp": " 145,834,970 ",
+        "accumulatedExp": " 2,656,315,385 "
+    },
+    {
+        "level": " 155 ",
+        "exp": " 153,826,726 ",
+        "accumulatedExp": " 2,802,150,355 "
+    },
+    {
+        "level": " 156 ",
+        "exp": " 162,256,430 ",
+        "accumulatedExp": " 2,955,977,081 "
+    },
+    {
+        "level": " 157 ",
+        "exp": " 171,148,082 ",
+        "accumulatedExp": " 3,118,233,511 "
+    },
+    {
+        "level": " 158 ",
+        "exp": " 180,526,997 ",
+        "accumulatedExp": " 3,289,381,593 "
+    },
+    {
+        "level": " 159 ",
+        "exp": " 190,419,876 ",
+        "accumulatedExp": " 3,469,908,590 "
+    },
+    {
+        "level": " 160 ",
+        "exp": " 200,854,885 ",
+        "accumulatedExp": " 3,660,328,466 "
+    },
+    {
+        "level": " 161 ",
+        "exp": " 211,861,732 ",
+        "accumulatedExp": " 3,861,183,351 "
+    },
+    {
+        "level": " 162 ",
+        "exp": " 223,471,711 ",
+        "accumulatedExp": " 4,073,045,083 "
+    },
+    {
+        "level": " 163 ",
+        "exp": " 223,471,711 ",
+        "accumulatedExp": " 4,296,516,794 "
+    },
+    {
+        "level": " 164 ",
+        "exp": " 248,635,353 ",
+        "accumulatedExp": " 4,519,988,505 "
+    },
+    {
+        "level": " 165 ",
+        "exp": " 262,260,570 ",
+        "accumulatedExp": " 4,768,623,858 "
+    },
+    {
+        "level": " 166 ",
+        "exp": " 276,632,449 ",
+        "accumulatedExp": " 5,030,884,428 "
+    },
+    {
+        "level": " 167 ",
+        "exp": " 291,791,906 ",
+        "accumulatedExp": " 5,307,516,877 "
+    },
+    {
+        "level": " 168 ",
+        "exp": " 307,782,102 ",
+        "accumulatedExp": " 5,599,308,783 "
+    },
+    {
+        "level": " 169 ",
+        "exp": " 324,648,562 ",
+        "accumulatedExp": " 5,907,090,885 "
+    },
+    {
+        "level": " 170 ",
+        "exp": " 342,439,302 ",
+        "accumulatedExp": " 6,231,739,447 "
+    },
+    {
+        "level": " 171 ",
+        "exp": " 361,204,976 ",
+        "accumulatedExp": " 6,574,178,749 "
+    },
+    {
+        "level": " 172 ",
+        "exp": " 380,999,008 ",
+        "accumulatedExp": " 6,935,383,725 "
+    },
+    {
+        "level": " 173 ",
+        "exp": " 401,877,754 ",
+        "accumulatedExp": " 7,316,382,733 "
+    },
+    {
+        "level": " 174 ",
+        "exp": " 423,900,654 ",
+        "accumulatedExp": " 7,718,260,487 "
+    },
+    {
+        "level": " 175 ",
+        "exp": " 447,130,410 ",
+        "accumulatedExp": " 8,142,161,141 "
+    },
+    {
+        "level": " 176 ",
+        "exp": " 471,633,156 ",
+        "accumulatedExp": " 8,589,291,551 "
+    },
+    {
+        "level": " 177 ",
+        "exp": " 497,478,653 ",
+        "accumulatedExp": " 9,060,924,707 "
+    },
+    {
+        "level": " 178 ",
+        "exp": " 524,740,482 ",
+        "accumulatedExp": " 9,558,403,360 "
+    },
+    {
+        "level": " 179 ",
+        "exp": " 553,496,261 ",
+        "accumulatedExp": " 10,083,143,842 "
+    },
+    {
+        "level": " 180 ",
+        "exp": " 583,827,855 ",
+        "accumulatedExp": " 10,636,640,103 "
+    },
+    {
+        "level": " 181 ",
+        "exp": " 615,821,622 ",
+        "accumulatedExp": " 11,220,467,958 "
+    },
+    {
+        "level": " 182 ",
+        "exp": " 649,568,646 ",
+        "accumulatedExp": " 11,836,289,580 "
+    },
+    {
+        "level": " 183 ",
+        "exp": " 685,165,008 ",
+        "accumulatedExp": " 12,485,858,226 "
+    },
+    {
+        "level": " 184 ",
+        "exp": " 722,712,050 ",
+        "accumulatedExp": " 13,171,023,234 "
+    },
+    {
+        "level": " 185 ",
+        "exp": " 762,316,670 ",
+        "accumulatedExp": " 13,893,735,284 "
+    },
+    {
+        "level": " 186 ",
+        "exp": " 804,091,623 ",
+        "accumulatedExp": " 14,656,051,954 "
+    },
+    {
+        "level": " 187 ",
+        "exp": " 848,155,844 ",
+        "accumulatedExp": " 15,460,143,577 "
+    },
+    {
+        "level": " 188 ",
+        "exp": " 894,634,784 ",
+        "accumulatedExp": " 16,308,299,421 "
+    },
+    {
+        "level": " 189 ",
+        "exp": " 943,660,770 ",
+        "accumulatedExp": " 17,202,934,205 "
+    },
+    {
+        "level": " 190 ",
+        "exp": " 995,373,379 ",
+        "accumulatedExp": " 18,146,594,975 "
+    },
+    {
+        "level": " 191 ",
+        "exp": " 1,049,919,840 ",
+        "accumulatedExp": " 19,141,968,354 "
+    },
+    {
+        "level": " 192 ",
+        "exp": " 1,107,455,447 ",
+        "accumulatedExp": " 20,191,888,194 "
+    },
+    {
+        "level": " 193 ",
+        "exp": " 1,168,144,006 ",
+        "accumulatedExp": " 21,299,343,641 "
+    },
+    {
+        "level": " 194 ",
+        "exp": " 1,232,158,297 ",
+        "accumulatedExp": " 22,467,487,647 "
+    },
+    {
+        "level": " 195 ",
+        "exp": " 1,299,680,571 ",
+        "accumulatedExp": " 23,699,645,944 "
+    },
+    {
+        "level": " 196 ",
+        "exp": " 1,370,903,066 ",
+        "accumulatedExp": " 24,999,326,515 "
+    },
+    {
+        "level": " 197 ",
+        "exp": " 1,446,028,554 ",
+        "accumulatedExp": " 26,370,229,581 "
+    },
+    {
+        "level": " 198 ",
+        "exp": " 1,525,246,918 ",
+        "accumulatedExp": " 27,816,258,135 "
+    },
+    {
+        "level": " 199 ",
+        "exp": " 1,608,855,764 ",
+        "accumulatedExp": " 29,341,505,053 "
+    },
+    {
+        "level": " 200 ",
+        "exp": " 1,697,021,059 ",
+        "accumulatedExp": " 30,950,360,817"
+    }
+]

@@ -111,7 +111,7 @@ export default function Monster() {
 
         return (
             <>
-                <LinkContainer to={{ pathname: urlPathname, search: `?page=1&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key={1}>
+                <LinkContainer to={{ pathname: urlPathname, search: `?page=1&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key='first'>
                     <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" />
                 </LinkContainer>
 
@@ -121,7 +121,7 @@ export default function Monster() {
                     </LinkContainer>
                 )}
 
-                <LinkContainer to={{ pathname: urlPathname, search: `?page=${lastPageIndex}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key={lastPageIndex}>
+                <LinkContainer to={{ pathname: urlPathname, search: `?page=${lastPageIndex}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key="last">
                     <Pagination.Last />
                 </LinkContainer>
             </>);
@@ -226,62 +226,34 @@ const findGoodImgUrl = ({ id }) => {
     let p1 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`, {
             mode: "no-cors"
-        }).then(
-            resolve(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`)
-        ).catch()
+        })
+            .then(res => resolve(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`))
+            .catch(err => reject(err))
     })
 
     // 2. fetch from MapleStory.io
     let p2 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`)
-            .then(() => resolve(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`))
-            .catch()
+        let x = fetch(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`, {
+            mode: "no-cors"
+        })
+            .then(res => {
+                resolve(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`)
+            })
+            .catch(err => reject(err))
     })
 
-    // 3. fetch from Maplestory.io , but populated from List of good record
+    // 3. fetch from Maplestory.io , but populated from List of manual record
     let p3 = new Promise((resolve, reject) => {
         let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
-        if (!x) throw Error("error")
-            x = x[0]
-        fetch(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`)
-            .then(() => resolve(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`))
-            .catch()
+        if (!x) return
+        x = x[0]
+        fetch(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`, {
+            mode: "no-cors"
+        })
+            .then(res => resolve(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`))
+            .catch(err => reject(err))
     })
-
-    // return Promise.race([p1, p2, p3])
-    return Promise.race([p1, p2, p3]).then(v => {
-        console.log("inside race result : ", v)
-        return new Promise((resolve, reject) => resolve(v))}
-    )
-
-    // 2. fetch from Maplestory.io
-    // let p2 = new Promise((resolve, reject) => {
-    //     fetch(`https://maplestory.io/api/SEA/198/mob/${id}/render/move`)
-    //         .then(x = resolve(`https://maplestory.io/api/SEA/198/mob/${id}/render/move`))
-    // })
-
-    // 3. fetch from Maplestory
-    // let p3 = new Promise((resolve, reject) => {
-    //     let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
-    //     if (x) {
-    //         x = x[0]
-    //         fetch(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`)
-    //             .then(x = resolve(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`))
-    //     }
-    // })
-
-    return p1
-
-
-    let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
-    // not found or not in sound fixingList, use MapleLegends image as default
-    // if(!x) return `https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`
-    if (!x) return ` https://maplestory.io/api/SEA/198/mob/${id}/render/move`
-
-    x = x[0]
-    // found inside fixingList, use maplestory.io 
-    console.log("found inside list")
-    return `https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`
+    return Promise.any([p1, p2, p3])
 }
 
 
