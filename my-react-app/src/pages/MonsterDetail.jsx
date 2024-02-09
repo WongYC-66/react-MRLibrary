@@ -1,15 +1,14 @@
-import { useParams, Form, redirect, useLocation, NavLink, Link } from "react-router-dom"
+import { useParams, redirect, NavLink, Link } from "react-router-dom"
 import { LinkContainer } from 'react-router-bootstrap'
 import { useState, useEffect } from "react"
 // 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FormBS from "react-bootstrap/Form"
-import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 import Image from "react-bootstrap/Image"
-import Pagination from 'react-bootstrap/Pagination';
+import Tabs from "react-bootstrap/Tabs"
+import Tab from "react-bootstrap/Tab"
 // 
 import data_mob from "../../data/data_Mob.json"
 import data_mobStats from "../../data/data_MobStats.json"
@@ -54,6 +53,7 @@ export default function MonsterDetail() {
         <div className="monster-detail">
             <Container>
                 <Row>
+                    {/* Mob Image, hp, mp, etc ... */}
                     <Col lg={4}>
                         <div className="mob-stats-card text-center">
                             <Table bordered hover size="lg">
@@ -101,7 +101,7 @@ export default function MonsterDetail() {
                                     <tr>
                                         <td>Elements</td>
                                         <td>
-                                            {decodeElemAttr(mobInfo.elemAttr).map(x => <p className="m-0 ms-5 pe-0 me-0 text-start">{x}</p>)}
+                                            {decodeElemAttr(mobInfo.elemAttr).map((x, i) => <p key={i} className="m-0 ms-5 pe-0 me-0 text-start">{x}</p>)}
                                         </td>
                                     </tr>
                                 </tbody>
@@ -110,14 +110,64 @@ export default function MonsterDetail() {
                         </div>
 
                     </Col>
+                    {/* Monster Drop / Map Spawn */}
                     <Col lg={8}>
-                        <div className="mob-drops-locations-card"></div>
+                        <div className="mob-drops-locations-card">
+                            <Tabs
+                                id="controlled-tab-example"
+                                className="mb-3"
+                            >
+                                <Tab eventKey="Drops" title="Drops">
+                                    {renderSortedDrops(mobInfo.drops)}
+                                </Tab>
+                                <Tab eventKey="Locations" title="Locations">
+                                    {renderTableOfMap(mobInfo.spawnMap)}
+                                </Tab>
+                            </Tabs>
+
+                        </div>
                     </Col>
                 </Row>
             </Container>
         </div>
 
     )
+}
+
+const renderTableOfMap = (mapArr) => {
+    const sortedMapArr = mapArr && mapArr.slice().sort((a, b) => {
+       if(b[2] !== a[2]) return b[2] - a[2] // descendingly sorted in Count
+       return b[1].streetName > a[1].streetName  ? 1 : -1 // descendingly sorted in alphabet order if same count
+    })
+
+    return (
+        <Table bordered hover className="text-center">
+            <tbody >
+                <tr>
+                    <th className="bg-transparent">Map</th>
+                    <th className="bg-transparent">Count</th>
+                </tr>
+                {sortedMapArr && sortedMapArr.map(x => {
+                    return (
+
+                        <tr key={x[0]}>
+                            <td className="bg-transparent">
+                                <a href={`https://maplelegends.com/lib/map?id=${x[0]}`} target="_blank">
+                                    {x[1].streetName + ": " + x[1].mapName}
+                                </a>
+                            </td>
+                            <td className="bg-transparent">{x[2]}</td>
+                        </tr>
+                    )
+                })}
+            </tbody>
+        </Table>
+    )
+}
+
+const renderSortedDrops = (dropsArr) => {
+    // console.log(dropsArr)
+    if(!dropsArr) return ""
 }
 
 function decodeElemAttr(elemAttr) {
