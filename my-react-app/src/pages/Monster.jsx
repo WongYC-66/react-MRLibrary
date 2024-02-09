@@ -64,13 +64,13 @@ export default function Monster() {
 
         return filteredMobList.map(x => {
             const mobId = x[0]
-            const imgUrl = `https://maplelegends.com/static/images/lib/monster/${mobId.padStart(7, 0)}.png`
-            // https://maplelegends.com/static/images/lib/monster/0100100.png
+            // const imgUrl = mobIdToImgUrl({ id: mobId, name: x[1].name })
             return (
                 <tr key={x[0]}>
                     <td>
                         <Link to={`/monster/id=${mobId}`}>
-                            <Image src={imgUrl} fluid alt="Image not found" />
+                            {renderImageWithMobId(mobId)}
+                            {/* <Image src={imgUrl} fluid alt="Image not found" /> */}
                         </Link>
                     </td>
                     <td>
@@ -206,6 +206,84 @@ export default function Monster() {
 
     )
 }
+
+const renderImageWithMobId = (mobId) => {
+    const ImageComponent = <Image src="abc" id={`image-${mobId}`} fluid alt="Image not found" />
+
+    findGoodImgUrl({ id: mobId }).then(x => {
+        console.log("resolving x , src will be :", x)
+        document.getElementById(`image-${mobId}`).src = x
+    })
+
+    return ImageComponent
+}
+
+import data_fixMobImg from "../fixImgData/data_fixMobImg.json"
+const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x), Object.values(x)]))
+const findGoodImgUrl = ({ id }) => {
+
+    // 1. fetch from MapleLegends
+    let p1 = new Promise((resolve, reject) => {
+        let x = fetch(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`, {
+            mode: "no-cors"
+        }).then(
+            resolve(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`)
+        ).catch()
+    })
+
+    // 2. fetch from MapleStory.io
+    let p2 = new Promise((resolve, reject) => {
+        let x = fetch(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`)
+            .then(() => resolve(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`))
+            .catch()
+    })
+
+    // 3. fetch from Maplestory.io , but populated from List of good record
+    let p3 = new Promise((resolve, reject) => {
+        let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
+        if (!x) throw Error("error")
+            x = x[0]
+        fetch(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`)
+            .then(() => resolve(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`))
+            .catch()
+    })
+
+    // return Promise.race([p1, p2, p3])
+    return Promise.race([p1, p2, p3]).then(v => {
+        console.log("inside race result : ", v)
+        return new Promise((resolve, reject) => resolve(v))}
+    )
+
+    // 2. fetch from Maplestory.io
+    // let p2 = new Promise((resolve, reject) => {
+    //     fetch(`https://maplestory.io/api/SEA/198/mob/${id}/render/move`)
+    //         .then(x = resolve(`https://maplestory.io/api/SEA/198/mob/${id}/render/move`))
+    // })
+
+    // 3. fetch from Maplestory
+    // let p3 = new Promise((resolve, reject) => {
+    //     let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
+    //     if (x) {
+    //         x = x[0]
+    //         fetch(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`)
+    //             .then(x = resolve(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`))
+    //     }
+    // })
+
+    return p1
+
+
+    let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
+    // not found or not in sound fixingList, use MapleLegends image as default
+    // if(!x) return `https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`
+    if (!x) return ` https://maplestory.io/api/SEA/198/mob/${id}/render/move`
+
+    x = x[0]
+    // found inside fixingList, use maplestory.io 
+    console.log("found inside list")
+    return `https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`
+}
+
 
 export const monsterAction = async ({ request }) => {
     const data = await request.formData()

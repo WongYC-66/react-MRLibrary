@@ -1,6 +1,6 @@
 import { useParams, redirect, NavLink, Link } from "react-router-dom"
 import { LinkContainer } from 'react-router-bootstrap'
-import { useState, useEffect } from "react"
+import { useState, useEffect, isValidElement } from "react"
 // 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +9,8 @@ import Table from "react-bootstrap/Table"
 import Image from "react-bootstrap/Image"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 // 
 import data_mob from "../../data/data_Mob.json"
 import data_mobStats from "../../data/data_MobStats.json"
@@ -134,10 +136,25 @@ export default function MonsterDetail() {
     )
 }
 
+const decodeElemAttr = (elemAttr) => {
+    if (!elemAttr || elemAttr === "") return ["No elemental weak/strong/immune"]
+    const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
+    let returnStrArr = elemAttr.match(/.{2}/g).map(x => {
+        let element = elemList[x[0]]
+        let word = x[1] === "2" ? "Take less damage:"
+            : x[1] === "3" ? "Take more damage:"
+                : x[1] === "1" ? "Immune to:"
+                    : "Error elem"
+        return `${word} ${element}`
+    })
+    // console.log(returnStrArr, returnStrArr.length)
+    return returnStrArr
+}
+
 const renderTableOfMap = (mapArr) => {
     const sortedMapArr = mapArr && mapArr.slice().sort((a, b) => {
-       if(b[2] !== a[2]) return b[2] - a[2] // descendingly sorted in Count
-       return b[1].streetName > a[1].streetName  ? 1 : -1 // descendingly sorted in alphabet order if same count
+        if (b[2] !== a[2]) return b[2] - a[2] // descendingly sorted in Count
+        return b[1].streetName > a[1].streetName ? 1 : -1 // descendingly sorted in alphabet order if same count
     })
 
     return (
@@ -152,7 +169,7 @@ const renderTableOfMap = (mapArr) => {
 
                         <tr key={x[0]}>
                             <td className="bg-transparent">
-                                <a href={`https://maplelegends.com/lib/map?id=${x[0]}`} target="_blank">
+                                <a href={mapIdToUrl(x[0])} target="_blank">
                                     {x[1].streetName + ": " + x[1].mapName}
                                 </a>
                             </td>
@@ -165,22 +182,101 @@ const renderTableOfMap = (mapArr) => {
     )
 }
 
+import data_Eqp from "../../data/data_Eqp.json"
+import data_Consume from "../../data/data_Consume.json"
+import data_Ins from "../../data/data_Ins.json"
+import data_Etc from "../../data/data_Etc.json"
 const renderSortedDrops = (dropsArr) => {
-    // console.log(dropsArr)
-    if(!dropsArr) return ""
+    if (!dropsArr) return ""
+    const EquipDrops = []
+    const UseDrops = []
+    const SetupDrops = []
+    const EtcDrops = []
+
+    dropsArr.forEach(itemId => {
+        if (data_Eqp.hasOwnProperty(itemId)) return EquipDrops.push({
+            id: itemId,
+            name: data_Eqp[itemId]
+        })
+
+        if (data_Consume.hasOwnProperty(itemId)) return UseDrops.push({
+            id: itemId,
+            name: data_Consume[itemId].name,
+            desc: data_Consume[itemId].desc
+        })
+
+        if (data_Ins.hasOwnProperty(itemId)) return SetupDrops.push({
+            id: itemId,
+            name: data_Ins[itemId].name,
+            desc: data_Ins[itemId].desc
+        })
+
+        if (data_Etc.hasOwnProperty(itemId)) return EtcDrops.push({
+            id: itemId,
+            name: data_Etc[itemId].name,
+            desc: data_Etc[itemId].desc
+        })
+    })
+
+    return (
+        <>
+            <h6>Equip</h6>
+            <div>
+                {EquipDrops.map(x => dropsOverlayWrapper(x))}
+            </div>
+            <h6>Use</h6>
+            <div>
+                {UseDrops.map(x => dropsOverlayWrapper(x))}
+            </div>
+            <h6>Setup</h6>
+            <div>
+                {SetupDrops.map(x => dropsOverlayWrapper(x))}
+            </div>
+            <h6>Etc</h6>
+            <div>
+                {EtcDrops.map(x => dropsOverlayWrapper(x))}
+            </div>
+        </>
+    )
 }
 
-function decodeElemAttr(elemAttr) {
-    if (!elemAttr || elemAttr === "") return ["No elemental weak/strong/immune"]
-    const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
-    let returnStrArr = elemAttr.match(/.{2}/g).map(x => {
-        let element = elemList[x[0]]
-        let word = x[1] === "2" ? "Take less damage:"
-            : x[1] === "3" ? "Take more damage:"
-                : x[1] === "1" ? "Immune to:"
-                    : "Error elem"
-        return `${word} ${element}`
-    })
-    // console.log(returnStrArr, returnStrArr.length)
-    return returnStrArr
+const dropsOverlayWrapper = ({ id, name, desc }) => {
+    const isEquip = !desc // equip dont have description
+    const para = isEquip ? "equip" : "item"
+    const renderTooltip = (props) => (
+        <Tooltip id={`tooltip-${id}`} {...props}>
+            {name}
+        </Tooltip>
+    );
+    return (
+        <OverlayTrigger
+            key={id}
+            placement="top"
+            overlay={renderTooltip}
+        >
+            <Image src={itemIdToImgUrl(para, {id, name})} alt="img not found" className="me-1"/>
+        </OverlayTrigger>
+    )
+}
+
+const mapIdToUrl = (id) => {
+    return `https://maplelegends.com/lib/map?id=${id}`
+}
+
+const itemIdToImgUrl = (type, {id, name}) => {
+    if (type === "equip") return `https://maplelegends.com/static/images/lib/character/${id.padStart(8, '0')}.png`
+    if (type === "item"){
+        name = name.toLowerCase()
+        if(["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
+        if(["scroll", "30%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040108/icon?resize=1.0`
+        if(["scroll", "60%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2044501/icon?resize=1.0`
+        if(["scroll", "70%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040814/icon?resize=1.0`
+        if(["scroll", "100%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2041300/icon?resize=1.0`
+        if(["scroll", "clean slate", "1%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049000/icon?resize=1.0`
+        if(["scroll", "chaos"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049100/icon?resize=1.0`
+        if(["nx cash", "1000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680151/icon?resize=1.0`
+        if(["nx cash", "5000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680578/icon?resize=1.0`
+        if(["white scroll fragment"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/4001533/icon?resize=1.0`
+        return `https://maplelegends.com/static/images/lib/item/${id.padStart(8, '0')}.png`
+    } 
 }
