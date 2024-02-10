@@ -13,7 +13,7 @@ import data_GearStats from "../../../data/data_GearStats.json"
 export default function Equips() {
     const [equipLibrary, setEquipLibrary] = useState({})
     const urlPathname = useLocation().pathname
-    const isWeapon = urlPathname === "/weapon"
+    const isWeaponPage = urlPathname === "/weapon"
 
     // console.log(equipLibrary)
 
@@ -44,7 +44,7 @@ export default function Equips() {
                     <thead>
                         <tr>
                             <th className="bg-transparent">Job</th>
-                            {isWeapon && <th className="bg-transparent">Category</th>}
+                            {isWeaponPage && <th className="bg-transparent">Category</th>}
                             <th className="bg-transparent">Order By</th>
                             <th className="bg-transparent">Sort</th>
                         </tr>
@@ -65,7 +65,7 @@ export default function Equips() {
                             </td>
 
                             {/* Category dropdown */}
-                            {isWeapon &&
+                            {isWeaponPage &&
                                 < td className="bg-transparent">
                                     <FormBS.Select aria-label="category by" data-bs-theme="light" name="categoryBy">
                                         {weaponCategoryList.map(({ text, value }) =>
@@ -78,11 +78,11 @@ export default function Equips() {
                             {/* Order By dropdown */}
                             <td className="bg-transparent">
                                 <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
-                                    {isWeapon && weaponOrderByList.map(({ text, value }) =>
+                                    {isWeaponPage && weaponOrderByList.map(({ text, value }) =>
                                         <option key={value} value={value}>{text}</option>
                                     )}
 
-                                    {!isWeapon && armorOrderByList.map(({ text, value }) =>
+                                    {!isWeaponPage && armorOrderByList.map(({ text, value }) =>
                                         <option key={value} value={value}>{text}</option>
                                     )}
                                 </FormBS.Select>
@@ -120,10 +120,10 @@ export default function Equips() {
                     <tr>
                         <th>Image</th>
                         <th className="w-25">Name</th>
-                        <th>Category</th>
+                        {isWeaponPage && <th>Category</th>}
                         <th>Level</th>
-                        <th>Speed</th>
-                        <th>Attack</th>
+                        {isWeaponPage && <th>Speed</th>}
+                        {isWeaponPage && <th>Attack</th>}
                         <th>Slots</th>
                     </tr>
                 </thead>
@@ -186,7 +186,7 @@ const armorOrderByList = [
 export const equipsAction = async ({ request }) => {
     const data = await request.formData()
     const urlPathname = request.url.split("/").pop()
-    const isWeapon = urlPathname === "weapon"
+    const isWeaponPage = urlPathname === "weapon"
 
     const submission = {
         jobBy: data.get("jobBy"),
@@ -201,7 +201,7 @@ export const equipsAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = isWeapon
+    const actionUrl = isWeaponPage
         ? `?page=1&job=${submission.jobBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
         : `?page=1&job=${submission.jobBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
 

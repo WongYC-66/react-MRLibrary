@@ -38,7 +38,22 @@ export const filterEquipList = (equipLibrary) => {
     // 3. query filter - by job class
     filteredEquipList = queryFilterByJob({ job, filteredEquipList })
 
+    // 4. sort by sort order
+    filteredEquipList = querySorting({ sort, filteredEquipList })
+
+    // 5. ascending / descending
+    filteredEquipList = order == "descending" ? filteredEquipList : filteredEquipList.reverse()
+
     return filteredEquipList
+}
+
+const querySorting = ({ sort, filteredEquipList }) => {
+    const listCopy = filteredEquipList.slice()
+    // by ID 
+    if (sort === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
+    // by other
+
+    return listCopy
 }
 
 const queryFilterByJob = ({ job, filteredEquipList }) => {
@@ -56,8 +71,9 @@ const queryFilterByJob = ({ job, filteredEquipList }) => {
     }
     return filteredEquipList.filter(([_id, { reqJob }]) => {
         if (job === "0") return true
+        if (reqJob === "0") return true
         const jobArr = lib[reqJob]
-        return jobArr.includes(parseInt(job))
+        return jobArr?.includes(parseInt(job))
     })
 }
 
@@ -119,6 +135,7 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
 
 export const renderEquipList = (filteredEquipList, type = "use") => {
     const [searchParams] = useSearchParams()
+    const isWeaponPage = useLocation().pathname === "/weapon"
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
@@ -142,16 +159,18 @@ export const renderEquipList = (filteredEquipList, type = "use") => {
                         {info.name}
                     </Link>
                 </td>
-                <td>{info.category[2] || "no info"}</td>
+                {isWeaponPage && <td>{info.category[2] || "no info"}</td>}
+
                 <td>{info.reqLevel || "no info"}</td>
-                <td>{!info.attackSpeed ? "no info" : `${attkSpeedToText(info.attackSpeed)} (${info.attackSpeed})`}</td>
-                <td>
-                    <>
-                     <p className="p-0 m-0">{info.incPAD && `${rangeCalculator(info.incPAD)} W.att`}</p>
-                     <p className="p-0 m-0">{info.incMAD && `${rangeCalculator(info.incMAD)} Magic`}</p>
-                    </>
-                </td>
-                <td>{info.tuc || "no info"}</td>
+
+                {isWeaponPage && <td>{!info.attackSpeed ? "no info" : `${attkSpeedToText(info.attackSpeed)} (${info.attackSpeed})`}</td>}
+
+                {isWeaponPage && <td>
+                    <p className="p-0 m-0">{info.incPAD && `${rangeCalculator(info.incPAD)} W.att`}</p>
+                    <p className="p-0 m-0">{info.incMAD && `${rangeCalculator(info.incMAD)} Magic`}</p>
+                </td>}
+
+                <td>{info.tuc || "-"}</td>
 
             </tr>
         )
@@ -190,9 +209,7 @@ export const findGoodEquipImgUrl = ({ id }) => {
         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
             mode: "no-cors"
         })
-            .then(res => {
-                resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
-            })
+            .then(res => resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`))
             .catch(err => reject(err))
     })
 
