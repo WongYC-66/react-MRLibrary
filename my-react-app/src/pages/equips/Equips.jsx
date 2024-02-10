@@ -6,16 +6,34 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 
 // 
-import { filterItemList, updatePagination, renderItemList } from "./utility.jsx"
-import data_Consume from "../../../data/data_Consume.json"
+import { filterEquipList, updatePagination, renderEquipList, itemIdToCategory } from "./utility.jsx"
+import data_Eqp from "../../../data/data_Eqp.json"
+import data_GearStats from "../../../data/data_GearStats.json"
 
 export default function Equips() {
-    const [itemLibrary, setItemLibrary] = useState({})
+    const [equipLibrary, setEquipLibrary] = useState({})
     const urlPathname = useLocation().pathname
     const isWeapon = urlPathname === "/weapon"
 
+    // console.log(equipLibrary)
+
     useEffect(() => {
-        setItemLibrary(data_Consume)
+        Object.entries(data_Eqp).forEach(([eqpId, eqpName]) => {
+            if (data_GearStats.hasOwnProperty(eqpId)) {
+                data_GearStats[eqpId] = {
+                    ...data_GearStats[eqpId],
+                    name: eqpName,
+                    category: itemIdToCategory(eqpId)
+                }
+            }
+        })
+        let filtered_data_GearStats = Object.fromEntries(
+            Object.entries(data_GearStats)
+                .filter(([id, { name }]) => name) // filtered out those without name
+                .filter(([id, { category }]) => !category.includes(undefined)) // filtered out those without category/subcategory
+        )
+
+        setEquipLibrary(filtered_data_GearStats)
     }, [])
 
     return (
@@ -102,16 +120,20 @@ export default function Equips() {
                     <tr>
                         <th>Image</th>
                         <th className="w-25">Name</th>
-                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Level</th>
+                        <th>Speed</th>
+                        <th>Attack</th>
+                        <th>Slots</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {/* {renderItemList(filterItemList(itemLibrary), "use")} */}
+                    {renderEquipList(filterEquipList(equipLibrary), `${urlPathname.slice(1,)}`)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {/* {updatePagination(itemLibrary, filterItemList)} */}
+            {updatePagination(equipLibrary, filterEquipList)}
         </div >
 
     )
@@ -163,8 +185,8 @@ const armorOrderByList = [
 
 export const equipsAction = async ({ request }) => {
     const data = await request.formData()
-    const urlPathname = useLocation().pathname
-    const isWeapon = urlPathname === "/weapon"
+    const urlPathname = request.url.split("/").pop()
+    const isWeapon = urlPathname === "weapon"
 
     const submission = {
         jobBy: data.get("jobBy"),
@@ -179,10 +201,9 @@ export const equipsAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = isWeapon 
-    ? `${urlPathname}?page=1&job=${submission.jobBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}search=${submission.searchName}`
-
-    : `${urlPathname}?page=1&job=${submission.jobBy}&order=${submission.orderBy}&sort=${submission.sortBy}search=${submission.searchName}`
+    const actionUrl = isWeapon
+        ? `?page=1&job=${submission.jobBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
+        : `?page=1&job=${submission.jobBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
 
     return redirect(actionUrl)
 }

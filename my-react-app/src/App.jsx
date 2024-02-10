@@ -11,12 +11,12 @@ import Monster, { monsterAction } from './pages/monster/Monster.jsx'
 import MonsterDetail from './pages/monster/MonsterDetail.jsx'
 import Equips, { equipsAction } from './pages/equips/Equips.jsx'
 
-import ExpTable from './pages/exptable/ExpTable.jsx'
 import Use, { useAction } from './pages/items/Use.jsx'
 import Setup, { setupAction } from './pages/items/Setup.jsx'
 import Etc, { etcAction } from './pages/items/Etc.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
 
+import ExpTable from './pages/exptable/ExpTable.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 // layouts
@@ -36,7 +36,7 @@ const router = createBrowserRouter(
         ["weapon", 'hat', "top", "bottom", "overall", "shoes", "gloves", "cape", "shield", "faceacc", "eyeacc", "earring", "ring", "pendant"].map(pathname =>
           <Route path={pathname} action={equipsAction} key={pathname}>
             <Route index element={< Equips />}></Route>
-            <Route path=":itemId" element={< ItemDetail />}></Route>
+            <Route path=":equipId" element={< ItemDetail />}></Route>
           </Route >
         )
       }

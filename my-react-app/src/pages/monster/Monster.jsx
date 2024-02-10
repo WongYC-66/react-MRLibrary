@@ -15,9 +15,7 @@ export default function Monster() {
     const [mobLibrary, setMobLibrary] = useState({})
 
     useEffect(() => {
-        Object.entries(data_mob).forEach(mob => {
-            const mobId = mob[0]
-            const mobName = mob[1]
+        Object.entries(data_mob).forEach(([mobId, mobName]) => {
             if (data_mobStats.hasOwnProperty(mobId)) {
                 data_mobStats[mobId] = { ...data_mobStats[mobId], name: mobName }
             }
