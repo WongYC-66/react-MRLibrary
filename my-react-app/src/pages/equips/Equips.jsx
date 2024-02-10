@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 
 // 
-import { filterEquipList, updatePagination, renderEquipList, itemIdToCategory } from "./utility.jsx"
+import { filterEquipList, updatePagination, renderEquipList, equipIdToCategory } from "./utility.jsx"
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_GearStats from "../../../data/data_GearStats.json"
 
@@ -23,7 +23,7 @@ export default function Equips() {
                 data_GearStats[eqpId] = {
                     ...data_GearStats[eqpId],
                     name: eqpName,
-                    category: itemIdToCategory(eqpId)
+                    category: equipIdToCategory(eqpId)
                 }
             }
         })
