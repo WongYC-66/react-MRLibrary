@@ -22,8 +22,8 @@ export const filterEquipList = (equipLibrary) => {
     const searchTerm = filterOption.search.toLowerCase()
     const job = filterOption.job
     const category = filterOption.category
-    const order = filterOption.order
-    const sort = filterOption.sort
+    const order = filterOption.order  // id, reqLevel
+    const sort = filterOption.sort   // ascending, descending
     console.log(filterOption)
 
     // 1. query filter - by search name
@@ -39,19 +39,31 @@ export const filterEquipList = (equipLibrary) => {
     filteredEquipList = queryFilterByJob({ job, filteredEquipList })
 
     // 4. sort by sort order
-    filteredEquipList = querySorting({ sort, filteredEquipList })
+    filteredEquipList = querySorting({ order, filteredEquipList })
 
     // 5. ascending / descending
-    filteredEquipList = order == "descending" ? filteredEquipList : filteredEquipList.reverse()
+    filteredEquipList = sort==="ascending" ? filteredEquipList : filteredEquipList.reverse()
 
     return filteredEquipList
 }
 
-const querySorting = ({ sort, filteredEquipList }) => {
+const querySorting = ({ order, filteredEquipList }) => {
     const listCopy = filteredEquipList.slice()
+    console.log({order})
+    const key = order
     // by ID 
-    if (sort === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
+    if (order === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
     // by other
+    listCopy.sort((a, b)=> {
+        const valueA = parseInt(a[1][key])
+        const valueB = parseInt(b[1][key])
+        const nameA = a[1].name
+        const nameB = b[1].name
+        if(valueA === valueB) return nameB.localeCompare(nameA) //if same value, sort alphabetically
+        return valueA - valueB // sort ascendingly
+
+
+    })
 
     return listCopy
 }
