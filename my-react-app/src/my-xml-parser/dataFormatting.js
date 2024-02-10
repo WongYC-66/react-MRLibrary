@@ -183,7 +183,7 @@ export function GearStatsDataFormatting(objArr) {
         // console.log(inspect(x, { colors: true, depth: Infinity }));
         const stats = {}
         // 
-        const unwantedStats = ["icon", "iconRaw", "cash", "medalTag", "notSale", "price", "tradeBlock"]
+        const unwantedStats = ["icon", "iconRaw", "cash", "medalTag", "notSale"]
         x = x.children.find(y => y.attributes.name === "info")
         x.children.forEach(y => {
             // console.log(y)

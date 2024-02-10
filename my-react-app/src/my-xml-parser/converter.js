@@ -70,7 +70,7 @@ async function Maps() {
 }
 
 async function GearStats() {
-    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Character"))
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Character"), "Gear")
     const simpleData = GearStatsDataFormatting(objArr)
     diskWriter(path.join(__dirname, "../../data/", 'data_GearStats.json'), simpleData)
 }
@@ -102,10 +102,10 @@ function main() {
     // Eqp()
     // Ins()
     // Maps()
-    // GearStats() // Read multiple IMG files in multiple folders
+    GearStats() // Read multiple IMG files in multiple folders
     // MobStats()
     // Map_MobCount()
-    ItemStats()
+    // ItemStats()
 }
 
 main()

@@ -51,10 +51,9 @@ export default function EquipDetail() {
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
 
-    return (<p>im a equipdetail</p>)
 
     return (
-        <div className="item-detail">
+        <div className="equip-detail">
             <Container>
                 <Row>
                     {/* Item Image, name, desc, etc ... */}
@@ -64,24 +63,24 @@ export default function EquipDetail() {
                                 <tbody>
                                     <tr>
                                         <th className="rounded-5">
-                                            {itemInfo.name}
-                                            {itemInfo.tradeBlock === '1' && <p className="p-0 m-0 text-warning">(Untradeable)</p>}
+                                            {equipInfo.name}
+                                            {equipInfo.tradeBlock === '1' && <p className="p-0 m-0 text-warning">(Untradeable)</p>}
                                         </th>
                                     </tr>
                                     <tr>
                                         <td className="bg-transparent">
-                                            <Image src={itemInfo.imgUrl} fluid className="mw-50" />
+                                            <Image src={equipInfo.imgUrl} fluid className="mw-50" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            {itemInfo?.desc?.split("\\n").map(x =>
+                                            {equipInfo?.desc?.split("\\n").map(x =>
                                                 <p key={x} className="p-0 m-0" dangerouslySetInnerHTML={{ __html: x }}></p>
                                             )}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Sell Price : {numFormatter(itemInfo.price)}</td>
+                                        <td>Sell Price : {numFormatter(equipInfo.price)}</td>
                                     </tr>
                                 </tbody>
                             </Table>
@@ -97,13 +96,13 @@ export default function EquipDetail() {
                                 className="mb-3"
                             >
                                 <Tab eventKey="Drops" title="Drops">
-                                    {itemInfo?.droppedBy?.length >= 1 ? <span>Dropped by </span> : <span>Dropped by nothing.</span>}
+                                    {equipInfo?.droppedBy?.length >= 1 ? <span>Dropped by </span> : <span>Dropped by nothing.</span>}
                                     <p></p>
-                                    {itemInfo?.droppedBy?.map(({ id, name }, i) => {
+                                    {equipInfo?.droppedBy?.map(({ id, name }, i) => {
                                         return (
                                             <span key={id}>
                                                 <Link to={`/monster/id=${id}`}>{name}</Link>
-                                                {(i !== itemInfo.droppedBy.length - 1) && " , "}
+                                                {(i !== equipInfo.droppedBy.length - 1) && " , "}
                                             </span>
                                         )
                                     })}
