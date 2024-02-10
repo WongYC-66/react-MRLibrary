@@ -24,7 +24,7 @@ export const filterEquipList = (equipLibrary) => {
     const category = filterOption.category
     const order = filterOption.order  // id, reqLevel
     const sort = filterOption.sort   // ascending, descending
-    console.log(filterOption)
+    // console.log(filterOption)
 
     // 1. query filter - by search name
     filteredEquipList = filteredEquipList
@@ -49,7 +49,6 @@ export const filterEquipList = (equipLibrary) => {
 
 const querySorting = ({ order, filteredEquipList }) => {
     const listCopy = filteredEquipList.slice()
-    console.log({order})
     const key = order
     // by ID 
     if (order === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
@@ -59,10 +58,12 @@ const querySorting = ({ order, filteredEquipList }) => {
         const valueB = parseInt(b[1][key])
         const nameA = a[1].name
         const nameB = b[1].name
-        if(valueA === valueB) return nameB.localeCompare(nameA) //if same value, sort alphabetically
+
+        // sort into 0,1,2,3,10,15,... 100, NaN/no-info
+        if(!isNaN(valueA) && isNaN(valueB)) return -1 
+        if(isNaN(valueA) && !isNaN(valueB)) return 1 
+        if(isNaN(valueA) && valueA === valueB) return nameB.localeCompare(nameA) //if same value, sort alphabetically
         return valueA - valueB // sort ascendingly
-
-
     })
 
     return listCopy
@@ -152,9 +153,9 @@ export const renderEquipList = (filteredEquipList, type = "use") => {
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
 
-    console.log(filteredEquipList?.length)
+    // console.log(filteredEquipList?.length)
     filteredEquipList = filteredEquipList?.slice(sliceStartIndex, sliceEndIndex)
-    console.log(filteredEquipList)
+    // console.log(filteredEquipList)
     // [ [EquipId, {name : xxxx , reqInt : xxx}] , [] , [] , ... ]
 
     // return <tr><td>a</td></tr>
