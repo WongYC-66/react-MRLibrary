@@ -56,9 +56,9 @@ export default function MonsterDetail() {
             <Container>
                 <Row>
                     {/* Mob Image, hp, mp, etc ... */}
-                    <Col lg={4}>
+                    <Col md={4}>
                         <div className="mob-stats-card text-center">
-                            <Table bordered hover size="lg">
+                            <Table bordered hover>
                                 <tbody>
                                     <tr>
                                         <th colSpan={2} className="rounded-5">{mobInfo.name}</th>
@@ -73,7 +73,7 @@ export default function MonsterDetail() {
                                         <td colSpan={2}>Level : {mobInfo.level}</td>
                                     </tr>
                                     <tr>
-                                        <td>EXP : {numFormatter(mobInfo.exp * 3.2)}</td>
+                                        <td>EXP : {numFormatter(parseInt(mobInfo.exp * 3.2))}</td>
                                         <td>Meso : no info</td>
                                     </tr>
                                     <tr>
@@ -103,7 +103,7 @@ export default function MonsterDetail() {
                                     <tr>
                                         <td>Elements</td>
                                         <td>
-                                            {decodeElemAttr(mobInfo.elemAttr).map((x, i) => <p key={i} className="m-0 ms-5 pe-0 me-0 text-start">{x}</p>)}
+                                            {decodeElemAttr(mobInfo.elemAttr).map((x, i) => <p key={i} className="m-0  text-start">{x}</p>)}
                                         </td>
                                     </tr>
                                 </tbody>
@@ -113,7 +113,7 @@ export default function MonsterDetail() {
 
                     </Col>
                     {/* Monster Drop / Map Spawn */}
-                    <Col lg={8}>
+                    <Col md={8}>
                         <div className="mob-drops-locations-card">
                             <Tabs
                                 id="controlled-tab-example"

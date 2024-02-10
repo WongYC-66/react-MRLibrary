@@ -141,7 +141,7 @@ export default function RootLayout() {
 
       </header>
       <main className="text-bg-secondary p-4 flex-fill d-flex justify-content-center">
-        <div className="tab-card container-sm p-4 mx-4 bg-body-tertiary rounded-5">
+        <div className="tab-card container-md p-4 mx-4 bg-body-tertiary rounded-5">
           <Outlet />
         </div>
       </main>
