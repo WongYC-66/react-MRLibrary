@@ -9,18 +9,15 @@ import {
 import Home from './pages/Home.jsx'
 import Monster, { monsterAction } from './pages/monster/Monster.jsx'
 import MonsterDetail from './pages/monster/MonsterDetail.jsx'
+import Equips, { equipsAction } from './pages/equips/Equips.jsx'
+
 import ExpTable from './pages/exptable/ExpTable.jsx'
 import Use, { useAction } from './pages/items/Use.jsx'
 import Setup, { setupAction } from './pages/items/Setup.jsx'
 import Etc, { etcAction } from './pages/items/Etc.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
 
-// import Contact from './pages/help/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
-// import Careers, { careersLoader } from './pages/careers/Careers.jsx'
-// import CareerDetails, { careerDetailsLoader } from './pages/careers/CareerDetails.jsx'
-// import CareersError from './pages/careers/CareersError.jsx'
-
 
 // layouts
 import RootLayout from './layouts/RootLayout.jsx'
@@ -34,6 +31,19 @@ const router = createBrowserRouter(
         <Route path=":mobId" element={< MonsterDetail />}></Route>
       </Route >
 
+      {/* Equips */}
+      {
+        ["weapon", 'hat', "top", "bottom", "overall", "shoes", "gloves", "cape", "shield", "faceacc", "eyeacc", "earring", "ring", "pendant"].map(pathname =>
+          <Route path={pathname} action={equipsAction} key={pathname}>
+            <Route index element={< Equips />}></Route>
+            <Route path=":itemId" element={< ItemDetail />}></Route>
+          </Route >
+        )
+      }
+      {/* Equips */}
+
+
+      {/* Items */}
       <Route path="use" action={useAction}>
         <Route index element={< Use />}></Route>
         <Route path=":itemId" element={< ItemDetail />}></Route>
@@ -43,11 +53,12 @@ const router = createBrowserRouter(
         <Route index element={< Setup />}></Route>
         <Route path=":itemId" element={< ItemDetail />}></Route>
       </Route >
-      
+
       <Route path="etc" action={etcAction}>
         <Route index element={< Etc />}></Route>
         <Route path=":itemId" element={< ItemDetail />}></Route>
       </Route >
+      {/* Items */}
 
       <Route path="exptable" element={< ExpTable />} />
 
