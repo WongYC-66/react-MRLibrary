@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 // 
 import Pagination from 'react-bootstrap/Pagination';
 import Image from "react-bootstrap/Image"
-
+// 
 // 
 export const filterItemList = (itemLibrary) => {
     const [searchParams] = useSearchParams()
@@ -92,6 +92,22 @@ export const findGoodItemImgUrl = ({ id }) => {
     })
 
     return Promise.any([p1, p2])
+}
+
+//
+export const itemIdToImgUrl = ({ id, name }) => {
+    name = name.toLowerCase()
+    if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
+    if (["scroll", "30%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040108/icon?resize=1.0`
+    if (["scroll", "60%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2044501/icon?resize=1.0`
+    if (["scroll", "70%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040814/icon?resize=1.0`
+    if (["scroll", "100%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2041300/icon?resize=1.0`
+    if (["scroll", "clean slate", "1%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049000/icon?resize=1.0`
+    if (["scroll", "chaos"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049100/icon?resize=1.0`
+    if (["nx cash", "1000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680151/icon?resize=1.0`
+    if (["nx cash", "5000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680578/icon?resize=1.0`
+    if (["white scroll fragment"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/4001533/icon?resize=1.0`
+    return `https://maplelegends.com/static/images/lib/item/${id.padStart(8, '0')}.png`
 }
 
 // 

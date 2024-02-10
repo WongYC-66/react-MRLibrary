@@ -1,6 +1,6 @@
-import { useParams, redirect, NavLink, Link } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { LinkContainer } from 'react-router-bootstrap'
-import { useState, useEffect, isValidElement } from "react"
+import { useState, useEffect} from "react"
 // 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
