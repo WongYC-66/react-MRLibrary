@@ -6,7 +6,8 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 
 // 
-import { filterEquipList, updatePagination, renderEquipList, equipIdToCategory } from "./utility.jsx"
+import { updatePagination } from "../../components/Pagination.jsx"
+import { filterEquipList, renderEquipList, equipIdToCategory } from "./utility.jsx"
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_GearStats from "../../../data/data_GearStats.json"
 

@@ -4,7 +4,7 @@ import data_ExpTable from "../../../data/data_ExpTable.json"
 
 export default function ExpTable() {
 
-    console.log(data_ExpTable)
+    // console.log(data_ExpTable)
 
     return (
         <div className="exp-table">
@@ -17,7 +17,7 @@ export default function ExpTable() {
                     </tr>
                     {data_ExpTable.map(x => {
                         return (
-                            <tr>
+                            <tr key={x.level}>
                                 <td>{x.level}</td>
                                 <td>{x.exp}</td>
                                 <td>{x.accumulatedExp}</td>

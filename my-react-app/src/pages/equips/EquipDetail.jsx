@@ -1,5 +1,4 @@
 import { useParams, Link } from "react-router-dom"
-import { LinkContainer } from 'react-router-bootstrap'
 import { useState, useEffect } from "react"
 // 
 import Container from 'react-bootstrap/Container';
@@ -12,7 +11,14 @@ import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 // 
-import { equipIdToImgUrl, equipIdToCategory, decodeReqJobToList, attkSpeedToText, rangeCalculator } from "./utility.jsx"
+import {
+    equipIdToImgUrl,
+    equipIdToCategory,
+    decodeReqJobToList,
+    attkSpeedToText,
+    rangeCalculator,
+    renderImageWithItemId
+} from "./utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_MB from "../../../data/data_MB.json"
 import data_Eqp from "../../../data/data_Eqp.json"
@@ -32,7 +38,7 @@ export default function EquipDetail() {
             ...data_GearStats[equip_Id],
             id: equip_Id,
             name,
-            imgUrl: equipIdToImgUrl({ id: equip_Id, name }),
+            // imgUrl: findGoodEquipImgUrl({ id: equip_Id, name }),
             category: equipIdToCategory(equip_Id),
         }
         const droppedBy = []
@@ -70,7 +76,8 @@ export default function EquipDetail() {
                                     </tr>
                                     <tr>
                                         <td className="bg-transparent align-middle" colSpan={3}>
-                                            <Image src={equipInfo.imgUrl} fluid className="w-50" />
+                                            {renderImageWithItemId(equipInfo.id)}
+                                            {/* <Image src={equipInfo.imgUrl} fluid className="w-50" /> */}
                                         </td>
                                         <td className="rounded-4" colSpan={3}>
                                             <p className="p-0 m-0">Req LVL : {equipInfo.reqLevel || "no-info"}</p>
@@ -92,25 +99,26 @@ export default function EquipDetail() {
                                     <tr>
                                         <td colSpan={6} className="text-start">
                                             <p className="my-1">Category: {equipInfo.category && equipInfo.category[2]}</p>
-                                            {equipInfo.attackSpeed &&  <p>Attack Speed : {`${attkSpeedToText(equipInfo.attackSpeed)} (${equipInfo.attackSpeed})`}</p>}
+                                            {equipInfo.attackSpeed && <p className="my-1">Attack Speed : {`${attkSpeedToText(equipInfo.attackSpeed)} (${equipInfo.attackSpeed})`}</p>}
                                             {equipInfo.incSTR && <p className="my-1">STR: {equipInfo.incSTR} ({rangeCalculator(equipInfo.incSTR)})</p>}
                                             {equipInfo.incDEX && <p className="my-1">DEX: {equipInfo.incDEX} ({rangeCalculator(equipInfo.incDEX)})</p>}
                                             {equipInfo.incINT && <p className="my-1">INT: {equipInfo.incINT} ({rangeCalculator(equipInfo.incINT)})</p>}
                                             {equipInfo.incLUK && <p className="my-1">LUK: {equipInfo.incLUK} ({rangeCalculator(equipInfo.incLUK)})</p>}
-                                            
-                                            {equipInfo.incMHP && <p className="my-1">HP: {equipInfo.incMHP} ({rangeCalculator(equipInfo.incMHP, 10)})</p>}
-                                            {equipInfo.incMMP && <p className="my-1">MP: {equipInfo.incMMP} ({rangeCalculator(equipInfo.incMMP, 10)})</p>}
-                                            {equipInfo.incPDD && <p className="my-1">Weapon Def: {equipInfo.incPDD} ({rangeCalculator(equipInfo.incPDD, 10)})</p>}
-                                            {equipInfo.incMDD && <p className="my-1">Magic Def: {equipInfo.incMDD} ({rangeCalculator(equipInfo.incMDD, 10)})</p>}
+
+                                            {equipInfo.incMHP && <p className="my-1">HP: {equipInfo.incMHP} ({rangeCalculator(equipInfo.incMHP, "", 10)})</p>}
+                                            {equipInfo.incMMP && <p className="my-1">MP: {equipInfo.incMMP} ({rangeCalculator(equipInfo.incMMP, "", 10)})</p>}
+                                            {equipInfo.incPAD && <p className="my-1">Weapon Attack : {equipInfo.incPAD} ({rangeCalculator(equipInfo.incPAD)})</p>}
+                                            {equipInfo.incMAD && <p className="my-1">Magic Attack : {equipInfo.incMAD} ({rangeCalculator(equipInfo.incMAD)})</p>}
+
+                                            {equipInfo.incPDD && <p className="my-1">Weapon Def: {equipInfo.incPDD} ({rangeCalculator(equipInfo.incPDD, "", 10)})</p>}
+                                            {equipInfo.incMDD && <p className="my-1">Magic Def: {equipInfo.incMDD} ({rangeCalculator(equipInfo.incMDD, "", 10)})</p>}
                                             {equipInfo.incACC && <p className="my-1">Accuracy: {equipInfo.incACC} ({rangeCalculator(equipInfo.incACC)})</p>}
                                             {equipInfo.incEVA && <p className="my-1">Avoidability: {equipInfo.incEVA} ({rangeCalculator(equipInfo.incEVA)})</p>}
-                                            
+
                                             {equipInfo.incSpeed && <p className="my-1">Speed: {equipInfo.incSpeed} ({rangeCalculator(equipInfo.incSpeed)})</p>}
                                             {equipInfo.incJump && <p className="my-1">Jump: {equipInfo.incJump} ({rangeCalculator(equipInfo.incJump)})</p>}
 
 
-                                            {equipInfo.incPAD && <p>Weapon Attack : {equipInfo.incPAD} ({rangeCalculator(equipInfo.incPAD)})</p>}
-                                            {equipInfo.incMAD && <p>Magic Attack : {equipInfo.incMAD} ({rangeCalculator(equipInfo.incMAD)})</p>}
                                             <p>Number of Upgrades Available: {equipInfo.tuc || 0}</p>
                                         </td>
                                     </tr>

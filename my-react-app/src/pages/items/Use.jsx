@@ -6,7 +6,8 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 
 // 
-import { filterItemList, updatePagination, renderItemList } from "./utility.jsx"
+import { updatePagination } from "../../components/Pagination.jsx"
+import { filterItemList, renderItemList } from "./utility.jsx"
 import data_Consume from "../../../data/data_Consume.json"
 
 export default function Use() {

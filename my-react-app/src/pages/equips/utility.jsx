@@ -1,9 +1,6 @@
 import { useSearchParams, useLocation, Link } from "react-router-dom"
-import { LinkContainer } from 'react-router-bootstrap'
 // 
-import Pagination from 'react-bootstrap/Pagination';
 import Image from "react-bootstrap/Image"
-// 
 // 
 export const filterEquipList = (equipLibrary) => {
     const [searchParams] = useSearchParams()
@@ -194,12 +191,10 @@ export const renderEquipList = (filteredEquipList, type = "use") => {
 // 
 export const renderImageWithItemId = (equipId) => {
     const ImageComponent = <Image src="abc" id={`image-${equipId}`} fluid alt="Image not found" />
-    // return ImageComponent
-
 
     findGoodEquipImgUrl({ id: equipId }).then(x => {
-        // console.log("resolving x , src will be :", x)
-        document.getElementById(`image-${equipId}`).src = x
+        let el = document.getElementById(`image-${equipId}`)
+        if(el) el.src = x
     })
 
     return ImageComponent
@@ -211,7 +206,7 @@ export const findGoodEquipImgUrl = ({ id }) => {
     // 1. fetch from MapleLegends
     let p1 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`, {
-            mode: "no-cors"
+            // mode: "no-cors"
         })
             .then(res => resolve(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`))
             .catch(err => reject(err))
@@ -220,7 +215,7 @@ export const findGoodEquipImgUrl = ({ id }) => {
     // 2. fetch from MapleStory.io
     let p2 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-            mode: "no-cors"
+            // mode: "no-cors"
         })
             .then(res => resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`))
             .catch(err => reject(err))
@@ -246,51 +241,11 @@ export const equipIdToImgUrl = ({ id, name }) => {
 }
 
 // 
-
-export const updatePagination = (library, filterLibraryFunction) => {
-    const [searchParams] = useSearchParams()
-    const currentPage = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
-
-    const urlPathname = useLocation().pathname
-    const urlSearch = useLocation().search || `?search=`
-    const lastPageIndex = Math.ceil(filterLibraryFunction(library)?.length / 10)
-
-    let pageButtonArr = []
-    for (let i = currentPage - 1; i <= lastPageIndex; i++) {
-        const obj = {
-            pathname: `${urlPathname}`,
-            search: `?page=${i}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}`,
-            text: i
-        }
-        pageButtonArr.push(obj)
-    }
-    pageButtonArr = pageButtonArr.filter(x => x.text >= 1 && x.text - currentPage <= 3)
-
-    return (
-        <Pagination className="d-flex justify-content-center">
-
-            <LinkContainer to={{ pathname: urlPathname, search: `?page=1&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key='first'>
-                <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" />
-            </LinkContainer>
-
-            {pageButtonArr.map(x =>
-                <LinkContainer to={{ pathname: x.pathname, search: x.search }} key={x.text}>
-                    <Pagination.Item className="bg-white">{x.text}</Pagination.Item>
-                </LinkContainer>
-            )}
-
-            <LinkContainer to={{ pathname: urlPathname, search: `?page=${lastPageIndex}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}` }} key="last">
-                <Pagination.Last />
-            </LinkContainer>
-        </Pagination>
-    );
-}
-
 export const rangeCalculator = (x, type = "", hardCap = 5) => {
     // data from https://mapleroyals.com/forum/threads/staff-blog-september-2022.209642/
     if (!x) return "no info"
     let base = parseInt(x)
-    let M = parseInt(0.10 * base) + 1
+    let M = Math.ceil(0.10 * base) || 1
     M = Math.min(M, hardCap)
 
     const godlyBonus = 5

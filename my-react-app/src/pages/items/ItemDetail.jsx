@@ -12,7 +12,7 @@ import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 // 
-import { itemIdToImgUrl } from "./utility.jsx"
+import { itemIdToImgUrl, renderImageWithItemId } from "./utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_MB from "../../../data/data_MB.json"
 import data_Consume from "../../../data/data_Consume.json"
@@ -69,7 +69,8 @@ export default function ItemDetail() {
                                     </tr>
                                     <tr>
                                         <td className="bg-transparent">
-                                            <Image src={itemInfo.imgUrl} fluid className="mw-50" />
+                                            {renderImageWithItemId(itemInfo.id)}
+                                            {/* <Image src={itemInfo.imgUrl} fluid className="mw-50" /> */}
                                         </td>
                                     </tr>
                                     <tr>
