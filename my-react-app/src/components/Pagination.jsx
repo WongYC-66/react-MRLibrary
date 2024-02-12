@@ -1,22 +1,25 @@
 import { useSearchParams, useLocation } from "react-router-dom"
-import { useCallback } from "react"
 import { LinkContainer } from 'react-router-bootstrap'
+import { useCallback } from "react"
 // 
 import Pagination from "react-bootstrap/Pagination"
 
-
 export const updatePagination = (library, filterLibraryFunction) => {
     const [searchParams] = useSearchParams()
+    const urlSearch = useLocation().search
     const currentPage = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
 
     const urlPathname = useLocation().pathname
-    const urlSearch = useLocation().search || `?search=`
     const lastPageIndex = Math.ceil(filterLibraryFunction(library).length / 10)
-
-    const generateSearchString = useCallback((inputNumber) => {
+    
+    const generateSearchString = (inputNumber) => {
         const queryParaCount = searchParams.size
-        console.log(urlPathname)
-
+        // console.log(urlSearch)
+        if(queryParaCount >= 1) return urlSearch.replace(/\?page=\d+/, (...para) => {
+            // console.log({para})
+            return `?page=${inputNumber}`
+        })
+        // else when URL:query has nothing. It is initial loading, render the button with URL of:
         if (urlPathname === "/weapon") {
             return `?page=${inputNumber}&job=0&category=any&order=id&sort=ascending&search=`
         }
@@ -29,7 +32,7 @@ export const updatePagination = (library, filterLibraryFunction) => {
         if (["/use", "/setup", "/etc"].includes(urlPathname)) {
             return `?page=${inputNumber}&search=`
         }
-    }, [])
+    }
 
     const RemovePaginationActiveAttribute = useCallback(() => {
         new Promise((resolve, reject) => {
