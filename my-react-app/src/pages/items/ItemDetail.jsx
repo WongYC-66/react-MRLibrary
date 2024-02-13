@@ -12,7 +12,7 @@ import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 // 
-import { itemIdToImgUrl, renderImageWithItemId } from "./utility.jsx"
+import { itemIdToExceptionUrl, renderImageWithItemId } from "./utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_MB from "../../../data/data_MB.json"
 import data_Consume from "../../../data/data_Consume.json"
@@ -25,7 +25,7 @@ export default function ItemDetail() {
     const [itemInfo, setItemInfo] = useState({})
     let { itemId } = useParams();
 
-    console.log(itemInfo)
+    // console.log(itemInfo)
 
     useEffect(() => {
         const item_Id = itemId.split("=")[1]
@@ -35,7 +35,7 @@ export default function ItemDetail() {
             id: item_Id,
             name: data.name,
             desc: data?.desc,
-            imgUrl: itemIdToImgUrl({ id: item_Id, name: data.name }),
+            imgUrl: itemIdToExceptionUrl({ id: item_Id, name: data.name }),
         }
         const droppedBy = []
         Object.entries(data_MB).forEach(([mobId, drops]) => {
@@ -134,7 +134,7 @@ const dropsOverlayWrapper = ({ id, name, desc }) => {
             placement="top"
             overlay={renderTooltip}
         >
-            <Image src={itemIdToImgUrl(para, { id, name })} alt="img not found" className="me-1" />
+            <Image src={itemIdToExceptionUrl(para, { id, name })} alt="img not found" className="me-1" />
         </OverlayTrigger>
     )
 }

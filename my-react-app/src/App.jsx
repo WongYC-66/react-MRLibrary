@@ -64,7 +64,7 @@ const router = createBrowserRouter(
 
       <Route path="exptable" element={< ExpTable />} />
 
-      <Route path="*" element={< NotFound />} />
+      <Route path="*" element={< NotFound />}  status={"404"} />
     </Route>
   )
 )

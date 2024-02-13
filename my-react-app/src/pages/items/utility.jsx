@@ -1,4 +1,5 @@
 import { useSearchParams, Link } from "react-router-dom"
+import fs from 'fs';
 // 
 import Image from "react-bootstrap/Image"
 // 
@@ -33,20 +34,22 @@ export const renderItemList = (filteredItemList, type = "use") => {
 
     return filteredItemList.map(x => {
         const itemId = x[0]
+        const name = x[1].name
+        const desc = x[1].desc
         return (
             <tr key={itemId}>
                 <td>
                     <Link to={`/${type}/id=${itemId}`}>
-                        {renderImageWithItemId(itemId)}
+                        {renderImageWithItemId(itemId, name)}
                     </Link>
                 </td>
                 <td>
                     <Link to={`/${type}/id=${itemId}`}>
-                        {x[1].name}
+                        {name}
                     </Link>
                 </td>
                 <td>
-                    {x[1]?.desc?.split("\\n").map(x =>
+                    {desc && desc.split("\\n").map(x =>
                         <p key={x} className="p-0 m-0" dangerouslySetInnerHTML={{ __html: x }}></p>
                     )}
                 </td>
@@ -57,10 +60,10 @@ export const renderItemList = (filteredItemList, type = "use") => {
 
 
 // 
-export const renderImageWithItemId = (itemId) => {
+export const renderImageWithItemId = (itemId, itemName) => {
     const ImageComponent = <Image src="abc" id={`image-${itemId}`} fluid alt="Image not found" />
 
-    findGoodItemImgUrl({ id: itemId }).then(x => {
+    findGoodItemImgUrl({ id: itemId, name: itemName}).then(x => {
         let el = document.getElementById(`image-${itemId}`)
         if (el) el.src = x
     })
@@ -69,51 +72,55 @@ export const renderImageWithItemId = (itemId) => {
 }
 // 
 
-export const findGoodItemImgUrl = ({ id }) => {
+export const findGoodItemImgUrl = ({ id, name }) => {
 
-    // 1. fetch from MapleLegends
-    let p1 = new Promise(async (resolve, reject) => {
-
+    // 1. fetch from local files
+    let p1 = new Promise((resolve, reject) => {
         try {
-            // let x = await fetch(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`, {
-            // console.log(`https://maplelegends.com/lib/use?id=${id}`)
-            let x = await fetch(`https://maplelegends.com/lib/use?id=${id}`, {mode:"no-cors"})
-            // https://maplelegends.com/lib/use?id=2000000
+            const fileName = `${id.padStart(8, 0)}.png`
+            
+            let x = fs.existsSync(`../../../public/images/items/${fileName}`); 
+            console.log("no error")
             console.log(x)
-            resolve(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`)
-
-        } catch (err) {
-            console.log("error oi")
+            return resolve(`/images/items/${fileName}`)
+        } 
+        catch (err) {
+            console.log("p1 error")
+            reject("no local file")
         }
-        // let x = fetch(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`, {
-        //     mode: "no-cors"
-        // })
-        //     .then(res => {
-        //         // console.log(id, res, res.headers)
-        //         // if(!res.ok) throw Error("bbb")
-        //         // resolve(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`)
-        //     })
-        //     .catch(err => console.log('aiyo erro'))
     })
 
     // 2. fetch from MapleStory.io
     let p2 = new Promise((resolve, reject) => {
-        return
         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
             mode: "no-cors"
         })
             .then(res => {
-                resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
+                // resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
             })
-            .catch(err => console.log("aaa"))
+            .catch(err => "do nothing")
     })
 
-    return Promise.any([p1, p2])
+    // 3. fetch from MapleStory.io -- exception list
+    let p3 = new Promise((resolve, reject) => {
+        const url = itemIdToExceptionUrl({id, name})
+        if(!url) return
+
+        let x = fetch(url, {
+            mode: "no-cors"
+        })
+            .then(res => {
+                resolve(url)
+            })
+            .catch(err => "do nothing")
+    })
+
+    return Promise.any([p1, p2, p3])
 
 }
 
 //
-export const itemIdToImgUrl = ({ id, name }) => {
+export const itemIdToExceptionUrl = ({ id, name }) => {
     name = name.toLowerCase()
     if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
     if (["scroll", "30%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040108/icon?resize=1.0`
@@ -125,7 +132,7 @@ export const itemIdToImgUrl = ({ id, name }) => {
     if (["nx cash", "1000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680151/icon?resize=1.0`
     if (["nx cash", "5000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680578/icon?resize=1.0`
     if (["white scroll fragment"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/4001533/icon?resize=1.0`
-    return `https://maplelegends.com/static/images/lib/item/${id.padStart(8, '0')}.png`
+    return null
 }
 
 // 
