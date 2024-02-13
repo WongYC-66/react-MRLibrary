@@ -115,8 +115,10 @@ export default function Equips() {
 
             </Form>
 
+            <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
+            
             {/* Item Search Result */}
-            <Table className="mt-5 table-sm text-center">
+            <Table className="mt-3 table-sm text-center">
                 <thead>
                     <tr>
                         <th>Image</th>

@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { renderImageWithMobId, filterMobList } from "./utility.jsx"
+import { renderImageWithMobId, filterMobList, updateSearchResultCount } from "./utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
 
@@ -75,8 +75,9 @@ export default function Monster() {
 
             </Form>
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
+            
             {/* Monster Result */}
-            <Table className="mt-5">
+            <Table className="mt-3">
                 <thead>
                     <tr>
                         <th>Image</th>
@@ -101,13 +102,15 @@ export default function Monster() {
 
 const renderMobList = (filteredMobList) => {
     const [searchParams] = useSearchParams()
+
+    updateSearchResultCount(filteredMobList.length)
+
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
     filteredMobList = filteredMobList.slice(sliceStartIndex, sliceEndIndex)
 
-    const countEl = document.getElementById("record-count")
-    if (countEl) countEl.textContent = `found ${filteredMobList.length || 0} record${filteredMobList.length >= 2 ? "s" : ""}`
+   
 
     return filteredMobList.map(x => {
         const mobId = x[0]

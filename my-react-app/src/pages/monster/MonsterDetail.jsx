@@ -63,7 +63,7 @@ export default function MonsterDetail() {
             <Container>
                 <Row>
                     {/* Mob Image, hp, mp, etc ... */}
-                    <Col md={4}>
+                    <Col lg={4}>
                         <div className="mob-stats-card text-center">
                             <Table bordered hover>
                                 <tbody>
@@ -120,7 +120,7 @@ export default function MonsterDetail() {
 
                     </Col>
                     {/* Monster Drop / Map Spawn */}
-                    <Col md={8}>
+                    <Col lg={8}>
                         <div className="mob-drops-locations-card">
                             <Tabs
                                 id="controlled-tab-example"

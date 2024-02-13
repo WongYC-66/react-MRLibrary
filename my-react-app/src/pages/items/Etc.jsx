@@ -37,7 +37,7 @@ export default function Use() {
             </Form>
 
             {/* Item Search Result */}
-            <Table className="mt-5 table-sm text-center">
+            <Table className="mt-3 table-sm text-center">
                 <thead>
                     <tr>
                         <th>Image</th>
@@ -49,6 +49,8 @@ export default function Use() {
                     {renderItemList(filterItemList(itemLibrary), "etc")}
                 </tbody>
             </Table>
+
+            <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
 
             {/* Pagination */}
             {updatePagination(itemLibrary, filterItemList)}

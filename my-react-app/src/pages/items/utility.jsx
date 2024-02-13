@@ -22,6 +22,9 @@ export const filterItemList = (itemLibrary) => {
 
 export const renderItemList = (filteredItemList, type = "use") => {
     const [searchParams] = useSearchParams()
+
+    updateSearchResultCount(filteredItemList.length)
+
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
@@ -43,7 +46,7 @@ export const renderItemList = (filteredItemList, type = "use") => {
                     </Link>
                 </td>
                 <td>
-                    {x[1].desc.split("\\n").map(x =>
+                    {x[1]?.desc?.split("\\n").map(x =>
                         <p key={x} className="p-0 m-0" dangerouslySetInnerHTML={{ __html: x }}></p>
                     )}
                 </td>
@@ -71,7 +74,7 @@ export const findGoodItemImgUrl = ({ id }) => {
     // 1. fetch from MapleLegends
     let p1 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`, {
-            // mode: "no-cors"
+            mode: "no-cors"
         })
             .then(res => resolve(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`))
             .catch(err => reject(err))
@@ -80,7 +83,7 @@ export const findGoodItemImgUrl = ({ id }) => {
     // 2. fetch from MapleStory.io
     let p2 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-            // mode: "no-cors"
+            mode: "no-cors"
         })
             .then(res => {
                 resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
@@ -108,3 +111,7 @@ export const itemIdToImgUrl = ({ id, name }) => {
 }
 
 // 
+export const updateSearchResultCount = (number) => {
+    const countEl = document.getElementById("record-count")
+    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
+}

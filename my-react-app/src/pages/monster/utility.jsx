@@ -90,7 +90,7 @@ export const findGoodImgUrl = ({ id }) => {
 }
 
 export const decodeElemAttr = (elemAttr) => {
-    if (!elemAttr || elemAttr === "") return ["No elemental weak/strong/immune"]
+    if (!elemAttr || elemAttr === "") return ["weak : none", "strong : none", "immune : none"]
     const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
     let returnStrArr = elemAttr.match(/.{2}/g).map(x => {
         let element = elemList[x[0]]
@@ -199,4 +199,9 @@ export const itemIdToNavUrl = (itemId) => {
         if (itemId >= min && itemId <= max) return `${url}/id=${itemId}`
     }
     return "/error"
+}
+
+export const updateSearchResultCount = (number) => {
+    const countEl = document.getElementById("record-count")
+    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
 }

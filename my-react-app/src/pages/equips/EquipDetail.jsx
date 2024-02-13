@@ -63,9 +63,9 @@ export default function EquipDetail() {
             <Container>
                 <Row>
                     {/* Item Image, name, desc, etc ... */}
-                    <Col lg={4}>
+                    <Col lg={6}>
                         <div className="item-stats-card text-center">
-                            <Table size="lg">
+                            <Table className="mw-100">
                                 <tbody>
                                     <tr>
                                         <th className="rounded-5" colSpan={6}>
@@ -75,7 +75,7 @@ export default function EquipDetail() {
                                         </th>
                                     </tr>
                                     <tr>
-                                        <td className="bg-transparent align-middle" colSpan={3}>
+                                        <td className="bg-transparent align-middle w-50" colSpan={3}>
                                             {renderImageWithItemId(equipInfo.id)}
                                             {/* <Image src={equipInfo.imgUrl} fluid className="w-50" /> */}
                                         </td>
@@ -89,12 +89,16 @@ export default function EquipDetail() {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`rounded-4 ${jobList.includes(-1) && "text-warning"}`}>Beginner</td>
-                                        <td className={`rounded-4 ${jobList.includes(1) && "text-warning"}`}>Warrior</td>
-                                        <td className={`rounded-4 ${jobList.includes(2) && "text-warning"}`}>Magician</td>
-                                        <td className={`rounded-4 ${jobList.includes(4) && "text-warning"}`}>Bowman</td>
-                                        <td className={`rounded-4 ${jobList.includes(8) && "text-warning"}`}>Thief</td>
-                                        <td className={`rounded-4 ${jobList.includes(16) && "text-warning"}`}>Pirate</td>
+                                        <td colSpan={6} className="bg-transparent p-0" >
+                                            <div className="d-flex flex-wrap">
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(-1) && "text-warning"}`}>Beginner</div>
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(2) && "text-warning"}`}>Magician</div>
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(1) && "text-warning"}`}>Warrior</div>
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(4) && "text-warning"}`}>Bowman</div>
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(8) && "text-warning"}`}>Thief</div>
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(16) && "text-warning"}`}>Pirate</div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td colSpan={6} className="text-start">
@@ -132,7 +136,7 @@ export default function EquipDetail() {
 
                     </Col>
                     {/* Item Dropped by */}
-                    <Col lg={8}>
+                    <Col lg={6}>
                         <div className="item-dropped-by-card">
                             <Tabs
                                 id="controlled-tab-example"

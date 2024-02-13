@@ -145,6 +145,10 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
 
 export const renderEquipList = (filteredEquipList, type = "use") => {
     const [searchParams] = useSearchParams()
+
+    updateSearchResultCount(filteredEquipList.length)
+
+
     const isWeaponPage = useLocation().pathname === "/weapon"
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
@@ -206,7 +210,7 @@ export const findGoodEquipImgUrl = ({ id }) => {
     // 1. fetch from MapleLegends
     let p1 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`, {
-            // mode: "no-cors"
+            mode: "no-cors"
         })
             .then(res => resolve(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`))
             .catch(err => reject(err))
@@ -215,7 +219,7 @@ export const findGoodEquipImgUrl = ({ id }) => {
     // 2. fetch from MapleStory.io
     let p2 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-            // mode: "no-cors"
+            mode: "no-cors"
         })
             .then(res => resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`))
             .catch(err => reject(err))
@@ -359,4 +363,9 @@ export const decodeReqJobToList = (reqJob) => {
         "16": [16]      // 'PIRATE',
     }
     return lib[reqJob]
+}
+
+export const updateSearchResultCount = (number) => {
+    const countEl = document.getElementById("record-count")
+    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
 }
