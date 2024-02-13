@@ -1,5 +1,4 @@
 import { useSearchParams, Link } from "react-router-dom"
-import fs from 'fs';
 // 
 import Image from "react-bootstrap/Image"
 // 
@@ -63,7 +62,7 @@ export const renderItemList = (filteredItemList, type = "use") => {
 export const renderImageWithItemId = (itemId, itemName) => {
     const ImageComponent = <Image src="abc" id={`image-${itemId}`} fluid alt="Image not found" />
 
-    findGoodItemImgUrl({ id: itemId, name: itemName}).then(x => {
+    findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
         let el = document.getElementById(`image-${itemId}`)
         if (el) el.src = x
     })
@@ -77,42 +76,42 @@ export const findGoodItemImgUrl = ({ id, name }) => {
     // 1. fetch from local files
     let p1 = new Promise((resolve, reject) => {
         try {
+            console.log
             const fileName = `${id.padStart(8, 0)}.png`
-            
-            let x = fs.existsSync(`../../../public/images/items/${fileName}`); 
-            console.log("no error")
-            console.log(x)
-            return resolve(`/images/items/${fileName}`)
-        } 
+            // return resolve(`/images/items/${fileName}`)
+        }
         catch (err) {
-            console.log("p1 error")
+            // console.log(err)
             reject("no local file")
         }
     })
 
     // 2. fetch from MapleStory.io
-    let p2 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-            mode: "no-cors"
-        })
-            .then(res => {
-                // resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
+    let p2 = new Promise(async (resolve, reject) => {
+        try {
+            let x = await fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
+                // mode: "no-cors"
             })
-            .catch(err => "do nothing")
+            return resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
+        } catch (err) {
+            // console.log(err)
+            reject("no file from maplestory.io")
+        }
+
     })
 
     // 3. fetch from MapleStory.io -- exception list
-    let p3 = new Promise((resolve, reject) => {
-        const url = itemIdToExceptionUrl({id, name})
-        if(!url) return
+    let p3 = new Promise(async(resolve, reject) => {
+        try{
+            const url = itemIdToExceptionUrl({ id, name })
+            if (!url) throw Error("not from expcetion list")
+            return resolve(url)
+        } catch (err) {
+            // console.log(err)
+            reject("no file from maplestory.io")
+        }
 
-        let x = fetch(url, {
-            mode: "no-cors"
-        })
-            .then(res => {
-                resolve(url)
-            })
-            .catch(err => "do nothing")
+        
     })
 
     return Promise.any([p1, p2, p3])
