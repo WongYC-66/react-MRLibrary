@@ -62,7 +62,7 @@ export const renderImageWithItemId = (itemId) => {
 
     findGoodItemImgUrl({ id: itemId }).then(x => {
         let el = document.getElementById(`image-${itemId}`)
-        if(el) el.src = x
+        if (el) el.src = x
     })
 
     return ImageComponent
@@ -72,26 +72,44 @@ export const renderImageWithItemId = (itemId) => {
 export const findGoodItemImgUrl = ({ id }) => {
 
     // 1. fetch from MapleLegends
-    let p1 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`, {
-            mode: "no-cors"
-        })
-            .then(res => resolve(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`))
-            .catch(err => reject(err))
+    let p1 = new Promise(async (resolve, reject) => {
+
+        try {
+            // let x = await fetch(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`, {
+            // console.log(`https://maplelegends.com/lib/use?id=${id}`)
+            let x = await fetch(`https://maplelegends.com/lib/use?id=${id}`, {mode:"no-cors"})
+            // https://maplelegends.com/lib/use?id=2000000
+            console.log(x)
+            resolve(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`)
+
+        } catch (err) {
+            console.log("error oi")
+        }
+        // let x = fetch(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`, {
+        //     mode: "no-cors"
+        // })
+        //     .then(res => {
+        //         // console.log(id, res, res.headers)
+        //         // if(!res.ok) throw Error("bbb")
+        //         // resolve(`https://maplelegends.com/static/images/lib/item/${id.padStart(8, 0)}.png`)
+        //     })
+        //     .catch(err => console.log('aiyo erro'))
     })
 
     // 2. fetch from MapleStory.io
     let p2 = new Promise((resolve, reject) => {
+        return
         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
             mode: "no-cors"
         })
             .then(res => {
                 resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
             })
-            .catch(err => reject(err))
+            .catch(err => console.log("aaa"))
     })
 
     return Promise.any([p1, p2])
+
 }
 
 //

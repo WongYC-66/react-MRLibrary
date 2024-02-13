@@ -36,6 +36,9 @@ export default function Use() {
 
             </Form>
 
+            <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
+
+
             {/* Item Search Result */}
             <Table className="mt-3 table-sm text-center">
                 <thead>
