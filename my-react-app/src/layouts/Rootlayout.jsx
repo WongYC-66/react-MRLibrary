@@ -11,7 +11,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import Image from 'react-bootstrap/Image'
 // 
 
-export default function RootLayout() {
+export default function RootLayout() { 
   return (
     <div className="root-layout bg-body-tertiary d-flex flex-column vh-100 " data-bs-theme="dark">
 
