@@ -16,10 +16,10 @@ export const filterMobList = (mobLibrary) => {
 
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
-    const searchTerm = filterOption.search.toLowerCase() 
-    const filter = filterOption.filter 
-    const order = filterOption.order 
-    const sort = filterOption.sort 
+    const searchTerm = filterOption.search.toLowerCase()
+    const filter = filterOption.filter
+    const order = filterOption.order
+    const sort = filterOption.sort
     let filteredMobList = Object.entries(mobLibrary)
 
     // console.log("before filter = ",filteredMobList)
@@ -40,18 +40,99 @@ export const filterMobList = (mobLibrary) => {
         })
 
     // console.log("after filter = ", filteredMobList)
-    console.log(`found : ${filteredMobList.length} records`)
+    // console.log(`found : ${filteredMobList.length} records`)
 
     return sort === "descending" ? filteredMobList.reverse() : filteredMobList
 }
 
 export const renderImageWithMobId = (mobId) => {
-    const ImageComponent = <Image src="abc" id={`image-${mobId}`} fluid alt="Image not found" />
+    if (!mobId) return
+    const fileName = `${mobId.padStart(7, 0)}.png`
 
-    findGoodImgUrl({ id: mobId }).then(x => {
-        let el = document.getElementById(`image-${mobId}`)
-        if (el) el.src = x
-    })
+    const handleError = e => {
+        const img = e.target
+        if (img.getAttribute("myimgindex") === '1') {
+            // switch to maplestory.io source (option - 2)
+            img.setAttribute("myimgindex", "2")
+            img.src = `https://maplestory.io/api/SEA/198/mob/${mobId}/render/stand`
+        }
+        // error again? 
+        if (img.getAttribute("myimgindex") === '2') {
+            // switch to maplestory.io exception list (option - 3)
+            let x = data_MobIdImg[mobId] // {region : xxx , version : xxx , animation : ...}
+            if (!x) return
+            x = x[0]
+            img.setAttribute("myimgindex", "3")
+            img.src = `https://maplestory.io/api/${x.region}/${x.version}/mob/${mobId}/render/${x.animation}`
+        }
+        if (img.getAttribute("myimgindex") === '3') {
+            // switch to maplestory.io source (option - 4 - spare)
+            img.setAttribute("myimgindex", "4")
+            img.src = ""
+        }
+        if (img.getAttribute("myimgindex") === '4') {
+            // return console.log('end')
+            return
+        }
+    }
+
+    const ImageComponent = <Image
+        myimgindex="1"
+        src={`\\images\\monsters\\${fileName}`} // by default, use server files inside /images
+        id={`image-${mobId}`}
+        fluid
+        alt="Image not found"
+        onError={handleError} />
+
+    // findGoodImgUrl({ id: mobId }).then(x => {
+    //     let el = document.getElementById(`image-${mobId}`)
+    //     if (el) el.src = x
+    // })
+
+    return ImageComponent
+}
+
+export const renderImageWithItemIdType = (itemId, itemName, type) => {
+    if (!itemId || !itemName) return
+    const fileName = `${itemId.padStart(8, 0)}.png`
+
+    const handleError = e => {
+        const img = e.target
+        if (img.getAttribute("myimgindex") === '1') {
+            // switch to maplestory.io source (option - 2)
+            img.setAttribute("myimgindex", "2")
+            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
+        }
+        // error again? 
+        if (img.getAttribute("myimgindex") === '2') {
+            // switch to maplestory.io exception list (option - 3)
+            img.setAttribute("myimgindex", "3")
+            img.src = itemIdToExceptionUrl({ id: itemId, name: itemName })
+        }
+        if (img.getAttribute("myimgindex") === '3') {
+            // switch to maplestory.io source (option - 4 - spare)
+            img.setAttribute("myimgindex", "4")
+            img.src = ""
+        }
+        if (img.getAttribute("myimgindex") === '4') {
+            // return console.log('end')
+            return
+        }
+    }
+
+    const typeString = type === "equip" ? "characters" : "items"
+    const ImageComponent = <Image
+        myimgindex="1"
+        src={`\\images\\${typeString}\\${fileName}`} // by default, use server files inside /images
+        id={`image-${itemId}`}
+        fluid
+        alt="Image not found"
+        onError={handleError} />
+
+    // findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
+    //     let el = document.getElementById(`image-${itemId}`)
+    //     if (el) el.src = x
+    // })
 
     return ImageComponent
 }
@@ -145,22 +226,19 @@ export const mapIdToUrl = (id) => {
     return `https://maplelegends.com/lib/map?id=${id}`
 }
 
-export const itemIdToImgUrl = (type, { id, name }) => {
-    if (type === "equip") return `https://maplelegends.com/static/images/lib/character/${id.padStart(8, '0')}.png`
-    if (type === "item") {
-        name = name.toLowerCase()
-        if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
-        if (["scroll", "30%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040108/icon?resize=1.0`
-        if (["scroll", "60%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2044501/icon?resize=1.0`
-        if (["scroll", "70%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040814/icon?resize=1.0`
-        if (["scroll", "100%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2041300/icon?resize=1.0`
-        if (["scroll", "clean slate", "1%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049000/icon?resize=1.0`
-        if (["scroll", "chaos"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049100/icon?resize=1.0`
-        if (["nx cash", "1000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680151/icon?resize=1.0`
-        if (["nx cash", "5000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680578/icon?resize=1.0`
-        if (["white scroll fragment"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/4001533/icon?resize=1.0`
-        return `https://maplelegends.com/static/images/lib/item/${id.padStart(8, '0')}.png`
-    }
+export const itemIdToExceptionUrl = ({ id, name }) => {
+    name = name.toLowerCase()
+    if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
+    if (["scroll", "30%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040108/icon?resize=1.0`
+    if (["scroll", "60%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2044501/icon?resize=1.0`
+    if (["scroll", "70%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040814/icon?resize=1.0`
+    if (["scroll", "100%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2041300/icon?resize=1.0`
+    if (["scroll", "clean slate", "1%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049000/icon?resize=1.0`
+    if (["scroll", "chaos"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049100/icon?resize=1.0`
+    if (["nx cash", "1000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680151/icon?resize=1.0`
+    if (["nx cash", "5000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680578/icon?resize=1.0`
+    if (["white scroll fragment"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/4001533/icon?resize=1.0`
+    return null
 }
 
 export const itemIdToNavUrl = (itemId) => {

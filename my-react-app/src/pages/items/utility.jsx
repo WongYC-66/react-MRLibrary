@@ -60,16 +60,52 @@ export const renderItemList = (filteredItemList, type = "use") => {
 
 // 
 export const renderImageWithItemId = (itemId, itemName) => {
-    const ImageComponent = <Image src="abc" id={`image-${itemId}`} fluid alt="Image not found" />
+    if (!itemId || !itemName) return
+    const fileName = `${itemId.padStart(8, 0)}.png`
 
-    findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
-        let el = document.getElementById(`image-${itemId}`)
-        if (el) el.src = x
-    })
+    const handleError = e => {
+        const img = e.target
+        if (img.getAttribute("myimgindex") === '1') {
+            // switch to maplestory.io source (option - 2)
+            img.setAttribute("myimgindex", "2")
+            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
+        } 
+        // error again? 
+        if (img.getAttribute("myimgindex") === '2') {
+            // switch to maplestory.io exception list (option - 3)
+            img.setAttribute("myimgindex", "3")
+            img.src = itemIdToExceptionUrl({id: itemId, name: itemName})
+        }
+        if (img.getAttribute("myimgindex") === '3') {
+            // switch to maplestory.io source (option - 4 - spare)
+            img.setAttribute("myimgindex", "4")
+            img.src = ""
+        }
+        if (img.getAttribute("myimgindex") === '4') {
+            // return console.log('end')
+            return
+        }
+    }
+
+    const ImageComponent = <Image
+        myimgindex="1"
+        src={`\\images\\items\\${fileName}`} // by default, use server files inside /images
+        id={`image-${itemId}`}
+        fluid
+        alt="Image not found"
+        onError={handleError} />
+
+
+    // findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
+    //     let el = document.getElementById(`image-${itemId}`)
+    //     if (el) el.src = x
+    // })
 
     return ImageComponent
 }
 // 
+
+
 
 export const findGoodItemImgUrl = ({ id, name }) => {
 
@@ -101,8 +137,8 @@ export const findGoodItemImgUrl = ({ id, name }) => {
     })
 
     // 3. fetch from MapleStory.io -- exception list
-    let p3 = new Promise(async(resolve, reject) => {
-        try{
+    let p3 = new Promise(async (resolve, reject) => {
+        try {
             const url = itemIdToExceptionUrl({ id, name })
             if (!url) throw Error("not from expcetion list")
             return resolve(url)
@@ -111,7 +147,7 @@ export const findGoodItemImgUrl = ({ id, name }) => {
             reject("no file from maplestory.io")
         }
 
-        
+
     })
 
     return Promise.any([p1, p2, p3])

@@ -109,8 +109,7 @@ const renderMobList = (filteredMobList) => {
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
     filteredMobList = filteredMobList.slice(sliceStartIndex, sliceEndIndex)
-
-   
+    // [ ["100100", {name: xxx, exp: xxx, maxHP: xxx}], ... ...]
 
     return filteredMobList.map(x => {
         const mobId = x[0]

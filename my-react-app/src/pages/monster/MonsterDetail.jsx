@@ -1,5 +1,4 @@
 import { useParams, Link } from "react-router-dom"
-import { LinkContainer } from 'react-router-bootstrap'
 import { useState, useEffect } from "react"
 // 
 import Container from 'react-bootstrap/Container';
@@ -15,7 +14,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import {
     decodeElemAttr,
     mapIdToUrl,
-    itemIdToImgUrl,
+    renderImageWithItemIdType,
     sortDropsToFourArr,
     itemIdToNavUrl
 } from "./utility.jsx"
@@ -214,7 +213,8 @@ const dropsOverlayWrapper = ({ id, name, desc }) => {
             overlay={renderTooltip}
         >
             <Link to={itemIdToNavUrl(id)}>
-                <Image src={itemIdToImgUrl(para, { id, name })} alt="img not found" className="me-1" />
+                {renderImageWithItemIdType(id, name, para)}
+                {/* <Image src={itemIdToImgUrl(para, { id, name })} alt="img not found" className="me-1" /> */}
             </Link>
         </OverlayTrigger>
     )
