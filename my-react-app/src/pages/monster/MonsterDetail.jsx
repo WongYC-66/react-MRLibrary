@@ -15,8 +15,9 @@ import {
     decodeElemAttr,
     mapIdToUrl,
     renderImageWithItemIdType,
+    renderImageWithMobId,
     sortDropsToFourArr,
-    itemIdToNavUrl
+    itemIdToNavUrl,
 } from "./utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
@@ -37,7 +38,6 @@ export default function MonsterDetail() {
             ...data_mobStats[mob_Id],
             id: mob_Id,
             name: data_mob[mob_Id],
-            imgUrl: `https://maplelegends.com/static/images/lib/monster/${mob_Id.padStart(7, 0)}.png`,
             drops: data_MB[mob_Id],
         }
         const spawnMapObj = []
@@ -71,7 +71,7 @@ export default function MonsterDetail() {
                                     </tr>
                                     <tr>
                                         <td colSpan={2} className="bg-transparent">
-                                            <Image src={mobInfo.imgUrl} fluid className="mw-50" />
+                                            { renderImageWithMobId(mobInfo.id) }
                                             <p className="text-danger fw-bold">{mobInfo?.boss ? "BOSS" : ""}</p>
                                         </td>
                                     </tr>

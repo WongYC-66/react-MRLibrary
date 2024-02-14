@@ -47,97 +47,141 @@ export const filterMobList = (mobLibrary) => {
 
 export const renderImageWithMobId = (mobId) => {
     if (!mobId) return
-    const fileName = `${mobId.padStart(7, 0)}.png`
 
     const handleError = e => {
+        const fileName = `${mobId.padStart(7, 0)}.png`
         const img = e.target
+        // find suitable image src from:
+        // 1: server file under /images/
+        // 2: maplelegends
+        // 3: maplestory.io exception list
+        // 4: maplestory.io
+
+        if (img.getAttribute("myimgindex") === '0') {
+            // switch to server file under /images/ (option - 1)
+            // console.log("switch to option-1")
+            img.setAttribute("myimgindex", "1")
+            img.src = `\\images\\monsters\\${fileName}`
+            return
+        }
         if (img.getAttribute("myimgindex") === '1') {
-            // switch to maplestory.io source (option - 2)
+            // switch to maplelegends (option - 2)
+            // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
-            img.src = `https://maplestory.io/api/SEA/198/mob/${mobId}/render/stand`
+            img.src = `https://maplelegends.com/static/images/lib/monster/${fileName}.png`
+            return
         }
         // error again? 
         if (img.getAttribute("myimgindex") === '2') {
             // switch to maplestory.io exception list (option - 3)
+            // console.log("switch to option-3")
             let x = data_MobIdImg[mobId] // {region : xxx , version : xxx , animation : ...}
-            if (!x) return
-            x = x[0]
+            if (x) x = x[0]
             img.setAttribute("myimgindex", "3")
-            img.src = `https://maplestory.io/api/${x.region}/${x.version}/mob/${mobId}/render/${x.animation}`
+            img.src = `https://maplestory.io/api/${x?.region}/${x?.version}/mob/${mobId}/render/${x?.animation}`
+            return
         }
         if (img.getAttribute("myimgindex") === '3') {
-            // switch to maplestory.io source (option - 4 - spare)
+            // switch to maplestory.io (option - 4)
+            // console.log("switch to option-4")
             img.setAttribute("myimgindex", "4")
-            img.src = ""
+            img.src = `https://maplestory.io/api/SEA/198/mob/${mobId}/render/stand`
+            return
         }
         if (img.getAttribute("myimgindex") === '4') {
+            // switch to maplestory.io (option - 5 - spare)
+            // console.log("switch to option-5")
+            img.setAttribute("myimgindex", "5")
+            img.src = "/error"
+            return
+        }
+        if (img.getAttribute("myimgindex") === '5') {
             // return console.log('end')
             return
         }
     }
 
     const ImageComponent = <Image
-        myimgindex="1"
-        src={`\\images\\monsters\\${fileName}`} // by default, use server files inside /images
+        myimgindex="0"
+        src={`...`} // by default, make it trigger error
         id={`image-${mobId}`}
         fluid
         alt="Image not found"
         onError={handleError} />
-
-    // findGoodImgUrl({ id: mobId }).then(x => {
-    //     let el = document.getElementById(`image-${mobId}`)
-    //     if (el) el.src = x
-    // })
 
     return ImageComponent
 }
 
 export const renderImageWithItemIdType = (itemId, itemName, type) => {
     if (!itemId || !itemName) return
-    const fileName = `${itemId.padStart(8, 0)}.png`
 
     const handleError = e => {
+        // console.log("trigger handleError")
+        const fileName = `${itemId.padStart(8, 0)}.png`
         const img = e.target
+        // find suitable image src from:
+        // 1: server file under /images/
+        // 2: maplelegends
+        // 3: maplestory.io exception list
+        // 4: maplestory.io
+
+        if (img.getAttribute("myimgindex") === '0') {
+            // switch to server file under /images/ (option - 1)
+            // console.log("switch to option-1")
+            const typeString = type === "equip" ? "characters" : "items"
+            img.setAttribute("myimgindex", "1")
+            img.src = `\\images\\${typeString}\\${fileName}`
+            return
+        }
         if (img.getAttribute("myimgindex") === '1') {
             // switch to maplestory.io source (option - 2)
+            // console.log("switch to option-2")
+            const typeString = type === "equip" ? "character" : "item"
             img.setAttribute("myimgindex", "2")
-            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
+            img.src = `https://maplelegends.com/static/images/lib/${typeString}/${fileName}.png`
+            return
         }
-        // error again? 
         if (img.getAttribute("myimgindex") === '2') {
             // switch to maplestory.io exception list (option - 3)
+            // console.log("switch to option-3")
             img.setAttribute("myimgindex", "3")
             img.src = itemIdToExceptionUrl({ id: itemId, name: itemName })
+            return
         }
         if (img.getAttribute("myimgindex") === '3') {
-            // switch to maplestory.io source (option - 4 - spare)
+            // switch to maplestory.io  (option - 4)
+            // console.log("switch to option-4")
             img.setAttribute("myimgindex", "4")
-            img.src = ""
+            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
+            return
         }
         if (img.getAttribute("myimgindex") === '4') {
+            // switch to maplestory.io source (option - 5 - spare)
+            // console.log("switch to option-5")
+            img.setAttribute("myimgindex", "5")
+            img.src = "/error"
+            return
+        }
+        if (img.getAttribute("myimgindex") === '5') {
             // return console.log('end')
             return
         }
     }
 
-    const typeString = type === "equip" ? "characters" : "items"
     const ImageComponent = <Image
-        myimgindex="1"
-        src={`\\images\\${typeString}\\${fileName}`} // by default, use server files inside /images
+        myimgindex="0"
+        src={`...`} // by default, make it trigger error
         id={`image-${itemId}`}
         fluid
         alt="Image not found"
         onError={handleError} />
 
-    // findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
-    //     let el = document.getElementById(`image-${itemId}`)
-    //     if (el) el.src = x
-    // })
-
     return ImageComponent
 }
 
+
 export const findGoodImgUrl = ({ id }) => {
+    // obsolete
     // 1. fetch from MapleLegends
     let p1 = new Promise((resolve, reject) => {
         let x = fetch(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`, {

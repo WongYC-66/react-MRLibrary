@@ -35,7 +35,7 @@ export default function ItemDetail() {
             id: item_Id,
             name: data.name,
             desc: data?.desc,
-            imgUrl: itemIdToExceptionUrl({ id: item_Id, name: data.name }),
+            // imgUrl: itemIdToExceptionUrl({ id: item_Id, name: data.name }),
         }
         const droppedBy = []
         Object.entries(data_MB).forEach(([mobId, drops]) => {
@@ -69,7 +69,7 @@ export default function ItemDetail() {
                                     </tr>
                                     <tr>
                                         <td className="bg-transparent">
-                                            {renderImageWithItemId(itemInfo.id)}
+                                            {renderImageWithItemId(itemInfo.id, itemInfo.name)}
                                             {/* <Image src={itemInfo.imgUrl} fluid className="mw-50" /> */}
                                         </td>
                                     </tr>
@@ -120,21 +120,3 @@ export default function ItemDetail() {
     )
 }
 
-const dropsOverlayWrapper = ({ id, name, desc }) => {
-    const isEquip = !desc // equip dont have description
-    const para = isEquip ? "equip" : "item"
-    const renderTooltip = (props) => (
-        <Tooltip id={`tooltip-${id}`} {...props}>
-            {name}
-        </Tooltip>
-    );
-    return (
-        <OverlayTrigger
-            key={id}
-            placement="top"
-            overlay={renderTooltip}
-        >
-            <Image src={itemIdToExceptionUrl(para, { id, name })} alt="img not found" className="me-1" />
-        </OverlayTrigger>
-    )
-}

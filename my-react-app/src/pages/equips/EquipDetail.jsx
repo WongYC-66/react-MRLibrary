@@ -5,14 +5,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from "react-bootstrap/Table"
-import Image from "react-bootstrap/Image"
-import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+import Tabs from "react-bootstrap/Tabs"
 // 
 import {
-    equipIdToImgUrl,
     equipIdToCategory,
     decodeReqJobToList,
     attkSpeedToText,
@@ -29,7 +25,7 @@ export default function EquipDetail() {
     const [equipInfo, setEquipInfo] = useState({})
     let { equipId } = useParams();
 
-    console.log(equipInfo)
+    // console.log(equipInfo)
 
     useEffect(() => {
         const equip_Id = equipId.split("=")[1]
@@ -38,7 +34,6 @@ export default function EquipDetail() {
             ...data_GearStats[equip_Id],
             id: equip_Id,
             name,
-            // imgUrl: findGoodEquipImgUrl({ id: equip_Id, name }),
             category: equipIdToCategory(equip_Id),
         }
         const droppedBy = []
@@ -76,8 +71,7 @@ export default function EquipDetail() {
                                     </tr>
                                     <tr>
                                         <td className="bg-transparent align-middle w-50" colSpan={3}>
-                                            {renderImageWithItemId(equipInfo.id)}
-                                            {/* <Image src={equipInfo.imgUrl} fluid className="w-50" /> */}
+                                            {renderImageWithItemId(equipInfo.id, equipInfo.name)}
                                         </td>
                                         <td className="rounded-4" colSpan={3}>
                                             <p className="p-0 m-0">Req LVL : {equipInfo.reqLevel || "no-info"}</p>
@@ -163,24 +157,5 @@ export default function EquipDetail() {
             </Container>
         </div >
 
-    )
-}
-
-const dropsOverlayWrapper = ({ id, name, desc }) => {
-    const isEquip = !desc // equip dont have description
-    const para = isEquip ? "equip" : "item"
-    const renderTooltip = (props) => (
-        <Tooltip id={`tooltip-${id}`} {...props}>
-            {name}
-        </Tooltip>
-    );
-    return (
-        <OverlayTrigger
-            key={id}
-            placement="top"
-            overlay={renderTooltip}
-        >
-            <Image src={equipIdToImgUrl(para, { id, name })} alt="img not found" className="me-1" />
-        </OverlayTrigger>
     )
 }

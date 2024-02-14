@@ -61,35 +61,61 @@ export const renderItemList = (filteredItemList, type = "use") => {
 // 
 export const renderImageWithItemId = (itemId, itemName) => {
     if (!itemId || !itemName) return
-    const fileName = `${itemId.padStart(8, 0)}.png`
 
     const handleError = e => {
+        // console.log("trigger handleError")
+        const fileName = `${itemId.padStart(8, 0)}.png`
         const img = e.target
+        // find suitable image src from:
+        // 1: server file under /images/
+        // 2: maplelegends
+        // 3: maplestory.io exception list
+        // 4: maplestory.io
+
+        if (img.getAttribute("myimgindex") === '0') {
+            // switch to server file under /images/ (option - 1)
+            // console.log("switch to option-1")
+            img.setAttribute("myimgindex", "1")
+            img.src = `\\images\\items\\${fileName}`
+            return
+        } 
         if (img.getAttribute("myimgindex") === '1') {
             // switch to maplestory.io source (option - 2)
+            // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
-            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
+            img.src = `https://maplelegends.com/static/images/lib/item/${fileName}.png`
+            return
         } 
-        // error again? 
         if (img.getAttribute("myimgindex") === '2') {
             // switch to maplestory.io exception list (option - 3)
+            // console.log("switch to option-3")
             img.setAttribute("myimgindex", "3")
             img.src = itemIdToExceptionUrl({id: itemId, name: itemName})
+            return
         }
         if (img.getAttribute("myimgindex") === '3') {
-            // switch to maplestory.io source (option - 4 - spare)
+            // switch to maplestory.io  (option - 4)
+            // console.log("switch to option-4")
             img.setAttribute("myimgindex", "4")
-            img.src = ""
+            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
+            return
         }
         if (img.getAttribute("myimgindex") === '4') {
+            // switch to maplestory.io source (option - 5 - spare)
+            // console.log("switch to option-5")
+            img.setAttribute("myimgindex", "5")
+            img.src = "/error"
+            return
+        }
+        if (img.getAttribute("myimgindex") === '5') {
             // return console.log('end')
             return
         }
     }
 
     const ImageComponent = <Image
-        myimgindex="1"
-        src={`\\images\\items\\${fileName}`} // by default, use server files inside /images
+        myimgindex="0"
+        src={`...`} // by default, make it trigger error
         id={`image-${itemId}`}
         fluid
         alt="Image not found"
