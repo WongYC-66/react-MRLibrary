@@ -22,62 +22,85 @@ export default function Monster() {
         setMobLibrary(data_mobStats)
     }, [])
 
+    const handleAdvancedSearchClick = (e) => {
+        document.getElementById("advanced-table").classList.toggle("d-none")
+        e.target.classList.toggle("d-none")
+    }
 
     return (
         <div className="monster d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
             <Form method="post" action="/monster">
+                <div className="d-flex flex-wrap">
+                    <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">
+                        <Table className="text-center" borderless >
+                            <thead>
+                                <tr>
+                                    <th className="bg-transparent">Filter</th>
+                                    <th className="bg-transparent">Order By</th>
+                                    <th className="bg-transparent">Sort</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="filter by" data-bs-theme="light" name="filterBy">
+                                            <option value="any">Any</option>
+                                            <option value="monster">Monster</option>
+                                            <option value="boss">Boss</option>
+                                        </FormBS.Select>
+                                    </td>
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
+                                            <option value="id">Id</option>
+                                            <option value="level">Level</option>
+                                            <option value="exp">Exp</option>
+                                            <option value="maxHP">Hp</option>
+                                        </FormBS.Select>
+                                    </td>
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="sort by" data-bs-theme="light" name="sortBy">
+                                            <option value="ascending">Ascending</option>
+                                            <option value="descending">Descending</option>
+                                        </FormBS.Select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+                    
+                    <div className="col-12 flex-grow-1 d-md-none px-2"><Button onClick={handleAdvancedSearchClick} className="w-100" variant="secondary">Advanced Search</Button></div>
 
-                <Table className="text-center" borderless>
-                    <thead>
-                        <tr>
-                            <th className="bg-transparent">Filter</th>
-                            <th className="bg-transparent">Order By</th>
-                            <th className="bg-transparent">Sort</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className="bg-transparent">
-                                <FormBS.Select aria-label="filter by" data-bs-theme="light" name="filterBy">
-                                    <option value="any">Any</option>
-                                    <option value="monster">Monster</option>
-                                    <option value="boss">Boss</option>
-                                </FormBS.Select>
-                            </td>
-                            <td className="bg-transparent">
-                                <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
-                                    <option value="id">Id</option>
-                                    <option value="level">Level</option>
-                                    <option value="exp">Exp</option>
-                                    <option value="maxHP">Hp</option>
-                                </FormBS.Select>
-                            </td>
-                            <td className="bg-transparent">
-                                <FormBS.Select aria-label="sort by" data-bs-theme="light" name="sortBy">
-                                    <option value="ascending">Ascending</option>
-                                    <option value="descending">Descending</option>
-                                </FormBS.Select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </Table>
+                    <div className="col-lg-6 flex-grow-1">
+                        <Table className="text-center my-0" borderless >
+                            <thead>
+                                <tr className="d-none d-lg-block">
+                                    <th className="bg-transparent w-100">Name</th>
+                                    <th className="bg-transparent"> </th>
+                                </tr>
+                            </thead>
+                            <tbody className="">
+                                <tr>
+                                    <td className="bg-transparent">
+                                        <FormBS.Control
+                                            className=""
+                                            type="search"
+                                            placeholder=" Search ..."
+                                            aria-label="Search"
+                                            data-bs-theme="light"
+                                            name="searchName"
+                                        />
+                                    </td>
+                                    <td className="bg-transparent"><Button variant="secondary" type="submit" className="w-100" >Search</Button></td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
 
-                <div className="d-flex px-2">
-                    <FormBS.Control
-                        className="me-3"
-                        type="search"
-                        placeholder=" Search ..."
-                        aria-label="Search"
-                        data-bs-theme="light"
-                        name="searchName"
-                    />
-                    <Button variant="secondary" type="submit" className="w-50">Search</Button>
                 </div>
-
             </Form>
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
-            
+
             {/* Monster Result */}
             <Table className="mt-3">
                 <thead>
