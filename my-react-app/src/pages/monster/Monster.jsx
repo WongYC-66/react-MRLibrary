@@ -32,6 +32,7 @@ export default function Monster() {
             {/* DropDown filter and Search input and Button */}
             <Form method="post" action="/monster">
                 <div className="d-flex flex-wrap">
+                    
                     <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">
                         <Table className="text-center" borderless >
                             <thead>

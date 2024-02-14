@@ -30,93 +30,118 @@ export default function Equips() {
         })
         let filtered_data_GearStats = Object.fromEntries(
             Object.entries(data_GearStats)
-                .filter(([id, { name }]) => name) // filtered out those without name
-                .filter(([id, { category }]) => !category.includes(undefined)) // filtered out those without category/subcategory
+                .filter(([_id, { name }]) => name) // filtered out those without name
+                .filter(([_id, { category }]) => !category.includes(undefined)) // filtered out those without category/subcategory
         )
 
         setEquipLibrary(filtered_data_GearStats)
     }, [])
 
+    const handleAdvancedSearchClick = (e) => {
+        document.getElementById("advanced-table").classList.toggle("d-none")
+        e.target.classList.toggle("d-none")
+    }
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
             <Form method="post" action={`${urlPathname}`}>
-                <Table className="text-center" borderless>
-                    <thead>
-                        <tr>
-                            <th className="bg-transparent">Job</th>
-                            {isWeaponPage && <th className="bg-transparent">Category</th>}
-                            <th className="bg-transparent">Order By</th>
-                            <th className="bg-transparent">Sort</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {/* Job dropdown */}
-                            <td className="bg-transparent">
-                                <FormBS.Select aria-label="filter job by" data-bs-theme="light" name="jobBy">
-                                    <option value="0">Any</option>
-                                    <option value="1">Warrior</option>
-                                    <option value="2">Magician</option>
-                                    <option value="4">Archer</option>
-                                    <option value="8">Thief</option>
-                                    <option value="16">Pirate</option>
-                                    <option value="-1">Beginner</option>
-                                </FormBS.Select>
-                            </td>
+                <div className="d-flex flex-wrap">
 
-                            {/* Category dropdown */}
-                            {isWeaponPage &&
-                                < td className="bg-transparent">
-                                    <FormBS.Select aria-label="category by" data-bs-theme="light" name="categoryBy">
-                                        {weaponCategoryList.map(({ text, value }) =>
-                                            <option key={value} value={value}>{text}</option>
-                                        )}
-                                    </FormBS.Select>
-                                </td>
-                            }
+                    <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">
+                        <Table className="text-center" borderless>
+                            <thead>
+                                <tr>
+                                    <th className="bg-transparent">Job</th>
+                                    {isWeaponPage && <th className="bg-transparent">Category</th>}
+                                    <th className="bg-transparent">Order By</th>
+                                    <th className="bg-transparent">Sort</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {/* Job dropdown */}
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="filter job by" data-bs-theme="light" name="jobBy">
+                                            <option value="0">Any</option>
+                                            <option value="1">Warrior</option>
+                                            <option value="2">Magician</option>
+                                            <option value="4">Archer</option>
+                                            <option value="8">Thief</option>
+                                            <option value="16">Pirate</option>
+                                            <option value="-1">Beginner</option>
+                                        </FormBS.Select>
+                                    </td>
 
-                            {/* Order By dropdown */}
-                            <td className="bg-transparent">
-                                <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
-                                    {isWeaponPage && weaponOrderByList.map(({ text, value }) =>
-                                        <option key={value} value={value}>{text}</option>
-                                    )}
+                                    {/* Category dropdown */}
+                                    {isWeaponPage &&
+                                        < td className="bg-transparent">
+                                            <FormBS.Select aria-label="category by" data-bs-theme="light" name="categoryBy">
+                                                {weaponCategoryList.map(({ text, value }) =>
+                                                    <option key={value} value={value}>{text}</option>
+                                                )}
+                                            </FormBS.Select>
+                                        </td>
+                                    }
 
-                                    {!isWeaponPage && armorOrderByList.map(({ text, value }) =>
-                                        <option key={value} value={value}>{text}</option>
-                                    )}
-                                </FormBS.Select>
-                            </td>
+                                    {/* Order By dropdown */}
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
+                                            {isWeaponPage && weaponOrderByList.map(({ text, value }) =>
+                                                <option key={value} value={value}>{text}</option>
+                                            )}
 
-                            {/* Sort dropdown */}
-                            <td className="bg-transparent">
-                                <FormBS.Select aria-label="sort by" data-bs-theme="light" name="sortBy">
-                                    <option value="ascending">Ascending</option>
-                                    <option value="descending">Descending</option>
-                                </FormBS.Select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </Table>
+                                            {!isWeaponPage && armorOrderByList.map(({ text, value }) =>
+                                                <option key={value} value={value}>{text}</option>
+                                            )}
+                                        </FormBS.Select>
+                                    </td>
 
+                                    {/* Sort dropdown */}
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="sort by" data-bs-theme="light" name="sortBy">
+                                            <option value="ascending">Ascending</option>
+                                            <option value="descending">Descending</option>
+                                        </FormBS.Select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
 
-                <div className="d-flex px-2">
-                    <FormBS.Control
-                        className="me-3"
-                        type="search"
-                        placeholder=" Search ..."
-                        aria-label="Search"
-                        data-bs-theme="light"
-                        name="searchName"
-                    />
-                    <Button variant="secondary" type="submit" className="w-50">Search</Button>
+                    <div className="col-12 flex-grow-1 d-md-none px-2"><Button onClick={handleAdvancedSearchClick} className="w-100" variant="secondary">Advanced Search</Button></div>
+
+                    <div className="col-lg-6 flex-grow-1">
+                        <Table className="text-center my-0" borderless >
+                            <thead>
+                                <tr className="d-none d-lg-block">
+                                    <th className="bg-transparent w-100">Name</th>
+                                    <th className="bg-transparent"> </th>
+                                </tr>
+                            </thead>
+                            <tbody className="">
+                                <tr>
+                                    <td className="bg-transparent">
+                                        <FormBS.Control
+                                            className=""
+                                            type="search"
+                                            placeholder=" Search ..."
+                                            aria-label="Search"
+                                            data-bs-theme="light"
+                                            name="searchName"
+                                        />
+                                    </td>
+                                    <td className="bg-transparent"><Button variant="secondary" type="submit" className="w-100" >Search</Button></td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+
                 </div>
-
             </Form>
 
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
-            
+
             {/* Item Search Result */}
             <Table className="mt-3 table-sm text-center">
                 <thead>
