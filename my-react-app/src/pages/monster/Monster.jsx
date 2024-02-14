@@ -21,6 +21,8 @@ export default function Monster() {
         })
         setMobLibrary(data_mobStats)
     }, [])
+
+
     return (
         <div className="monster d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
@@ -126,8 +128,8 @@ const renderMobList = (filteredMobList) => {
                     </Link>
                 </td>
                 <td>{x[1].level}</td>
-                <td>{parseInt(x[1].exp * 3.2)}</td>
-                <td>{x[1].maxHP}</td>
+                <td>{numFormatter(parseInt(x[1].exp * 3.2))}</td>
+                <td>{numFormatter(x[1].maxHP)}</td>
             </tr>
         )
     })
@@ -151,3 +153,5 @@ export const monsterAction = async ({ request }) => {
     const actionUrl = `/monster?page=1&filter=${submission.filterBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
     return redirect(actionUrl)
 }
+
+const numFormatter = num => Number(num).toLocaleString("en-US")
