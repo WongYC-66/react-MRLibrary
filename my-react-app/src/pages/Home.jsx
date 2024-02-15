@@ -1,6 +1,7 @@
+import { Form, redirect } from "react-router-dom"
 //
 import Image from "react-bootstrap/Image"
-import Form from "react-bootstrap/Form"
+import FormBS from "react-bootstrap/Form"
 import Button from 'react-bootstrap/Button';
 import { AiFillGithub } from "react-icons/ai";
 
@@ -13,16 +14,16 @@ export default function Home() {
 
             <Image src="/library2.png" fluid />
 
-
-            <Form className="d-flex m-5 p-3">
-                <Form.Control
+            <Form className="d-flex m-5 p-3" method="post" action="/all">
+                <FormBS.Control
+                    className="p-1 me-3"
                     type="search"
                     placeholder="Global search ..."
-                    className="p-1 me-3"
                     aria-label="Search"
                     data-bs-theme="light"
+                    name="searchName"
                 />
-                <Button className="me-5" variant="secondary">Submit</Button>
+                <Button className="me-5" variant="secondary" type="submit">Submit</Button>
             </Form>
 
 

@@ -1,9 +1,9 @@
-import { Outlet, NavLink, ScrollRestoration } from "react-router-dom";
+import { Outlet, ScrollRestoration, Form } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs.jsx"
 // 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+import FormBS from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -121,15 +121,16 @@ export default function RootLayout() {
               </Nav>
 
               <Nav>
-                <Form className="d-flex">
-                  <Form.Control
+                <Form className="d-flex" method="post" action="/all">
+                  <FormBS.Control
                     type="search"
                     placeholder="Global search ..."
                     className="me-1"
                     aria-label="Search"
                     data-bs-theme="light"
+                    name="searchName"
                   />
-                  <Button variant="secondary">Submit</Button>
+                  <Button variant="secondary" type="submit">Submit</Button>
                 </Form>
               </Nav>
 
@@ -148,3 +149,4 @@ export default function RootLayout() {
     </div>
   )
 }
+

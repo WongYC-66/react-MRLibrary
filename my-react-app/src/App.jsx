@@ -12,11 +12,12 @@ import MonsterDetail from './pages/monster/MonsterDetail.jsx'
 import Equips, { equipsAction } from './pages/equips/Equips.jsx'
 import EquipDetail from './pages/equips/EquipDetail.jsx'
 
-
 import Use, { useAction } from './pages/items/Use.jsx'
 import Setup, { setupAction } from './pages/items/Setup.jsx'
 import Etc, { etcAction } from './pages/items/Etc.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
+
+import All, {globalSearchAction} from './pages/all/All.jsx'
 
 import ExpTable from './pages/exptable/ExpTable.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -26,7 +27,7 @@ import RootLayout from './layouts/RootLayout.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={< RootLayout />}>
+    <Route path="/" element={< RootLayout />} >
       <Route index element={< Home />} />
       <Route path="monster" action={monsterAction}>
         <Route index element={< Monster />}></Route>
@@ -64,7 +65,10 @@ const router = createBrowserRouter(
 
       <Route path="exptable" element={< ExpTable />} />
 
-      <Route path="*" element={< NotFound />}  status={"404"} />
+      <Route path="all" element={< All />} action={globalSearchAction} />
+
+
+      <Route path="*" element={< NotFound />} />
     </Route>
   )
 )
