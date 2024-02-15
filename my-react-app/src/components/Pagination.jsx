@@ -20,6 +20,9 @@ export const updatePagination = (library, filterLibraryFunction) => {
             return `?page=${inputNumber}`
         })
         // else when URL:query has nothing. It is initial loading, render the button with URL of:
+        if (urlPathname === "/all") {
+            return `?page=${inputNumber}&search=`
+        }
         if (urlPathname === "/weapon") {
             return `?page=${inputNumber}&job=0&category=any&order=id&sort=ascending&search=`
         }

@@ -22,7 +22,7 @@ import data_Etc from "../../../data/data_Etc.json"
 export default function All() {
     const [searchParams] = useSearchParams()
     const [globalLibrary, setGlobalLibrary] = useState([])
-    const searchTerm = Object.fromEntries([...searchParams.entries()]).search.toLowerCase()
+    const searchTerm = Object.fromEntries([...searchParams.entries()]).search?.toLowerCase()
     // console.log(globalLibrary)
 
     useEffect(() => {
