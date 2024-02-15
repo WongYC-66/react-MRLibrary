@@ -32,7 +32,7 @@ export default function Home() {
             <p>Created by ScottY5C</p>
             <p>Tech Stack : React/Bootstrap/React Router</p>
             <p className="d-flex  align-items-center justify-content-center gap-1">
-                <a href="/" target="_blank"><AiFillGithub /> </a>
+                <a href="https://anonymous.4open.science/r/react-MRLibrary-36D1/" target="_blank"><AiFillGithub /> </a>
                 <span><a href="https://royals.ms/forum/threads/monster-drop-table-website-scottys-version.228204/" target="_blank">Forum Link</a></span>
             </p>
         </div>
