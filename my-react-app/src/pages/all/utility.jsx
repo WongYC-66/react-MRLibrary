@@ -82,7 +82,7 @@ export const renderImageWithMobId = (mobId) => {
         id={`image-${mobId}`}
         myimgindex="0"
         src={`...`} // by default, make it trigger error
-        className="w-100"
+        className="mw-50"
         fluid
         alt="Image not found"
         onError={handleError} />
