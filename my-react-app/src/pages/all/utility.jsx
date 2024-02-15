@@ -79,10 +79,10 @@ export const renderImageWithMobId = (mobId) => {
     }
 
     const ImageComponent = <Image
-        className="w-25"
+        id={`image-${mobId}`}
         myimgindex="0"
         src={`...`} // by default, make it trigger error
-        id={`image-${mobId}`}
+        className="w-100"
         fluid
         alt="Image not found"
         onError={handleError} />
@@ -147,9 +147,9 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
     }
 
     const ImageComponent = <Image
+        id={`image-${itemId}`}
         myimgindex="0"
         src={`...`} // by default, make it trigger error
-        id={`image-${itemId}`}
         fluid
         alt="Image not found"
         onError={handleError} />

@@ -97,7 +97,7 @@ export default function All() {
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
 
             {/* Item Search Result */}
-            <Table className="mt-3 table-sm text-center">
+            <Table className="mt-3 table-sm text-center align-middle">
                 <thead>
                     <tr>
                         <th>Image</th>
@@ -132,7 +132,7 @@ export const renderGlobalList = (filteredGlobalList) => {
         const navUrl = type === "monster" ? `/monster/id=${id}` : itemIdToNavUrl(id)
         return (
             <tr key={id}>
-                <td >
+                <td>
                     <Link to={`${navUrl}`}>
                         {type === "monster" && renderImageWithMobId(id)}
                         {type !== "monster" && renderImageWithItemIdType(id, name, type)}
