@@ -8,11 +8,11 @@ import { AiFillGithub } from "react-icons/ai";
 export default function Home() {
     return (
         <div className="home text-center">
-            <h2>Welcome to </h2>
+            <h2 className="display-6">Welcome to </h2>
 
-            <h1 className="m-5 p-1">MapleRoyals Library (Un-official)</h1>
+            <h2 className="display-5 my-3 p-0">MapleRoyals Library (Un-official)</h2>
 
-            <Image src="/library2.png" fluid />
+            <Image className="w-75" src="/library2.png"/>
 
             <Form className="d-flex m-5 p-3" method="post" action="/all">
                 <FormBS.Control

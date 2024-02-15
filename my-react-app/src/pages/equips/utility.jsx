@@ -148,7 +148,6 @@ export const renderEquipList = (filteredEquipList, type = "use") => {
 
     updateSearchResultCount(filteredEquipList.length)
 
-
     const isWeaponPage = useLocation().pathname === "/weapon"
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10

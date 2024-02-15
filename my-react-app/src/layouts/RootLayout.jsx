@@ -123,12 +123,14 @@ export default function RootLayout() {
               <Nav>
                 <Form className="d-flex" method="post" action="/all">
                   <FormBS.Control
+                    id="globalInput"
                     type="search"
                     placeholder="Global search ..."
                     className="me-1"
                     aria-label="Search"
                     data-bs-theme="light"
                     name="searchName"
+                    defaultValue=""
                   />
                   <Button variant="secondary" type="submit">Submit</Button>
                 </Form>
@@ -142,7 +144,7 @@ export default function RootLayout() {
 
       </header>
       <main className="text-bg-secondary p-4 flex-fill d-flex justify-content-center">
-        <div className="tab-card container-md p-4 mx-4 bg-body-tertiary rounded-5">
+        <div className="tab-card container-md p-md-4 mx-md-4 py-3 m-0  bg-body-tertiary rounded-5">
           <Outlet />
         </div>
       </main>
