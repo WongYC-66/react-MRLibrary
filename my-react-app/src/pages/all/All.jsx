@@ -101,8 +101,8 @@ export default function All() {
                 <thead>
                     <tr>
                         <th>Image</th>
-                        <th>Name</th>
-                        <th>Type</th>
+                        <th className="w-50" >Name</th>
+                        <th className="w-25">Type</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -132,7 +132,7 @@ export const renderGlobalList = (filteredGlobalList) => {
         const navUrl = type === "monster" ? `/monster/id=${id}` : itemIdToNavUrl(id)
         return (
             <tr key={id}>
-                <td>
+                <td >
                     <Link to={`${navUrl}`}>
                         {type === "monster" && renderImageWithMobId(id)}
                         {type !== "monster" && renderImageWithItemIdType(id, name, type)}
