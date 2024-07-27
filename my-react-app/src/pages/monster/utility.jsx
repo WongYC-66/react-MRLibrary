@@ -22,8 +22,6 @@ export const filterMobList = (mobLibrary) => {
     const sort = filterOption.sort
     let filteredMobList = Object.entries(mobLibrary)
 
-    console.log({order})
-
     // console.log("before filter = ",filteredMobList)
     filteredMobList = filteredMobList
         .filter(x => {
@@ -52,7 +50,7 @@ export const filterMobList = (mobLibrary) => {
             return Number(a[1][order]) - Number(b[1][order])
         })
 
-    console.log("after filter = ", filteredMobList)
+    // console.log("after filter = ", filteredMobList)
     // console.log(`found : ${filteredMobList.length} records`)
 
 

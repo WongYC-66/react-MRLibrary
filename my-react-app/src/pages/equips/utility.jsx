@@ -319,8 +319,8 @@ export const rangeCalculator = (x, type = "", hardCap = 5) => {
     type === "showGodly" ?
         // returnString = (`${min} ~ ${max} or ${maxWithGodlyBonus} (godly)`) :
         // returnString = (`${min} ~ ${max} or ${maxWithGodlyBonus}`)
-        returnString = (`${min} ~ ${maxWithGodlyBonus}`) :
-        returnString = (`${min} ~ ${maxWithGodlyBonus}`)
+        returnString = (`${min} ~ ${max} or ${maxWithGodlyBonus}`) :
+        returnString = (`${min} ~ ${max} or ${maxWithGodlyBonus}`)
     return returnString
 }
 
