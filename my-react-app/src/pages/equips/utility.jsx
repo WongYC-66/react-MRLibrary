@@ -89,7 +89,7 @@ const querySorting = ({ order, filteredEquipList }) => {
         // sort by order-property
         return Number(valueA) - Number(valueB) 
     })
-    console.log(listCopy)
+    // console.log(listCopy)
 
     return listCopy
 }
