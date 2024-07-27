@@ -5,14 +5,27 @@ import Image from "react-bootstrap/Image"
 export const filterItemList = (itemLibrary) => {
     const [searchParams] = useSearchParams()
     if (searchParams.size) { // If URL has query param, filter ...
+
         const filterOption = Object.fromEntries([...searchParams.entries()])
-        const searchTerm = filterOption.search.toLowerCase()
+        const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
 
         let filteredItemList = Object.entries(itemLibrary)
-            .filter(x => {
-                if (!x[1].hasOwnProperty('name')) return false
-                if (x[1].name.toLowerCase().includes(searchTerm)) return true
+            .filter(([_id, { name }]) => {
+                if (!name) return false
+                return searchTermArr.some(term => name.toLowerCase().includes(term))
             })
+
+        // sort list by  number of search term matches, most matched at first
+        filteredItemList = filteredItemList.map(([_id, obj]) => {
+            let matchCount = 0
+            searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+            return [_id, obj, matchCount]
+        })
+
+        filteredItemList.sort((a, b) => b[2] - a[2])  // sort by matchCount
+
+        filteredItemList = filteredItemList.map(([_id, obj, matchCount]) => [_id, obj])
+
         return filteredItemList
     }
     // No filter at first loading or if URL don't have query param 
@@ -78,19 +91,19 @@ export const renderImageWithItemId = (itemId, itemName) => {
             img.setAttribute("myimgindex", "1")
             img.src = `\\images\\items\\${fileName}`
             return
-        } 
+        }
         if (img.getAttribute("myimgindex") === '1') {
             // switch to maplestory.io source (option - 2)
             // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
             img.src = `https://maplelegends.com/static/images/lib/item/${fileName}.png`
             return
-        } 
+        }
         if (img.getAttribute("myimgindex") === '2') {
             // switch to maplestory.io exception list (option - 3)
             // console.log("switch to option-3")
             img.setAttribute("myimgindex", "3")
-            img.src = itemIdToExceptionUrl({id: itemId, name: itemName})
+            img.src = itemIdToExceptionUrl({ id: itemId, name: itemName })
             return
         }
         if (img.getAttribute("myimgindex") === '3') {
