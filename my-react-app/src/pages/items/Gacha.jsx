@@ -1,13 +1,13 @@
-import { useSearchParams, Form, redirect, useLocation, NavLink, Link } from "react-router-dom"
+import { useSearchParams, Form, redirect } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
+import Image from 'react-bootstrap/Image';
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
 import { filterGachaList, updateSearchResultCount } from "./utility.jsx"
-// import { renderImageWithMobId, filterMobList, updateSearchResultCount } from "./utility.jsx"
 import data_Gacha from "../../../data/data_Gacha.json"
 
 export default function Gacha() {
@@ -100,7 +100,9 @@ export default function Gacha() {
 
                 </div>
             </Form>
+            
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
+            <Image id='location-img' className="d-none img-fluid w-75 mx-auto" rounded />
 
             {/* Gacha Items Result */}
             <Table className="mt-3">
@@ -129,7 +131,7 @@ const renderGachaList = (filteredItemList) => {
     const [searchParams] = useSearchParams()
 
     updateSearchResultCount(filteredItemList.length)
-    // console.log(filteredItemList)
+    updateLocationImage(searchParams.get('location'))
 
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
@@ -192,6 +194,16 @@ const gachaTypeMapping = (name) => {
         case 'stimulators':
             return 'Stimulators'
     }
+}
+
+const updateLocationImage = (location) => {
+    const imgEl = document.getElementById("location-img")
+    if(!imgEl) return 
+    
+    if(location === 'all' || !location) return imgEl.classList.add("d-none");
+    
+    imgEl.classList.remove("d-none");
+    imgEl.setAttribute("src", `/images/gacha_map/${location}.png`)
 }
 
 
