@@ -7,7 +7,7 @@
 
 <!-- next to update -->
 
-## change-log - July 27 2024
+## Log - July 27 2024
 1. done - update exptable at lvl-163 
 2. done - update typo of unonofficial to unofficial
 3. thinking ... - make search for flexible instead of remember name

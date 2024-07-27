@@ -12,13 +12,26 @@ export const filterGlobalList = (globalLibrary) => {
 
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
-    const searchTerm = filterOption.search.toLowerCase()
-
+    const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
+    
     let filteredGlobalList = globalLibrary
         .filter(({ name }) => {
             if (!name) return false
-            if (name.toLowerCase().includes(searchTerm)) return true
+            if(searchTermArr.some(term => name.toLowerCase().includes(term))) return true
+            return false
         })
+    
+    // sort list by  number of search term matches, most matched at first
+    filteredGlobalList = filteredGlobalList.map(obj => {
+        let matchCount = 0
+        searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+        return [obj, matchCount]
+    })
+
+    filteredGlobalList.sort((a, b) => b[1] - a[1])  // sort by matchCount
+
+    filteredGlobalList = filteredGlobalList.map(arr => arr[0])
+
     return filteredGlobalList
 }
 
