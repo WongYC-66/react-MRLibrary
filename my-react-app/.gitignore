@@ -27,3 +27,5 @@ dist-ssr
 /data/Map/
 /data/Items/
 /data/Character/
+
+/data/*.xml

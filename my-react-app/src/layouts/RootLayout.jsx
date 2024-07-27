@@ -8,10 +8,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap'
+import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image'
 // 
 
-export default function RootLayout() { 
+export default function RootLayout() {
   return (
     <div className="root-layout bg-body-tertiary d-flex flex-column vh-100 " data-bs-theme="dark">
 
@@ -26,7 +27,7 @@ export default function RootLayout() {
         <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
           <Container fluid>
             <LinkContainer to="/">
-              <Navbar.Brand className="w-25" ><Image src="/logov5.webp" width="175px"/></Navbar.Brand>
+              <Navbar.Brand className="w-25" ><Image src="/logov5.webp" width="175px" /></Navbar.Brand>
             </LinkContainer>
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -118,6 +119,23 @@ export default function RootLayout() {
                 <LinkContainer to="/exptable">
                   <Nav.Link>ExpTable</Nav.Link>
                 </LinkContainer>
+
+                {/* External links */}
+                <NavDropdown title="Links" id="collapsible-nav-dropdown">
+
+                  <Link to='https://royals-droppy.netlify.app/' target="_blank" >
+                    <p className="m-0 p-0 mx-3"> old droptracker</p>
+                  </Link>
+
+                  <Link to='https://royals-droppy-v2-pc.netlify.app/' target="_blank" >
+                    <p className="m-0 p-0 mx-3"> droptracker v2</p>
+                  </Link>
+
+                  <Link to='https://royals-droppy-v2-mobile.netlify.app/' target="_blank" >
+                    <p className="m-0 p-0 mx-3"> droptracker v2-m</p>
+                  </Link>
+
+                </NavDropdown>
               </Nav>
 
               <Nav>
@@ -140,7 +158,7 @@ export default function RootLayout() {
           </Container>
         </Navbar>
 
-        <Breadcrumbs/>
+        <Breadcrumbs />
 
       </header>
       <main className="text-bg-secondary p-4 flex-fill d-flex justify-content-center">

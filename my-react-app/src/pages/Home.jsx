@@ -11,6 +11,7 @@ export default function Home() {
             <h2 className="display-6">Welcome to </h2>
 
             <h2 className="display-5 my-3 p-0">MapleRoyals Library (Un-official)</h2>
+            <h5 className="my-3 p-0"> Game version : v92 </h5>
 
             <Image className="w-75" src="/library2.png"/>
 
@@ -33,7 +34,7 @@ export default function Home() {
             <p>Tech Stack : React/Bootstrap/React Router</p>
             <p className="d-flex  align-items-center justify-content-center gap-1">
                 <a href="https://anonymous.4open.science/r/react-MRLibrary-36D1/" target="_blank"><AiFillGithub /> </a>
-                <span><a href="https://royals.ms/forum/threads/monster-drop-table-website-scottys-version.228204/" target="_blank">Forum Link</a></span>
+                <span><a href="https://royals.ms/forum/threads/un-official-mapleroyals-library-scottys-version.229606/" target="_blank">Forum Link</a></span>
             </p>
         </div>
     )

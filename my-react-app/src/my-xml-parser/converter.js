@@ -18,7 +18,8 @@ import { MBdataFormatting,
     MapIdDataFormatting,
     GearStatsDataFormatting,
     MapMobCountDataFormatting,
-    ItemStatsDataFormatting
+    ItemStatsDataFormatting,
+    MobStatsDataFormatting
 } from './dataFormatting.js';
 
 async function MB() {
