@@ -15,6 +15,7 @@ import EquipDetail from './pages/equips/EquipDetail.jsx'
 import Use, { useAction } from './pages/items/Use.jsx'
 import Setup, { setupAction } from './pages/items/Setup.jsx'
 import Etc, { etcAction } from './pages/items/Etc.jsx'
+import Gacha, { gachaAction } from './pages/items/Gacha.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
 
 import All, {globalSearchAction} from './pages/all/All.jsx'
@@ -60,6 +61,10 @@ const router = createBrowserRouter(
       <Route path="etc" action={etcAction}>
         <Route index element={< Etc />}></Route>
         <Route path=":itemId" element={< ItemDetail />}></Route>
+      </Route >
+
+      <Route path="gacha" action={gachaAction}>
+        <Route index element={< Gacha />}></Route>
       </Route >
       {/* Items */}
 

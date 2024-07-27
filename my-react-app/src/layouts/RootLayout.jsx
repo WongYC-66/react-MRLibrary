@@ -103,6 +103,9 @@ export default function RootLayout() {
                   <LinkContainer to="/etc">
                     <NavDropdown.Item>Etc</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/gacha">
+                    <NavDropdown.Item>Gacha</NavDropdown.Item>
+                  </LinkContainer>
                   {/* <LinkContainer to="/cash">
                     <NavDropdown.Item>Cash</NavDropdown.Item>
                   </LinkContainer> */}

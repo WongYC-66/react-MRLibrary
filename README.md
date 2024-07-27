@@ -14,3 +14,6 @@
 4. done - update game content to v92 
 5. done -  mob exp sorting affected by NaN
 6. done - change item stats UI from ```36 ~ 49```  to  ```36 ~ 44 or 49 ```
+
+## Log - July 28 2024
+1. done - add gacha info, location-name-type

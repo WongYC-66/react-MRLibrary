@@ -209,6 +209,48 @@ export const itemIdToExceptionUrl = ({ id, name }) => {
     return null
 }
 
+// GACHA LIST --
+
+export const filterGachaList = (itemLibrary) => {
+    const [searchParams] = useSearchParams()
+    if (searchParams.size <= 0) return itemLibrary  // No filter at first loading or if URL don't have query param 
+
+    // If URL has query param, filter ...
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+    const searchTermArr = filterOption.search.toLowerCase().split(' ')
+    const location = filterOption.location
+    const type = filterOption.type
+
+    let filteredItemList = itemLibrary
+        .filter(({name}) => {
+            if (!name) return false
+            return searchTermArr.some(term => name.toLowerCase().includes(term))
+        })
+        .filter(obj => {
+            if (location === "all") return true
+            return location === obj.location
+        })
+        .filter(obj => {
+            if (type === "all") return true
+            return type === obj.type
+        })
+
+    // sort list by  number of search term matches, most matched at first
+    filteredItemList = filteredItemList.map(obj => {
+        let matchCount = 0
+        searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+        return [obj, matchCount]
+    })
+
+    filteredItemList.sort((a, b) => b[1] - a[1])  // sort by matchCount
+
+    filteredItemList = filteredItemList.map(([obj, matchCount]) => obj)
+
+    return filteredItemList
+}
+
+
+
 // 
 export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")

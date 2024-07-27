@@ -1,0 +1,5072 @@
+[
+    {
+        "location": "perion",
+        "name": "Beige Umbrella",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Black Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Black Neos",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Black Neos Pants",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blood Valkyrie Skirt (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Bloody Platina (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Bloody Platina Pants (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Dragon Armor",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Dragon Boots",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Dragon Gauntlet",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Dragon Helmet",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Ice Queen (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Blue Ice Queen Skirt (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Brown Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Crushed Skull",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Battle Lord",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Carzen Boots",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Clench",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Commodore (M)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Commodore Pants (M)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Grace Helmet",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Husk",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Lucida (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Lucida Skirt (F)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Orientican (M)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Orientican Pants (M)",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Rivers Boots",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Shouldermail",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Valhalla Helmet",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Valkyrie",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dark War Greave",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Axe",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Battle Axe",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Carabella",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Claymore",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Faltizan",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Flame",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Hellslayer",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Mace",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Elemental Staff 6",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Elemental Wand 1",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Gold Hilden Boots",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Maple Warrior Shield",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Mikhail",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Orihalcon Platine",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Orihalcon Platine Pants",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Pink Adventurer Cape",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Pink Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Purple Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Red Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Red Katana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Red Oriental Helmet",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Redemption",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Silver Planet",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Taru Spirit Cape",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "The Gold Dragon",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Yellow Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Gloves for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Gloves for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Gloves for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Gloves for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for One-Handed Axe for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for One-Handed Axe for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for One-Handed Axe for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for One-Handed Axe for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for One-Handed BW for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for One-Handed BW for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for One-Handed BW for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for One-Handed BW for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for One-Handed Sword for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for One-Handed Sword for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for One-Handed Sword for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for One-Handed Sword for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Overall Armor for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Overall Armor for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Overall Armor for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Overall Armor for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Pole Arm for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Pole Arm for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Pole Arm for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Pole Arm for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Spear for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Spear for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Spear for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Spear for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Two-Handed Axe for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Two-Handed Axe for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Two-Handed Axe for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Two-Handed Axe for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Two-Handed BW for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Two-Handed BW for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Two-Handed BW for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Two-Handed BW for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Two-Handed Sword for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Scroll for Two-Handed Sword for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Two-Handed Sword for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Scroll for Two-Handed Sword for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "perion",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "perion",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "perion",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "perion",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "perion",
+        "name": "Moon Star Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "perion",
+        "name": "Skull Throne",
+        "type": "set-up"
+    },
+    {
+        "location": "perion",
+        "name": "Yellow Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "perion",
+        "name": "Ancient Helm",
+        "type": "itcg"
+    },
+    {
+        "location": "perion",
+        "name": "Crystal Shard",
+        "type": "itcg"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Matter",
+        "type": "itcg"
+    },
+    {
+        "location": "perion",
+        "name": "Subani Ankh",
+        "type": "itcg"
+    },
+    {
+        "location": "perion",
+        "name": "Typhon Crest",
+        "type": "itcg"
+    },
+    {
+        "location": "perion",
+        "name": "Bluish Mineral",
+        "type": "quest-etc"
+    },
+    {
+        "location": "perion",
+        "name": "Stump Eraser",
+        "type": "quest-etc"
+    },
+    {
+        "location": "ellinia",
+        "name": "Angel Wings",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Arc Staff",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Black Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Black Oriental Fury Coat (F)",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Black Oriental Fury Coat (M)",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Black Oriental Fury Hat",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Black Umbrella",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Blue Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Blue Czar",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Blue Elemental Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Blue Elemental Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Blue Goldrunners",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Blue Marine",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Brown Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Brown Lapiz Sandals",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Cromi",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Anakamoon",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Anakarune",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Bazura",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Calaf",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Calas",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Clarity",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Enigma",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Enigma Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Enigmatic",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Golden Circlet",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Galaxy",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Infinium Circlet",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Lorin",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Manute",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Penance",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Requierre",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Ritual",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Sage",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Seraphis",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Varr Hat",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Varr Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Varuna",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dimon Wand",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dragon Staff",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dragon Wand",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Elemental Staff 2",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Elemental Wand 8",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Evil Tale",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Evil Wings",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Green Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Green Goldenwind Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Grey Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Gold Dragon Crown",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Kage",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Magicodar",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Maple Magician Shield",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Phoenix Wand",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Pink Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Purple Adventurer Cape",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Purple Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Purple Ciara",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Red Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Thorns",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Umaru",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Yellow Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Gloves for Magic ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Gloves for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Gloves for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Overall Armor for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Overall Armor for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Overall Armor for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Overall Armor for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Staff for Magic ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Staff for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Staff for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Staff for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Wand for Magic ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Scroll for Wand for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Wand for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Wand for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "ellinia",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "ellinia",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "ellinia",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "ellinia",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "ellinia",
+        "name": "Green Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "ellinia",
+        "name": "The Red Relaxer",
+        "type": "set-up"
+    },
+    {
+        "location": "ellinia",
+        "name": "Ancient Boots",
+        "type": "itcg"
+    },
+    {
+        "location": "ellinia",
+        "name": "Ancient Greaves",
+        "type": "itcg"
+    },
+    {
+        "location": "ellinia",
+        "name": "Antellion Relic",
+        "type": "itcg"
+    },
+    {
+        "location": "ellinia",
+        "name": "Stone Tiger Head",
+        "type": "itcg"
+    },
+    {
+        "location": "ellinia",
+        "name": "Subani Ankh",
+        "type": "itcg"
+    },
+    {
+        "location": "ellinia",
+        "name": "Zeta Residue",
+        "type": "itcg"
+    },
+    {
+        "location": "ellinia",
+        "name": "Lupin Eraser",
+        "type": "quest-etc"
+    },
+    {
+        "location": "ellinia",
+        "name": "Undine’s Cloth",
+        "type": "quest-etc"
+    },
+    {
+        "location": "nautilus",
+        "name": "Abyss Shooter",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Beia Crash",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Basile Boots",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Bisk",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Duke Barkin Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Markintz",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Pirate’s Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Royale Barone",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Voyson Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Schult",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Blue halfgloves",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Blue Sun Boat Hat",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Brown Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Brown Leather Ocean Hat",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Brown Royce",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Burning Hell",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Canopus Boots",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Canopus Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Canopus Hat",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Canopus Suit",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Concerto",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dragon Revolver",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dragon Slash Claw",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Fury Claw",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Green Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Green Plasteer",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Grey Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Infinity’s Wrath",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Mr. Rasfelt",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Pink Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Psycho Claw",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Purple Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Purple Cast Linen",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Belly Duke",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Brave Hamal",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Martier",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Viska",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Steel Renault",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "White Fangz",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "White Marquini",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "White Pioneer",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Yellow Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Gloves for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Gloves for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Gloves for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Gloves for Magic ATT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Gloves for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Gun for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Gun for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Gun for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Gun for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Knuckler for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Knuckler for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Knuckler for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Knuckler for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Overall Armor for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Overall Armor for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Overall Armor for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dark Scroll for Overall Armor for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Shield for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Scroll for Shield for Weapon ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nautilus",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "nautilus",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "nautilus",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "nautilus",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "nautilus",
+        "name": "Fishing Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "nautilus",
+        "name": "Lord Pirate Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "nautilus",
+        "name": "Palm Tree Beach Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "nautilus",
+        "name": "Ancient Boots",
+        "type": "itcg"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Versal Materia",
+        "type": "itcg"
+    },
+    {
+        "location": "nautilus",
+        "name": "Blinking Dingbat",
+        "type": "itcg"
+    },
+    {
+        "location": "nautilus",
+        "name": "Taru Totem",
+        "type": "itcg"
+    },
+    {
+        "location": "nautilus",
+        "name": "Typhon Crest",
+        "type": "itcg"
+    },
+    {
+        "location": "nautilus",
+        "name": "Octopus Eraser",
+        "type": "quest-etc"
+    },
+    {
+        "location": "henesys",
+        "name": "Akha",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Black Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Black Maro",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Black Polyfeather Hat",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Blue Armis (F)",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Blue Arzuna (M)",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Blue Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Blue Choro",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Blue-Lined Kismet",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Blue Metus",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Bow of Magical Destruction",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Brown Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Brown Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Casa Crow",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Ades",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Anes",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Crow",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Elf Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Eyes",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Falcon",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Focus",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Lineros",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Pria",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Pris",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Raven",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dragon Shiner Bow",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Dragon Shiner Cross",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Elemental Staff 8",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Elemental Wand 4",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Fire Raven",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Golden Crow",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Golden Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Golden Nisrock",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Green Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Grey Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Gross Jaeger",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Marine Raven",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Metus",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Pink Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Purple Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Hunter",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Hunter Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Hunter Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Lumati",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Mantle",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Rower",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Steel Slain",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Varkit",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "White Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Xaru",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Yellow Crow",
+        "type": "equip"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Bow for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Bow for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Bow for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Bow for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Crossbow for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Crossbow for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Crossbow for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Crossbow for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Gloves for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Gloves for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Gloves for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Gloves for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Scroll for Overall Armor for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Overall Armor for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Dark Scroll for Overall Armor for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "henesys",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "henesys",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "henesys",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "henesys",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "henesys",
+        "name": "Gold Seal Cushion",
+        "type": "set-up"
+    },
+    {
+        "location": "henesys",
+        "name": "Moon Star Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "henesys",
+        "name": "The Yellow Relaxer",
+        "type": "set-up"
+    },
+    {
+        "location": "henesys",
+        "name": "Black Versal Materia",
+        "type": "itcg"
+    },
+    {
+        "location": "henesys",
+        "name": "Blinking Dingbat",
+        "type": "itcg"
+    },
+    {
+        "location": "henesys",
+        "name": "Naricain Jewel",
+        "type": "itcg"
+    },
+    {
+        "location": "henesys",
+        "name": "Pharoah's Wrappings",
+        "type": "itcg"
+    },
+    {
+        "location": "henesys",
+        "name": "Mushmom Eraser",
+        "type": "quest-etc"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Angelic Betrayal",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Garina",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Garina Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Garina Hood",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Garina Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Mamba",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Black Scarab",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Blood Dagger",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Blood Gigantic",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Blood Larceny",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Blood Nightfox",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Blood Slain",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Blue Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Bronze Gigantic",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Brown Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Brown Moon Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Brown Scarab",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Brown Sonata",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Casters",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Cursayer",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Anelin",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Gigantic",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Identity",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Katina Boots",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Katinas (M)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Katte",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Moss Boots",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Mystra",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Pirate Blouse (F)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Pirate Boots",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Pirate Skirt",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Pirate Top",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Pireta Hat",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scorpio (M)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scorpio Pants",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Slain",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Studded Top (M)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Deadly Fin",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dragon Kanzir",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dragon Kreda",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dragon Green Sleeve",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dragon Purple Sleeve",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dragon’s Tail",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Gold Double Knife",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Gold Pow",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Gold Rover",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Green Scarab",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Grey Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Kandine",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Maku (LUK)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Maku (STR)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Maple Thief Shield",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Maroon Moon (F)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Maroon Moon Pants (F)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Pink Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Pink Gaia Cape",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Purple Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Purple Osfa Boots",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Raven’s Claw",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red China",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Craven",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Goni Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Mystique Pants (F)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Mystique Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Osfa Hat",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Osfa Suit (M)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Red Pirate Pants",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Sai",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Sapphire Gigantic",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Sapphire Slain",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Serpent’s Coil",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Shinkita",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Steel Slain",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Umber Mantis",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Umber Mantis Pants (F)",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Yellow Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Claw for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Claw for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Claw for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Claw for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Dagger for ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Dagger for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Dagger for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Dagger for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Gloves for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Gloves for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Overall Armor for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Overall Armor for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Scroll for Overall Armor for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Green Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "kerning-city",
+        "name": "The Stirge Seat",
+        "type": "set-up"
+    },
+    {
+        "location": "kerning-city",
+        "name": "White Seal Cushion",
+        "type": "set-up"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Ancient Gi",
+        "type": "itcg"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Ancient Greaves",
+        "type": "itcg"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Mystic Astrolabe",
+        "type": "itcg"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Zeta Residue",
+        "type": "itcg"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Bamboo Spear",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Black Old Wisconsin",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Black Starry Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Black Strap Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Blue Old Wisconsin",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Blue Seal Cushion",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Blue Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Crying Mask",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Elemental Staff 5",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Elemental Wand 3",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Fan",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Flamekeeper Cordon",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Fruity Bamboo",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Green Strap Shoes",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Grey Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Hard Hat",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Hula Hoop",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Kebob",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Maple Leaf (STR/DEX/INT/LUK)",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Necomimi",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Palette",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Pink Seal Cushion",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Poison Mushroom",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Purple Old Wisconsin",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Purple Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Raccoon Mask",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Emerald Earrings",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Surfboard",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Umbrella",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Shield Earrings",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Shinobi Bracer",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Smiling Mask",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Toymaker Cap",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "White Starry Bandana",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Wrath of El Nath",
+        "type": "equip"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Bottomwear for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Bottomwear for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Bottomwear for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Bottomwear for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Bottomwear for Jump 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Bottomwear for Jump 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Cape for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Cape for MP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Cape for MP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Cape for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Earring for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Earring for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Earring for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Earring for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Earring for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Gloves for ATT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Gloves for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Gloves for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Gloves for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Gloves for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Gloves for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Gloves for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Helmet for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for One-Handed Sword for Magic ATT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for DEF 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for DEF 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for LUK 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark scroll for Overall Armor for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for STR 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Overall Armor for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Overall Armor for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for Jump 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for Jump 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for Jump 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for Speed 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for Speed 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Pet Equip. for Speed 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shield for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shield for Weapon ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Shield for Weapon ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Shoes for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for Jump 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for Jump 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for Speed 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for Speed 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Shoes for Speed 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Topwear for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Topwear for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Scroll for Topwear for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dark Scroll for Topwear for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Black Sack",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Chocolate",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Return Scroll - Nearest Town",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "The Energizer Drink",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Vital Bullet",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Amorian Relaxer",
+        "type": "set-up"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Moon Star Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Duct Tape",
+        "type": "itcg"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Mystic Astrolabe",
+        "type": "itcg"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Naricain Jewel",
+        "type": "itcg"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Typhon Crest",
+        "type": "itcg"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Vorticular Gyro",
+        "type": "itcg"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Hectagon Necklace",
+        "type": "quest-etc"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Slime Eraser",
+        "type": "quest-etc"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Dagger Forging Stimulator",
+        "type": "stimulators"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Claw Production Stimulator",
+        "type": "stimulators"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Knuckler Production Stimulator",
+        "type": "stimulators"
+    },
+    {
+        "location": "nlc",
+        "name": "Black Paint Brush",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Bow-tie (Green)",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Branch Nose",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Elemental Staff 1",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Elemental Wand 5",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Emergency Rescue Tube",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Frozen Tuna",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Light Purple Umbrella",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Maroon Mop",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Orange Ski",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Purple Surfboard",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Rat Mouth",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Stonetooth Sword",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "Thermometer",
+        "type": "equip"
+    },
+    {
+        "location": "nlc",
+        "name": "White Scroll",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Bottomwear for DEF 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Bottomwear for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Bottomwear for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Bottomwear for Jump 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Cape for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Cape for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Cape for INT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Cape for LUK 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Cape for STR 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Cape for Weapon DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Earring for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Earring for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Earring for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Earring for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Earring for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Earring for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Eye Accessory for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Eye Accessory for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Face Accessory for Avoidability 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Face Accessory for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Gloves for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Gloves for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Gloves for Magic ATT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Helmet for Accuracy 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Helmet for DEF 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Helmet for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Helmet for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Helmet for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Overall Armor for DEF 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Overall Armor for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Overall Armor for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Dark Scroll for Overall Armor for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Dark Scroll for Overall Armor for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Overall Armor for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Overall Armor for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shield for DEF 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shield for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shield for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shield for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shield for Weapon ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shoes for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shoes for Jump 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Shoes for Speed 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Topwear for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Topwear for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Scroll for Topwear for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "nlc",
+        "name": "Brand New Monster Galore",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Eternal Bullet",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "nlc",
+        "name": "Black Seal Cushion",
+        "type": "set-up"
+    },
+    {
+        "location": "nlc",
+        "name": "Green Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "nlc",
+        "name": "Grey Seal Cushion",
+        "type": "set-up"
+    },
+    {
+        "location": "nlc",
+        "name": "Red Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "nlc",
+        "name": "The Yellow Relaxer",
+        "type": "set-up"
+    },
+    {
+        "location": "nlc",
+        "name": "Ancient Faceguard",
+        "type": "itcg"
+    },
+    {
+        "location": "nlc",
+        "name": "Ridley’s Book of Rituals",
+        "type": "itcg"
+    },
+    {
+        "location": "nlc",
+        "name": "Taru Spirit Feather",
+        "type": "itcg"
+    },
+    {
+        "location": "nlc",
+        "name": "Vorticular Gyro",
+        "type": "itcg"
+    },
+    {
+        "location": "nlc",
+        "name": "White Versal Materia",
+        "type": "itcg"
+    },
+    {
+        "location": "cbd",
+        "name": "Doomsday Staff",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Duck Tube",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Elemental Staff 4",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Elemental Wand 7",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Eviscerator",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Lifeguard Saver",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Maplemas Lights",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Red Flowery Tube",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Sad Mask",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Beginner)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Bow)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Claw)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Crossbow)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Dagger)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (One Handed Mace)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (One Handed Sword)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Pole Arm)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Spear)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Staff)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Two Handed Axe)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Two Handed Mace)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Two Handed Sword)",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Streetlight",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Sword Earrings",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "White Mouse Kit [1]",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "White Mouse Kit [2]",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "White Raccoon Mask",
+        "type": "equip"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Bottomwear for DEF 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Bottomwear for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Bottomwear for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Bottomwear for Jump 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Bottomwear for Jump 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for Magic DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for MP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Cape for Weapon DEF 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Earring for DEF 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Earring for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Earring for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Earring for INT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Earring for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Eye Accessory for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Eye Accessory for INT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Face Accessory for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Face Accessory for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Gloves for DEX 10% Scroll for Gloves for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Gloves for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Helmet for Accuracy 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Helmet for DEF 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Helmet for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Helmet for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Helmet for INT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for One-Handed Sword for Magic ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Overall Armor for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Overall Armor for DEF 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Overall Armor for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Overall Armor for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Overall Armor for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for Magic ATT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for STR 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for Weapon ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shield for STR 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shoes for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shoes for Jump 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Shoes for Speed 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Topwear for DEF 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Topwear for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Topwear for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Scroll for Topwear for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "cbd",
+        "name": "Brand New Monster Galore",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Eternal Bullet",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "cbd",
+        "name": "Red Round Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "cbd",
+        "name": "Taru Totem",
+        "type": "itcg"
+    },
+    {
+        "location": "cbd",
+        "name": "Zeta Residue",
+        "type": "itcg"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Elemental Staff 3",
+        "type": "equip"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Elemental Wand 6",
+        "type": "equip"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Purple Gaia Cape",
+        "type": "equip"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Chaos Scroll 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for Jump 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bottomwear for Jump 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bow for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Bow for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for Magic DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for Magic DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for MP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for MP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for Weapon DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Cape for Weapon DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Claw for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Crossbow for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Crossbow for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Dagger for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Dagger for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Earring for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Eye Accessory for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Eye Accessory for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Eye Accessory for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Eye Accessory for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Face Accessory for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Face Accessory for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Face Accessory for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Face Accessory for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gloves for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gun for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Gun for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Helmet for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Knuckler for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Knuckler for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Knuckler for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Knuckler for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Axe for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Axe for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Axe for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Axe for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed BW for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed BW for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed BW for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed BW for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Sword for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Sword for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Sword for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Sword for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Sword for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for One-Handed Sword for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for INT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Overall Armor for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Pole Arm for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Pole Arm for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Pole Arm for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Pole Arm for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for Weapon ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shield for Weapon ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shoes for DEX 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shoes for DEX 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shoes for Jump 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shoes for Jump 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shoes for Speed 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Shoes for Speed 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Spear for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Spear for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Staff for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Staff for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for DEF 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for DEF 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for HP 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for HP 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for LUK 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for LUK 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for STR 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Topwear for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Axe for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Axe for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Axe for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Axe for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed BW for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed BW for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed BW for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed BW for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Sword for Accuracy 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Sword for Accuracy 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Sword for ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Two-Handed Sword for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Wand for Magic ATT 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Scroll for Wand for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Kadomatsu",
+        "type": "set-up"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Red Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "The Red Relaxer",
+        "type": "set-up"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Ancient Armor",
+        "type": "itcg"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Ancient Gi",
+        "type": "itcg"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Antellion Relic",
+        "type": "itcg"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Dark Matter",
+        "type": "itcg"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "LeFay Jewel",
+        "type": "itcg"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Taru Spirit Feather",
+        "type": "itcg"
+    },
+    {
+        "location": "showa-town",
+        "name": "Angry Mask",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Bullseye Board",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Cao Cao Bow",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Crossheider",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Dragon Khanjar",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Elemental Staff 7",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Elemental Wand 2",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Fishing Pole",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Green Umbrella",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Maple Leaf (STR/DEX/INT/LUK)",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Pink Flower Tube (Staff)",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Ragged Red Cape",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Red Marker",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Red Old Wisconsin",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Red Umbrella",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Silver Snowboard",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Sky Ski",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Turquoise Musketeer Cape",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Versalmas Cactus",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Violet Snowshoes",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "White Mop",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "White Mouse Kit [3]",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Yellow Adventurer Cape",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Yellow Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Bottomwear for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Bottomwear for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Bottomwear for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Bottomwear for Jump 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Cape for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Cape for LUK 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Earring for HP 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Earring for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Earring for LUK 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Eye Accessory for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Face Accessory for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Gloves for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Gloves for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Gloves for Magic ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Helmet for Accuracy 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Helmet for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Helmet for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for One-Handed Sword for Magic ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Overall Armor for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Overall Armor for INT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Overall Armor for LUK 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Overall for STR 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shield for HP 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shield for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shield for Magic ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shield for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shield for Weapon ATT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shoes for DEX 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shoes for Jump 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Shoes for Speed 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Topwear for DEF 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Topwear for HP 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Topwear for LUK 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Scroll for Topwear for STR 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "showa-town",
+        "name": "Brand New Monster Galore",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Eternal Bullet",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Watermelon",
+        "type": "other-use"
+    },
+    {
+        "location": "showa-town",
+        "name": "Beach Chair",
+        "type": "set-up"
+    },
+    {
+        "location": "showa-town",
+        "name": "Black Versal Materia",
+        "type": "itcg"
+    },
+    {
+        "location": "showa-town",
+        "name": "Duct Tape",
+        "type": "itcg"
+    },
+    {
+        "location": "showa-town",
+        "name": "Pharoah's Wrappings",
+        "type": "itcg"
+    },
+    {
+        "location": "showa-town",
+        "name": "Stone Tiger Head",
+        "type": "itcg"
+    }
+]
