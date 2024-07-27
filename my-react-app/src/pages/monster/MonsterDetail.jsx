@@ -57,7 +57,7 @@ export default function MonsterDetail() {
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
 
-    console.log(mobInfo)
+    // console.log(mobInfo)
 
     return (
         <div className="monster-detail">
