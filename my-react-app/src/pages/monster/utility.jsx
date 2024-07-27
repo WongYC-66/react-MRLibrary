@@ -22,6 +22,8 @@ export const filterMobList = (mobLibrary) => {
     const sort = filterOption.sort
     let filteredMobList = Object.entries(mobLibrary)
 
+    console.log({order})
+
     // console.log("before filter = ",filteredMobList)
     filteredMobList = filteredMobList
         .filter(x => {
@@ -35,12 +37,24 @@ export const filterMobList = (mobLibrary) => {
         })
         .sort((a, b) => {
             // default is ascending, if descend, then reverse upon return
-            if (filter === "id") return Number(a[0] - b[0])
+            if (order === "id") return Number(a[0] - b[0])
+
+            // order by  - [level/exp/maxHP]
+            // if no data, sort to end, 0,1,2,...1000, NaN
+            if(a[1][order] === undefined && b[1][order] === undefined) return 0
+            if(a[1][order] === undefined) return 1
+            if(b[1][order] === undefined) return -1
+
+            // if level/exp/maxHP same, sub-sort by id Ascending
+            if(a[1][order] === b[1][order]) return Number(a[0]) - Number(b[0])
+            
+            // sort by order-property ascendingly
             return Number(a[1][order]) - Number(b[1][order])
         })
 
-    // console.log("after filter = ", filteredMobList)
+    console.log("after filter = ", filteredMobList)
     // console.log(`found : ${filteredMobList.length} records`)
+
 
     return sort === "descending" ? filteredMobList.reverse() : filteredMobList
 }

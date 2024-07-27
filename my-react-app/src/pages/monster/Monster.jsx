@@ -148,7 +148,8 @@ const renderMobList = (filteredMobList) => {
                 </td>
                 <td>
                     <Link to={`/monster/id=${mobId}`}>
-                        {x[1].name}
+                        <p dangerouslySetInnerHTML={{__html: x[1].name}}></p>
+                        {/* {x[1].name} */}
                     </Link>
                 </td>
                 <td>{x[1].level}</td>
