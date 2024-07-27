@@ -17,8 +17,7 @@ export const filterGlobalList = (globalLibrary) => {
     let filteredGlobalList = globalLibrary
         .filter(({ name }) => {
             if (!name) return false
-            if(searchTermArr.some(term => name.toLowerCase().includes(term))) return true
-            return false
+            return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
     
     // sort list by  number of search term matches, most matched at first

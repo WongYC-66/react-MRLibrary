@@ -16,7 +16,7 @@ export const filterEquipList = (equipLibrary) => {
 
     // If URL has query param, further filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
-    const searchTerm = filterOption.search.toLowerCase()
+    const searchTermArr = filterOption.search.toLowerCase().split(" ")
     const job = filterOption.job
     const category = filterOption.category
     const order = filterOption.order  // id, reqLevel
@@ -25,7 +25,10 @@ export const filterEquipList = (equipLibrary) => {
 
     // 1. query filter - by search name
     filteredEquipList = filteredEquipList
-        .filter(([_id, { name }]) => name.toLowerCase().includes(searchTerm))
+        .filter(([_id, { name }]) => {
+            if (!name) return false
+            return searchTermArr.some(term => name.toLowerCase().includes(term))
+        })
 
     // 2. query filter - by weapon category // ONLY FOR WEAPON PAGE
     filteredEquipList = isWeaponPage
@@ -35,33 +38,58 @@ export const filterEquipList = (equipLibrary) => {
     // 3. query filter - by job class
     filteredEquipList = queryFilterByJob({ job, filteredEquipList })
 
-    // 4. sort by sort order
+    // add number of search term matches
+    filteredEquipList = filteredEquipList.map(([_id, obj]) => {
+        let matchCount = 0
+        searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+        return [_id, obj, matchCount]
+    })
+
+    // 4. sort by matchCount, then by sort order
     filteredEquipList = querySorting({ order, filteredEquipList })
 
+    filteredEquipList = filteredEquipList.map(([_id, obj, matchCount]) => [_id, obj])
+
     // 5. ascending / descending
-    filteredEquipList = sort==="ascending" ? filteredEquipList : filteredEquipList.reverse()
+    filteredEquipList = sort === "ascending" ? filteredEquipList : filteredEquipList.reverse()
 
     return filteredEquipList
 }
 
 const querySorting = ({ order, filteredEquipList }) => {
+    //  sort by matchCount, then by sort order
     const listCopy = filteredEquipList.slice()
     const key = order
     // by ID 
-    if (order === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
+    // if (order === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
     // by other
-    listCopy.sort((a, b)=> {
-        const valueA = parseInt(a[1][key])
-        const valueB = parseInt(b[1][key])
+
+    // [_id, obj, matchCount]
+    listCopy.sort((a, b) => {
+        if(a[2] != b[2]) return b[2] - a[2] // sortby matchCount DESC
+        if(order === 'id') return a[0] - b[0]
+        
+        const valueA = a[1][key]
+        const valueB = b[1][key]
         const nameA = a[1].name
         const nameB = b[1].name
-
+        
+        
         // sort into 0,1,2,3,10,15,... 100, NaN/no-info
-        if(!isNaN(valueA) && isNaN(valueB)) return -1 
-        if(isNaN(valueA) && !isNaN(valueB)) return 1 
-        if(isNaN(valueA) && valueA === valueB) return nameB.localeCompare(nameA) //if same value, sort alphabetically
-        return valueA - valueB // sort ascendingly
+        // if (!isNaN(valueA) && isNaN(valueB)) return -1
+        // if (isNaN(valueA) && !isNaN(valueB)) return 1
+        // if (isNaN(valueA) && valueA === valueB) return nameB.localeCompare(nameA) //if same value, sort alphabetically
+        if(valueA === undefined && valueB === undefined) return 0
+        if(valueA === undefined) return 1
+        if(valueB === undefined) return -1
+
+         // if w.Att/m.Att/attackSpeed same, sub-sort by name Ascending
+        if(valueA === valueB) return a[1]['name'].localeCompare(b[1]['name'])
+
+        // sort by order-property
+        return Number(valueA) - Number(valueB) 
     })
+    console.log(listCopy)
 
     return listCopy
 }
@@ -210,19 +238,19 @@ export const renderImageWithItemId = (itemId, itemName) => {
             img.setAttribute("myimgindex", "1")
             img.src = `\\images\\characters\\${fileName}`
             return
-        } 
+        }
         if (img.getAttribute("myimgindex") === '1') {
             // switch to maplestory.io source (option - 2)
             // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
             img.src = `https://maplelegends.com/static/images/lib/character/${fileName}.png`
             return
-        } 
+        }
         if (img.getAttribute("myimgindex") === '2') {
             // switch to maplestory.io exception list (option - 3)
             // console.log("switch to option-3")
             img.setAttribute("myimgindex", "3")
-            img.src = itemIdToExceptionUrl({id: itemId, name: itemName})
+            img.src = itemIdToExceptionUrl({ id: itemId, name: itemName })
             return
         }
         if (img.getAttribute("myimgindex") === '3') {
