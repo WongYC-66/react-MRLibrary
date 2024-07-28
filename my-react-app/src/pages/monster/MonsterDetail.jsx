@@ -23,6 +23,7 @@ import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
 import data_MB from "../../../data/data_MB.json"
 import data_MapMobCount from "../../../data/data_MapMobCount.json"
+import data_Mob_MapOnly from "../../../data/data_Mob_MapOnly.json"
 import data_Map from "../../../data/data_Map.json"
 
 export default function MonsterDetail() {
@@ -40,17 +41,31 @@ export default function MonsterDetail() {
             name: data_mob[mob_Id],
             drops: data_MB[mob_Id],
         }
-        const spawnMapObj = []
-        Object.entries(data_MapMobCount).forEach(([mapId, valueObj]) => {
-            const valueArr = Object.entries(valueObj)
-            valueArr.forEach(([MobId, count]) => {
+        const spawnMaps = []
+        // data from inside data_MapMobCount (map.wz)
+        let seen_mapId = new Set()
+        Object.entries(data_MapMobCount).forEach(([mapId, mobId_to_count_obj]) => {
+            Object.entries(mobId_to_count_obj).forEach(([MobId, count]) => {
                 if (Number(MobId) === Number(mob_Id)) {
                     const mapNameObj = data_Map[mapId]
-                    spawnMapObj.push([mapId, mapNameObj, count])
+                    spawnMaps.push([mapId, mapNameObj, count])
+                    seen_mapId.add(mapId)
                 }
             })
         })
-        obj.spawnMap = spawnMapObj
+        // there is a problem, boss-type mob not inside data_MapMobCount
+        // combine data from monsterbook together then (string.wz)
+        let monsterBookLocationArr = data_Mob_MapOnly[mob_Id]
+        if (monsterBookLocationArr) {
+            monsterBookLocationArr.forEach(mapId => {
+                if (seen_mapId.has(mapId)) return
+                const mapNameObj = data_Map[mapId]
+                spawnMaps.push([mapId, mapNameObj, 1])
+                seen_mapId.add(mapId)
+            })
+        }
+        // 
+        obj.spawnMap = spawnMaps
 
         setMobInfo(obj)
     }, [])
@@ -112,8 +127,8 @@ export default function MonsterDetail() {
                                         <td>Elements</td>
                                         <td>
                                             {/* undead */}
-                                            { mobInfo?.undead === '1' &&  <p className="m-0 text-start"> Take "Heal" damage </p>}
-                                            
+                                            {mobInfo?.undead === '1' && <p className="m-0 text-start"> Take "Heal" damage </p>}
+
                                             {/* elemental relationship */}
                                             {decodeElemAttr(mobInfo.elemAttr).map((x, i) => <p key={i} className="m-0  text-start">{x}</p>)}
                                         </td>
