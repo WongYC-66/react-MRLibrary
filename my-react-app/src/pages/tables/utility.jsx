@@ -11,7 +11,7 @@ export const filterMobElementalList = (mobLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search?.toLowerCase().split(" ") || ['']
-    const filter = filterOption.filter?.split('-')[1] || 'any'
+    const filter = filterOption.filter?.split('-') || ['any', '']
     const order = filterOption.order || 'level'
     const sort = filterOption.sort || 'ascending'
 
@@ -45,8 +45,12 @@ export const filterMobElementalList = (mobLibrary) => {
         })
         // filter any/weak-to-holy/weak-to-fire/ ....
         .filter(([_, obj, __]) => {
-            if (filter === "any") return true
-            return obj.elemMap[filter] === 'Weak'
+            let [type, el] = filter
+            if (type === "any") return true
+            if (type == 'weak') return obj.elemMap[el] === 'Weak'
+            if (type == 'strong') return obj.elemMap[el] === 'Strong'
+            if (type == 'immune') return obj.elemMap[el] === 'Immune'
+            return false
         })
         .sort((a, b) => {
             // a = [_id, obj, matchCount]

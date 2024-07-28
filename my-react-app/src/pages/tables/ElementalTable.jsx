@@ -56,6 +56,16 @@ export default function ElementalTable() {
                                             <option value="weak-ice">Weak to Ice</option>
                                             <option value="weak-lightning">Weak to Lightning</option>
                                             <option value="weak-poison">Weak to Poison</option>
+                                            <option value="immune-holy">Immune to Holy</option>
+                                            <option value="immune-fire">Immune to Fire</option>
+                                            <option value="immune-ice">Immune to Ice</option>
+                                            <option value="immune-lightning">Immune to Lightning</option>
+                                            <option value="immune-poison">Immune to Poison</option>
+                                            <option value="strong-holy">Strong to Holy</option>
+                                            <option value="strong-fire">Strong to Fire</option>
+                                            <option value="strong-ice">Strong to Ice</option>
+                                            <option value="strong-lightning">Strong to Lightning</option>
+                                            <option value="strong-poison">Strong to Poison</option>
                                         </FormBS.Select>
                                     </td>
                                     <td className="bg-transparent">
