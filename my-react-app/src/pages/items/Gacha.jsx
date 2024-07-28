@@ -45,6 +45,7 @@ export default function Gacha() {
                                             <option value="ellinia">Ellinia</option>
                                             <option value="henesys">Henesys</option>
                                             <option value="kerning-city">Kerning City</option>
+                                            <option value="lhc">LHC</option>
                                             <option value="mushroom-shrine">Mushroom Shrine</option>
                                             <option value="nautilus">Nautilus</option>
                                             <option value="nlc">NLC</option>
@@ -121,7 +122,9 @@ export default function Gacha() {
             {/* Pagination */}
             {updatePagination(itemLibrary, filterGachaList)}
 
-            <p>Source : <a href="https://royals.ms/forum/threads/lets-play-gachapon.110983/" target="_blank">Let's Play Gachapon!</a></p>
+            <p>Source_1 : <a href="https://royals.ms/forum/threads/lets-play-gachapon.110983/" target="_blank">Let's Play Gachapon!</a></p>
+            <p>Source_2 : <a href="https://royals.ms/forum/threads/lhc-exchange-rewards-cs-ws-bwg-taru-totem-rewards-found.193830/" target="_blank">LHC exchange rewards</a></p>
+            <p>Source_3 : <a href="https://royals.ms/forum/threads/results-from-2575-lhc-totems.195508/" target="_blank">Results from 2575 LHC Totems</a></p>
 
         </div>
     )
@@ -173,6 +176,8 @@ const gachaLocationMapping = (name) => {
             return 'Showa Town'
         case 'sleepywood':
             return 'Sleepywood'
+        case 'lhc':
+            return 'LHC'
     }
 }
 

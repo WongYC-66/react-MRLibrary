@@ -5068,5 +5068,370 @@
         "location": "showa-town",
         "name": "Stone Tiger Head",
         "type": "itcg"
+    },
+    {
+        "location": "lhc",
+        "name": "Blood Dagger",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Brown Work Gloves",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Concerto",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Neschere",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Nisrock",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Dimon Wand",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 5",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 6",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 7",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 8",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Gold Double Knife",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Golden Smith Hammer",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "King Cent",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Pinaka",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Pink Adventurer Cape",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Purple Adventurer Cape",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Red Craven",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Sky Ski",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Sparta",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Stonetooth Sword",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Tavar",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Tomahawk",
+        "type": "equip"
+    },
+    {
+        "location": "lhc",
+        "name": "Chaos Scroll 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Bow for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Claw for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Earring for STR 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Face Accessory for Avoidability 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Face Accessory for Avoidability 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Gun for Attack 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Helmet for INT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Knuckle for Attack 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for One-Handed Axe for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for One-Handed Sword for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Pole Arm for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Shield for Weapon Att. 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Shield for Weapon Att. 70%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Staff for Magic ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Two-handed Axe for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark scroll for Two-handed BW for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Two-handed Sword for ATT 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Dark Scroll for Wand for Magic Att. 30%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for DEX 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Belts for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Earring for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Earring for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Eye Accessory for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Eye Accessory for INT 100%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Face Accessory for Avoidability 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Face Accessory for Avoidability 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Helmet for INT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Helmet for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Rings for DEX 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Rings for INT 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Rings for LUK 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Rings for STR 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Rings for STR 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Shield for Weapon Att. 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Shield for Weapon Att. 60%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "Scroll for Two-Handed BW for ATT 10%",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "White Scroll",
+        "type": "scrolls"
+    },
+    {
+        "location": "lhc",
+        "name": "5 million mesos",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "Melting Cheese",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "Power Elixir",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "Reindeer Milk",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "Sunrise Dew",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "The Energizer Drink (1~4)",
+        "type": "other-use"
+    },
+    {
+        "location": "lhc",
+        "name": "Taru Totem",
+        "type": "itcg"
     }
 ]
