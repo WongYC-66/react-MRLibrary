@@ -23,6 +23,7 @@ import All, { globalSearchAction } from './pages/all/All.jsx'
 import ExpTable from './pages/tables/ExpTable.jsx'
 import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTable.jsx'
 import NotFound from './pages/NotFound.jsx'
+import AboutMe from './pages/AboutMe.jsx'
 
 // layouts
 import RootLayout from './layouts/RootLayout.jsx'
@@ -72,6 +73,8 @@ const router = createBrowserRouter(
       <Route path="exptable" element={< ExpTable />} />
 
       <Route path="elemental-table" element={< ElementalTable />} action={elementalTableAction} />
+
+      <Route path="about-me" element={< AboutMe />} />
 
       <Route path="all" element={< All />} action={globalSearchAction} />
 

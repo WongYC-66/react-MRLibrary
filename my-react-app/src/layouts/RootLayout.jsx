@@ -129,7 +129,7 @@ export default function RootLayout() {
                   </LinkContainer>
                 </NavDropdown>
 
-                {/* External links */}
+                {/* Links */}
                 <NavDropdown title="Links" id="collapsible-nav-dropdown">
 
                   <Link to='https://royals-droppy.netlify.app/' target="_blank" >
@@ -143,6 +143,10 @@ export default function RootLayout() {
                   <Link to='https://royals-droppy-v2-mobile.netlify.app/' target="_blank" >
                     <p className="m-0 p-0 mx-3"> droptracker v2-m</p>
                   </Link>
+
+                  <LinkContainer to="/about-me">
+                    <NavDropdown.Item>About Me</NavDropdown.Item>
+                  </LinkContainer>
 
                 </NavDropdown>
               </Nav>
