@@ -73,7 +73,7 @@ export default function MonsterDetail() {
                                     </tr>
                                     <tr>
                                         <td colSpan={2} className="bg-transparent">
-                                            { renderImageWithMobId(mobInfo.id) }
+                                            {renderImageWithMobId(mobInfo.id)}
                                             <p className="text-danger fw-bold">{mobInfo?.boss ? "BOSS" : ""}</p>
                                         </td>
                                     </tr>
@@ -148,8 +148,8 @@ const renderTableOfMap = (mapArr) => {
     const sortedMapArr = mapArr && mapArr.slice().sort((a, b) => {
         if (b[2] !== a[2]) return b[2] - a[2] // descendingly sorted in Count
         // if a[1] or b[1] is empty obj
-        if(a[1] === undefined) return 1
-        if(b[1] === undefined) return 0
+        if (a[1] === undefined) return 1
+        if (b[1] === undefined) return 0
 
         return b[1].streetName > a[1].streetName ? 1 : -1 // descendingly sorted in alphabet order if same count
     })
@@ -167,9 +167,11 @@ const renderTableOfMap = (mapArr) => {
                         <tr key={x[0]}>
                             <td className="bg-transparent">
                                 <a href={mapIdToUrl(x[0])} target="_blank">
-                                    {x[1] ? x[1].streetName + ": " + x[1].mapName
+                                    {x[1] ?
+                                        <p dangerouslySetInnerHTML={{ __html: `<p>${x[1].streetName + ":" + x[1].mapName}</p>` }}></p>
                                         : `map info missing. map_id : ${x[0]}`
                                     }
+
                                 </a>
                             </td>
                             <td className="bg-transparent">{x[2]}</td>
