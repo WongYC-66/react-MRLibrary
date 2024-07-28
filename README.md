@@ -22,11 +22,13 @@
 png
 4. done - added in Elemental-table Tab and its component utility. Undead/Holy/Fire/Ice/Lightning/Poison
 5. done - fix bug of symbol shown at mob-map-location like &439 instead of "<"
+6. highlight gacha item with high-value, whitescroll/chaos scroll/taru....
 
 
 next?
+- blue mushmom missing spawn location.
 - grouped by region ?
-- highlight gacha item with high-value like in-game gacha annoucement
+
 
 - show path from map to map with graph data stuctrue ?
 - add skill info ?

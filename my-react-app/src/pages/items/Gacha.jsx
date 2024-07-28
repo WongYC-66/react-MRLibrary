@@ -5,6 +5,7 @@ import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 import Image from 'react-bootstrap/Image';
+import Badge from 'react-bootstrap/Badge';
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
 import { filterGachaList, updateSearchResultCount } from "./utility.jsx"
@@ -146,7 +147,9 @@ const renderGachaList = (filteredItemList) => {
         return (
             <tr key={obj.name + obj.location}>
                 <td>{gachaLocationMapping(obj.location)}</td>
-                <td>{obj.name}</td>
+                <td>{obj.name}
+                    {obj["high-value"] && <Badge bg="danger" className="ms-3">High Value!</Badge>  }  
+                </td>
                 <td>{gachaTypeMapping(obj.type)}</td>
             </tr>
         )
