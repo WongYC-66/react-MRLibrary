@@ -111,6 +111,10 @@ export default function MonsterDetail() {
                                     <tr>
                                         <td>Elements</td>
                                         <td>
+                                            {/* undead */}
+                                            { mobInfo?.undead === '1' &&  <p className="m-0 text-start"> Take "Heal" damage </p>}
+                                            
+                                            {/* elemental relationship */}
                                             {decodeElemAttr(mobInfo.elemAttr).map((x, i) => <p key={i} className="m-0  text-start">{x}</p>)}
                                         </td>
                                     </tr>
