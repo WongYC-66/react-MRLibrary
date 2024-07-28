@@ -51,6 +51,7 @@ export default function ElementalTable() {
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="filter by" data-bs-theme="light" name="filterBy">
                                             <option value="any">Any</option>
+                                            <option value="undead">Undead</option>
                                             <option value="weak-holy">Weak to Holy</option>
                                             <option value="weak-fire">Weak to Fire</option>
                                             <option value="weak-ice">Weak to Ice</option>
@@ -126,6 +127,7 @@ export default function ElementalTable() {
                         <th>Image</th>
                         <th>Name</th>
                         <th>Level</th>
+                        <th> <p>Undead</p> <img src='/images/elemental_table/undead.png'></img>             </th>
                         <th> <p>Holy</p> <img src='/images/elemental_table/holy.png'></img>             </th>
                         <th> <p>Fire</p> <img src='/images/elemental_table/fire.png'></img>             </th>
                         <th> <p>Ice</p> <img src='/images/elemental_table/ice.png'></img>               </th>
@@ -171,7 +173,7 @@ const renderMobList = (filteredMobList) => {
                 </Link>
             </td>
             <td>{obj.level}</td>
-
+            <td>{obj.elemMap.undead}</td>
             <td>{obj.elemMap.holy}</td>
             <td>{obj.elemMap.fire}</td>
             <td>{obj.elemMap.ice}</td>

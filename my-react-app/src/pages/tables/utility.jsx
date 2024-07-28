@@ -17,6 +17,7 @@ export const filterMobElementalList = (mobLibrary) => {
 
     let filteredMobList = Object.entries(mobLibrary)
 
+    // console.log(filter)
     // console.log("before filter = ", filteredMobList)
     filteredMobList = filteredMobList
         // fuzzy seach for any name matched with space separated text, with OR condition
@@ -29,13 +30,14 @@ export const filterMobElementalList = (mobLibrary) => {
 
             // 1. decode elemAttr into elemMap
             obj.elemMap = {
+                'undead' : '',
                 'holy': '',
                 'fire': '',
                 'ice': '',
                 'lightning': '',
                 'poison': '',
             }
-            updateWithElemAttr(obj.elemMap, obj.elemAttr)
+            updateWithElemAttr(obj.undead, obj.elemMap, obj.elemAttr)
 
             // 2. matchCount for fuzzy search
             let matchCount = 0
@@ -47,6 +49,7 @@ export const filterMobElementalList = (mobLibrary) => {
         .filter(([_, obj, __]) => {
             let [type, el] = filter
             if (type === "any") return true
+            if (type === "undead") return obj.elemMap['undead'] === 'undead'
             if (type == 'weak') return obj.elemMap[el] === 'Weak'
             if (type == 'strong') return obj.elemMap[el] === 'Strong'
             if (type == 'immune') return obj.elemMap[el] === 'Immune'
@@ -86,7 +89,9 @@ const elementValToValue = {
     '3': 'Weak',
 }
 
-export const updateWithElemAttr = (elemMap, elemAttr) => {
+export const updateWithElemAttr = (undead, elemMap, elemAttr) => {
+    if(undead === '1') elemMap['undead'] = 'undead'
+
     if (!elemAttr) return
     elemAttr.match(/.{2}/g).forEach(str => {
         let c1 = str[0]

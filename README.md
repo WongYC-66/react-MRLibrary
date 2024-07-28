@@ -20,7 +20,8 @@
 2. done - add LHC gacha too, source from forum post
 3. done - fix bug of wrong fallback to maplelegnds image, remove redundant .
 png
-4. done - added in Elemental-table Tab and its component utility.
+4. done - added in Elemental-table Tab and its component utility. Undead/Holy/Fire/Ice/Lightning/Poison
+5. done - fix bug of symbol shown at mob-map-location like &439 instead of "<"
 
 
 next?
