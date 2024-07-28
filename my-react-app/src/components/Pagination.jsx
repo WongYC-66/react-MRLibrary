@@ -38,6 +38,9 @@ export const updatePagination = (library, filterLibraryFunction) => {
         if (urlPathname === "/gacha") {
             return `?page=${inputNumber}&location=all&type=all&search=`
         }
+        if (urlPathname === "/elemental-table") {
+            return `?page=${inputNumber}&filter=any&order=level&sort=ascending&search=`
+        }
     }
 
     const RemovePaginationActiveAttribute = useCallback(() => {

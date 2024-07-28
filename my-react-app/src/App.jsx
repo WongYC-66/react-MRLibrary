@@ -18,9 +18,10 @@ import Etc, { etcAction } from './pages/items/Etc.jsx'
 import Gacha, { gachaAction } from './pages/items/Gacha.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
 
-import All, {globalSearchAction} from './pages/all/All.jsx'
+import All, { globalSearchAction } from './pages/all/All.jsx'
 
-import ExpTable from './pages/exptable/ExpTable.jsx'
+import ExpTable from './pages/tables/ExpTable.jsx'
+import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTable.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 // layouts
@@ -70,10 +71,12 @@ const router = createBrowserRouter(
 
       <Route path="exptable" element={< ExpTable />} />
 
+      <Route path="elemental-table" element={< ElementalTable />} action={elementalTableAction} />
+
       <Route path="all" element={< All />} action={globalSearchAction} />
 
-
       <Route path="*" element={< NotFound />} />
+
     </Route>
   )
 )

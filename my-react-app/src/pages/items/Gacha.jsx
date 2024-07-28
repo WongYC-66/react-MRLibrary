@@ -25,7 +25,7 @@ export default function Gacha() {
     return (
         <div className="gacha d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
-            <Form method="post" action="/gacha">
+            <Form method="post" action="/gacha" className="">
                 <div className="d-flex flex-wrap">
 
                     <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">

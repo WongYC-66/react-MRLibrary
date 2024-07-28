@@ -18,7 +18,7 @@ export default function RootLayout() {
 
       <ScrollRestoration />
 
-      <header >
+      <header className="z-1000">
         {/* <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
           <NavLink to="help">Help</NavLink>
@@ -119,9 +119,15 @@ export default function RootLayout() {
                   <Nav.Link>Quest</Nav.Link>
                 </LinkContainer> */}
 
-                <LinkContainer to="/exptable">
-                  <Nav.Link>ExpTable</Nav.Link>
-                </LinkContainer>
+                {/* Tables */}
+                <NavDropdown title="Tables" id="collapsible-nav-dropdown">
+                  <LinkContainer to="/exptable">
+                    <NavDropdown.Item>Exp Table</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/elemental-table">
+                    <NavDropdown.Item>Elemental Table</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
 
                 {/* External links */}
                 <NavDropdown title="Links" id="collapsible-nav-dropdown">
@@ -169,7 +175,7 @@ export default function RootLayout() {
           <Outlet />
         </div>
       </main>
-    </div>
+    </div >
   )
 }
 

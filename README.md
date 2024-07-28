@@ -18,9 +18,14 @@
 ## Log - July 28 2024
 1. done - add gacha info, location-name-type
 2. done - add LHC gacha too, source from forum post
-3. done - fix bug of wrong fallback to maplelegnds image, remove redundant .png
+3. done - fix bug of wrong fallback to maplelegnds image, remove redundant .
+png
+4. done - added in Elemental-table Tab and its component utility.
 
 
 next?
-- update mob , grouped by elemental weakness/ region
+- grouped by region ?
+- highlight gacha item with high-value like in-game gacha annoucement
+
 - show path from map to map with graph data stuctrue ?
+- add skill info ?
