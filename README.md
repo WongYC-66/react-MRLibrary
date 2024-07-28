@@ -17,3 +17,11 @@
 
 ## Log - July 28 2024
 1. done - add gacha info, location-name-type
+
+
+next?
+- update mob , grouped by elemental weakness/ region
+- some items USE/etc missing, e.g. balanced fury
+
+- sad mask face acc wrong image
+-  done - gacha page, without clicking search, cannot click next page

@@ -35,6 +35,9 @@ export const updatePagination = (library, filterLibraryFunction) => {
         if (["/use", "/setup", "/etc"].includes(urlPathname)) {
             return `?page=${inputNumber}&search=`
         }
+        if (urlPathname === "/gacha") {
+            return `?page=${inputNumber}&location=all&type=all&search=`
+        }
     }
 
     const RemovePaginationActiveAttribute = useCallback(() => {
