@@ -297,7 +297,7 @@ export function ItemStatsDataFormatting(objArr) {
                 let key = z.attributes.name
                 let value = z.attributes.value
                 stats[key] = value
-                
+
             })
             // console.log(stats)
             simpleData[itemId] = stats // {id : {key1 : value1, key2: value2}}
@@ -309,8 +309,9 @@ export function ItemStatsDataFormatting(objArr) {
 }
 
 export function SkillDataFormatting(obj) {
-    // for Skill.img.xml ONLY
+    // for Skill.img.xml from String.Wz ONLY
     // Create better data-structure
+    console.log("running SkillDataFormatting")
     const simpleData = {}
     const arrayData = obj.root.children
     // console.log(arrayData)
@@ -318,8 +319,8 @@ export function SkillDataFormatting(obj) {
     arrayData.forEach(x => {
         let skill_Id = x.attributes.name
         let skill_obj = {}
-        
-        x.children.forEach(({attributes}) => {
+
+        x.children.forEach(({ attributes }) => {
             let key = attributes.name
             let val = attributes.value
             skill_obj[key] = val
@@ -331,6 +332,94 @@ export function SkillDataFormatting(obj) {
     })
     return simpleData
 }
+
+export function SkillStatsDataFormatting(objArr) {
+    // for Skill.img.xml from Skill.Wz ONLY
+    // Create better data-structure
+    console.log("running SkillStatsDataFormatting")
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    objArr.forEach(x => {
+        // console.log(x)
+        x = x.root.children // skip img file name
+        x = x.filter(obj => obj.attributes.name == 'skill') // throw away 'Info'
+        x = x.map(obj => obj.children).flat()   // flat multiple img data into 1 array
+        // console.log(x)
+        x.forEach(y => {
+            const skill_Id = parseInt(y.attributes.name)
+            const stats = {}
+            /*  
+            e.g. for genesis
+                {
+                    '2321008' : {
+                        action : 0  // active skill
+                        elemenAttr : 'H'
+                        levels : {
+                            1 : {
+                                mpCon : ... 
+                                mobCount : ...
+                                pad : ...
+                                pdd : ...
+                                lt : ...
+                                rb : ...
+                                cooltime: ...
+
+                            },
+                            2 : {...},
+                            3 : {...}, 
+                            20: {...}
+                            30: {...}
+                        }
+                        
+                    }
+                }
+             
+
+             */
+
+            let wantedStats = new Set(['elemAttr', 'level', 'action'])
+            // level has nested
+            // remove pixel/animation related : 'icon' , 'iconMouseOver', 'iconDisabled', 'effect' , 'effect0', 'hit', 'tile', 'action', 'invisible', etc
+
+            let info = y.children.filter(obj => wantedStats.has(obj.attributes.name))
+            // console.log(`formatting : ${skillId}`)   
+
+
+            info.forEach(y => {
+                let key = y.attributes.name
+                let value = y.attributes.value
+                if (key === 'elemAttr' || key === 'action')
+                    return stats[key] = value
+
+                // iterates over level
+                if (key === 'level') {
+                    let levelObj = {}
+                    y.children.forEach(z => {
+                        let lvl = z.attributes.name
+                        let subLevelObj = {}
+                        // 
+                        z.children.forEach(a => {
+                            let key2 = a.attributes.name
+                            let val2 = a.attributes.value
+                            subLevelObj[key2] = val2
+                        })
+                        // 
+                        levelObj[lvl] = subLevelObj
+                        
+                    })
+
+                    return stats['level'] = levelObj
+                }
+            })
+            // console.log(stats)
+            simpleData[skill_Id] = stats
+        })
+        // 
+    })
+    // console.log(simpleData)
+    return simpleData
+}
+
 // module.exports = {
 //     MBdataFormatting,
 //     MobIdDataFormatting,

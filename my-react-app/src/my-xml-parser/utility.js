@@ -45,6 +45,10 @@ export async function parseXMLinBulk(dirPath, option = "") {
     if(option === "Items"){
         subPaths = ["Consume", "Install", "Etc"]
     }
+    if(option === "Skill"){
+        // Skill folder doesnt have subfolder
+        subPaths = []
+    }
     // const subPaths = ["Weapon"] // debugging purpose only
 
     // get list of xml path from 
@@ -56,6 +60,7 @@ export async function parseXMLinBulk(dirPath, option = "") {
     }) // from sub root e.g. /data/Accessory/, /data/weapon/, ...
     filePathArr = filePathArr.flat()
     //
+    // console.log(filePathArr)
     console.log("parsing all files from xml, taking long time, please wait...")
     const returnObjArr = Promise.all(filePathArr.flat().map(async filepath => parseXML(filepath)))
     return returnObjArr

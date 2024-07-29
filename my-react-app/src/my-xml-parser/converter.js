@@ -20,7 +20,8 @@ import { MBdataFormatting,
     MapMobCountDataFormatting,
     ItemStatsDataFormatting,
     MobStatsDataFormatting,
-    SkillDataFormatting
+    SkillDataFormatting,
+    SkillStatsDataFormatting,
 } from './dataFormatting.js';
 
 async function MB() {
@@ -101,6 +102,12 @@ async function Skill() {
     diskWriter(path.join(__dirname, "../../data/", 'data_Skill.json'), simpleData)
 }
 
+async function SkillStats() {
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Skill"), "Skill")
+    const simpleData = SkillStatsDataFormatting(objArr)
+    diskWriter(path.join(__dirname, "../../data/", 'data_SkillStats.json'), simpleData)
+}
+
 
 function main() {
     // MB()
@@ -116,6 +123,7 @@ function main() {
     // Map_MobCount()
     // ItemStats()
     // Skill()
+    SkillStats()
 }
 
 main()
