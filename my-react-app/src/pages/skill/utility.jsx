@@ -16,7 +16,7 @@ export const filterSkillList = (skillLibrary) => {
 
     let filteredSkillList = Object.entries(skillLibrary)
     // return filteredSkillList
-    console.log(filter)
+    // console.log(filter)
 
     filteredSkillList = filteredSkillList
         // fuzzy seach for any name matched with space separated text, with OR condition
@@ -24,9 +24,8 @@ export const filterSkillList = (skillLibrary) => {
             if (!name) return false
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
-        // filter by job/any/special/wizard/pirate/rogue ....
+        // filter by job/any/special/magician/pirate/rogue ....
         .filter(([_id, _]) => {
-            console.log(findRangeByFilterType(filter))
             let [lowerbound, upperbound] = findRangeByFilterType(filter)
             return lowerbound <= Number(_id) && Number(_id) < upperbound
         })
@@ -101,7 +100,63 @@ export const renderImageWithSkillId = (skill_id) => {
 }
 
 export const skillIdToJobString = (id) => {
-    
+    id = Number(id)
+    if (id < 1000000) return 'Beginner'
+
+    if (id < 1100000) return 'Swordman'
+    if (id < 1110000) return 'Fighter'
+    if (id < 1120000) return 'Crusader'
+    if (id < 1130000) return 'Hero'
+
+    if (id < 1210000) return 'Page'
+    if (id < 1220000) return 'White Knight'
+    if (id < 1230000) return 'Paladin'
+
+    if (id < 1310000) return 'Spearman'
+    if (id < 1320000) return 'Dragon Knight'
+    if (id < 1330000) return 'Dark Knight'
+
+    if (id < 2100000) return 'Magician'
+    if (id < 2110000) return 'Wizard (Fire/Poison)'
+    if (id < 2120000) return 'Mage (Fire/Poison)'
+    if (id < 2130000) return 'Arch Mage (Fire/Poison)'
+
+    if (id < 2210000) return 'Wizard (Ice/Lightning)'
+    if (id < 2220000) return 'Mage (Ice/Lightning)'
+    if (id < 2230000) return 'Arch Mage (Ice/Lightning)'
+
+    if (id < 2310000) return 'Cleric'
+    if (id < 2320000) return 'Priest'
+    if (id < 2330000) return 'Bishop'
+
+    if (id < 3100000) return 'Archer'
+    if (id < 3110000) return 'Hunter'
+    if (id < 3120000) return 'Ranger'
+    if (id < 3130000) return 'Bow Master'
+
+    if (id < 3210000) return 'Crossbowman'
+    if (id < 3220000) return 'Sniper'
+    if (id < 3230000) return 'Marksman'
+
+    if (id < 4100000) return 'Rogue'
+    if (id < 4110000) return 'Assassin'
+    if (id < 4120000) return 'Hermit'
+    if (id < 4130000) return 'Night Lord'
+
+    if (id < 4210000) return 'Bandit'
+    if (id < 4220000) return 'Chief Bandit'
+    if (id < 4330000) return 'Shadower'
+
+    if (id < 5100000) return 'Pirate'
+    if (id < 5110000) return 'Brawler'
+    if (id < 5120000) return 'Marauder'
+    if (id < 5130000) return 'Buccaneer'
+
+    if (id < 5210000) return 'Gunslinger'
+    if (id < 5220000) return 'Outlaw'
+    if (id < 5230000) return 'Corsair'
+
+    return 'not identified'
 }
 
 const findRangeByFilterType = (typeString) => {
@@ -120,7 +175,7 @@ const findRangeByFilterType = (typeString) => {
             return [1200000, 1300000]
         case 'dk':
             return [1300000, 2000000]
-        case 'wizard':
+        case 'magician':
             return [2000000, 2100000]
         case 'fp':
             return [2100000, 2200000]

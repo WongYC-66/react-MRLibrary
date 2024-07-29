@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterSkillList, renderImageWithSkillId, updateSearchResultCount } from "./utility.jsx"
+import { filterSkillList, renderImageWithSkillId, updateSearchResultCount, skillIdToJobString } from "./utility.jsx"
 
 import data_skill from "../../../data/data_Skill.json"
 import data_skillStats from "../../../data/data_SkillStats.json"
@@ -17,7 +17,7 @@ export default function ElementalTable() {
     useEffect(() => {
         Object.entries(data_skill).forEach(([skill_id, objString]) => {
             if (data_skillStats.hasOwnProperty(skill_id)) {
-                data_skillStats[skill_id] = { 
+                data_skillStats[skill_id] = {
                     ...data_skillStats[skill_id],
                     ...objString
                 }
@@ -60,7 +60,7 @@ export default function ElementalTable() {
                                             <option value="pal">Page / White Knight / Paladin </option>
                                             <option value="dk">Spearman / Dragon Knight / Dark Knight </option>
                                             <option value="" disabled>-----------------------------------------------</option>
-                                            <option value="wizard">Wizard</option>
+                                            <option value="magician">Magician</option>
                                             <option value="fp">F/P Wizard / Mage / Arch Mage </option>
                                             <option value="il">I/L Wizard / Mage / Arch Mage </option>
                                             <option value="bishop">Cleric / Priest / Bishop </option>
@@ -151,7 +151,7 @@ export default function ElementalTable() {
 
 const renderSkillList = (filteredSkillList) => {
     const [searchParams] = useSearchParams()
-    console.log(filteredSkillList)
+    // console.log(filteredSkillList)
 
     updateSearchResultCount(filteredSkillList.length)
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
@@ -172,8 +172,14 @@ const renderSkillList = (filteredSkillList) => {
                     <p dangerouslySetInnerHTML={{ __html: obj.name }}></p>
                 </Link>
             </td>
-            <td>{obj.desc}</td>
-            <td>{"warrior"}</td>
+            <td>
+                {obj.desc.split('\\n').map(str => {
+                    // place "#cImportant Text#" into "<span>Important Text</span>"
+                    str = str.replace(/\#c(.*)#/, `<span class='text-warning fw-bolder'>$1</span>`)
+                    return <p className="my-0" dangerouslySetInnerHTML={{ __html: str }}></p>
+                })}
+            </td>
+            <td>{skillIdToJobString(skill_id)}</td>
         </tr>
 
     )
