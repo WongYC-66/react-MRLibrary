@@ -18,6 +18,8 @@ import Etc, { etcAction } from './pages/items/Etc.jsx'
 import Gacha, { gachaAction } from './pages/items/Gacha.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
 
+import Skill, { skillAction } from './pages/skill/Skill.jsx'
+
 import All, { globalSearchAction } from './pages/all/All.jsx'
 
 import ExpTable from './pages/tables/ExpTable.jsx'
@@ -32,6 +34,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={< RootLayout />} >
       <Route index element={< Home />} />
+
+      {/* Monster */}
       <Route path="monster" action={monsterAction}>
         <Route index element={< Monster />}></Route>
         <Route path=":mobId" element={< MonsterDetail />}></Route>
@@ -47,7 +51,6 @@ const router = createBrowserRouter(
         )
       }
       {/* Equips */}
-
 
       {/* Items */}
       <Route path="use" action={useAction}>
@@ -70,10 +73,20 @@ const router = createBrowserRouter(
       </Route >
       {/* Items */}
 
+      {/* Skill */}
+      <Route path="skill" action={skillAction}>
+        <Route index element={< Skill />}></Route>
+        {/* <Route path=":skillId" element={< SkillDetail />}></Route> */}
+      </Route >
+
+
+      {/* Tables */}
       <Route path="exptable" element={< ExpTable />} />
 
       <Route path="elemental-table" element={< ElementalTable />} action={elementalTableAction} />
+      {/* Tables */}
 
+      {/* Links */}
       <Route path="about-me" element={< AboutMe />} />
 
       <Route path="all" element={< All />} action={globalSearchAction} />

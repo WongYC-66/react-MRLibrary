@@ -41,6 +41,9 @@ export const updatePagination = (library, filterLibraryFunction) => {
         if (urlPathname === "/elemental-table") {
             return `?page=${inputNumber}&filter=any&order=level&sort=ascending&search=`
         }
+        if (urlPathname === "/skill") {
+            return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
+        }
     }
 
     const RemovePaginationActiveAttribute = useCallback(() => {

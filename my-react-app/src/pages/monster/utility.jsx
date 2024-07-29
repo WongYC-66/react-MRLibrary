@@ -80,7 +80,7 @@ export const renderImageWithMobId = (mobId) => {
             // switch to maplelegends (option - 2)
             // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
-            img.src = `https://maplelegends.com/static/images/lib/monster/${fileName}.png`
+            img.src = `https://maplelegends.com/static/images/lib/monster/${fileName}`
             return
         }
         // error again? 
@@ -150,7 +150,7 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
             // console.log("switch to option-2")
             const typeString = type === "equip" ? "character" : "item"
             img.setAttribute("myimgindex", "2")
-            img.src = `https://maplelegends.com/static/images/lib/${typeString}/${fileName}.png`
+            img.src = `https://maplelegends.com/static/images/lib/${typeString}/${fileName}`
             return
         }
         if (img.getAttribute("myimgindex") === '2') {

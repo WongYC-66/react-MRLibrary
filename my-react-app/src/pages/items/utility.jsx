@@ -96,7 +96,7 @@ export const renderImageWithItemId = (itemId, itemName) => {
             // switch to maplestory.io source (option - 2)
             // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
-            img.src = `https://maplelegends.com/static/images/lib/item/${fileName}.png`
+            img.src = `https://maplelegends.com/static/images/lib/item/${fileName}`
             return
         }
         if (img.getAttribute("myimgindex") === '2') {

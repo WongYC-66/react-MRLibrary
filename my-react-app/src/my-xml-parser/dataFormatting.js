@@ -346,7 +346,7 @@ export function SkillStatsDataFormatting(objArr) {
         x = x.map(obj => obj.children).flat()   // flat multiple img data into 1 array
         // console.log(x)
         x.forEach(y => {
-            const skill_Id = parseInt(y.attributes.name)
+            const skill_Id = y.attributes.name
             const stats = {}
             /*  
             e.g. for genesis
