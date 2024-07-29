@@ -307,6 +307,30 @@ export function ItemStatsDataFormatting(objArr) {
     console.log(simpleData)
     return simpleData
 }
+
+export function SkillDataFormatting(obj) {
+    // for Skill.img.xml ONLY
+    // Create better data-structure
+    const simpleData = {}
+    const arrayData = obj.root.children
+    // console.log(arrayData)
+    // total = 433 skills
+    arrayData.forEach(x => {
+        let skill_Id = x.attributes.name
+        let skill_obj = {}
+        
+        x.children.forEach(({attributes}) => {
+            let key = attributes.name
+            let val = attributes.value
+            skill_obj[key] = val
+        })
+        // write to main
+        simpleData[skill_Id] = skill_obj
+        // {2321008: {name: Genesis, desc : ... , h1 : ...,h2 : ... , ...}}
+
+    })
+    return simpleData
+}
 // module.exports = {
 //     MBdataFormatting,
 //     MobIdDataFormatting,

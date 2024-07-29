@@ -19,7 +19,8 @@ import { MBdataFormatting,
     GearStatsDataFormatting,
     MapMobCountDataFormatting,
     ItemStatsDataFormatting,
-    MobStatsDataFormatting
+    MobStatsDataFormatting,
+    SkillDataFormatting
 } from './dataFormatting.js';
 
 async function MB() {
@@ -94,6 +95,13 @@ async function ItemStats() {
     diskWriter(path.join(__dirname, "../../data/", 'data_ItemStats.json'), simpleData)
 }
 
+async function Skill() {
+    const obj = await parseXML(path.join(__dirname, "../../data/", 'Skill.img.xml'))
+    const simpleData = SkillDataFormatting(obj)
+    diskWriter(path.join(__dirname, "../../data/", 'data_Skill.json'), simpleData)
+}
+
+
 function main() {
     // MB()
     // MB_MapOnly()
@@ -103,10 +111,11 @@ function main() {
     // Eqp()
     // Ins()
     // Maps()
-    GearStats() // Read multiple IMG files in multiple folders
+    // GearStats() // Read multiple IMG files in multiple folders
     // MobStats()
     // Map_MobCount()
     // ItemStats()
+    // Skill()
 }
 
 main()

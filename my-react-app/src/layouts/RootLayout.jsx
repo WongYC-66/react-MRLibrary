@@ -93,6 +93,7 @@ export default function RootLayout() {
                   <Nav.Link>Map</Nav.Link>
                 </LinkContainer> */}
 
+                {/* Items Tab */}
                 <NavDropdown title="Items" id="collapsible-nav-dropdown">
                   <LinkContainer to="/use">
                     <NavDropdown.Item>Use</NavDropdown.Item>
@@ -111,9 +112,9 @@ export default function RootLayout() {
                   </LinkContainer> */}
                 </NavDropdown>
 
-                {/* <LinkContainer to="/skill">
+                <LinkContainer to="/skill">
                   <Nav.Link>Skill</Nav.Link>
-                </LinkContainer> */}
+                </LinkContainer>
 
                 {/* <LinkContainer to="/quest">
                   <Nav.Link>Quest</Nav.Link>
