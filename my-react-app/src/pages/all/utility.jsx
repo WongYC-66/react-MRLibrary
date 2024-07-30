@@ -169,6 +169,52 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
     return ImageComponent
 }
 
+export const renderImageWithSkillId = (skill_id) => {
+    if (!skill_id) return
+
+    const handleError = e => {
+        const fileName = `${skill_id.padStart(7, 0)}.png`
+        const img = e.target
+        // find suitable image src from:
+        // 1: server file under /images/
+        // 2: maplelegends
+
+        if (img.getAttribute("myimgindex") === '0') {
+            // switch to server file under /images/ (option - 1)
+            // console.log("switch to option-1")
+            img.setAttribute("myimgindex", "1")
+            img.src = `\\images\\skills\\${fileName}`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '1') {
+            // switch to maplelegends (option - 2)
+            // console.log("switch to option-2")
+            img.setAttribute("myimgindex", "2")
+            img.src = `https://maplelegends.com/static/images/lib/skill/${fileName}`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '2') {
+            img.setAttribute("myimgindex", "3")
+            img.src = "/error"
+            return
+        }
+        if (img.getAttribute("myimgindex") === '3') {
+            // return console.log('end')
+            return
+        }
+    }
+
+    const ImageComponent = <Image
+        myimgindex="0"
+        src={`...`} // by default, make it trigger error
+        id={`image-${skill_id}`}
+        fluid
+        alt="Image not found"
+        onError={handleError} />
+
+    return ImageComponent
+}
+
 export const itemIdToExceptionUrl = ({ id, name }) => {
     name = name.toLowerCase()
     if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`

@@ -28,6 +28,7 @@ png
 ## Log - July 30 2024
 1. done - added in skill Tab and SkillInfo page
 2. done - remove LHC gacha items from v87 update : https://royals.ms/forum/threads/lhc-exchange-rewards-cs-ws-bwg-taru-totem-rewards-found.193830/page-3#post-1446410
+3. doing - add skill into global search range
 
 next?
 - grouped by region ?

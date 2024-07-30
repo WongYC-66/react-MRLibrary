@@ -10,6 +10,7 @@ import {
     updateSearchResultCount,
     renderImageWithItemIdType,
     renderImageWithMobId,
+    renderImageWithSkillId,
     itemIdToNavUrl,
 } from "./utility.jsx"
 import { updatePagination } from "../../components/Pagination.jsx"
@@ -18,6 +19,7 @@ import data_Eqp from "../../../data/data_Eqp.json"
 import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
+import data_skill from "../../../data/data_Skill.json"
 
 export default function All() {
     const [searchParams] = useSearchParams()
@@ -69,6 +71,14 @@ export default function All() {
                     type: "etc"
                 }
             ))
+        Object.entries(data_skill).forEach(([id, { name }]) =>
+            id && name && globalArr.push( //if id and name both exists, push an obj
+                {
+                    id,
+                    name,
+                    type: "skill"
+                }
+            ))
 
         setGlobalLibrary(globalArr)
     }, [])
@@ -106,12 +116,12 @@ export default function All() {
                     </tr>
                 </thead>
                 <tbody>
-                    { renderGlobalList(filterGlobalList(globalLibrary)) }
+                    {renderGlobalList(filterGlobalList(globalLibrary))}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            { updatePagination(globalLibrary, filterGlobalList) }
+            {updatePagination(globalLibrary, filterGlobalList)}
         </div>
 
     )
@@ -119,9 +129,9 @@ export default function All() {
 
 export const renderGlobalList = (filteredGlobalList) => {
     const [searchParams] = useSearchParams()
-    
+
     updateSearchResultCount(filteredGlobalList.length)
-    
+
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
@@ -129,13 +139,23 @@ export const renderGlobalList = (filteredGlobalList) => {
     // [ { id : xxx, name: xxx, type: monster/etc/equip }] , {} , {} , ... ]
 
     return filteredGlobalList?.map(({ id, name, type }) => {
-        const navUrl = type === "monster" ? `/monster/id=${id}` : itemIdToNavUrl(id)
+        if (type == "monster") {
+            var navUrl = `/monster/id=${id}`
+        } else if (type == 'skill') {
+            var navUrl = `/skill/id=${id}`
+        } else if (["equip", "use", "setup", "etc"].includes(type)) {
+            var navUrl = itemIdToNavUrl(id)
+        } else {
+            var navUrl = '/error'
+        }
+
         return (
             <tr key={id}>
                 <td>
                     <Link to={`${navUrl}`}>
                         {type === "monster" && renderImageWithMobId(id)}
-                        {type !== "monster" && renderImageWithItemIdType(id, name, type)}
+                        {["equip", "use", "setup", "etc"].includes(type) && renderImageWithItemIdType(id, name, type)}
+                        {type === "skill" && renderImageWithSkillId(id)}
                     </Link>
                 </td>
                 <td>
@@ -168,7 +188,7 @@ export const globalSearchAction = async ({ request }) => {
     document.activeElement.blur()
     // set all.jsx input
     const input = document.getElementById("allInput")
-    if(input) input.value = submission.searchName
+    if (input) input.value = submission.searchName
 
     // redirect the user
     const actionUrl = `/all?page=1&search=${submission.searchName}`
