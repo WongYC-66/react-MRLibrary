@@ -19,6 +19,7 @@ export default function AboutMe() {
                 <img src='/images/about_me/sylafia.jpg'></img>
                 <ul>
                     <li>Nerzu</li>
+                    <li>Inaruma</li>
                     <li>Zancks</li>
                     <li>Fill</li>
                     <li>Dave Deviluke</li>
