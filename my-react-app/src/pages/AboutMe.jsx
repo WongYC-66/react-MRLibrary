@@ -12,10 +12,17 @@ export default function AboutMe() {
 
             </div>
 
-            <h5>Contributors</h5>
+            <h5>Contributors / Appreciation List</h5>
             <div className="book-donator d-flex flex-wrap my-3">
                 <img src='/images/about_me/pavlord_2.png' className="mx-3"></img>
                 <img src='/images/about_me/xhugo.png' className="mx-3"></img>
+                <img src='/images/about_me/sylafia.jpg'></img>
+                <ul>
+                    <li>Nerzu</li>
+                    <li>Zancks</li>
+                    <li>Fill</li>
+                    <li>Dave Deviluke</li>
+                </ul>
             </div>
 
 

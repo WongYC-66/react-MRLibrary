@@ -32,7 +32,7 @@ export default function SkillDetail() {
         setSkillInfo(obj)
     }, [])
 
-    console.log(skillInfo)
+    // console.log(skillInfo)
 
     return (
         <div className="skill-detail">
@@ -118,8 +118,15 @@ const renderTableRight = (skillInfo) => {
         if (skillInfo.level && skillInfo.level[i]) {
             let str = ''
             
-            Object.entries(skillInfo.level[i]).filter(x => x[0] != 'hs').forEach(([key, val]) => {
+            Object.entries(skillInfo.level[i])
+            .filter(x => x[0] != 'hs')
+            .forEach(([key, val]) => {
                 let subStr = `${key} : ${val} , `
+                if(key == 'lt' || key == 'rb'){
+                    // overwrite subStr with format : lt:[x:_ , y:_]  or rb:[x:_, y:_]
+                    subStr = `${key} : [ x : ${val.x} , y : ${val.y} ] , `
+                } 
+                
                 str += subStr
             })
 

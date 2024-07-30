@@ -6385,18 +6385,6 @@
     },
     {
         "location": "lhc",
-        "name": "Scroll for Eye Accessory for INT 10%",
-        "type": "scrolls",
-        "high-value": ""
-    },
-    {
-        "location": "lhc",
-        "name": "Scroll for Eye Accessory for INT 100%",
-        "type": "scrolls",
-        "high-value": ""
-    },
-    {
-        "location": "lhc",
         "name": "Scroll for Face Accessory for Avoidability 10%",
         "type": "scrolls",
         "high-value": ""
