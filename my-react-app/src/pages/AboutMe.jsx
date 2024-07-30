@@ -14,7 +14,7 @@ export default function AboutMe() {
 
             <h5>Contributors / Appreciation List</h5>
             <div className="book-donator d-flex flex-wrap my-3">
-                <img src='/images/about_me/nerzu.jpg'></img>
+                <img src='/images/about_me/nerzu.png'></img>
                 <img src='/images/about_me/pavlord_2.png' className="mx-3"></img>
                 <img src='/images/about_me/xhugo.png' className="mx-3"></img>
                 <img src='/images/about_me/sylafia.jpg'></img>
