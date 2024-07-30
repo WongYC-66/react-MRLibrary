@@ -32,6 +32,86 @@ export const filterItemList = (itemLibrary) => {
     return Object.entries(itemLibrary)
 }
 // 
+export const filterUseItemList = (itemLibrary) => {
+    const [searchParams] = useSearchParams()
+    if (searchParams.size <= 0) return Object.entries(itemLibrary)  // No filter at first loading or if URL don't have query param 
+
+    // If URL has query param, filter ...
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+    const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
+    const filter = filterOption.filter
+    let order = filterOption.order
+    const sort = filterOption.sort
+    let filteredUseItemList = Object.entries(itemLibrary)
+
+    // console.log("before filter = ", filteredUseItemList)
+    const potionKeys = ['hp', 'hpR', 'mp', 'mpR', 'eva', 'acc', 'speed', 'jump', 'mad', 'pad', 'mdd', 'pdd', 'poison', 'seal', 'weakness', 'curse']
+
+    filteredUseItemList = filteredUseItemList
+        // fuzzy seach for any name matched with space separated text, with OR condition
+        .filter(([_id, { name }]) => {
+            if (!name) return false
+            return searchTermArr.some(term => name.toLowerCase().includes(term))
+        })
+        // 
+        .filter(([_, obj]) => {
+            if (filter === "any") return true
+
+            if (filter === "scroll") return obj.hasOwnProperty("success") 
+                && !obj.hasOwnProperty("masterLevel")
+
+            if (filter === "potion") return potionKeys.some(k => obj[k] !== undefined) 
+                && !obj.hasOwnProperty("monsterBook") 
+                && !obj.hasOwnProperty("morph")
+
+            if (filter === "tp") return obj.hasOwnProperty('moveTo')
+            if (filter === "morph") return obj.hasOwnProperty('morph')
+            if (filter === "mastery") return obj.hasOwnProperty('masterLevel')
+            if (filter === "sack") return obj.hasOwnProperty('type')
+            if (filter === "mbook") return obj.hasOwnProperty('monsterBook')
+            if (filter === "other") return !obj.hasOwnProperty("success")   // not scroll
+                && !obj.hasOwnProperty('moveTo')                            // not tp
+                && !obj.hasOwnProperty('morph')                            // not morphing
+                && !obj.hasOwnProperty('type')                            // not sack bag
+                && !obj.hasOwnProperty('masterLevel')                      // not mastery book
+                && potionKeys.every(k => obj[k] == undefined)           // not potion
+        })
+        // reformat data to be [_id, {obj}, matchCount]
+        .map(([_id, obj]) => {
+            // matchCount for fuzzy search
+            let matchCount = 0
+            searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+
+            return [_id, obj, matchCount]
+        })
+        .sort((a, b) => {
+            // a = [_id, obj, matchCount]
+            // 1. sort by fuzzy search matchCount, desc, most-matched come first
+            if (a[2] !== b[2]) return b[2] - a[2]
+
+            // if undefined, sort the undefined to the end
+            if (a[1][order] == undefined && b[1][order] == undefined) return 0
+            if (a[1][order] == undefined) return 1
+            if (b[1][order] == undefined) return -1
+
+            // if same value, sort by mobId then
+            if (a[1][order] === b[1][order]) return a[0] - b[0]
+
+
+            // else, sort ascendingly, for Property of "level/...."
+            return a[1][order] - b[1][order]
+        })
+        // remove the mathCount
+        .map(([_id, obj, matchCount]) => [_id, obj])
+
+    // console.log("after filter = ", filteredMobList)
+    // console.log(`found : ${filteredMobList.length} records`)
+
+
+    return sort === "descending" ? filteredUseItemList.reverse() : filteredUseItemList
+}
+
+// 
 
 export const renderItemList = (filteredItemList, type = "use") => {
     const [searchParams] = useSearchParams()
@@ -69,6 +149,8 @@ export const renderItemList = (filteredItemList, type = "use") => {
         )
     })
 }
+//
+
 
 
 // 
@@ -134,66 +216,9 @@ export const renderImageWithItemId = (itemId, itemName) => {
         alt="Image not found"
         onError={handleError} />
 
-
-    // findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
-    //     let el = document.getElementById(`image-${itemId}`)
-    //     if (el) el.src = x
-    // })
-
     return ImageComponent
 }
 // 
-
-
-
-export const findGoodItemImgUrl = ({ id, name }) => {
-
-    // 1. fetch from local files
-    let p1 = new Promise((resolve, reject) => {
-        try {
-            console.log
-            const fileName = `${id.padStart(8, 0)}.png`
-            // return resolve(`/images/items/${fileName}`)
-        }
-        catch (err) {
-            // console.log(err)
-            reject("no local file")
-        }
-    })
-
-    // 2. fetch from MapleStory.io
-    let p2 = new Promise(async (resolve, reject) => {
-        try {
-            let x = await fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-                // mode: "no-cors"
-            })
-            return resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`)
-        } catch (err) {
-            // console.log(err)
-            reject("no file from maplestory.io")
-        }
-
-    })
-
-    // 3. fetch from MapleStory.io -- exception list
-    let p3 = new Promise(async (resolve, reject) => {
-        try {
-            const url = itemIdToExceptionUrl({ id, name })
-            if (!url) throw Error("not from expcetion list")
-            return resolve(url)
-        } catch (err) {
-            // console.log(err)
-            reject("no file from maplestory.io")
-        }
-
-
-    })
-
-    return Promise.any([p1, p2, p3])
-
-}
-
-//
 export const itemIdToExceptionUrl = ({ id, name }) => {
     name = name.toLowerCase()
     if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
@@ -222,7 +247,7 @@ export const filterGachaList = (itemLibrary) => {
     const type = filterOption.type
 
     let filteredItemList = itemLibrary
-        .filter(({name}) => {
+        .filter(({ name }) => {
             if (!name) return false
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
@@ -248,9 +273,6 @@ export const filterGachaList = (itemLibrary) => {
 
     return filteredItemList
 }
-
-
-
 // 
 export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")

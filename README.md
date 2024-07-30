@@ -31,5 +31,14 @@ png
 3. doing - add skill into global search range
 
 next?
+- advanced search. Mob droppping both Elixir + Cape for DEX 60%
+-  at USE Tab, add filter for potion like + WA/MA/DEF, to only see those
+   - hpR % 
+   - mpR %
+   - mad
+   - pad
+   - pdd
+
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
+- use hidden street map over maplelegends map, bcoz maplelegend map can't navigate??, user wants help on how to enter a map....

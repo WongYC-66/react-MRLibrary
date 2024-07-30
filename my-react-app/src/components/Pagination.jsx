@@ -32,7 +32,12 @@ export const updatePagination = (library, filterLibraryFunction) => {
         if (urlPathname === "/monster") {
             return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
         }
-        if (["/use", "/setup", "/etc"].includes(urlPathname)) {
+        if (urlPathname === "/use") {
+            return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
+        }
+
+        // if (["/use", "/setup", "/etc"].includes(urlPathname)) {
+        if (["/setup", "/etc"].includes(urlPathname)) {
             return `?page=${inputNumber}&search=`
         }
         if (urlPathname === "/gacha") {

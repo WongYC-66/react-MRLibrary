@@ -1,9 +1,5 @@
 import { useSearchParams } from "react-router-dom"
 // 
-import Image from "react-bootstrap/Image"
-// 
-import data_fixMobImg from "../monster/data_fixMobImg.json"
-// 
 
 export const filterMobElementalList = (mobLibrary) => {
     const [searchParams] = useSearchParams()

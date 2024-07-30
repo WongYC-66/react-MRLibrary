@@ -35,7 +35,6 @@ export default function ItemDetail() {
             id: item_Id,
             name: data.name,
             desc: data?.desc,
-            // imgUrl: itemIdToExceptionUrl({ id: item_Id, name: data.name }),
         }
         const droppedBy = []
         Object.entries(data_MB).forEach(([mobId, drops]) => {
@@ -49,6 +48,8 @@ export default function ItemDetail() {
         obj.droppedBy = droppedBy
         setItemInfo(obj)
     }, [])
+
+    // console.log(itemInfo)
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
 
@@ -75,9 +76,11 @@ export default function ItemDetail() {
                                     </tr>
                                     <tr>
                                         <td>
-                                            {itemInfo?.desc?.split("\\n").map(x =>
-                                                <p key={x} className="p-0 m-0" dangerouslySetInnerHTML={{ __html: x }}></p>
-                                            )}
+                                            {itemInfo.desc?.split("\\n").map((str, i) => {
+                                                str = str.replace(/\#c(.*)#/, `<span class='text-warning fw-bolder'>$1</span>`)
+                                                return < p key={i} className="p-0 m-0" dangerouslySetInnerHTML={{ __html: str }
+                                                }></p>
+                                            })}
                                         </td>
                                     </tr>
                                     <tr>
@@ -92,22 +95,13 @@ export default function ItemDetail() {
                     {/* Item Dropped by */}
                     <Col lg={8}>
                         <div className="item-dropped-by-card">
-                            <Tabs
-                                id="controlled-tab-example"
-                                className="mb-3"
-                            >
+                            <Tabs id="controlled-tab-example" className="mb-3">
                                 <Tab eventKey="Drops" title="Drops">
-                                    {itemInfo?.droppedBy?.length >= 1 ? <span>Dropped by </span> : <span>Dropped by nothing.</span>}
-                                    <p></p>
-                                    {itemInfo?.droppedBy?.map(({ id, name }, i) => {
-                                        return (
-                                            <span key={id}>
-                                                <Link to={`/monster/id=${id}`}>{name}</Link>
-                                                {(i !== itemInfo.droppedBy.length - 1) && " , "}
-                                            </span>
-                                        )
-                                    })}
+                                    {renderDroppedByMob(itemInfo)}
+                                </Tab>
 
+                                <Tab eventKey="Stats" title="Stats">
+                                    {renderItemStats(itemInfo)}
                                 </Tab>
                             </Tabs>
 
@@ -120,3 +114,46 @@ export default function ItemDetail() {
     )
 }
 
+const renderDroppedByMob = (itemInfo) => {
+    return (
+        <>
+            {itemInfo?.droppedBy?.length >= 1 ? <span>Dropped by </span> : <span>Dropped by nothing.</span>}
+            <p></p>
+            {
+                itemInfo?.droppedBy?.map(({ id, name }, i) => {
+                    return (
+                        <span key={id}>
+                            <Link to={`/monster/id=${id}`}>{name}</Link>
+                            {(i !== itemInfo.droppedBy.length - 1) && " , "}
+                        </span>
+                    )
+                })
+            }
+        </>
+    )
+}
+
+const renderItemStats = (itemInfo) => {
+    let unwanted = new Set(["id", "name", "desc", "droppedBy"])
+    let keys = Object.keys(itemInfo).filter(k => !unwanted.has(k)).sort()
+    return (
+        <Table bordered hover className="text-center">
+            <tbody>
+                <tr>
+                    <td>Name </td>
+                    <td dangerouslySetInnerHTML={{ __html: itemInfo.name }}></td>
+                </tr>
+                <tr>
+                    <td>item id </td>
+                    <td>{itemInfo.id} </td>
+                </tr>
+                {keys.map(k =>
+                    <tr key={k}>
+                        <td>{k}</td>
+                        <td>{itemInfo[k]}</td>
+                    </tr>
+                )}
+            </tbody>
+        </Table>
+    )
+}
