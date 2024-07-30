@@ -147,7 +147,7 @@ const renderTableRight = (skillInfo) => {
         {strArr.map((str, i) =>
             <tr key={i}>
                 <td>{i + 1}</td>
-                <td>{str}</td>
+                <td><p className="my-0" dangerouslySetInnerHTML={{ __html: str }}></p></td>
                 <td>{statStrArr[i]}</td>
             </tr>
         )}
