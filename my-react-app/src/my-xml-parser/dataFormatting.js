@@ -399,9 +399,15 @@ export function SkillStatsDataFormatting(objArr) {
                         let subLevelObj = {}
                         // 
                         z.children.forEach(a => {
-                            let key2 = a.attributes.name
+                            // if(skill_Id == '1121006')
+                                // console.log(a)
+                            let key2 = a.attributes.name        // hs/mpCon/damage/mobCount/...
                             let val2 = a.attributes.value
                             subLevelObj[key2] = val2
+                            if(key2 == 'lt' || key2 == 'rb'){
+                                let rangeObj = {x : a.attributes.x, y: y.attributes.y}
+                                subLevelObj[key2] = rangeObj
+                            }
                         })
                         // 
                         levelObj[lvl] = subLevelObj
