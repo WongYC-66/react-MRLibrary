@@ -160,7 +160,7 @@ export const renderGlobalList = (filteredGlobalList) => {
                 </td>
                 <td>
                     <Link to={`${navUrl}`}>
-                        {name}
+                        <p dangerouslySetInnerHTML={{ __html: name }}></p>
                     </Link>
                 </td>
                 <td>

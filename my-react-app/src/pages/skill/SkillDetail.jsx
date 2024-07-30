@@ -67,7 +67,9 @@ const renderTableLeft = (skillInfo) => {
     return <tbody>
         {/* Name */}
         <tr>
-            <th className="rounded-5">{skillInfo.name}</th>
+            <th className="rounded-5">
+                <p dangerouslySetInnerHTML={{ __html: skillInfo.name }}></p>
+            </th>
         </tr>
         {/* Image */}
         <tr>
@@ -111,26 +113,26 @@ const renderTableRight = (skillInfo) => {
             strArr.push(skillInfo[key])
         }
     }
-    
+
     // Stats Column data pre-processing
     const statStrArr = []
     for (let i = 1; i <= 30; i++) {
         if (skillInfo.level && skillInfo.level[i]) {
             let str = ''
-            
-            Object.entries(skillInfo.level[i])
-            .filter(x => x[0] != 'hs')
-            .forEach(([key, val]) => {
-                let subStr = `${key} : ${val} , `
-                if(key == 'lt' || key == 'rb'){
-                    // overwrite subStr with format : lt:[x:_ , y:_]  or rb:[x:_, y:_]
-                    subStr = `${key} : [ x : ${val.x} , y : ${val.y} ] , `
-                } 
-                
-                str += subStr
-            })
 
-            statStrArr.push(str.slice(0,-2))
+            Object.entries(skillInfo.level[i])
+                .filter(x => x[0] != 'hs')
+                .forEach(([key, val]) => {
+                    let subStr = `${key} : ${val} , `
+                    if (key == 'lt' || key == 'rb') {
+                        // overwrite subStr with format : lt:[x:_ , y:_]  or rb:[x:_, y:_]
+                        subStr = `${key} : [ x : ${val.x} , y : ${val.y} ] , `
+                    }
+
+                    str += subStr
+                })
+
+            statStrArr.push(str.slice(0, -2))
         }
     }
 
