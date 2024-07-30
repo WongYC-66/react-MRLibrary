@@ -207,7 +207,7 @@ const findRangeByFilterType = (typeString) => {
     }
 }
 
-const elementCharToKey = {
+export const elementCharToKey = {
     'F': 'fire',
     'I': 'ice',
     'L': 'lightning',

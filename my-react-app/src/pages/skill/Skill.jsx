@@ -173,10 +173,10 @@ const renderSkillList = (filteredSkillList) => {
                 </Link>
             </td>
             <td>
-                {obj.desc.split('\\n').map(str => {
+                {obj.desc.split('\\n').map((str, i) => {
                     // place "#cImportant Text#" into "<span>Important Text</span>"
                     str = str.replace(/\#c(.*)#/, `<span class='text-warning fw-bolder'>$1</span>`)
-                    return <p className="my-0" dangerouslySetInnerHTML={{ __html: str }}></p>
+                    return <p key={skill_id + i} className="my-0" dangerouslySetInnerHTML={{ __html: str }}></p>
                 })}
             </td>
             <td>{skillIdToJobString(skill_id)}</td>

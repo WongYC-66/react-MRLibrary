@@ -19,6 +19,7 @@ import Gacha, { gachaAction } from './pages/items/Gacha.jsx'
 import ItemDetail from './pages/items/ItemDetail.jsx'
 
 import Skill, { skillAction } from './pages/skill/Skill.jsx'
+import SkillDetail from './pages/skill/SkillDetail.jsx'
 
 import All, { globalSearchAction } from './pages/all/All.jsx'
 
@@ -76,7 +77,7 @@ const router = createBrowserRouter(
       {/* Skill */}
       <Route path="skill" action={skillAction}>
         <Route index element={< Skill />}></Route>
-        {/* <Route path=":skillId" element={< SkillDetail />}></Route> */}
+        <Route path=":skillId" element={< SkillDetail />}></Route>
       </Route >
 
 
