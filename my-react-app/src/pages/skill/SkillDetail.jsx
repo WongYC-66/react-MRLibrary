@@ -32,7 +32,7 @@ export default function SkillDetail() {
         setSkillInfo(obj)
     }, [])
 
-    // console.log(skillInfo)
+    console.log(skillInfo)
 
     return (
         <div className="skill-detail">

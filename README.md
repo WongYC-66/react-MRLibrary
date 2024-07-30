@@ -25,8 +25,9 @@ png
 6. done - highlight gacha item with high-value, whitescroll/chaos scroll/taru....
 7. done - solved bug where monster spawn location of BOSS type mob not appears. Used data from data_Mob_MapOnly
 
+## Log - July 30 2024
+1. done - added in skill Tab and SkillInfo page
 
 next?
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
-- add skill info ?

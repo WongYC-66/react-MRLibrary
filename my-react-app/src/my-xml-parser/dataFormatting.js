@@ -405,7 +405,7 @@ export function SkillStatsDataFormatting(objArr) {
                             let val2 = a.attributes.value
                             subLevelObj[key2] = val2
                             if(key2 == 'lt' || key2 == 'rb'){
-                                let rangeObj = {x : a.attributes.x, y: y.attributes.y}
+                                let rangeObj = {x : a.attributes.x, y: a.attributes.y}
                                 subLevelObj[key2] = rangeObj
                             }
                         })
