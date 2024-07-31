@@ -30,3 +30,8 @@ dist-ssr
 /data/Skill/
 
 /data/*.xml
+
+# Not yet released
+/public/images/maps/
+/public/images/npcs/
+
