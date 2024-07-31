@@ -33,7 +33,7 @@ export const updatePagination = (library, filterLibraryFunction) => {
             return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
         }
         if (urlPathname === "/use") {
-            return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
+            return `?page=${inputNumber}&filter=any&order=id&sort=ascending&cbox=&search=`
         }
 
         // if (["/use", "/setup", "/etc"].includes(urlPathname)) {

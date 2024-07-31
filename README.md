@@ -28,16 +28,12 @@ png
 ## Log - July 30 2024
 1. done - added in skill Tab and SkillInfo page
 2. done - remove LHC gacha items from v87 update : https://royals.ms/forum/threads/lhc-exchange-rewards-cs-ws-bwg-taru-totem-rewards-found.193830/page-3#post-1446410
-3. doing - add skill into global search range
+3. done - add skill into global search range
 
-next?
-- advanced search. Mob droppping both Elixir + Cape for DEX 60%
--  at USE Tab, add filter for potion like + WA/MA/DEF, to only see those
-   - hpR % 
-   - mpR %
-   - mad
-   - pad
-   - pdd
+
+## Log - July 31 2024
+1. done - revised USE tab search to include advanced search filter + DYNAMIC table with checkbox option
+
 
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
