@@ -40,7 +40,7 @@ export const filterUseItemList = (itemLibrary) => {
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
     const filter = filterOption.filter
-    let order = filterOption.order
+    const order = filterOption.order
     const sort = filterOption.sort
     let filteredUseItemList = Object.entries(itemLibrary)
 
@@ -107,8 +107,10 @@ export const filterUseItemList = (itemLibrary) => {
     // console.log("after filter = ", filteredMobList)
     // console.log(`found : ${filteredMobList.length} records`)
 
-
-    return sort === "descending" ? filteredUseItemList.reverse() : filteredUseItemList
+    return sort === "descending" 
+    ? filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] != undefined)
+        .concat(filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] == undefined)) 
+    : filteredUseItemList
 }
 
 // 
