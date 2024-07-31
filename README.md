@@ -33,7 +33,10 @@ png
 
 ## Log - July 31 2024
 1. done - revised USE tab search to include advanced search filter + DYNAMIC table with checkbox option
+2. done -  fixed issue where earrings appear in Ring section
+3. done -  Added Belt/Medal into equip search
 
+Next:
 
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?

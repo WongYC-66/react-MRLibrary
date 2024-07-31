@@ -66,28 +66,28 @@ const querySorting = ({ order, filteredEquipList }) => {
 
     // [_id, obj, matchCount]
     listCopy.sort((a, b) => {
-        if(a[2] != b[2]) return b[2] - a[2] // sortby matchCount DESC
-        if(order === 'id') return a[0] - b[0]
-        
+        if (a[2] != b[2]) return b[2] - a[2] // sortby matchCount DESC
+        if (order === 'id') return a[0] - b[0]
+
         const valueA = a[1][key]
         const valueB = b[1][key]
         const nameA = a[1].name
         const nameB = b[1].name
-        
-        
+
+
         // sort into 0,1,2,3,10,15,... 100, NaN/no-info
         // if (!isNaN(valueA) && isNaN(valueB)) return -1
         // if (isNaN(valueA) && !isNaN(valueB)) return 1
         // if (isNaN(valueA) && valueA === valueB) return nameB.localeCompare(nameA) //if same value, sort alphabetically
-        if(valueA === undefined && valueB === undefined) return 0
-        if(valueA === undefined) return 1
-        if(valueB === undefined) return -1
+        if (valueA === undefined && valueB === undefined) return 0
+        if (valueA === undefined) return 1
+        if (valueB === undefined) return -1
 
-         // if w.Att/m.Att/attackSpeed same, sub-sort by name Ascending
-        if(valueA === valueB) return a[1]['name'].localeCompare(b[1]['name'])
+        // if w.Att/m.Att/attackSpeed same, sub-sort by name Ascending
+        if (valueA === valueB) return a[1]['name'].localeCompare(b[1]['name'])
 
         // sort by order-property
-        return Number(valueA) - Number(valueB) 
+        return Number(valueA) - Number(valueB)
     })
     // console.log(listCopy)
 
@@ -147,26 +147,38 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
     // first filter, filter library into Weapon/ Cape/ Top ...etc
     const filterKeywords = {
         "/weapon": "weapon",
-        "/hat": "hat",
-        "/top": "top",
-        "/bottom": "bottom",
-        "/overall": "overall",
-        "/shoes": "shoes",
-        "/gloves": "glove",
-        "/cape": "cape",
-        "/shield": "shield",
-        "/faceacc": "face",
-        "/eyeacc": "eye",
-        "/earring": "earring",
-        "/ring": "ring",
-        "/pendant": "pendant",
+        "/hat": "Hat",
+        "/top": "Top",
+        "/bottom": "Bottom",
+        "/overall": "Overall",
+        "/shoes": "Shoes",
+        "/gloves": "Glove",
+        "/cape": "Cape",
+        "/shield": "Shield",
+        "/faceacc": "Face Accessory",
+        "/eyeacc": "Eye Decoration",
+        "/earring": "Earrings",
+        "/ring": "Ring",
+        "/pendant": "Pendant",
+        "/belt": "Belt",
+        "/medal": "Medal",
     }
     const keyword = filterKeywords[urlPathname].toLowerCase()
 
+    // console.log(equipLibraryArr.slice())
     return equipLibraryArr
         .filter(([id, { category }]) => {
-            const words = isWeaponPage ? category[1] : category[2]
-            return words.toLowerCase().includes(keyword)
+            // category : ['Equip', 'Armor', 'Hat']
+            //  category[0] = 'Equip' always
+
+            //  category[1] = 'Armor' / 'Accessory' / 'One-Handed Weapon' / 'Two-Handed Weapon'
+
+            //  category[2] =  "Hat" /  "Face Accessory" /"Eye Decoration"  / "Earrings" / "Top"  / "Overall" /"Bottom" / "Shoes" / "Glove" / "Shield"/ "Cape" / "Ring"/ "Pendant" / "Belt" / "Medal"/ "One-Handed / Sword" / "One-Handed Axe"/ "One-Handed Blunt Weapon" / "Dagger"/ "Wand"/ "Staff"/ "Two-Handed Sword"/"Two-Handed Axe" / "Two-Handed Blunt Weapon" / "Spear" / "Pole Arm"/"Bow" / "CrossBow" / "Claw" / "Knuckle"/"Gun"/          
+            
+            let words = isWeaponPage ? category[1] : category[2]
+            words = words.toLowerCase()
+            // return words.toLowerCase().includes(keyword)
+            return isWeaponPage ? words.toLowerCase().includes(keyword) : words === keyword
         })
 }
 // 
@@ -292,28 +304,28 @@ export const renderImageWithItemId = (itemId, itemName) => {
 }
 // 
 
-export const findGoodEquipImgUrl = ({ id }) => {
+// export const findGoodEquipImgUrl = ({ id }) => {
 
-    // 1. fetch from MapleLegends
-    let p1 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`, {
-            mode: "no-cors"
-        })
-            .then(res => resolve(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`))
-            .catch(err => reject(err))
-    })
+//     // 1. fetch from MapleLegends
+//     let p1 = new Promise((resolve, reject) => {
+//         let x = fetch(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`, {
+//             mode: "no-cors"
+//         })
+//             .then(res => resolve(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`))
+//             .catch(err => reject(err))
+//     })
 
-    // 2. fetch from MapleStory.io
-    let p2 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-            mode: "no-cors"
-        })
-            .then(res => resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`))
-            .catch(err => reject(err))
-    })
+//     // 2. fetch from MapleStory.io
+//     let p2 = new Promise((resolve, reject) => {
+//         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
+//             mode: "no-cors"
+//         })
+//             .then(res => resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`))
+//             .catch(err => reject(err))
+//     })
 
-    return Promise.any([p1, p2])
-}
+//     return Promise.any([p1, p2])
+// }
 
 //
 export const itemIdToExceptionUrl = ({ id, name }) => {

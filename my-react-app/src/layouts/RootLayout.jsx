@@ -79,6 +79,13 @@ export default function RootLayout() {
                   <LinkContainer to="/pendant">
                     <NavDropdown.Item>Pendant</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/belt">
+                    <NavDropdown.Item>Belt</NavDropdown.Item>
+                  </LinkContainer>
+                  <NavDropdown.Divider />
+                  <LinkContainer to="/medal">
+                    <NavDropdown.Item>Medal</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
 
                 <LinkContainer to="/monster">

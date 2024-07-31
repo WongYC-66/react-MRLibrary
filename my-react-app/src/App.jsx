@@ -44,7 +44,7 @@ const router = createBrowserRouter(
 
       {/* Equips */}
       {
-        ["weapon", 'hat', "top", "bottom", "overall", "shoes", "gloves", "cape", "shield", "faceacc", "eyeacc", "earring", "ring", "pendant"].map(pathname =>
+        ["weapon", 'hat', "top", "bottom", "overall", "shoes", "gloves", "cape", "shield", "faceacc", "eyeacc", "earring", "ring", "pendant", "belt", "medal"].map(pathname =>
           <Route path={pathname} action={equipsAction} key={pathname}>
             <Route index element={< Equips />}></Route>
             <Route path=":equipId" element={< EquipDetail />}></Route>
