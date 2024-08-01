@@ -1,5 +1,5 @@
 import { Form, redirect, useSearchParams, Link, useNavigate, useLocation } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 // 
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import FormBS from "react-bootstrap/Form"
@@ -28,50 +28,47 @@ export default function UnionSearch() {
     const navigate = useNavigate();
     // 
     const [itemLibrary, setItemLibrary] = useState({})          // {id: name, ...}
-    const [searchTextInput, setSearchTextInput] = useState('')  //
+    const [searchTerm, setSearchTerm] = useState('')  //
     const [selectedItems, setSelectedItems] = useState([])      // ['2000003', '4010001',...]
     const [mobLibrary, setMobLibrary] = useState([])            // [[id, name], ...]
+    // 
+    const [isFocused, setIsFocused] = useState(false)   // user-mouse-tracking
 
     useEffect(() => {
-        // 
-        let allItems = []
-        for (let id in data_Eqp) {
-            allItems.push({ id, name: data_Eqp[id] })
-        }
-        let allDataObj = { ...data_Consume, ...data_Ins, ...data_Etc }
-        let newItemLibraryObj = {}
-        for (let id in allDataObj) {
+        // Eqp/Consume/Ins/Etc
+        let newAllItemObj = { ...data_Eqp }
+        let tmp = { ...data_Consume, ...data_Ins, ...data_Etc }
+        for (let id in tmp) {
             if (!id) continue
-            if (!('name' in allDataObj[id])) continue
-            newItemLibraryObj[id] = allDataObj[id]['name']
+            if (!('name' in tmp[id])) continue
+            newAllItemObj[id] = tmp[id]['name']
         }
-        setItemLibrary(newItemLibraryObj)  // {id: name,}
-        // 
+        setItemLibrary(newAllItemObj)  // {id: name,}
+
+        // Mob
         let mobArr = Object.entries(data_mob) // [id, name]
         setMobLibrary(mobArr)
-        // 
+
+        // extract URL itemId
         let params = Object.fromEntries([...searchParams.entries()])
         let itemIdStr = params.itemId
         let arr = selectedItems.slice()
         if (itemIdStr) {
             itemIdStr.split(' ').forEach(id => arr.push(id))
         }
-        // console.log(itemIdStr)
         if (!arr.length) arr = ['2000003', '4010001']   // default initial is blue potion + steel ore
         setSelectedItems(arr)
+
     }, [])
 
-    const handleSearchTextChange = (text) => {
-        setSearchTextInput(text)
-    }
-
-
     const handleCardChange = (type, itemId) => {
+        let addedSet = new Set(selectedItems)
         // handle User Click Checkbox/Remove Card of Items
         let nextSelectedItems = selectedItems.slice()
         if (type == 'clear-all') {
             nextSelectedItems = []
         } else if (type == 'add') {
+            // if(addedSet.has(itemId)) return 
             nextSelectedItems.push(itemId)
         } else if (type == 'delete') {
             let index = nextSelectedItems.indexOf(itemId)
@@ -88,11 +85,33 @@ export default function UnionSearch() {
         let newSearchStr = search.replace(/itemId=(.+)$/, `itemId=${itemIdStr}`)
 
         if (!nextSelectedItems.length) newSearchStr = ''
-        // // console.log({pathname, search,newSearchStr})
         navigate(`${pathname}${newSearchStr}`);
     }
 
+    const handleBlur = () => {
+        let searchBar = document.querySelector('#searchBar')
+        setTimeout(() => {
+            if(document.activeElement == searchBar) return 
+            setIsFocused(false)
+        }, 250);
+    };
 
+    const handleFocus = () => {
+        setIsFocused(true)
+    };
+
+
+    const handleSearchTermChanged = text => {
+        // debouncedSearchTermChanged(text);
+        setSearchTerm(text)
+    };
+
+    const filteredItems = useMemo(() => {
+        return filterItemBySearchTerm(itemLibrary, searchTerm)
+    }, [searchTerm])
+
+
+    // console.log(itemLibrary)
 
     return (
         <div className="union-search d-flex flex-column">
@@ -100,17 +119,33 @@ export default function UnionSearch() {
             <Form method="post" action="/union-search">
 
                 <div className="d-flex px-2">
-                    <FormBS.Control
-                        className="me-3"
-                        type="search"
-                        placeholder=" Search ..."
-                        aria-label="Search"
-                        data-bs-theme="light"
-                        name="searchTextInput"
-                        value={searchTextInput}
-                        onChange={e => handleSearchTextChange(e.target.value)}
-                    />
-                    <Button variant="secondary" type="submit" className="w-50">Search</Button>
+                    <div className="position-relative me-3 flex-fill">
+                        {/* Input - Text */}
+                        <FormBS.Control
+                            type="search"
+                            placeholder=" Search ..."
+                            aria-label="Search"
+                            data-bs-theme="light"
+                            name="searchTextInput"
+                            value={searchTerm}
+                            onChange={e => handleSearchTermChanged(e.target.value)}
+                            onFocus={handleFocus}
+                            onBlur={handleBlur}
+                            id="searchBar"
+                        />
+                        {/* Live search dropdown */}
+                        <div className="position-absolute me-3 top-2 start-1 bg-dark" style={{ zIndex: 10 }}>
+                            {isFocused && searchTerm &&
+                                renderSearchDropDown(
+                                    filteredItems,
+                                    itemLibrary,
+                                    selectedItems,
+                                    handleCardChange
+                                )}
+                        </div>
+                    </div>
+
+                    <Button variant="secondary" type="submit" className="w-25">Search</Button>
                 </div>
 
             </Form>
@@ -143,10 +178,77 @@ export default function UnionSearch() {
     )
 }
 
+const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
+    let searchTermArr = searchTerm.toLowerCase().split(' ').filter(Boolean)
+    // OR condition for each searchTerm
+
+    // console.log(searchTermArr)
+    let filteredItems = Object.entries(itemLibrary)
+        .map(([id, name]) => [id, name.toLowerCase()])
+        .filter(([_, name]) => searchTermArr.some(term => name.includes(term)))
+        .map(([id, name]) => {
+            let matchCount = 0
+            searchTermArr.every(term => matchCount += name.includes(term))
+            return [id, name, matchCount]
+        })
+        // sort by most matchCount DESC,  then sort by id ASC
+        .sort((a, b) => b[2] - a[2] || a[1].localeCompare(b[1]))
+        .slice(0, 20)
+
+    return filteredItems
+}
+
+const renderSearchDropDown = (filteredItems, itemLibrary, selectedItems, handleCardChange) => {
+
+    let addedSet = new Set(selectedItems)
+
+    const handleCheckBoxChanged = (isChecked, itemId) => {
+        if (isChecked) {
+            handleCardChange('add', itemId)
+        } else {
+            handleCardChange('delete', itemId)
+        }
+        let searchBar = document.querySelector('#searchBar')
+        searchBar.focus()
+    }
+
+    const handleDropDownClick = (e) => {
+        let searchBar = document.querySelector('#searchBar')
+        searchBar.focus()
+    }
+
+    const searchBarWidth = document.querySelector('#searchBar').offsetWidth
+
+    return (
+        <ListGroup id="DropDownList" style={{ width: searchBarWidth, maxHeight: '45vh' }} className="me-1 overflow-y-scroll bg-black" onClick={handleDropDownClick}>
+            {filteredItems && filteredItems.map(([itemId, name]) => (
+                <ListGroup.Item key={itemId} className="bg-light text-secondary mt-1" >
+                    {/* item checkbox */}
+                    <span className="ms-2">
+                        <FormBS.Check
+                            inline
+                            type='checkbox'
+                            className="bg-white"
+                            id={`cbox-${itemId}`}
+                            defaultChecked={addedSet.has(itemId)}
+                            onChange={e => handleCheckBoxChanged(e.target.checked, itemId)}
+                        />
+                    </span>
+                    {/* item Image */}
+                    <span className="ms-3"> {renderItemImageWrapper(itemId, itemLibrary)} </span>
+                    {/* item name */}
+                    <span className="ms-5 text-truncate"> {name}</span>
+
+                </ListGroup.Item>
+            ))}
+        </ListGroup>
+    )
+}
+
 const renderItemCards = (selectedItems, itemLibrary, handleCardChange) => {
 
     return (
-        <div className="card-row mt-3 px-2 d-flex flex-wrap">
+        <div className="card-row mt-3 px-2 d-flex flex-wrap" >
             {/* Clear All button */}
             {selectedItems.length >= 1 && <Button
                 className='rounded-circle'
