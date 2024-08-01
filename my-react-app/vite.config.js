@@ -6,4 +6,9 @@ export default defineConfig({
   plugins: [
     react(),
   ],
+  server: {
+    fs: {
+      allow: ['..'] // Adjust this if needed
+    }
+  }
 })
