@@ -33,6 +33,7 @@ export default function UnionSearch() {
     const [mobLibrary, setMobLibrary] = useState([])            // [[id, name], ...]
     // 
     const [isFocused, setIsFocused] = useState(false)   // user-mouse-tracking
+    const [isMouseInside, setMouseInside] = useState(false);
 
     useEffect(() => {
         // Eqp/Consume/Ins/Etc
@@ -46,15 +47,20 @@ export default function UnionSearch() {
         setItemLibrary(newAllItemObj)  // {id: name,}
 
         // Mob
-        let mobArr = Object.entries(data_mob) // [id, name]
-        setMobLibrary(mobArr)
+        let mobArr = Object.entries(data_mob)
+            .map(([id, name]) => [id, name, new Set(data_MB[id])])
+        setMobLibrary(mobArr)           // [id, name, hashSet([itemIDs])]
 
         // extract URL itemId
+        let added = new Set(selectedItems)
         let params = Object.fromEntries([...searchParams.entries()])
         let itemIdStr = params.itemId
         let arr = selectedItems.slice()
         if (itemIdStr) {
-            itemIdStr.split(' ').forEach(id => arr.push(id))
+            itemIdStr.split(' ').forEach(id => {
+                if (added.has(id)) return
+                arr.push(id)
+            })
         }
         if (!arr.length) arr = ['2000003', '4010001']   // default initial is blue potion + steel ore
         setSelectedItems(arr)
@@ -62,13 +68,12 @@ export default function UnionSearch() {
     }, [])
 
     const handleCardChange = (type, itemId) => {
-        let addedSet = new Set(selectedItems)
+
         // handle User Click Checkbox/Remove Card of Items
         let nextSelectedItems = selectedItems.slice()
         if (type == 'clear-all') {
             nextSelectedItems = []
         } else if (type == 'add') {
-            // if(addedSet.has(itemId)) return 
             nextSelectedItems.push(itemId)
         } else if (type == 'delete') {
             let index = nextSelectedItems.indexOf(itemId)
@@ -82,18 +87,22 @@ export default function UnionSearch() {
 
         // update url and redirect to it to remember in browser history
         let itemIdStr = nextSelectedItems.join('+')
-        let newSearchStr = search.replace(/itemId=(.+)$/, `itemId=${itemIdStr}`)
+        let newSearchStr = search
+            ? search.replace(/itemId=(.+)$/, `itemId=${itemIdStr}`)
+            : `?page=1&itemId=${itemIdStr}`
 
         if (!nextSelectedItems.length) newSearchStr = ''
+        // console.log({pathname, search,searchParams})
         navigate(`${pathname}${newSearchStr}`);
     }
 
     const handleBlur = () => {
         let searchBar = document.querySelector('#searchBar')
         setTimeout(() => {
-            if(document.activeElement == searchBar) return 
+            if (document.activeElement == searchBar) return
+            if (isMouseInside) return
             setIsFocused(false)
-        }, 250);
+        }, 50);
     };
 
     const handleFocus = () => {
@@ -102,7 +111,6 @@ export default function UnionSearch() {
 
 
     const handleSearchTermChanged = text => {
-        // debouncedSearchTermChanged(text);
         setSearchTerm(text)
     };
 
@@ -110,9 +118,15 @@ export default function UnionSearch() {
         return filterItemBySearchTerm(itemLibrary, searchTerm)
     }, [searchTerm])
 
+    const filteredMobs = filterMobBySelectedItem(mobLibrary, selectedItems)
+
 
     // console.log(itemLibrary)
+    // console.log(selectedItems)
+    console.log(filteredMobs)
 
+
+    // --------------------------------- RENDERING --------------------------
     return (
         <div className="union-search d-flex flex-column">
             {/* Search input and Button */}
@@ -140,7 +154,8 @@ export default function UnionSearch() {
                                     filteredItems,
                                     itemLibrary,
                                     selectedItems,
-                                    handleCardChange
+                                    handleCardChange,
+                                    setMouseInside
                                 )}
                         </div>
                     </div>
@@ -159,20 +174,21 @@ export default function UnionSearch() {
             <Table className="mt-3 table-sm text-center">
                 <thead>
                     <tr>
-                        {/* <th>Image</th> */}
                         <th>Search Results:</th>
-                        {/* <th className="w-25">Name</th> */}
-                        {/* <th>Description</th> */}
                     </tr>
                 </thead>
                 <tbody>
-                    {/* {renderItemList(filterItemList(itemLibrary), "setup")} */}
-                    {/* {renderItemList(itemLibrary, "setup")} */}
+                    {filteredMobs.map(([id, name, dropSet]) =>
+                        <tr key={id}>
+                            {name}
+
+                        </tr>
+                    )}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {/* {updatePagination(itemLibrary, filterItemList)} */}
+            {/* {updatePagination(mobLibrary, filterMobBySelectedItem)} */}
         </div>
 
     )
@@ -182,7 +198,6 @@ const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
     let searchTermArr = searchTerm.toLowerCase().split(' ').filter(Boolean)
     // OR condition for each searchTerm
 
-    // console.log(searchTermArr)
     let filteredItems = Object.entries(itemLibrary)
         .map(([id, name]) => [id, name.toLowerCase()])
         .filter(([_, name]) => searchTermArr.some(term => name.includes(term)))
@@ -193,14 +208,23 @@ const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
         })
         // sort by most matchCount DESC,  then sort by id ASC
         .sort((a, b) => b[2] - a[2] || a[1].localeCompare(b[1]))
-        .slice(0, 20)
+        .slice(0, 20)   // IMPORTANT, setting to infinite CAUSE INFINITE LAG
 
     return filteredItems
 }
 
-const renderSearchDropDown = (filteredItems, itemLibrary, selectedItems, handleCardChange) => {
+const filterMobBySelectedItem = (mobLibrary, selectedItems) => {
+    if(!selectedItems.length) return []
+    let filteredMobs = mobLibrary
+        .filter(([id, mob, dropSet]) => {
+            return selectedItems.every(itemId => dropSet.has(itemId))
+        })
+        .sort((a, b) => a[0].localeCompare(b[0])) // sort by mobId
 
-    let addedSet = new Set(selectedItems)
+    return filteredMobs
+}
+
+const renderSearchDropDown = (filteredItems, itemLibrary, selectedItems, handleCardChange, setMouseInside) => {
 
     const handleCheckBoxChanged = (isChecked, itemId) => {
         if (isChecked) {
@@ -210,19 +234,25 @@ const renderSearchDropDown = (filteredItems, itemLibrary, selectedItems, handleC
         }
         let searchBar = document.querySelector('#searchBar')
         searchBar.focus()
+        setMouseInside(true)
     }
 
     const handleDropDownClick = (e) => {
+        // console.log('moving')
         let searchBar = document.querySelector('#searchBar')
         searchBar.focus()
+        setMouseInside(true)
     }
 
+    const handleMouseLeave = e => setMouseInside(false)
+
+    let addedSet = new Set(selectedItems)
     const searchBarWidth = document.querySelector('#searchBar').offsetWidth
 
     return (
-        <ListGroup id="DropDownList" style={{ width: searchBarWidth, maxHeight: '45vh' }} className="me-1 overflow-y-scroll bg-black" onClick={handleDropDownClick}>
+        <ListGroup id="DropDownList" style={{ width: searchBarWidth, maxHeight: '45vh' }} className="me-1 overflow-y-scroll bg-black" onMouseMove={handleDropDownClick} onMouseLeave={handleMouseLeave}>
             {filteredItems && filteredItems.map(([itemId, name]) => (
-                <ListGroup.Item key={itemId} className="bg-light text-secondary mt-1" >
+                <ListGroup.Item key={itemId} className="bg-light text-secondary mt-1 d-flex" >
                     {/* item checkbox */}
                     <span className="ms-2">
                         <FormBS.Check
@@ -253,6 +283,7 @@ const renderItemCards = (selectedItems, itemLibrary, handleCardChange) => {
             {selectedItems.length >= 1 && <Button
                 className='rounded-circle'
                 variant="outline-light"
+                // style={{ height: '50px', width: '50px', fontSize: "0.7rem" }}
                 style={{ height: '75px', width: '75px' }}
                 onClick={e => handleCardChange('clear-all', '')}>
                 Clear All
@@ -276,7 +307,7 @@ const renderItemCards = (selectedItems, itemLibrary, handleCardChange) => {
                     </Button>
 
                     {/* Item name */}
-                    <p className="text-truncate">{itemLibrary[itemId]}</p>
+                    <p className="fs-6 text-truncate" style={{ maxWidth: 75 }}>{itemLibrary[itemId]}</p>
                 </div>
             )}
         </div>)
@@ -297,20 +328,14 @@ const renderItemImageWrapper = (itemId, itemLibrary) => {
 
 export const unionSearchAction = async ({ request }) => {
 
-
     // const data = await request.formData()
-
     // const submission = {
     //     searchName: data.get('searchName'),
     // }
     // console.log(submission)
-
     // send your post request . ajax
     // ....
-
     // redirect the user
     const actionUrl = window.location.href
-
     return redirect(actionUrl)
-
 }
