@@ -4,13 +4,13 @@ import { useCallback } from "react"
 // 
 import Pagination from "react-bootstrap/Pagination"
 
-export const updatePagination = (library, filterLibraryFunction) => {
+export const updatePagination = (library, filterLibraryFunction, ...para) => {
     const [searchParams] = useSearchParams()
     const urlSearch = useLocation().search
     const currentPage = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
 
     const urlPathname = useLocation().pathname
-    const lastPageIndex = Math.ceil(filterLibraryFunction(library).length / 10)
+    const lastPageIndex = Math.ceil(filterLibraryFunction(library, ...para).length / 10)
     
     const generateSearchString = (inputNumber) => {
         const queryParaCount = searchParams.size

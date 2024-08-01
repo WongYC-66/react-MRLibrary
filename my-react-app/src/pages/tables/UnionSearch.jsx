@@ -24,8 +24,6 @@ import data_MB from "../../../data/data_MB.json"
 
 export default function UnionSearch() {
 
-    // url : /union-search?page=1&itemId=2000003+4010001+2000006
-
     const [searchParams] = useSearchParams()
     const { pathname, search } = useLocation();
     const navigate = useNavigate();
@@ -55,6 +53,7 @@ export default function UnionSearch() {
         setMobLibrary(mobArr)           // [id, name, hashSet([itemIDs])]
 
         // extract URL itemId
+        // /union-search?page=1&itemId=4010003
         let added = new Set(selectedItems)
         let params = Object.fromEntries([...searchParams.entries()])
         let itemIdStr = params.itemId
@@ -65,7 +64,7 @@ export default function UnionSearch() {
                 arr.push(id)
             })
         }
-        // if (!arr.length) arr = ['2000003', '4010001']   // default initial is blue potion + steel ore
+        if (!arr.length) arr = ['2000003', '4010001']   // default initial is blue potion + steel ore
         setSelectedItems(arr)
 
     }, [])
@@ -89,9 +88,11 @@ export default function UnionSearch() {
         setSelectedItems(nextSelectedItems)
 
         // update url and redirect to it to remember in browser history
+        // /union-search?page=1&itemId=4010003
         let itemIdStr = nextSelectedItems.join('+')
         let newSearchStr = search
             ? search.replace(/itemId=(.+)$/, `itemId=${itemIdStr}`)
+                .replace(/page=[0-9]*/, 'page=1')
             : `?page=1&itemId=${itemIdStr}`
 
         if (!nextSelectedItems.length) newSearchStr = ''
@@ -126,7 +127,7 @@ export default function UnionSearch() {
 
     // console.log(itemLibrary)
     // console.log(selectedItems)
-    console.log(filteredMobs)
+    // console.log(filteredMobs)
 
 
     // --------------------------------- RENDERING --------------------------
@@ -174,13 +175,12 @@ export default function UnionSearch() {
             {renderItemCards(selectedItems, itemLibrary, handleCardChange)}
 
             {/* Mob Search Result */}
-            <h6 className="fw-bolder text-center">Search Results:</h6>
             <Table className="mt-3 table-sm text-center">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        {/* <th></th> */}
+                        {/* <th></th> */}
+                        <th colSpan={3}>Search Results</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -190,7 +190,7 @@ export default function UnionSearch() {
             </Table>
 
             {/* Pagination */}
-            {updatePagination(mobLibrary, filterMobBySelectedItem)}
+            {updatePagination(mobLibrary, filterMobBySelectedItem, selectedItems)}
         </div>
 
     )
@@ -209,7 +209,7 @@ const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
             return [id, name, matchCount]
         })
         // sort by most matchCount DESC,  then sort by id ASC
-        .sort((a, b) => b[2] - a[2] || a[1].localeCompare(b[1]))
+        .sort((a, b) => b[2] - a[2] || a[0] - b[1])
         .slice(0, 20)   // IMPORTANT, setting to infinite CAUSE INFINITE LAG
 
     return filteredItems
