@@ -141,7 +141,7 @@ export default function UnionSearch() {
                         {/* Input - Text */}
                         <FormBS.Control
                             type="search"
-                            placeholder=" Search ..."
+                            placeholder=" Add new item ..."
                             aria-label="Search"
                             data-bs-theme="light"
                             name="searchTextInput"
@@ -175,17 +175,16 @@ export default function UnionSearch() {
             {renderItemCards(selectedItems, itemLibrary, handleCardChange)}
 
             {/* Mob Search Result */}
-            <Table className="mt-3 table-sm text-center">
+            <Table variant="danger" className="mt-3 table-sm text-center" style={{ borderSpacing: "0px 1rem", borderCollapse: "separate" }} >
                 <thead>
                     <tr>
                         {/* <th></th> */}
                         {/* <th></th> */}
-                        <th colSpan={3}>Search Results</th>
+                        {/* <th colSpan={3}>Search Results</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {renderMobListFromUS(filteredMobs, itemLibrary)}
-
                 </tbody>
             </Table>
 
@@ -292,26 +291,37 @@ const renderItemCards = (selectedItems, itemLibrary, handleCardChange) => {
             </Button>}
 
             {/* each card */}
-            {selectedItems.map(itemId =>
-                <div key={itemId} className="position-relative mx-2 d-flex flex-column align-items-center">
-                    {/* Image & Trash icon inside ButtonWrapper */}
-                    <Button
-                        className='rounded-circle'
-                        variant="warning"
-                        style={{ height: '75px', width: '75px' }}
-                        onClick={e => handleCardChange('delete', itemId)}>
-                        {/* Trash Icon */}
-                        <i className="bi bi-x-circle position-absolute top-0 end-0 p-2 text-light"></i>
+            {selectedItems.map(itemId => <ItemCard
+                itemId={itemId}
+                handleCardChange={handleCardChange}
+                itemLibrary={itemLibrary} />)}
+        </div>)
+}
 
-                        {/* Item Image */}
-                        {renderItemImageWrapper(itemId, itemLibrary)}
+const ItemCard = ({ itemId, handleCardChange, itemLibrary }) => {
 
-                    </Button>
+    const [isHover, setIsHover] = useState(false)
 
-                    {/* Item name */}
-                    <p className="fs-6 text-truncate" style={{ maxWidth: 75 }}>{itemLibrary[itemId]}</p>
-                </div>
-            )}
+    return (
+        <div key={itemId} className="position-relative mx-2 d-flex flex-column align-items-center">
+            {/* Image & Trash icon inside ButtonWrapper */}
+            <Button
+                className='rounded-circle'
+                variant=""
+                style={{ height: '75px', width: '75px', backgroundColor: isHover ? '#694F8E' : '#E3A5C7', }}
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+                onClick={e => handleCardChange('delete', itemId)}>
+                {/* Trash Icon */}
+                <i className="bi bi-x-circle position-absolute top-0 end-0 p-2 text-light"></i>
+
+                {/* Item Image */}
+                {renderItemImageWrapper(itemId, itemLibrary)}
+
+            </Button>
+
+            {/* Item name */}
+            <p className="fs-6 text-truncate" style={{ maxWidth: 75 }}>{itemLibrary[itemId]}</p>
         </div>)
 }
 
@@ -327,42 +337,27 @@ const renderMobListFromUS = (filteredMobs, itemLibrary) => {
     // [ [id, name, hash set(dropItemsID) ], ... ...]
 
     return filteredMobs.map(([mobId, name, dropSet]) =>
-        <tr key={mobId} className="m-3 bg-light text-start text-dark ">
-            <td className="">
+        <tr key={mobId} className="text-start" style={{ backgroundColor: '#FFDFD6' }}>
+            <td className="p-4 align-middle rounded-start-5">
+                {/* Mob Image */}
                 <Link to={`/monster/id=${mobId}`}>
-                    {renderImageWithMobId(mobId)}
+                    <div className='rounded-circle p-2 d-flex justify-content-center align-items-center' style={{ height: '75px', width: '75px', backgroundColor: '#E3A5C7' }}>
+                        {renderImageWithMobId(mobId)}
+                    </div>
                 </Link>
             </td>
-            <td><Link to={`/monster/id=${mobId}`}>
-                {name}
+            <td className="p-4 align-middle"><Link className="text-decoration-none" to={`/monster/id=${mobId}`}>
+                {/* Mob Name */}
+                <span className="fw-bold" style={{ color: '#694F8E' }}>{name}</span>
             </Link></td>
-            <td>
+            <td className="p-4 align-middle rounded-end-5">
+                {/* Many Items image */}
                 {[...dropSet].map(itemId => <span key={mobId + itemId}>
                     {dropsOverlayWrapperUS(itemId, mobId, itemLibrary)}
                 </span>)}
             </td>
         </tr>
     )
-    //     const mobId = x[0]
-    //     return (
-    //         <tr key={x[0]}>
-    //             <td>
-    //                 <Link to={`/monster/id=${mobId}`}>
-    //                     {renderImageWithMobId(mobId)}
-    //                 </Link>
-    //             </td>
-    //             <td>
-    //                 <Link to={`/monster/id=${mobId}`}>
-    //                     <p dangerouslySetInnerHTML={{__html: x[1].name}}></p>
-    //                     {/* {x[1].name} */}
-    //                 </Link>
-    //             </td>
-    //             <td>{x[1].level}</td>
-    //             <td>{numFormatter(parseInt(x[1].exp * 3.2))}</td>
-    //             <td>{numFormatter(x[1].maxHP)}</td>
-    //         </tr>
-    //     )
-    // })
 }
 
 const renderItemImageWrapper = (itemId, itemLibrary) => {
@@ -378,24 +373,11 @@ const renderItemImageWrapper = (itemId, itemLibrary) => {
     return renderImageWithItemIdType(itemId, itemName, type)
 }
 
-export const unionSearchAction = async ({ request }) => {
 
-    // const data = await request.formData()
-    // const submission = {
-    //     searchName: data.get('searchName'),
-    // }
-    // console.log(submission)
-    // send your post request . ajax
-    // ....
-    // redirect the user
-    const actionUrl = window.location.href
-    return redirect(actionUrl)
-}
 
 const dropsOverlayWrapperUS = (itemId, mobId, itemLibrary) => {
-    if(!itemId || !mobId) return
-    // console.log({itemId, mobId})
-    // return
+    if (!itemId || !mobId) return
+
     const renderTooltip = (props) => (
         <Tooltip id={`tooltip-${+mobId}`} {...props}>
             {itemLibrary[itemId]}
@@ -412,4 +394,18 @@ const dropsOverlayWrapperUS = (itemId, mobId, itemLibrary) => {
             </Link>
         </OverlayTrigger>
     )
+}
+
+export const unionSearchAction = async ({ request }) => {
+
+    // const data = await request.formData()
+    // const submission = {
+    //     searchName: data.get('searchName'),
+    // }
+    // console.log(submission)
+    // send your post request . ajax
+    // ....
+    // redirect the user
+    const actionUrl = window.location.href
+    return redirect(actionUrl)
 }
