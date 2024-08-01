@@ -25,6 +25,7 @@ import All, { globalSearchAction } from './pages/all/All.jsx'
 
 import ExpTable from './pages/tables/ExpTable.jsx'
 import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTable.jsx'
+import UnionSearch, { unionSearchAction } from './pages/tables/UnionSearch.jsx'
 import NotFound from './pages/NotFound.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 
@@ -85,6 +86,8 @@ const router = createBrowserRouter(
       <Route path="exptable" element={< ExpTable />} />
 
       <Route path="elemental-table" element={< ElementalTable />} action={elementalTableAction} />
+
+      <Route path="union-search" element={< UnionSearch />} action={unionSearchAction} />
       {/* Tables */}
 
       {/* Links */}
