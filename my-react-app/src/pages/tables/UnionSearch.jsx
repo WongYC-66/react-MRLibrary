@@ -6,11 +6,14 @@ import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 import ListGroup from "react-bootstrap/ListGroup"
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
 // import { filterItemList, renderItemList } from "./utility.jsx"
-import { renderImageWithItemIdType } from '../all/utility.jsx'
+import { renderImageWithItemIdType, renderImageWithMobId, updateSearchResultCount } from '../all/utility.jsx'
+import { itemIdToNavUrl } from '../monster/utility.jsx'
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
@@ -62,7 +65,7 @@ export default function UnionSearch() {
                 arr.push(id)
             })
         }
-        if (!arr.length) arr = ['2000003', '4010001']   // default initial is blue potion + steel ore
+        // if (!arr.length) arr = ['2000003', '4010001']   // default initial is blue potion + steel ore
         setSelectedItems(arr)
 
     }, [])
@@ -171,24 +174,23 @@ export default function UnionSearch() {
             {renderItemCards(selectedItems, itemLibrary, handleCardChange)}
 
             {/* Mob Search Result */}
+            <h6 className="fw-bolder text-center">Search Results:</h6>
             <Table className="mt-3 table-sm text-center">
                 <thead>
                     <tr>
-                        <th>Search Results:</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredMobs.map(([id, name, dropSet]) =>
-                        <tr key={id}>
-                            {name}
+                    {renderMobListFromUS(filteredMobs, itemLibrary)}
 
-                        </tr>
-                    )}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {/* {updatePagination(mobLibrary, filterMobBySelectedItem)} */}
+            {updatePagination(mobLibrary, filterMobBySelectedItem)}
         </div>
 
     )
@@ -214,7 +216,7 @@ const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
 }
 
 const filterMobBySelectedItem = (mobLibrary, selectedItems) => {
-    if(!selectedItems.length) return []
+    if (!selectedItems || !selectedItems.length) return []
     let filteredMobs = mobLibrary
         .filter(([id, mob, dropSet]) => {
             return selectedItems.every(itemId => dropSet.has(itemId))
@@ -313,6 +315,56 @@ const renderItemCards = (selectedItems, itemLibrary, handleCardChange) => {
         </div>)
 }
 
+const renderMobListFromUS = (filteredMobs, itemLibrary) => {
+    const [searchParams] = useSearchParams()
+
+    updateSearchResultCount(filteredMobs.length)
+
+    const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
+    const sliceStartIndex = (pageNum - 1) * 10
+    const sliceEndIndex = sliceStartIndex + 10
+    filteredMobs = filteredMobs.slice(sliceStartIndex, sliceEndIndex)
+    // [ [id, name, hash set(dropItemsID) ], ... ...]
+
+    return filteredMobs.map(([mobId, name, dropSet]) =>
+        <tr key={mobId} className="m-3 bg-light text-start text-dark ">
+            <td className="">
+                <Link to={`/monster/id=${mobId}`}>
+                    {renderImageWithMobId(mobId)}
+                </Link>
+            </td>
+            <td><Link to={`/monster/id=${mobId}`}>
+                {name}
+            </Link></td>
+            <td>
+                {[...dropSet].map(itemId => <span key={mobId + itemId}>
+                    {dropsOverlayWrapperUS(itemId, mobId, itemLibrary)}
+                </span>)}
+            </td>
+        </tr>
+    )
+    //     const mobId = x[0]
+    //     return (
+    //         <tr key={x[0]}>
+    //             <td>
+    //                 <Link to={`/monster/id=${mobId}`}>
+    //                     {renderImageWithMobId(mobId)}
+    //                 </Link>
+    //             </td>
+    //             <td>
+    //                 <Link to={`/monster/id=${mobId}`}>
+    //                     <p dangerouslySetInnerHTML={{__html: x[1].name}}></p>
+    //                     {/* {x[1].name} */}
+    //                 </Link>
+    //             </td>
+    //             <td>{x[1].level}</td>
+    //             <td>{numFormatter(parseInt(x[1].exp * 3.2))}</td>
+    //             <td>{numFormatter(x[1].maxHP)}</td>
+    //         </tr>
+    //     )
+    // })
+}
+
 const renderItemImageWrapper = (itemId, itemLibrary) => {
     // renderImageWithItemIdType(itemId, itemName, type)
     // itemId : str
@@ -338,4 +390,26 @@ export const unionSearchAction = async ({ request }) => {
     // redirect the user
     const actionUrl = window.location.href
     return redirect(actionUrl)
+}
+
+const dropsOverlayWrapperUS = (itemId, mobId, itemLibrary) => {
+    if(!itemId || !mobId) return
+    // console.log({itemId, mobId})
+    // return
+    const renderTooltip = (props) => (
+        <Tooltip id={`tooltip-${+mobId}`} {...props}>
+            {itemLibrary[itemId]}
+        </Tooltip>
+    );
+    return (
+        <OverlayTrigger
+            key={itemId + mobId}
+            placement="top"
+            overlay={renderTooltip}
+        >
+            <Link to={itemIdToNavUrl(itemId)}>
+                {renderItemImageWrapper(itemId, itemLibrary)}
+            </Link>
+        </OverlayTrigger>
+    )
 }

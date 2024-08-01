@@ -49,6 +49,9 @@ export const updatePagination = (library, filterLibraryFunction) => {
         if (urlPathname === "/skill") {
             return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
         }
+        if (urlPathname === "/union-search") {
+            return `?page=${inputNumber}&itemId=`
+        }
     }
 
     const RemovePaginationActiveAttribute = useCallback(() => {
