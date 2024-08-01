@@ -293,6 +293,7 @@ const renderItemCards = (selectedItems, itemLibrary, handleCardChange) => {
 
             {/* each card */}
             {selectedItems.map(itemId => <ItemCard
+                key={itemId}
                 itemId={itemId}
                 handleCardChange={handleCardChange}
                 itemLibrary={itemLibrary} />)}
@@ -304,7 +305,7 @@ const ItemCard = ({ itemId, handleCardChange, itemLibrary }) => {
     const [isHover, setIsHover] = useState(false)
 
     return (
-        <div key={itemId} className="position-relative mx-2 d-flex flex-column align-items-center">
+        <div className="position-relative mx-2 d-flex flex-column align-items-center">
             {/* Image & Trash icon inside ButtonWrapper */}
             <Button
                 className='rounded-circle'
