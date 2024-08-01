@@ -253,22 +253,23 @@ const renderSearchDropDown = (filteredItems, itemLibrary, selectedItems, handleC
     return (
         <ListGroup id="DropDownList" style={{ width: searchBarWidth, maxHeight: '45vh' }} className="me-1 overflow-y-scroll bg-black" onMouseMove={handleDropDownClick} onMouseLeave={handleMouseLeave}>
             {filteredItems && filteredItems.map(([itemId, name]) => (
-                <ListGroup.Item key={itemId} className="bg-light text-secondary mt-1 d-flex" >
+                <ListGroup.Item key={itemId} className="text-secondary mt-1 d-flex align-items-center" style={{backgroundColor:'#fcd4dc'}}>
                     {/* item checkbox */}
                     <span className="ms-2">
                         <FormBS.Check
                             inline
                             type='checkbox'
-                            className="bg-white"
                             id={`cbox-${itemId}`}
                             defaultChecked={addedSet.has(itemId)}
                             onChange={e => handleCheckBoxChanged(e.target.checked, itemId)}
                         />
                     </span>
                     {/* item Image */}
-                    <span className="ms-3"> {renderItemImageWrapper(itemId, itemLibrary)} </span>
+                    <span className="ms-3 rounded-circle p-2 d-flex justify-content-center align-items-center" style={{ maxWidth: 50, maxHeight: 50, backgroundColor: '#E3A5C7' }}> {renderItemImageWrapper(itemId, itemLibrary)}
+                    </span>
+
                     {/* item name */}
-                    <span className="ms-5 text-truncate"> {name}</span>
+                    <span className="ms-5 text-truncate"> {itemLibrary[itemId]}</span>
 
                 </ListGroup.Item>
             ))}
