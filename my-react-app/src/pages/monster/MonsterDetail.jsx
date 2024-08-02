@@ -10,10 +10,10 @@ import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import Badge from 'react-bootstrap/Badge';
 // 
 import {
     decodeElemAttr,
-    mapIdToUrl,
     renderImageWithItemIdType,
     renderImageWithMobId,
     sortDropsToFourArr,
@@ -25,6 +25,7 @@ import data_MB from "../../../data/data_MB.json"
 import data_MapMobCount from "../../../data/data_MapMobCount.json"
 import data_Mob_MapOnly from "../../../data/data_Mob_MapOnly.json"
 import data_Map from "../../../data/data_Map.json"
+import data_MapUrl from "../../../data/data_MapUrl.json"
 
 export default function MonsterDetail() {
 
@@ -176,11 +177,11 @@ const renderTableOfMap = (mapArr) => {
         return b[1].streetName > a[1].streetName ? 1 : -1 // descendingly sorted in alphabet order if same count
     })
 
-    const handleMapLinkClick = () => {
-        if(hasAlerted) return
+    const handleMapLinkClick = (hasHiddenStreetUrl) => {
+        if(hasHiddenStreetUrl) return 
+        if (hasAlerted) return
         setHasAlerted(true)
-        alert('You are being redirected to mapleLegends library. Because there is no map info at this library. Please be aware both site look similar, and both library DON"t share the same database.')
-
+        alert('You are being redirected to mapleLegends library. Come back later. Be aware that both site look similar but different mob drops.')
     }
 
     return (
@@ -190,25 +191,37 @@ const renderTableOfMap = (mapArr) => {
                     <th className="bg-transparent">Map</th>
                     <th className="bg-transparent">Count</th>
                 </tr>
-                {sortedMapArr && sortedMapArr.map(x => {
-                    return (
-
-                        <tr key={x[0]}>
-                            <td className="bg-transparent">
-                                <a href={mapIdToUrl(x[0])} target="_blank" onClick={handleMapLinkClick}>
-                                    {x[1] ?
-                                        <p dangerouslySetInnerHTML={{ __html: `<p>${x[1].streetName + ":" + x[1].mapName}</p>` }}></p>
-                                        : `map info missing. map_id : ${x[0]}`
-                                    }
-
-                                </a>
-                            </td>
-                            <td className="bg-transparent">{x[2]}</td>
-                        </tr>
-                    )
-                })}
+                {sortedMapArr && sortedMapArr.map((map, i) => <MapRowCard key={i} map={map} handleMapLinkClick={handleMapLinkClick} />)}
             </tbody>
         </Table>
+    )
+}
+
+const MapRowCard = ({ map, handleMapLinkClick }) => {
+    //  {mapCategory: __ , mapName: __, streetName: ___}
+    const [mapId, { streetName, mapName }, mobCount] = map
+    // hasHiddenStreetUrl
+    const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
+    const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
+
+    return (
+        <tr key={mapId}>
+            <td className="bg-transparent">
+                <a href={mapUrl} target="_blank" onClick={() => handleMapLinkClick(hasUrl)}>
+                    {streetName ?
+                        <>
+                            {/* Map Name */}
+                            <span dangerouslySetInnerHTML={{ __html: `${streetName + ":" + mapName}` }}></span>
+                            {/* Badge of legends or hidden street */}
+                            <Badge bg={`${hasUrl ? 'success' : 'danger'}`} className="mx-3">{hasUrl ? "hidden-street" : "legends"}</Badge>
+                        </>
+                        : `map info missing. map_id : ${mapId}`
+                    }
+
+                </a>
+            </td>
+            <td className="bg-transparent">{mobCount}</td>
+        </tr>
     )
 }
 

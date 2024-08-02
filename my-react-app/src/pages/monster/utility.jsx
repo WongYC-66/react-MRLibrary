@@ -7,6 +7,8 @@ import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
 import data_fixMobImg from "./data_fixMobImg.json"
+import data_MapUrl from "../../../data/data_MapUrl.json"
+
 // 
 const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x), Object.values(x)]))
 
@@ -274,12 +276,6 @@ export const sortDropsToFourArr = (dropsArr) => {
     })
 
     return { EquipDrops, UseDrops, SetupDrops, EtcDrops, result: "success" }
-}
-
-
-
-export const mapIdToUrl = (id) => {
-    return `https://maplelegends.com/lib/map?id=${id}`
 }
 
 export const itemIdToExceptionUrl = ({ id, name }) => {
