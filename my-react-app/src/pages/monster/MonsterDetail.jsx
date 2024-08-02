@@ -164,6 +164,9 @@ export default function MonsterDetail() {
 }
 
 const renderTableOfMap = (mapArr) => {
+
+    const [hasAlerted, setHasAlerted] = useState(false)
+
     const sortedMapArr = mapArr && mapArr.slice().sort((a, b) => {
         if (b[2] !== a[2]) return b[2] - a[2] // descendingly sorted in Count
         // if a[1] or b[1] is empty obj
@@ -172,6 +175,13 @@ const renderTableOfMap = (mapArr) => {
 
         return b[1].streetName > a[1].streetName ? 1 : -1 // descendingly sorted in alphabet order if same count
     })
+
+    const handleMapLinkClick = () => {
+        if(hasAlerted) return
+        setHasAlerted(true)
+        alert('You are being redirected to mapleLegends library. Because there is no map info at this library. Please be aware both site look similar, and both library DON"t share the same database.')
+
+    }
 
     return (
         <Table bordered hover className="text-center">
@@ -185,7 +195,7 @@ const renderTableOfMap = (mapArr) => {
 
                         <tr key={x[0]}>
                             <td className="bg-transparent">
-                                <a href={mapIdToUrl(x[0])} target="_blank">
+                                <a href={mapIdToUrl(x[0])} target="_blank" onClick={handleMapLinkClick}>
                                     {x[1] ?
                                         <p dangerouslySetInnerHTML={{ __html: `<p>${x[1].streetName + ":" + x[1].mapName}</p>` }}></p>
                                         : `map info missing. map_id : ${x[0]}`

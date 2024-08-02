@@ -40,8 +40,11 @@ png
 ## Log - Aug 2 2024
 1. done - Add Union Search component & page, update pagination component to accept parameter into func
 2. done - update pagination to have skip feature
+3.  - user no idea will be redirected to maplelegends.
+
 
 Next:
+- breadcrumb of Equip to includes category  e.g. /equip/bow/id=11000
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
 - use hidden street map over maplelegends map, bcoz maplelegend map can't navigate??, user wants help on how to enter a map....
