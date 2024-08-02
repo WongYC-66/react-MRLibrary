@@ -36,8 +36,11 @@ png
 2. done -  fixed issue where earrings appear in Ring section
 3. done -  Added Belt/Medal into equip search
 
-Next:
 
+## Log - Aug 2 2024
+1. done - Add Union Search component & page, update pagination component to accept parameter into func
+
+Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
 - use hidden street map over maplelegends map, bcoz maplelegend map can't navigate??, user wants help on how to enter a map....
