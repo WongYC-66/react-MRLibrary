@@ -1,21 +1,28 @@
-import { useSearchParams, useLocation } from "react-router-dom"
+import { useSearchParams, useLocation, useNavigate } from "react-router-dom"
 import { LinkContainer } from 'react-router-bootstrap'
-import { useCallback } from "react"
+import { useCallback, useState } from "react"
 // 
 import Pagination from "react-bootstrap/Pagination"
+import Modal from "react-bootstrap/Modal"
+import Button from "react-bootstrap/Button"
 
 export const updatePagination = (library, filterLibraryFunction, ...para) => {
     const [searchParams] = useSearchParams()
+    const navigate = useNavigate();
+
+    const [showPaginationModal, setShowPaginationModal] = useState(false);  // modal to skip pages <...>
+    const [isNextPage, setIsNextPage] = useState(true);  // modal 
+
     const urlSearch = useLocation().search
     const currentPage = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
 
     const urlPathname = useLocation().pathname
     const lastPageIndex = Math.ceil(filterLibraryFunction(library, ...para).length / 10)
-    
+
     const generateSearchString = (inputNumber) => {
         const queryParaCount = searchParams.size
         // console.log(urlSearch)
-        if(queryParaCount >= 1) return urlSearch.replace(/\?page=\d+/, (...para) => {
+        if (queryParaCount >= 1) return urlSearch.replace(/\?page=\d+/, (...para) => {
             // console.log({para})
             return `?page=${inputNumber}`
         })
@@ -66,8 +73,9 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         })
     }, [])
 
+    // Generate [1][2][3]...[lastPage] button Object : {text: 1, pathname ..., seach:...}
     let pageButtonArr = []
-    for (let i = currentPage - 1; i <= lastPageIndex; i++) {
+    for (let i = currentPage - 2; i <= lastPageIndex; i++) {
         const obj = {
             pathname: `${urlPathname}`,
             // search: `?page=${i}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}`,
@@ -76,27 +84,81 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         }
         pageButtonArr.push(obj)
     }
-    pageButtonArr = pageButtonArr.filter(x => x.text >= 1 && x.text - currentPage <= 2)
+    pageButtonArr = pageButtonArr.filter(x =>
+        (x.text >= 1) && (x.text - currentPage <= 2)
+        && (x.text != 1 && x.text != lastPageIndex)
+    )
+
 
     RemovePaginationActiveAttribute()
 
+    let text = 'save changes'
+    // Modal related
+    const handleClose = () => setShowPaginationModal(false);
+    const handleShow = () => setShowPaginationModal(true);
+
+    const handleEllipsisPageBtnClick = (text) => {
+        // pop modal to jump to which page
+        // text = 'ahead' or 'behind'
+        setIsNextPage(text === 'next')
+        handleShow()
+    }
+    const handleModalBtnClick = (val) => {
+        val = isNextPage ? +val : -val      // red btn = -5/-10/-20/-50, blue btn= +5/+10/+20/+50
+        let nextPageNum = val + currentPage
+        nextPageNum = Math.max(nextPageNum, 0)      // if exceed 0, becomes 0
+        nextPageNum = Math.min(lastPageIndex, nextPageNum)  // if exceed lastPage, becomes lastPage
+        let queryStr = generateSearchString(nextPageNum)
+        // handleClose()
+        navigate(`${urlPathname}${queryStr}`)   // redirect to new url
+    }
+
 
     return (
-        <Pagination id="paginationGroup" className="d-flex justify-content-center">
+        <>
+            <Pagination id="paginationGroup" className="d-flex justify-content-center">
 
-            <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(1) }} key='first'>
-                <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" />
-            </LinkContainer>
-
-            {pageButtonArr.map(x =>
-                <LinkContainer to={{ pathname: x.pathname, search: x.search }} key={x.text}>
-                    <Pagination.Item className={`bg-white ${x.text === currentPage && "current"}`}>{x.text}</Pagination.Item>
+                {/* page 1 */}
+                <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(1) }} key='first'>
+                    {/* <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" /> */}
+                    <Pagination.Item className={`bg-white ${lastPageIndex === 0 ? "rounded-5" : "rounded-start-5"} ${currentPage === 1 && "current"}`}>1</Pagination.Item>
                 </LinkContainer>
-            )}
 
-            <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(lastPageIndex) }} key="last">
-                <Pagination.Last />
-            </LinkContainer>
-        </Pagination>
+                {/* <...> button for pages far ahead */}
+                {currentPage >= 4 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('prev')} />}
+
+                {pageButtonArr.map(x =>
+                    <LinkContainer to={{ pathname: x.pathname, search: x.search }} key={x.text}>
+                        <Pagination.Item className={`bg-white ${x.text === currentPage && "current"}`}>{x.text}</Pagination.Item>
+                    </LinkContainer>
+                )}
+
+                {/* <...> button for pages far behind */}
+                {currentPage <= lastPageIndex - 4 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('next')} />}
+
+                {/* page Last */}
+                {lastPageIndex >= 1 && // >= 1 for bugfix of no result page
+                    <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(lastPageIndex) }} key="last">
+                        {/*  <Pagination.Last /> */}
+                        <Pagination.Item className={`bg-white rounded-end-5 ${currentPage === lastPageIndex && "current"}`}>{lastPageIndex}</Pagination.Item>
+                    </LinkContainer>
+                }
+            </Pagination>
+
+            {/* Modals show when <...> btn click */}
+            <Modal show={showPaginationModal} onHide={handleClose} size="sm" centered>
+                <Modal.Header className='bg-dark text-white  ' closeButton>
+                    <Modal.Title><h5>Skip to page</h5> </Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='bg-dark'>
+                    {/* buttons */}
+                    {[5, 10, 20, 25].map(num =>
+                        <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{width: 50}} onClick={() => handleModalBtnClick(num)}>
+                            {isNextPage ? '+' : '-'}{num}
+                        </Button>)}
+                </Modal.Body >
+                {/* <Modal.Footer className='bg-dark'></Modal.Footer> */}
+            </Modal >
+        </>
     );
 }

@@ -39,6 +39,7 @@ png
 
 ## Log - Aug 2 2024
 1. done - Add Union Search component & page, update pagination component to accept parameter into func
+2. done - update pagination to have skip feature
 
 Next:
 - grouped by region ?
