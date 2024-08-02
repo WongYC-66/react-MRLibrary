@@ -122,6 +122,8 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         navigate(`${urlPathname}${queryStr}`)   // redirect to new url
     }
 
+    // console.log({currentPage, lastPageIndex})
+
 
     return (
         <>
@@ -130,7 +132,7 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
                 {/* page 1 */}
                 <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(1) }} key='first'>
                     {/* <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" /> */}
-                    <Pagination.Item className={`bg-white ${lastPageIndex === 0 ? "rounded-5" : "rounded-start-5"} ${currentPage === 1 && "current"}`}>1</Pagination.Item>
+                    <Pagination.Item className={`bg-white ${lastPageIndex <= 1 ? "rounded-5" : "rounded-start-5"} ${currentPage === 1 && "current"}`}>1</Pagination.Item>
                 </LinkContainer>
 
                 {/* <...> button for pages far ahead */}
@@ -146,7 +148,7 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
                 {currentPage <= lastPageIndex - 4 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('next')} />}
 
                 {/* page Last */}
-                {lastPageIndex >= 1 && // >= 1 for bugfix of no result page
+                {lastPageIndex >= 2 && // >= 2 for bugfix of no result page
                     <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(lastPageIndex) }} key="last">
                         {/*  <Pagination.Last /> */}
                         <Pagination.Item className={`bg-white rounded-end-5 ${currentPage === lastPageIndex && "current"}`}>{lastPageIndex}</Pagination.Item>
