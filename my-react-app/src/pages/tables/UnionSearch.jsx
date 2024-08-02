@@ -175,7 +175,8 @@ export default function UnionSearch() {
             {renderItemCards(selectedItems, itemLibrary, handleCardChange)}
 
             {/* Mob Search Result */}
-            <Table variant="danger" className="mt-3 table-sm text-center" style={{ borderSpacing: "0px 1rem", borderCollapse: "separate" }} >
+            {/* <Table variant="danger" className="mt-3 table-sm text-center" style={{ borderSpacing: "0px 1rem", borderCollapse: "separate" }} > */}
+            <Table variant="" className="mt-3 table-sm text-center" style={{ borderSpacing: "0px 1rem", borderCollapse: "separate" }} >
                 <thead>
                     <tr>
                         {/* <th></th> */}
@@ -253,7 +254,8 @@ const renderSearchDropDown = (filteredItems, itemLibrary, selectedItems, handleC
     return (
         <ListGroup id="DropDownList" style={{ width: searchBarWidth, maxHeight: '45vh' }} className="me-1 overflow-y-scroll bg-black" onMouseMove={handleDropDownClick} onMouseLeave={handleMouseLeave}>
             {filteredItems && filteredItems.map(([itemId, name]) => (
-                <ListGroup.Item key={itemId} className="text-secondary mt-1 d-flex align-items-center" style={{backgroundColor:'#fcd4dc'}}>
+                // <ListGroup.Item key={itemId} className="text-secondary mt-1 d-flex align-items-center" style={{backgroundColor:'#fcd4dc'}}>
+                <ListGroup.Item key={itemId} className="bg-light text-secondary mt-1 d-flex align-items-center">
                     {/* item checkbox */}
                     <span className="ms-2">
                         <FormBS.Check
@@ -340,7 +342,7 @@ const renderMobListFromUS = (filteredMobs, itemLibrary) => {
 
     return filteredMobs.map(([mobId, name, dropSet]) =>
         <tr key={mobId} className="text-start" style={{ backgroundColor: '#FFDFD6' }}>
-            <td className="p-4 align-middle rounded-start-5">
+            <td className="p-4 align-middle rounded-start-5 border-0">
                 {/* Mob Image */}
                 <Link to={`/monster/id=${mobId}`}>
                     <div className='rounded-circle p-2 d-flex justify-content-center align-items-center' style={{ height: '75px', width: '75px', backgroundColor: '#E3A5C7' }}>
@@ -350,7 +352,8 @@ const renderMobListFromUS = (filteredMobs, itemLibrary) => {
             </td>
             <td className="p-4 align-middle"><Link className="text-decoration-none" to={`/monster/id=${mobId}`}>
                 {/* Mob Name */}
-                <span className="fw-bold" style={{ color: '#694F8E' }}>{name}</span>
+                {/* <span className="fw-bold" style={{ color: '#694F8E' }}>{name}</span> */}
+                <span className="fw-bold">{name}</span>
             </Link></td>
             <td className="p-4 align-middle rounded-end-5">
                 {/* Many Items image */}
