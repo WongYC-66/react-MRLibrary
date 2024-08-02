@@ -3,7 +3,8 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { useCallback, useState } from "react"
 // 
 import Pagination from "react-bootstrap/Pagination"
-import Modal from "react-bootstrap/Modal"
+// import Modal from "react-bootstrap/Modal"
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from "react-bootstrap/Button"
 
 export const updatePagination = (library, filterLibraryFunction, ...para) => {
@@ -102,6 +103,14 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         // text = 'ahead' or 'behind'
         setIsNextPage(text === 'next')
         handleShow()
+
+        // remove backdrop overlay effect
+        setTimeout(() => {
+            const backdrop = document.querySelector('.offcanvas-backdrop');
+            if (backdrop) {
+                backdrop.style.opacity = '0';
+            }
+        }, 50); // Delay to ensure the backdrop is in the DOM
     }
     const handleModalBtnClick = (val) => {
         val = isNextPage ? +val : -val      // red btn = -5/-10/-20/-50, blue btn= +5/+10/+20/+50
@@ -146,19 +155,30 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
             </Pagination>
 
             {/* Modals show when <...> btn click */}
-            <Modal show={showPaginationModal} onHide={handleClose} size="sm" centered>
-                <Modal.Header className='bg-dark text-white  ' closeButton>
+            {/* Not using model */}
+            {/* <Modal onHide={handleClose} size="sm" centered>
+                <Modal.Header className='bg-dark text-white' closeButton>
                     <Modal.Title><h5>Skip to page</h5> </Modal.Title>
                 </Modal.Header>
                 <Modal.Body className='bg-dark'>
-                    {/* buttons */}
-                    {[5, 10, 20, 25].map(num =>
-                        <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{width: 50}} onClick={() => handleModalBtnClick(num)}>
+                    {[5, 10, 20, 50].map(num =>
+                        <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{ width: 50 }} onClick={() => handleModalBtnClick(num)}>
                             {isNextPage ? '+' : '-'}{num}
                         </Button>)}
                 </Modal.Body >
-                {/* <Modal.Footer className='bg-dark'></Modal.Footer> */}
-            </Modal >
+            </Modal > */}
+
+            {/* Bottom Offcanvas shows when <...> btn click */}
+            <Offcanvas show={showPaginationModal} onHide={handleClose} placement="bottom"    backdropClassName="custom-offcanvas-backdrop" style={{ height: "7.5vh" }}>
+                <Offcanvas.Body className='bg-dark d-flex justify-content-center align-items-center' >
+                    <h5 className="text-white mx-5">Skip to page</h5>
+                    {[5, 10, 20, 50].map(num =>
+                        <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{ width: 50 }} onClick={() => handleModalBtnClick(num)}>
+                            {isNextPage ? '+' : '-'}{num}
+                        </Button>)}
+                </Offcanvas.Body>
+            </Offcanvas>
+
         </>
     );
 }
