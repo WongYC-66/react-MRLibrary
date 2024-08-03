@@ -1,4 +1,7 @@
 {
+  "0": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-entrance-mushroom-town-training-camp",
+  "1": "https://www.hidden-street.net/gms/map/maple-road-upper-level-of-the-training-camp",
+  "2": "https://www.hidden-street.net/gms/map/maple-road-lower-level-of-the-training-camp",
   "10000": [
     "https://bbb.hidden-street.net/map/mini-map/maple-road-mushroom-town",
     true
@@ -11,6 +14,12 @@
     "https://bbb.hidden-street.net/map/mini-map/maple-road-mushroom-town-townstreet",
     true
   ],
+  "30000": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-east-entrance-to-mushroom-town",
+  "40000": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-i",
+  "40001": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-ii",
+  "40002": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-iii",
+  "50000": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-a-split-road",
+  "50001": "https://www.hidden-street.net/gms/map/southperry/maple-road-the-field-west-of-southperry",
   "60000": [
     "https://bbb.hidden-street.net/map/mini-map/maple-road-southperry-0",
     true
@@ -19,6 +28,13 @@
     "https://bbb.hidden-street.net/map/mini-map/maple-road-southperry-armor-store",
     true
   ],
+  "1000000": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-the-field-west-of-amherst",
+  "1000001": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-in-a-small-forest",
+  "1000002": "https://bbb.hidden-street.net/map/mini-map/maple-road-dangerous-forest",
+  "1000003": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-mushroom-garden",
+  "1000004": "https://bbb.hidden-street.net/map/mini-map/maple-road-snail-garden",
+  "1000005": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-hunting-ground-middle-of-the-forest-i",
+  "1000006": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-hunting-ground-middle-of-the-forest-ii",
   "1010000": [
     "https://bbb.hidden-street.net/map/mini-map/rainbow-street-amherst",
     true
@@ -27,10 +43,14 @@
     "https://bbb.hidden-street.net/map/mini-map/rainbow-street-amherst-weapon-store",
     true
   ],
+  "1010002": "https://www.hidden-street.net/gms/map/rainbow-street-amherst-townstreet",
   "1010003": [
     "https://bbb.hidden-street.net/map/mini-map/rainbow-street-amherst-department-store",
     true
   ],
+  "1010004": "https://bbb.hidden-street.net/map/mini-map/maple-road-snail-field-of-flowers",
+  "1020000": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-the-field-east-of-amherst",
+  "1020001": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-tomato-field",
   "100000000": "https://bbb.hidden-street.net/map/mini-map/henesys",
   "100000002": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-an-empty-house",
@@ -2495,6 +2515,7 @@
     "https://bbb.hidden-street.net/map/mini-map/leafre-west-leafre-forest",
     true
   ],
+  "240010100": "https://bbb.hidden-street.net/map/mini-map/leafre-minar-forest-west-border",
   "240010101": [
     "https://bbb.hidden-street.net/map/mini-map/leafre-peach-monkey-forest",
     true
