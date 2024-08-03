@@ -216,6 +216,7 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-forest-east-of-henesys",
     true
   ],
+  "100030001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-blue-mushroom-forest",
   "100040000": "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-forest-south-of-ellinia",
   "100040001": "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-i",
   "100040002": "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-ii",
@@ -408,6 +409,7 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-perion-street-corner",
     true
   ],
+  "101040001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-land-of-wild-boar-i",
   "101040002": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-over-the-wall",
     true
@@ -490,6 +492,7 @@
     "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-2-area-3",
     true
   ],
+  "103000902": "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b1-1",
   "103010000": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-kerning-city-construction-site",
     true
@@ -1000,6 +1003,7 @@
     "https://bbb.hidden-street.net/map/mini-map/warning-street-deep-valley-i",
     true
   ],
+  "106000001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-dangerous-valley-i",
   "106000002": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-dangerous-valley-ii",
     true
@@ -1036,6 +1040,7 @@
     "https://bbb.hidden-street.net/map/mini-map/warning-street-perion-dungeon-entrance",
     true
   ],
+  "106010000": "https://bbb.hidden-street.net/map/mini-map/warning-street-road-to-the-dungeon",
   "106010100": [
     "https://bbb.hidden-street.net/map/mini-map/warning-street-henesys-dungeon-entrance",
     true
@@ -1184,6 +1189,7 @@
     "https://bbb.hidden-street.net/map/mini-map/warning-street-the-swamp-of-despair-i",
     true
   ],
+  "107000001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-swamp-of-jr-necki",
   "107000100": [
     "https://bbb.hidden-street.net/map/mini-map/warning-street-the-swamp-of-despair-ii",
     true
@@ -3202,6 +3208,7 @@
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-outside-the-west-entrance-of-ariant",
     true
   ],
+  "260010001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-jr-cactus-desert",
   "260010100": [
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-cactus-desert-1",
     true
@@ -3210,6 +3217,7 @@
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-cactus-desert-2",
     true
   ],
+  "260010201": "https://bbb.hidden-street.net/map/mini-map/hidden-street-royal-cactus-desert",
   "260010300": [
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-white-rock-desert",
     true
@@ -4924,6 +4932,7 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-utahs-pig-farm",
     true
   ],
+  "910060000": "https://www.hidden-street.net/gms/map/henesys/victoria-road-bowman-training-center",
   "910100000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-cursed-forest",
     true
@@ -4932,6 +4941,9 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-cursed-forest",
     true
   ],
+  "910120000": "https://www.hidden-street.net/gms/map/ellinia/victoria-road-magician-training-center",
+  "910220000": "https://www.hidden-street.net/gms/map/perion/victoria-road-warrior-training-center",
+  "910310000": "https://www.hidden-street.net/gms/map/kerningcity/victoria-road-thief-training-center",
   "910510000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-puppeteers-cave",
     true
@@ -4960,6 +4972,7 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-chamber-the-nautilus-stable",
     true
   ],
+  "912030000": "https://www.hidden-street.net/gms/map/nautilus/victoria-road-pirate-training-center",
   "920030000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-quiet-walk",
     true

@@ -200,7 +200,8 @@ const renderTableOfMap = (mapArr) => {
 
 const MapRowCard = ({ map, handleMapLinkClick }) => {
     //  {mapCategory: __ , mapName: __, streetName: ___}
-    const [mapId, { streetName, mapName }, mobCount] = map
+    const [mapId, mapObj, mobCount] = [...map]
+    const { streetName , mapName } = {...mapObj}
     // hasHiddenStreetUrl
     const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
     const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
