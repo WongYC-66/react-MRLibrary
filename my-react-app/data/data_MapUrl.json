@@ -1610,6 +1610,94 @@
     "https://bbb.hidden-street.net/map/mini-map/el-nath-icy-cold-field",
     true
   ],
+  "211060010": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-castle-entrance",
+    true
+  ],
+  "211060100": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-under-the-castle-walls-1",
+    true
+  ],
+  "211060200": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-first-tower",
+    true
+  ],
+  "211060201": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-roof-of-the-first-tower",
+    true
+  ],
+  "211060300": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-under-the-castle-walls-2",
+    true
+  ],
+  "211060400": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-second-tower",
+    true
+  ],
+  "211060401": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-roof-of-the-second-tower",
+    true
+  ],
+  "211060410": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-short-castle-walls-1",
+    true
+  ],
+  "211060500": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-under-the-castle-walls-3",
+    true
+  ],
+  "211060600": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-third-tower",
+    true
+  ],
+  "211060601": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-roof-of-the-third-tower",
+    true
+  ],
+  "211060610": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-short-castle-walls-2",
+    true
+  ],
+  "211060620": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-tall-castle-walls-1",
+    true
+  ],
+  "211060700": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-under-the-castle-walls-4",
+    true
+  ],
+  "211060800": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-fourth-tower",
+    true
+  ],
+  "211060801": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-roof-of-the-fourth-tower",
+    true
+  ],
+  "211060810": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-short-castle-walls-3",
+    true
+  ],
+  "211060820": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-tall-castle-walls-2",
+    true
+  ],
+  "211060830": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-very-tall-castle-walls",
+    true
+  ],
+  "211060900": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-under-the-castle-walls-5",
+    true
+  ],
+  "211061000": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-fifth-tower",
+    true
+  ],
+  "211061001": [
+    "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-roof-of-the-fifth-tower",
+    true
+  ],
   "220000000": [
     "https://bbb.hidden-street.net/map/mini-map/ludibrium",
     true

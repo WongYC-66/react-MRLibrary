@@ -56,6 +56,7 @@ export default function MonsterDetail() {
         })
         // there is a problem, boss-type mob not inside data_MapMobCount
         // combine data from monsterbook together then (string.wz)
+        // might have bugs for LKC mobs
         let monsterBookLocationArr = data_Mob_MapOnly[mob_Id]
         if (monsterBookLocationArr) {
             monsterBookLocationArr.forEach(mapId => {
