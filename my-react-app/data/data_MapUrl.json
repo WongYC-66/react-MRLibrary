@@ -303,6 +303,30 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-excavation-site-iii",
     true
   ],
+  "101030104": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-excavation-site-camp",
+    true
+  ],
+  "101030105": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-remains-tomb-i",
+    true
+  ],
+  "101030106": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-remains-tomb-ii",
+    true
+  ],
+  "101030107": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-remains-tomb-iii",
+    true
+  ],
+  "101030108": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-remains-tomb-iv",
+    true
+  ],
+  "101030109": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-remains-cliff",
+    true
+  ],
   "101030110": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-camp-1",
     true
@@ -403,8 +427,36 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-subway-ticketing-booth",
     true
   ],
+  "103000101": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-1-area-1",
+    true
+  ],
   "103000102": [
     "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-transfer-area",
+    true
+  ],
+  "103000103": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-1-area-2",
+    true
+  ],
+  "103000104": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-1-area-3",
+    true
+  ],
+  "103000105": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-1-area-4",
+    true
+  ],
+  "103000200": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-2-area-1",
+    true
+  ],
+  "103000201": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-2-area-2",
+    true
+  ],
+  "103000202": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-2-area-3",
     true
   ],
   "103010000": [
@@ -1203,6 +1255,10 @@
     "https://bbb.hidden-street.net/map/mini-map/orbis-top-of-the-hill",
     true
   ],
+  "200000301": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-guild-headquarters-hall-of-fame",
+    true
+  ],
   "200010000": [
     "https://bbb.hidden-street.net/map/mini-map/orbis-cloud-park-i",
     true
@@ -1281,6 +1337,82 @@
   ],
   "200080100": [
     "https://bbb.hidden-street.net/map/mini-map/orbis-entrance-to-orbis-tower",
+    true
+  ],
+  "200080400": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-18th-floor",
+    true
+  ],
+  "200080500": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-17th-floor",
+    true
+  ],
+  "200080600": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-16th-floor",
+    true
+  ],
+  "200080700": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-15th-floor",
+    true
+  ],
+  "200080800": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-14th-floor",
+    true
+  ],
+  "200080900": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-13th-floor",
+    true
+  ],
+  "200081000": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-12th-floor",
+    true
+  ],
+  "200081100": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-11th-floor",
+    true
+  ],
+  "200081200": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-10th-floor",
+    true
+  ],
+  "200081201": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-hidden-room",
+    true
+  ],
+  "200081300": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-9th-floor",
+    true
+  ],
+  "200081400": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-8th-floor",
+    true
+  ],
+  "200081500": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-7th-floor",
+    true
+  ],
+  "200081600": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-6th-floor",
+    true
+  ],
+  "200081700": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-5th-floor",
+    true
+  ],
+  "200081800": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-4th-floor",
+    true
+  ],
+  "200081900": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-3rd-floor",
+    true
+  ],
+  "200082000": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-2nd-floor",
+    true
+  ],
+  "200082100": [
+    "https://bbb.hidden-street.net/map/mini-map/orbis-orbis-tower-1st-floor",
     true
   ],
   "200090500": [
@@ -1451,12 +1583,84 @@
     "https://bbb.hidden-street.net/map/mini-map/ludibrium-terrace-hall",
     true
   ],
+  "220020000": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-1-zone-1",
+    true
+  ],
+  "220020100": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-1-zone-2",
+    true
+  ],
+  "220020200": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-1-zone-3",
+    true
+  ],
+  "220020300": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-main-process-1",
+    true
+  ],
+  "220020400": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-1-zone-5",
+    true
+  ],
+  "220020500": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-1-zone-6",
+    true
+  ],
+  "220020600": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-aparatus-room",
+    true
+  ],
+  "220030000": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-2-zone-1",
+    true
+  ],
+  "220030100": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-2-zone-2",
+    true
+  ],
+  "220030200": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-main-process-2",
+    true
+  ],
+  "220030300": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-2-zone-3",
+    true
+  ],
+  "220030400": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-toy-factory-process-2-zone-4",
+    true
+  ],
+  "220040000": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-the-path-of-time-1",
+    true
+  ],
+  "220040100": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-the-path-of-time-2",
+    true
+  ],
   "220040200": [
     "https://bbb.hidden-street.net/map/mini-map/ludibrium-crossroad-of-time",
     true
   ],
+  "220040300": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-the-path-of-time-3",
+    true
+  ],
+  "220040400": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-the-path-of-time-4",
+    true
+  ],
+  "220050000": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-lost-time-1",
+    true
+  ],
   "220050100": [
     "https://bbb.hidden-street.net/map/mini-map/ludibrium-whirlpool-of-time",
+    true
+  ],
+  "220050200": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-lost-time-2",
     true
   ],
   "220050300": [
@@ -1879,6 +2083,10 @@
     "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-entrance-to-black-mountain",
     true
   ],
+  "222010001": [
+    "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-black-mountain-corner",
+    true
+  ],
   "222010002": [
     "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-a-small-well",
     true
@@ -1899,6 +2107,10 @@
     "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-tiger-ridge",
     true
   ],
+  "222010201": [
+    "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-black-mountain-valley",
+    true
+  ],
   "222010300": [
     "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-fox-ridge",
     true
@@ -1913,6 +2125,18 @@
   ],
   "222010402": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-goblin-house",
+    true
+  ],
+  "222020000": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-helios-tower-library",
+    true
+  ],
+  "222020100": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-helios-tower-2nd-floor",
+    true
+  ],
+  "222020200": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-helios-tower-99th-floor",
     true
   ],
   "230000001": [
@@ -2955,6 +3179,10 @@
     "https://bbb.hidden-street.net/map/mini-map/magatia-home-of-the-missing-alchemist",
     true
   ],
+  "261000002": [
+    "https://bbb.hidden-street.net/map/mini-map/magatia-weapon-armor-shop",
+    true
+  ],
   "261000010": [
     "https://bbb.hidden-street.net/map/mini-map/magatia-zenumist-society",
     true
@@ -3357,6 +3585,10 @@
   ],
   "280010150": [
     "https://bbb.hidden-street.net/map/mini-map/adobiss-mission-i-area-15-1",
+    true
+  ],
+  "280011000": [
+    "https://bbb.hidden-street.net/map/mini-map/adobiss-mission-i-area-16-a-dead-mine-somewhere",
     true
   ],
   "280011001": [
