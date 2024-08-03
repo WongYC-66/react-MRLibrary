@@ -42,7 +42,7 @@ png
 2. done - update pagination to have skip feature
 3. done - notify user be redirected to maplelegends upon click of mob spawn map link
 4. done - update 1 breadcrumb extra for weapon category e.g. /equip/bow/id=130000
-5. doing - add map_url from hiddenstreet. current progres only 50% captured
+5. doing - add map_url from hiddenstreet. current progres only 90% captured, but seems nott ?
 
 
 Next:
