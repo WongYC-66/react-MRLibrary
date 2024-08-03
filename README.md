@@ -42,10 +42,9 @@ png
 2. done - update pagination to have skip feature
 3. done - notify user be redirected to maplelegends upon click of mob spawn map link
 4. done - update 1 breadcrumb extra for weapon category e.g. /equip/bow/id=130000
-5. doing - add map_url from hiddenstreet. current progres only 90% captured, but seems nott ?
+5. done - add map_url from hiddenstreet. Crawling + Manual add in. 
 
 
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
-- use hidden street map over maplelegends map, bcoz maplelegend map can't navigate??, user wants help on how to enter a map....
