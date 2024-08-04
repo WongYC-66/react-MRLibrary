@@ -31,7 +31,7 @@ export default function Home() {
                 const result = await response.json();
                 setQuote(result[0])
             } catch (error) {
-                console.error(error);
+                console.error("update quote failed at ", url);
             }
         }
 
@@ -60,7 +60,7 @@ export default function Home() {
                 }
                 setItemPrices(prices)
             } catch (error) {
-                console.error(error);
+                console.error("update item prices failed at ", url);
             }
         }
 
@@ -68,12 +68,6 @@ export default function Home() {
         fetchItemPrice()
 
     }, [])
-
-    const handlePriceTableClick = () => {
-        const SYLAFIA_PRICE_GUIDE_URL = 'https://docs.google.com/spreadsheets/d/1B3sxmpaW7RGrQAAxAyeR-xS4mdKCTTs_DzgV0qo2p_8/edit?gid=0#gid=0'
-        alert("redirecting to Sylafia Price Guide UwU")
-        window.open(SYLAFIA_PRICE_GUIDE_URL);
-    }
 
     return (
         <div className="home text-center">
@@ -113,9 +107,11 @@ export default function Home() {
                 </Card>
 
                 {/* Price Table */}
-                <Table className="m-3 p-5 container-md" style={{maxWidth:"400px"}} striped bordered onClick={handlePriceTableClick}>
+                <Table className="m-3 p-5 container-md" style={{maxWidth:"400px"}} striped bordered>
                     <thead>
-                        <tr><th colSpan={2}>Today's Price</th></tr>
+                        <tr><th colSpan={2}>Today's Price from 
+                            <a target="_blank" href="https://docs.google.com/spreadsheets/d/1B3sxmpaW7RGrQAAxAyeR-xS4mdKCTTs_DzgV0qo2p_8/edit?gid=0#gid=0" className="ms-3 text-decoration-none"> Sylafia's</a>
+                            </th></tr>
                     </thead>
                     <tbody>
                         <tr>
