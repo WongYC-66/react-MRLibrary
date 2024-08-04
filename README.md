@@ -44,6 +44,8 @@ png
 4. done - update 1 breadcrumb extra for weapon category e.g. /equip/bow/id=130000
 5. done - add map_url from hiddenstreet. Crawling + Manual add in. 
 
+## Log - Aug 4 2024
+1. done - Add Quote/Today's Price table add HomePage. from api + googlespreadsheet
 
 Next:
 - grouped by region ?
