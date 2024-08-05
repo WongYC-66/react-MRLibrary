@@ -159,14 +159,14 @@ const renderItemList = (filteredItemList) => {
 
     return filteredItemList.map(([itemId, { itemName, NPC, NPC_Id, materials }]) =>
         <tr key={itemId}>
-            <td>
+            <td className="align-middle">
                 {/* Item Image and name */}
                 <Link to={itemIdToNavUrl(itemId)}>
                     {renderItemImageWrapper(itemId, itemName)}
                     <p> {itemName}</p>
                 </Link>
             </td>
-            <td>
+            <td className="py-3 align-middle">
                 {/* Materials */}
                 <Table striped bordered hover size="sm">
                     <tbody>
@@ -193,7 +193,7 @@ const renderItemList = (filteredItemList) => {
                 </Table>
 
             </td>
-            <td>
+            <td className="align-middle">
                 {/* NPC */}
                 {renderImageWithNPCId(NPC_Id)}
                 <p className="text-wrap">{NPC}</p>
