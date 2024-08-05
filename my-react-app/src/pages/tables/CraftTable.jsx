@@ -49,7 +49,7 @@ export default function CraftTable() {
         setItemLibrary(craft_Library_Map)
     }, [])
 
-    console.log(itemLibrary)
+    // console.log(itemLibrary)
 
     return (
         <div className="use d-flex flex-column">
@@ -91,6 +91,9 @@ export default function CraftTable() {
 
             {/* Pagination */}
             {updatePagination(itemLibrary, filterCraftItemList)}
+
+            <p>Source : <a href="https://royals.ms/forum/threads/zancks-crafting-guide.214322/" target="_blank">Zancks' Crafting Guide</a></p>
+
         </div>
 
     )
@@ -104,6 +107,41 @@ const filterCraftItemList = (itemLibrary) => {
     const searchTermArr = filterOption.search?.toLowerCase().split(" ") || ['']
 
     let filteredItemList = Object.entries(itemLibrary)
+
+    // filter by craft-item-name OR material-item-name
+    filteredItemList = filteredItemList
+        .filter(([_, { itemName, materials }]) => {
+            // check if craft-item name
+            if (searchTermArr.some(term => itemName.toLowerCase().includes(term))) return true
+
+            // check each material-item name
+            return searchTermArr.some(term => materials.some(({ materialName }) => materialName && materialName.toLowerCase().includes(term)))
+        })
+        //sort by itemNameMatchCount, then MaterialNameMatchCount, then by id.
+        .map(([id, obj]) => {
+            // [id, obj] => [id, obj, craftNameMatchCount, materialNameMatchCount]
+
+            let craftNameMatchCount = 0, materialNameMatchCount = 0
+            searchTermArr.forEach(term => craftNameMatchCount += obj.itemName.toLowerCase().includes(term))
+
+            // option - 1 : search each term, the more the merrier against each material, score at Max = Infinity
+            // option - 2 : seach by each material, score at Max = materials.length
+            searchTermArr.forEach(term => { // option-1 adopted
+                obj.materials.forEach(({ materialName }) => materialNameMatchCount +=
+                    materialName && materialName.toLowerCase().includes(term))
+            })
+
+            return [id, obj, craftNameMatchCount, materialNameMatchCount]
+        })
+        .sort((a, b) => {
+            if (a[2] != b[2]) return b[2] - a[2] // by craftNameMatchCount DESC
+            if (a[3] != b[3]) return b[3] - a[3] // by materialNameMatchCount DESC
+            return a[0] - b[0]                  // by Id ASC
+        })
+        .map(([id, obj, ...rest]) => {
+            // remove side-effect, [id, obj, craftNameMatchCount, materialNameMatchCount] => [id, obj]
+            return [id, obj]
+        })
 
     return filteredItemList
 }
@@ -135,16 +173,18 @@ const renderItemList = (filteredItemList) => {
                         {materials.map(({ materialId, materialName, quantity, unitOfMeasure }) =>
                             <tr key={itemId + materialId}>
                                 <td>
+                                    {/* Material Image */}
                                     <Link to={itemIdToNavUrl(materialId)}>
                                         {renderItemImageWrapper(materialId, materialName)}
                                     </Link>
                                 </td>
                                 <td>
+                                    {/* Material Name */}
                                     <Link to={itemIdToNavUrl(materialId)}>
                                         <p> {materialName != null ? materialName : "Mesos"}</p>
                                     </Link>
                                 </td>
-
+                                {/* Material Quantity */}
                                 <td>{quantity}{unitOfMeasure === 'pcs' ? '' : unitOfMeasure}</td>
                             </tr>
 
@@ -184,7 +224,7 @@ const renderItemImageWrapper = (itemId, itemName) => {
         // mesos image
         return <Image
             id={`image-${itemId}`}
-            src= '/images/items/mesos.png'
+            src='/images/items/mesos.png'
             className="mw-50"
             fluid
             alt="Image not found" />
