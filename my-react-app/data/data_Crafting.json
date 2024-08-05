@@ -1,0 +1,3392 @@
+[
+    {
+        "itemId": "2041320",
+        "itemName": "Von Leon's Soul",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "500",
+        "unitOfMeasure": "m",
+        "NPC": "Alcaster in El Nath: El Nath Market",
+        "NPC_Id": "2020005"
+    },
+    {
+        "itemId": "2041320",
+        "itemName": "Von Leon's Soul",
+        "materialId": "4009904",
+        "materialName": "Von Leon‘s Medallion",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Alcaster in El Nath: El Nath Market",
+        "NPC_Id": "2020005"
+    },
+    {
+        "itemId": "2041320",
+        "itemName": "Von Leon's Soul",
+        "materialId": "4000630",
+        "materialName": "Purification Totem",
+        "quantity": "500",
+        "unitOfMeasure": "pcs",
+        "NPC": "Alcaster in El Nath: El Nath Market",
+        "NPC_Id": "2020005"
+    },
+    {
+        "itemId": "2049116",
+        "itemName": "Von Leon‘s Chaos Scroll 100%",
+        "materialId": "4009905",
+        "materialName": "Von Leon's Parchment",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2049116",
+        "itemName": "Von Leon‘s Chaos Scroll 100%",
+        "materialId": "4009904",
+        "materialName": "Von Leon‘s Medallion",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2049116",
+        "itemName": "Von Leon‘s Chaos Scroll 100%",
+        "materialId": "2049115",
+        "materialName": "Von Leon‘s Chaos Scroll 60%",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2049115",
+        "itemName": "Von Leon‘s Chaos Scroll 60%",
+        "materialId": "4009905",
+        "materialName": "Von Leon's Parchment",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2049115",
+        "itemName": "Von Leon‘s Chaos Scroll 60%",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2049115",
+        "itemName": "Von Leon‘s Chaos Scroll 60%",
+        "materialId": "2049100",
+        "materialName": "Chaos Scroll",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041321",
+        "itemName": "Von Leon's Scroll for STR 60%",
+        "materialId": "4009905",
+        "materialName": "Von Leon's Parchment",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041321",
+        "itemName": "Von Leon's Scroll for STR 60%",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041321",
+        "itemName": "Von Leon's Scroll for STR 60%",
+        "materialId": "2041301",
+        "materialName": "Scroll for Belt for STR 60%",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041322",
+        "itemName": "Von Leon's Scroll for DEX 60%",
+        "materialId": "4009905",
+        "materialName": "Von Leon's Parchment",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041322",
+        "itemName": "Von Leon's Scroll for DEX 60%",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041322",
+        "itemName": "Von Leon's Scroll for DEX 60%",
+        "materialId": "2041307",
+        "materialName": "Scroll for Belt for DEX 60%",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041323",
+        "itemName": "Von Leon's Scroll for INT 60%",
+        "materialId": "4009905",
+        "materialName": "Von Leon's Parchment",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041323",
+        "itemName": "Von Leon's Scroll for INT 60%",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041323",
+        "itemName": "Von Leon's Scroll for INT 60%",
+        "materialId": "2041304",
+        "materialName": "Scroll for Belt for INT 60%",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041324",
+        "itemName": "Von Leon's Scroll for LUK 60%",
+        "materialId": "4009905",
+        "materialName": "Von Leon's Parchment",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041324",
+        "itemName": "Von Leon's Scroll for LUK 60%",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2041324",
+        "itemName": "Von Leon's Scroll for LUK 60%",
+        "materialId": "2041310",
+        "materialName": "Scroll for Belt for LUK 60%",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Luden in El Nath: Lion King's Castle: Fourth Tower",
+        "NPC_Id": "2161002"
+    },
+    {
+        "itemId": "2340000",
+        "itemName": "White Scroll",
+        "materialId": "4039023",
+        "materialName": "White Scroll Fragment A",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "2340000",
+        "itemName": "White Scroll",
+        "materialId": "4039024",
+        "materialName": "White Scroll Fragment B",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "2340000",
+        "itemName": "White Scroll",
+        "materialId": "4039025",
+        "materialName": "White Scroll Fragment C",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "2340000",
+        "itemName": "White Scroll",
+        "materialId": "4032029",
+        "materialName": "Duct Tape",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "2340000",
+        "itemName": "White Scroll",
+        "materialId": "4021009",
+        "materialName": "Star Rock",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031912",
+        "itemName": "Crystal Ilbi Forging Manual",
+        "materialId": "4031758",
+        "materialName": "Naricain Jewel",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031912",
+        "itemName": "Crystal Ilbi Forging Manual",
+        "materialId": "4031917",
+        "materialName": "Crystal Shard",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031824",
+        "itemName": "Stormcaster Gloves Forging Manual",
+        "materialId": "4031755",
+        "materialName": "Taru Totem",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031824",
+        "itemName": "Stormcaster Gloves Forging Manual",
+        "materialId": "4031757",
+        "materialName": "Antellion Relic",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031824",
+        "itemName": "Stormcaster Gloves Forging Manual",
+        "materialId": "4031759",
+        "materialName": "Subani Ankh",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031911",
+        "itemName": "Facestompers Forging Manual",
+        "materialId": "4031755",
+        "materialName": "Taru Totem",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "4031911",
+        "itemName": "Facestompers Forging Manual",
+        "materialId": "4031913",
+        "materialName": "Stone Tiger Head",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "John Barricade in New Leaf City: Bigger Ben Lobby",
+        "NPC_Id": "9201051"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "750",
+        "unitOfMeasure": "m",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4039055",
+        "materialName": "Royal Throwing-Knife Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4009904",
+        "materialName": "Von Leon‘s Medallion",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4000630",
+        "materialName": "Purification Totem",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "2070005",
+        "materialName": "Steely",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4021001",
+        "materialName": "Amethyst",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4011006",
+        "materialName": "Gold Plate",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070024",
+        "itemName": "Royal Throwing-Knives",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "750",
+        "unitOfMeasure": "m",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4039056",
+        "materialName": "Royal Bullet Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4009904",
+        "materialName": "Von Leon‘s Medallion",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4000630",
+        "materialName": "Purification Totem",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "2330005",
+        "materialName": "Eternal Bullet",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4021006",
+        "materialName": "Topaz",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4011006",
+        "materialName": "Gold Plate",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2330008",
+        "itemName": "Royal Bullet",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "750",
+        "unitOfMeasure": "m",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4039054",
+        "materialName": "Royal Quiver Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4009904",
+        "materialName": "Von Leon‘s Medallion",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4000630",
+        "materialName": "Purification Totem",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "2060003",
+        "materialName": "Red Arrow For Bow",
+        "quantity": "4000",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4021000",
+        "materialName": "Garnet",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4011006",
+        "materialName": "Gold Plate",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2060007",
+        "itemName": "Royal Bow Quiver",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "750",
+        "unitOfMeasure": "m",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4039054",
+        "materialName": "Royal Quiver Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4009904",
+        "materialName": "Von Leon‘s Medallion",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4000630",
+        "materialName": "Purification Totem",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4039053",
+        "materialName": "Burning Energy",
+        "quantity": "250",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "2061003",
+        "materialName": "Blue Arrow For Crossbow",
+        "quantity": "4000",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4021002",
+        "materialName": "Aquamarine",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4011006",
+        "materialName": "Gold Plate",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2061005",
+        "itemName": "Royal Crossbow Quiver",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Vogen in El Nath: El Nath Market",
+        "NPC_Id": "2020000"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "500",
+        "unitOfMeasure": "m",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "2070016",
+        "materialName": "Crystal Ilbi Throwing-Stars",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "4032168",
+        "materialName": "Nano Plant Omega",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "4032167",
+        "materialName": "Nano Plant Sigma",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "4032166",
+        "materialName": "Nano Plant Y",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "4032181",
+        "materialName": "Silver Coin",
+        "quantity": "800",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2070019",
+        "itemName": "Magic Throwing-Knives",
+        "materialId": "4032170",
+        "materialName": "Wiseman Stone",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "4032170",
+        "itemName": "Wiseman Stone",
+        "materialId": "4020011",
+        "materialName": "Sealed Wiseman Stone",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "4032170",
+        "itemName": "Wiseman Stone",
+        "materialId": "4032181",
+        "materialName": "Silver Coin",
+        "quantity": "200",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "500",
+        "unitOfMeasure": "m",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "2330003",
+        "materialName": "Vital Bullet",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "4032168",
+        "materialName": "Nano Plant Omega",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "4032167",
+        "materialName": "Nano Plant Sigma",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "4032166",
+        "materialName": "Nano Plant Y",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "4032181",
+        "materialName": "Silver Coin",
+        "quantity": "600",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "2330007",
+        "itemName": "Armor Piercing Bullet",
+        "materialId": "4032171",
+        "materialName": "Saint Stone",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "4032171",
+        "itemName": "Saint Stone",
+        "materialId": "4020012",
+        "materialName": "Sealed Saint Stone",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "4032171",
+        "itemName": "Saint Stone",
+        "materialId": "4032181",
+        "materialName": "Silver Coin",
+        "quantity": "200",
+        "unitOfMeasure": "pcs",
+        "NPC": "Noran in Zipangu: 2102: Akihabara - Command Room",
+        "NPC_Id": "9120034"
+    },
+    {
+        "itemId": "1082223",
+        "itemName": "Stormcaster Gloves",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "2",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1082223",
+        "itemName": "Stormcaster Gloves",
+        "materialId": "4000021",
+        "materialName": "Leather",
+        "quantity": "15",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1082223",
+        "itemName": "Stormcaster Gloves",
+        "materialId": "4031824",
+        "materialName": "Stormcaster Gloves Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1072344",
+        "itemName": "Facestompers",
+        "materialId": "4000030",
+        "materialName": "Dragon Skin",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1072344",
+        "itemName": "Facestompers",
+        "materialId": "4003000",
+        "materialName": "Screw",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1072344",
+        "itemName": "Facestompers",
+        "materialId": "4011001",
+        "materialName": "Steel Plate",
+        "quantity": "50",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1072344",
+        "itemName": "Facestompers",
+        "materialId": "4000021",
+        "materialName": "Leather",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "1072344",
+        "itemName": "Facestompers",
+        "materialId": "4031911",
+        "materialName": "Facestompers Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "2070016",
+        "itemName": "Crystal Ilbi Throwing-Stars",
+        "materialId": "2070006",
+        "materialName": "Ilbi Throwing Stars",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "2070016",
+        "itemName": "Crystal Ilbi Throwing-Stars",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "7",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "2070016",
+        "itemName": "Crystal Ilbi Throwing-Stars",
+        "materialId": "4005004",
+        "materialName": "Dark Crystal",
+        "quantity": "7",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "2070016",
+        "itemName": "Crystal Ilbi Throwing-Stars",
+        "materialId": "4031912",
+        "materialName": "Crystal Ilbi Forging Manual",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Spindle in Omega Sector",
+        "NPC_Id": "9201082"
+    },
+    {
+        "itemId": "2070018",
+        "itemName": "Balanced Furies",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "m",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "2070018",
+        "itemName": "Balanced Furies",
+        "materialId": "4032005",
+        "materialName": "Tryphon Feather",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "2070018",
+        "itemName": "Balanced Furies",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "2070018",
+        "itemName": "Balanced Furies",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "2070018",
+        "itemName": "Balanced Furies",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "2070018",
+        "itemName": "Balanced Furies",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "100",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4032005",
+        "materialName": "Tryphon Feather",
+        "quantity": "75",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4032004",
+        "materialName": "Crimson Wood",
+        "quantity": "300",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4032012",
+        "materialName": "Crimson Hearts",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "4",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1452060",
+        "itemName": "Crimson Arclancer",
+        "materialId": "4130012",
+        "materialName": "Bow Forging Stumulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4032005",
+        "materialName": "Tryphon Feather",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4032004",
+        "materialName": "Crimson Wood",
+        "quantity": "400",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4032012",
+        "materialName": "Crimson Hearts",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "4",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1382060",
+        "itemName": "Crimson Arcanon",
+        "materialId": "4130011",
+        "materialName": "Staff Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4032005",
+        "materialName": "Tryphon Feather",
+        "quantity": "40",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4032004",
+        "materialName": "Crimson Wood",
+        "quantity": "600",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4032012",
+        "materialName": "Crimson Hearts",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "4",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1442068",
+        "itemName": "Crimson Arcglavie",
+        "materialId": "4130009",
+        "materialName": "Pole Arm Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472073",
+        "itemName": "Night Raven's Claw",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472073",
+        "itemName": "Night Raven's Claw",
+        "materialId": "1472072",
+        "materialName": "Raven's Claw",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472073",
+        "itemName": "Night Raven's Claw",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472073",
+        "itemName": "Night Raven's Claw",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472073",
+        "itemName": "Night Raven's Claw",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472073",
+        "itemName": "Night Raven's Claw",
+        "materialId": "4130015",
+        "materialName": "Claw Forging Stimulator (optional )",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472074",
+        "itemName": "Dawn Raven's Claw",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472074",
+        "itemName": "Dawn Raven's Claw",
+        "materialId": "1472072",
+        "materialName": "Raven's Claw",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472074",
+        "itemName": "Dawn Raven's Claw",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472074",
+        "itemName": "Dawn Raven's Claw",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472074",
+        "itemName": "Dawn Raven's Claw",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472074",
+        "itemName": "Dawn Raven's Claw",
+        "materialId": "4130015",
+        "materialName": "Claw Forging Stimulator (optional )",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472075",
+        "itemName": "Dusk Raven's Claw",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472075",
+        "itemName": "Dusk Raven's Claw",
+        "materialId": "1472072",
+        "materialName": "Raven's Claw",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472075",
+        "itemName": "Dusk Raven's Claw",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472075",
+        "itemName": "Dusk Raven's Claw",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472075",
+        "itemName": "Dusk Raven's Claw",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1472075",
+        "itemName": "Dusk Raven's Claw",
+        "materialId": "4130015",
+        "materialName": "Claw Forging Stimulator (optional )",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462053",
+        "itemName": "Night Raven's Eye",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462053",
+        "itemName": "Night Raven's Eye",
+        "materialId": "1462052",
+        "materialName": "Raven's Eye",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462053",
+        "itemName": "Night Raven's Eye",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462053",
+        "itemName": "Night Raven's Eye",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462053",
+        "itemName": "Night Raven's Eye",
+        "materialId": "4005004",
+        "materialName": "Dark Crystal",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462053",
+        "itemName": "Night Raven's Eye",
+        "materialId": "4130013",
+        "materialName": "Crossbow Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462054",
+        "itemName": "Dawn Raven's Eye",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462054",
+        "itemName": "Dawn Raven's Eye",
+        "materialId": "1462052",
+        "materialName": "Raven's Eye",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462054",
+        "itemName": "Dawn Raven's Eye",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462054",
+        "itemName": "Dawn Raven's Eye",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462054",
+        "itemName": "Dawn Raven's Eye",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462054",
+        "itemName": "Dawn Raven's Eye",
+        "materialId": "4130013",
+        "materialName": "Crossbow Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462055",
+        "itemName": "Dusk Raven's Eye",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462055",
+        "itemName": "Dusk Raven's Eye",
+        "materialId": "1462052",
+        "materialName": "Raven's Eye",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462055",
+        "itemName": "Dusk Raven's Eye",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462055",
+        "itemName": "Dusk Raven's Eye",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462055",
+        "itemName": "Dusk Raven's Eye",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1462055",
+        "itemName": "Dusk Raven's Eye",
+        "materialId": "4130013",
+        "materialName": "Crossbow Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332077",
+        "itemName": "Night Raven's Beak",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332077",
+        "itemName": "Night Raven's Beak",
+        "materialId": "1332077",
+        "materialName": "Raven's Beak",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332077",
+        "itemName": "Night Raven's Beak",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332077",
+        "itemName": "Night Raven's Beak",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332077",
+        "itemName": "Night Raven's Beak",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332077",
+        "itemName": "Night Raven's Beak",
+        "materialId": "4130014",
+        "materialName": "Dagger Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332079",
+        "itemName": "Dawn Raven's Beak",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332079",
+        "itemName": "Dawn Raven's Beak",
+        "materialId": "1332077",
+        "materialName": "Raven's Beak",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332079",
+        "itemName": "Dawn Raven's Beak",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332079",
+        "itemName": "Dawn Raven's Beak",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332079",
+        "itemName": "Dawn Raven's Beak",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332079",
+        "itemName": "Dawn Raven's Beak",
+        "materialId": "4130014",
+        "materialName": "Dagger Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332080",
+        "itemName": "Dusk Raven's Beak",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332080",
+        "itemName": "Dusk Raven's Beak",
+        "materialId": "1332077",
+        "materialName": "Raven's Beak",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332080",
+        "itemName": "Dusk Raven's Beak",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332080",
+        "itemName": "Dusk Raven's Beak",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332080",
+        "itemName": "Dusk Raven's Beak",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1332080",
+        "itemName": "Dusk Raven's Beak",
+        "materialId": "4130014",
+        "materialName": "Dagger Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402048",
+        "itemName": "Night Raven's Wing",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402048",
+        "itemName": "Night Raven's Wing",
+        "materialId": "1402048",
+        "materialName": "Raven's Wing",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402048",
+        "itemName": "Night Raven's Wing",
+        "materialId": "4032015",
+        "materialName": "Tao of Shadow",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402048",
+        "itemName": "Night Raven's Wing",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402048",
+        "itemName": "Night Raven's Wing",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402048",
+        "itemName": "Night Raven's Wing",
+        "materialId": "4130005",
+        "materialName": "Two-Handed Sword Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402050",
+        "itemName": "Dawn Raven's Wing",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402050",
+        "itemName": "Dawn Raven's Wing",
+        "materialId": "1402048",
+        "materialName": "Raven's Wing",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402050",
+        "itemName": "Dawn Raven's Wing",
+        "materialId": "4032016",
+        "materialName": "Tao of Sight",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402050",
+        "itemName": "Dawn Raven's Wing",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402050",
+        "itemName": "Dawn Raven's Wing",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402050",
+        "itemName": "Dawn Raven's Wing",
+        "materialId": "4130005",
+        "materialName": "Two-Handed Sword Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402051",
+        "itemName": "Dusk Raven's Wing",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "150",
+        "unitOfMeasure": "k",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402051",
+        "itemName": "Dusk Raven's Wing",
+        "materialId": "1402048",
+        "materialName": "Raven's Wing",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402051",
+        "itemName": "Dusk Raven's Wing",
+        "materialId": "4032017",
+        "materialName": "Tao of Harmony",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402051",
+        "itemName": "Dusk Raven's Wing",
+        "materialId": "4021008",
+        "materialName": "Black Crystal",
+        "quantity": "30",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402051",
+        "itemName": "Dusk Raven's Wing",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1402051",
+        "itemName": "Dusk Raven's Wing",
+        "materialId": "4130005",
+        "materialName": "Two-Handed Sword Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Fiona in Phantom Forest: Dead Man's Gorge",
+        "NPC_Id": "9201095"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001197",
+        "materialName": "Bluish Mineral",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001038",
+        "materialName": "Stump Eraser",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001039",
+        "materialName": "Mushroom Eraser",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001040",
+        "materialName": "Lupin Eraser",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001041",
+        "materialName": "Wraith Eraser",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001042",
+        "materialName": "Slime Eraser",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1112400",
+        "itemName": "Ring of Alchemist",
+        "materialId": "4001043",
+        "materialName": "Octopus Eraser",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Han the Broker in Sunset Road: Magatia",
+        "NPC_Id": "2111007"
+    },
+    {
+        "itemId": "1032061",
+        "itemName": "Glittering Earrings",
+        "materialId": "4011007",
+        "materialName": "Moon Rock",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032061",
+        "itemName": "Glittering Earrings",
+        "materialId": "4021009",
+        "materialName": "Star Rock",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032061",
+        "itemName": "Glittering Earrings",
+        "materialId": "4009903",
+        "materialName": "Ellin Crystal",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032061",
+        "itemName": "Glittering Earrings",
+        "materialId": "4130024",
+        "materialName": "Earring Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032061",
+        "itemName": "Glittering Earrings",
+        "materialId": "1032060",
+        "materialName": "Altaire Earrings",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032060",
+        "itemName": "Altaire Earrings",
+        "materialId": "4001198",
+        "materialName": "Altaire Fragment",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032060",
+        "itemName": "Altaire Earrings",
+        "materialId": "4000674",
+        "materialName": "Chao's Tusk",
+        "quantity": "2",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1032060",
+        "itemName": "Altaire Earrings",
+        "materialId": "4009902",
+        "materialName": "Ephenia's Soul Shard",
+        "quantity": "2",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1112683",
+        "itemName": "Ephenia's Ring",
+        "materialId": "4001198",
+        "materialName": "Altaire Fragment",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1112683",
+        "itemName": "Ephenia's Ring",
+        "materialId": "4000674",
+        "materialName": "Chao's Tusk",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1112683",
+        "itemName": "Ephenia's Ring",
+        "materialId": "4009902",
+        "materialName": "Ephenia's Soul Shard",
+        "quantity": "10",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1112683",
+        "itemName": "Ephenia's Ring",
+        "materialId": "4009903",
+        "materialName": "Ellin Crystal",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Ellin in Elin Forest: Deep Fairy Forest",
+        "NPC_Id": "2133000"
+    },
+    {
+        "itemId": "1302059",
+        "itemName": "Dragon Carabella",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1302059",
+        "itemName": "Dragon Carabella",
+        "materialId": "1302056",
+        "materialName": "Sparta",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1302059",
+        "itemName": "Dragon Carabella",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1302059",
+        "itemName": "Dragon Carabella",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1302059",
+        "itemName": "Dragon Carabella",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1302059",
+        "itemName": "Dragon Carabella",
+        "materialId": "4130002",
+        "materialName": "One-Handed Sword Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1312031",
+        "itemName": "Dragon Axe",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1312031",
+        "itemName": "Dragon Axe",
+        "materialId": "1312030",
+        "materialName": "Tomahawk",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1312031",
+        "itemName": "Dragon Axe",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1312031",
+        "itemName": "Dragon Axe",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1312031",
+        "itemName": "Dragon Axe",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1312031",
+        "itemName": "Dragon Axe",
+        "materialId": "4130003",
+        "materialName": "One-Handed Axe Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1322052",
+        "itemName": "Dragon Mace",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1322052",
+        "itemName": "Dragon Mace",
+        "materialId": "1322045",
+        "materialName": "Battle Hammer",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1322052",
+        "itemName": "Dragon Mace",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1322052",
+        "itemName": "Dragon Mace",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1322052",
+        "itemName": "Dragon Mace",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1322052",
+        "itemName": "Dragon Mace",
+        "materialId": "4130004",
+        "materialName": "One-Handed Blunt Weapon Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1402036",
+        "itemName": "Dragon Claymore",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1402036",
+        "itemName": "Dragon Claymore",
+        "materialId": "1402035",
+        "materialName": "The Beheader",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1402036",
+        "itemName": "Dragon Claymore",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1402036",
+        "itemName": "Dragon Claymore",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1402036",
+        "itemName": "Dragon Claymore",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1402036",
+        "itemName": "Dragon Claymore",
+        "materialId": "4130005",
+        "materialName": "Two-Handed Sword Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1412026",
+        "itemName": "Dragon Battle Axe",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1412026",
+        "itemName": "Dragon Battle Axe",
+        "materialId": "1412021",
+        "materialName": "Tavar",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1412026",
+        "itemName": "Dragon Battle Axe",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1412026",
+        "itemName": "Dragon Battle Axe",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1412026",
+        "itemName": "Dragon Battle Axe",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1412026",
+        "itemName": "Dragon Battle Axe",
+        "materialId": "4130006",
+        "materialName": "Two-Handed Axe Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1422028",
+        "itemName": "Dragon Flame",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1422028",
+        "itemName": "Dragon Flame",
+        "materialId": "1422027",
+        "materialName": "Golden Smith Hammer",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1422028",
+        "itemName": "Dragon Flame",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1422028",
+        "itemName": "Dragon Flame",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1422028",
+        "itemName": "Dragon Flame",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1422028",
+        "itemName": "Dragon Flame",
+        "materialId": "4130007",
+        "materialName": "Two-Handed Mace Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1432038",
+        "itemName": "Dragon Faltizan",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1432038",
+        "itemName": "Dragon Faltizan",
+        "materialId": "1432030",
+        "materialName": "Pinaka",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1432038",
+        "itemName": "Dragon Faltizan",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1432038",
+        "itemName": "Dragon Faltizan",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1432038",
+        "itemName": "Dragon Faltizan",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1432038",
+        "itemName": "Dragon Faltizan",
+        "materialId": "4130008",
+        "materialName": "Spear Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1442045",
+        "itemName": "Dragon Chelbird",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1442045",
+        "itemName": "Dragon Chelbird",
+        "materialId": "1442044",
+        "materialName": "Zedbug",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1442045",
+        "itemName": "Dragon Chelbird",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1442045",
+        "itemName": "Dragon Chelbird",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1442045",
+        "itemName": "Dragon Chelbird",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "8",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1442045",
+        "itemName": "Dragon Chelbird",
+        "materialId": "4130009",
+        "materialName": "Pole Arm Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "1452019",
+        "materialName": "White Nisrock",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "3",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1452044",
+        "itemName": "Dragon Shiner Bow",
+        "materialId": "4130012",
+        "materialName": "Bow Production Stumulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "1462015",
+        "materialName": "White Neschere",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "3",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1462039",
+        "itemName": "Dragon Shiner Cross",
+        "materialId": "4130013",
+        "materialName": "Crossbow Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "1372010",
+        "materialName": "Dimon Wand",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "6",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "2",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1372032",
+        "itemName": "Dragon Wand",
+        "materialId": "4130010",
+        "materialName": "Wand Production Stimulator (optoinal",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "1382035",
+        "materialName": "Blue Marine",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "6",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "2",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1382036",
+        "itemName": "Dragon Staff",
+        "materialId": "4130011",
+        "materialName": "Staff Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "1332051",
+        "materialName": "Gold Double Knife",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "3",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332049",
+        "itemName": "Dragon Kanzir",
+        "materialId": "4130014",
+        "materialName": "Dagger Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "1332052",
+        "materialName": "Blood Dagger",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "3",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1332050",
+        "itemName": "Dragon Kreda",
+        "materialId": "4130014",
+        "materialName": "Dagger Forging Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "1472053",
+        "materialName": "Red Craven",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "25",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "4005002",
+        "materialName": "DEX Crystal",
+        "quantity": "2",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "4005003",
+        "materialName": "LUK Crystal",
+        "quantity": "6",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1472051",
+        "itemName": "Dragon Green Sleeve",
+        "materialId": "4130015",
+        "materialName": "Claw Forging Stimulator (optional )",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "1482012",
+        "materialName": "King Cent",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "4005001",
+        "materialName": "Wisdom Crystal",
+        "quantity": "3",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "4011002",
+        "materialName": "Mithril Plate",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1482013",
+        "itemName": "Dragon Slash Claw",
+        "materialId": "4130016",
+        "materialName": "Knuckler Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "null",
+        "materialName": "Mesos",
+        "quantity": "120",
+        "unitOfMeasure": "k",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "1492012",
+        "materialName": "Concerto",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "4000244",
+        "materialName": "Dragon Spirit",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "4000245",
+        "materialName": "Dragon Scale",
+        "quantity": "20",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "4005000",
+        "materialName": "Power Crystal",
+        "quantity": "3",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "4011003",
+        "materialName": "Adamantium Plate",
+        "quantity": "5",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    },
+    {
+        "itemId": "1492013",
+        "itemName": "Dragon Revolver",
+        "materialId": "4130017",
+        "materialName": "Gun Production Stimulator (optional)",
+        "quantity": "1",
+        "unitOfMeasure": "pcs",
+        "NPC": "Mos in Leafre",
+        "NPC_Id": "2080000"
+    }
+]
