@@ -60,6 +60,9 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         if (urlPathname === "/union-search") {
             return `?page=${inputNumber}&itemId=`
         }
+        if (urlPathname === "/craft-table") {
+            return `?page=${inputNumber}&search=`
+        }
     }
 
     const RemovePaginationActiveAttribute = useCallback(() => {
