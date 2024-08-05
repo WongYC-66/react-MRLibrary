@@ -47,9 +47,9 @@ export default function Home() {
                     .slice(7,)
                 result = JSON.parse(result)
                 // console.log(result)
-                if (result.status === 'ok') {
-                    result = result.table.cols[3].label
-                }
+                if (result.status !== 'ok') throw new Error()
+
+                result = result.table.cols[3].label
                 // console.log(result)
                 result = result.trim().split(" ")
                 let prices = {
