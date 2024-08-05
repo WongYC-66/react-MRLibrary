@@ -48,8 +48,8 @@ png
 1. done - Add Quote/Today's Price table add HomePage. from api + googlespreadsheet
 
 ## Log - Aug 5 2024
-1. doing - Update LHC craftable items image.
-2. doing - Add in crafting recipe
+1. done - Update LHC craftable items image.
+2. done - Add in crafting recipe
 
 Next:
 - grouped by region ?
