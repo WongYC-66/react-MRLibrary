@@ -47,6 +47,10 @@ png
 ## Log - Aug 4 2024
 1. done - Add Quote/Today's Price table add HomePage. from api + googlespreadsheet
 
+## Log - Aug 5 2024
+1. doing - Update LHC craftable items image.
+2. doing - Add in crafting recipe
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
