@@ -104,7 +104,8 @@ export default function Gacha() {
             </Form>
             
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
-            <Image id='location-img' className="d-none img-fluid w-75 mx-auto" rounded />
+            {/* <Image id='location-img' className="d-none img-fluid w-75 mx-auto" rounded /> */}
+            <Image id='location-img' className="img-fluid w-75 mx-auto" rounded />
 
             {/* Gacha Items Result */}
             <Table className="mt-3">
@@ -208,9 +209,9 @@ const updateLocationImage = (location) => {
     const imgEl = document.getElementById("location-img")
     if(!imgEl) return 
     
-    if(location === 'all' || !location) return imgEl.classList.add("d-none");
+    // if(location === 'all' || !location) return imgEl.classList.add("d-none");
     
-    imgEl.classList.remove("d-none");
+    // imgEl.classList.remove("d-none");
     imgEl.setAttribute("src", `/images/gacha_map/${location}.png`)
 }
 
