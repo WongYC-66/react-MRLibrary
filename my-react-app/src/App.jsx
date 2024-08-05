@@ -26,7 +26,7 @@ import All, { globalSearchAction } from './pages/all/All.jsx'
 import ExpTable from './pages/tables/ExpTable.jsx'
 import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTable.jsx'
 import UnionSearch, { unionSearchAction } from './pages/tables/UnionSearch.jsx'
-import CraftTable, { craftTableAction } from './pages/tables/CraftTable.jsx'
+// import CraftTable, { craftTableAction } from './pages/tables/CraftTable.jsx'
 import NotFound from './pages/NotFound.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 
@@ -90,7 +90,7 @@ const router = createBrowserRouter(
 
       <Route path="union-search" element={< UnionSearch />} action={unionSearchAction} />
 
-      <Route path="craft-table" element={< CraftTable />} action={craftTableAction} />
+      {/* <Route path="craft-table" element={< CraftTable />} action={craftTableAction} /> */}
 
       {/* Tables */}
 
