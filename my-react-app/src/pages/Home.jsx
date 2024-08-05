@@ -10,9 +10,8 @@ import Card from 'react-bootstrap/Card';
 
 export default function Home() {
 
-    const [quote, setQuote] = useState({})
+    const [quote, setQuote] = useState({text: '...loading', author: '...loading'})
     const [itemPrices, setItemPrices] = useState({})
-
 
     useEffect(() => {
 
@@ -29,6 +28,7 @@ export default function Home() {
             try {
                 const response = await fetch(url, options);
                 const result = await response.json();
+                if(!result || !result[0]) throw new Error()
                 setQuote(result[0])
             } catch (error) {
                 console.error("update quote failed at ", url);
