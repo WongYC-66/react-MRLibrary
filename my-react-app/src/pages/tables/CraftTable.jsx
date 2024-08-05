@@ -7,10 +7,12 @@ import Table from "react-bootstrap/Table"
 
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterItemList, renderItemList } from "./utility.jsx"
-import data_Etc from "../../../data/data_Etc.json"
+// import { filterItemList, renderItemList } from "./utility.jsx"
+// import data_Etc from "../../../data/data_Etc.json"
 
-export default function Etc() {
+export default function CraftTable() {
+    return "im craft table"
+    return
     const [itemLibrary, setItemLibrary] = useState({})
 
     useEffect(() => {
@@ -62,7 +64,7 @@ export default function Etc() {
     )
 }
 
-export const etcAction = async ({ request }) => {
+export const craftTableAction = async ({ request }) => {
     const data = await request.formData()
 
     const submission = {

@@ -10,7 +10,7 @@ import { updatePagination } from "../../components/Pagination.jsx"
 import { filterItemList, renderItemList } from "./utility.jsx"
 import data_Ins from "../../../data/data_Ins.json"
 
-export default function Use() {
+export default function Setup() {
     const [itemLibrary, setItemLibrary] = useState({})
 
     useEffect(() => {

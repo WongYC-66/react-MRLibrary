@@ -138,6 +138,9 @@ export default function RootLayout() {
                   <LinkContainer to="/union-search">
                     <NavDropdown.Item>Union Search</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/craft-table">
+                    <NavDropdown.Item>Craft Table</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
 
                 {/* Links */}
