@@ -21,7 +21,6 @@ export default function CraftTable() {
     const [itemLibrary, setItemLibrary] = useState({})
 
     useEffect(() => {
-
         let craft_Library_Map = {}  // {id : {itemId, itemName, NPC, NPC_Id, materials: [{materialId, materialName, quantity, unitOfMeasure}, ...] }
 
         // itemName & materialName might be wrong, need to rematch
@@ -50,6 +49,7 @@ export default function CraftTable() {
     }, [])
 
     // console.log(itemLibrary)
+    // return "im craft table"
 
     return (
         <div className="use d-flex flex-column">
@@ -107,28 +107,48 @@ const filterCraftItemList = (itemLibrary) => {
     const searchTermArr = filterOption.search?.toLowerCase().split(" ") || ['']
 
     let filteredItemList = Object.entries(itemLibrary)
+    if (searchTermArr.length === 1 && searchTermArr[0] === '') return filteredItemList
+
+    // pre-process, turn all name tolowercase
+    filteredItemList = filteredItemList.map(([id, obj]) => {
+        // [id, {NPC,NPC_Id,itemId, itemName, materials : obj]
+        // materials : [{materialId, materialName, quantity, unitOfMeasure}, {...}] 
+        let newObj = {
+            ...obj,
+            itemName: obj.itemName.toLowerCase()
+        }
+
+        let newMaterialObj = obj.materials.map(materialObj => {
+            let subObj = { ...materialObj }
+            if (subObj.materialName) subObj.materialName = subObj.materialName.toLowerCase()
+            return subObj
+        })
+
+        newObj['materials'] = newMaterialObj
+        return [id, newObj]
+    })
 
     // filter by craft-item-name OR material-item-name
     filteredItemList = filteredItemList
         .filter(([_, { itemName, materials }]) => {
             // check if craft-item name
-            if (searchTermArr.some(term => itemName.toLowerCase().includes(term))) return true
+            if (searchTermArr.some(term => itemName.includes(term))) return true
 
             // check each material-item name
-            return searchTermArr.some(term => materials.some(({ materialName }) => materialName && materialName.toLowerCase().includes(term)))
+            return searchTermArr.some(term => materials.some(({ materialName }) => materialName && materialName.includes(term)))
         })
         //sort by itemNameMatchCount, then MaterialNameMatchCount, then by id.
         .map(([id, obj]) => {
             // [id, obj] => [id, obj, craftNameMatchCount, materialNameMatchCount]
 
             let craftNameMatchCount = 0, materialNameMatchCount = 0
-            searchTermArr.forEach(term => craftNameMatchCount += obj.itemName.toLowerCase().includes(term))
+            searchTermArr.forEach(term => craftNameMatchCount += obj.itemName.includes(term))
 
             // option - 1 : search each term, the more the merrier against each material, score at Max = Infinity
             // option - 2 : seach by each material, score at Max = materials.length
-            searchTermArr.forEach(term => { // option-1 adopted
-                obj.materials.forEach(({ materialName }) => materialNameMatchCount +=
-                    materialName && materialName.toLowerCase().includes(term))
+            obj.materials.forEach(({ materialName }) => { // option-2 adopted
+                materialNameMatchCount += materialName && searchTermArr.some(term =>
+                    materialName.includes(term))
             })
 
             return [id, obj, craftNameMatchCount, materialNameMatchCount]
@@ -140,7 +160,7 @@ const filterCraftItemList = (itemLibrary) => {
         })
         .map(([id, obj, ...rest]) => {
             // remove side-effect, [id, obj, craftNameMatchCount, materialNameMatchCount] => [id, obj]
-            return [id, obj]
+            return [id, itemLibrary[id]]
         })
 
     return filteredItemList
@@ -213,7 +233,7 @@ export const itemIdToNameDict = {
 export const convertItemIdToName = (id) => {   // helper fn
     if (id == 'null') return null
     // 'null' = mesos
-    if (typeof itemIdToNameDict[id] == 'string') {
+    if (typeof itemIdToNameDict[id] === 'string') {
         return itemIdToNameDict[id]
     }
     return itemIdToNameDict[id]['name']

@@ -19,7 +19,7 @@ export default function Use() {
     const [showingProperty, setShowingProperty] = useState({
         c1: false, c2: false, c3: false, c4: false, c5: false,
         c6: false, c7: false, c8: false, c9: false, c10: false,
-        c11: false, c11: false, c12: false, c13: false, c14: false, c15: false,
+        c11: false, c12: false, c13: false, c14: false, c15: false,
         c16: false, c17: false, c18: false,
     })
 
