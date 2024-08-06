@@ -21,7 +21,7 @@ import data_MB from "../../../data/data_MB.json"
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_GearStats from "../../../data/data_GearStats.json"
 import data_Gacha from "../../../data/data_Gacha.json"
-import ItemDetail from "../items/ItemDetail.jsx";
+import data_Crafting from "../../../data/data_Crafting.json"
 
 export default function EquipDetail() {
 
@@ -58,6 +58,18 @@ export default function EquipDetail() {
                 obj.gacha.push(gachaLocationMapping(location))
             }
         })
+        // craftable info    add craft: { isCraftable : true, parentItemNames : ['chaos scroll', ...]}
+        data_Crafting.forEach(({ itemId, itemName, materialId, }) => {
+            if (equip_Id && itemId === equip_Id) {
+                if (!('craft' in obj)) obj.craft = { isCraftable: false, isMaterial: [] }
+                obj.craft.isCraftable = true
+            }
+            if (equip_Id && materialId === equip_Id) {
+                if (!('craft' in obj)) obj.craft = { isCraftable: false, isMaterial: [] }
+                obj.craft.isMaterial.push(itemName)
+            }
+        })
+
         setEquipInfo(obj)
     }, [])
 
@@ -166,6 +178,25 @@ export default function EquipDetail() {
                                         </ul>
                                     </Tab>
                                 }
+
+                                {/* Craft Tab only shows if have info from data_Crafting.json*/}
+                                {equipInfo.craft &&
+                                    <Tab eventKey="Craft" title="Craft">
+                                        <ul>
+                                            {equipInfo.craft.isCraftable && <li><p>Can be crafted</p></li>}
+                                            {Boolean(equipInfo.craft.isMaterial.length) &&
+                                                <li>
+                                                    <p>As material for : </p>
+                                                    <ol>
+                                                        {equipInfo.craft.isMaterial.map(parentItemName => <li key={parentItemName} className="my-1">
+                                                            {parentItemName}
+                                                        </li>)}
+                                                    </ol>
+                                                </li>}
+                                        </ul>
+                                        <Link to={itemNameToCraftLink(equipInfo.name)} className="m-3">Click to see more</Link>
+                                    </Tab>
+                                }
                             </Tabs>
 
                         </div>
@@ -195,10 +226,9 @@ const renderDroppedByMob = (equipInfo) => {
 }
 
 const renderEquipStats = (equipInfo) => {
-    let unwanted = new Set(["id", "name", "desc", "droppedBy"])
+    let unwanted = new Set(["id", "name", "desc", "droppedBy", "gacha", "craft"])
     let keys = Object.keys(equipInfo)
         .filter(k => !unwanted.has(k))
-        .filter(k => k != 'gacha')
         .sort()
     return (
         <Table bordered hover className="text-center">
@@ -220,4 +250,8 @@ const renderEquipStats = (equipInfo) => {
             </tbody>
         </Table>
     )
+}
+
+const itemNameToCraftLink = (name) => {
+    return `../../craft-table?page=1&search=${name.replaceAll(" ", "%20")}`
 }

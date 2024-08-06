@@ -54,6 +54,7 @@ png
 ## Log - Aug 6 2024
 1. done - Minor update gacha item name and add in itemId.
 2. done - Add Gacha tabs for gachable item in equipDetail and itemDetail
+3. done - add Craft tabs for craftable item in equipDetail and itemDetail
 
 Next:
 - grouped by region ?
