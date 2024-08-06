@@ -2689,17 +2689,17 @@
     },
     {
         "location": "lhc",
-        "name": "Dark Scroll for Face Accessory for Avoidability 30%",
+        "name": "Dark Scroll for Face Accessory for DEX 30%",
         "type": "scrolls",
         "high-value": "",
-        "itemId": ""
+        "itemId": "2040108"
     },
     {
         "location": "lhc",
-        "name": "Dark Scroll for Face Accessory for Avoidability 70%",
+        "name": "Dark Scroll for Face Accessory for DEX 70%",
         "type": "scrolls",
         "high-value": "",
-        "itemId": ""
+        "itemId": "2040109"
     },
     {
         "location": "lhc",
@@ -2969,17 +2969,17 @@
     },
     {
         "location": "lhc",
-        "name": "Scroll for Face Accessory for Avoidability 10%",
+        "name": "Scroll for Face Accessory for DEX 10%",
         "type": "scrolls",
         "high-value": "",
-        "itemId": ""
+        "itemId": "2040105"
     },
     {
         "location": "lhc",
-        "name": "Scroll for Face Accessory for Avoidability 60%",
+        "name": "Scroll for Face Accessory for DEX 60%",
         "type": "scrolls",
         "high-value": "",
-        "itemId": ""
+        "itemId": "2040106"
     },
     {
         "location": "lhc",
@@ -5097,10 +5097,10 @@
     },
     {
         "location": "nlc",
-        "name": "Scroll for Face Accessory for Avoidability 10%",
+        "name": "Scroll for Face Accessory for DEX 10%",
         "type": "scrolls",
         "high-value": "",
-        "itemId": ""
+        "itemId": "2040105"
     },
     {
         "location": "nlc",
