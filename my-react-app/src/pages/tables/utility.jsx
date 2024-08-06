@@ -9,11 +9,14 @@ export const filterMobElementalList = (mobLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search?.toLowerCase().split(" ") || ['']
+    const exactSearchTerm = filterOption.search?.toLowerCase() || ''
+
     const filter = filterOption.filter?.split('-') || ['any', '']
     const order = filterOption.order || 'level'
     const sort = filterOption.sort || 'ascending'
 
     let filteredMobList = Object.entries(mobLibrary)
+    // if(!filteredMobList.length) return filteredMobList
 
     // console.log(filter)
     // console.log("before filter = ", filteredMobList)
@@ -55,8 +58,12 @@ export const filterMobElementalList = (mobLibrary) => {
         })
         .sort((a, b) => {
             // a = [_id, obj, matchCount]
-            // 1. sort by fuzzy search matchCount, desc, most-matched come first
-            if (a[2] !== b[2]) return b[2] - a[2]
+            // exact term sort to front, then sort by matchCount DESC, then property user select...
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+            
+            if (a[2] !== b[2]) return b[2] - a[2]   // matchCount
 
             // if same value, sort by mobId then
             if (a[1][order] === b[1][order]) return a[0] - b[0]
