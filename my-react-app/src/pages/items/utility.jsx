@@ -29,7 +29,7 @@ export const filterItemList = (itemLibrary) => {
             if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
             if (a[1].name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].name.toLowerCase() === exactSearchTerm) return 1
-    
+
             return b[1] - a[1]
         })
 
@@ -100,7 +100,7 @@ export const filterUseItemList = (itemLibrary) => {
             if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
             if (a[1].name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].name.toLowerCase() === exactSearchTerm) return 1
-    
+
             // 1. sort by fuzzy search matchCount, desc, most-matched come first
             if (a[2] !== b[2]) return b[2] - a[2]
 
@@ -260,6 +260,8 @@ export const filterGachaList = (itemLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search.toLowerCase().split(' ')
+    const exactSearchTerm = filterOption.search.toLowerCase()
+
     const location = filterOption.location
     const type = filterOption.type
 
@@ -283,11 +285,17 @@ export const filterGachaList = (itemLibrary) => {
         searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
         return [obj, matchCount]
     })
+    
+    filteredItemList.sort((a, b) => {
+        // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+        if (a[0].name.toLowerCase() === b[0].name.toLowerCase()) return 0
+        if (a[0].name.toLowerCase() === exactSearchTerm) return -1
+        if (b[0].name.toLowerCase() === exactSearchTerm) return 1
 
-    filteredItemList.sort((a, b) => b[1] - a[1])  // sort by matchCount
+        return b[1] - a[1]
+    })
 
     filteredItemList = filteredItemList.map(([obj, matchCount]) => obj)
-
     return filteredItemList
 }
 // 
