@@ -13,13 +13,16 @@ export const filterGlobalList = (globalLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
-    
+    const exactSearchTerm = filterOption.search.toLowerCase()
+
     let filteredGlobalList = globalLibrary
-        .filter(({ name }) => {
+        .filter(({ id, name }) => {
+            const exactSearchTerm = filterOption.search.toLowerCase()
+            if (id == exactSearchTerm) return true  // can search by entering item_id/mob_id/...id
             if (!name) return false
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
-    
+
     // sort list by  number of search term matches, most matched at first
     filteredGlobalList = filteredGlobalList.map(obj => {
         let matchCount = 0
@@ -27,10 +30,17 @@ export const filterGlobalList = (globalLibrary) => {
         return [obj, matchCount]
     })
 
-    filteredGlobalList.sort((a, b) => b[1] - a[1])  // sort by matchCount
+    filteredGlobalList.sort((a, b) => {
+        // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+        if (a[0].name.toLowerCase() === b[0].name.toLowerCase()) return 0
+        if (a[0].name.toLowerCase() === exactSearchTerm) return -1
+        if (b[0].name.toLowerCase() === exactSearchTerm) return 1
 
+        return b[1] - a[1]
+    })
+
+    // filteredGlobalList = filteredGlobalList.map(arr => arr[0])
     filteredGlobalList = filteredGlobalList.map(arr => arr[0])
-
     return filteredGlobalList
 }
 

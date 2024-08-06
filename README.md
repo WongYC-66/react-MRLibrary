@@ -56,6 +56,9 @@ png
 2. done - Add Gacha tabs for gachable item in equipDetail and itemDetail
 3. done - add Craft tabs for craftable item in equipDetail and itemDetail
 
+## Log - Aug 7 2024
+1. doing - revise sort to let exact match in show in top search result.
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?

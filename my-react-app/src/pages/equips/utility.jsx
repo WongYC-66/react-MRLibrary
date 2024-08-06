@@ -17,6 +17,8 @@ export const filterEquipList = (equipLibrary) => {
     // If URL has query param, further filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search.toLowerCase().split(" ")
+    const exactSearchTerm = filterOption.search.toLowerCase()
+
     const job = filterOption.job
     const category = filterOption.category
     const order = filterOption.order  // id, reqLevel
@@ -46,7 +48,7 @@ export const filterEquipList = (equipLibrary) => {
     })
 
     // 4. sort by matchCount, then by sort order
-    filteredEquipList = querySorting({ order, filteredEquipList })
+    filteredEquipList = querySorting({ order, filteredEquipList, exactSearchTerm })
 
     filteredEquipList = filteredEquipList.map(([_id, obj, matchCount]) => [_id, obj])
 
@@ -56,24 +58,23 @@ export const filterEquipList = (equipLibrary) => {
     return filteredEquipList
 }
 
-const querySorting = ({ order, filteredEquipList }) => {
+const querySorting = ({ order, filteredEquipList, exactSearchTerm }) => {
     //  sort by matchCount, then by sort order
     const listCopy = filteredEquipList.slice()
     const key = order
-    // by ID 
-    // if (order === "id") return listCopy.sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
-    // by other
 
     // [_id, obj, matchCount]
     listCopy.sort((a, b) => {
+        // exact term sort to front, then sort by matchCount DESC, then sort by user selection...
+        if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+        if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+        if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+
         if (a[2] != b[2]) return b[2] - a[2] // sortby matchCount DESC
         if (order === 'id') return a[0] - b[0]
 
         const valueA = a[1][key]
         const valueB = b[1][key]
-        const nameA = a[1].name
-        const nameB = b[1].name
-
 
         // sort into 0,1,2,3,10,15,... 100, NaN/no-info
         // if (!isNaN(valueA) && isNaN(valueB)) return -1
@@ -90,6 +91,8 @@ const querySorting = ({ order, filteredEquipList }) => {
         return Number(valueA) - Number(valueB)
     })
     // console.log(listCopy)
+
+    console.log(listCopy)
 
     return listCopy
 }
@@ -174,7 +177,7 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
             //  category[1] = 'Armor' / 'Accessory' / 'One-Handed Weapon' / 'Two-Handed Weapon'
 
             //  category[2] =  "Hat" /  "Face Accessory" /"Eye Decoration"  / "Earrings" / "Top"  / "Overall" /"Bottom" / "Shoes" / "Glove" / "Shield"/ "Cape" / "Ring"/ "Pendant" / "Belt" / "Medal"/ "One-Handed / Sword" / "One-Handed Axe"/ "One-Handed Blunt Weapon" / "Dagger"/ "Wand"/ "Staff"/ "Two-Handed Sword"/"Two-Handed Axe" / "Two-Handed Blunt Weapon" / "Spear" / "Pole Arm"/"Bow" / "CrossBow" / "Claw" / "Knuckle"/"Gun"/          
-            
+
             let words = isWeaponPage ? category[1] : category[2]
             words = words.toLowerCase()
             // return words.toLowerCase().includes(keyword)
