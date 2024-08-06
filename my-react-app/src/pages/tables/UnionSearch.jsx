@@ -197,7 +197,9 @@ export default function UnionSearch() {
 }
 
 const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
+    const MAX_SHOWING_COUNT = 20
     let searchTermArr = searchTerm.toLowerCase().split(' ').filter(Boolean)
+    const exactSearchTerm = searchTerm.toLowerCase()
     // OR condition for each searchTerm
 
     let filteredItems = Object.entries(itemLibrary)
@@ -208,9 +210,17 @@ const filterItemBySearchTerm = (itemLibrary, searchTerm) => {
             searchTermArr.every(term => matchCount += name.includes(term))
             return [id, name, matchCount]
         })
-        // sort by most matchCount DESC,  then sort by id ASC
-        .sort((a, b) => b[2] - a[2] || a[0] - b[1])
-        .slice(0, 20)   // IMPORTANT, setting to infinite CAUSE INFINITE LAG
+        .sort((a, b) => {
+            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+            if (a[1].toLowerCase() === b[1].toLowerCase()) return 0
+            if (a[1].toLowerCase() === exactSearchTerm) return -1
+            if (b[1].toLowerCase() === exactSearchTerm) return 1
+
+            if(b[2] != a[2]) return b[2] - a[2] // matchCount
+
+            return a[0] - b[0]   // id
+        })
+        .slice(0, MAX_SHOWING_COUNT)   // IMPORTANT, setting to too large or infinite CAUSE INFINITE LAG
 
     return filteredItems
 }
