@@ -8,6 +8,8 @@ export const filterItemList = (itemLibrary) => {
 
         const filterOption = Object.fromEntries([...searchParams.entries()])
         const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
+        const exactSearchTerm = filterOption.search.toLowerCase()
+
 
         let filteredItemList = Object.entries(itemLibrary)
             .filter(([_id, { name }]) => {
@@ -22,10 +24,16 @@ export const filterItemList = (itemLibrary) => {
             return [_id, obj, matchCount]
         })
 
-        filteredItemList.sort((a, b) => b[2] - a[2])  // sort by matchCount
+        filteredItemList.sort((a, b) => {
+            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+    
+            return b[1] - a[1]
+        })
 
         filteredItemList = filteredItemList.map(([_id, obj, matchCount]) => [_id, obj])
-
         return filteredItemList
     }
     // No filter at first loading or if URL don't have query param 
@@ -39,6 +47,8 @@ export const filterUseItemList = (itemLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search.toLowerCase().split(' ')  // split 'dark int' to ['dark', 'int']
+    const exactSearchTerm = filterOption.search.toLowerCase()
+
     const filter = filterOption.filter
     const order = filterOption.order
     const sort = filterOption.sort
@@ -57,11 +67,11 @@ export const filterUseItemList = (itemLibrary) => {
         .filter(([_, obj]) => {
             if (filter === "any") return true
 
-            if (filter === "scroll") return obj.hasOwnProperty("success") 
+            if (filter === "scroll") return obj.hasOwnProperty("success")
                 && !obj.hasOwnProperty("masterLevel")
 
-            if (filter === "potion") return potionKeys.some(k => obj[k] !== undefined) 
-                && !obj.hasOwnProperty("monsterBook") 
+            if (filter === "potion") return potionKeys.some(k => obj[k] !== undefined)
+                && !obj.hasOwnProperty("monsterBook")
                 && !obj.hasOwnProperty("morph")
 
             if (filter === "tp") return obj.hasOwnProperty('moveTo')
@@ -86,6 +96,11 @@ export const filterUseItemList = (itemLibrary) => {
         })
         .sort((a, b) => {
             // a = [_id, obj, matchCount]
+            // exact term sort to front, then sort by matchCount DESC, then sort by property user select
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+    
             // 1. sort by fuzzy search matchCount, desc, most-matched come first
             if (a[2] !== b[2]) return b[2] - a[2]
 
@@ -107,10 +122,10 @@ export const filterUseItemList = (itemLibrary) => {
     // console.log("after filter = ", filteredMobList)
     // console.log(`found : ${filteredMobList.length} records`)
 
-    return sort === "descending" 
-    ? filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] != undefined)
-        .concat(filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] == undefined)) 
-    : filteredUseItemList
+    return sort === "descending"
+        ? filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] != undefined)
+            .concat(filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] == undefined))
+        : filteredUseItemList
 }
 
 // 

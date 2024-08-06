@@ -92,8 +92,6 @@ const querySorting = ({ order, filteredEquipList, exactSearchTerm }) => {
     })
     // console.log(listCopy)
 
-    console.log(listCopy)
-
     return listCopy
 }
 
