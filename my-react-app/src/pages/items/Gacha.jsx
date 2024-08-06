@@ -175,7 +175,7 @@ const renderGachaList = (filteredItemList, itemIdToNameDict) => {
     })
 }
 
-const gachaLocationMapping = (name) => {
+export const gachaLocationMapping = (name) => {
     if (!name) return 'location not found'
     switch (name) {
         case 'cbd':

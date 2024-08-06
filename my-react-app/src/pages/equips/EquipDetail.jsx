@@ -15,10 +15,13 @@ import {
     rangeCalculator,
     renderImageWithItemId
 } from "./utility.jsx"
+import { gachaLocationMapping } from '../items/Gacha.jsx'
 import data_mob from "../../../data/data_Mob.json"
 import data_MB from "../../../data/data_MB.json"
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_GearStats from "../../../data/data_GearStats.json"
+import data_Gacha from "../../../data/data_Gacha.json"
+import ItemDetail from "../items/ItemDetail.jsx";
 
 export default function EquipDetail() {
 
@@ -47,11 +50,21 @@ export default function EquipDetail() {
             }
         })
         obj.droppedBy = droppedBy
+
+        // gachable info    add gacha:['ellinia', 'nlc']
+        data_Gacha.forEach(({ itemId, location }) => {
+            if (equip_Id && itemId === equip_Id) {
+                if (!('gacha' in obj)) obj.gacha = []
+                obj.gacha.push(gachaLocationMapping(location))
+            }
+        })
         setEquipInfo(obj)
     }, [])
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
     const jobList = decodeReqJobToList(equipInfo.reqJob) || []
+
+    // console.log(equipInfo)
 
     return (
         <div className="equip-detail">
@@ -129,26 +142,30 @@ export default function EquipDetail() {
                         </div>
 
                     </Col>
-                    {/* Item Dropped by */}
+
+                    {/* Item Dropped Tab/ Stats Tab/ Gacha Tab */}
                     <Col lg={6}>
                         <div className="item-dropped-by-card">
-                            <Tabs
-                                id="controlled-tab-example"
-                                className="mb-3"
-                            >
+                            <Tabs id="controlled-tab-example" className="mb-3" >
+                                {/* Drops Tab */}
                                 <Tab eventKey="Drops" title="Drops">
-                                    {equipInfo?.droppedBy?.length >= 1 ? <span>Dropped by </span> : <span>Dropped by nothing.</span>}
-                                    <p></p>
-                                    {equipInfo?.droppedBy?.map(({ id, name }, i) => {
-                                        return (
-                                            <span key={id}>
-                                                <Link to={`/monster/id=${id}`}>{name}</Link>
-                                                {(i !== equipInfo.droppedBy.length - 1) && " , "}
-                                            </span>
-                                        )
-                                    })}
-
+                                    {renderDroppedByMob(equipInfo)}
                                 </Tab>
+
+                                {/* Stats Tab */}
+                                <Tab eventKey="Stats" title="Stats">
+                                    {renderEquipStats(equipInfo)}
+                                </Tab>
+
+                                {/* Gacha Tab only shows if have info from data_Gacha.json*/}
+                                {equipInfo.gacha &&
+                                    <Tab eventKey="Gacha" title="Gacha">
+                                        <h5>Gacha Location :</h5>
+                                        <ul>
+                                            {equipInfo.gacha.map(mapName => <li key={mapName}>{mapName}</li>)}
+                                        </ul>
+                                    </Tab>
+                                }
                             </Tabs>
 
                         </div>
@@ -157,5 +174,50 @@ export default function EquipDetail() {
             </Container>
         </div >
 
+    )
+}
+
+const renderDroppedByMob = (equipInfo) => {
+    return (
+        <>
+            {equipInfo?.droppedBy?.length >= 1 ? <span>Dropped by </span> : <span>Dropped by nothing.</span>}
+            <p></p>
+            {equipInfo?.droppedBy?.map(({ id, name }, i) => {
+                return (
+                    <span key={id}>
+                        <Link to={`/monster/id=${id}`}>{name}</Link>
+                        {(i !== equipInfo.droppedBy.length - 1) && " , "}
+                    </span>
+                )
+            })}
+        </>
+    )
+}
+
+const renderEquipStats = (equipInfo) => {
+    let unwanted = new Set(["id", "name", "desc", "droppedBy"])
+    let keys = Object.keys(equipInfo)
+        .filter(k => !unwanted.has(k))
+        .filter(k => k != 'gacha')
+        .sort()
+    return (
+        <Table bordered hover className="text-center">
+            <tbody>
+                <tr>
+                    <td>Name </td>
+                    <td dangerouslySetInnerHTML={{ __html: equipInfo.name }}></td>
+                </tr>
+                <tr>
+                    <td>item id </td>
+                    <td>{equipInfo.id} </td>
+                </tr>
+                {keys.map(k =>
+                    <tr key={k}>
+                        <td>{k}</td>
+                        <td>{equipInfo[k]}</td>
+                    </tr>
+                )}
+            </tbody>
+        </Table>
     )
 }
