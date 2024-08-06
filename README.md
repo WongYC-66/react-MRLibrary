@@ -51,6 +51,10 @@ png
 1. done - Update LHC craftable items image.
 2. done - Add in crafting recipe
 
+## Log - Aug 6 2024
+1. done - Minor update gacha item name and add in itemId.
+2. done - Add Gacha tabs for gachable item in equipDetail and itemDetail
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
