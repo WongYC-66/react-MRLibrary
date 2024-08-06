@@ -1,4 +1,4 @@
-import { useSearchParams, Form, redirect } from "react-router-dom"
+import { useSearchParams, Form, redirect, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
@@ -8,13 +8,27 @@ import Image from 'react-bootstrap/Image';
 import Badge from 'react-bootstrap/Badge';
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
+import { renderImageWithItemIdType, itemIdToNavUrl } from "../monster/utility.jsx"
 import { filterGachaList, updateSearchResultCount } from "./utility.jsx"
+
 import data_Gacha from "../../../data/data_Gacha.json"
+import data_Eqp from "../../../data/data_Eqp.json"
+import data_Consume from "../../../data/data_Consume.json"
+import data_Ins from "../../../data/data_Ins.json"
+import data_Etc from "../../../data/data_Etc.json"
 
 export default function Gacha() {
     const [itemLibrary, setItemLibrary] = useState([])
+    const [itemIdToNameDict, setItemIdToNameDict] = useState({})
 
     useEffect(() => {
+
+        const newDict = { ...data_Eqp }
+        const all = { ...data_Consume, ...data_Ins, ...data_Etc }
+        for (let id in all) {
+            newDict[id] = all[id].name
+        }
+        setItemIdToNameDict(newDict)
         setItemLibrary(data_Gacha)
     }, [])
 
@@ -102,7 +116,7 @@ export default function Gacha() {
 
                 </div>
             </Form>
-            
+
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
             {/* <Image id='location-img' className="d-none img-fluid w-75 mx-auto" rounded /> */}
             <Image id='location-img' src='/images/gacha_map/all.png' className="img-fluid w-75 mx-auto" rounded />
@@ -117,7 +131,7 @@ export default function Gacha() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderGachaList(filterGachaList(itemLibrary))}
+                    {renderGachaList(filterGachaList(itemLibrary), itemIdToNameDict)}
                 </tbody>
             </Table>
 
@@ -132,7 +146,7 @@ export default function Gacha() {
     )
 }
 
-const renderGachaList = (filteredItemList) => {
+const renderGachaList = (filteredItemList, itemIdToNameDict) => {
     const [searchParams] = useSearchParams()
 
     updateSearchResultCount(filteredItemList.length)
@@ -148,8 +162,12 @@ const renderGachaList = (filteredItemList) => {
         return (
             <tr key={obj.name + obj.location}>
                 <td>{gachaLocationMapping(obj.location)}</td>
-                <td>{obj.name}
-                    {obj["high-value"] && <Badge bg="danger" className="ms-3">High Value!</Badge>  }  
+                <td>
+                    <Link to={itemIdToNavUrl(obj.itemId)}>
+                        {renderItemImageWrapper(obj.itemId, itemIdToNameDict)}
+                        <span className="mx-3">{obj.name}</span>
+                    </Link>
+                    {obj["high-value"] && <Badge bg="danger" className="ms-3">High Value!</Badge>}
                 </td>
                 <td>{gachaTypeMapping(obj.type)}</td>
             </tr>
@@ -207,15 +225,28 @@ const gachaTypeMapping = (name) => {
 
 const updateLocationImage = (location) => {
     const imgEl = document.getElementById("location-img")
-    if(!imgEl) return 
-    
-    if(!location) return
+    if (!imgEl) return
+
+    if (!location) return
     // if(location === 'all' || !location) return imgEl.classList.add("d-none");
-    
+
     // imgEl.classList.remove("d-none");
     imgEl.setAttribute("src", `/images/gacha_map/${location}.png`)
 }
 
+
+const renderItemImageWrapper = (itemId, itemIdToNameDict) => {
+    // renderImageWithItemIdType(itemId, itemName, type)
+    // itemId : str
+    // type : "equip", "use", "setup", "etc"
+    const itemName = itemIdToNameDict[itemId]
+    const type = itemId < '2000000'
+        ? 'equip' : itemId < '3000000'
+            ? 'use' : itemId < '4000000'
+                ? 'setup' : 'etc'
+
+    return renderImageWithItemIdType(itemId, itemName, type)
+}
 
 
 export const gachaAction = async ({ request }) => {
