@@ -19,6 +19,8 @@ export const filterMobList = (mobLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTerm = filterOption.search.toLowerCase()
+    const exactSearchTerm = filterOption.search.toLowerCase()
+
     const filter = filterOption.filter
     const order = filterOption.order
     const sort = filterOption.sort
@@ -36,8 +38,12 @@ export const filterMobList = (mobLibrary) => {
             if (filter === "monster" && !x[1].hasOwnProperty("boss")) return true
         })
         .sort((a, b) => {
+            // exact term sort to front, then sort by property
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+            
             // default is ascending, if descend, then reverse upon return
-            if (order === "id") return Number(a[0] - b[0])
 
             // order by  - [level/exp/maxHP]
             // if no data, sort to end, 0,1,2,...1000, NaN
