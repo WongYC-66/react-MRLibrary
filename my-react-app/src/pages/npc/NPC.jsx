@@ -1,5 +1,6 @@
 import { useSearchParams, Form, redirect, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { decode } from 'html-entities'
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
@@ -63,29 +64,28 @@ export default function NPC() {
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="location by" data-bs-theme="light" name="locationBy">
                                             <option value="all">ALL</option>
-                                            <option value="cbd">CBD</option>
-                                            <option value="ellinia">Ellinia</option>
-                                            <option value="henesys">Henesys</option>
-                                            <option value="kerning-city">Kerning City</option>
-                                            <option value="lhc">LHC</option>
-                                            <option value="mushroom-shrine">Mushroom Shrine</option>
-                                            <option value="nautilus">Nautilus</option>
-                                            <option value="nlc">NLC</option>
-                                            <option value="perion">Perion</option>
-                                            <option value="showa-town">Showa Town</option>
-                                            <option value="sleepywood">Sleepywood</option>
+                                            <option value="amoria">Amoria</option>
+                                            <option value="ellin">Ellin</option>
+                                            <option value="maple-island">Maple Island</option>
+                                            <option value="masteria">Masteria</option>
+                                            <option value="ossyria">Ossyria</option>
+                                            <option value="victoria-island">Victoria Island</option>
+                                            <option value="world-tour">World Tour</option>
+                                            <option value="other">Other</option>
                                         </FormBS.Select>
                                     </td>
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="type by" data-bs-theme="light" name="typeBy">
                                             <option value="all">ALL</option>
-                                            <option value="equip">Equip</option>
-                                            <option value="scrolls">Scrolls</option>
-                                            <option value="other-use">Other Use</option>
-                                            <option value="set-up">Set-up</option>
-                                            <option value="itcg">iTCG</option>
-                                            <option value="quest-etc">Quest-Etc</option>
-                                            <option value="stimulators">Stimulators</option>
+                                            <option value="beauty">Beauty</option>
+                                            <option value="crafter">Crafter</option>
+                                            <option value="job">Job</option>
+                                            <option value="merchant">Merchant</option>
+                                            <option value="pet">Pet</option>
+                                            <option value="storage">Storage</option>
+                                            <option value="transport">Transport</option>
+                                            <option value="wedding">Wedding</option>
+                                            <option value="other">Other</option>
                                         </FormBS.Select>
                                     </td>
                                 </tr>
@@ -157,23 +157,23 @@ const renderNPCList = (filteredNPCList) => {
     const sliceEndIndex = sliceStartIndex + 10
     filteredNPCList = filteredNPCList.slice(sliceStartIndex, sliceEndIndex)
 
-    console.log(filteredNPCList)
+    // console.log(filteredNPCList)
 
     return filteredNPCList.map(([npc_id, obj]) =>
         <tr key={npc_id + obj.name}>
             <td>{renderImageWithNPCId(npc_id)}</td>
             <td>{obj.name}</td>
             <td>{obj.func ? obj.func : ''}</td>
-            <td>{!obj.npcLocation ? '' : obj.npcLocation.map(([mapId, mapObj]) => {
-                if (!mapObj) return ''
+            <td>{!obj.npcLocation ? '' : obj.npcLocation.map(([mapId, mapObj], i) => {
+                if (!mapObj) return <p key={npc_id + "-" + mapId + '-' + i}>error : map id: {mapId}</p>
 
                 // hasHiddenStreetUrl
                 const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
                 const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
 
-                let fullMapName = mapObj.streetName + " : " + mapObj.mapName
+                let fullMapName = decode(mapObj.streetName + " : " + mapObj.mapName)
 
-                return <a href={mapUrl} target="_blank"><p>{fullMapName}</p></a>
+                return <a href={mapUrl} target="_blank" key={npc_id + "-" + mapId + '-' + i}><p>{fullMapName}</p></a>
             })}</td>
         </tr>
     )
