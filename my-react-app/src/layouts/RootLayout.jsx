@@ -92,10 +92,6 @@ export default function RootLayout() {
                   <Nav.Link>Monster</Nav.Link>
                 </LinkContainer>
 
-                {/* <LinkContainer to="/npc">
-                  <Nav.Link>NPC</Nav.Link>
-                </LinkContainer> */}
-
                 {/* <LinkContainer to="/map">
                   <Nav.Link>Map</Nav.Link>
                 </LinkContainer> */}
@@ -122,10 +118,6 @@ export default function RootLayout() {
                 <LinkContainer to="/skill">
                   <Nav.Link>Skill</Nav.Link>
                 </LinkContainer>
-
-                {/* <LinkContainer to="/quest">
-                  <Nav.Link>Quest</Nav.Link>
-                </LinkContainer> */}
 
                 {/* Tables */}
                 <NavDropdown title="Tables" id="collapsible-nav-dropdown">

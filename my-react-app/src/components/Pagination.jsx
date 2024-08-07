@@ -66,6 +66,9 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         if (urlPathname === "/npc") {
             return `?page=${inputNumber}&location=all&type=all&search=`
         }
+        if (urlPathname === "/quest") {
+            return `?page=${inputNumber}&location=all&type=all&search=`
+        }
 
     }
 

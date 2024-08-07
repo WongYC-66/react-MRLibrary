@@ -2,14 +2,18 @@ import { useSearchParams, Link } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
 // 
-export const filterNPCList = (npcLibrary) => {
+export const filterQuestList = (questLibrary) => {
     const [searchParams] = useSearchParams()
 
-    let filteredNPCLibrary = Object.entries(npcLibrary)
+    let filteredQuestLibrary = Object.entries(questLibrary)
+
+
+    return filteredQuestLibrary
+
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
     // No filter at first loading or if URL don't have query param 
-    if (!Object.keys(filterOption).length) return filteredNPCLibrary
+    if (!Object.keys(filterOption).length) return filteredQuestLibrary
 
     const location = filterOption.location || 'all'
     const type = filterOption.type || 'all'

@@ -7,36 +7,18 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterNPCList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+import { filterQuestList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
 
+import data_Quest from "../../../data/data_Quest.json"
 import data_NPC from "../../../data/data_NPC.json"
-import data_NPCStats from "../../../data/data_NPCStats.json"
-import data_Map from "../../../data/data_Map.json"
-import data_MapUrl from "../../../data/data_MapUrl.json"
 
 export default function Quest() {
     const [questLibrary, setQuestLibrary] = useState({})
-    console.log(a)
 
     useEffect(() => {
-        const combined = { ...data_NPC }
-        Object.entries(data_NPCStats).forEach(([id, obj]) => {
-            if (!(id in combined)) return        // if id not found, skip
-            Object.keys(obj).forEach(k => combined[id][k] = obj[k])
-        })
+        const combined = { ...data_Quest }
 
-        // map location_id to mapObj
-        Object.entries(combined).forEach(([id, obj]) => {
-            if (!obj.location) return
-            const mapArr = []
-            Object.values(obj.location).forEach(mapId => {
-                mapArr.push([mapId, data_Map[mapId]])
-            })
-            delete obj.location
-            return obj.npcLocation = mapArr
-        })
-
-        setNPCLibrary(combined)
+        setQuestLibrary(combined)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -44,12 +26,13 @@ export default function Quest() {
         e.target.classList.toggle("d-none")
     }
 
-    // console.log(npcLibrary)
+    // console.log(questLibrary)
 
+    // return 'a'
     return (
-        <div className="npc d-flex flex-column">
+        <div className="quest d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
-            <Form method="post" action="/npc" className="">
+            <Form method="post" action="/quest" className="">
                 <div className="d-flex flex-wrap">
 
                     <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">
@@ -65,28 +48,29 @@ export default function Quest() {
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="location by" data-bs-theme="light" name="locationBy">
                                             <option value="all">ALL</option>
-                                            <option value="amoria">Amoria</option>
-                                            <option value="ellin">Ellin</option>
+                                            <option value="job">Job</option>
                                             <option value="maple-island">Maple Island</option>
+                                            <option value="victoria">Victoria Island</option>
+                                            <option value="elnath">Elnath Mt + Aquaroad</option>
+                                            <option value="ludus">Ludus Lake</option>
+                                            <option value="ellin">Ellin Forest</option>
+                                            <option value="leafre">Leafre</option>
+                                            <option value="neo-tokyo">Neo Tokyo</option>
+                                            <option value="mulung">Mu Lung + Nihal Desert</option>
                                             <option value="masteria">Masteria</option>
-                                            <option value="ossyria">Ossyria</option>
-                                            <option value="victoria-island">Victoria Island</option>
-                                            <option value="world-tour">World Tour</option>
-                                            <option value="other">Other</option>
+                                            <option value="temple">Temple of Time</option>
+                                            <option value="party">Party Quest</option>
+                                            <option value="world">World Tour</option>
+                                            <option value="malaysia">Malaysia</option>
+                                            <option value="event">Event</option>
+                                            <option value="title">Title</option>
+                                            <option value="zakum">Zakum</option>
+                                            <option value="hero">Hero with the lost memory</option>
                                         </FormBS.Select>
                                     </td>
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="type by" data-bs-theme="light" name="typeBy">
                                             <option value="all">ALL</option>
-                                            <option value="beauty">Beauty</option>
-                                            <option value="crafter">Crafter</option>
-                                            <option value="job">Job</option>
-                                            <option value="merchant">Merchant</option>
-                                            <option value="pet">Pet</option>
-                                            <option value="storage">Storage</option>
-                                            <option value="transport">Transport</option>
-                                            <option value="wedding">Wedding</option>
-                                            <option value="other">Other</option>
                                         </FormBS.Select>
                                     </td>
                                 </tr>
@@ -131,53 +115,68 @@ export default function Quest() {
             <Table className="mt-3">
                 <thead>
                     <tr>
-                        <th>Image</th>
+                        <th>NPC</th>
                         <th>Name</th>
-                        <th>Function</th>
+                        <th>Quest</th>
                         <th>Location</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {renderNPCList(filterNPCList(npcLibrary))}
+                    {renderQuestList(filterQuestList(questLibrary))}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(npcLibrary, filterNPCList)}
+            {updatePagination(questLibrary, filterQuestList)}
         </div>
     )
 }
 
-const renderNPCList = (filteredNPCList) => {
+const renderQuestList = (filteredQuestList) => {
     const [searchParams] = useSearchParams()
 
-    updateSearchResultCount(filteredNPCList.length)
+    updateSearchResultCount(filteredQuestList.length)
 
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
-    filteredNPCList = filteredNPCList.slice(sliceStartIndex, sliceEndIndex)
+    filteredQuestList = filteredQuestList.slice(sliceStartIndex, sliceEndIndex)
 
-    // console.log(filteredNPCList)
+    console.log(filteredQuestList)
+    // return
 
-    return filteredNPCList.map(([npc_id, obj]) =>
-        <tr key={npc_id + obj.name}>
-            <td>{renderImageWithNPCId(npc_id)}</td>
-            <td>{obj.name}</td>
-            <td>{obj.func ? obj.func : ''}</td>
-            <td>{!obj.npcLocation ? '' : obj.npcLocation.map(([mapId, mapObj], i) => {
-                if (!mapObj) return <p key={npc_id + "-" + mapId + '-' + i}>error : map id: {mapId}</p>
-
-                // hasHiddenStreetUrl
-                const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
-                const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
-
-                let fullMapName = decode(mapObj.streetName + " : " + mapObj.mapName)
-
-                return <a href={mapUrl} target="_blank" key={npc_id + "-" + mapId + '-' + i}><p>{fullMapName}</p></a>
-            })}</td>
+    return filteredQuestList.map(([quest_id, obj]) =>
+        <tr key={quest_id}>
+            <td>{renderImageWithNPCId(obj.Check && obj.Check['0'] && obj.Check['0'].npc)}</td>
+            <td>{obj.Check && data_NPC[obj.Check['0'].npc].name}</td>
+            <td>{obj.QuestInfo && obj.QuestInfo.name}</td>
+            <td>{convertAreaCodeToName(obj?.QuestInfo?.area)}</td>
         </tr>
     )
+}
+
+const convertAreaCodeToName = (val) => {
+    const map = {
+        10:	'Job',
+        20:	'Maple Island',
+        30:	'Victoria Island',
+        33:	'Elnath Mt + Aquaroad',
+        37:	'Ludus Lake',
+        39:	'Ellin Forest',
+        41:	'Leafre',
+        43: 'Neo Tokyo',
+        44:	'Mu Lung + Nihal Desert',
+        45:	'Masteria',
+        46:	'Temple of Time',
+        47:	'Party Quest',
+        48:	'World Tour',
+        49:	'Malaysia',
+        50:	'Event',
+        51:	'Title',
+        11:	'Hero With The Lost Memory',
+        6:	'Zakum',
+    }
+    return map[val]
 }
 
 export const questAction = async ({ request }) => {
@@ -194,7 +193,7 @@ export const questAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = `/npc?page=1&location=${submission.locationBy}&type=${submission.typeBy}&search=${submission.searchName}`
+    const actionUrl = `/quest?page=1&location=${submission.locationBy}&type=${submission.typeBy}&search=${submission.searchName}`
     return redirect(actionUrl)
 }
 
