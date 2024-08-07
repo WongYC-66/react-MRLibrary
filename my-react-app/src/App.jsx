@@ -28,9 +28,11 @@ import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTa
 import UnionSearch, { unionSearchAction } from './pages/tables/UnionSearch.jsx'
 import CraftTable, { craftTableAction } from './pages/tables/CraftTable.jsx'
 
-import NPC, {npcAction} from './pages/npc/NPC.jsx'
+import NPC, { npcAction } from './pages/npc/NPC.jsx'
+import Quest, { questAction } from './pages/quest/Quest.jsx'
 
 import NotFound from './pages/NotFound.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 
 // layouts
@@ -38,7 +40,7 @@ import RootLayout from './layouts/RootLayout.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={< RootLayout />} >
+    <Route path="/" element={< RootLayout />} errorElement={<ErrorPage />}>
       <Route index element={< Home />} />
 
       {/* Monster */}
@@ -99,6 +101,9 @@ const router = createBrowserRouter(
 
       {/* NPC */}
       <Route path="npc" element={< NPC />} action={npcAction}></Route >
+
+      {/* Quest */}
+      <Route path="quest" element={< Quest />} action={questAction}></Route >
 
       {/* Links */}
       <Route path="about-me" element={< AboutMe />} />

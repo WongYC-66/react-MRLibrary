@@ -147,6 +147,10 @@ export default function RootLayout() {
                   <Nav.Link>NPC</Nav.Link>
                 </LinkContainer>
 
+                <LinkContainer to="/quest">
+                  <Nav.Link>Quest</Nav.Link>
+                </LinkContainer>
+
                 {/* Links */}
                 <NavDropdown title="Links" id="collapsible-nav-dropdown">
 
