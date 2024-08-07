@@ -80,60 +80,6 @@ export const filterMobElementalList = (mobLibrary) => {
     return sort === "descending" ? filteredMobList.reverse() : filteredMobList
 }
 
-export const renderImageWithNPCId = (npcId) => {
-    if (!npcId) return
-
-    const handleError = e => {
-        const fileName = `${npcId.padStart(7, 0)}.png`
-        const img = e.target
-        // find suitable image src from:
-        // 1: server file under /images/
-        // 2: maplelegends
-        // 3: maplestory.io
-
-        if (img.getAttribute("myimgindex") === '0') {
-            // switch to server file under /images/ (option - 1)
-            // console.log("switch to option-1")
-            img.setAttribute("myimgindex", "1")
-            img.src = `\\images\\npcs\\${fileName}`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '1') {
-            // switch to maplelegends (option - 2)
-            // console.log("switch to option-2")
-            img.setAttribute("myimgindex", "2")
-            img.src = `https://maplelegends.com/static/images/lib/npc/${fileName}`
-            return
-        }
-        // error again? 
-        if (img.getAttribute("myimgindex") === '2') {
-            // switch to maplestory.io exception list (option - 3)
-            // console.log("switch to option-3")
-            img.setAttribute("myimgindex", "3")
-            img.src = `https://maplestory.io/api/GMS/64/npc/${npcId}/icon/`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '3') {
-            img.setAttribute("myimgindex", "4")
-            img.src = "/error"
-            // return console.log('end')
-            return
-        }
-    }
-
-    const ImageComponent = <Image
-        id={`image-${npcId}`}
-        myimgindex="0"
-        src={`...`} // by default, make it trigger error
-        className="mw-50"
-        fluid
-        alt="Image not found"
-        onError={handleError} />
-
-    return ImageComponent
-}
-
-
 const elementCharToKey = {
     'F': 'fire',
     'I': 'ice',

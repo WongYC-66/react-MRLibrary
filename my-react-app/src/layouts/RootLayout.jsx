@@ -143,6 +143,10 @@ export default function RootLayout() {
                   </LinkContainer>
                 </NavDropdown>
 
+                <LinkContainer to="/npc">
+                  <Nav.Link>NPC</Nav.Link>
+                </LinkContainer>
+
                 {/* Links */}
                 <NavDropdown title="Links" id="collapsible-nav-dropdown">
 

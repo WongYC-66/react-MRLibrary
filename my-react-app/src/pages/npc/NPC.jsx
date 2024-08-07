@@ -4,32 +4,15 @@ import { useState, useEffect } from "react"
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
-import Image from 'react-bootstrap/Image';
-import Badge from 'react-bootstrap/Badge';
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { renderImageWithItemIdType, itemIdToNavUrl } from "../monster/utility.jsx"
-import { filterGachaList, updateSearchResultCount } from "./utility.jsx"
-
-import data_Gacha from "../../../data/data_Gacha.json"
-import data_Eqp from "../../../data/data_Eqp.json"
-import data_Consume from "../../../data/data_Consume.json"
-import data_Ins from "../../../data/data_Ins.json"
-import data_Etc from "../../../data/data_Etc.json"
+import { filterGachaList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
 
 export default function NPC() {
-    const [itemLibrary, setItemLibrary] = useState([])
-    const [itemIdToNameDict, setItemIdToNameDict] = useState({})
+    const [npcLibrary, setNPCLibrary] = useState([])
 
     useEffect(() => {
 
-        const newDict = { ...data_Eqp }
-        const all = { ...data_Consume, ...data_Ins, ...data_Etc }
-        for (let id in all) {
-            newDict[id] = all[id].name
-        }
-        setItemIdToNameDict(newDict)
-        setItemLibrary(data_Gacha)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -38,7 +21,7 @@ export default function NPC() {
     }
 
     return (
-        <div className="gacha d-flex flex-column">
+        <div className="npc d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
             <Form method="post" action="/gacha" className="">
                 <div className="d-flex flex-wrap">
@@ -118,8 +101,6 @@ export default function NPC() {
             </Form>
 
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
-            {/* <Image id='location-img' className="d-none img-fluid w-75 mx-auto" rounded /> */}
-            <Image id='location-img' src='/images/gacha_map/all.png' className="img-fluid w-75 mx-auto" rounded />
 
             {/* Gacha Items Result */}
             <Table className="mt-3">
@@ -131,17 +112,12 @@ export default function NPC() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderGachaList(filterGachaList(itemLibrary), itemIdToNameDict)}
+                    {/* {renderGachaList(filterGachaList(itemLibrary), itemIdToNameDict)} */}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(itemLibrary, filterGachaList)}
-
-            <p>Source_1 : <a href="https://royals.ms/forum/threads/lets-play-gachapon.110983/" target="_blank">Let's Play Gachapon!</a></p>
-            <p>Source_2 : <a href="https://royals.ms/forum/threads/lhc-exchange-rewards-cs-ws-bwg-taru-totem-rewards-found.193830/" target="_blank">LHC exchange rewards</a></p>
-            <p>Source_3 : <a href="https://royals.ms/forum/threads/results-from-2575-lhc-totems.195508/" target="_blank">Results from 2575 LHC Totems</a></p>
-
+            {/* {updatePagination(itemLibrary, filterGachaList)} */}
         </div>
     )
 }
@@ -174,80 +150,6 @@ const renderGachaList = (filteredItemList, itemIdToNameDict) => {
         )
     })
 }
-
-export const gachaLocationMapping = (name) => {
-    if (!name) return 'location not found'
-    switch (name) {
-        case 'cbd':
-            return 'CBD'
-        case 'ellinia':
-            return 'Ellinia'
-        case 'henesys':
-            return 'Henesys'
-        case 'kerning-city':
-            return 'Kerning City'
-        case 'mushroom-shrine':
-            return 'Mushroom Shrine'
-        case 'nautilus':
-            return 'Nautilus'
-        case 'nlc':
-            return 'NLC'
-        case 'perion':
-            return 'Perion'
-        case 'showa-town':
-            return 'Showa Town'
-        case 'sleepywood':
-            return 'Sleepywood'
-        case 'lhc':
-            return 'LHC'
-    }
-}
-
-const gachaTypeMapping = (name) => {
-    if (!name) return 'type not found'
-    switch (name) {
-        case 'equip':
-            return 'Equip'
-        case 'scrolls':
-            return 'Scrolls'
-        case 'other-use':
-            return 'Other Use'
-        case 'set-up':
-            return 'Set-Up'
-        case 'itcg':
-            return 'iTCG'
-        case 'quest-etc':
-            return 'Quest-Etc'
-        case 'stimulators':
-            return 'Stimulators'
-    }
-}
-
-const updateLocationImage = (location) => {
-    const imgEl = document.getElementById("location-img")
-    if (!imgEl) return
-
-    if (!location) return
-    // if(location === 'all' || !location) return imgEl.classList.add("d-none");
-
-    // imgEl.classList.remove("d-none");
-    imgEl.setAttribute("src", `/images/gacha_map/${location}.png`)
-}
-
-
-const renderItemImageWrapper = (itemId, itemIdToNameDict) => {
-    // renderImageWithItemIdType(itemId, itemName, type)
-    // itemId : str
-    // type : "equip", "use", "setup", "etc"
-    const itemName = itemIdToNameDict[itemId]
-    const type = itemId < '2000000'
-        ? 'equip' : itemId < '3000000'
-            ? 'use' : itemId < '4000000'
-                ? 'setup' : 'etc'
-
-    return renderImageWithItemIdType(itemId, itemName, type)
-}
-
 
 export const npcAction = async ({ request }) => {
     const data = await request.formData()

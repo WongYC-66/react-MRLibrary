@@ -7,7 +7,8 @@ import Table from "react-bootstrap/Table"
 import Image from "react-bootstrap/Image"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+import { renderImageWithNPCId } from "../npc/utility.jsx"
+import { updateSearchResultCount } from "./utility.jsx"
 import { renderImageWithItemIdType } from "../all/utility.jsx"
 import { itemIdToNavUrl } from '../monster/utility.jsx'
 

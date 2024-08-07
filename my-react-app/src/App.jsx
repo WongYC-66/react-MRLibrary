@@ -27,6 +27,9 @@ import ExpTable from './pages/tables/ExpTable.jsx'
 import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTable.jsx'
 import UnionSearch, { unionSearchAction } from './pages/tables/UnionSearch.jsx'
 import CraftTable, { craftTableAction } from './pages/tables/CraftTable.jsx'
+
+import NPC, {npcAction} from './pages/npc/NPC.jsx'
+
 import NotFound from './pages/NotFound.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 
@@ -93,6 +96,9 @@ const router = createBrowserRouter(
       <Route path="craft-table" element={< CraftTable />} action={craftTableAction} />
 
       {/* Tables */}
+
+      {/* NPC */}
+      <Route path="npc" element={< NPC />} action={npcAction}></Route >
 
       {/* Links */}
       <Route path="about-me" element={< AboutMe />} />
