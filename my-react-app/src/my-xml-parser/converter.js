@@ -8,7 +8,8 @@ const __dirname = path.dirname(__filename);
 const OUTPUT_LOCATION = "./data/"
 // var fs = require('node:fs');
 import { diskWriter, diskWriterInJSON, parseXML, parseXMLinBulk } from './utility.js';
-import { MBdataFormatting,
+import {
+    MBdataFormatting,
     MBdataFormatting_MapOnly,
     MobIdDataFormatting,
     ConsumeItemIdDataFormatting,
@@ -24,7 +25,8 @@ import { MBdataFormatting,
     SkillStatsDataFormatting,
     QuestDataFormatting,
     NPCDataFormatting,
-    NPCStatsDataFormatting
+    NPCStatsDataFormatting,
+    NPCLocationFormatting,
 } from './dataFormatting.js';
 
 async function MB() {
@@ -133,6 +135,15 @@ async function NPCStats() {
     console.timeEnd()
 }
 
+import data_NPC from '../../data/data_NPC.json' with {type: 'json'}
+async function NPCLocation() {
+    console.time()
+    const obj = await parseXML(path.join(__dirname, "../../data/", 'NpcLocation.img.xml'))
+    const simpleData = NPCLocationFormatting(obj, data_NPC)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_NPC.json'), simpleData)
+    console.timeEnd()
+}
+
 
 function main() {
     // MB()
@@ -151,7 +162,8 @@ function main() {
     // SkillStats()
     // Quest()
     // NPC()
-    NPCStats()
+    // NPCStats()
+    NPCLocation()  // run NPC() first bcoz it use data_NPC.json
 }
 
 main()

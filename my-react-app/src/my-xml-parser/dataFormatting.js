@@ -561,6 +561,43 @@ export function NPCStatsDataFormatting(objArr) {
     return simpleData
 }
 
+export function NPCLocationFormatting(obj, data_NPC) {
+    // for NpcLocation.img.xml from Etc.Wz ONLY
+    // Read and write JSON file of data_NPC.json
+    console.log("running NPCLocationFormatting")
+    
+    const decodeString = (str) => {
+        return decode(str, { level: 'xml' });
+    }
+    
+    const recursiveParse = (arr) => {
+        if (!arr.length) return null
+        let returnObj = {}
+        
+        arr.forEach(obj => {
+            let key = decodeString(obj.attributes.name)
+            let value = obj.attributes.value
+            ? decodeString(obj.attributes.value)
+            : recursiveParse(obj.children)
+            returnObj[key] = value
+        })
+        return returnObj
+    }
+    
+    // add 
+    const arrayData = obj.root.children
+    arrayData.forEach(obj => {
+        let npc_id = obj.attributes.name
+        if(!(npc_id in data_NPC)) return    // if npc not found in JSON, skip
+        let childrenArr = obj.children
+        let data = recursiveParse(childrenArr)
+        data_NPC[npc_id].location = data
+    })
+
+    // console.log(data_NPC)
+    return data_NPC
+}
+
 // module.exports = {
 //     MBdataFormatting,
 //     MobIdDataFormatting,
