@@ -1,4 +1,5 @@
 import util from 'util'
+import { decode } from 'html-entities';
 import { parseItemJSON, itemIdToCategory } from './utility.js';
 var inspect = util.inspect;
 
@@ -400,18 +401,18 @@ export function SkillStatsDataFormatting(objArr) {
                         // 
                         z.children.forEach(a => {
                             // if(skill_Id == '1121006')
-                                // console.log(a)
+                            // console.log(a)
                             let key2 = a.attributes.name        // hs/mpCon/damage/mobCount/...
                             let val2 = a.attributes.value
                             subLevelObj[key2] = val2
-                            if(key2 == 'lt' || key2 == 'rb'){
-                                let rangeObj = {x : a.attributes.x, y: a.attributes.y}
+                            if (key2 == 'lt' || key2 == 'rb') {
+                                let rangeObj = { x: a.attributes.x, y: a.attributes.y }
                                 subLevelObj[key2] = rangeObj
                             }
                         })
                         // 
                         levelObj[lvl] = subLevelObj
-                        
+
                     })
 
                     return stats['level'] = levelObj
@@ -422,6 +423,61 @@ export function SkillStatsDataFormatting(objArr) {
         })
         // 
     })
+    // console.log(simpleData)
+    return simpleData
+}
+
+export function QuestDataFormatting(objArr) {
+    // for Quest.Wz ONLY
+    // Create better data-structure
+    console.log("running QuestDataFormatting")
+    // console.log("parsing Say.img, Act.img, Check.img, Questinfo.img")
+    // console.log(objArr)
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    const decodeString = (str) => {
+        return decode(str, { level: 'xml' });
+    }
+
+    const recursiveParse = (arr) => {
+        if (!arr.length) return null
+        let returnObj = {}
+
+        arr.forEach(obj => {
+            let key = decodeString(obj.attributes.name)
+            let value = obj.attributes.value
+                ? decodeString(obj.attributes.value)
+                : recursiveParse(obj.children)
+            returnObj[key] = value
+        })
+
+        return returnObj
+    }
+
+    let dataArr = objArr.map(obj => {
+        let fileSource = obj.root.attributes.name.split('.')[0]
+
+        let arr = obj.root.children
+        let data = recursiveParse(arr)  // {id : {}}
+
+        return [fileSource, data]
+    })
+
+    // let x = dataArr[0]['2055']
+    // console.log(inspect(x, { colors: true, depth: Infinity }));
+    // console.log(dataArr, dataArr.length)
+
+    // Write into simpleData
+    // { id : {Act : {}, Say: {}, Check:{}, QuestInfo : {} }
+    dataArr.forEach(([fileSource, data]) => {
+        Object.entries(data).forEach(([id, info]) => {
+            if (!simpleData[id])
+                simpleData[id] = {}
+
+            simpleData[id][fileSource] = info
+        })
+    })
+
     // console.log(simpleData)
     return simpleData
 }

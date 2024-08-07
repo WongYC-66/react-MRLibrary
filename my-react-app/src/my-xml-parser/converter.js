@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const OUTPUT_LOCATION = "./data/"
 // var fs = require('node:fs');
-import { diskWriter, parseXML, parseXMLinBulk } from './utility.js';
+import { diskWriter, diskWriterInJSON, parseXML, parseXMLinBulk } from './utility.js';
 import { MBdataFormatting,
     MBdataFormatting_MapOnly,
     MobIdDataFormatting,
@@ -22,6 +22,7 @@ import { MBdataFormatting,
     MobStatsDataFormatting,
     SkillDataFormatting,
     SkillStatsDataFormatting,
+    QuestDataFormatting,
 } from './dataFormatting.js';
 
 async function MB() {
@@ -108,6 +109,14 @@ async function SkillStats() {
     diskWriter(path.join(__dirname, "../../data/", 'data_SkillStats.json'), simpleData)
 }
 
+async function Quest() {
+    console.time()
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Quest"), "Quest")
+    const simpleData = QuestDataFormatting(objArr)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Quest.json'), simpleData)
+    console.timeEnd()
+}
+
 
 function main() {
     // MB()
@@ -123,7 +132,8 @@ function main() {
     // Map_MobCount()
     // ItemStats()
     // Skill()
-    SkillStats()
+    // SkillStats()
+    Quest()
 }
 
 main()

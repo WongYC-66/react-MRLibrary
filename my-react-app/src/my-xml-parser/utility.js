@@ -18,6 +18,18 @@ export function diskWriter(path, simpleData) {
     }
 }
 
+export function diskWriterInJSON(path, simpleData) {
+    console.log("Writing" + path)
+    let jsonData = JSON.stringify(simpleData, null, 2);
+    fs.writeFile(path, jsonData, (err) => {
+        if (err) {
+            console.error(`Error writing to file : ${path}`, err);
+        } else {
+            console.log("Write succesfully into" + path)
+        }
+    });
+}
+
 export async function parseXML(FilePath) {
     // console.log("Reading" + FilePath)
     // read and parsing xml file from e.g. MonsterBook.img.xml 
@@ -46,6 +58,10 @@ export async function parseXMLinBulk(dirPath, option = "") {
         subPaths = ["Consume", "Install", "Etc"]
     }
     if(option === "Skill"){
+        // Skill folder doesnt have subfolder
+        subPaths = []
+    }
+    if(option === "Quest"){
         // Skill folder doesnt have subfolder
         subPaths = []
     }
