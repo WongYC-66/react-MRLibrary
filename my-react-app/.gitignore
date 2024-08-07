@@ -28,6 +28,8 @@ dist-ssr
 /data/Items/
 /data/Character/
 /data/Skill/
+/data/Quest/
+/data/NPC/
 
 /data/*.xml
 
