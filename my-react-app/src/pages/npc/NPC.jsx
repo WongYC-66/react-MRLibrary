@@ -6,13 +6,35 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterGachaList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+import { filterNPCList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+
+import data_NPC from "../../../data/data_NPC.json"
+import data_NPCStats from "../../../data/data_NPCStats.json"
+import data_Map from "../../../data/data_Map.json"
+import data_MapUrl from "../../../data/data_MapUrl.json"
 
 export default function NPC() {
     const [npcLibrary, setNPCLibrary] = useState([])
 
     useEffect(() => {
+        const combined = { ...data_NPC }
+        Object.entries(data_NPCStats).forEach(([id, obj]) => {
+            if (!(id in combined)) return        // if id not found, skip
+            Object.keys(obj).forEach(k => combined[id][k] = obj[k])
+        })
 
+        // map location_id to mapObj
+        Object.entries(combined).forEach(([id, obj]) => {
+            if (!obj.location) return
+            const mapArr = []
+            Object.values(obj.location).forEach(mapId => {
+                mapArr.push([mapId, data_Map[mapId]])
+            })
+            delete obj.location
+            return obj.npcLocation = mapArr
+        })
+
+        setNPCLibrary(combined)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -20,10 +42,12 @@ export default function NPC() {
         e.target.classList.toggle("d-none")
     }
 
+    // console.log(npcLibrary)
+
     return (
         <div className="npc d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
-            <Form method="post" action="/gacha" className="">
+            <Form method="post" action="/npc" className="">
                 <div className="d-flex flex-wrap">
 
                     <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">
@@ -106,49 +130,53 @@ export default function NPC() {
             <Table className="mt-3">
                 <thead>
                     <tr>
-                        <th>Location</th>
+                        <th>Image</th>
                         <th>Name</th>
-                        <th>Type</th>
+                        <th>Function</th>
+                        <th>Location</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {/* {renderGachaList(filterGachaList(itemLibrary), itemIdToNameDict)} */}
+                    {renderNPCList(filterNPCList(npcLibrary))}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {/* {updatePagination(itemLibrary, filterGachaList)} */}
+            {updatePagination(npcLibrary, filterNPCList)}
         </div>
     )
 }
 
-const renderGachaList = (filteredItemList, itemIdToNameDict) => {
+const renderNPCList = (filteredNPCList) => {
     const [searchParams] = useSearchParams()
 
-    updateSearchResultCount(filteredItemList.length)
-    updateLocationImage(searchParams.get('location'))
+    updateSearchResultCount(filteredNPCList.length)
 
     const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
     const sliceStartIndex = (pageNum - 1) * 10
     const sliceEndIndex = sliceStartIndex + 10
-    filteredItemList = filteredItemList.slice(sliceStartIndex, sliceEndIndex)
-    // [  {location: 'Perion', name: 'Beige Umbrella', type: 'Equip'}, ..., ...]
-    // return 
-    return filteredItemList.map(obj => {
-        return (
-            <tr key={obj.name + obj.location}>
-                <td>{gachaLocationMapping(obj.location)}</td>
-                <td>
-                    <Link to={itemIdToNavUrl(obj.itemId)}>
-                        {renderItemImageWrapper(obj.itemId, itemIdToNameDict)}
-                        <span className="mx-3">{obj.name}</span>
-                    </Link>
-                    {obj["high-value"] && <Badge bg="danger" className="ms-3">High Value!</Badge>}
-                </td>
-                <td>{gachaTypeMapping(obj.type)}</td>
-            </tr>
-        )
-    })
+    filteredNPCList = filteredNPCList.slice(sliceStartIndex, sliceEndIndex)
+
+    console.log(filteredNPCList)
+
+    return filteredNPCList.map(([npc_id, obj]) =>
+        <tr key={npc_id + obj.name}>
+            <td>{renderImageWithNPCId(npc_id)}</td>
+            <td>{obj.name}</td>
+            <td>{obj.func ? obj.func : ''}</td>
+            <td>{!obj.npcLocation ? '' : obj.npcLocation.map(([mapId, mapObj]) => {
+                if (!mapObj) return ''
+
+                // hasHiddenStreetUrl
+                const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
+                const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
+
+                let fullMapName = mapObj.streetName + " : " + mapObj.mapName
+
+                return <a href={mapUrl} target="_blank"><p>{fullMapName}</p></a>
+            })}</td>
+        </tr>
+    )
 }
 
 export const npcAction = async ({ request }) => {
@@ -165,7 +193,7 @@ export const npcAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = `/gacha?page=1&location=${submission.locationBy}&type=${submission.typeBy}&search=${submission.searchName}`
+    const actionUrl = `/npc?page=1&location=${submission.locationBy}&type=${submission.typeBy}&search=${submission.searchName}`
     return redirect(actionUrl)
 }
 

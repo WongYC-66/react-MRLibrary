@@ -1,7 +1,16 @@
 {
-  "0": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-entrance-mushroom-town-training-camp",
-  "1": "https://www.hidden-street.net/gms/map/maple-road-upper-level-of-the-training-camp",
-  "2": "https://www.hidden-street.net/gms/map/maple-road-lower-level-of-the-training-camp",
+  "0": [
+    "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-entrance-mushroom-town-training-camp",
+    true
+  ],
+  "1": [
+    "https://www.hidden-street.net/gms/map/maple-road-upper-level-of-the-training-camp",
+    true
+  ],
+  "2": [
+    "https://www.hidden-street.net/gms/map/maple-road-lower-level-of-the-training-camp",
+    true
+  ],
   "10000": [
     "https://bbb.hidden-street.net/map/mini-map/maple-road-mushroom-town",
     true
@@ -14,12 +23,30 @@
     "https://bbb.hidden-street.net/map/mini-map/maple-road-mushroom-town-townstreet",
     true
   ],
-  "30000": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-east-entrance-to-mushroom-town",
-  "40000": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-i",
-  "40001": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-ii",
-  "40002": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-iii",
-  "50000": "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-a-split-road",
-  "50001": "https://www.hidden-street.net/gms/map/southperry/maple-road-the-field-west-of-southperry",
+  "30000": [
+    "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-east-entrance-to-mushroom-town",
+    true
+  ],
+  "40000": [
+    "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-i",
+    true
+  ],
+  "40001": [
+    "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-ii",
+    true
+  ],
+  "40002": [
+    "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-snail-hunting-ground-iii",
+    true
+  ],
+  "50000": [
+    "https://www.hidden-street.net/gms/map/mushroomvillage/maple-road-a-split-road",
+    true
+  ],
+  "50001": [
+    "https://www.hidden-street.net/gms/map/southperry/maple-road-the-field-west-of-southperry",
+    true
+  ],
   "60000": [
     "https://bbb.hidden-street.net/map/mini-map/maple-road-southperry-0",
     true
@@ -28,13 +55,34 @@
     "https://bbb.hidden-street.net/map/mini-map/maple-road-southperry-armor-store",
     true
   ],
-  "1000000": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-the-field-west-of-amherst",
-  "1000001": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-in-a-small-forest",
-  "1000002": "https://bbb.hidden-street.net/map/mini-map/maple-road-dangerous-forest",
-  "1000003": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-mushroom-garden",
-  "1000004": "https://bbb.hidden-street.net/map/mini-map/maple-road-snail-garden",
-  "1000005": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-hunting-ground-middle-of-the-forest-i",
-  "1000006": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-hunting-ground-middle-of-the-forest-ii",
+  "1000000": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-the-field-west-of-amherst",
+    true
+  ],
+  "1000001": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-in-a-small-forest",
+    true
+  ],
+  "1000002": [
+    "https://bbb.hidden-street.net/map/mini-map/maple-road-dangerous-forest",
+    true
+  ],
+  "1000003": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-mushroom-garden",
+    true
+  ],
+  "1000004": [
+    "https://bbb.hidden-street.net/map/mini-map/maple-road-snail-garden",
+    true
+  ],
+  "1000005": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-hunting-ground-middle-of-the-forest-i",
+    true
+  ],
+  "1000006": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-hunting-ground-middle-of-the-forest-ii",
+    true
+  ],
   "1010000": [
     "https://bbb.hidden-street.net/map/mini-map/rainbow-street-amherst",
     true
@@ -43,15 +91,30 @@
     "https://bbb.hidden-street.net/map/mini-map/rainbow-street-amherst-weapon-store",
     true
   ],
-  "1010002": "https://www.hidden-street.net/gms/map/rainbow-street-amherst-townstreet",
+  "1010002": [
+    "https://www.hidden-street.net/gms/map/rainbow-street-amherst-townstreet",
+    true
+  ],
   "1010003": [
     "https://bbb.hidden-street.net/map/mini-map/rainbow-street-amherst-department-store",
     true
   ],
-  "1010004": "https://bbb.hidden-street.net/map/mini-map/maple-road-snail-field-of-flowers",
-  "1020000": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-the-field-east-of-amherst",
-  "1020001": "https://www.hidden-street.net/gms/map/amherst/rainbow-street-tomato-field",
-  "100000000": "https://bbb.hidden-street.net/map/mini-map/henesys",
+  "1010004": [
+    "https://bbb.hidden-street.net/map/mini-map/maple-road-snail-field-of-flowers",
+    true
+  ],
+  "1020000": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-the-field-east-of-amherst",
+    true
+  ],
+  "1020001": [
+    "https://www.hidden-street.net/gms/map/amherst/rainbow-street-tomato-field",
+    true
+  ],
+  "100000000": [
+    "https://bbb.hidden-street.net/map/mini-map/henesys",
+    true
+  ],
   "100000002": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-an-empty-house",
     true
@@ -216,12 +279,30 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-forest-east-of-henesys",
     true
   ],
-  "100030001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-blue-mushroom-forest",
-  "100040000": "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-forest-south-of-ellinia",
-  "100040001": "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-i",
-  "100040002": "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-ii",
-  "100040003": "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-iii",
-  "100040004": "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-iv",
+  "100030001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-blue-mushroom-forest",
+    true
+  ],
+  "100040000": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-forest-south-of-ellinia",
+    true
+  ],
+  "100040001": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-i",
+    true
+  ],
+  "100040002": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-ii",
+    true
+  ],
+  "100040003": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-iii",
+    true
+  ],
+  "100040004": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-southern-forest-iv",
+    true
+  ],
   "100040100": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-forest-of-wisdom",
     true
@@ -230,14 +311,26 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-monkey-forest-i",
     true
   ],
-  "100040102": "https://bbb.hidden-street.net/map/mini-map/hidden-street-tree-dungeon-monkey-forest-i",
-  "100040103": "https://bbb.hidden-street.net/map/mini-map/hidden-street-monkey-forest-ii",
+  "100040102": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-tree-dungeon-monkey-forest-i",
+    true
+  ],
+  "100040103": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-monkey-forest-ii",
+    true
+  ],
   "100040104": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-tree-dungeon-monkey-forest-ii",
     true
   ],
-  "100040105": "https://bbb.hidden-street.net/map/mini-map/hidden-street-forest-of-evil-i\"",
-  "100040106": "https://bbb.hidden-street.net/map/mini-map/hidden-street-forest-of-evil-ii",
+  "100040105": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-forest-of-evil-i\"",
+    true
+  ],
+  "100040106": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-forest-of-evil-ii",
+    true
+  ],
   "100040110": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-downstairs-at-the-forest",
     true
@@ -246,7 +339,10 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-the-field-south-of-ellinia",
     true
   ],
-  "101000000": "https://bbb.hidden-street.net/map/mini-map/ellinia",
+  "101000000": [
+    "https://bbb.hidden-street.net/map/mini-map/ellinia",
+    true
+  ],
   "101000003": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-magic-library",
     true
@@ -307,7 +403,10 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-tree-dungeon-forest-up-north-vii",
     true
   ],
-  "101020009": "https://bbb.hidden-street.net/map/mini-map/victoria-road-tree-dungeon-forest-up-north-viii",
+  "101020009": [
+    "https://bbb.hidden-street.net/map/mini-map/victoria-road-tree-dungeon-forest-up-north-viii",
+    true
+  ],
   "101020010": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-tree-dungeon-forest-up-north-ix",
     true
@@ -412,7 +511,10 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-perion-street-corner",
     true
   ],
-  "101040001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-land-of-wild-boar-i",
+  "101040001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-land-of-wild-boar-i",
+    true
+  ],
   "101040002": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-over-the-wall",
     true
@@ -421,7 +523,10 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-iron-boar-land",
     true
   ],
-  "102000000": "https://bbb.hidden-street.net/map/mini-map/perion",
+  "102000000": [
+    "https://bbb.hidden-street.net/map/mini-map/perion",
+    true
+  ],
   "102010000": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-west-street-corner-of-perion",
     true
@@ -458,7 +563,10 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-sunset-sky",
     true
   ],
-  "103000000": "https://bbb.hidden-street.net/map/mini-map/kerning-city",
+  "103000000": [
+    "https://bbb.hidden-street.net/map/mini-map/kerning-city",
+    true
+  ],
   "103000100": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-subway-ticketing-booth",
     true
@@ -495,9 +603,18 @@
     "https://bbb.hidden-street.net/map/mini-map/kerning-city-subway-line-2-area-3",
     true
   ],
-  "103000902": "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b1-1",
-  "103000905": "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b2-1",
-  "103000909": "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b3-2",
+  "103000902": [
+    "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b1-1",
+    true
+  ],
+  "103000905": [
+    "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b2-1",
+    true
+  ],
+  "103000909": [
+    "https://www.hidden-street.net/gms/map/quest/line-3-construction-site-b3-2",
+    true
+  ],
   "103010000": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-kerning-city-construction-site",
     true
@@ -530,7 +647,10 @@
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-kerning-city-middle-forest-iii",
     true
   ],
-  "104000000": "https://bbb.hidden-street.net/map/mini-map/lith-harbor",
+  "104000000": [
+    "https://bbb.hidden-street.net/map/mini-map/lith-harbor",
+    true
+  ],
   "104000100": [
     "https://bbb.hidden-street.net/map/mini-map/victoria-road-right-around-lith-harbor",
     true
@@ -619,7 +739,10 @@
     "https://bbb.hidden-street.net/map/mini-map/dungeon-sleepy-dungeon-v",
     true
   ],
-  "105040306": "https://bbb.hidden-street.net/map/mini-map/dungeon-the-forest-of-golem",
+  "105040306": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-the-forest-of-golem",
+    true
+  ],
   "105040320": [
     "https://bbb.hidden-street.net/map/mini-map/mini-dungeon-golems-castle-ruins",
     true
@@ -940,10 +1063,22 @@
     "https://bbb.hidden-street.net/map/mini-map/dungeon-the-grave-of-mushmom",
     true
   ],
-  "105070100": "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-i",
-  "105070200": "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-ii",
-  "105070300": "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-iii",
-  "105070400": "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-iv",
+  "105070100": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-i",
+    true
+  ],
+  "105070200": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-ii",
+    true
+  ],
+  "105070300": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-iii",
+    true
+  ],
+  "105070400": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-cave-of-evil-eye-iv",
+    true
+  ],
   "105080000": [
     "https://bbb.hidden-street.net/map/mini-map/dungeon-drake-hunting-ground",
     true
@@ -964,7 +1099,10 @@
     "https://bbb.hidden-street.net/map/mini-map/dungeon-drakes-meal-table",
     true
   ],
-  "105090301": "https://bbb.hidden-street.net/map/mini-map/dungeon-wild-kargos-area",
+  "105090301": [
+    "https://bbb.hidden-street.net/map/mini-map/dungeon-wild-kargos-area",
+    true
+  ],
   "105090310": [
     "https://bbb.hidden-street.net/map/mini-map/dungeon-drake-area",
     true
@@ -1021,7 +1159,10 @@
     "https://bbb.hidden-street.net/map/mini-map/warning-street-deep-valley-i",
     true
   ],
-  "106000001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-dangerous-valley-i",
+  "106000001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-dangerous-valley-i",
+    true
+  ],
   "106000002": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-dangerous-valley-ii",
     true
@@ -1058,7 +1199,10 @@
     "https://bbb.hidden-street.net/map/mini-map/warning-street-perion-dungeon-entrance",
     true
   ],
-  "106010000": "https://bbb.hidden-street.net/map/mini-map/warning-street-road-to-the-dungeon",
+  "106010000": [
+    "https://bbb.hidden-street.net/map/mini-map/warning-street-road-to-the-dungeon",
+    true
+  ],
   "106010100": [
     "https://bbb.hidden-street.net/map/mini-map/warning-street-henesys-dungeon-entrance",
     true
@@ -1207,7 +1351,10 @@
     "https://bbb.hidden-street.net/map/mini-map/warning-street-the-swamp-of-despair-i",
     true
   ],
-  "107000001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-swamp-of-jr-necki",
+  "107000001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-swamp-of-jr-necki",
+    true
+  ],
   "107000100": [
     "https://bbb.hidden-street.net/map/mini-map/warning-street-the-swamp-of-despair-ii",
     true
@@ -1244,7 +1391,10 @@
     "https://bbb.hidden-street.net/map/mini-map/dungeon-damp-forest",
     true
   ],
-  "110000000": "https://bbb.hidden-street.net/map/mini-map/florina-beach",
+  "110000000": [
+    "https://bbb.hidden-street.net/map/mini-map/florina-beach",
+    true
+  ],
   "110010000": [
     "https://bbb.hidden-street.net/map/mini-map/florina-road-a-look-out-shed-around-the-beach",
     true
@@ -1261,7 +1411,10 @@
     "https://bbb.hidden-street.net/map/mini-map/florina-road-lorang-and-clang",
     true
   ],
-  "110030001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-clang-and-lorang",
+  "110030001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-clang-and-lorang",
+    true
+  ],
   "110040000": [
     "https://bbb.hidden-street.net/map/mini-map/florina-road-hot-sand",
     true
@@ -1746,10 +1899,22 @@
     "https://www.hidden-street.net/gms/map/lioncastle/lion-kings-castle-roof-of-the-fifth-tower",
     true
   ],
-  "211070100": "https://bc.hidden-street.net/map/mini-map/lion-kings-castle-audience-room",
-  "211080100": "https://www.hidden-street.net/sea/map/lioncastle/rose-garden-abandoned-garden",
-  "211080200": "https://www.hidden-street.net/sea/map/lioncastle/rose-garden-souls-rest",
-  "211080300": "https://www.hidden-street.net/sea/map/lioncastle/rose-garden-castle-walls-edge",
+  "211070100": [
+    "https://bc.hidden-street.net/map/mini-map/lion-kings-castle-audience-room",
+    true
+  ],
+  "211080100": [
+    "https://www.hidden-street.net/sea/map/lioncastle/rose-garden-abandoned-garden",
+    true
+  ],
+  "211080200": [
+    "https://www.hidden-street.net/sea/map/lioncastle/rose-garden-souls-rest",
+    true
+  ],
+  "211080300": [
+    "https://www.hidden-street.net/sea/map/lioncastle/rose-garden-castle-walls-edge",
+    true
+  ],
   "220000000": [
     "https://bbb.hidden-street.net/map/mini-map/ludibrium",
     true
@@ -1962,7 +2127,10 @@
     "https://bbb.hidden-street.net/map/mini-map/ludibrium-forgotten-passage",
     true
   ],
-  "220080001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-origin-of-the-clock-tower",
+  "220080001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-origin-of-the-clock-tower",
+    true
+  ],
   "221000000": [
     "https://bbb.hidden-street.net/map/mini-map/omega-sector",
     true
@@ -2339,7 +2507,10 @@
     "https://bbb.hidden-street.net/map/mini-map/omega-sector-kulan-field-iv",
     true
   ],
-  "221040301": "https://bbb.hidden-street.net/map/mini-map/hidden-street-grays-prairie",
+  "221040301": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-grays-prairie",
+    true
+  ],
   "221040400": [
     "https://bbb.hidden-street.net/map/mini-map/omega-sector-kulan-field-v",
     true
@@ -2396,7 +2567,10 @@
     "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-fox-ridge",
     true
   ],
-  "222010310": "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-moon-ridge",
+  "222010310": [
+    "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-moon-ridge",
+    true
+  ],
   "222010400": [
     "https://bbb.hidden-street.net/map/mini-map/korean-folk-town-top-of-black-mountain",
     true
@@ -2421,7 +2595,10 @@
     "https://bbb.hidden-street.net/map/mini-map/ludibrium-helios-tower-99th-floor",
     true
   ],
-  "222020300": "https://bbb.hidden-street.net/map/mini-map/ludibrium-helios-tower-100th-floor",
+  "222020300": [
+    "https://bbb.hidden-street.net/map/mini-map/ludibrium-helios-tower-100th-floor",
+    true
+  ],
   "230000000": [
     "https://bbb.hidden-street.net/map/mini-map/aquarium",
     true
@@ -2438,7 +2615,10 @@
     "https://bbb.hidden-street.net/map/mini-map/aquarium-zoo",
     true
   ],
-  "230010000": "https://bbb.hidden-street.net/map/mini-map/aqua-road-ocean-ic",
+  "230010000": [
+    "https://bbb.hidden-street.net/map/mini-map/aqua-road-ocean-ic",
+    true
+  ],
   "230010001": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-penguins-play-ground",
     true
@@ -2555,7 +2735,10 @@
     "https://bbb.hidden-street.net/map/mini-map/leafre-west-leafre-forest",
     true
   ],
-  "240010100": "https://bbb.hidden-street.net/map/mini-map/leafre-minar-forest-west-border",
+  "240010100": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-minar-forest-west-border",
+    true
+  ],
   "240010101": [
     "https://bbb.hidden-street.net/map/mini-map/leafre-peach-monkey-forest",
     true
@@ -2568,7 +2751,10 @@
     "https://bbb.hidden-street.net/map/mini-map/leafre-steep-hill",
     true
   ],
-  "240010400": "https://bbb.hidden-street.net/map/mini-map/leafre-forest-crossroad",
+  "240010400": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-forest-crossroad",
+    true
+  ],
   "240010500": [
     "https://bbb.hidden-street.net/map/mini-map/leafre-valley-of-the-antelope",
     true
@@ -2589,12 +2775,18 @@
     "https://bbb.hidden-street.net/map/mini-map/leafre-entrance-to-sky-nest",
     true
   ],
-  "240010900": "https://bbb.hidden-street.net/map/mini-map/leafre-minar-forest-east-border",
+  "240010900": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-minar-forest-east-border",
+    true
+  ],
   "240010901": [
     "https://bbb.hidden-street.net/map/mini-map/leafre-beetle-forest",
     true
   ],
-  "240011000": "https://bbb.hidden-street.net/map/mini-map/leafre-leafre-east-forest",
+  "240011000": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-leafre-east-forest",
+    true
+  ],
   "240020000": [
     "https://bbb.hidden-street.net/map/mini-map/leafre-the-area-of-red-kentaurus",
     true
@@ -2795,13 +2987,22 @@
     "https://bbb.hidden-street.net/map/mini-map/leafre-the-dragon-canyon",
     true
   ],
-  "240040100": "https://bbb.hidden-street.net/map/mini-map/leafre-canyon-crossroad",
-  "240040200": "https://bbb.hidden-street.net/map/mini-map/leafre-canyon-east-road",
+  "240040100": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-canyon-crossroad",
+    true
+  ],
+  "240040200": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-canyon-east-road",
+    true
+  ],
   "240040210": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-blue-wyverns-nest",
     true
   ],
-  "240040300": "https://bbb.hidden-street.net/map/mini-map/leafre-canyon-west-road",
+  "240040300": [
+    "https://bbb.hidden-street.net/map/mini-map/leafre-canyon-west-road",
+    true
+  ],
   "240040310": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-red-wyverns-nest",
     true
@@ -2810,7 +3011,10 @@
     "https://bbb.hidden-street.net/map/mini-map/leafre-wyvern-canyon",
     true
   ],
-  "240040401": "https://www.hidden-street.net/gms/map/leafre/hidden-street-leviathans-canyon",
+  "240040401": [
+    "https://www.hidden-street.net/gms/map/leafre/hidden-street-leviathans-canyon",
+    true
+  ],
   "240040500": [
     "https://bbb.hidden-street.net/map/mini-map/leafre-entrance-to-dragon-nest",
     true
@@ -3087,7 +3291,10 @@
     "https://bbb.hidden-street.net/map/mini-map/mini-dungeon-newt-secured-zone",
     true
   ],
-  "240060200": "https://bbb.hidden-street.net/map/mini-map/cave-of-life-chaos-horntails-cave",
+  "240060200": [
+    "https://bbb.hidden-street.net/map/mini-map/cave-of-life-chaos-horntails-cave",
+    true
+  ],
   "250000000": [
     "https://bbb.hidden-street.net/map/mini-map/mu-lung",
     true
@@ -3228,7 +3435,10 @@
     "https://bbb.hidden-street.net/map/mini-map/herb-town-over-the-pirate-ship",
     true
   ],
-  "251010410": "https://bbb.hidden-street.net/map/mini-map/mini-dungeon-pillage-of-treasure-island",
+  "251010410": [
+    "https://bbb.hidden-street.net/map/mini-map/mini-dungeon-pillage-of-treasure-island",
+    true
+  ],
   "251010500": [
     "https://bbb.hidden-street.net/map/mini-map/herb-town-isolated-swamp",
     true
@@ -3265,7 +3475,10 @@
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-outside-the-west-entrance-of-ariant",
     true
   ],
-  "260010001": "https://bbb.hidden-street.net/map/mini-map/hidden-street-jr-cactus-desert",
+  "260010001": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-jr-cactus-desert",
+    true
+  ],
   "260010100": [
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-cactus-desert-1",
     true
@@ -3274,7 +3487,10 @@
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-cactus-desert-2",
     true
   ],
-  "260010201": "https://bbb.hidden-street.net/map/mini-map/hidden-street-royal-cactus-desert",
+  "260010201": [
+    "https://bbb.hidden-street.net/map/mini-map/hidden-street-royal-cactus-desert",
+    true
+  ],
   "260010300": [
     "https://bbb.hidden-street.net/map/mini-map/the-burning-sands-white-rock-desert",
     true
@@ -4047,8 +4263,14 @@
     "https://bbb.hidden-street.net/map/mini-map/adobiss-mission-i-area-16-6",
     true
   ],
-  "280020000": "https://www.hidden-street.net/gms/map/elnathdungeon/adobiss-mission-i-breath-of-lava",
-  "280030000": "https://www.hidden-street.net/ems/map/elnathdungeon/easy-zakum-easy-zakums-altar",
+  "280020000": [
+    "https://www.hidden-street.net/gms/map/elnathdungeon/adobiss-mission-i-breath-of-lava",
+    true
+  ],
+  "280030000": [
+    "https://www.hidden-street.net/ems/map/elnathdungeon/easy-zakum-easy-zakums-altar",
+    true
+  ],
   "300000000": [
     "https://bbb.hidden-street.net/map/mini-map/ellin-forest-altaire-camp",
     true
@@ -4089,8 +4311,14 @@
     "https://bbb.hidden-street.net/map/mini-map/ellin-forest-boulder-mountain-entrance",
     true
   ],
-  "300010410": "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-rocky-mountain-cave",
-  "300010420": "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-deep-inside-the-cave",
+  "300010410": [
+    "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-rocky-mountain-cave",
+    true
+  ],
+  "300010420": [
+    "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-deep-inside-the-cave",
+    true
+  ],
   "300020000": [
     "https://bbb.hidden-street.net/map/mini-map/ellin-forest-southern-region-of-mossy-tree-forest-1",
     true
@@ -4099,7 +4327,10 @@
     "https://bbb.hidden-street.net/map/mini-map/ellin-forest-southern-region-of-mossy-tree-forest-2",
     true
   ],
-  "300020210": "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-mossy-tree-mushroom-forest",
+  "300020210": [
+    "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-mossy-tree-mushroom-forest",
+    true
+  ],
   "300030000": [
     "https://bbb.hidden-street.net/map/mini-map/ellin-forest-eastern-region-of-mossy-tree-forest",
     true
@@ -4108,7 +4339,10 @@
     "https://bbb.hidden-street.net/map/mini-map/ellin-forest-deep-fairy-forest",
     true
   ],
-  "300030500": "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-queens-hiding-place",
+  "300030500": [
+    "https://www.hidden-street.net/gms/map/eilnforest/ellin-forest-queens-hiding-place",
+    true
+  ],
   "540000000": [
     "https://bbb.hidden-street.net/map/mini-map/singapore-cbd",
     true
@@ -4309,7 +4543,10 @@
     "https://bbb.hidden-street.net/map/mini-map/malaysia-trend-zone-metropolis",
     true
   ],
-  "550000100": "https://bbb.hidden-street.net/map/mini-map/malaysia-outskirt-of-muddy-banks",
+  "550000100": [
+    "https://bbb.hidden-street.net/map/mini-map/malaysia-outskirt-of-muddy-banks",
+    true
+  ],
   "550000200": [
     "https://bbb.hidden-street.net/map/mini-map/malaysia-muddy-banks-1",
     true
@@ -4534,14 +4771,38 @@
     "https://bbb.hidden-street.net/map/mini-map/phantom-forest-the-evil-dead",
     true
   ],
-  "610010100": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-1",
-  "610010101": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-1",
-  "610010102": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-2",
-  "610010103": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-3",
-  "610010104": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-4",
-  "610010200": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-crossroads-1",
-  "610010201": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-crossroads-1",
-  "610010202": "https://bbb.hidden-street.net/map/mini-map/phantom-forest-crossroads-2",
+  "610010100": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-1",
+    true
+  ],
+  "610010101": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-1",
+    true
+  ],
+  "610010102": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-2",
+    true
+  ],
+  "610010103": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-3",
+    true
+  ],
+  "610010104": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-twisted-paths-4",
+    true
+  ],
+  "610010200": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-crossroads-1",
+    true
+  ],
+  "610010201": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-crossroads-1",
+    true
+  ],
+  "610010202": [
+    "https://bbb.hidden-street.net/map/mini-map/phantom-forest-crossroads-2",
+    true
+  ],
   "610020000": [
     "https://bbb.hidden-street.net/map/mini-map/crimsonwood-mountain-valley-of-heroes-1",
     true
@@ -4726,7 +4987,10 @@
     "https://bbb.hidden-street.net/map/mini-map/haunted-house-hallway",
     true
   ],
-  "682000305": "https://bbb.hidden-street.net/map/mini-map/haunted-house-toy-room-2",
+  "682000305": [
+    "https://bbb.hidden-street.net/map/mini-map/haunted-house-toy-room-2",
+    true
+  ],
   "682000400": [
     "https://bbb.hidden-street.net/map/mini-map/haunted-house-hallway-where-am-i",
     true
@@ -4735,7 +4999,10 @@
     "https://bbb.hidden-street.net/map/mini-map/haunted-house-hallway-where-are-you",
     true
   ],
-  "682000505": "https://bbb.hidden-street.net/map/mini-map/haunted-house-toy-room-3",
+  "682000505": [
+    "https://bbb.hidden-street.net/map/mini-map/haunted-house-toy-room-3",
+    true
+  ],
   "682000600": [
     "https://bbb.hidden-street.net/map/mini-map/haunted-house-hallway-this-again",
     true
@@ -4768,7 +5035,10 @@
     "https://bbb.hidden-street.net/map/mini-map/haunted-house-chimney-possessed-by-the-clown",
     true
   ],
-  "749040001": "https://www.hidden-street.net/sea/map/none/house-of-dong-dong-chiang-house-of-dong-dong-chiang",
+  "749040001": [
+    "https://www.hidden-street.net/sea/map/none/house-of-dong-dong-chiang-house-of-dong-dong-chiang",
+    true
+  ],
   "800000000": [
     "https://bbb.hidden-street.net/map/mini-map/zipangu-mushroom-shrine",
     true
@@ -4961,8 +5231,14 @@
     "https://bbb.hidden-street.net/map/mini-map/zipangu-showa-town",
     true
   ],
-  "801000110": "https://bbb.hidden-street.net/map/mini-map/zipangu-the-secret-spa-m-the-secret-spa-f",
-  "801000210": "https://bbb.hidden-street.net/map/mini-map/zipangu-the-secret-spa-m-the-secret-spa-f",
+  "801000110": [
+    "https://bbb.hidden-street.net/map/mini-map/zipangu-the-secret-spa-m-the-secret-spa-f",
+    true
+  ],
+  "801000210": [
+    "https://bbb.hidden-street.net/map/mini-map/zipangu-the-secret-spa-m-the-secret-spa-f",
+    true
+  ],
   "801010000": [
     "https://bbb.hidden-street.net/map/mini-map/zipangu-showa-street-1",
     true
@@ -4999,13 +5275,22 @@
     "https://bbb.hidden-street.net/map/mini-map/zipangu-the-nightmarish-last-days",
     true
   ],
-  "809000101": "https://bbb.hidden-street.net/map/mini-map/zipangu-spa-m-spa-f",
-  "809000201": "https://bbb.hidden-street.net/map/mini-map/zipangu-spa-m-spa-f",
+  "809000101": [
+    "https://bbb.hidden-street.net/map/mini-map/zipangu-spa-m-spa-f",
+    true
+  ],
+  "809000201": [
+    "https://bbb.hidden-street.net/map/mini-map/zipangu-spa-m-spa-f",
+    true
+  ],
   "900000000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-utahs-pig-farm",
     true
   ],
-  "910060000": "https://www.hidden-street.net/gms/map/henesys/victoria-road-bowman-training-center",
+  "910060000": [
+    "https://www.hidden-street.net/gms/map/henesys/victoria-road-bowman-training-center",
+    true
+  ],
   "910100000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-cursed-forest",
     true
@@ -5014,9 +5299,18 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-the-cursed-forest",
     true
   ],
-  "910120000": "https://www.hidden-street.net/gms/map/ellinia/victoria-road-magician-training-center",
-  "910220000": "https://www.hidden-street.net/gms/map/perion/victoria-road-warrior-training-center",
-  "910310000": "https://www.hidden-street.net/gms/map/kerningcity/victoria-road-thief-training-center",
+  "910120000": [
+    "https://www.hidden-street.net/gms/map/ellinia/victoria-road-magician-training-center",
+    true
+  ],
+  "910220000": [
+    "https://www.hidden-street.net/gms/map/perion/victoria-road-warrior-training-center",
+    true
+  ],
+  "910310000": [
+    "https://www.hidden-street.net/gms/map/kerningcity/victoria-road-thief-training-center",
+    true
+  ],
   "910510000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-puppeteers-cave",
     true
@@ -5045,7 +5339,10 @@
     "https://bbb.hidden-street.net/map/mini-map/hidden-chamber-the-nautilus-stable",
     true
   ],
-  "912030000": "https://www.hidden-street.net/gms/map/nautilus/victoria-road-pirate-training-center",
+  "912030000": [
+    "https://www.hidden-street.net/gms/map/nautilus/victoria-road-pirate-training-center",
+    true
+  ],
   "920030000": [
     "https://bbb.hidden-street.net/map/mini-map/hidden-street-quiet-walk",
     true

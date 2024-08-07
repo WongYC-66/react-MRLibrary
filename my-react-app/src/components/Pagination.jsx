@@ -63,6 +63,10 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         if (urlPathname === "/craft-table") {
             return `?page=${inputNumber}&search=`
         }
+        if (urlPathname === "/npc") {
+            return `?page=${inputNumber}&location=all&type=all&search=`
+        }
+
     }
 
     const RemovePaginationActiveAttribute = useCallback(() => {
