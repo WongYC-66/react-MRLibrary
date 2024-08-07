@@ -15,7 +15,7 @@ import data_Map from "../../../data/data_Map.json"
 import data_MapUrl from "../../../data/data_MapUrl.json"
 
 export default function NPC() {
-    const [npcLibrary, setNPCLibrary] = useState([])
+    const [npcLibrary, setNPCLibrary] = useState({})
 
     useEffect(() => {
         const combined = { ...data_NPC }

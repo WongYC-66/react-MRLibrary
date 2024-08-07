@@ -15,7 +15,8 @@ import data_Map from "../../../data/data_Map.json"
 import data_MapUrl from "../../../data/data_MapUrl.json"
 
 export default function Quest() {
-    const [npcLibrary, setNPCLibrary] = useState([])
+    const [questLibrary, setQuestLibrary] = useState({})
+    console.log(a)
 
     useEffect(() => {
         const combined = { ...data_NPC }
