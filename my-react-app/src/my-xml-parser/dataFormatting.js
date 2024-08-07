@@ -428,10 +428,9 @@ export function SkillStatsDataFormatting(objArr) {
 }
 
 export function QuestDataFormatting(objArr) {
-    // for Quest.Wz ONLY
+    // for Say.img, Act.img, Check.img, Questinfo.img from Quest.Wz ONLY
     // Create better data-structure
     console.log("running QuestDataFormatting")
-    // console.log("parsing Say.img, Act.img, Check.img, Questinfo.img")
     // console.log(objArr)
     const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
 
@@ -476,6 +475,86 @@ export function QuestDataFormatting(objArr) {
 
             simpleData[id][fileSource] = info
         })
+    })
+
+    // console.log(simpleData)
+    return simpleData
+}
+
+export function NPCDataFormatting(obj) {
+    // for NPC.img.xml from String.Wz ONLY
+    // Create better data-structure
+    console.log("running NPCDataFormatting")
+    const simpleData = {}   // {id : {...}}
+    
+    const decodeString = (str) => {
+        return decode(str, { level: 'xml' });
+    }
+
+    const recursiveParse = (arr) => {
+        if (!arr.length) return null
+        let returnObj = {}
+        
+        arr.forEach(obj => {
+            let key = decodeString(obj.attributes.name)
+            let value = obj.attributes.value
+            ? decodeString(obj.attributes.value)
+            : recursiveParse(obj.children)
+            returnObj[key] = value
+        })
+        
+        return returnObj
+    }
+    
+    const arrayData = obj.root.children
+    arrayData.forEach(obj => {
+        let npc_id = obj.attributes.name
+        let childrenArr = obj.children
+        let data = recursiveParse(childrenArr)
+        simpleData[npc_id] = data
+    })
+    
+    return simpleData
+}
+
+export function NPCStatsDataFormatting(objArr) {
+    // for Say.img, Act.img, Check.img, Questinfo.img from Quest.Wz ONLY
+    // Create better data-structure
+    console.log("running NPC_StatsDataFormatting")
+    // console.log(objArr)
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    const decodeString = (str) => {
+        return decode(str, { level: 'xml' });
+    }
+
+    const unwantedStats = new Set(['stand', 'say', 'hand'])
+    // const unwantedStats = new Set([])
+
+    const recursiveParse = (arr) => {
+        if (!arr.length) return null
+        let returnObj = {}
+
+        arr.forEach(obj => {
+            let key = decodeString(obj.attributes.name)
+            if(unwantedStats.has(key)) return       // filter out unwanted
+            let value = obj.attributes.value
+                ? decodeString(obj.attributes.value)
+                : recursiveParse(obj.children)
+            returnObj[key] = value
+        })
+
+        return returnObj
+    }
+
+    objArr.forEach(obj => {
+        let npc_id = obj.root.attributes.name.split('.')[0]
+        
+        let arr = obj.root.children
+        let data = recursiveParse(arr)  
+        
+        // Write into simpleData
+        simpleData[npc_id] = data // {id : {}}
     })
 
     // console.log(simpleData)

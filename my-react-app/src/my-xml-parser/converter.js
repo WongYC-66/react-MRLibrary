@@ -23,6 +23,8 @@ import { MBdataFormatting,
     SkillDataFormatting,
     SkillStatsDataFormatting,
     QuestDataFormatting,
+    NPCDataFormatting,
+    NPCStatsDataFormatting
 } from './dataFormatting.js';
 
 async function MB() {
@@ -117,6 +119,20 @@ async function Quest() {
     console.timeEnd()
 }
 
+async function NPC() {
+    const obj = await parseXML(path.join(__dirname, "../../data/", 'NPC.img.xml'))
+    const simpleData = NPCDataFormatting(obj)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_NPC.json'), simpleData)
+}
+
+async function NPCStats() {
+    console.time()
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/NPC"), "NPC")
+    const simpleData = NPCStatsDataFormatting(objArr)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_NPCStats.json'), simpleData)
+    console.timeEnd()
+}
+
 
 function main() {
     // MB()
@@ -133,7 +149,9 @@ function main() {
     // ItemStats()
     // Skill()
     // SkillStats()
-    Quest()
+    // Quest()
+    // NPC()
+    NPCStats()
 }
 
 main()

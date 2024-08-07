@@ -62,7 +62,11 @@ export async function parseXMLinBulk(dirPath, option = "") {
         subPaths = []
     }
     if(option === "Quest"){
-        // Skill folder doesnt have subfolder
+        // Quest folder doesnt have subfolder
+        subPaths = []
+    }
+    if(option === "NPC"){
+        // NPC folder doesnt have subfolder
         subPaths = []
     }
     // const subPaths = ["Weapon"] // debugging purpose only
