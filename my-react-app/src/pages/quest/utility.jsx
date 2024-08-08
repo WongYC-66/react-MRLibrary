@@ -1,6 +1,17 @@
 import { useSearchParams, Link } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
+import { renderImageWithItemIdType } from "../all/utility.jsx"
+// 
+import data_Quest from "../../../data/data_Quest.json"
+import data_NPC from "../../../data/data_NPC.json"
+
+import data_Eqp from "../../../data/data_Eqp.json"
+import data_Consume from "../../../data/data_Consume.json"
+import data_Ins from "../../../data/data_Ins.json"
+import data_Etc from "../../../data/data_Etc.json"
+
+import data_Mob from '../../../data/data_Mob.json'
 // 
 export const filterQuestList = (questLibrary) => {
     const [searchParams] = useSearchParams()
@@ -75,7 +86,7 @@ export const filterQuestList = (questLibrary) => {
             if (a[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return 1
 
-            return b[0] - a[0]
+            return a[0] - b[0]
         })
         .map(([_id, obj, matchCount]) => [_id, obj])
 
@@ -106,6 +117,7 @@ export const convertAreaCodeToName = (val) => {
     }
     return map[val]
 }
+
 
 
 // 
@@ -161,6 +173,57 @@ export const renderImageWithNPCId = (npcId) => {
 
     return ImageComponent
 }
+
+export const questIdToName = (quest_id) => {
+    try{
+        let questName = data_Quest[quest_id].QuestInfo.name
+        return questName
+    } catch{
+        return `error name : ${quest_id}`
+    }
+}
+
+export const itemIdToNameDict = {
+    ...data_Eqp,
+    ...data_Consume,
+    ...data_Ins,
+    ...data_Etc,
+}
+
+export const convertItemIdToName = (id) => {   // helper fn
+    if (id == 'null') return null
+    if(!(id in itemIdToNameDict)) return null
+    // 'null' = mesos
+    if (typeof itemIdToNameDict[id] === 'string') {
+        return itemIdToNameDict[id]
+    }
+
+    return itemIdToNameDict[id]['name']
+}
+
+export const convertMobIdToName = (id) => {
+    try{
+        let mobName = data_Mob[id]
+        if(!mobName) throw Error()
+        return mobName
+    } catch {
+        return `mob name error : ${id}`
+    }
+}
+
+
+export const renderItemImageWrapper = (itemId) => {
+
+    const itemName = convertItemIdToName(itemId)
+
+    const type = itemId < '2000000'
+        ? 'equip' : itemId < '3000000'
+            ? 'use' : itemId < '4000000'
+                ? 'setup' : 'etc'
+
+    return renderImageWithItemIdType(itemId, itemName, type)
+}
+
 const BEAUTY_KEYWORDS = new Set([
     "Beauty Assistant",
     "Hair Salon Owner",

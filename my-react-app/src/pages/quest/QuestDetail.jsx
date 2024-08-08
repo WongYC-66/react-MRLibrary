@@ -5,36 +5,45 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from "react-bootstrap/Table"
-import Image from "react-bootstrap/Image"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Accordion from 'react-bootstrap/Accordion';
 
 // 
+import {
+    renderImageWithNPCId,
+    renderItemImageWrapper,
+    convertAreaCodeToName,
+    questIdToName,
+    convertItemIdToName,
+    convertMobIdToName,
+} from "./utility.jsx"
 
-// import { renderImageWithSkillId, skillIdToJobString, elementCharToKey } from "./utility.jsx"
-import { filterQuestList, renderImageWithNPCId, convertAreaCodeToName } from "./utility.jsx"
+import { renderImageWithMobId } from "../monster/utility.jsx"
 
 import data_Quest from "../../../data/data_Quest.json"
 import data_NPC from "../../../data/data_NPC.json"
 
 export default function QuestDetail() {
 
-    const [questInfo, setQuestInfo] = useState({})
+    // const [questInfo, setQuestInfo] = useState({})
     let { questId } = useParams();
 
     useEffect(() => {
         let quest_Id = questId.split("=")[1]
         let obj = { quest_Id, ...data_Quest[quest_Id] }
-        setQuestInfo(obj)
+        // setQuestInfo(obj)
     }, [])
+
+    let quest_Id = questId.split("=")[1]
+    let obj = { quest_Id, ...data_Quest[quest_Id] }
+    const questInfo = obj
 
     console.log(questInfo)
     // return 'quest detail'
 
     return (
-        <div className="quest-detail">
+        <div className="quest-detail" key={quest_Id}>
             <Container>
                 <Row>
                     {/* NPC Image, quest name, desc, etc ... */}
@@ -96,7 +105,10 @@ const renderTableLeft = (questInfo) => {
 const renderTableRight = (questInfo) => {
     if (!Object.keys(questInfo).length) return <></>
 
-    let maxIndex = Object.keys(questInfo.Act).length + 1
+    const lengthArr = [questInfo.Act, questInfo.Say, questInfo.Check, questInfo.QuestInfo]
+        .filter(Boolean)
+        .map(obj => Math.max(...Object.keys(obj).filter(k => !isNaN(k))))
+    let maxIndex = Math.max(...lengthArr)
     let indexArr = Array(maxIndex).fill()
 
     return (
@@ -128,13 +140,15 @@ const renderTabByIndex = (questInfo, index) => {
             if (k != 'item') {
                 let propertyName = k
                 if (propertyName == 'pop') propertyName = 'fame'
-                rewards.push({ type: propertyName, count: obj[k] })
+                rewards.push({ type: propertyName, count: JSON.stringify(obj[k]) })
                 continue
             }
 
             if (k == 'item') {
                 let arr = Object.values(obj['item'])
                 arr.forEach(({ id, count, prop }) => {
+                    if (!id) return
+
                     if (!prop) {
                         // not random
                         rewards.push({ type: 'item', id, count })
@@ -155,11 +169,20 @@ const renderTabByIndex = (questInfo, index) => {
             if (obj[k] && typeof obj[k] == 'string') {
                 let propertyName = k
                 if (propertyName == 'lvmin') propertyName = 'level'
-                needed.push({ type: propertyName, count: obj[k] })
+                needed.push({ type: propertyName, count: JSON.stringify(obj[k]) })
                 continue
             }
 
-            if (k != 'item' && k != 'mob' && k != 'quest') continue
+            if (k != 'item' && k != 'mob' && k != 'quest' && k != 'equipAllNeed') continue
+
+            // 'equipAllNeed' array
+            if (k == 'equipAllNeed') {
+                let arr = Object.values(obj[k])
+                arr.forEach(itemId => {
+                    needed.push({ type: k, id: itemId })
+                })
+                continue
+            }
 
             // 'item' / 'mob' / 'quest' array
             let arr = Object.values(obj[k])
@@ -172,12 +195,12 @@ const renderTabByIndex = (questInfo, index) => {
     const recursiveFind = (obj) => {
         let res = []
         for (let k in obj) {
-            if (isNaN(k)) {
-                let deeperRes = recursiveFind(obj[k])
-                res.push(...deeperRes)
-            } else {
+            if (typeof obj[k] == 'string') {
                 res.push(obj[k])
+                continue
             }
+            let deeperRes = recursiveFind(obj[k])
+            res.push(...deeperRes)
         }
         return res
     }
@@ -200,70 +223,24 @@ const renderTabByIndex = (questInfo, index) => {
         }
     }
 
+    // console.log(needed)
     // console.log(dialogueNormal)
+    // console.log(dialogueYes)
+    // console.log(dialogueNo)
+    // console.log(dialogueStop)
+    // console.log(dialogueLost)
+
 
     return (
         <Tab eventKey={index} title={index} key={index}>
-            {/* QuestInfo - what u see at in-game Quest Window */}
-            <Accordion flush className="my-3">
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>Background</Accordion.Header>
-                    <Accordion.Body>
-                        {questInfoString}
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
+            {/* QuestInfo - background, what u see at in-game Quest Window */}
+            {renderBackground(questInfoString)}
 
             {/* Act - Reward/Deduct item */}
-            <h5>Rewards : </h5>
-            <ul>
-                {rewards.map((obj, i) =>
-                    obj.type === 'item'
-                        ? <li key={'reward' + obj.id + i}>
-                            img . name .  {obj.id} x {obj.count}
-                        </li>
-                        : <li key={'reward' + obj.id + i}>
-                            {obj.type} : {obj.count}
-                        </li>
-                )}
-            </ul>
-            <h5>Random Rewards : </h5>
-            <ul>
-                {randomRewards.map((obj, i) =>
-                    // calculate probability too
-                    <li key={'rewardRand' + obj.id + i}>
-                        img . name .  {obj.id} x {obj.count} ({(obj.prop / totalProp * 100).toFixed(2)}%)
-                    </li>
-                )}
-            </ul>
+            {renderReward(rewards, randomRewards, totalProp)}
 
-            {/* Check */}
-            <Accordion flush className="my-3">
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>Needed</Accordion.Header>
-                    <Accordion.Body>
-                        <ul>
-                            {needed.map((obj, i) =>
-                                obj.type === 'item'
-                                    ? <li key={'check' + obj.id + i}>
-                                        img . name .  {obj.id} x {obj.count}
-                                    </li>
-                                    : obj.type === 'mob'
-                                        ? <li key={'check' + obj.id + i}>
-                                            {obj.type} : {obj.count}
-                                        </li>
-                                        : obj.type === 'quest'
-                                            ? <li key={'check' + obj.id + i}>
-                                                {obj.type} : {obj.id} {obj.state}
-                                            </li>
-                                            : <li key={'check' + obj.id + i}>
-                                                {obj.type} : {obj.count}
-                                            </li>
-                            )}
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
+            {/* Check - Needed of Level/Mob Kill/Items*/}
+            {renderNeeded(needed)}
 
             {/* Say */}
             <Accordion flush className="my-3">
@@ -282,12 +259,98 @@ const renderTabByIndex = (questInfo, index) => {
     )
 }
 
+const renderBackground = (questInfoString) => {
+    return (
+        <Accordion flush className="my-3">
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>Background</Accordion.Header>
+                <Accordion.Body>
+                    {questInfoString}
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
+    )
+}
+
+const renderReward = (rewards, randomRewards, totalProp) => {
+    return (
+        <>
+            <h5>Rewards : </h5>
+            <ul>
+                {rewards.map((obj, i) =>
+                    obj.type === 'item'
+                        ? <li key={'reward' + obj.id + i}>
+                            {renderItemImageWrapper(obj.id)}
+                            {convertItemIdToName(obj.id)} :
+                            <span className={`${obj.count < 0 && 'text-danger'} ms-1`}>{obj.count}</span>
+                        </li>
+                        : <li key={'reward' + obj.id + i}>
+                            {obj.type} : {obj.count}
+                        </li>
+                )}
+            </ul>
+            <h5>Random Rewards : </h5>
+            <ul>
+                {randomRewards.map((obj, i) =>
+                    // calculate probability too
+                    <li key={'rewardRand' + obj.id + i}>
+                        {renderItemImageWrapper(obj.id)}
+                        {convertItemIdToName(obj.id)} x {obj.count}
+                        <span className="ms-3"> ({(obj.prop / totalProp * 100).toFixed(2)}%)
+                        </span>
+                    </li>
+                )}
+            </ul>
+        </>
+    )
+}
+
+const renderNeeded = (needed) => {
+    console.log(needed)
+    return (
+        <Accordion flush className="my-3">
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>Needed</Accordion.Header>
+                <Accordion.Body>
+                    <ul>
+                        {needed.map((obj, i) =>
+                            obj.type === 'item'
+                                ? <li key={'check' + obj.id + i}>
+                                    {renderItemImageWrapper(obj.id)}
+                                    {convertItemIdToName(obj.id)} x {obj.count}
+                                </li>
+                                : obj.type === 'mob'
+                                    ? <li key={'check' + obj.id + i}>
+                                        {renderImageWithMobId(obj.id)} {convertMobIdToName(obj.id)} x {obj.count}
+                                    </li>
+                                    : obj.type === 'quest'
+                                        ? <li key={'check' + obj.id + i}>
+                                            {obj.type} :
+                                            <Link to={`../id=${obj.id}`}>{questIdToName(obj.id)} </Link>
+                                            . State : {obj.state}
+                                        </li>
+                                        : obj.type === 'equipAllNeed'
+                                            ? <li key={'check' + obj.id + i}>
+                                                {renderItemImageWrapper(obj.id)}
+                                                {convertItemIdToName(obj.id)}
+                                            </li>
+                                            : <li key={'check' + obj.id + i}>
+                                                {obj.type} : {obj.count}
+                                            </li>
+                        )}
+                    </ul>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
+    )
+}
+
 const renderDialogSection = (dialogArr, title) => {
     if (!dialogArr.length) return <></>
     return (
         <>
             <h5>{title}</h5>
-            {dialogArr.map(str => <p key={title + str}>{str}</p>)}
+            {dialogArr.map((str, i) => <p key={title + str + i}>{str}</p>)}
         </>
     )
 }
