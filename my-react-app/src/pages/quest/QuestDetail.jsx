@@ -17,10 +17,12 @@ import {
     questIdToName,
     convertItemIdToName,
     convertMobIdToName,
-    translateText
+    translateText,
+    convertMobIdToUrl,
+    generateNPCLink
 } from "./utility.jsx"
 
-import { renderImageWithMobId } from "../monster/utility.jsx"
+import { renderImageWithMobId, itemIdToNavUrl } from "../monster/utility.jsx"
 
 import data_Quest from "../../../data/data_Quest.json"
 import data_NPC from "../../../data/data_NPC.json"
@@ -40,8 +42,7 @@ export default function QuestDetail() {
     let obj = { quest_Id, ...data_Quest[quest_Id] }
     const questInfo = obj
 
-    console.log(questInfo)
-    // return 'quest detail'
+    // console.log(questInfo)
 
     return (
         <div className="quest-detail" key={quest_Id}>
@@ -89,12 +90,19 @@ const renderTableLeft = (questInfo) => {
         {/* NPC Image */}
         <tr>
             <td className="bg-transparent">
-                {renderImageWithNPCId(npc_id)}
+                <Link to={generateNPCLink(npc_id)}>
+                    {renderImageWithNPCId(npc_id)}
+                </Link>
             </td>
         </tr>
         {/* NPC Name */}
         <tr>
-            <td>{npcName}</td>
+            <td>
+                <Link to={generateNPCLink(npc_id)}>
+
+                    {npcName}
+                </Link>
+            </td>
         </tr>
         {/* Job Type */}
         <tr>
@@ -283,14 +291,18 @@ const renderReward = (rewards, randomRewards, totalProp) => {
                 {rewards.map((obj, i) =>
                     obj.type === 'item'
                         ? <li key={'reward' + obj.id + i}>
-                            {renderItemImageWrapper(obj.id)}
-                            {convertItemIdToName(obj.id)} :
+                            <Link to={itemIdToNavUrl(obj.id)}>
+                                {renderItemImageWrapper(obj.id)}
+                            </Link>
+                            <Link to={itemIdToNavUrl(obj.id)}>
+                                {convertItemIdToName(obj.id)}
+                            </Link> :
                             <span className={`${obj.count < 0 && 'text-danger'} ms-1`}>{obj.count}</span>
                         </li>
                         : obj.type === 'nextQuest'
                             ? <li key={'check' + obj.id + i}>
                                 {obj.type} :
-                                <Link to={`../id=${obj.count.slice(1,-1)}`}>{questIdToName(obj.count.slice(1, -1))} </Link>
+                                <Link to={`../id=${obj.count.slice(1, -1)}`}>{questIdToName(obj.count.slice(1, -1))} </Link>
                             </li>
                             : <li key={'reward' + obj.id + i}>
                                 {obj.type} : {obj.count}
@@ -302,8 +314,12 @@ const renderReward = (rewards, randomRewards, totalProp) => {
                 {randomRewards.map((obj, i) =>
                     // calculate probability too
                     <li key={'rewardRand' + obj.id + i}>
-                        {renderItemImageWrapper(obj.id)}
-                        {convertItemIdToName(obj.id)} x {obj.count}
+                        <Link to={itemIdToNavUrl(obj.id)}>
+                            {renderItemImageWrapper(obj.id)}
+                        </Link>
+                        <Link to={itemIdToNavUrl(obj.id)}>
+                            {convertItemIdToName(obj.id)}
+                        </Link> x {obj.count}
                         <span className="ms-3"> ({(obj.prop / totalProp * 100).toFixed(2)}%)
                         </span>
                     </li>
@@ -324,12 +340,21 @@ const renderNeeded = (needed) => {
                         {needed.map((obj, i) =>
                             obj.type === 'item'
                                 ? <li key={'check' + obj.id + i}>
-                                    {renderItemImageWrapper(obj.id)}
-                                    {convertItemIdToName(obj.id)} x {obj.count}
+                                    <Link to={itemIdToNavUrl(obj.id)}>
+                                        {renderItemImageWrapper(obj.id)}
+                                    </Link>
+                                    <Link to={itemIdToNavUrl(obj.id)}>
+                                        {convertItemIdToName(obj.id)}
+                                    </Link> x {obj.count}
                                 </li>
                                 : obj.type === 'mob'
                                     ? <li key={'check' + obj.id + i}>
-                                        {renderImageWithMobId(obj.id)} {convertMobIdToName(obj.id)} x {obj.count}
+                                        <Link to={convertMobIdToUrl(obj.id)}>
+                                            {renderImageWithMobId(obj.id)}
+                                        </Link>
+                                        <Link to={convertMobIdToUrl(obj.id)}>
+                                            {convertMobIdToName(obj.id)}
+                                        </Link> x {obj.count}
                                     </li>
                                     : obj.type === 'quest'
                                         ? <li key={'check' + obj.id + i}>

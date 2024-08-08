@@ -212,6 +212,17 @@ export const convertMobIdToName = (id) => {
     }
 }
 
+export const convertMobIdToUrl = (id) => {
+    if(!id) return '/error'
+    return `/monster/id=${id}`
+}
+
+export const generateNPCLink = (npc_id) => {
+    if (!npc_id) return `/error`
+    return `/npc?page=1&location=all&type=all&search=${npc_id}`
+}
+
+
 
 export const renderItemImageWrapper = (itemId) => {
 

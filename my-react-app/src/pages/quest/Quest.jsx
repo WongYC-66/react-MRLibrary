@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterQuestList, renderImageWithNPCId, updateSearchResultCount, convertAreaCodeToName } from "./utility.jsx"
+import { filterQuestList, renderImageWithNPCId, updateSearchResultCount, convertAreaCodeToName, generateNPCLink } from "./utility.jsx"
 
 import data_Quest from "../../../data/data_Quest.json"
 import data_NPC from "../../../data/data_NPC.json"
@@ -174,10 +174,6 @@ const questCard = (quest_id, obj) => {
             <td>{questRegion}</td>
         </tr>)
 
-}
-const generateNPCLink = (npc_id) => {
-    if (!npc_id) return `error`
-    return `../npc?page=1&location=all&type=all&search=${npc_id}`
 }
 
 
