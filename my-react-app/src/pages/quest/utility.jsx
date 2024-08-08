@@ -231,6 +231,8 @@ export const translateText = (p) => {
     //  #p2081007# => npc name
     //  #t4000236# => etc item
     //  #o9420530# => mob name
+    //  #y4557# => quest name
+    // #\n\r => new line
     if (!p) return p
 
     // mapId to MapName
@@ -260,8 +262,10 @@ export const translateText = (p) => {
     })
 
     // itemId to itemName
-    p = p.replaceAll(/\#[tc]([0-9]+)\#/g, (match) => {
+    p = p.replaceAll(/\#[ct]([0-9]+)\#/g, (match) => {
         // match = #t4000236#
+        // match = #c4000236#   // check inventory?
+        if(match[1] == 'c') return '0'
         let itemId = match.slice(2, -1)
         try {
             let itemName = convertItemIdToName(itemId)
@@ -283,13 +287,28 @@ export const translateText = (p) => {
             return `error mob name, mob id : ${match}`
         }
     })
-
+    // questId to questName
+    p = p.replaceAll(/\#y([0-9]+)\#/g, (match) => {
+        // match = #y4557#
+        let questId = match.slice(2, -1)
+        try {
+            let questName = questIdToName(questId)
+            if(!questName) throw Error()
+            return questName
+        } catch {
+            return `quest name error, quest id : ${match}`
+        }
+    })
     // bold text
-    p = p.replaceAll(/\#b(.+?)\#k/g, (match) => {
-        // match = #b abc #k
+    p = p.replaceAll(/\#[br](.+?)\#k/g, (match) => {
+        // match = #b abc #k    // blue
+        // match = #r abc #k   // red
         let contents = match.slice(2, -2)
         return `<b>${contents}</b>`
     })
+
+    // new line
+    p = p.replaceAll(/\\[rn]/g, "<br/>")
 
     return p
 }

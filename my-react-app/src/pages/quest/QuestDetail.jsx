@@ -235,17 +235,17 @@ const renderTabByIndex = (questInfo, index) => {
 
     return (
         <Tab eventKey={index} title={index} key={index}>
-            {/* QuestInfo - background, what u see at in-game Quest Window */}
+            {/* QuestInfo - Background, what u see at in-game Quest Window */}
             {renderBackground(questInfoString)}
 
-            {/* Act - Reward/Deduct item */}
+            {/* Act - Reward/Random Rewards*/}
             {renderReward(rewards, randomRewards, totalProp)}
 
             {/* Check - Needed of Level/Mob Kill/Items*/}
             {renderNeeded(needed)}
 
-            {/* Say */}
-            <Accordion flush className="my-3">
+            {/* Say - Dialogue */}
+            <Accordion defaultActiveKey='999' flush className="my-3">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Dialogue</Accordion.Header>
                     <Accordion.Body>
@@ -263,11 +263,11 @@ const renderTabByIndex = (questInfo, index) => {
 
 const renderBackground = (questInfoString) => {
     return (
-        <Accordion flush className="my-3">
+        <Accordion defaultActiveKey='999' flush className="my-3">
             <Accordion.Item eventKey="0">
                 <Accordion.Header>Background</Accordion.Header>
                 <Accordion.Body>
-                    <p dangerouslySetInnerHTML={{__html:translateText(questInfoString)}}></p>
+                    <p dangerouslySetInnerHTML={{ __html: translateText(questInfoString) }}></p>
                     {/* {translateText(questInfoString) } */}
                 </Accordion.Body>
             </Accordion.Item>
@@ -287,9 +287,14 @@ const renderReward = (rewards, randomRewards, totalProp) => {
                             {convertItemIdToName(obj.id)} :
                             <span className={`${obj.count < 0 && 'text-danger'} ms-1`}>{obj.count}</span>
                         </li>
-                        : <li key={'reward' + obj.id + i}>
-                            {obj.type} : {obj.count}
-                        </li>
+                        : obj.type === 'nextQuest'
+                            ? <li key={'check' + obj.id + i}>
+                                {obj.type} :
+                                <Link to={`../id=${obj.count.slice(1,-1)}`}>{questIdToName(obj.count.slice(1, -1))} </Link>
+                            </li>
+                            : <li key={'reward' + obj.id + i}>
+                                {obj.type} : {obj.count}
+                            </li>
                 )}
             </ul>
             <h5>Random Rewards : </h5>
@@ -311,7 +316,7 @@ const renderReward = (rewards, randomRewards, totalProp) => {
 const renderNeeded = (needed) => {
     // console.log(needed)
     return (
-        <Accordion flush className="my-3">
+        <Accordion defaultActiveKey='0' flush className="my-3">
             <Accordion.Item eventKey="0">
                 <Accordion.Header>Needed</Accordion.Header>
                 <Accordion.Body>
@@ -354,7 +359,7 @@ const renderDialogSection = (dialogArr, title) => {
         <>
             <h5>{title}</h5>
             {/* {dialogArr.map((str, i) => <p key={title + str + i}>{translateText(str)}</p>)} */}
-            {dialogArr.map((str, i) => <p key={title + str + i} dangerouslySetInnerHTML={{__html:translateText(str)}}></p>)}
+            {dialogArr.map((str, i) => <p key={title + str + i} dangerouslySetInnerHTML={{ __html: translateText(str) }}></p>)}
         </>
     )
 }
