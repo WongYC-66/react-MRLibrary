@@ -29,7 +29,10 @@ import UnionSearch, { unionSearchAction } from './pages/tables/UnionSearch.jsx'
 import CraftTable, { craftTableAction } from './pages/tables/CraftTable.jsx'
 
 import NPC, { npcAction } from './pages/npc/NPC.jsx'
+
 import Quest, { questAction } from './pages/quest/Quest.jsx'
+import QuestDetail from './pages/quest/QuestDetail.jsx'
+
 
 import NotFound from './pages/NotFound.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
@@ -104,7 +107,10 @@ const router = createBrowserRouter(
         <Route path="npc" element={< NPC />} action={npcAction}></Route >
 
         {/* Quest */}
-        <Route path="quest" element={< Quest />} action={questAction}></Route >
+        <Route path="quest" action={questAction}>
+          <Route index element={< Quest />}></Route>
+          <Route path=":questId" element={< QuestDetail />}></Route>
+        </Route >
 
         {/* Links */}
         <Route path="about-me" element={< AboutMe />} />

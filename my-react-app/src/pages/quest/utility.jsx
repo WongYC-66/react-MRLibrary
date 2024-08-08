@@ -7,10 +7,6 @@ export const filterQuestList = (questLibrary) => {
 
     let filteredQuestLibrary = Object.entries(questLibrary)
 
-
-    return filteredQuestLibrary
-
-
     const filterOption = Object.fromEntries([...searchParams.entries()])
     // No filter at first loading or if URL don't have query param 
     if (!Object.keys(filterOption).length) return filteredQuestLibrary
@@ -24,98 +20,68 @@ export const filterQuestList = (questLibrary) => {
     searchTermArr = searchTermArr.filter(Boolean)  // filter out space
     // console.log(searchTermArr)
 
-    const typeToHashSetMap = {
-        beauty: BEAUTY_KEYWORDS,
-        crafter: CRAFTER_KEYWORDS,
-        job: JOB_KEYWORDS,
-        merchant: MERCHANT_KEYWORDS,
-        pet: PET_KEYWORDS,
-        storage: STORAGE_KEYWORDS,
-        transport: TRANSPORT_KEYWORDS,
-        wedding: WEDDING_KEYWORDS,
-        other: new Set([...BEAUTY_KEYWORDS, ...CRAFTER_KEYWORDS, ...JOB_KEYWORDS, ...MERCHANT_KEYWORDS, ...PET_KEYWORDS, ...STORAGE_KEYWORDS, ...TRANSPORT_KEYWORDS, ...WEDDING_KEYWORDS]),
-    }
+    filteredQuestLibrary = filteredQuestLibrary
+        .filter(([_id, { QuestInfo }]) => {
+            if (!searchTermArr.length) return true
+            if (!QuestInfo) return false
+            if (!QuestInfo.name) return false
 
-    filteredNPCLibrary = filteredNPCLibrary
-        .filter(([_id, { name, func }]) => {
-            if (!name) return false
-            if(!searchTermArr.length) return true
-
-            if (func && searchTermArr.some(term => func.toLowerCase().includes(term))) return true
-            if (exactSearchTerm === _id) return true
-
-            return searchTermArr.some(term => name.toLowerCase().includes(term))
+            return searchTermArr.some(term => QuestInfo.name.toLowerCase().includes(term))
         })
+        // filter by type user selected ['victoria-island', 'leafre', 'neo-tokyo', ...]
+        .filter(([_id, { QuestInfo }]) => {
+            if (location === 'all') return true
+            if (!QuestInfo) return false
+            if (!QuestInfo.area) return false
 
-    // filter by type user selected ['amoria', 'victoria-island', 'masteria', ...]
-    filteredNPCLibrary = filterFnByLocation(filteredNPCLibrary, location)
+            const locationToAreaCode = {
+                'job' : '10',
+                'maple-island' : '20',
+                'victoria' : '30',
+                'elnath' : '33',
+                'ludus' : '37',
+                'ellin' : '39',
+                'leafre' : '41',
+                'neo-tokyo' : '43',
+                'mulung' : '44',
+                'masteria' : '45',
+                'temple' : '46',
+                'party'  : '47',
+                'world' : '48',
+                'malaysia' : '49',
+                'event' : '50',
+                'title' : '51',
+                'zakum' : '11',
+                'hero' : '6',
+            }
 
-        // filter by type user selected ['beauty', 'merchant', 'wedding', ...]
-        .filter(([id, { func, name }]) => {
-            if (type === 'all') return true
-            if (type === 'other') return !typeToHashSetMap['other'].has(func) && !typeToHashSetMap['other'].has(name)
-
-            let hashSet = typeToHashSetMap[type]
-            return hashSet.has(func) || hashSet.has(name)
+            return QuestInfo.area === locationToAreaCode[location]
         })
         // sort list by  number of search term matches, most matched at first
         .map(([_id, obj]) => {
             let matchCount = 0
-            searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+            if(obj.QuestInfo && obj.QuestInfo.name){
+                searchTermArr.forEach(term => matchCount += obj.QuestInfo.name.toLowerCase().includes(term))
+            }
             return [_id, obj, matchCount]
         })
         .sort((a, b) => {
-            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
-            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
-            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
-            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+            if(!a[1].QuestInfo || !a[1].QuestInfo.name) return 1
+            if(!b[1].QuestInfo || !b[1].QuestInfo.name) return -1
 
-            return b[1] - a[1]
+            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+            if (a[1].QuestInfo.name.toLowerCase() === b[1].QuestInfo.name.toLowerCase()) return 0
+            if (a[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return 1
+
+            return b[0] - a[0]
         })
         .map(([_id, obj, matchCount]) => [_id, obj])
 
-    return filteredNPCLibrary
-}
-// 
-const filterFnByLocation = (filteredNPCLibrary, location) => {
-    if (location === 'all') return filteredNPCLibrary
-
-    let idBoundaryArr = locationToIdRange[location]
-    // console.log({idBoundaryArr})
-    if(location === 'other'){ // all cannot have every single map
-        idBoundaryArr = []
-        Object.values(locationToIdRange).forEach(arr => idBoundaryArr.push(...arr))
-        filteredNPCLibrary =filteredNPCLibrary.filter(([_, {npcLocation}]) => {
-            if(!npcLocation) return false
-            return npcLocation.every(([mapId, _]) => {
-                mapId = Number(mapId)
-                return idBoundaryArr.every(([lowerBound, upperBound]) => mapId < lowerBound || mapId > upperBound)
-            })
-        })
-    } else {
-        filteredNPCLibrary = filteredNPCLibrary.filter(([_, { npcLocation }]) => {
-            if(!npcLocation) return false
-            
-            return npcLocation.some(([mapId, _]) => {
-                mapId = Number(mapId)
-                return idBoundaryArr.some(([lowerBound, upperBound]) => lowerBound <= mapId && mapId <= upperBound)
-            })
-        })
-    }
-        
-    return filteredNPCLibrary
+    return filteredQuestLibrary
 }
 
-const locationToIdRange = {
-    //  lowerbound, upperbound
-    'amoria': [[670000100, 681000000]],
-    'ellin': [[300000000, 300030500]],
-    'maple-island': [[0, 1030000]],
-    'masteria': [[600000000, 610030800]],
-    'ossyria': [[200000000, 280090001]],
-    'victoria-island': [[100000000, 180000004]],
-    'world-tour': [[500000000, 551030200], [701000000, 702100000], [800000000, 809030000]],         // malaysia/singapore/zipangu/ china
-}
+
 // 
 export const renderImageWithNPCId = (npcId) => {
     if (!npcId) return

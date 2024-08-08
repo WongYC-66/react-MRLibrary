@@ -1,6 +1,5 @@
 import { useSearchParams, Form, redirect, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { decode } from 'html-entities'
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
@@ -145,36 +144,63 @@ const renderQuestList = (filteredQuestList) => {
     console.log(filteredQuestList)
     // return
 
-    return filteredQuestList.map(([quest_id, obj]) =>
-        <tr key={quest_id}>
-            <td>{renderImageWithNPCId(obj.Check && obj.Check['0'] && obj.Check['0'].npc)}</td>
-            <td>{obj.Check && data_NPC[obj.Check['0'].npc].name}</td>
-            <td>{obj.QuestInfo && obj.QuestInfo.name}</td>
-            <td>{convertAreaCodeToName(obj?.QuestInfo?.area)}</td>
-        </tr>
-    )
+    return filteredQuestList.map(([quest_id, obj]) => questCard(quest_id, obj))
 }
 
-const convertAreaCodeToName = (val) => {
+const questCard = (quest_id, obj) => {
+
+    const npc_id = obj.Check ? obj.Check['0'].npc : null
+    const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : `name not found, npc id : ${npc_id}`
+    const questName = obj.QuestInfo && obj.QuestInfo.name ? obj.QuestInfo.name : `quest name not found, quest id : ${quest_id}`
+    const questRegion = obj.QuestInfo ? convertAreaCodeToName(obj.QuestInfo.area) : `quest location code not found`
+
+    return (
+        <tr key={quest_id}>
+            <td>
+                <Link to={generateNPCLink(npc_id)}>
+                    {renderImageWithNPCId(npc_id)}
+                </Link>
+            </td>
+            <td>
+                <Link to={generateNPCLink(npc_id)}>
+                    {npcName}
+                </Link>
+            </td>
+            <td>
+                <Link to={`id=${quest_id}`}>
+                    {questName}
+                </Link>
+            </td>
+            <td>{questRegion}</td>
+        </tr>)
+
+}
+const generateNPCLink = (npc_id) => {
+    if (!npc_id) return `error`
+    return `../npc?page=1&location=all&type=all&search=${npc_id}`
+}
+
+export const convertAreaCodeToName = (val) => {
     const map = {
-        10:	'Job',
-        20:	'Maple Island',
-        30:	'Victoria Island',
-        33:	'Elnath Mt + Aquaroad',
-        37:	'Ludus Lake',
-        39:	'Ellin Forest',
-        41:	'Leafre',
+        6: 'Hero With The Lost Memory',
+        10: 'Job',
+        15: 'Cygnus Knights',
+        11: 'Zakum',
+        20: 'Maple Island',
+        30: 'Victoria Island',
+        33: 'Elnath Mt + Aquaroad',
+        37: 'Ludus Lake',
+        39: 'Ellin Forest',
+        41: 'Leafre',
         43: 'Neo Tokyo',
-        44:	'Mu Lung + Nihal Desert',
-        45:	'Masteria',
-        46:	'Temple of Time',
-        47:	'Party Quest',
-        48:	'World Tour',
-        49:	'Malaysia',
-        50:	'Event',
-        51:	'Title',
-        11:	'Hero With The Lost Memory',
-        6:	'Zakum',
+        44: 'Mu Lung + Nihal Desert',
+        45: 'Masteria',
+        46: 'Temple of Time',
+        47: 'Party Quest',
+        48: 'World Tour',
+        49: 'Malaysia',
+        50: 'Event',
+        51: 'Title',
     }
     return map[val]
 }
