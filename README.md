@@ -57,7 +57,11 @@ png
 3. done - add Craft tabs for craftable item in equipDetail and itemDetail
 
 ## Log - Aug 7 2024
-1. doing - revise sort to let exact match in show in top search result.
+1. done - revise sort to let exact match in show in top search result.
+
+## Log - Aug 8 2024
+1. done - Add in NPC page, also added into global search.
+2. done - Add in Quest and QuestDetail Page
 
 Next:
 - grouped by region ?
