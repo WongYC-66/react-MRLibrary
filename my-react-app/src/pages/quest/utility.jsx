@@ -10,6 +10,7 @@ import data_Eqp from "../../../data/data_Eqp.json"
 import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
+import data_Map from "../../../data/data_Map.json"
 
 import data_Mob from '../../../data/data_Mob.json'
 // 
@@ -34,7 +35,7 @@ export const filterQuestList = (questLibrary) => {
     filteredQuestLibrary = filteredQuestLibrary
         .filter(([_id, { QuestInfo }]) => {
             if (!searchTermArr.length) return true
-            if(exactSearchTerm === _id) return true
+            if (exactSearchTerm === _id) return true
             if (!QuestInfo) return false
             if (!QuestInfo.name) return false
 
@@ -47,24 +48,24 @@ export const filterQuestList = (questLibrary) => {
             if (!QuestInfo.area) return false
 
             const locationToAreaCode = {
-                'job' : '10',
-                'maple-island' : '20',
-                'victoria' : '30',
-                'elnath' : '33',
-                'ludus' : '37',
-                'ellin' : '39',
-                'leafre' : '41',
-                'neo-tokyo' : '43',
-                'mulung' : '44',
-                'masteria' : '45',
-                'temple' : '46',
-                'party'  : '47',
-                'world' : '48',
-                'malaysia' : '49',
-                'event' : '50',
-                'title' : '51',
-                'zakum' : '11',
-                'hero' : '6',
+                'job': '10',
+                'maple-island': '20',
+                'victoria': '30',
+                'elnath': '33',
+                'ludus': '37',
+                'ellin': '39',
+                'leafre': '41',
+                'neo-tokyo': '43',
+                'mulung': '44',
+                'masteria': '45',
+                'temple': '46',
+                'party': '47',
+                'world': '48',
+                'malaysia': '49',
+                'event': '50',
+                'title': '51',
+                'zakum': '11',
+                'hero': '6',
             }
 
             return QuestInfo.area === locationToAreaCode[location]
@@ -72,14 +73,14 @@ export const filterQuestList = (questLibrary) => {
         // sort list by  number of search term matches, most matched at first
         .map(([_id, obj]) => {
             let matchCount = 0
-            if(obj.QuestInfo && obj.QuestInfo.name){
+            if (obj.QuestInfo && obj.QuestInfo.name) {
                 searchTermArr.forEach(term => matchCount += obj.QuestInfo.name.toLowerCase().includes(term))
             }
             return [_id, obj, matchCount]
         })
         .sort((a, b) => {
-            if(!a[1].QuestInfo || !a[1].QuestInfo.name) return 1
-            if(!b[1].QuestInfo || !b[1].QuestInfo.name) return -1
+            if (!a[1].QuestInfo || !a[1].QuestInfo.name) return 1
+            if (!b[1].QuestInfo || !b[1].QuestInfo.name) return -1
 
             // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
             if (a[1].QuestInfo.name.toLowerCase() === b[1].QuestInfo.name.toLowerCase()) return 0
@@ -175,10 +176,10 @@ export const renderImageWithNPCId = (npcId) => {
 }
 
 export const questIdToName = (quest_id) => {
-    try{
+    try {
         let questName = data_Quest[quest_id].QuestInfo.name
         return questName
-    } catch{
+    } catch {
         return `error name : ${quest_id}`
     }
 }
@@ -192,7 +193,7 @@ export const itemIdToNameDict = {
 
 export const convertItemIdToName = (id) => {   // helper fn
     if (id == 'null') return null
-    if(!(id in itemIdToNameDict)) return null
+    if (!(id in itemIdToNameDict)) return null
     // 'null' = mesos
     if (typeof itemIdToNameDict[id] === 'string') {
         return itemIdToNameDict[id]
@@ -202,9 +203,9 @@ export const convertItemIdToName = (id) => {   // helper fn
 }
 
 export const convertMobIdToName = (id) => {
-    try{
+    try {
         let mobName = data_Mob[id]
-        if(!mobName) throw Error()
+        if (!mobName) throw Error()
         return mobName
     } catch {
         return `mob name error : ${id}`
@@ -222,6 +223,75 @@ export const renderItemImageWrapper = (itemId) => {
                 ? 'setup' : 'etc'
 
     return renderImageWithItemIdType(itemId, itemName, type)
+}
+
+export const translateText = (p) => {
+    // #b abc #k  => <b> abc </b>
+    //  #m103000000#  => Kerning City
+    //  #p2081007# => npc name
+    //  #t4000236# => etc item
+    //  #o9420530# => mob name
+    if (!p) return p
+
+    // mapId to MapName
+    p = p.replaceAll(/\#m([0-9]+)\#/g, (match) => {
+        // match = #m101000000#
+        let mapId = match.slice(2, -1)
+        try {
+            let mapName = data_Map[mapId].mapName
+            if(!mapName) throw Error()
+            return mapName
+        } catch {
+            return `error map name, map id : ${match}`
+        }
+    })
+
+    // npcId to npcName
+    p = p.replaceAll(/\#p([0-9]+)\#/g, (match) => {
+        // match = #p2081007#
+        let npcId = match.slice(2, -1)
+        try {
+            let npcName = data_NPC[npcId].name
+            if(!npcName) throw Error()
+            return npcName
+        } catch {
+            return `error npc name, npc id : ${match}`
+        }
+    })
+
+    // itemId to itemName
+    p = p.replaceAll(/\#[tc]([0-9]+)\#/g, (match) => {
+        // match = #t4000236#
+        let itemId = match.slice(2, -1)
+        try {
+            let itemName = convertItemIdToName(itemId)
+            if(!itemName) throw Error()
+            return itemName
+        } catch {
+            return `error npc name, item id : ${match}`
+        }
+    })
+    // mobId to mobName
+    p = p.replaceAll(/\#o([0-9]+)\#/g, (match) => {
+        // match = #o9420530#
+        let mobId = match.slice(2, -1)
+        try {
+            let mobName = convertMobIdToName(mobId)
+            if(!mobName) throw Error()
+            return mobName
+        } catch {
+            return `error mob name, mob id : ${match}`
+        }
+    })
+
+    // bold text
+    p = p.replaceAll(/\#b(.+?)\#k/g, (match) => {
+        // match = #b abc #k
+        let contents = match.slice(2, -2)
+        return `<b>${contents}</b>`
+    })
+
+    return p
 }
 
 const BEAUTY_KEYWORDS = new Set([

@@ -17,6 +17,7 @@ import {
     questIdToName,
     convertItemIdToName,
     convertMobIdToName,
+    translateText
 } from "./utility.jsx"
 
 import { renderImageWithMobId } from "../monster/utility.jsx"
@@ -107,8 +108,9 @@ const renderTableRight = (questInfo) => {
 
     const lengthArr = [questInfo.Act, questInfo.Say, questInfo.Check, questInfo.QuestInfo]
         .filter(Boolean)
-        .map(obj => Math.max(...Object.keys(obj).filter(k => !isNaN(k))))
-    let maxIndex = Math.max(...lengthArr)
+        .map(obj => Math.max(...Object.keys(obj).filter(k => Number.isInteger(Number(k)))))
+
+    let maxIndex = Math.max(...lengthArr) + 1
     let indexArr = Array(maxIndex).fill()
 
     return (
@@ -265,7 +267,8 @@ const renderBackground = (questInfoString) => {
             <Accordion.Item eventKey="0">
                 <Accordion.Header>Background</Accordion.Header>
                 <Accordion.Body>
-                    {questInfoString}
+                    <p dangerouslySetInnerHTML={{__html:translateText(questInfoString)}}></p>
+                    {/* {translateText(questInfoString) } */}
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
@@ -306,7 +309,7 @@ const renderReward = (rewards, randomRewards, totalProp) => {
 }
 
 const renderNeeded = (needed) => {
-    console.log(needed)
+    // console.log(needed)
     return (
         <Accordion flush className="my-3">
             <Accordion.Item eventKey="0">
@@ -350,7 +353,8 @@ const renderDialogSection = (dialogArr, title) => {
     return (
         <>
             <h5>{title}</h5>
-            {dialogArr.map((str, i) => <p key={title + str + i}>{str}</p>)}
+            {/* {dialogArr.map((str, i) => <p key={title + str + i}>{translateText(str)}</p>)} */}
+            {dialogArr.map((str, i) => <p key={title + str + i} dangerouslySetInnerHTML={{__html:translateText(str)}}></p>)}
         </>
     )
 }
