@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterQuestList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+import { filterQuestList, renderImageWithNPCId, updateSearchResultCount, convertAreaCodeToName } from "./utility.jsx"
 
 import data_Quest from "../../../data/data_Quest.json"
 import data_NPC from "../../../data/data_NPC.json"
@@ -141,7 +141,7 @@ const renderQuestList = (filteredQuestList) => {
     const sliceEndIndex = sliceStartIndex + 10
     filteredQuestList = filteredQuestList.slice(sliceStartIndex, sliceEndIndex)
 
-    console.log(filteredQuestList)
+    // console.log(filteredQuestList)
     // return
 
     return filteredQuestList.map(([quest_id, obj]) => questCard(quest_id, obj))
@@ -180,30 +180,7 @@ const generateNPCLink = (npc_id) => {
     return `../npc?page=1&location=all&type=all&search=${npc_id}`
 }
 
-export const convertAreaCodeToName = (val) => {
-    const map = {
-        6: 'Hero With The Lost Memory',
-        10: 'Job',
-        15: 'Cygnus Knights',
-        11: 'Zakum',
-        20: 'Maple Island',
-        30: 'Victoria Island',
-        33: 'Elnath Mt + Aquaroad',
-        37: 'Ludus Lake',
-        39: 'Ellin Forest',
-        41: 'Leafre',
-        43: 'Neo Tokyo',
-        44: 'Mu Lung + Nihal Desert',
-        45: 'Masteria',
-        46: 'Temple of Time',
-        47: 'Party Quest',
-        48: 'World Tour',
-        49: 'Malaysia',
-        50: 'Event',
-        51: 'Title',
-    }
-    return map[val]
-}
+
 
 export const questAction = async ({ request }) => {
     const data = await request.formData()

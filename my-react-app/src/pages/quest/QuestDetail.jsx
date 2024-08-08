@@ -9,51 +9,48 @@ import Image from "react-bootstrap/Image"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Accordion from 'react-bootstrap/Accordion';
+
 // 
 
 // import { renderImageWithSkillId, skillIdToJobString, elementCharToKey } from "./utility.jsx"
+import { filterQuestList, renderImageWithNPCId, convertAreaCodeToName } from "./utility.jsx"
 
-import data_skill from "../../../data/data_Skill.json"
-import data_skillStats from "../../../data/data_SkillStats.json"
+import data_Quest from "../../../data/data_Quest.json"
+import data_NPC from "../../../data/data_NPC.json"
 
 export default function QuestDetail() {
 
-    const [skillInfo, setSkillInfo] = useState({})
-    let { skillId } = useParams();
+    const [questInfo, setQuestInfo] = useState({})
+    let { questId } = useParams();
 
     useEffect(() => {
-        let skill_Id = skillId.split("=")[1]
-        let obj = {}
-        obj = {
-            ...data_skillStats[skill_Id],
-            ...data_skill[skill_Id],
-            id: skill_Id,
-        }
-        setSkillInfo(obj)
+        let quest_Id = questId.split("=")[1]
+        let obj = { quest_Id, ...data_Quest[quest_Id] }
+        setQuestInfo(obj)
     }, [])
 
-    // console.log(skillInfo)
+    console.log(questInfo)
+    // return 'quest detail'
 
     return (
-        <div className="skill-detail">
+        <div className="quest-detail">
             <Container>
                 <Row>
-                    {/* Skill Image, name, desc, etc ... */}
+                    {/* NPC Image, quest name, desc, etc ... */}
                     <Col lg={4}>
-                        <div className="skill-stats-card text-center">
+                        <div className="quest-stats-card text-center">
                             <Table bordered hover>
-                                {renderTableLeft(skillInfo)}
+                                {renderTableLeft(questInfo)}
                             </Table>
 
                         </div>
 
                     </Col>
-                    {/* Each Level Stats */}
+                    {/* Quest Stats */}
                     <Col lg={8}>
-                        <div className="skill-level-card">
-                            <Table bordered hover className="text-center">
-                                {renderTableRight(skillInfo)}
-                            </Table>
+                        <div className="quest-detail-card">
+                            {renderTableRight(questInfo)}
                         </div>
                     </Col>
                 </Row>
@@ -63,95 +60,235 @@ export default function QuestDetail() {
     )
 }
 
-const renderTableLeft = (skillInfo) => {
+const renderTableLeft = (questInfo) => {
+    if (!Object.keys(questInfo).length) return <></>
+    const obj = questInfo
+    const quest_Id = obj.quest_Id
+    const npc_id = obj.Check ? obj.Check['0'].npc : null
+    const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : `name not found, npc id : ${npc_id}`
+    const questName = obj.QuestInfo && obj.QuestInfo.name ? obj.QuestInfo.name : `quest name not found, quest id : ${quest_Id}`
+    const questRegion = obj.QuestInfo ? convertAreaCodeToName(obj.QuestInfo.area) : `quest location code not found`
+
     return <tbody>
         {/* Name */}
         <tr>
             <th className="rounded-5">
-                <p dangerouslySetInnerHTML={{ __html: skillInfo.name }}></p>
+                <p>{questName}</p>
             </th>
         </tr>
-        {/* Image */}
+        {/* NPC Image */}
         <tr>
             <td className="bg-transparent">
-                {renderImageWithSkillId(skillInfo.id)}
+                {renderImageWithNPCId(npc_id)}
             </td>
         </tr>
-        {/* Description */}
+        {/* NPC Name */}
         <tr>
-            <td>
-                {skillInfo.desc?.split('\\n').map((str, i) => {
-                    // place "#cImportant Text#" into "<span>Important Text</span>"
-                    str = str.replace(/\#c(.*)#/, `<span class='text-warning fw-bolder'>$1</span>`)
-                    return <p key={i} className="my-0" dangerouslySetInnerHTML={{ __html: str }}></p>
-                })}
-
-            </td>
+            <td>{npcName}</td>
         </tr>
         {/* Job Type */}
         <tr>
-            <td>Job : {skillIdToJobString(skillInfo.id)}</td>
+            <td>Location : {questRegion}</td>
         </tr>
-        {/* Elemental Type Property */}
-        {skillInfo.elemAttr && <tr>
-            <td>Elemental Type :
-                <span className="fw-bold">
-                    {" " + elementCharToKey[skillInfo.elemAttr?.toUpperCase()]}
-                </span>
-            </td>
-        </tr>}
     </tbody>
 };
 
-const renderTableRight = (skillInfo) => {
+const renderTableRight = (questInfo) => {
+    if (!Object.keys(questInfo).length) return <></>
 
-    // Level  & Description data pre-processing
-    const strArr = []
-    for (let i = 1; i <= 30; i++) {
-        let key = `h${i}`
-        if (skillInfo.hasOwnProperty(key)) {
-            strArr.push(skillInfo[key])
-        }
-    }
+    let maxIndex = Object.keys(questInfo.Act).length + 1
+    let indexArr = Array(maxIndex).fill()
 
-    // Stats Column data pre-processing
-    const statStrArr = []
-    for (let i = 1; i <= 30; i++) {
-        if (skillInfo.level && skillInfo.level[i]) {
-            let str = ''
+    return (
+        <Tabs id="controlled-tab-example" className="mb-3">
+            {indexArr.map((_, i) => renderTabByIndex(questInfo, i))}
+        </Tabs>
+    )
+};
 
-            Object.entries(skillInfo.level[i])
-                .filter(x => x[0] != 'hs')
-                .forEach(([key, val]) => {
-                    let subStr = `${key} : ${val} , `
-                    if (key == 'lt' || key == 'rb') {
-                        // overwrite subStr with format : lt:[x:_ , y:_]  or rb:[x:_, y:_]
-                        subStr = `${key} : [ x : ${val.x} , y : ${val.y} ] , `
+const renderTabByIndex = (questInfo, index) => {
+    const questInfoString = questInfo.QuestInfo ? questInfo.QuestInfo[index] : ''
+
+    let rewards = []   // [{type : item/fame/mesos/exp/other, Quantity :}, {...}, ...]
+    let randomRewards = []    //{type, id, Quantity, Prop}, {...}, ...]
+    let totalProp = 0         // calculate total probabiltiy ?
+
+    let needed = []
+
+    let dialogueNormal = []
+    let dialogueYes = []
+    let dialogueNo = []
+    let dialogueStop = []
+    let dialogueLost = []
+
+    // process Act - into  rewards & randomRewards
+    if (questInfo.Act && questInfo.Act[index]) {
+        let obj = questInfo.Act[index]
+        for (let k in obj) {
+            if (k != 'item') {
+                let propertyName = k
+                if (propertyName == 'pop') propertyName = 'fame'
+                rewards.push({ type: propertyName, count: obj[k] })
+                continue
+            }
+
+            if (k == 'item') {
+                let arr = Object.values(obj['item'])
+                arr.forEach(({ id, count, prop }) => {
+                    if (!prop) {
+                        // not random
+                        rewards.push({ type: 'item', id, count })
+                    } else {
+                        totalProp += Number(prop)
+                        randomRewards.push({ type: 'item', id, count, prop: Number(prop) })
                     }
-
-                    str += subStr
                 })
-
-            statStrArr.push(str.slice(0, -2))
+            }
         }
     }
 
-    return <tbody>
-        {/* title row */}
-        <tr>
-            <th className="bg-transparent">Level</th>
-            <th className="bg-transparent">Description</th>
-            <th className="bg-transparent">Stats</th>
-        </tr>
-        {/* Each level row */}
-        {strArr.map((str, i) =>
-            <tr key={i}>
-                <td>{i + 1}</td>
-                <td><p className="my-0" dangerouslySetInnerHTML={{ __html: str }}></p></td>
-                <td>{statStrArr[i]}</td>
-            </tr>
-        )}
-    </tbody>
-};
+    // process Check - into needed array
+    if (questInfo.Check && questInfo.Check[index]) {
+        let obj = questInfo.Check[index]
+        for (let k in obj) {
+            if (k == 'npc') continue
+            if (obj[k] && typeof obj[k] == 'string') {
+                let propertyName = k
+                if (propertyName == 'lvmin') propertyName = 'level'
+                needed.push({ type: propertyName, count: obj[k] })
+                continue
+            }
 
-// const numFormatter = num => Number(num).toLocaleString("en-US")
+            if (k != 'item' && k != 'mob' && k != 'quest') continue
+
+            // 'item' / 'mob' / 'quest' array
+            let arr = Object.values(obj[k])
+            arr.forEach(propObj => {
+                needed.push({ type: k, ...propObj })
+            })
+        }
+    }
+
+    const recursiveFind = (obj) => {
+        let res = []
+        for (let k in obj) {
+            if (isNaN(k)) {
+                let deeperRes = recursiveFind(obj[k])
+                res.push(...deeperRes)
+            } else {
+                res.push(obj[k])
+            }
+        }
+        return res
+    }
+
+    // process Say - into  dialogueNormal/dialogueYes/dialogueNo/dialogueStop/dialoguelost
+    if (questInfo.Say && questInfo.Say[index]) {
+        let obj = questInfo.Say[index]
+        for (let k in obj) {
+            if (k == 'yes') {
+                dialogueYes.push(...recursiveFind(obj[k]))
+            } else if (k == 'no') {
+                dialogueNo.push(...recursiveFind(obj[k]))
+            } else if (k == 'stop') {
+                dialogueStop.push(...recursiveFind(obj[k]))
+            } else if (k == 'lost') {
+                dialogueLost.push(...recursiveFind(obj[k]))
+            } else {
+                dialogueNormal.push(obj[k])
+            }
+        }
+    }
+
+    // console.log(dialogueNormal)
+
+    return (
+        <Tab eventKey={index} title={index} key={index}>
+            {/* QuestInfo - what u see at in-game Quest Window */}
+            <Accordion flush className="my-3">
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Background</Accordion.Header>
+                    <Accordion.Body>
+                        {questInfoString}
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+
+            {/* Act - Reward/Deduct item */}
+            <h5>Rewards : </h5>
+            <ul>
+                {rewards.map((obj, i) =>
+                    obj.type === 'item'
+                        ? <li key={'reward' + obj.id + i}>
+                            img . name .  {obj.id} x {obj.count}
+                        </li>
+                        : <li key={'reward' + obj.id + i}>
+                            {obj.type} : {obj.count}
+                        </li>
+                )}
+            </ul>
+            <h5>Random Rewards : </h5>
+            <ul>
+                {randomRewards.map((obj, i) =>
+                    // calculate probability too
+                    <li key={'rewardRand' + obj.id + i}>
+                        img . name .  {obj.id} x {obj.count} ({(obj.prop / totalProp * 100).toFixed(2)}%)
+                    </li>
+                )}
+            </ul>
+
+            {/* Check */}
+            <Accordion flush className="my-3">
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Needed</Accordion.Header>
+                    <Accordion.Body>
+                        <ul>
+                            {needed.map((obj, i) =>
+                                obj.type === 'item'
+                                    ? <li key={'check' + obj.id + i}>
+                                        img . name .  {obj.id} x {obj.count}
+                                    </li>
+                                    : obj.type === 'mob'
+                                        ? <li key={'check' + obj.id + i}>
+                                            {obj.type} : {obj.count}
+                                        </li>
+                                        : obj.type === 'quest'
+                                            ? <li key={'check' + obj.id + i}>
+                                                {obj.type} : {obj.id} {obj.state}
+                                            </li>
+                                            : <li key={'check' + obj.id + i}>
+                                                {obj.type} : {obj.count}
+                                            </li>
+                            )}
+                        </ul>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+
+            {/* Say */}
+            <Accordion flush className="my-3">
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Dialogue</Accordion.Header>
+                    <Accordion.Body>
+                        {renderDialogSection(dialogueNormal, '')}
+                        {renderDialogSection(dialogueYes, 'Yes')}
+                        {renderDialogSection(dialogueNo, 'No')}
+                        {renderDialogSection(dialogueStop, 'Stop')}
+                        {renderDialogSection(dialogueLost, 'Lost')}
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+        </Tab>
+    )
+}
+
+const renderDialogSection = (dialogArr, title) => {
+    if (!dialogArr.length) return <></>
+    return (
+        <>
+            <h5>{title}</h5>
+            {dialogArr.map(str => <p key={title + str}>{str}</p>)}
+        </>
+    )
+}
+

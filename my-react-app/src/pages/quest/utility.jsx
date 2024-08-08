@@ -23,6 +23,7 @@ export const filterQuestList = (questLibrary) => {
     filteredQuestLibrary = filteredQuestLibrary
         .filter(([_id, { QuestInfo }]) => {
             if (!searchTermArr.length) return true
+            if(exactSearchTerm === _id) return true
             if (!QuestInfo) return false
             if (!QuestInfo.name) return false
 
@@ -79,6 +80,31 @@ export const filterQuestList = (questLibrary) => {
         .map(([_id, obj, matchCount]) => [_id, obj])
 
     return filteredQuestLibrary
+}
+
+export const convertAreaCodeToName = (val) => {
+    const map = {
+        6: 'Hero With The Lost Memory',
+        10: 'Job',
+        15: 'Cygnus Knights',
+        11: 'Zakum',
+        20: 'Maple Island',
+        30: 'Victoria Island',
+        33: 'Elnath Mt + Aquaroad',
+        37: 'Ludus Lake',
+        39: 'Ellin Forest',
+        41: 'Leafre',
+        43: 'Neo Tokyo',
+        44: 'Mu Lung + Nihal Desert',
+        45: 'Masteria',
+        46: 'Temple of Time',
+        47: 'Party Quest',
+        48: 'World Tour',
+        49: 'Malaysia',
+        50: 'Event',
+        51: 'Title',
+    }
+    return map[val]
 }
 
 
