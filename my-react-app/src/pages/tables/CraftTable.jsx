@@ -106,6 +106,7 @@ const filterCraftItemList = (itemLibrary) => {
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTermArr = filterOption.search?.toLowerCase().split(" ") || ['']
+    const exactSearchTerm = filterOption.search?.toLowerCase() || ''
 
     let filteredItemList = Object.entries(itemLibrary)
     if (searchTermArr.length === 1 && searchTermArr[0] === '') return filteredItemList
@@ -142,7 +143,7 @@ const filterCraftItemList = (itemLibrary) => {
         .map(([id, obj]) => {
             // [id, obj] => [id, obj, craftNameMatchCount, materialNameMatchCount]
 
-            let craftNameMatchCount = 0, materialNameMatchCount = 0
+            let craftNameMatchCount = 0, materialNameMatchCount = 0, hasExact = false
             searchTermArr.forEach(term => craftNameMatchCount += obj.itemName.includes(term))
 
             // option - 1 : search each term, the more the merrier against each material, score at Max = Infinity
@@ -150,11 +151,16 @@ const filterCraftItemList = (itemLibrary) => {
             obj.materials.forEach(({ materialName }) => { // option-2 adopted
                 materialNameMatchCount += materialName && searchTermArr.some(term =>
                     materialName.includes(term))
+                if(materialName === exactSearchTerm) hasExact = true
             })
+            if(obj.itemName === exactSearchTerm) hasExact = true
 
-            return [id, obj, craftNameMatchCount, materialNameMatchCount]
+            return [id, obj, craftNameMatchCount, materialNameMatchCount, hasExact]
         })
         .sort((a, b) => {
+            // if hasExact, goto front
+            if(a[4] != b[4]) return b[4] - a[4]
+
             if (a[2] != b[2]) return b[2] - a[2] // by craftNameMatchCount DESC
             if (a[3] != b[3]) return b[3] - a[3] // by materialNameMatchCount DESC
             return a[0] - b[0]                  // by Id ASC
