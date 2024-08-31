@@ -24,6 +24,9 @@ export default function AboutMe() {
                     <li>Zancks</li>
                     <li>Fill</li>
                     <li>Dave Deviluke</li>
+                    <li>Kibito</li>
+                    <li>Nerd</li>
+                    <li>noobgamer97</li>
                 </ul>
             </div>
 
