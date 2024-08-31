@@ -122,10 +122,15 @@ export const filterUseItemList = (itemLibrary) => {
     // console.log("after filter = ", filteredMobList)
     // console.log(`found : ${filteredMobList.length} records`)
 
-    return sort === "descending"
-        ? filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] != undefined)
-            .concat(filteredUseItemList.toReversed().filter(([_, obj]) => obj[order] == undefined))
-        : filteredUseItemList
+    filteredUseItemList = sort === "ascending" ? filteredUseItemList : filteredUseItemList.reverse()
+
+    // split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+    filteredUseItemList = [
+        ...filteredUseItemList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
+        ...filteredUseItemList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
+    ]
+
+    return filteredUseItemList
 }
 
 // 
@@ -285,7 +290,7 @@ export const filterGachaList = (itemLibrary) => {
         searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
         return [obj, matchCount]
     })
-    
+
     filteredItemList.sort((a, b) => {
         // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
         if (a[0].name.toLowerCase() === b[0].name.toLowerCase()) return 0

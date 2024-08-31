@@ -55,6 +55,12 @@ export const filterEquipList = (equipLibrary) => {
     // 5. ascending / descending
     filteredEquipList = sort === "ascending" ? filteredEquipList : filteredEquipList.reverse()
 
+    // 6. split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+    filteredEquipList = [
+        ...filteredEquipList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
+        ...filteredEquipList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
+    ]
+
     return filteredEquipList
 }
 

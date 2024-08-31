@@ -32,14 +32,19 @@ export const filterQuestList = (questLibrary) => {
     searchTermArr = searchTermArr.filter(Boolean)  // filter out space
     // console.log(searchTermArr)
 
+    // console.log(filteredQuestLibrary)
+
     filteredQuestLibrary = filteredQuestLibrary
-        .filter(([_id, { QuestInfo }]) => {
+        .filter(([_id, obj]) => {
+            const { QuestInfo } = obj
             if (!searchTermArr.length) return true
             if (exactSearchTerm === _id) return true
             if (!QuestInfo) return false
             if (!QuestInfo.name) return false
 
             return searchTermArr.some(term => QuestInfo.name.toLowerCase().includes(term))
+                || searchTermArr.some(term => obj.npcName?.toLowerCase().includes(term))
+                || searchTermArr.some(term => obj.npcId?.includes(term))
         })
         // filter by type user selected ['victoria-island', 'leafre', 'neo-tokyo', ...]
         .filter(([_id, { QuestInfo }]) => {
@@ -76,6 +81,9 @@ export const filterQuestList = (questLibrary) => {
             if (obj.QuestInfo && obj.QuestInfo.name) {
                 searchTermArr.forEach(term => matchCount += obj.QuestInfo.name.toLowerCase().includes(term))
             }
+            if (obj.npcName) {
+                searchTermArr.forEach(term => matchCount += obj.npcName.toLowerCase().includes(term))
+            }
             return [_id, obj, matchCount]
         })
         .sort((a, b) => {
@@ -86,6 +94,8 @@ export const filterQuestList = (questLibrary) => {
             if (a[1].QuestInfo.name.toLowerCase() === b[1].QuestInfo.name.toLowerCase()) return 0
             if (a[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return 1
+
+            if(a[2] != b[2]) return b[2] - a[2]
 
             return a[0] - b[0]
         })
@@ -213,7 +223,7 @@ export const convertMobIdToName = (id) => {
 }
 
 export const convertMobIdToUrl = (id) => {
-    if(!id) return '/error'
+    if (!id) return '/error'
     return `/monster/id=${id}`
 }
 
@@ -252,7 +262,7 @@ export const translateText = (p) => {
         let mapId = match.slice(2, -1)
         try {
             let mapName = data_Map[mapId].mapName
-            if(!mapName) throw Error()
+            if (!mapName) throw Error()
             return mapName
         } catch {
             return `error map name, map id : ${match}`
@@ -265,7 +275,7 @@ export const translateText = (p) => {
         let npcId = match.slice(2, -1)
         try {
             let npcName = data_NPC[npcId].name
-            if(!npcName) throw Error()
+            if (!npcName) throw Error()
             return npcName
         } catch {
             return `error npc name, npc id : ${match}`
@@ -276,11 +286,11 @@ export const translateText = (p) => {
     p = p.replaceAll(/\#[ct]([0-9]+)\#/g, (match) => {
         // match = #t4000236#
         // match = #c4000236#   // check inventory?
-        if(match[1] == 'c') return '0'
+        if (match[1] == 'c') return '0'
         let itemId = match.slice(2, -1)
         try {
             let itemName = convertItemIdToName(itemId)
-            if(!itemName) throw Error()
+            if (!itemName) throw Error()
             return itemName
         } catch {
             return `error npc name, item id : ${match}`
@@ -292,7 +302,7 @@ export const translateText = (p) => {
         let mobId = match.slice(2, -1)
         try {
             let mobName = convertMobIdToName(mobId)
-            if(!mobName) throw Error()
+            if (!mobName) throw Error()
             return mobName
         } catch {
             return `error mob name, mob id : ${match}`
@@ -304,7 +314,7 @@ export const translateText = (p) => {
         let questId = match.slice(2, -1)
         try {
             let questName = questIdToName(questId)
-            if(!questName) throw Error()
+            if (!questName) throw Error()
             return questName
         } catch {
             return `quest name error, quest id : ${match}`

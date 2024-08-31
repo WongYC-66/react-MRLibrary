@@ -16,7 +16,15 @@ export default function Quest() {
 
     useEffect(() => {
         const combined = { ...data_Quest }
-
+        // add npc_id + npc_name searchable
+        for (let questId of Object.keys(combined)) {
+            const npc_id = combined[questId].Check && combined[questId].Check['0']
+                ? combined[questId].Check['0'].npc
+                : null
+            const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : null
+            combined[questId].npcId = npc_id
+            combined[questId].npcName = npcName
+        }
         setQuestLibrary(combined)
     }, [])
 
@@ -149,8 +157,11 @@ const renderQuestList = (filteredQuestList) => {
 
 const questCard = (quest_id, obj) => {
 
-    const npc_id = obj.Check ? obj.Check['0'].npc : null
-    const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : `name not found, npc id : ${npc_id}`
+    // const npc_id = obj.Check ? obj.Check['0'].npc : null
+    // const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : `name not found, npc id : ${npc_id}`
+    const npc_id = obj.npcId
+    const npcName = obj.npcName ? obj.npcName : `name not found, npc id : ${npc_id}`
+
     const questName = obj.QuestInfo && obj.QuestInfo.name ? obj.QuestInfo.name : `quest name not found, quest id : ${quest_id}`
     const questRegion = obj.QuestInfo ? convertAreaCodeToName(obj.QuestInfo.area) : `quest location code not found`
 

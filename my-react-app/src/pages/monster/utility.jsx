@@ -60,9 +60,15 @@ export const filterMobList = (mobLibrary) => {
 
     // console.log("after filter = ", filteredMobList)
     // console.log(`found : ${filteredMobList.length} records`)
+    filteredMobList = sort === "descending" ? filteredMobList.reverse() : filteredMobList
 
+     // split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+     filteredMobList = [
+        ...filteredMobList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
+        ...filteredMobList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
+    ]
 
-    return sort === "descending" ? filteredMobList.reverse() : filteredMobList
+    return filteredMobList
 }
 
 export const renderImageWithMobId = (mobId) => {

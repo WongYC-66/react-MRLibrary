@@ -63,6 +63,12 @@ png
 1. done - Add in NPC page, also added into global search.
 2. done - Add in Quest and QuestDetail Page
 
+## Log - Aug 31 2024
+1. done - update library & gacha list to v92.1
+2. done - Added miwok gacha 
+3. done - fixed the sort by DESC bug, where NaN/No value id sort at front
+4. done - add flexibility to search Quest by npc name 
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?

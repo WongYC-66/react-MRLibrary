@@ -1,13 +1,6 @@
 [
     {
         "location": "cbd",
-        "name": "Brand New Monster Galore",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2100014"
-    },
-    {
-        "location": "cbd",
         "name": "Doomsday Staff",
         "type": "equip",
         "high-value": "",
@@ -36,31 +29,10 @@
     },
     {
         "location": "cbd",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "cbd",
-        "name": "Eternal Bullet",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2330005"
-    },
-    {
-        "location": "cbd",
         "name": "Eviscerator",
         "type": "equip",
         "high-value": "",
         "itemId": "1442002"
-    },
-    {
-        "location": "cbd",
-        "name": "Hwabi Throwing-Stars",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2070007"
     },
     {
         "location": "cbd",
@@ -78,6 +50,188 @@
     },
     {
         "location": "cbd",
+        "name": "Red Flowery Tube",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1322022"
+    },
+    {
+        "location": "cbd",
+        "name": "Sad Mask",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1012111"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Beginner)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302073"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Bow)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1452049"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Claw)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1472059"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Crossbow)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462044"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Dagger)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332060"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (One Handed Mace)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1322057"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (One Handed Sword)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302075"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Pole Arm)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442058"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Spear)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1432043"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Staff)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382043"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Two Handed Axe)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1412030"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Two Handed Mace)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1422034"
+    },
+    {
+        "location": "cbd",
+        "name": "Singapore Flag (Two Handed Sword)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1402042"
+    },
+    {
+        "location": "cbd",
+        "name": "Streetlight",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372017"
+    },
+    {
+        "location": "cbd",
+        "name": "Sword Earrings",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1032030"
+    },
+    {
+        "location": "cbd",
+        "name": "White Mouse Kit [1]",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1012087"
+    },
+    {
+        "location": "cbd",
+        "name": "White Mouse Kit [2]",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1012088"
+    },
+    {
+        "location": "cbd",
+        "name": "White Raccoon Mask",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1022060"
+    },
+    {
+        "location": "cbd",
+        "name": "Taru Totem",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031755"
+    },
+    {
+        "location": "cbd",
+        "name": "Zeta Residue",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031753"
+    },
+    {
+        "location": "cbd",
+        "name": "Brand New Monster Galore",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2100014"
+    },
+    {
+        "location": "cbd",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "cbd",
+        "name": "Eternal Bullet",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2330005"
+    },
+    {
+        "location": "cbd",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2070007"
+    },
+    {
+        "location": "cbd",
         "name": "Melting Cheese",
         "type": "other-use",
         "high-value": "",
@@ -92,24 +246,10 @@
     },
     {
         "location": "cbd",
-        "name": "Red Flowery Tube",
-        "type": "equip",
+        "name": "Watermelon",
+        "type": "other-use",
         "high-value": "",
-        "itemId": "1322022"
-    },
-    {
-        "location": "cbd",
-        "name": "Red Round Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010009"
-    },
-    {
-        "location": "cbd",
-        "name": "Sad Mask",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1012111"
+        "itemId": "2001000"
     },
     {
         "location": "cbd",
@@ -470,164 +610,10 @@
     },
     {
         "location": "cbd",
-        "name": "Singapore Flag (Beginner)",
-        "type": "equip",
+        "name": "Red Round Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1302073"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Bow)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1452049"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Claw)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1472059"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Crossbow)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462044"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Dagger)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1332060"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (One Handed Mace)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1322057"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (One Handed Sword)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1302075"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Pole Arm)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442058"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Spear)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1432043"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Staff)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382043"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Two Handed Axe)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1412030"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Two Handed Mace)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1422034"
-    },
-    {
-        "location": "cbd",
-        "name": "Singapore Flag (Two Handed Sword)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1402042"
-    },
-    {
-        "location": "cbd",
-        "name": "Streetlight",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372017"
-    },
-    {
-        "location": "cbd",
-        "name": "Sword Earrings",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1032030"
-    },
-    {
-        "location": "cbd",
-        "name": "Taru Totem",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031755"
-    },
-    {
-        "location": "cbd",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "cbd",
-        "name": "White Mouse Kit [1]",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1012087"
-    },
-    {
-        "location": "cbd",
-        "name": "White Mouse Kit [2]",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1012088"
-    },
-    {
-        "location": "cbd",
-        "name": "White Raccoon Mask",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1022060"
-    },
-    {
-        "location": "cbd",
-        "name": "Zeta Residue",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031753"
-    },
-    {
-        "location": "ellinia",
-        "name": "Ancient Boots",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031920"
-    },
-    {
-        "location": "ellinia",
-        "name": "Ancient Greaves",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031899"
+        "itemId": "3010009"
     },
     {
         "location": "ellinia",
@@ -635,13 +621,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1372015"
-    },
-    {
-        "location": "ellinia",
-        "name": "Antellion Relic",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031757"
     },
     {
         "location": "ellinia",
@@ -848,13 +827,6 @@
     },
     {
         "location": "ellinia",
-        "name": "Dark Neschere",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462017"
-    },
-    {
-        "location": "ellinia",
         "name": "Dark Penance",
         "type": "equip",
         "high-value": "",
@@ -880,69 +852,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1082134"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Gloves for Magic ATT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040815"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Overall Armor for INT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040519"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Overall Armor for INT 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040518"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Overall Armor for LUK 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040521"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Overall Armor for LUK 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040520"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Staff for Magic ATT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2043805"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Staff for Magic ATT 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2043804"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Wand for Magic ATT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2043705"
-    },
-    {
-        "location": "ellinia",
-        "name": "Dark Scroll for Wand for Magic ATT 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2043704"
     },
     {
         "location": "ellinia",
@@ -1009,13 +918,6 @@
     },
     {
         "location": "ellinia",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "ellinia",
         "name": "Evil Tale",
         "type": "equip",
         "high-value": "",
@@ -1044,13 +946,6 @@
     },
     {
         "location": "ellinia",
-        "name": "Green Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010002"
-    },
-    {
-        "location": "ellinia",
         "name": "Green Goldenwind Shoes",
         "type": "equip",
         "high-value": "",
@@ -1072,13 +967,6 @@
     },
     {
         "location": "ellinia",
-        "name": "Lupin Eraser",
-        "type": "quest-etc",
-        "high-value": "",
-        "itemId": "4001040"
-    },
-    {
-        "location": "ellinia",
         "name": "Magicodar",
         "type": "equip",
         "high-value": "",
@@ -1093,13 +981,6 @@
     },
     {
         "location": "ellinia",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "ellinia",
         "name": "Phoenix Wand",
         "type": "equip",
         "high-value": "",
@@ -1111,13 +992,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1002393"
-    },
-    {
-        "location": "ellinia",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
     },
     {
         "location": "ellinia",
@@ -1146,6 +1020,174 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1002080"
+    },
+    {
+        "location": "ellinia",
+        "name": "Thorns",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382006"
+    },
+    {
+        "location": "ellinia",
+        "name": "Umaru",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382054"
+    },
+    {
+        "location": "ellinia",
+        "name": "Yellow Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002082"
+    },
+    {
+        "location": "ellinia",
+        "name": "Ancient Boots",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031920"
+    },
+    {
+        "location": "ellinia",
+        "name": "Ancient Greaves",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031899"
+    },
+    {
+        "location": "ellinia",
+        "name": "Antellion Relic",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031757"
+    },
+    {
+        "location": "ellinia",
+        "name": "Stone Tiger Head",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031913"
+    },
+    {
+        "location": "ellinia",
+        "name": "Subani Ankh",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031759"
+    },
+    {
+        "location": "ellinia",
+        "name": "Zeta Residue",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031753"
+    },
+    {
+        "location": "ellinia",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "ellinia",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "ellinia",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "ellinia",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "ellinia",
+        "name": "Lupin Eraser",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001040"
+    },
+    {
+        "location": "ellinia",
+        "name": "Undine?€?s Cloth",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001115"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Gloves for Magic ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040815"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for INT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040519"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for INT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040518"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for LUK 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040521"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Overall Armor for LUK 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040520"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Staff for Magic ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043805"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Staff for Magic ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043804"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Wand for Magic ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043705"
+    },
+    {
+        "location": "ellinia",
+        "name": "Dark Scroll for Wand for Magic ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043704"
     },
     {
         "location": "ellinia",
@@ -1219,17 +1261,10 @@
     },
     {
         "location": "ellinia",
-        "name": "Stone Tiger Head",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031913"
-    },
-    {
-        "location": "ellinia",
-        "name": "Subani Ankh",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031759"
+        "name": "Green Chair",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": "3010002"
     },
     {
         "location": "ellinia",
@@ -1237,48 +1272,6 @@
         "type": "set-up",
         "high-value": "",
         "itemId": "3010005"
-    },
-    {
-        "location": "ellinia",
-        "name": "Thorns",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382006"
-    },
-    {
-        "location": "ellinia",
-        "name": "Umaru",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382054"
-    },
-    {
-        "location": "ellinia",
-        "name": "Undine?€?s Cloth",
-        "type": "quest-etc",
-        "high-value": "",
-        "itemId": "4001115"
-    },
-    {
-        "location": "ellinia",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "ellinia",
-        "name": "Yellow Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002082"
-    },
-    {
-        "location": "ellinia",
-        "name": "Zeta Residue",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031753"
     },
     {
         "location": "henesys",
@@ -1307,20 +1300,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1002270"
-    },
-    {
-        "location": "henesys",
-        "name": "Black Versal Materia",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031754"
-    },
-    {
-        "location": "henesys",
-        "name": "Blinking Dingbat",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031752"
     },
     {
         "location": "henesys",
@@ -1478,6 +1457,258 @@
     },
     {
         "location": "henesys",
+        "name": "Dragon Shiner Bow",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1452044"
+    },
+    {
+        "location": "henesys",
+        "name": "Dragon Shiner Cross",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462039"
+    },
+    {
+        "location": "henesys",
+        "name": "Elemental Staff 8",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382052"
+    },
+    {
+        "location": "henesys",
+        "name": "Elemental Wand 4",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372038"
+    },
+    {
+        "location": "henesys",
+        "name": "Fire Raven",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462011"
+    },
+    {
+        "location": "henesys",
+        "name": "Golden Crow",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462008"
+    },
+    {
+        "location": "henesys",
+        "name": "Golden Neschere",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462016"
+    },
+    {
+        "location": "henesys",
+        "name": "Golden Nisrock",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1452020"
+    },
+    {
+        "location": "henesys",
+        "name": "Green Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002391"
+    },
+    {
+        "location": "henesys",
+        "name": "Grey Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002394"
+    },
+    {
+        "location": "henesys",
+        "name": "Gross Jaeger",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462009"
+    },
+    {
+        "location": "henesys",
+        "name": "Marine Raven",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462010"
+    },
+    {
+        "location": "henesys",
+        "name": "Metus",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1452017"
+    },
+    {
+        "location": "henesys",
+        "name": "Pink Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002393"
+    },
+    {
+        "location": "henesys",
+        "name": "Purple Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002395"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002080"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Hunter",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002156"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Hunter Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082163"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Hunter Shoes",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072269"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Lumati",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1051039"
+    },
+    {
+        "location": "henesys",
+        "name": "Red Mantle",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1052071"
+    },
+    {
+        "location": "henesys",
+        "name": "Rower",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462007"
+    },
+    {
+        "location": "henesys",
+        "name": "Steel Slain",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1472018"
+    },
+    {
+        "location": "henesys",
+        "name": "Varkit",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332027"
+    },
+    {
+        "location": "henesys",
+        "name": "White Neschere",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462015"
+    },
+    {
+        "location": "henesys",
+        "name": "Xaru",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462047"
+    },
+    {
+        "location": "henesys",
+        "name": "Yellow Crow",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1462022"
+    },
+    {
+        "location": "henesys",
+        "name": "Black Versal Materia",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031754"
+    },
+    {
+        "location": "henesys",
+        "name": "Blinking Dingbat",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031752"
+    },
+    {
+        "location": "henesys",
+        "name": "Naricain Jewel",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031758"
+    },
+    {
+        "location": "henesys",
+        "name": "Pharoah's Wrappings",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031916"
+    },
+    {
+        "location": "henesys",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "henesys",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "henesys",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "henesys",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "henesys",
+        "name": "Mushmom Eraser",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001039"
+    },
+    {
+        "location": "henesys",
         "name": "Dark Scroll for Bow for ATT 30%",
         "type": "scrolls",
         "high-value": "",
@@ -1548,216 +1779,6 @@
     },
     {
         "location": "henesys",
-        "name": "Dragon Shiner Bow",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1452044"
-    },
-    {
-        "location": "henesys",
-        "name": "Dragon Shiner Cross",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462039"
-    },
-    {
-        "location": "henesys",
-        "name": "Elemental Staff 8",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382052"
-    },
-    {
-        "location": "henesys",
-        "name": "Elemental Wand 4",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372038"
-    },
-    {
-        "location": "henesys",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "henesys",
-        "name": "Fire Raven",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462011"
-    },
-    {
-        "location": "henesys",
-        "name": "Gold Seal Cushion",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010017"
-    },
-    {
-        "location": "henesys",
-        "name": "Golden Crow",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462008"
-    },
-    {
-        "location": "henesys",
-        "name": "Golden Neschere",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462016"
-    },
-    {
-        "location": "henesys",
-        "name": "Golden Nisrock",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1452020"
-    },
-    {
-        "location": "henesys",
-        "name": "Green Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002391"
-    },
-    {
-        "location": "henesys",
-        "name": "Grey Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002394"
-    },
-    {
-        "location": "henesys",
-        "name": "Gross Jaeger",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462009"
-    },
-    {
-        "location": "henesys",
-        "name": "Marine Raven",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462010"
-    },
-    {
-        "location": "henesys",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "henesys",
-        "name": "Metus",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1452017"
-    },
-    {
-        "location": "henesys",
-        "name": "Moon Star Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010014"
-    },
-    {
-        "location": "henesys",
-        "name": "Mushmom Eraser",
-        "type": "quest-etc",
-        "high-value": "",
-        "itemId": "4001039"
-    },
-    {
-        "location": "henesys",
-        "name": "Naricain Jewel",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031758"
-    },
-    {
-        "location": "henesys",
-        "name": "Pharoah's Wrappings",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031916"
-    },
-    {
-        "location": "henesys",
-        "name": "Pink Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002393"
-    },
-    {
-        "location": "henesys",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
-    },
-    {
-        "location": "henesys",
-        "name": "Purple Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002395"
-    },
-    {
-        "location": "henesys",
-        "name": "Red Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002080"
-    },
-    {
-        "location": "henesys",
-        "name": "Red Hunter",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002156"
-    },
-    {
-        "location": "henesys",
-        "name": "Red Hunter Gloves",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082163"
-    },
-    {
-        "location": "henesys",
-        "name": "Red Hunter Shoes",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1072269"
-    },
-    {
-        "location": "henesys",
-        "name": "Red Lumati",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1051039"
-    },
-    {
-        "location": "henesys",
-        "name": "Red Mantle",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1052071"
-    },
-    {
-        "location": "henesys",
-        "name": "Rower",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462007"
-    },
-    {
-        "location": "henesys",
         "name": "Scroll for Bow for ATT 10%",
         "type": "scrolls",
         "high-value": "",
@@ -1814,10 +1835,17 @@
     },
     {
         "location": "henesys",
-        "name": "Steel Slain",
-        "type": "equip",
+        "name": "Gold Seal Cushion",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1472018"
+        "itemId": "3010017"
+    },
+    {
+        "location": "henesys",
+        "name": "Moon Star Chair",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": "3010014"
     },
     {
         "location": "henesys",
@@ -1825,55 +1853,6 @@
         "type": "set-up",
         "high-value": "",
         "itemId": "3010004"
-    },
-    {
-        "location": "henesys",
-        "name": "Varkit",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1332027"
-    },
-    {
-        "location": "henesys",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "henesys",
-        "name": "White Neschere",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462015"
-    },
-    {
-        "location": "henesys",
-        "name": "Xaru",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462047"
-    },
-    {
-        "location": "henesys",
-        "name": "Yellow Crow",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462022"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Ancient Gi",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031919"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Ancient Greaves",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031899"
     },
     {
         "location": "kerning-city",
@@ -2080,13 +2059,6 @@
     },
     {
         "location": "kerning-city",
-        "name": "Dark Neschere",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1462017"
-    },
-    {
-        "location": "kerning-city",
         "name": "Dark Pirate Blouse (F)",
         "type": "equip",
         "high-value": "",
@@ -2133,76 +2105,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1060089"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Claw for ATT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2044705"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Claw for ATT 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2044704"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Dagger for ATT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2043305"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Dagger for ATT 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2043304"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Gloves for ATT 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040811"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Gloves for ATT 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040810"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Overall Armor for DEX 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040509"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Overall Armor for DEX 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040508"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Overall Armor for LUK 30%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040521"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Dark Scroll for Overall Armor for LUK 70%",
-        "type": "scrolls",
-        "high-value": "",
-        "itemId": "2040520"
     },
     {
         "location": "kerning-city",
@@ -2262,13 +2164,6 @@
     },
     {
         "location": "kerning-city",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "kerning-city",
         "name": "Gold Double Knife",
         "type": "equip",
         "high-value": "",
@@ -2287,13 +2182,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1082097"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Green Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010002"
     },
     {
         "location": "kerning-city",
@@ -2353,20 +2241,6 @@
     },
     {
         "location": "kerning-city",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Mystic Astrolabe",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031756"
-    },
-    {
-        "location": "kerning-city",
         "name": "Pink Bandana",
         "type": "equip",
         "high-value": "",
@@ -2378,13 +2252,6 @@
         "type": "equip",
         "high-value": "1",
         "itemId": "1102084"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
     },
     {
         "location": "kerning-city",
@@ -2493,6 +2360,174 @@
     },
     {
         "location": "kerning-city",
+        "name": "Serpent?€?s Coil",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332017"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Shinkita",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332003"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Steel Slain",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1472018"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Umber Mantis",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1041096"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Umber Mantis Pants (F)",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1061095"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Yellow Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002082"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Ancient Gi",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031919"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Ancient Greaves",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031899"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Mystic Astrolabe",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031756"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Zeta Residue",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031753"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Claw for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044705"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Claw for ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044704"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Dagger for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043305"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Dagger for ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043304"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Gloves for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040811"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Gloves for ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040810"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040509"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040508"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for LUK 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040521"
+    },
+    {
+        "location": "kerning-city",
+        "name": "Dark Scroll for Overall Armor for LUK 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040520"
+    },
+    {
+        "location": "kerning-city",
         "name": "Scroll for Claw for ATT 10%",
         "type": "scrolls",
         "high-value": "",
@@ -2549,24 +2584,10 @@
     },
     {
         "location": "kerning-city",
-        "name": "Serpent?€?s Coil",
-        "type": "equip",
+        "name": "Green Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1332017"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Shinkita",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1332003"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Steel Slain",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1472018"
+        "itemId": "3010002"
     },
     {
         "location": "kerning-city",
@@ -2577,52 +2598,10 @@
     },
     {
         "location": "kerning-city",
-        "name": "Umber Mantis",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1041096"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Umber Mantis Pants (F)",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1061095"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "kerning-city",
         "name": "White Seal Cushion",
         "type": "set-up",
         "high-value": "",
         "itemId": "3010010"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Yellow Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002082"
-    },
-    {
-        "location": "kerning-city",
-        "name": "Zeta Residue",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031753"
-    },
-    {
-        "location": "lhc",
-        "name": "5 million mesos",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "1234567890"
     },
     {
         "location": "lhc",
@@ -2637,13 +2616,6 @@
         "type": "equip",
         "high-value": "1",
         "itemId": "1082149"
-    },
-    {
-        "location": "lhc",
-        "name": "Chaos Scroll 60%",
-        "type": "scrolls",
-        "high-value": "1",
-        "itemId": "2049100"
     },
     {
         "location": "lhc",
@@ -2665,6 +2637,188 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1452021"
+    },
+    {
+        "location": "lhc",
+        "name": "Dimon Wand",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372010"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 5",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372039"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 6",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372040"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 7",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1372041"
+    },
+    {
+        "location": "lhc",
+        "name": "Elemental Wand 8",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372042"
+    },
+    {
+        "location": "lhc",
+        "name": "Gold Double Knife",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332051"
+    },
+    {
+        "location": "lhc",
+        "name": "Golden Smith Hammer",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1422027"
+    },
+    {
+        "location": "lhc",
+        "name": "King Cent",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1482012"
+    },
+    {
+        "location": "lhc",
+        "name": "Pinaka",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1432030"
+    },
+    {
+        "location": "lhc",
+        "name": "Pink Adventurer Cape",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1102041"
+    },
+    {
+        "location": "lhc",
+        "name": "Purple Adventurer Cape",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1102042"
+    },
+    {
+        "location": "lhc",
+        "name": "Red Craven",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1472053"
+    },
+    {
+        "location": "lhc",
+        "name": "Sky Ski",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1432018"
+    },
+    {
+        "location": "lhc",
+        "name": "Sparta",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302056"
+    },
+    {
+        "location": "lhc",
+        "name": "Stonetooth Sword",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1402037"
+    },
+    {
+        "location": "lhc",
+        "name": "Tavar",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1412021"
+    },
+    {
+        "location": "lhc",
+        "name": "Tomahawk",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1312030"
+    },
+    {
+        "location": "lhc",
+        "name": "Taru Totem",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031755"
+    },
+    {
+        "location": "lhc",
+        "name": "5 million mesos",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "1234567890"
+    },
+    {
+        "location": "lhc",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "lhc",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "lhc",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "lhc",
+        "name": "Reindeer Milk",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020013"
+    },
+    {
+        "location": "lhc",
+        "name": "Sunrise Dew",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020014"
+    },
+    {
+        "location": "lhc",
+        "name": "The Energizer Drink (1~4)",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2022345"
+    },
+    {
+        "location": "lhc",
+        "name": "Chaos Scroll 60%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049100"
     },
     {
         "location": "lhc",
@@ -2791,118 +2945,6 @@
         "type": "scrolls",
         "high-value": "",
         "itemId": "2043705"
-    },
-    {
-        "location": "lhc",
-        "name": "Dimon Wand",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372010"
-    },
-    {
-        "location": "lhc",
-        "name": "Elemental Wand 5",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372039"
-    },
-    {
-        "location": "lhc",
-        "name": "Elemental Wand 6",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372040"
-    },
-    {
-        "location": "lhc",
-        "name": "Elemental Wand 7",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1372041"
-    },
-    {
-        "location": "lhc",
-        "name": "Elemental Wand 8",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372042"
-    },
-    {
-        "location": "lhc",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "lhc",
-        "name": "Gold Double Knife",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1332051"
-    },
-    {
-        "location": "lhc",
-        "name": "Golden Smith Hammer",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1422027"
-    },
-    {
-        "location": "lhc",
-        "name": "King Cent",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1482012"
-    },
-    {
-        "location": "lhc",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "lhc",
-        "name": "Pinaka",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1432030"
-    },
-    {
-        "location": "lhc",
-        "name": "Pink Adventurer Cape",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1102041"
-    },
-    {
-        "location": "lhc",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
-    },
-    {
-        "location": "lhc",
-        "name": "Purple Adventurer Cape",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1102042"
-    },
-    {
-        "location": "lhc",
-        "name": "Red Craven",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1472053"
-    },
-    {
-        "location": "lhc",
-        "name": "Reindeer Milk",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020013"
     },
     {
         "location": "lhc",
@@ -3053,66 +3095,1011 @@
     },
     {
         "location": "lhc",
-        "name": "Sky Ski",
-        "type": "equip",
+        "name": "White Scroll",
+        "type": "scrolls",
         "high-value": "1",
-        "itemId": "1432018"
+        "itemId": "2340000"
     },
     {
-        "location": "lhc",
-        "name": "Sparta",
+        "location": "miwok",
+        "name": "Black Emerald Earrings",
         "type": "equip",
         "high-value": "",
-        "itemId": "1302056"
+        "itemId": "1032027"
     },
     {
-        "location": "lhc",
+        "location": "miwok",
+        "name": "Black Snowshoes",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072171"
+    },
+    {
+        "location": "miwok",
+        "name": "Brown Work Gloves",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1082149"
+    },
+    {
+        "location": "miwok",
+        "name": "Crystal Flower Earrings",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1032019"
+    },
+    {
+        "location": "miwok",
+        "name": "Fallen Leaf Earrings",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1032032"
+    },
+    {
+        "location": "miwok",
+        "name": "Gold Emerald Earrings",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1032026"
+    },
+    {
+        "location": "miwok",
+        "name": "Green Snowshoes",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072170"
+    },
+    {
+        "location": "miwok",
+        "name": "Grey Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002394"
+    },
+    {
+        "location": "miwok",
+        "name": "Grey Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082150"
+    },
+    {
+        "location": "miwok",
+        "name": "Holy Cross Earrings",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1032021"
+    },
+    {
+        "location": "miwok",
+        "name": "Pink Adventurer Cape",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1102041"
+    },
+    {
+        "location": "miwok",
+        "name": "Pink Gaia Cape",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1102084"
+    },
+    {
+        "location": "miwok",
+        "name": "Purple Adventurer Cape",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1102042"
+    },
+    {
+        "location": "miwok",
+        "name": "Purple Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082148"
+    },
+    {
+        "location": "miwok",
+        "name": "Red Emerald Earrings",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1032028"
+    },
+    {
+        "location": "miwok",
+        "name": "Skull Earrings",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1032012"
+    },
+    {
+        "location": "miwok",
+        "name": "Stone Shield",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1092068"
+    },
+    {
+        "location": "miwok",
         "name": "Stonetooth Sword",
         "type": "equip",
         "high-value": "1",
         "itemId": "1402037"
     },
     {
-        "location": "lhc",
-        "name": "Sunrise Dew",
-        "type": "other-use",
+        "location": "miwok",
+        "name": "Violet Snowshoes",
+        "type": "equip",
         "high-value": "",
-        "itemId": "2020014"
+        "itemId": "1072238"
     },
     {
-        "location": "lhc",
+        "location": "miwok",
+        "name": "Yellow Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002082"
+    },
+    {
+        "location": "miwok",
+        "name": "Yellow Snowshoes",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1072239"
+    },
+    {
+        "location": "miwok",
+        "name": "Yellow Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082145"
+    },
+    {
+        "location": "miwok",
+        "name": "Ancient Faceguard",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031918"
+    },
+    {
+        "location": "miwok",
+        "name": "Ancient Greaves",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031899"
+    },
+    {
+        "location": "miwok",
+        "name": "Ancient Helm",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031897"
+    },
+    {
+        "location": "miwok",
+        "name": "Antellion Relic",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031757"
+    },
+    {
+        "location": "miwok",
+        "name": "Crystal Shard",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031917"
+    },
+    {
+        "location": "miwok",
+        "name": "Naricain Jewel",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031758"
+    },
+    {
+        "location": "miwok",
+        "name": "Ridley's Book of Rituals\n",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031900"
+    },
+    {
+        "location": "miwok",
+        "name": "Subani Ankh",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031759"
+    },
+    {
+        "location": "miwok",
         "name": "Taru Totem",
         "type": "itcg",
         "high-value": "1",
         "itemId": "4031755"
     },
     {
-        "location": "lhc",
-        "name": "Tavar",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1412021"
-    },
-    {
-        "location": "lhc",
-        "name": "The Energizer Drink (1~4)",
+        "location": "miwok",
+        "name": "Diamond Arrow for Bow",
         "type": "other-use",
         "high-value": "",
-        "itemId": "2022345"
+        "itemId": "2060004"
     },
     {
-        "location": "lhc",
-        "name": "Tomahawk",
-        "type": "equip",
+        "location": "miwok",
+        "name": "Diamond Arrow for Crossbow",
+        "type": "other-use",
         "high-value": "",
-        "itemId": "1312030"
+        "itemId": "2061004"
     },
     {
-        "location": "lhc",
+        "location": "miwok",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2070007"
+    },
+    {
+        "location": "miwok",
+        "name": "Amethyst",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4021001"
+    },
+    {
+        "location": "miwok",
+        "name": "Aquamarine",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4021002"
+    },
+    {
+        "location": "miwok",
+        "name": "Black Crystal",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4021008"
+    },
+    {
+        "location": "miwok",
+        "name": "Emerald ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4020003"
+    },
+    {
+        "location": "miwok",
+        "name": "Garnet Ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4020000"
+    },
+    {
+        "location": "miwok",
+        "name": "Gold ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4010006"
+    },
+    {
+        "location": "miwok",
+        "name": "Gold Plate",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4011006"
+    },
+    {
+        "location": "miwok",
+        "name": "Lidium ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4010007"
+    },
+    {
+        "location": "miwok",
+        "name": "Mithril Plate",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4011002"
+    },
+    {
+        "location": "miwok",
+        "name": "Moon Rock",
+        "type": "quest-etc",
+        "high-value": "1",
+        "itemId": "4011007"
+    },
+    {
+        "location": "miwok",
+        "name": "Opal",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4021004"
+    },
+    {
+        "location": "miwok",
+        "name": "Opal Ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4020004"
+    },
+    {
+        "location": "miwok",
+        "name": "Silver Ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4010004"
+    },
+    {
+        "location": "miwok",
+        "name": "Star Rock",
+        "type": "quest-etc",
+        "high-value": "1",
+        "itemId": "4021009"
+    },
+    {
+        "location": "miwok",
+        "name": "Steel ore",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4010001"
+    },
+    {
+        "location": "miwok",
+        "name": "Steel Plate",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4011001"
+    },
+    {
+        "location": "miwok",
+        "name": "Tao of Harmony",
+        "type": "quest-etc",
+        "high-value": "1",
+        "itemId": "4032017"
+    },
+    {
+        "location": "miwok",
+        "name": "Tao of Shadows",
+        "type": "quest-etc",
+        "high-value": "1",
+        "itemId": "4032015"
+    },
+    {
+        "location": "miwok",
+        "name": "Tao of Sight",
+        "type": "quest-etc",
+        "high-value": "1",
+        "itemId": "4032016"
+    },
+    {
+        "location": "miwok",
+        "name": "Chaos Scroll 60%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049100"
+    },
+    {
+        "location": "miwok",
+        "name": "Clean Slate Scroll 1%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049000"
+    },
+    {
+        "location": "miwok",
+        "name": "Clean Slate Scroll 20%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049003"
+    },
+    {
+        "location": "miwok",
+        "name": "Clean Slate Scroll 3%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049001"
+    },
+    {
+        "location": "miwok",
+        "name": "Clean Slate Scroll 5%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049002"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Bottomwear for DEX 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040611"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Cape for INT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041037"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Cape for INT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041037"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Cape for MP 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041033"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Cape for Weapon Def. 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041029"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Cape for Weapon Def. 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041028"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Dagger for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043305"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark scroll for Earring for DEX 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040307"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark scroll for Earring for INT 30%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2040305"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Eye Accessory for HP 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040204"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Eye Accessory for INT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040208"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Face Accessory for DEX 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040108"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Gloves for DEX 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040808"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Gloves for HP 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040813"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Gloves for Magic Att. 30%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2040815"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Gloves for Magic Att. 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040814"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Gun for Attack 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044904"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Helmet for HP 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040011"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Knuckle for Attack 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044804"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for One-Handed Axe for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043105"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for One-Handed BW for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043205"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for One-Handed BW for ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043204"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Overall Armor for DEF 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040511"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Overall Armor for DEX 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040509"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Overall Armor for DEX 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040508"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Overall Armor for INT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040519"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Overall Armor for INT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040518"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for DEF 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040905"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for HP 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040909"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for HP 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040908"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for LUK 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040906"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for Magic Att. 30%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2040922"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for Magic Att. 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040921"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for STR 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040932"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for STR 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040930"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shield for Weapon Att. 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040916"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shoes for DEX 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040712"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Shoes for Speed 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040717"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Spear for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044305"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Staff for Magic Att. 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043805"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Staff for Magic Att. 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2043804"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Topwear for DEF 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040404"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Topwear for LUK 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040410"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Topwear for LUK 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040410"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Two-handed Sword for ATT 30%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044005"
+    },
+    {
+        "location": "miwok",
+        "name": "Dark Scroll for Two-handed Sword for ATT 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044004"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Bottomwear for DEX 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040613"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Bottomwear for Jump 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040618"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Bow for ATT 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044501"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Cape for DEX 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041019"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Cape for HP 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041007"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Cape for Magic Def. 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041001"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Cape for STR 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041013"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Cape for Weapon Def. 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2041004"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Crossbow for ATT 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044601"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Earring for DEF 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040311"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Earring for HP 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040326"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Earring for LUK 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040321"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Earring for LUK 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040320"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Eye Accessory for INT 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040206"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Face Accessory for DEX 60%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2040106"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Gloves for ATT 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040804"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Gun for Attack 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044901"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Helmet for HP 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040004"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Overall Armor for DEX 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040501"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Overall Armor for LUK 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040516"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Overall Armor for LUK 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040516"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Pet Equip. for HP 10%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2048016"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Pet Equip. for HP 100%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2048014"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Pet Equip. for HP 70%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2048017"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Shield for LUK 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040924"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Shield for Magic Att. 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040919"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Shield for Magic Att. 60%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2040919"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Shield for STR 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040931"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Shoes for DEX 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040701"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Shoes for Speed 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040707"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Topwear for DEF 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040401"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Topwear for HP 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2040421"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Two-handed Axe for ATT 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044101"
+    },
+    {
+        "location": "miwok",
+        "name": "Scroll for Two-handed Sword for ATT 60%",
+        "type": "scrolls",
+        "high-value": "",
+        "itemId": "2044001"
+    },
+    {
+        "location": "miwok",
         "name": "White Scroll",
         "type": "scrolls",
         "high-value": "1",
         "itemId": "2340000"
+    },
+    {
+        "location": "miwok",
+        "name": "Spiegelmann's Ancient Rock Chair",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": "3010365"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Elemental Staff 3",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382047"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Elemental Wand 6",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372040"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Purple Gaia Cape",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1102086"
     },
     {
         "location": "mushroom-shrine",
@@ -3137,17 +4124,52 @@
     },
     {
         "location": "mushroom-shrine",
-        "name": "Chaos Scroll 60%",
-        "type": "scrolls",
-        "high-value": "1",
-        "itemId": "2049100"
-    },
-    {
-        "location": "mushroom-shrine",
         "name": "Dark Matter",
         "type": "itcg",
         "high-value": "",
         "itemId": "4031750"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "LeFay Jewel",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031915"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Taru Spirit Feather",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031936"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "mushroom-shrine",
+        "name": "Chaos Scroll 60%",
+        "type": "scrolls",
+        "high-value": "1",
+        "itemId": "2049100"
     },
     {
         "location": "mushroom-shrine",
@@ -4138,52 +5160,10 @@
     },
     {
         "location": "mushroom-shrine",
-        "name": "Elemental Staff 3",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382047"
-    },
-    {
-        "location": "mushroom-shrine",
-        "name": "Elemental Wand 6",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372040"
-    },
-    {
-        "location": "mushroom-shrine",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "mushroom-shrine",
         "name": "Kadomatsu",
         "type": "set-up",
         "high-value": "",
         "itemId": "3010019"
-    },
-    {
-        "location": "mushroom-shrine",
-        "name": "LeFay Jewel",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031915"
-    },
-    {
-        "location": "mushroom-shrine",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "mushroom-shrine",
-        "name": "Purple Gaia Cape",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1102086"
     },
     {
         "location": "mushroom-shrine",
@@ -4194,24 +5174,10 @@
     },
     {
         "location": "mushroom-shrine",
-        "name": "Taru Spirit Feather",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031936"
-    },
-    {
-        "location": "mushroom-shrine",
         "name": "The Red Relaxer",
         "type": "set-up",
         "high-value": "",
         "itemId": "3010005"
-    },
-    {
-        "location": "mushroom-shrine",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
     },
     {
         "location": "nautilus",
@@ -4219,13 +5185,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1492009"
-    },
-    {
-        "location": "nautilus",
-        "name": "Ancient Boots",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031920"
     },
     {
         "location": "nautilus",
@@ -4292,24 +5251,10 @@
     },
     {
         "location": "nautilus",
-        "name": "Black Versal Materia",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031754"
-    },
-    {
-        "location": "nautilus",
         "name": "Black Voyson Shoes",
         "type": "equip",
         "high-value": "",
         "itemId": "1072309"
-    },
-    {
-        "location": "nautilus",
-        "name": "Blinking Dingbat",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031752"
     },
     {
         "location": "nautilus",
@@ -4390,10 +5335,227 @@
     },
     {
         "location": "nautilus",
-        "name": "Dark Neschere",
+        "name": "Dragon Revolver",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1492013"
+    },
+    {
+        "location": "nautilus",
+        "name": "Dragon Slash Claw",
         "type": "equip",
         "high-value": "",
-        "itemId": "1462017"
+        "itemId": "1482013"
+    },
+    {
+        "location": "nautilus",
+        "name": "Fury Claw",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1482007"
+    },
+    {
+        "location": "nautilus",
+        "name": "Green Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002391"
+    },
+    {
+        "location": "nautilus",
+        "name": "Green Plasteer",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1052116"
+    },
+    {
+        "location": "nautilus",
+        "name": "Grey Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002394"
+    },
+    {
+        "location": "nautilus",
+        "name": "Infinity?€?s Wrath",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1492010"
+    },
+    {
+        "location": "nautilus",
+        "name": "Mr. Rasfelt",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1492007"
+    },
+    {
+        "location": "nautilus",
+        "name": "Pink Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002393"
+    },
+    {
+        "location": "nautilus",
+        "name": "Psycho Claw",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1482008"
+    },
+    {
+        "location": "nautilus",
+        "name": "Purple Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002395"
+    },
+    {
+        "location": "nautilus",
+        "name": "Purple Cast Linen",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002634"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002080"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Belly Duke",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1052131"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Brave Hamal",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002643"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Martier",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082210"
+    },
+    {
+        "location": "nautilus",
+        "name": "Red Viska",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1052122"
+    },
+    {
+        "location": "nautilus",
+        "name": "Steel Renault",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1482010"
+    },
+    {
+        "location": "nautilus",
+        "name": "White Fangz",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1482011"
+    },
+    {
+        "location": "nautilus",
+        "name": "White Marquini",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1052128"
+    },
+    {
+        "location": "nautilus",
+        "name": "White Pioneer",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1052125"
+    },
+    {
+        "location": "nautilus",
+        "name": "Yellow Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002082"
+    },
+    {
+        "location": "nautilus",
+        "name": "Ancient Boots",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031920"
+    },
+    {
+        "location": "nautilus",
+        "name": "Black Versal Materia",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031754"
+    },
+    {
+        "location": "nautilus",
+        "name": "Blinking Dingbat",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031752"
+    },
+    {
+        "location": "nautilus",
+        "name": "Taru Totem",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031755"
+    },
+    {
+        "location": "nautilus",
+        "name": "Typhon Crest",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031914"
+    },
+    {
+        "location": "nautilus",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "nautilus",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "nautilus",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "nautilus",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "nautilus",
+        "name": "Octopus Eraser",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001043"
     },
     {
         "location": "nautilus",
@@ -4464,174 +5626,6 @@
         "type": "scrolls",
         "high-value": "",
         "itemId": "2040531"
-    },
-    {
-        "location": "nautilus",
-        "name": "Dragon Revolver",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1492013"
-    },
-    {
-        "location": "nautilus",
-        "name": "Dragon Slash Claw",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1482013"
-    },
-    {
-        "location": "nautilus",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "nautilus",
-        "name": "Fishing Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3011000"
-    },
-    {
-        "location": "nautilus",
-        "name": "Fury Claw",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1482007"
-    },
-    {
-        "location": "nautilus",
-        "name": "Green Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002391"
-    },
-    {
-        "location": "nautilus",
-        "name": "Green Plasteer",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1052116"
-    },
-    {
-        "location": "nautilus",
-        "name": "Grey Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002394"
-    },
-    {
-        "location": "nautilus",
-        "name": "Infinity?€?s Wrath",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1492010"
-    },
-    {
-        "location": "nautilus",
-        "name": "Lord Pirate Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010114"
-    },
-    {
-        "location": "nautilus",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "nautilus",
-        "name": "Mr. Rasfelt",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1492007"
-    },
-    {
-        "location": "nautilus",
-        "name": "Octopus Eraser",
-        "type": "quest-etc",
-        "high-value": "",
-        "itemId": "4001043"
-    },
-    {
-        "location": "nautilus",
-        "name": "Palm Tree Beach Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010018"
-    },
-    {
-        "location": "nautilus",
-        "name": "Pink Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002393"
-    },
-    {
-        "location": "nautilus",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
-    },
-    {
-        "location": "nautilus",
-        "name": "Psycho Claw",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1482008"
-    },
-    {
-        "location": "nautilus",
-        "name": "Purple Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002395"
-    },
-    {
-        "location": "nautilus",
-        "name": "Purple Cast Linen",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002634"
-    },
-    {
-        "location": "nautilus",
-        "name": "Red Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002080"
-    },
-    {
-        "location": "nautilus",
-        "name": "Red Belly Duke",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1052131"
-    },
-    {
-        "location": "nautilus",
-        "name": "Red Brave Hamal",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002643"
-    },
-    {
-        "location": "nautilus",
-        "name": "Red Martier",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082210"
-    },
-    {
-        "location": "nautilus",
-        "name": "Red Viska",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1052122"
     },
     {
         "location": "nautilus",
@@ -4719,66 +5713,24 @@
     },
     {
         "location": "nautilus",
-        "name": "Steel Renault",
-        "type": "equip",
+        "name": "Fishing Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1482010"
+        "itemId": "3011000"
     },
     {
         "location": "nautilus",
-        "name": "Taru Totem",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031755"
+        "name": "Lord Pirate Chair",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": "3010114"
     },
     {
         "location": "nautilus",
-        "name": "Typhon Crest",
-        "type": "itcg",
+        "name": "Palm Tree Beach Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "4031914"
-    },
-    {
-        "location": "nautilus",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "nautilus",
-        "name": "White Fangz",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1482011"
-    },
-    {
-        "location": "nautilus",
-        "name": "White Marquini",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1052128"
-    },
-    {
-        "location": "nautilus",
-        "name": "White Pioneer",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1052125"
-    },
-    {
-        "location": "nautilus",
-        "name": "Yellow Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002082"
-    },
-    {
-        "location": "nlc",
-        "name": "Ancient Faceguard",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031918"
+        "itemId": "3010018"
     },
     {
         "location": "nlc",
@@ -4786,13 +5738,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1312014"
-    },
-    {
-        "location": "nlc",
-        "name": "Black Seal Cushion",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010016"
     },
     {
         "location": "nlc",
@@ -4810,10 +5755,164 @@
     },
     {
         "location": "nlc",
+        "name": "Elemental Staff 1",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382045"
+    },
+    {
+        "location": "nlc",
+        "name": "Elemental Wand 5",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372039"
+    },
+    {
+        "location": "nlc",
+        "name": "Emergency Rescue Tube",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1322025"
+    },
+    {
+        "location": "nlc",
+        "name": "Frozen Tuna",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442018"
+    },
+    {
+        "location": "nlc",
+        "name": "Light Purple Umbrella",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302028"
+    },
+    {
+        "location": "nlc",
+        "name": "Maroon Mop",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442023"
+    },
+    {
+        "location": "nlc",
+        "name": "Orange Ski",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1432016"
+    },
+    {
+        "location": "nlc",
+        "name": "Purple Surfboard",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442057"
+    },
+    {
+        "location": "nlc",
+        "name": "Rat Mouth",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1012106"
+    },
+    {
+        "location": "nlc",
+        "name": "Stonetooth Sword",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1402037"
+    },
+    {
+        "location": "nlc",
+        "name": "Thermometer",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1402014"
+    },
+    {
+        "location": "nlc",
+        "name": "Ancient Faceguard",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031918"
+    },
+    {
+        "location": "nlc",
+        "name": "Ridley?€?s Book of Rituals",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031900"
+    },
+    {
+        "location": "nlc",
+        "name": "Taru Spirit Feather",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031936"
+    },
+    {
+        "location": "nlc",
+        "name": "Vorticular Gyro",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031751"
+    },
+    {
+        "location": "nlc",
+        "name": "White Versal Materia",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031760"
+    },
+    {
+        "location": "nlc",
         "name": "Brand New Monster Galore",
         "type": "other-use",
         "high-value": "",
         "itemId": "2100014"
+    },
+    {
+        "location": "nlc",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "nlc",
+        "name": "Eternal Bullet",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2330005"
+    },
+    {
+        "location": "nlc",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2070007"
+    },
+    {
+        "location": "nlc",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "nlc",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "nlc",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
     },
     {
         "location": "nlc",
@@ -4842,132 +5941,6 @@
         "type": "scrolls",
         "high-value": "",
         "itemId": "2040518"
-    },
-    {
-        "location": "nlc",
-        "name": "Elemental Staff 1",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382045"
-    },
-    {
-        "location": "nlc",
-        "name": "Elemental Wand 5",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372039"
-    },
-    {
-        "location": "nlc",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "nlc",
-        "name": "Emergency Rescue Tube",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1322025"
-    },
-    {
-        "location": "nlc",
-        "name": "Eternal Bullet",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2330005"
-    },
-    {
-        "location": "nlc",
-        "name": "Frozen Tuna",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442018"
-    },
-    {
-        "location": "nlc",
-        "name": "Green Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010002"
-    },
-    {
-        "location": "nlc",
-        "name": "Grey Seal Cushion",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": ""
-    },
-    {
-        "location": "nlc",
-        "name": "Hwabi Throwing-Stars",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2070007"
-    },
-    {
-        "location": "nlc",
-        "name": "Light Purple Umbrella",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1302028"
-    },
-    {
-        "location": "nlc",
-        "name": "Maroon Mop",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442023"
-    },
-    {
-        "location": "nlc",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "nlc",
-        "name": "Orange Ski",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1432016"
-    },
-    {
-        "location": "nlc",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
-    },
-    {
-        "location": "nlc",
-        "name": "Purple Surfboard",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442057"
-    },
-    {
-        "location": "nlc",
-        "name": "Rat Mouth",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1012106"
-    },
-    {
-        "location": "nlc",
-        "name": "Red Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010003"
-    },
-    {
-        "location": "nlc",
-        "name": "Ridley?€?s Book of Rituals",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031900"
     },
     {
         "location": "nlc",
@@ -5279,48 +6252,6 @@
     },
     {
         "location": "nlc",
-        "name": "Stonetooth Sword",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1402037"
-    },
-    {
-        "location": "nlc",
-        "name": "Taru Spirit Feather",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031936"
-    },
-    {
-        "location": "nlc",
-        "name": "The Yellow Relaxer",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010004"
-    },
-    {
-        "location": "nlc",
-        "name": "Thermometer",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1402014"
-    },
-    {
-        "location": "nlc",
-        "name": "Vorticular Gyro",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031751"
-    },
-    {
-        "location": "nlc",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "nlc",
         "name": "White Scroll",
         "type": "scrolls",
         "high-value": "1",
@@ -5328,17 +6259,38 @@
     },
     {
         "location": "nlc",
-        "name": "White Versal Materia",
-        "type": "itcg",
+        "name": "Black Seal Cushion",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "4031760"
+        "itemId": "3010016"
     },
     {
-        "location": "perion",
-        "name": "Ancient Helm",
-        "type": "itcg",
+        "location": "nlc",
+        "name": "Green Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "4031897"
+        "itemId": "3010002"
+    },
+    {
+        "location": "nlc",
+        "name": "Grey Seal Cushion",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": ""
+    },
+    {
+        "location": "nlc",
+        "name": "Red Chair",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": "3010003"
+    },
+    {
+        "location": "nlc",
+        "name": "The Yellow Relaxer",
+        "type": "set-up",
+        "high-value": "",
+        "itemId": "3010004"
     },
     {
         "location": "perion",
@@ -5440,13 +6392,6 @@
     },
     {
         "location": "perion",
-        "name": "Bluish Mineral",
-        "type": "quest-etc",
-        "high-value": "1",
-        "itemId": "4001197"
-    },
-    {
-        "location": "perion",
         "name": "Brown Bandana",
         "type": "equip",
         "high-value": "",
@@ -5458,13 +6403,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1322062"
-    },
-    {
-        "location": "perion",
-        "name": "Crystal Shard",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031917"
     },
     {
         "location": "perion",
@@ -5531,13 +6469,6 @@
     },
     {
         "location": "perion",
-        "name": "Dark Matter",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031750"
-    },
-    {
-        "location": "perion",
         "name": "Dark Orientican (M)",
         "type": "equip",
         "high-value": "",
@@ -5556,6 +6487,293 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1072212"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Shouldermail",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1041089"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Valhalla Helmet",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002379"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Valkyrie",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1041121"
+    },
+    {
+        "location": "perion",
+        "name": "Dark War Greave",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072198"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Axe",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1312031"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Battle Axe",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1412026"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Carabella",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302059"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Claymore",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1402036"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Faltizan",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1432038"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Flame",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1422028"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Hellslayer",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442045"
+    },
+    {
+        "location": "perion",
+        "name": "Dragon Mace",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1322052"
+    },
+    {
+        "location": "perion",
+        "name": "Elemental Staff 6",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382050"
+    },
+    {
+        "location": "perion",
+        "name": "Elemental Wand 1",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372035"
+    },
+    {
+        "location": "perion",
+        "name": "Gold Hilden Boots",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072135"
+    },
+    {
+        "location": "perion",
+        "name": "Maple Warrior Shield",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1092046"
+    },
+    {
+        "location": "perion",
+        "name": "Mikhail",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1312010"
+    },
+    {
+        "location": "perion",
+        "name": "Orihalcon Platine",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1040104"
+    },
+    {
+        "location": "perion",
+        "name": "Orihalcon Platine Pants",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1060092"
+    },
+    {
+        "location": "perion",
+        "name": "Pink Adventurer Cape",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1102041"
+    },
+    {
+        "location": "perion",
+        "name": "Pink Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002393"
+    },
+    {
+        "location": "perion",
+        "name": "Purple Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002395"
+    },
+    {
+        "location": "perion",
+        "name": "Red Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002080"
+    },
+    {
+        "location": "perion",
+        "name": "Red Katana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302012"
+    },
+    {
+        "location": "perion",
+        "name": "Red Oriental Helmet",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002029"
+    },
+    {
+        "location": "perion",
+        "name": "Redemption",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1432007"
+    },
+    {
+        "location": "perion",
+        "name": "Silver Planet",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002030"
+    },
+    {
+        "location": "perion",
+        "name": "Taru Spirit Cape",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1102165"
+    },
+    {
+        "location": "perion",
+        "name": "The Gold Dragon",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442008"
+    },
+    {
+        "location": "perion",
+        "name": "Yellow Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002082"
+    },
+    {
+        "location": "perion",
+        "name": "Ancient Helm",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031897"
+    },
+    {
+        "location": "perion",
+        "name": "Crystal Shard",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031917"
+    },
+    {
+        "location": "perion",
+        "name": "Dark Matter",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031750"
+    },
+    {
+        "location": "perion",
+        "name": "Subani Ankh",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031759"
+    },
+    {
+        "location": "perion",
+        "name": "Typhon Crest",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031914"
+    },
+    {
+        "location": "perion",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "perion",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "perion",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "perion",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "perion",
+        "name": "Bluish Mineral",
+        "type": "quest-etc",
+        "high-value": "1",
+        "itemId": "4001197"
+    },
+    {
+        "location": "perion",
+        "name": "Stump Eraser",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001038"
     },
     {
         "location": "perion",
@@ -5713,216 +6931,6 @@
     },
     {
         "location": "perion",
-        "name": "Dark Shouldermail",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1041089"
-    },
-    {
-        "location": "perion",
-        "name": "Dark Valhalla Helmet",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002379"
-    },
-    {
-        "location": "perion",
-        "name": "Dark Valkyrie",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1041121"
-    },
-    {
-        "location": "perion",
-        "name": "Dark War Greave",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1072198"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Axe",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1312031"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Battle Axe",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1412026"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Carabella",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1302059"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Claymore",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1402036"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Faltizan",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1432038"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Flame",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1422028"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Hellslayer",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442045"
-    },
-    {
-        "location": "perion",
-        "name": "Dragon Mace",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1322052"
-    },
-    {
-        "location": "perion",
-        "name": "Elemental Staff 6",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382050"
-    },
-    {
-        "location": "perion",
-        "name": "Elemental Wand 1",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372035"
-    },
-    {
-        "location": "perion",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "perion",
-        "name": "Gold Hilden Boots",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1072135"
-    },
-    {
-        "location": "perion",
-        "name": "Maple Warrior Shield",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1092046"
-    },
-    {
-        "location": "perion",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "perion",
-        "name": "Mikhail",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1312010"
-    },
-    {
-        "location": "perion",
-        "name": "Moon Star Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010014"
-    },
-    {
-        "location": "perion",
-        "name": "Orihalcon Platine",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1040104"
-    },
-    {
-        "location": "perion",
-        "name": "Orihalcon Platine Pants",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1060092"
-    },
-    {
-        "location": "perion",
-        "name": "Pink Adventurer Cape",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1102041"
-    },
-    {
-        "location": "perion",
-        "name": "Pink Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002393"
-    },
-    {
-        "location": "perion",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
-    },
-    {
-        "location": "perion",
-        "name": "Purple Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002395"
-    },
-    {
-        "location": "perion",
-        "name": "Red Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002080"
-    },
-    {
-        "location": "perion",
-        "name": "Red Katana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1302012"
-    },
-    {
-        "location": "perion",
-        "name": "Red Oriental Helmet",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002029"
-    },
-    {
-        "location": "perion",
-        "name": "Redemption",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1432007"
-    },
-    {
-        "location": "perion",
         "name": "Scroll for Gloves for ATT 10%",
         "type": "scrolls",
         "high-value": "",
@@ -6070,10 +7078,10 @@
     },
     {
         "location": "perion",
-        "name": "Silver Planet",
-        "type": "equip",
+        "name": "Moon Star Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1002030"
+        "itemId": "3010014"
     },
     {
         "location": "perion",
@@ -6081,55 +7089,6 @@
         "type": "set-up",
         "high-value": "",
         "itemId": "3010041"
-    },
-    {
-        "location": "perion",
-        "name": "Stump Eraser",
-        "type": "quest-etc",
-        "high-value": "",
-        "itemId": "4001038"
-    },
-    {
-        "location": "perion",
-        "name": "Subani Ankh",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031759"
-    },
-    {
-        "location": "perion",
-        "name": "Taru Spirit Cape",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1102165"
-    },
-    {
-        "location": "perion",
-        "name": "The Gold Dragon",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442008"
-    },
-    {
-        "location": "perion",
-        "name": "Typhon Crest",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031914"
-    },
-    {
-        "location": "perion",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "perion",
-        "name": "Yellow Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002082"
     },
     {
         "location": "perion",
@@ -6144,27 +7103,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1012110"
-    },
-    {
-        "location": "showa-town",
-        "name": "Beach Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010013"
-    },
-    {
-        "location": "showa-town",
-        "name": "Black Versal Materia",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031754"
-    },
-    {
-        "location": "showa-town",
-        "name": "Brand New Monster Galore",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2100014"
     },
     {
         "location": "showa-town",
@@ -6196,13 +7134,6 @@
     },
     {
         "location": "showa-town",
-        "name": "Duct Tape",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4032029"
-    },
-    {
-        "location": "showa-town",
         "name": "Elemental Staff 7",
         "type": "equip",
         "high-value": "",
@@ -6217,20 +7148,6 @@
     },
     {
         "location": "showa-town",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "showa-town",
-        "name": "Eternal Bullet",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2330005"
-    },
-    {
-        "location": "showa-town",
         "name": "Fishing Pole",
         "type": "equip",
         "high-value": "",
@@ -6242,20 +7159,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1302027"
-    },
-    {
-        "location": "showa-town",
-        "name": "Hwabi Throwing-Stars",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2070007"
-    },
-    {
-        "location": "showa-town",
-        "name": "Maple Leaf - STR",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1012098"
     },
     {
         "location": "showa-town",
@@ -6280,17 +7183,10 @@
     },
     {
         "location": "showa-town",
-        "name": "Melting Cheese",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2020012"
-    },
-    {
-        "location": "showa-town",
-        "name": "Pharoah's Wrappings",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031916"
+        "name": "Maple Leaf - STR",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1012098"
     },
     {
         "location": "showa-town",
@@ -6298,13 +7194,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1382042"
-    },
-    {
-        "location": "showa-town",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
     },
     {
         "location": "showa-town",
@@ -6333,6 +7222,146 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1302025"
+    },
+    {
+        "location": "showa-town",
+        "name": "Silver Snowboard",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442014"
+    },
+    {
+        "location": "showa-town",
+        "name": "Sky Ski",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1432018"
+    },
+    {
+        "location": "showa-town",
+        "name": "Turquoise Musketeer Cape",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1102047"
+    },
+    {
+        "location": "showa-town",
+        "name": "Versalmas Cactus",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442061"
+    },
+    {
+        "location": "showa-town",
+        "name": "Violet Snowshoes",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072238"
+    },
+    {
+        "location": "showa-town",
+        "name": "White Mop",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442022"
+    },
+    {
+        "location": "showa-town",
+        "name": "White Mouse Kit [3]",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1012088"
+    },
+    {
+        "location": "showa-town",
+        "name": "Yellow Adventurer Cape",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1102040"
+    },
+    {
+        "location": "showa-town",
+        "name": "Yellow Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082145"
+    },
+    {
+        "location": "showa-town",
+        "name": "Black Versal Materia",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031754"
+    },
+    {
+        "location": "showa-town",
+        "name": "Duct Tape",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4032029"
+    },
+    {
+        "location": "showa-town",
+        "name": "Pharoah's Wrappings",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031916"
+    },
+    {
+        "location": "showa-town",
+        "name": "Stone Tiger Head",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031913"
+    },
+    {
+        "location": "showa-town",
+        "name": "Brand New Monster Galore",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2100014"
+    },
+    {
+        "location": "showa-town",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "showa-town",
+        "name": "Eternal Bullet",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2330005"
+    },
+    {
+        "location": "showa-town",
+        "name": "Hwabi Throwing-Stars",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2070007"
+    },
+    {
+        "location": "showa-town",
+        "name": "Melting Cheese",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2020012"
+    },
+    {
+        "location": "showa-town",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "showa-town",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
     },
     {
         "location": "showa-town",
@@ -6574,87 +7603,10 @@
     },
     {
         "location": "showa-town",
-        "name": "Silver Snowboard",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442014"
-    },
-    {
-        "location": "showa-town",
-        "name": "Sky Ski",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1432018"
-    },
-    {
-        "location": "showa-town",
-        "name": "Stone Tiger Head",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031913"
-    },
-    {
-        "location": "showa-town",
-        "name": "Turquoise Musketeer Cape",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1102047"
-    },
-    {
-        "location": "showa-town",
-        "name": "Versalmas Cactus",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442061"
-    },
-    {
-        "location": "showa-town",
-        "name": "Violet Snowshoes",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1072238"
-    },
-    {
-        "location": "showa-town",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "showa-town",
-        "name": "White Mop",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442022"
-    },
-    {
-        "location": "showa-town",
-        "name": "White Mouse Kit [3]",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1012088"
-    },
-    {
-        "location": "showa-town",
-        "name": "Yellow Adventurer Cape",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1102040"
-    },
-    {
-        "location": "showa-town",
-        "name": "Yellow Work Gloves",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082145"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Amorian Relaxer",
+        "name": "Beach Chair",
         "type": "set-up",
         "high-value": "",
-        "itemId": "3010011"
+        "itemId": "3010013"
     },
     {
         "location": "sleepywood",
@@ -6669,13 +7621,6 @@
         "type": "equip",
         "high-value": "",
         "itemId": "1002587"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Black Sack",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2100000"
     },
     {
         "location": "sleepywood",
@@ -6714,20 +7659,6 @@
     },
     {
         "location": "sleepywood",
-        "name": "Chocolate",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "1702107"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Claw Production Stimulator",
-        "type": "stimulators",
-        "high-value": "",
-        "itemId": "4130015"
-    },
-    {
-        "location": "sleepywood",
         "name": "Crying Mask",
         "type": "equip",
         "high-value": "",
@@ -6735,10 +7666,325 @@
     },
     {
         "location": "sleepywood",
-        "name": "Dagger Forging Stimulator",
-        "type": "stimulators",
+        "name": "Elemental Staff 5",
+        "type": "equip",
         "high-value": "",
-        "itemId": "4130014"
+        "itemId": "1382049"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Elemental Wand 3",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1372037"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Fan",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332030"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Flamekeeper Cordon",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082246"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Fruity Bamboo",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1322051"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Green Strap Shoes",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1072263"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Grey Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082150"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Hard Hat",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002264"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Hula Hoop",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1312012"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Kebob",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1332053"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Maple Leaf - DEX",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1012101"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Maple Leaf - INT",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1012102"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Maple Leaf - LUK",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1012103"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Maple Leaf - STR",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1012098"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Necomimi",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002788"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Palette",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1092022"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Pink Seal Cushion",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1422030"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Poison Mushroom",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1382015"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Purple Old Wisconsin",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002586"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Purple Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082148"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Raccoon Mask",
+        "type": "equip",
+        "high-value": "1",
+        "itemId": "1022058"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Emerald Earrings",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1032028"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Surfboard",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1442026"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Umbrella",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1302025"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Red Work Gloves",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1082146"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Shield Earrings",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1032070"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Shinobi Bracer",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1472054"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Smiling Mask",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1012108"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Toymaker Cap",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002677"
+    },
+    {
+        "location": "sleepywood",
+        "name": "White Starry Bandana",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1002453"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Wrath of El Nath",
+        "type": "equip",
+        "high-value": "",
+        "itemId": "1102192"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Duct Tape",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4032029"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Mystic Astrolabe",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031756"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Naricain Jewel",
+        "type": "itcg",
+        "high-value": "1",
+        "itemId": "4031758"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Typhon Crest",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031914"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Vorticular Gyro",
+        "type": "itcg",
+        "high-value": "",
+        "itemId": "4031751"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Black Sack",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2100000"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Chocolate",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "1702107"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000004"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Power Elixir",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2000005"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Return Scroll - Nearest Town",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2030000"
+    },
+    {
+        "location": "sleepywood",
+        "name": "The Energizer Drink",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2022345"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Vital Bullet",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2330003"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Watermelon",
+        "type": "other-use",
+        "high-value": "",
+        "itemId": "2001000"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Hectagon Necklace",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001116"
+    },
+    {
+        "location": "sleepywood",
+        "name": "Slime Eraser",
+        "type": "quest-etc",
+        "high-value": "",
+        "itemId": "4001042"
     },
     {
         "location": "sleepywood",
@@ -7005,244 +8251,6 @@
         "type": "scrolls",
         "high-value": "",
         "itemId": "2040407"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Duct Tape",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4032029"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Elemental Staff 5",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382049"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Elemental Wand 3",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1372037"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000004"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Fan",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1332030"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Flamekeeper Cordon",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082246"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Fruity Bamboo",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1322051"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Green Strap Shoes",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1072263"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Grey Work Gloves",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082150"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Hard Hat",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002264"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Hectagon Necklace",
-        "type": "quest-etc",
-        "high-value": "",
-        "itemId": "4001116"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Hula Hoop",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1312012"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Kebob",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1332053"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Knuckler Production Stimulator",
-        "type": "stimulators",
-        "high-value": "",
-        "itemId": "4130016"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Maple Leaf - STR",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1012098"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Maple Leaf - DEX",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1012101"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Maple Leaf - INT",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1012102"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Maple Leaf - LUK",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1012103"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Moon Star Chair",
-        "type": "set-up",
-        "high-value": "",
-        "itemId": "3010014"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Mystic Astrolabe",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031756"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Naricain Jewel",
-        "type": "itcg",
-        "high-value": "1",
-        "itemId": "4031758"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Necomimi",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002788"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Palette",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1092022"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Pink Seal Cushion",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1422030"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Poison Mushroom",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1382015"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Power Elixir",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2000005"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Purple Old Wisconsin",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002586"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Purple Work Gloves",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082148"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Raccoon Mask",
-        "type": "equip",
-        "high-value": "1",
-        "itemId": "1022058"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Red Emerald Earrings",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1032028"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Red Surfboard",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1442026"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Red Umbrella",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1302025"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Red Work Gloves",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1082146"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Return Scroll - Nearest Town",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2030000"
     },
     {
         "location": "sleepywood",
@@ -7561,86 +8569,37 @@
     },
     {
         "location": "sleepywood",
-        "name": "Shield Earrings",
-        "type": "equip",
+        "name": "Amorian Relaxer",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1032070"
+        "itemId": "3010011"
     },
     {
         "location": "sleepywood",
-        "name": "Shinobi Bracer",
-        "type": "equip",
+        "name": "Moon Star Chair",
+        "type": "set-up",
         "high-value": "",
-        "itemId": "1472054"
+        "itemId": "3010014"
     },
     {
         "location": "sleepywood",
-        "name": "Slime Eraser",
-        "type": "quest-etc",
+        "name": "Claw Production Stimulator",
+        "type": "stimulators",
         "high-value": "",
-        "itemId": "4001042"
+        "itemId": "4130015"
     },
     {
         "location": "sleepywood",
-        "name": "Smiling Mask",
-        "type": "equip",
+        "name": "Dagger Forging Stimulator",
+        "type": "stimulators",
         "high-value": "",
-        "itemId": "1012108"
+        "itemId": "4130014"
     },
     {
         "location": "sleepywood",
-        "name": "The Energizer Drink",
-        "type": "other-use",
+        "name": "Knuckler Production Stimulator",
+        "type": "stimulators",
         "high-value": "",
-        "itemId": "2022345"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Toymaker Cap",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002677"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Typhon Crest",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031914"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Vital Bullet",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2330003"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Vorticular Gyro",
-        "type": "itcg",
-        "high-value": "",
-        "itemId": "4031751"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Watermelon",
-        "type": "other-use",
-        "high-value": "",
-        "itemId": "2001000"
-    },
-    {
-        "location": "sleepywood",
-        "name": "White Starry Bandana",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1002453"
-    },
-    {
-        "location": "sleepywood",
-        "name": "Wrath of El Nath",
-        "type": "equip",
-        "high-value": "",
-        "itemId": "1102192"
+        "itemId": "4130016"
     }
 ]
