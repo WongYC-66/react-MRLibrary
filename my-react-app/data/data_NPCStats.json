@@ -3330,13 +3330,10 @@
       "dcTop": "-117",
       "dcRight": "50",
       "dcBottom": "0",
-      "default": {
-        "origin": null
-      }
-    },
-    "shop": {
-      "0": {
-        "origin": null
+      "script": {
+        "0": {
+          "script": "scuffedgachapon"
+        }
       }
     }
   },

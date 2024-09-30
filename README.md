@@ -69,6 +69,9 @@ png
 3. done - fixed the sort by DESC bug, where NaN/No value id sort at front
 4. done - add flexibility to search Quest by npc name 
 
+## Log - Sep 30 2024
+1. done - update library to v92.2 
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
