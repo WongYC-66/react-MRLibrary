@@ -32,85 +32,85 @@ import {
 async function MB() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'MonsterBook.img.xml'))
     const simpleData = MBdataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_MB.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_MB.json'), simpleData)
 }
 
 async function MB_MapOnly() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'MonsterBook.img.xml'))
     const simpleData = MBdataFormatting_MapOnly(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Mob_MapOnly.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Mob_MapOnly.json'), simpleData)
 }
 
 async function Mob() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Mob.img.xml'))
     const simpleData = MobIdDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Mob.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Mob.json'), simpleData)
 }
 
 async function Consume() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Consume.img.xml'))
     const simpleData = ConsumeItemIdDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Consume.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Consume.json'), simpleData)
 }
 
 async function Etc() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Etc.img.xml'))
     const simpleData = EtcItemIdDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Etc.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Etc.json'), simpleData)
 }
 
 async function Eqp() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Eqp.img.xml'))
     const simpleData = EqpItemIdDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Eqp.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Eqp.json'), simpleData)
 }
 
 async function Ins() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Ins.img.xml'))
     const simpleData = InsItemIdDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Ins.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Ins.json'), simpleData)
 }
 
 async function Maps() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Map.img.xml'))
     const simpleData = MapIdDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Map.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Map.json'), simpleData)
 }
 
 async function GearStats() {
     const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Character"), "Gear")
     const simpleData = GearStatsDataFormatting(objArr)
-    diskWriter(path.join(__dirname, "../../data/", 'data_GearStats.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_GearStats.json'), simpleData)
 }
 
 async function MobStats() {
     const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Mob"), "Mob")
     const simpleData = MobStatsDataFormatting(objArr)
-    diskWriter(path.join(__dirname, "../../data/", 'data_MobStats.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_MobStats.json'), simpleData)
 }
 
 async function Map_MobCount() {
     const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Map"), "Map")
     const simpleData = MapMobCountDataFormatting(objArr)
-    diskWriter(path.join(__dirname, "../../data/", 'data_MapMobCount.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_MapMobCount.json'), simpleData)
 }
 
 async function ItemStats() {
     const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Items"), "Items")
     const simpleData = ItemStatsDataFormatting(objArr)
-    diskWriter(path.join(__dirname, "../../data/", 'data_ItemStats.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_ItemStats.json'), simpleData)
 }
 
 async function Skill() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'Skill.img.xml'))
     const simpleData = SkillDataFormatting(obj)
-    diskWriter(path.join(__dirname, "../../data/", 'data_Skill.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Skill.json'), simpleData)
 }
 
 async function SkillStats() {
     const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Skill"), "Skill")
     const simpleData = SkillStatsDataFormatting(objArr)
-    diskWriter(path.join(__dirname, "../../data/", 'data_SkillStats.json'), simpleData)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_SkillStats.json'), simpleData)
 }
 
 async function Quest() {
@@ -163,7 +163,7 @@ function main() {
     // Quest()
     // NPC()
     // NPCStats()
-    NPCLocation()  // run NPC() first bcoz it use data_NPC.json
+    // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
 }
 
 main()
