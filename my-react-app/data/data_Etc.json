@@ -3931,6 +3931,10 @@
     "name": "Von Leon's Parchment",
     "desc": "A parchment containing indecipherable ancient scriptures."
   },
+  "4009907": {
+    "name": "Lunar New Year Dumpling",
+    "desc": "A special dumpling to celebrate Lunar New Year. Exchange for your chosen faction."
+  },
   "4009910": {
     "name": "Scuffed Gachapon Ticket",
     "desc": "An old raggedy Gachapon Ticket. Probably doesn't work in regular Gachapon machines."
@@ -11488,7 +11492,7 @@
     "desc": "A beautiful card with season's greetings. Double click on it to read!"
   },
   "4310000": {
-    "desc": "A coin released to mark MapleRoyals' 11th Anniversary. Only used during the 11th Anniversary, this can be used to purchase special items.\r\n<b>Expires when the event is over.</b>",
-    "name": "11th Anniversary Coin"
+    "desc": "A nice, shiny coin said to bring good fortune! It is earned by participating in the event, and can be used to get various special items!\r\n<b>Expires when the event is over.</b>",
+    "name": "Lucky Coin"
   }
 }

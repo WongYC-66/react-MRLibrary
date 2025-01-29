@@ -7007,6 +7007,10 @@
     "name": "Pink Bean Transformation Potion",
     "desc": "Transform into Pink Bean for 10 min."
   },
+  "2210998": {
+    "name": "Jr. Necki Transform Potion",
+    "desc": "An alchemical potion that transforms you into a Jr. Necki. Lasts for 10 min."
+  },
   "2210999": {
     "name": "CCTV Transformation",
     "desc": "Full-featured weatherproof security camera monitored by TimK."
@@ -7029,7 +7033,7 @@
   },
   "2213005": {
     "name": "Serpent Transform Potion",
-    "desc": "An alchemical potion that transforms you into a Serpent. Lasts for 10 min.\\n<b>* Warning: You can't use ladders or ropes while transformed.</b>"
+    "desc": "An alchemical potion that transforms you into a Serpent. Lasts for 10 min."
   },
   "2213007": {
     "name": "Special Mano Transform Potion",

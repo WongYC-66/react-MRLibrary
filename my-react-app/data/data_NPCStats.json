@@ -1361,6 +1361,48 @@
     }
   },
   "1012117": {
+    "brows": {
+      "0": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "1": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "2": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "3": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "4": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "5": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "6": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      },
+      "7": {
+        "origin": null,
+        "z": "0",
+        "delay": "550"
+      }
+    },
     "info": {
       "speak": {
         "0": "n0",
@@ -1425,48 +1467,6 @@
       }
     },
     "smile": {
-      "0": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "1": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "2": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "3": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "4": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "5": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "6": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      },
-      "7": {
-        "origin": null,
-        "z": "0",
-        "delay": "550"
-      }
-    },
-    "brows": {
       "0": {
         "origin": null,
         "z": "0",
@@ -20564,6 +20564,157 @@
       }
     }
   },
+  "2091103": {
+    "info": {
+      "default": {
+        "origin": null,
+        "z": "0"
+      },
+      "script": {
+        "0": {
+          "script": "lnyWukong"
+        }
+      },
+      "dcLeft": "-45",
+      "dcTop": "-130",
+      "dcRight": "46",
+      "dcBottom": "0"
+    }
+  },
+  "2091105": {
+    "info": {
+      "default": {
+        "origin": null,
+        "z": "0"
+      },
+      "script": {
+        "0": {
+          "script": "lnySondal"
+        }
+      },
+      "dcLeft": "-45",
+      "dcTop": "-120",
+      "dcRight": "50",
+      "dcBottom": "0"
+    }
+  },
+  "2091107": {
+    "info": {
+      "speak": {
+        "0": "n0",
+        "1": "n1"
+      },
+      "script": {
+        "0": {
+          "script": "lnyAlang"
+        }
+      },
+      "dcLeft": "-44",
+      "dcTop": "-100",
+      "dcRight": "50",
+      "dcBottom": "0"
+    }
+  },
+  "2091109": {
+    "info": {
+      "dcLeft": "-77",
+      "dcTop": "-170",
+      "dcRight": "79",
+      "dcBottom": "-41",
+      "speak": {
+        "0": "n0",
+        "1": "n1"
+      },
+      "script": {
+        "0": {
+          "script": "lnyBonsun"
+        }
+      }
+    }
+  },
+  "2091110": {
+    "info": {
+      "speak": {
+        "0": "n0",
+        "1": "n1"
+      },
+      "script": {
+        "0": {
+          "script": "lnyTimmy"
+        }
+      },
+      "dcLeft": "-41",
+      "dcTop": "-92",
+      "dcRight": "43",
+      "dcBottom": "0"
+    },
+    "eye": {
+      "0": {
+        "origin": null,
+        "z": "0",
+        "delay": "600"
+      },
+      "1": {
+        "origin": null,
+        "z": "0",
+        "delay": "120"
+      },
+      "2": {
+        "origin": null,
+        "z": "0",
+        "delay": "120"
+      },
+      "3": {
+        "origin": null,
+        "z": "0",
+        "delay": "120"
+      },
+      "4": {
+        "origin": null,
+        "z": "0",
+        "delay": "120"
+      },
+      "5": {
+        "origin": null,
+        "z": "0",
+        "delay": "120"
+      }
+    }
+  },
+  "2091111": {
+    "info": {
+      "speak": {
+        "0": "n0",
+        "1": "n1"
+      },
+      "script": {
+        "0": {
+          "script": "lnyGoldDragon"
+        }
+      },
+      "dcLeft": "-72",
+      "dcTop": "-230",
+      "dcRight": "95",
+      "dcBottom": "0"
+    }
+  },
+  "2091112": {
+    "info": {
+      "speak": {
+        "0": "n0",
+        "1": "n1"
+      },
+      "script": {
+        "0": {
+          "script": "lnyRedTiger"
+        }
+      },
+      "dcLeft": "-75",
+      "dcTop": "-182",
+      "dcRight": "95",
+      "dcBottom": "0"
+    }
+  },
   "2092000": {
     "info": null,
     "eye": {
@@ -32062,14 +32213,6 @@
     }
   },
   "9030100": {
-    "info": {
-      "dcLeft": "-38",
-      "dcTop": "-73",
-      "dcRight": "34",
-      "dcBottom": "0",
-      "trunkPut": "500",
-      "trunkGet": "1000"
-    },
     "eye": {
       "0": {
         "origin": null,
@@ -32099,15 +32242,17 @@
         "origin": null,
         "delay": "500"
       }
-    }
-  },
-  "9030200": {
+    },
     "info": {
       "dcLeft": "-38",
       "dcTop": "-73",
       "dcRight": "34",
-      "dcBottom": "0"
-    },
+      "dcBottom": "0",
+      "trunkPut": "500",
+      "trunkGet": "1000"
+    }
+  },
+  "9030200": {
     "eye": {
       "0": {
         "origin": null,
@@ -32125,6 +32270,12 @@
         "origin": null,
         "delay": "500"
       }
+    },
+    "info": {
+      "dcLeft": "-38",
+      "dcTop": "-73",
+      "dcRight": "34",
+      "dcBottom": "0"
     }
   },
   "9040000": {

@@ -10719,6 +10719,13 @@
     "time": "600000",
     "morph": "131"
   },
+  "2210998": {
+    "price": "1",
+    "slotMax": "100",
+    "hp": "50",
+    "time": "600000",
+    "morph": "900"
+  },
   "2210999": {
     "price": "1",
     "tradeBlock": "1",
@@ -21497,15 +21504,17 @@
     "price": "1",
     "slotMax": "1",
     "reqLevel": "0",
-    "recoveryHP": "500",
-    "recoveryMP": "500"
+    "recoveryHP": "50",
+    "recoveryMP": "50",
+    "tradeBlock": "1"
   },
   "3010948": {
     "price": "1",
     "slotMax": "1",
     "reqLevel": "0",
-    "recoveryHP": "500",
-    "recoveryMP": "500"
+    "recoveryHP": "50",
+    "recoveryMP": "50",
+    "tradeBlock": "1"
   },
   "3010953": {
     "price": "100",
@@ -22340,6 +22349,14 @@
     "invisibleWeapon": "1"
   },
   "3017048": {
+    "invisibleWeapon": "1",
+    "notSale": "1",
+    "price": "1",
+    "recoveryHP": "50",
+    "recoveryMP": "50",
+    "slotMax": "1"
+  },
+  "3017049": {
     "invisibleWeapon": "1",
     "notSale": "1",
     "price": "1",
@@ -28701,6 +28718,12 @@
     "price": "1",
     "pickUpBlock": "1",
     "pquest": "1"
+  },
+  "4009907": {
+    "price": "1",
+    "slotMax": "3000",
+    "tradeBlock": "1",
+    "notSale": "1"
   },
   "4009910": {
     "price": "1",

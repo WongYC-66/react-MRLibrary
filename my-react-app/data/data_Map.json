@@ -10599,6 +10599,36 @@
     "streetName": "Eastern China",
     "mapName": "Mahavira Hall"
   },
+  "706041000": {
+    "mapCategory": "CN",
+    "streetName": "Gold Dragon Dojo",
+    "mapName": "Training Ground Entrance"
+  },
+  "706041002": {
+    "mapCategory": "CN",
+    "streetName": "Gold Dragon Dojo",
+    "mapName": "Bamboo Training Ground"
+  },
+  "706041003": {
+    "mapCategory": "CN",
+    "streetName": "Gold Dragon Dojo",
+    "mapName": "Drill Hall"
+  },
+  "706041005": {
+    "mapCategory": "CN",
+    "streetName": "Red Tiger Dojo",
+    "mapName": "Training Ground Entrance"
+  },
+  "706041007": {
+    "mapCategory": "CN",
+    "streetName": "Red Tiger Dojo",
+    "mapName": "Bamboo Training Ground"
+  },
+  "706041008": {
+    "mapCategory": "CN",
+    "streetName": "Red Tiger Dojo",
+    "mapName": "Drill Hall"
+  },
   "741000200": {
     "mapCategory": "CN",
     "mapName": "Fishing Lagoon",

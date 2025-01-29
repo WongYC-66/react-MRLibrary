@@ -6762,6 +6762,68 @@
       "0": "250020300"
     }
   },
+  "2091103": {
+    "name": "Wukong",
+    "d0": "I am Wukong, the fastest and the swiftest!",
+    "d1": "I am Wukong, the fastest and the swiftest!",
+    "n0": "Bored!",
+    "n1": "Anything exciting going on?"
+  },
+  "2091105": {
+    "name": "Sondal",
+    "d0": "Are you feeling stiff? A good fight with me will loosen you up.",
+    "d1": "Are you feeling stiff? A good fight with me will loosen you up.",
+    "n0": "The wind is calm...",
+    "n1": "Ahem..."
+  },
+  "2091107": {
+    "name": "Alang",
+    "d0": "There's an exciting day ahead of us! Let's go, let's go!",
+    "d1": "There's an exciting day ahead of us! Let's go, let's go!",
+    "n0": "One two, one two!",
+    "n1": "Devotion!"
+  },
+  "2091108": {
+    "name": "Yomin",
+    "d0": "I want to be the strongest! Doesn't everyone?",
+    "d1": "I want to be the strongest! Doesn't everyone?",
+    "n0": "Whew...",
+    "n1": "SIGH..."
+  },
+  "2091109": {
+    "name": "Bonsun",
+    "d0": "How have you adjusted to life at the dojo? We're all looking forward to training with you!",
+    "d1": "How have you adjusted to life at the dojo? We're all looking forward to training with you!",
+    "n0": "I wonder what Mr. Red Tiger is doing right now.",
+    "n1": "Devotion!"
+  },
+  "2091110": {
+    "name": "Timmy",
+    "d0": "I want to be the strongest! Doesn't everyone?",
+    "d1": "I want to be the strongest! Doesn't everyone?",
+    "n0": "Whew...",
+    "n1": "SIGH..."
+  },
+  "2091111": {
+    "name": "Gold Dragon",
+    "d0": "Come to me anytime you have questions or concerns!",
+    "d1": "Come to me anytime you have questions or concerns!",
+    "n0": "Ha ha!",
+    "n1": "Welcome!"
+  },
+  "2091112": {
+    "name": "Red Tiger",
+    "d0": "We're looking forward to having you here and seeing you grow.",
+    "d1": "We're looking forward to having you here and seeing you grow.",
+    "n0": "All right!",
+    "n1": "Anything special?"
+  },
+  "2091127": {
+    "name": "Gold Dragon Dojo"
+  },
+  "2091128": {
+    "name": "Red Tiger Dojo"
+  },
   "2092000": {
     "name": "Mr. Ku",
     "n0": "Huh huh ... lately there have been a number of thieves stealing the herbs.",

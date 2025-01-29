@@ -84,6 +84,9 @@ png
 ## Log - Dec 28 2024
 1. done - update library to v93.3
 
+## Log - Jan 29 2025
+1. done - update library to v94
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?

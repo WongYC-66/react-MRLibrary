@@ -133255,6 +133255,30 @@
     "isDonor": "1",
     "tradeBlock": "1"
   },
+  "1103268": {
+    "islot": "Sr",
+    "vslot": "Sr",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "tradeBlock": "1",
+    "noMoveToLocker": "1"
+  },
+  "1103270": {
+    "islot": "Sr",
+    "vslot": "Sr",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "tradeBlock": "1",
+    "noMoveToLocker": "1"
+  },
   "1103275": {
     "islot": "Sr",
     "vslot": "Sr",

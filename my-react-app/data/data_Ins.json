@@ -1797,11 +1797,11 @@
   },
   "3010947": {
     "name": "Among Gold Dragons",
-    "desc": "Rest under the watchful eye of yourmaster and fellow students. Recovers 500 HP/MP every 10 seconds."
+    "desc": "Rest under the watchful eye of your master and fellow students. Recovers 50 HP/MP every 10 seconds."
   },
   "3010948": {
     "name": "Among Red Tigers",
-    "desc": "Rest under the watchful eye of yourmaster and fellow students. Recovers 500 HP/MP every 10 seconds."
+    "desc": "Rest under the watchful eye of your master and fellow students. Recovers 50 HP/MP every 10 seconds."
   },
   "3010953": {
     "name": "Bookshelf Chair",
@@ -2222,6 +2222,10 @@
   "3017048": {
     "desc": "A chair commemorating the Zodiac Dragon! <b>Restores 50 HP and 50 MP every 10 seconds.</b>",
     "name": "Chinese Zodiac Cube Chair: Dragon"
+  },
+  "3017049": {
+    "name": "Chinese Zodiac Cube Chair: Snake",
+    "desc": "A chair commemorating the Zodiac Snake! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
   },
   "3017056": {
     "name": "Lunar New Year Xing Cube Chair",
