@@ -39,21 +39,25 @@ export const filterMobList = (mobLibrary) => {
         })
         .sort((a, b) => {
             // exact term sort to front, then sort by property
-            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            // if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0    // seems buggy
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase() && a[1].name.toLowerCase() === exactSearchTerm) {
+                // fix, if exact search matched. then sort these same mobs with "level" or default by Id
+                return Number(a[1][order]) - Number(b[1][order]) || Number(a[0]) - Number(b[0])
+            }
             if (a[1].name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].name.toLowerCase() === exactSearchTerm) return 1
-            
+
             // default is ascending, if descend, then reverse upon return
 
             // order by  - [level/exp/maxHP]
             // if no data, sort to end, 0,1,2,...1000, NaN
-            if(a[1][order] === undefined && b[1][order] === undefined) return 0
-            if(a[1][order] === undefined) return 1
-            if(b[1][order] === undefined) return -1
+            if (a[1][order] === undefined && b[1][order] === undefined) return 0
+            if (a[1][order] === undefined) return 1
+            if (b[1][order] === undefined) return -1
 
             // if level/exp/maxHP same, sub-sort by id Ascending
-            if(a[1][order] === b[1][order]) return Number(a[0]) - Number(b[0])
-            
+            if (a[1][order] === b[1][order]) return Number(a[0]) - Number(b[0])
+
             // sort by order-property ascendingly
             return Number(a[1][order]) - Number(b[1][order])
         })
@@ -62,8 +66,8 @@ export const filterMobList = (mobLibrary) => {
     // console.log(`found : ${filteredMobList.length} records`)
     filteredMobList = sort === "descending" ? filteredMobList.reverse() : filteredMobList
 
-     // split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
-     filteredMobList = [
+    // split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+    filteredMobList = [
         ...filteredMobList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
         ...filteredMobList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
     ]

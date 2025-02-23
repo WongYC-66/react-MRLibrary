@@ -87,6 +87,9 @@ png
 ## Log - Jan 29 2025
 1. done - update library to v94
 
+## Log - Feb 24 2025
+1. done - fix Mob Sorting, ordered by "Level" 
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
