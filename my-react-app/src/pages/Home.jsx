@@ -10,34 +10,13 @@ import Card from 'react-bootstrap/Card';
 
 export default function Home() {
 
-    const [quote, setQuote] = useState({ text: '...loading', author: '...loading' })
     const [itemPrices, setItemPrices] = useState({})
 
+    let idx = Math.floor(Math.random() * MANUAL_QUOTES.length)
+    let random_quote = MANUAL_QUOTES[idx]
+    let quote = { author: random_quote.author, text: random_quote.quote }
+
     useEffect(() => {
-
-        const fetchQuote = async () => {
-            const url = 'https://famous-quotes4.p.rapidapi.com/random?category=inspirational&count=1';
-            const options = {
-                method: 'GET',
-                headers: {
-                    'x-rapidapi-key': '6606d34f47mshecb88aac7233f33p19f723jsn7604c405836b',
-                    'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com'
-                }
-            };
-
-            try {
-                const response = await fetch(url, options);
-                const result = await response.json();
-                if (!result || !result[0]) throw new Error()
-                setQuote(result[0])
-            } catch (error) {
-                console.error("update quote failed at ", url);
-                //  use manual quote then
-                let idx = Math.floor(Math.random() * MANUAL_QUOTES.length)
-                let random_quote = MANUAL_QUOTES[idx]
-                setQuote({ author: random_quote.author, text: random_quote.quote })
-            }
-        }
 
         const fetchItemPrice = async () => {
             const SHEET_NAME = "Overview"
@@ -50,11 +29,9 @@ export default function Home() {
                     .replace(/\)\;$/, '')
                     .slice(7,)
                 result = JSON.parse(result)
-                // console.log(result)
                 if (result.status !== 'ok') throw new Error()
 
                 result = result.table.cols[3].label
-                // console.log(result)
                 result = result.trim().split(" ")
                 let prices = {
                     'cs': result[0],
@@ -68,7 +45,6 @@ export default function Home() {
             }
         }
 
-        fetchQuote()
         fetchItemPrice()
 
     }, [])
