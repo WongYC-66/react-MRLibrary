@@ -91,7 +91,8 @@ export default function EquipDetail() {
                                         <th className="rounded-5" colSpan={6}>
                                             {equipInfo.name}
                                             {equipInfo.tradeBlock === '1' && <p className="p-0 m-0 text-warning">(Untradeable)</p>}
-                                            {equipInfo.only === '1' && <span className="p-0 m-0 text-warning">(One-of-a-kind-item)</span>}
+                                            {equipInfo.only === '1' && <p className="p-0 m-0 text-warning">(One-of-a-kind-item)</p>}
+                                            {equipInfo.accountSharable === '1' && <p className="p-0 m-0 text-warning">(Movement is possible only within the account)</p>}
                                         </th>
                                     </tr>
                                     <tr>
