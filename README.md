@@ -90,6 +90,9 @@ png
 ## Log - Feb 24 2025
 1. done - fix Mob Sorting, ordered by "Level" 
 
+## Log - Apr 12 2025
+1. done - update library to v95, add shoulder accessory category
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
