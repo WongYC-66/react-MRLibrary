@@ -6359,6 +6359,14 @@
     "name": "Blue Mushroom Summoning Sack",
     "desc": "Summons a group of Blue Mushrooms"
   },
+  "2100132": {
+    "name": "Balrog Summoning Sack",
+    "desc": "Balrog Summoning Sack"
+  },
+  "2100133": {
+    "name": "Balrog's Spirit",
+    "desc": "Balrog's Spirit"
+  },
   "2100134": {
     "name": "Rescued Gaga Summoning Sack",
     "desc": "Summons Gaga, who has been rescued."
@@ -6861,6 +6869,10 @@
   },
   "2109512": {
     "name": "Summon King Castle Golem 2",
+    "undefined": ""
+  },
+  "2109513": {
+    "name": "Summon Baby Balrog",
     "undefined": ""
   },
   "2120000": {

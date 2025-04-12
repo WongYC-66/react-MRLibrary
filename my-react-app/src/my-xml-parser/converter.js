@@ -163,7 +163,7 @@ function main() {
     // Quest()
     // NPC()
     // NPCStats()
-    // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
+    NPCLocation()  // run NPC() first bcoz it use data_NPC.json
 }
 
 main()

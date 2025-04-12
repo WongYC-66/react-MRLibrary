@@ -243,6 +243,8 @@ export const itemIdToExceptionUrl = ({ id, name }) => {
 export const itemIdToNavUrl = (itemId) => {
     if (!itemId) return
 
+    // https://maplestory.io/api/SEA/220/item/category
+
     const catogeryRangeList = {
         "Weapon": { min: 1300000, max: 1500000, category: "Equip", url: "/weapon" },
 
@@ -253,6 +255,7 @@ export const itemIdToNavUrl = (itemId) => {
         "Pendant": { min: 1120000, max: 1130000, category: "Accessory", url: "/pendant" },
         "Belt": { min: 1130000, max: 1140000, category: "Accessory", url: "/belt" },
         "Medal": { min: 1140000, max: 1150000, category: "Accessory", url: "/medal" },
+        "Shoulder": { min: 1150000, max: 1160000, category: "Accessory", url: "/shoulder" },
         "Cape": { min: 1100000, max: 1110000, category: "Armor", url: "/cape" },
         "Earrings": { min: 1030000, max: 1040000, category: "Accessory", url: "/earring" },
         "Ring": { min: 1110000, max: 1120000, category: "Accessory", url: "/ring" },

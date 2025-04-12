@@ -169,6 +169,7 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
         "/pendant": "Pendant",
         "/belt": "Belt",
         "/medal": "Medal",
+        "/shoulder": "Shoulder Accessory",
     }
     const keyword = filterKeywords[urlPathname].toLowerCase()
 
@@ -405,6 +406,7 @@ export function equipIdToCategory(id) {
         "Pendant": { min: 1120000, max: 1130000, category: "Accessory" },
         "Belt": { min: 1130000, max: 1140000, category: "Accessory" },
         "Medal": { min: 1140000, max: 1150000, category: "Accessory" },
+        "Shoulder": { min: 1150000, max: 1160000, category: "Accessory", url: "/shoulder" },
         "Cape": { min: 1100000, max: 1110000, category: "Armor" },
         "Earrings": { min: 1030000, max: 1040000, category: "Accessory" },
         "Ring": { min: 1110000, max: 1120000, category: "Accessory" },

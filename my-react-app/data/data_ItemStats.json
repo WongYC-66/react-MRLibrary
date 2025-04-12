@@ -8894,7 +8894,8 @@
   "2049100": {
     "price": "1",
     "randstat": "1",
-    "success": "60"
+    "success": "60",
+    "notSale": "1"
   },
   "2049101": {
     "price": "1",
@@ -9830,6 +9831,14 @@
     "slotMax": "100",
     "type": "1"
   },
+  "2100132": {
+    "slotMax": "100",
+    "type": "-1"
+  },
+  "2100133": {
+    "slotMax": "100",
+    "type": "55"
+  },
   "2100134": {
     "slotMax": "100",
     "type": "-1"
@@ -10448,6 +10457,13 @@
   "2109512": {
     "slotMax": "100",
     "type": "49",
+    "price": "1",
+    "tradeBlock": "1",
+    "notSale": "1"
+  },
+  "2109513": {
+    "slotMax": "100",
+    "type": "5",
     "price": "1",
     "tradeBlock": "1",
     "notSale": "1"

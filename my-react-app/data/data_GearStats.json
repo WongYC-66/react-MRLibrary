@@ -151641,6 +151641,25 @@
     "tuc": "0",
     "vslot": "Me"
   },
+  "1152900": {
+    "islot": "Sh",
+    "vslot": "Sh",
+    "reqJob": "0",
+    "reqLevel": "70",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "incSTR": "2",
+    "incPDD": "100",
+    "incMDD": "100",
+    "tuc": "0",
+    "price": "0",
+    "accountSharable": "1",
+    "incDEX": "2",
+    "incLUK": "2",
+    "incINT": "2"
+  },
   "1302000": {
     "islot": "Wp",
     "vslot": "Wp",

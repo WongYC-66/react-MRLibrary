@@ -4775,13 +4775,7 @@
     }
   },
   "1061016": {
-    "info": {
-      "script": {
-        "0": {
-          "script": "balog_scroll"
-        }
-      }
-    },
+    "info": null,
     "smile": {
       "0": {
         "origin": null,
@@ -4975,6 +4969,18 @@
       "5": "1",
       "6": "2",
       "7": "3"
+    }
+  },
+  "1061020": {
+    "info": {
+      "script": {
+        "0": {
+          "script": "balog_perion"
+        }
+      },
+      "default": "../../1061014/stand/0",
+      "hideName": "1",
+      "talkMouseOnly": "1"
     }
   },
   "1061100": {
@@ -38054,6 +38060,11 @@
       "speak": {
         "0": "n0",
         "1": "n1"
+      },
+      "script": {
+        "0": {
+          "script": "valentineBen"
+        }
       }
     },
     "eye": {
