@@ -122,8 +122,8 @@ export default function RootLayout() {
                   <Nav.Link>Skill</Nav.Link>
                 </LinkContainer>
 
-                {/* Tables */}
-                <NavDropdown title="Tables" id="collapsible-nav-dropdown">
+                {/* Tools */}
+                <NavDropdown title="Tools" id="collapsible-nav-dropdown">
                   <LinkContainer to="/exptable">
                     <NavDropdown.Item>Exp Table</NavDropdown.Item>
                   </LinkContainer>
@@ -135,6 +135,9 @@ export default function RootLayout() {
                   </LinkContainer>
                   <LinkContainer to="/craft-table">
                     <NavDropdown.Item>Craft Table</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/gpq-solver">
+                    <NavDropdown.Item>GPQ solver</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
 

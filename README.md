@@ -93,6 +93,9 @@ png
 ## Log - Apr 12 2025
 1. done - update library to v95, add shoulder accessory category
 
+## Log - May 1 2025
+1. done - add mastermind solver for GPQ aka sharenian pq
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?

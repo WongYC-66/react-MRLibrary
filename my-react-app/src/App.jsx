@@ -23,10 +23,11 @@ import SkillDetail from './pages/skill/SkillDetail.jsx'
 
 import All, { globalSearchAction } from './pages/all/All.jsx'
 
-import ExpTable from './pages/tables/ExpTable.jsx'
-import ElementalTable, { elementalTableAction } from './pages/tables/ElementalTable.jsx'
-import UnionSearch, { unionSearchAction } from './pages/tables/UnionSearch.jsx'
-import CraftTable, { craftTableAction } from './pages/tables/CraftTable.jsx'
+import ExpTable from './pages/tools/ExpTable.jsx'
+import ElementalTable, { elementalTableAction } from './pages/tools/ElementalTable.jsx'
+import UnionSearch, { unionSearchAction } from './pages/tools/UnionSearch.jsx'
+import CraftTable, { craftTableAction } from './pages/tools/CraftTable.jsx'
+import GPQSolver from './pages/tools/GPQSolver.jsx'
 
 import NPC, { npcAction } from './pages/npc/NPC.jsx'
 
@@ -92,7 +93,7 @@ const router = createBrowserRouter(
         </Route >
 
 
-        {/* Tables */}
+        {/* Tools */}
         <Route path="exptable" element={< ExpTable />} />
 
         <Route path="elemental-table" element={< ElementalTable />} action={elementalTableAction} />
@@ -101,7 +102,8 @@ const router = createBrowserRouter(
 
         <Route path="craft-table" element={< CraftTable />} action={craftTableAction} />
 
-        {/* Tables */}
+        <Route path="gpq-solver" element={< GPQSolver />} />
+
 
         {/* NPC */}
         <Route path="npc" element={< NPC />} action={npcAction}></Route >
