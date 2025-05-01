@@ -29,6 +29,11 @@ export default function GPQSolver() {
             }
         }
 
+        // begin with "MSMS", average_attempt_count = 3.82, fastest starting point
+        let removedIdx = tmpArr.indexOf("MSMS")
+        tmpArr.splice(removedIdx, 1)
+        tmpArr.unshift("MSMS")
+
         setAllGuess(tmpArr)
     }, [])
 
