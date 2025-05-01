@@ -15,7 +15,7 @@ export default function GPQSolver() {
     useEffect(() => {
         // generate 256 combination from "SSSS" to "WWWW" when intially loadeded
         // ie. 4x4x4x4
-        const choice = ["S", "M", "F", "W"]
+        const choice = ["S", "M", "W", "F"]
         const tmpArr = []
 
         for (let c1 of choice) {
