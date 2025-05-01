@@ -107,7 +107,7 @@ export default function GPQSolver() {
                 </ul>
 
                 <h4>Feedback</h4>
-                <p>Start with "SSSS", click and read info from npc, then submit the feedback here, you will see next guess prepared for you.</p>
+                <p>Start with "MSMS", click and read info from npc, then submit the feedback here, you will see next guess prepared for you.</p>
             </div>
 
             <hr></hr>
