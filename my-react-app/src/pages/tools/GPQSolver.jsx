@@ -11,6 +11,7 @@ export default function GPQSolver() {
     const [allGuess, setAllGuess] = useState([]);
     const [eliminated, setEliminated] = useState(new Set([]));
     const [log, setLog] = useState([])
+    const [prevGuess, setPrevGuess] = useState(null)
 
     useEffect(() => {
         // generate 256 combination from "SSSS" to "WWWW" when intially loadeded
@@ -38,7 +39,7 @@ export default function GPQSolver() {
     }, [])
 
     // next guess = any first guess which is not in the wrongGuess list
-    const nextGuess = allGuess.find(guess => !eliminated.has(guess)) || ''
+    const nextGuess = getBestGuessWithMinMove(allGuess, prevGuess, eliminated)
 
     // hash table, code -> item code
     const charToItemCode = {
@@ -302,4 +303,26 @@ const generateArrayOfEliminated = (allGuess, currentGuess, npcSequence) => {
     }
 
     return unmatched
+}
+
+const getBestGuessWithMinMove = (allGuess, prevGuess, eliminated) => {
+
+    let validGuess = allGuess.filter(code => !eliminated.has(code))
+    if (!validGuess.length) return ''
+
+    if (!prevGuess) return validGuess[0]
+
+    validGuess = validGuess.map(code => [code, getCorrectPosCount(code, prevGuess)])
+
+    validGuess.sort((a, b) => b[1] - a[1])  // sort, most similar valid guess be the First
+
+    return validGuess[0][0]
+}
+
+const getCorrectPosCount = (str1, str2) => {
+    let correct = 0
+    for (let i = 0; i < 4; i++) {
+        correct += str1[i] === str2[i]
+    }
+    return correct
 }
