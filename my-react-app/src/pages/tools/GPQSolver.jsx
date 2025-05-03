@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
@@ -8,61 +8,27 @@ import Accordion from 'react-bootstrap/Accordion';
 
 export default function GPQSolver() {
 
-    const [allGuess, setAllGuess] = useState([]);
+    const [correctCount, setCorrectCount] = useState(0)
+    const [incorrectCount, setIncorrectCount] = useState(0)
+
     const [eliminated, setEliminated] = useState(new Set([]));
     const [log, setLog] = useState([])
     const [prevGuess, setPrevGuess] = useState(null)
 
-    useEffect(() => {
-        // generate 256 combination from "SSSS" to "WWWW" when intially loadeded
-        // ie. 4x4x4x4
-        const choice = ["S", "M", "W", "F"]
-        const tmpArr = []
+    const unknownCount = 4 - correctCount - incorrectCount
 
-        for (let c1 of choice) {
-            for (let c2 of choice) {
-                for (let c3 of choice) {
-                    for (let c4 of choice) {
-                        let guess = `${c1}${c2}${c3}${c4}`
-                        tmpArr.push(guess)
-                    }
-                }
-            }
-        }
+    const allGuess = useMemo(generateAllGuess, [])
 
-        // begin with "MSMS", average_attempt_count = 3.82, fastest starting point
-        let removedIdx = tmpArr.indexOf("MSMS")
-        tmpArr.splice(removedIdx, 1)
-        tmpArr.unshift("MSMS")
-
-        setAllGuess(tmpArr)
-    }, [])
+    const isFeedbackInputValid = (correctCount + incorrectCount) <= 4
 
     // next guess = any first guess which is not in the wrongGuess list
     const nextGuess = getBestGuessWithMinMove(allGuess, prevGuess, eliminated)
 
-    // hash table, code -> item code
-    const charToItemCode = {
-        "S": "04001028",
-        "M": "04001027",
-        "W": "04001030",
-        "F": "04001029",
-    }
-
-    const generateItemImgTag = (char) => {
-        if (!char) return ""
-        let itemCode = charToItemCode[char]
-        return < img src={`/images/items/${itemCode}.png`}></img >
-    }
-
     const handleNextBtnClick = (currentGuess) => {
-        let correctCount = document.getElementById("correct-count").value
-        let incorrectCount = document.getElementById("incorrect-count").value
-        let unknownCount = document.getElementById("unknown-count").value
         let npcSequence = `${correctCount}${incorrectCount}${unknownCount}`
 
-        if (Number(correctCount) + Number(incorrectCount) + Number(unknownCount) !== 4) {
-            alert("Please enter valid feedback from NPC, correct+incorrect+unkown = 4")
+        if (!isFeedbackInputValid) {
+            alert("BUG ! user should not be able to click next when invalid feedback ")
             return
         }
 
@@ -74,6 +40,7 @@ export default function GPQSolver() {
         }
 
         setEliminated(nextEliminated)
+        setPrevGuess(currentGuess)
 
         // update log if havent reach end, 256 = end = no more remaining
         if (nextEliminated.size != 256) setLog(prevLog => [...prevLog, createNextLog(prevLog, currentGuess, npcSequence)])
@@ -81,10 +48,10 @@ export default function GPQSolver() {
 
 
     const handleResetBtnClick = () => {
-        document.getElementById("correct-count").value = '0'
-        document.getElementById("incorrect-count").value = '0'
-        document.getElementById("unknown-count").value = '0'
+        setCorrectCount(0)
+        setIncorrectCount(0)
         setEliminated(new Set())
+        setPrevGuess(null)
         setLog([])
     }
 
@@ -109,6 +76,19 @@ export default function GPQSolver() {
 
                 <h4>Feedback</h4>
                 <p>Start with "MSMS", click and read info from npc, then submit the feedback here, you will see next guess prepared for you.</p>
+
+                {/* Example */}
+                <Accordion defaultActiveKey="null">
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>E.g.</Accordion.Header>
+                        <Accordion.Body>
+                            <p className="m-0 ms-3"><span className="fw-bolder"> 1 </span> agreed the offering is <span className="fw-bolder"> correct </span> </p>
+                            <p className="m-0 ms-3"><span className="fw-bolder"> 1 </span>  have declared the offering is <span className="fw-bolder"> incorrect </span> </p>
+                            <p className="m-0 ms-3"><span className="fw-bolder"> 2 </span>  have said it's an <span className="fw-bolder"> unknown </span> offering</p>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
+
             </div>
 
             <hr></hr>
@@ -146,43 +126,37 @@ export default function GPQSolver() {
                         <th> Correct </th>
                         <th> Incorrect </th>
                         <th> Unknown </th>
-                        <th>  </th>
+                        <th> {/* filler */} </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td className="px-3">
-                            <FormBS.Select id="correct-count">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                            <FormBS.Select id="correct-count" value={correctCount} onChange={(e) => setCorrectCount(Number(e.target.value))}>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
                             </FormBS.Select>
                         </td>
 
                         <td className="px-3">
-                            <FormBS.Select id="incorrect-count">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                            <FormBS.Select id="incorrect-count" value={incorrectCount} onChange={(e) => setIncorrectCount(Number(e.target.value))}>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
                             </FormBS.Select>
                         </td>
 
-                        <td className="px-3">
-                            <FormBS.Select id="unknown-count">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </FormBS.Select>
+                        <td className="px-3 align-middle text-center">
+                            {unknownCount}
                         </td>
 
                         <td className="">
-                            <Button variant="primary" className="w-100" onClick={() => handleNextBtnClick(nextGuess)}>Next</Button>
+                            <Button variant={isFeedbackInputValid ? "primary" : "secondary"} className="w-100 " disabled={!isFeedbackInputValid} onClick={() => handleNextBtnClick(nextGuess)}>Next</Button>
                         </td>
                     </tr>
                 </tbody>
@@ -246,6 +220,31 @@ export default function GPQSolver() {
 
         </div>
     )
+}
+
+const generateAllGuess = () => {
+    // generate 256 combination from "SSSS" to "WWWW" when intially loadeded
+    // ie. 4x4x4x4
+    const choice = ["S", "M", "W", "F"]
+    const allGuess = []
+
+    for (let c1 of choice) {
+        for (let c2 of choice) {
+            for (let c3 of choice) {
+                for (let c4 of choice) {
+                    let guess = `${c1}${c2}${c3}${c4}`
+                    allGuess.push(guess)
+                }
+            }
+        }
+    }
+
+    // begin with "MSMS", average_attempt_count = 3.82, fastest starting point
+    let removedIdx = allGuess.indexOf("MSMS")
+    allGuess.splice(removedIdx, 1)
+    allGuess.unshift("MSMS")
+
+    return allGuess
 }
 
 const createNextLog = (prevLog, currentGuess, npcSequence) => {
@@ -325,4 +324,18 @@ const getCorrectPosCount = (str1, str2) => {
         correct += str1[i] === str2[i]
     }
     return correct
+}
+
+// hash table, code -> item code
+const charToItemCode = {
+    "S": "04001028",
+    "M": "04001027",
+    "W": "04001030",
+    "F": "04001029",
+}
+
+const generateItemImgTag = (char) => {
+    if (!char) return ""
+    let itemCode = charToItemCode[char]
+    return < img src={`/images/items/${itemCode}.png`}></img >
 }

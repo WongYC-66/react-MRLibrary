@@ -96,6 +96,10 @@ png
 ## Log - May 1 2025
 1. done - add mastermind solver for GPQ aka sharenian pq
 
+## Log - May 3 2025
+1. done - update GPQ solver UI/UX, simplify and lesser userinput
+
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
