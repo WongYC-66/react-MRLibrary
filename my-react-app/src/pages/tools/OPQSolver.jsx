@@ -9,10 +9,47 @@ import Accordion from 'react-bootstrap/Accordion';
 // 
 
 export function OPQSolver() {
+    // universal solver for APQ / OPQ
+
+    const [eliminated, setEliminated] = useState(new Set());
+    const [log, setLog] = useState([])
+    const [prevGuess, setPrevGuess] = useState(null)
+
+    const allGuess = useMemo(generateAllGuess, [])
+
+    const nextGuess = getBestGuessWithMinMove(allGuess, prevGuess, eliminated)
+
+    const handleFeedback = (matchCount) => {
+        let currentGuess = nextGuess
+
+        let nextEliminated = new Set(eliminated)
+        const toBeEliminated = generateArrayOfEliminated(allGuess, currentGuess, matchCount)
+
+        for (let el of toBeEliminated) {
+            nextEliminated.add(el)
+        }
+
+        setEliminated(nextEliminated)
+        setPrevGuess(currentGuess)
+
+        // update log if havent reach end, 256 = end = no more remaining
+        if (nextEliminated.size != 21) setLog(prevLog => [...prevLog, createNextLog(prevLog, currentGuess, matchCount)])
+
+    }
+
+    const handleResetBtnClick = () => {
+        setPrevGuess(null)
+        setLog([])
+        setEliminated(new Set())
+    }
+
+
     return (
         <div className="d-flex flex-column p-3">
             <div className="instruction">
-                <h4>Instructions</h4>
+                <h4 className="text-danger"> Pending to test, use it at your own risk !</h4>
+                <h4>APQ stage-2 / OPQ's sealed room solver</h4>
+                <h5>Instructions</h5>
                 <p>Start with "500", click and read info from npc, then submit the feedback here, you will see next guess prepared for you.</p>
 
                 {/* Example */}
@@ -20,9 +57,11 @@ export function OPQSolver() {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>E.g.</Accordion.Header>
                         <Accordion.Body>
-                            <p className="m-0 ms-3"><span className="fw-bolder"> 1 </span> agreed the offering is <span className="fw-bolder"> correct </span> </p>
-                            <p className="m-0 ms-3"><span className="fw-bolder"> 1 </span>  have declared the offering is <span className="fw-bolder"> incorrect </span> </p>
-                            <p className="m-0 ms-3"><span className="fw-bolder"> 2 </span>  have said it's an <span className="fw-bolder"> unknown </span> offering</p>
+                            <p className="m-0 ms-3"><span className="fw-bolder"> 0 </span> platforms match</p>
+                            <p className="m-0 ms-3"><span className="fw-bolder"> 1 </span> platform matches</p>
+
+                            <p className="m-0 ms-3"> All the steps weigh <span className="fw-bolder"> different </span> </p>
+                            <p className="m-0 ms-3"> All 1 steps weigh the <span className="fw-bolder"> same </span> </p>
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
@@ -30,18 +69,65 @@ export function OPQSolver() {
             </div>
 
             <hr></hr>
+
+            <div className="next-guess">
+                <h4>Next guess:</h4>
+                <div className="d-flex justify-content-around">
+                    <img src='/images/opq_solver/apq.png' className="w-25"></img>
+                    <img src='/images/opq_solver/opq.jpeg' className="w-25"></img>
+                </div>
+
+
+                {/* dynamically load next guess */}
+                <Table striped bordered className="mt-3 w-50 mx-auto text-center align-middle">
+                    <tbody>
+                        <tr>
+                            {nextGuess === ''
+                                ? <td colSpan={3} className="text-bg-danger">Oopps, no more remaining, please reset.</td>
+                                : nextGuess.split('').map((num, i) =>
+                                    <td className="fw-bolder fs-5" key={num + '-' + i}>
+                                        {num}
+                                    </td>
+                                )
+                            }
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
+
+            {/* Feedback section */}
+            <h4>Feedback:</h4>
+            <div className="d-flex justify-content-center gap-3">
+                <Button variant="primary" onClick={() => handleFeedback(1)}> Same / 1 Match </Button>
+                <Button variant="primary" onClick={() => handleFeedback(0)}> Diff / 0 Match </Button>
+            </div>
+
+            {/* Reset Button */}
+            <Button variant="primary" className="mt-5 w-25 mx-auto" onClick={handleResetBtnClick}>Reset</Button>
+
+            {/* Log */}
+            <section className="history w-75 m-3">
+
+                {log.length >= 1 ? <h5>History</h5> : ''}
+
+                {log.map((text, i) =>
+                    <p key={text + i} className="m-0 p-0"> {text}</p>
+                )}
+            </section>
+
+            <hr></hr>
             {/* show all guesses / remaining */}
             <Accordion defaultActiveKey="null">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Remaining {`(${allGuess.length - eliminated.size})`}</Accordion.Header>
                     <Accordion.Body>
-                        <Table bordered>
-                            {/* 256 = 32 row x 8 col */}
+                        <Table bordered className="text-center">
+                            {/* 21 = 5 row x 5 col */}
                             <tbody>
-                                {Array(32).fill().map((_, rowIdx) =>
+                                {Array(5).fill().map((_, rowIdx) =>
                                     <tr key={rowIdx}>{
-                                        Array(8).fill().map((_, colIdx) => {
-                                            const cellIdx = rowIdx * 8 + colIdx
+                                        Array(5).fill().map((_, colIdx) => {
+                                            const cellIdx = rowIdx * 5 + colIdx
                                             const isEliminated = eliminated.has(allGuess[cellIdx])
 
                                             return isEliminated
@@ -57,9 +143,11 @@ export function OPQSolver() {
                 </Accordion.Item>
             </Accordion>
 
-            <p className="ms-3">
+            {/* Reference */}
+            <div className="mt-3">
+                <h6>References:</h6>
                 Test it at <Link to='/opq-simulator'>My Simulator</Link>
-            </p>
+            </div>
         </div>)
 }
 
@@ -245,6 +333,8 @@ export function OPQSimulator() {
     )
 }
 
+// ------------------ helper fn ------------------------
+
 const generateRandomAnswer = () => {
     const allPossibleAnswers = generateAllGuess()
     let randomIdx = Math.floor(Math.random() * allPossibleAnswers.length)
@@ -268,6 +358,13 @@ const generateAllGuess = () => {
             }
         }
     }
+
+    // start with '500'
+    let firstGuess = '500'
+    let idx = allGuess.indexOf(firstGuess)
+    allGuess.splice(idx, 1)
+    allGuess.unshift(firstGuess)
+
     return allGuess
 }
 
@@ -290,4 +387,58 @@ const getFeedback = (guess, answer) => {
     }
 
     return { hasWin, feedback }
+}
+
+// -------------- solver logic below -----------------------------
+
+const getBestGuessWithMinMove = (allGuess, prevGuess, eliminated) => {
+
+    let validGuess = allGuess.filter(code => !eliminated.has(code))
+    if (!validGuess.length) return ''
+
+    if (!prevGuess) return validGuess[0]
+
+    validGuess = validGuess.map(code => [code, getTotalNumDiff(code, prevGuess)])
+
+    validGuess.sort((a, b) => a[1] - b[1])  // sort, the fewest step to move sort at front
+
+    return validGuess[0][0]
+}
+
+const getTotalNumDiff = (str1, str2) => {
+    let diff = 0
+    for (let i = 0; i < 3; i++) {
+        diff += Math.abs(str1[i] - str2[i])
+    }
+    return diff
+}
+
+const createNextLog = (prevLog, currentGuess, feedback) => {
+    return `${prevLog.length + 1}. ${currentGuess} - ${feedback}`
+}
+
+const generateArrayOfEliminated = (allGuess, currentGuess, feedbackCount) => {
+
+
+    // return array of codes which unmatch the feedback from npc
+    let unmatched = []
+
+    for (let guess of allGuess) {
+        // for each guess, count how many Correct/Incorrect/Unknown to our currentGuess
+        // then compare the npcSequence to see if matched
+
+        let currMatch = 0
+
+        // count correct positions
+        for (let i = 0; i < 3; i++) {
+            currMatch += (guess[i] === currentGuess[i])
+        }
+
+        // found unmatched, can be elimnated
+        if (currMatch !== feedbackCount) {
+            unmatched.push(guess)
+        }
+    }
+
+    return unmatched
 }

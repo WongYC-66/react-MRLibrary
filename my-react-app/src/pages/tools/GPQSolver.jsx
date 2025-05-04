@@ -11,7 +11,7 @@ export default function GPQSolver() {
     const [correctCount, setCorrectCount] = useState(0)
     const [incorrectCount, setIncorrectCount] = useState(0)
 
-    const [eliminated, setEliminated] = useState(new Set([]));
+    const [eliminated, setEliminated] = useState(new Set());
     const [log, setLog] = useState([])
     const [prevGuess, setPrevGuess] = useState(null)
 

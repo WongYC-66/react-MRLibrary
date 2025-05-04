@@ -99,6 +99,9 @@ png
 ## Log - May 3 2025
 1. done - update GPQ solver UI/UX, simplify and lesser userinput
 
+## Log - May 4 2025
+1. done - add : APQ / OPQ solver
+
 
 Next:
 - grouped by region ?
