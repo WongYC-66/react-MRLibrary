@@ -28,6 +28,7 @@ import ElementalTable, { elementalTableAction } from './pages/tools/ElementalTab
 import UnionSearch, { unionSearchAction } from './pages/tools/UnionSearch.jsx'
 import CraftTable, { craftTableAction } from './pages/tools/CraftTable.jsx'
 import GPQSolver from './pages/tools/GPQSolver.jsx'
+import {OPQSolver, OPQSimulator} from './pages/tools/OPQSolver.jsx'
 
 import NPC, { npcAction } from './pages/npc/NPC.jsx'
 
@@ -103,6 +104,11 @@ const router = createBrowserRouter(
         <Route path="craft-table" element={< CraftTable />} action={craftTableAction} />
 
         <Route path="gpq-solver" element={< GPQSolver />} />
+
+        <Route path="opq-solver" element={< OPQSolver />} />
+        
+        <Route path="opq-simulator" element={< OPQSimulator />} />
+
 
 
         {/* NPC */}

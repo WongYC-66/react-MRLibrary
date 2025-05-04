@@ -139,6 +139,9 @@ export default function RootLayout() {
                   <LinkContainer to="/gpq-solver">
                     <NavDropdown.Item>GPQ solver</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/opq-solver">
+                    <NavDropdown.Item>OPQ solver</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
 
                 <LinkContainer to="/npc">
