@@ -32,10 +32,10 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
             return `?page=${inputNumber}&search=`
         }
         if (urlPathname === "/weapon") {
-            return `?page=${inputNumber}&job=0&category=any&order=id&sort=ascending&search=`
+            return `?page=${inputNumber}&job=0&category=any&order=id&sort=ascending&cosmetic=null&search=`
         }
         if (["/hat", "/top", "/bottom", "/overall", "/shoes", "/gloves", "/cape", "/shield", "/faceacc", "/eyeacc", "/earring", "/ring", "/pendant", "/belt", "/medal"].includes(urlPathname)) {
-            return `?page=${inputNumber}&job=0&order=id&sort=ascending&search=`
+            return `?page=${inputNumber}&job=0&order=id&sort=ascending&cosmetic=null&search=`
         }
         if (urlPathname === "/monster") {
             return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`

@@ -148,7 +148,10 @@ export default function Equips() {
                             </tbody>
                         </Table>
                     </div>
+                </div>
 
+                <div>
+                    <FormBS.Check type="checkbox" name='showCosmetic' label="Show cosmetic" className="ms-2" />
                 </div>
             </Form>
 
@@ -260,6 +263,7 @@ export const equipsAction = async ({ request }) => {
         orderBy: data.get("orderBy"),
         sortBy: data.get("sortBy"),
         searchName: data.get('searchName'),
+        onCosmetic: data.get('showCosmetic'),
     }
     // console.log(submission)
 
@@ -268,8 +272,8 @@ export const equipsAction = async ({ request }) => {
 
     // redirect the user
     const actionUrl = isWeaponPage
-        ? `?page=1&job=${submission.jobBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
-        : `?page=1&job=${submission.jobBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
+        ? `?page=1&job=${submission.jobBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}&cosmetic=${submission.onCosmetic}&search=${submission.searchName}`
+        : `?page=1&job=${submission.jobBy}&order=${submission.orderBy}&sort=${submission.sortBy}&cosmetic=${submission.onCosmetic}&search=${submission.searchName}`
 
     return redirect(actionUrl)
 }

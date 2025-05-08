@@ -104,6 +104,8 @@ png
 
 ## Log - May 8 2025
 1. done - fea : add Questline search
+2. done - fea : add column of orderBy stats at search result table
+3. done - UI : add checkbox show cosmetic at equip page
 
 Next:
 - grouped by region ?

@@ -23,6 +23,7 @@ export const filterEquipList = (equipLibrary) => {
     const category = filterOption.category
     const order = filterOption.order  // id, reqLevel
     const sort = filterOption.sort   // ascending, descending
+    const onCosmetic = filterOption.cosmetic   // ascending, descending
     // console.log(filterOption)
 
     // 1. query filter - by search name
@@ -40,6 +41,11 @@ export const filterEquipList = (equipLibrary) => {
     // 3. query filter - by job class
     filteredEquipList = queryFilterByJob({ job, filteredEquipList })
 
+    // 4. cosmetic filter 
+    filteredEquipList = onCosmetic === 'on'
+        ? filteredEquipList             // turn on, means all 
+        : filteredEquipList.filter(([_, equipStats]) => isNotCosmetic(equipStats))   // null = no need cosmetics
+
     // add number of search term matches
     filteredEquipList = filteredEquipList.map(([_id, obj]) => {
         let matchCount = 0
@@ -47,15 +53,15 @@ export const filterEquipList = (equipLibrary) => {
         return [_id, obj, matchCount]
     })
 
-    // 4. sort by matchCount, then by sort order
+    // 5. sort by matchCount, then by sort order
     filteredEquipList = querySorting({ order, filteredEquipList, exactSearchTerm })
 
     filteredEquipList = filteredEquipList.map(([_id, obj, matchCount]) => [_id, obj])
 
-    // 5. ascending / descending
+    // 6. ascending / descending
     filteredEquipList = sort === "ascending" ? filteredEquipList : filteredEquipList.reverse()
 
-    // 6. split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+    // 7. split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
     filteredEquipList = [
         ...filteredEquipList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
         ...filteredEquipList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
@@ -491,4 +497,16 @@ export const isNotRedundantProp = (itemProp, isWeaponPage) => {
     let redundantProp = isWeaponPage ? weaponPageRedundantProp : nonWeaponPageRedundantProp
 
     return !redundantProp.includes(itemProp)
+}
+
+const statFields = [
+    'incPAD', 'incMAD', 'attackSpeed',
+    'incSTR', 'incDEX', 'incINT', 'incLUK',
+    'incPDD', 'incMDD', 'incACC', 'incEVA',
+    'incJump', 'incSpeed', 'incMHP', 'incMMP',
+    'tuc', 'reqLevel',
+];
+
+const isNotCosmetic = (itemData) => {
+    return statFields.some(stat => itemData[stat] && Number(itemData[stat]) > 0);
 }
