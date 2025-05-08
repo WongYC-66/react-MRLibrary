@@ -5,6 +5,7 @@ import { renderImageWithItemIdType } from "../all/utility.jsx"
 // 
 import data_Quest from "../../../data/data_Quest.json"
 import data_NPC from "../../../data/data_NPC.json"
+import data_Questline from "../../../data/data_Questline.json"
 
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_Consume from "../../../data/data_Consume.json"
@@ -95,7 +96,7 @@ export const filterQuestList = (questLibrary) => {
             if (a[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return 1
 
-            if(a[2] != b[2]) return b[2] - a[2]
+            if (a[2] != b[2]) return b[2] - a[2]
 
             return a[0] - b[0]
         })
@@ -332,6 +333,32 @@ export const translateText = (p) => {
     p = p.replaceAll(/\\[rn]/g, "<br/>")
 
     return p
+}
+
+// 
+export const updateSearchResultCount = (number) => {
+    const countEl = document.getElementById("record-count")
+    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
+}
+
+export const convertQuestIdToUrl = (questId) => {
+    if (!questId) return '/error'
+    return `/quest/id=${questId}`
+}
+
+export const convertQuestParentNameToUrl = (questName) => {
+    if (!questName) return '/error'
+    // e.g. In Search of the Book of Ancient => /questline/id=3004
+
+    for (let questId in data_Questline) {
+        if (!data_Questline[questId].isHead) continue
+        if (data_Quest[questId]?.QuestInfo.parent === questName) {
+            // found questid
+            return `/questline/id=${questId}`
+        }
+    }
+
+    return '/error'
 }
 
 const BEAUTY_KEYWORDS = new Set([
@@ -653,8 +680,3 @@ const WEDDING_KEYWORDS = new Set([
 ]);
 
 
-// 
-export const updateSearchResultCount = (number) => {
-    const countEl = document.getElementById("record-count")
-    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
-}

@@ -19,7 +19,8 @@ import {
     convertMobIdToName,
     translateText,
     convertMobIdToUrl,
-    generateNPCLink
+    generateNPCLink,
+    convertQuestParentNameToUrl
 } from "./utility.jsx"
 
 import { renderImageWithMobId, itemIdToNavUrl } from "../monster/utility.jsx"
@@ -75,7 +76,7 @@ const renderTableLeft = (questInfo) => {
     if (!Object.keys(questInfo).length) return <></>
     const obj = questInfo
     const quest_Id = obj.quest_Id
-    const npc_id = obj.Check ? obj.Check['0'].npc : null
+    const npc_id = obj.Check && obj.Check['0']?.npc || null
     const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : `name not found, npc id : ${npc_id}`
     const questName = obj.QuestInfo && obj.QuestInfo.name ? obj.QuestInfo.name : `quest name not found, quest id : ${quest_Id}`
     const parentName = obj.QuestInfo && obj.QuestInfo.parent
@@ -86,7 +87,11 @@ const renderTableLeft = (questInfo) => {
         <tr>
             <th className="rounded-5">
                 <p>{questName}</p>
-                {parentName && <p>Parent : {parentName}</p>}
+                {parentName &&
+                    <p>Parent : <Link to={convertQuestParentNameToUrl(parentName)}>
+                        {parentName}
+                    </Link></p>
+                }
             </th>
         </tr>
         {/* NPC Image */}

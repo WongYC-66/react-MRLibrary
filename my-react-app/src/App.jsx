@@ -29,6 +29,7 @@ import UnionSearch, { unionSearchAction } from './pages/tools/UnionSearch.jsx'
 import CraftTable, { craftTableAction } from './pages/tools/CraftTable.jsx'
 import GPQSolver from './pages/tools/GPQSolver.jsx'
 import {OPQSolver, OPQSimulator} from './pages/tools/OPQSolver.jsx'
+import QuestLine from './pages/tools/Questline.jsx'
 
 import NPC, { npcAction } from './pages/npc/NPC.jsx'
 
@@ -109,6 +110,10 @@ const router = createBrowserRouter(
         
         <Route path="opq-simulator" element={< OPQSimulator />} />
 
+        <Route path="questline">
+          <Route index element={< QuestLine />}></Route>
+          <Route path=":questId" element={< QuestLine />}></Route>
+        </Route >
 
 
         {/* NPC */}

@@ -24,6 +24,7 @@ import {
     SkillDataFormatting,
     SkillStatsDataFormatting,
     QuestDataFormatting,
+    QuestLineDataFormatting,
     NPCDataFormatting,
     NPCStatsDataFormatting,
     NPCLocationFormatting,
@@ -121,6 +122,14 @@ async function Quest() {
     console.timeEnd()
 }
 
+import data_Quest from '../../data/data_Quest.json' with {type: 'json'}
+async function QuestLine() {
+    console.time()
+    const simpleData = QuestLineDataFormatting(data_Quest)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_Questline.json'), simpleData)
+    console.timeEnd()
+}
+
 async function NPC() {
     const obj = await parseXML(path.join(__dirname, "../../data/", 'NPC.img.xml'))
     const simpleData = NPCDataFormatting(obj)
@@ -161,9 +170,10 @@ function main() {
     // Skill()
     // SkillStats()
     // Quest()
+    QuestLine()     // run Quest() first bcoz it use data_Quest.json
     // NPC()
     // NPCStats()
-    NPCLocation()  // run NPC() first bcoz it use data_NPC.json
+    // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
 }
 
 main()

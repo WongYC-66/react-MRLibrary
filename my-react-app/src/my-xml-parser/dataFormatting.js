@@ -481,12 +481,65 @@ export function QuestDataFormatting(objArr) {
     return simpleData
 }
 
+export function QuestLineDataFormatting(data_Quest) {
+    console.log("running QuestLineDataFormatting")
+    // 
+    const simpleData = {}   //
+    /**
+     *      questId : {
+     *          isHead : true,
+     *          children : [child_questId1, child_questId2]
+     *      },
+     */
+
+    for (let [questId, questData] of Object.entries(data_Quest)) {
+        // console.log("checking:", questId)
+        let isHead = true
+
+        if (!questData['Check']) continue
+
+        for (let [_, stateProperty] of Object.entries(questData['Check'])) {
+            if (!stateProperty) continue
+
+            let preqQuests = stateProperty['quest']
+
+            if (!preqQuests) continue
+
+            isHead = false // if has prequest, not a head of qquestline
+
+            for (let [__, { id: preqQuestId }] of Object.entries(preqQuests)) {
+                // console.log(preqQuestId)
+
+                // if havent seen preqQuest, create a temp
+                if (!(preqQuestId in simpleData)) {
+                    simpleData[preqQuestId] = { isHead: true, children: [] }
+                }
+
+                // insert curr questId into preqQuest['children']
+                simpleData[preqQuestId].children.push(questId)
+            }
+        }
+
+        let thisQuestChildren = []
+        // if already existed somehow .. why Nexon dont organize quest by questId. Z_Z
+        if (simpleData[questId]) {
+            thisQuestChildren = simpleData[questId].children
+        }
+
+        simpleData[questId] = { isHead, children: thisQuestChildren }
+    }
+
+
+
+    return simpleData
+}
+
 export function NPCDataFormatting(obj) {
     // for NPC.img.xml from String.Wz ONLY
     // Create better data-structure
     console.log("running NPCDataFormatting")
     const simpleData = {}   // {id : {...}}
-    
+
     const decodeString = (str) => {
         return decode(str, { level: 'xml' });
     }
@@ -494,18 +547,18 @@ export function NPCDataFormatting(obj) {
     const recursiveParse = (arr) => {
         if (!arr.length) return null
         let returnObj = {}
-        
+
         arr.forEach(obj => {
             let key = decodeString(obj.attributes.name)
             let value = obj.attributes.value
-            ? decodeString(obj.attributes.value)
-            : recursiveParse(obj.children)
+                ? decodeString(obj.attributes.value)
+                : recursiveParse(obj.children)
             returnObj[key] = value
         })
-        
+
         return returnObj
     }
-    
+
     const arrayData = obj.root.children
     arrayData.forEach(obj => {
         let npc_id = obj.attributes.name
@@ -513,7 +566,7 @@ export function NPCDataFormatting(obj) {
         let data = recursiveParse(childrenArr)
         simpleData[npc_id] = data
     })
-    
+
     return simpleData
 }
 
@@ -537,7 +590,7 @@ export function NPCStatsDataFormatting(objArr) {
 
         arr.forEach(obj => {
             let key = decodeString(obj.attributes.name)
-            if(unwantedStats.has(key)) return       // filter out unwanted
+            if (unwantedStats.has(key)) return       // filter out unwanted
             let value = obj.attributes.value
                 ? decodeString(obj.attributes.value)
                 : recursiveParse(obj.children)
@@ -549,10 +602,10 @@ export function NPCStatsDataFormatting(objArr) {
 
     objArr.forEach(obj => {
         let npc_id = obj.root.attributes.name.split('.')[0]
-        
+
         let arr = obj.root.children
-        let data = recursiveParse(arr)  
-        
+        let data = recursiveParse(arr)
+
         // Write into simpleData
         simpleData[npc_id] = data // {id : {}}
     })
@@ -565,30 +618,30 @@ export function NPCLocationFormatting(obj, data_NPC) {
     // for NpcLocation.img.xml from Etc.Wz ONLY
     // Read and write JSON file of data_NPC.json
     console.log("running NPCLocationFormatting")
-    
+
     const decodeString = (str) => {
         return decode(str, { level: 'xml' });
     }
-    
+
     const recursiveParse = (arr) => {
         if (!arr.length) return null
         let returnObj = {}
-        
+
         arr.forEach(obj => {
             let key = decodeString(obj.attributes.name)
             let value = obj.attributes.value
-            ? decodeString(obj.attributes.value)
-            : recursiveParse(obj.children)
+                ? decodeString(obj.attributes.value)
+                : recursiveParse(obj.children)
             returnObj[key] = value
         })
         return returnObj
     }
-    
+
     // add 
     const arrayData = obj.root.children
     arrayData.forEach(obj => {
         let npc_id = obj.attributes.name
-        if(!(npc_id in data_NPC)) return    // if npc not found in JSON, skip
+        if (!(npc_id in data_NPC)) return    // if npc not found in JSON, skip
         let childrenArr = obj.children
         let data = recursiveParse(childrenArr)
         data_NPC[npc_id].location = data
