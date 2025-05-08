@@ -72,7 +72,7 @@ export default function Questline() {
         navigate(`/questline/id=${questId}`); // This changes the URL
     }
 
-    console.log(seriesOfQuestline)
+    // console.log(seriesOfQuestline)
 
     return (
         <Container>

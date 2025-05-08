@@ -1,4 +1,4 @@
-import { Form, redirect, useLocation } from "react-router-dom"
+import { Form, redirect, useLocation, useSearchParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
@@ -7,14 +7,21 @@ import Table from "react-bootstrap/Table"
 
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterEquipList, renderEquipList, equipIdToCategory } from "./utility.jsx"
+import { filterEquipList, renderEquipList, equipIdToCategory, isNotRedundantProp } from "./utility.jsx"
 import data_Eqp from "../../../data/data_Eqp.json"
 import data_GearStats from "../../../data/data_GearStats.json"
 
 export default function Equips() {
     const [equipLibrary, setEquipLibrary] = useState({})
+
     const urlPathname = useLocation().pathname
     const isWeaponPage = urlPathname === "/weapon"
+
+    // dynamically add 1 column based on user "order by" selection
+    const [searchParams, _] = useSearchParams();
+    const extraColumns = searchParams.get('order')
+        ? [searchParams.get('order')].filter(itemProp => isNotRedundantProp(itemProp, isWeaponPage))
+        : []
 
     // console.log(equipLibrary)
 
@@ -87,13 +94,18 @@ export default function Equips() {
                                     {/* Order By dropdown */}
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
-                                            {isWeaponPage && weaponOrderByList.map(({ text, value }) =>
+
+                                            {orderByList.map(({ text, value }) =>
+                                                <option key={value} value={value}>{text}</option>
+                                            )}
+
+                                            {/* {isWeaponPage && weaponOrderByList.map(({ text, value }) =>
                                                 <option key={value} value={value}>{text}</option>
                                             )}
 
                                             {!isWeaponPage && armorOrderByList.map(({ text, value }) =>
                                                 <option key={value} value={value}>{text}</option>
-                                            )}
+                                            )} */}
                                         </FormBS.Select>
                                     </td>
 
@@ -153,10 +165,11 @@ export default function Equips() {
                         {isWeaponPage && <th>Speed</th>}
                         {isWeaponPage && <th>Attack</th>}
                         <th>Slots</th>
+                        {extraColumns.map(itemProp => <th key={itemProp}>{convertItemPropToName(itemProp)}</th>)}
                     </tr>
                 </thead>
                 <tbody>
-                    {renderEquipList(filterEquipList(equipLibrary), `${urlPathname.slice(1,)}`)}
+                    {renderEquipList(filterEquipList(equipLibrary), `${urlPathname.slice(1,)}`, extraColumns)}
                 </tbody>
             </Table>
 
@@ -210,6 +223,31 @@ const armorOrderByList = [
     { text: "Avoidability", value: "incEVA" },
     { text: "Slots", value: "tuc" }
 ]
+
+const orderByList = [
+    { text: "ID", value: "id" },
+    { text: "Level", value: "reqLevel" },
+    { text: "W.Attack", value: "incPAD" },
+    { text: "M.Attack", value: "incMAD" },
+    { text: "Attack Speed", value: "attackSpeed" },
+    { text: "STR", value: "incSTR" },
+    { text: "DEX", value: "incDEX" },
+    { text: "INT", value: "incINT" },
+    { text: "LUK", value: "intLUK" },
+    { text: "Accuracy", value: "incACC" },
+    { text: "Avoidability", value: "incEVA" },
+    { text: "Slots", value: "tuc" },
+    { text: "Jump", value: "incJump" },
+    { text: "Speed", value: "incSpeed" },
+    { text: "HP", value: "incMHP" },
+    { text: "MP", value: "incMMP" },
+    { text: "W.def", value: "incPDD" },
+    { text: "M.def", value: "incMDD" },
+]
+
+const convertItemPropToName = (name) => {
+    return orderByList.find(({ value }) => value === name).text
+}
 
 export const equipsAction = async ({ request }) => {
     const data = await request.formData()

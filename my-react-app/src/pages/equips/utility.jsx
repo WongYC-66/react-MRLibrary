@@ -191,7 +191,7 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
 }
 // 
 
-export const renderEquipList = (filteredEquipList, type = "use") => {
+export const renderEquipList = (filteredEquipList, type = "use", extraColumns = []) => {
     const [searchParams] = useSearchParams()
 
     updateSearchResultCount(filteredEquipList.length)
@@ -232,6 +232,11 @@ export const renderEquipList = (filteredEquipList, type = "use") => {
                 </td>}
 
                 <td>{info.tuc || "-"}</td>
+
+                {/* render dynamical extra column as per user selected OrderBy */}
+                {extraColumns.map(itemProp =>
+                    <td key={EquipId + itemProp} className="p-0 m-0">{info[itemProp]}</td>
+                )}
 
             </tr>
         )
@@ -477,4 +482,13 @@ export const decodeReqJobToList = (reqJob) => {
 export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")
     if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
+}
+
+export const isNotRedundantProp = (itemProp, isWeaponPage) => {
+    const weaponPageRedundantProp = ['id', 'reqLevel', 'attackSpeed', 'incPAD', 'incMAD', 'tuc']
+    const nonWeaponPageRedundantProp = ['id', 'reqLevel', 'tuc']
+
+    let redundantProp = isWeaponPage ? weaponPageRedundantProp : nonWeaponPageRedundantProp
+
+    return !redundantProp.includes(itemProp)
 }
