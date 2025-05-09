@@ -107,6 +107,9 @@ png
 2. done - fea : add column of orderBy stats at search result table
 3. done - UI : add checkbox show cosmetic at equip page
 
+## Log - May 9 2025
+1. done - fix : add in images crawled from royals.wz
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
