@@ -145,6 +145,9 @@ export default function RootLayout() {
                   <LinkContainer to="/questline">
                     <NavDropdown.Item>Questline</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/music">
+                    <NavDropdown.Item>Music</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
 
                 <LinkContainer to="/npc">
