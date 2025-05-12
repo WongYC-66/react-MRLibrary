@@ -249,7 +249,7 @@ export function MapMobCountDataFormatting(objArr) {
         x = x.root
         const mapId = parseInt(x.attributes.name.split('.')[0])
         // if (mapId != 240040511) return
-        console.log(`formatting : ${mapId}`)
+        // console.log(`formatting : ${mapId}`)
         const stats = {}
         // console.log(inspect(x, { colors: true, depth: Infinity }));
         // 
@@ -262,9 +262,56 @@ export function MapMobCountDataFormatting(objArr) {
         simpleData[mapId] = stats // {id : {key1 : value1, key2: value2}}
         return
     })
-    console.log(simpleData)
+    // console.log(simpleData)
     return simpleData
 }
+
+export function MapStatsDataFormatting(objArr) {
+    // for img.xml from Map.Wz ONLY
+    // Create better data-structure
+    console.log("running MapStatsDataFormatting")
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    objArr.forEach(x => {
+        x = x.root
+        const mapId = parseInt(x.attributes.name.split('.')[0])
+        // console.log(`formatting : ${mapId}`)
+        const stats = {}
+
+        // get info
+        const info = x.children.find(y => y.attributes.name === "info")
+        if (!info) return
+
+        info.children.forEach(y => {
+            // console.log(y)
+            let key = y.attributes.name
+            let value = y.attributes.value
+            stats[key] = value  // {key1 : value1, key2: value2}
+        })
+
+        // get portal
+        const portalsInfo = x.children.find(y => y.attributes.name === "portal")
+        if (!portalsInfo) return
+        const portal = portalsInfo.children.map(y => {
+            // console.log(y)
+            let subPortStat = {}
+            y.children.forEach(z => {
+                let key = z.attributes.name
+                let value = z.attributes.value
+                subPortStat[key] = value
+            })
+            return subPortStat
+        })
+
+        stats['portal'] = portal
+
+        simpleData[mapId] = stats // {id : {key1 : value1, key2: value2}}
+        return
+    })
+    // console.log(simpleData)
+    return simpleData
+}
+
 
 export function ItemStatsDataFormatting(objArr) {
     // for img.xml from Item.Wz ONLY

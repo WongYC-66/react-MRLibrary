@@ -19,6 +19,7 @@ import {
     MapIdDataFormatting,
     GearStatsDataFormatting,
     MapMobCountDataFormatting,
+    MapStatsDataFormatting,
     ItemStatsDataFormatting,
     MobStatsDataFormatting,
     SkillDataFormatting,
@@ -96,6 +97,14 @@ async function Map_MobCount() {
     diskWriterInJSON(path.join(__dirname, "../../data/", 'data_MapMobCount.json'), simpleData)
 }
 
+async function Map_stats() {
+    console.time()
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Map"), "Map")
+    const simpleData = MapStatsDataFormatting(objArr)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_MapStats.json'), simpleData)
+    console.timeEnd()
+}
+
 async function ItemStats() {
     const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Items"), "Items")
     const simpleData = ItemStatsDataFormatting(objArr)
@@ -166,11 +175,12 @@ function main() {
     // GearStats() // Read multiple IMG files in multiple folders
     // MobStats()
     // Map_MobCount()
+    Map_stats()
     // ItemStats()
     // Skill()
     // SkillStats()
     // Quest()
-    QuestLine()     // run Quest() first bcoz it use data_Quest.json
+    // QuestLine()     // run Quest() first bcoz it use data_Quest.json
     // NPC()
     // NPCStats()
     // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
