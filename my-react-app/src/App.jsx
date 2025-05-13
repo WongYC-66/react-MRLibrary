@@ -28,7 +28,7 @@ import ElementalTable, { elementalTableAction } from './pages/tools/ElementalTab
 import UnionSearch, { unionSearchAction } from './pages/tools/UnionSearch.jsx'
 import CraftTable, { craftTableAction } from './pages/tools/CraftTable.jsx'
 import GPQSolver from './pages/tools/GPQSolver.jsx'
-import {OPQSolver, OPQSimulator} from './pages/tools/OPQSolver.jsx'
+import { OPQSolver, OPQSimulator } from './pages/tools/OPQSolver.jsx'
 import QuestLine from './pages/tools/Questline.jsx'
 import Music from './pages/tools/Music.jsx'
 
@@ -37,6 +37,8 @@ import NPC, { npcAction } from './pages/npc/NPC.jsx'
 import Quest, { questAction } from './pages/quest/Quest.jsx'
 import QuestDetail from './pages/quest/QuestDetail.jsx'
 
+import Map, { mapAction } from './pages/map/Map.jsx'
+import MapDetail from './pages/map/MapDetail.jsx'
 
 import NotFound from './pages/NotFound.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
@@ -108,7 +110,7 @@ const router = createBrowserRouter(
         <Route path="gpq-solver" element={< GPQSolver />} />
 
         <Route path="opq-solver" element={< OPQSolver />} />
-        
+
         <Route path="opq-simulator" element={< OPQSimulator />} />
 
         <Route path="questline">
@@ -126,6 +128,12 @@ const router = createBrowserRouter(
         <Route path="quest" action={questAction}>
           <Route index element={< Quest />}></Route>
           <Route path=":questId" element={< QuestDetail />}></Route>
+        </Route >
+
+        {/* Map */}
+        <Route path="map" action={mapAction}>
+          <Route index element={< Map />}></Route>
+          <Route path=":mapId" element={< MapDetail />}></Route>
         </Route >
 
         {/* Links */}

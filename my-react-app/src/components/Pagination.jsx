@@ -69,6 +69,9 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         if (urlPathname === "/quest") {
             return `?page=${inputNumber}&location=all&type=all&search=`
         }
+        if (urlPathname === "/map") {
+            return `?page=${inputNumber}&location=all&search=`
+        }
 
     }
 
