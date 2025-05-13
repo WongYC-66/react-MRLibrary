@@ -132,7 +132,7 @@ export const renderHDImageWithMapId = (mapId) => {
     if (!mapId) return
 
     const handleError = e => {
-        const fileName = `${mapId.padStart(9, 0)}.png`
+        const fileName = `${String(mapId).padStart(9, 0)}.png`
         const img = e.target
         // find suitable image src from:
         // 1: maplestory.io

@@ -34,5 +34,4 @@ dist-ssr
 /data/*.xml
 
 # Not yet released
-/public/images/maps/
 
