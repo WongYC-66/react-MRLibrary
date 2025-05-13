@@ -90,7 +90,6 @@ export default function Quest() {
             <Table className="mt-3">
                 <thead>
                     <tr>
-                        <th>Image</th>
                         <th>Location</th>
                         <th>Name</th>
                     </tr>
@@ -124,15 +123,18 @@ const mapCard = (map_id, obj) => {
     return (
         <tr key={map_id}>
             <td>
-                {renderImageWithMapId(map_id)}
-            </td>
-            <td>
                 {obj.mapCategory}
             </td>
-            <td>{
-                <Link to={convertMapIdToUrl(map_id)}>
+            <td className="d-flex flex-column">
+                {<Link to={convertMapIdToUrl(map_id)}>
                     {convertMapIdToName(map_id)}
                 </Link>}
+
+                <div className="mt-auto ms-auto" style={{ maxWidth: '150px' }}>
+                    {<Link to={convertMapIdToUrl(map_id)}>
+                        {renderImageWithMapId(map_id)}
+                    </Link>}
+                </div>
             </td>
         </tr>)
 
