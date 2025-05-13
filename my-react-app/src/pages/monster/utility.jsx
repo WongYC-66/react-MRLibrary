@@ -78,6 +78,8 @@ export const filterMobList = (mobLibrary) => {
 export const renderImageWithMobId = (mobId) => {
     if (!mobId) return
 
+    mobId = String(mobId)
+
     const handleError = e => {
         const fileName = `${mobId.padStart(7, 0)}.png`
         const img = e.target

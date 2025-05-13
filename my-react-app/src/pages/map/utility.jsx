@@ -2,12 +2,7 @@ import { useSearchParams, Link } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
 // 
-import data_NPC from "../../../data/data_NPC.json"
-
 import data_Map from "../../../data/data_Map.json"
-import data_MapStats from "../../../data/data_MapStats.json"
-
-import data_Mob from '../../../data/data_Mob.json'
 // 
 export const filterMapList = (questLibrary) => {
     const [searchParams] = useSearchParams()
@@ -100,11 +95,20 @@ export const renderImageWithMapId = (mapId) => {
             // switch to maplestory.io exception list (option - 3)
             // console.log("switch to option-3")
             img.setAttribute("myimgindex", "3")
-            img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
+            // beware, this is HD , bandwith issue!
+            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
             return
         }
         if (img.getAttribute("myimgindex") === '3') {
+            // switch to maplestory.io exception list (option - 4)
+            // console.log("switch to option-4")
             img.setAttribute("myimgindex", "4")
+            // beware, this is HD , bandwith issue!
+            img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '4') {
+            img.setAttribute("myimgindex", "5")
             img.src = "/error"
             // return console.log('end')
             return
@@ -123,29 +127,69 @@ export const renderImageWithMapId = (mapId) => {
     return ImageComponent
 }
 
-export const convertMobIdToName = (id) => {
-    try {
-        let mobName = data_Mob[id]
-        if (!mobName) throw Error()
-        return mobName
-    } catch {
-        return `mob name error : ${id}`
-    }
-}
+export const renderHDImageWithMapId = (mapId) => {
+    if (!mapId) return
 
-export const convertMobIdToUrl = (id) => {
-    if (!id) return '/error'
-    return `/monster/id=${id}`
+    const handleError = e => {
+        const fileName = `${mapId.padStart(9, 0)}.png`
+        const img = e.target
+        // find suitable image src from:
+        // 1: server file under /images/
+        // 2: maplelegends
+        // 3: maplestory.io
+
+        if (img.getAttribute("myimgindex") === '0') {
+            img.setAttribute("myimgindex", "1")
+            img.src = `https://maplestory.io/api/GMS/64/map/${Number(mapId)}/render`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '1') {
+            img.setAttribute("myimgindex", "2")
+            img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
+            return
+        }
+
+        if (img.getAttribute("myimgindex") === '2') {
+            img.setAttribute("myimgindex", "3")
+            img.src = `\\images\\maps\\${fileName}`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '3') {
+            img.setAttribute("myimgindex", "4")
+            img.src = `https://maplelegends.com/static/images/lib/map/${fileName}`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '4') {
+            img.setAttribute("myimgindex", "5")
+            img.src = "/error"
+            return
+        }
+    }
+
+    const ImageComponent = <Image
+        id={`image-${mapId}`}
+        myimgindex="0"
+        src={`...`} // by default, make it trigger error
+        className="mw-50"
+        fluid
+        alt="Image not found"
+        onError={handleError} />
+
+    return ImageComponent
 }
 
 export const convertMapIdToUrl = (id) => {
     if (!id) return '/error'
+    id = Number(id)
+    id = String(id).padStart(9, '0')
     return `/map/id=${id}`
 }
 
-export const generateNPCLink = (npc_id) => {
-    if (!npc_id) return `/error`
-    return `/npc?page=1&location=all&type=all&search=${npc_id}`
+export const convertMapIdToName = (id) => {
+    if (!id) return `map name error : ${id}`
+    id = Number(id)
+    if (!data_Map[id]) return `map name error : ${id}`
+    return `${data_Map[id].streetName} - ${data_Map[id].mapName} `
 }
 
 // 

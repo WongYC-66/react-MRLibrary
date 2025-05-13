@@ -215,7 +215,7 @@ export const convertItemIdToName = (id) => {   // helper fn
 
 export const convertMobIdToName = (id) => {
     try {
-        let mobName = data_Mob[id]
+        let mobName = data_Mob[Number(id)]
         if (!mobName) throw Error()
         return mobName
     } catch {

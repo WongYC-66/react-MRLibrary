@@ -1,5 +1,4 @@
 import { useParams, Link } from "react-router-dom"
-import { useState, useEffect } from "react"
 // 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -7,56 +6,56 @@ import Col from 'react-bootstrap/Col';
 import Table from "react-bootstrap/Table"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
-import Accordion from 'react-bootstrap/Accordion';
 
 // 
-import {
-    renderImageWithMapId,
-    convertMobIdToName,
-    convertMobIdToUrl,
-    generateNPCLink,
-} from "./utility.jsx"
+import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName } from "./utility.jsx"
 
-import { renderImageWithMobId, itemIdToNavUrl } from "../monster/utility.jsx"
+import { renderImageWithMobId } from "../monster/utility.jsx"
+import { renderImageWithNPCId, convertNpcIdToName } from "../npc/utility.jsx"
+import { generateNPCLink, convertMobIdToUrl, convertMobIdToName } from "../quest/utility.jsx"
 
-import data_Quest from "../../../data/data_Quest.json"
-import data_NPC from "../../../data/data_NPC.json"
+import data_Map from "../../../data/data_Map.json"
+import data_MapUrl from "../../../data/data_MapUrl.json"
+import data_MapStats from "../../../data/data_MapStats.json"
+import data_MapMobCount from "../../../data/data_MapMobCount.json"
 
 export default function MapDetail() {
 
     // const [questInfo, setQuestInfo] = useState({})
-    let { questId } = useParams();
+    let { mapId } = useParams();
 
-    useEffect(() => {
-        let quest_Id = questId.split("=")[1]
-        let obj = { quest_Id, ...data_Quest[quest_Id] }
-        // setQuestInfo(obj)
-    }, [])
+    const map_id = mapId.split("=")[1]
 
-    let quest_Id = questId.split("=")[1]
-    let obj = { quest_Id, ...data_Quest[quest_Id] }
-    const questInfo = obj
+    const hashMapId = Number(map_id)
 
-    // console.log(questInfo)
+    const mapInfo = {
+        mapId: map_id,
+        mob: data_MapMobCount[hashMapId],
+        ...data_Map[hashMapId],
+        ...data_MapStats[hashMapId],
+    }
+
+    console.log(map_id)
+    console.log(mapInfo)
 
     return (
-        <div className="quest-detail" key={quest_Id}>
+        <div className="map-detail" key={map_id}>
             <Container>
                 <Row>
-                    {/* NPC Image, quest name, desc, etc ... */}
+                    {/* Image Image, map name, streetname, audio, etc ... */}
                     <Col lg={4}>
-                        <div className="quest-stats-card text-center">
+                        <div className="text-center">
                             <Table bordered hover>
-                                {renderTableLeft(questInfo)}
+                                {renderTableLeft(mapInfo)}
                             </Table>
 
                         </div>
 
                     </Col>
-                    {/* Quest Stats */}
+                    {/* Map Stats, monster spawn, npc, portals */}
                     <Col lg={8}>
-                        <div className="quest-detail-card">
-                            {renderTableRight(questInfo)}
+                        <div>
+                            {renderTableRight(mapInfo)}
                         </div>
                     </Col>
                 </Row>
@@ -66,327 +65,189 @@ export default function MapDetail() {
     )
 }
 
-const renderTableLeft = (questInfo) => {
-    if (!Object.keys(questInfo).length) return <></>
-    const obj = questInfo
-    const quest_Id = obj.quest_Id
-    const npc_id = obj.Check && obj.Check['0']?.npc || null
-    const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : `name not found, npc id : ${npc_id}`
-    const questName = obj.QuestInfo && obj.QuestInfo.name ? obj.QuestInfo.name : `quest name not found, quest id : ${quest_Id}`
-    const parentName = obj.QuestInfo && obj.QuestInfo.parent
-    const questRegion = obj.QuestInfo ? convertAreaCodeToName(obj.QuestInfo.area) : `quest location code not found`
+const renderTableLeft = (mapInfo) => {
+    if (!Object.keys(mapInfo).length) return <></>
 
     return <tbody>
-        {/* Name */}
+        {/* Street Name */}
         <tr>
-            <th className="rounded-5">
-                <p>{questName}</p>
-                {parentName &&
-                    <p>Parent : <Link to={convertQuestParentNameToUrl(parentName)}>
-                        {parentName}
-                    </Link></p>
-                }
-            </th>
+            <th className="rounded-5">{mapInfo.streetName}</th>
         </tr>
-        {/* NPC Image */}
+        {/* Map Image */}
         <tr>
-            <td className="bg-transparent">
-                <Link to={generateNPCLink(npc_id)}>
-                    {renderImageWithNPCId(npc_id)}
-                </Link>
-            </td>
+            <td className="bg-transparent">{renderHDImageWithMapId(mapInfo.mapId)}</td>
         </tr>
-        {/* NPC Name */}
+        {/* Map Name */}
+        <tr>
+            <td>{mapInfo.mapName}</td>
+        </tr>
+        {/* BGM */}
         <tr>
             <td>
-                <Link to={generateNPCLink(npc_id)}>
-
-                    {npcName}
-                </Link>
+                {renderMP3(mapInfo.bgm)}
+                <p>{mapInfo?.bgm?.split("/")[1] + '.mp3'}</p>
             </td>
-        </tr>
-        {/* Job Type */}
-        <tr>
-            <td>Location : {questRegion}</td>
         </tr>
     </tbody>
 };
 
-const renderTableRight = (questInfo) => {
-    if (!Object.keys(questInfo).length) return <></>
+const renderTableRight = (mapInfo) => {
+    if (!Object.keys(mapInfo).length) return <></>
 
-    const lengthArr = [questInfo.Act, questInfo.Say, questInfo.Check, questInfo.QuestInfo]
-        .filter(Boolean)
-        .map(obj => Math.max(...Object.keys(obj).filter(k => Number.isInteger(Number(k)))))
+    const npcs = mapInfo.npc
+    const mobs = mapInfo.mob ? Object.entries(mapInfo.mob) : []
 
-    let maxIndex = Math.max(...lengthArr) + 1
-    let indexArr = Array(maxIndex).fill()
+    const map_id = mapInfo.mapId
+    const hasUrl = data_MapUrl[map_id] && data_MapUrl[map_id][1]
+    const mapUrl = hasUrl ? data_MapUrl[map_id][0] : `https://maplelegends.com/lib/map?id=${map_id}`
+
 
     return (
         <Tabs id="controlled-tab-example" className="mb-3">
-            {indexArr.map((_, i) => renderTabByIndex(questInfo, i))}
+            {/* Map Tab - NPC + Monster + References */}
+            <Tab eventKey="Map" title="Map">
+                <div>
+                    <h5>NPC</h5>
+                    {npcs
+                        ? npcs.map(renderNPCImageAndName)
+                        : <p className="opacity-50 ms-3">None</p>
+                    }
+                </div>
+
+                <hr />
+
+                <div>
+                    <h5>Monster</h5>
+                    {mobs.length
+                        ? renderMobCountTable(mobs)
+                        : <p className="opacity-50 ms-3">None</p>}
+                </div>
+
+                <hr />
+
+                <h5>References</h5>
+                <a href={mapUrl} target="_blank">Link</a>
+            </Tab>
+
+            {/* Stats Tab */}
+            <Tab eventKey="Stats" title="Stats">
+                {renderMapStats(mapInfo)}
+            </Tab>
+
+            {/* Portals Tab */}
+            <Tab eventKey="Portals" title="Portals">
+                {renderPortalTable(mapInfo)}
+            </Tab>
         </Tabs>
     )
 };
 
-const renderTabByIndex = (questInfo, index) => {
-    const questInfoString = questInfo.QuestInfo ? questInfo.QuestInfo[index] : ''
-
-    let rewards = []   // [{type : item/fame/mesos/exp/other, Quantity :}, {...}, ...]
-    let randomRewards = []    //{type, id, Quantity, Prop}, {...}, ...]
-    let totalProp = 0         // calculate total probabiltiy ?
-
-    let needed = []
-
-    let dialogueNormal = []
-    let dialogueYes = []
-    let dialogueNo = []
-    let dialogueStop = []
-    let dialogueLost = []
-
-    // process Act - into  rewards & randomRewards
-    if (questInfo.Act && questInfo.Act[index]) {
-        let obj = questInfo.Act[index]
-        for (let k in obj) {
-            if (k != 'item') {
-                let propertyName = k
-                if (propertyName == 'pop') propertyName = 'fame'
-                rewards.push({ type: propertyName, count: JSON.stringify(obj[k]) })
-                continue
-            }
-
-            if (k == 'item') {
-                let arr = Object.values(obj['item'])
-                arr.forEach(({ id, count, prop }) => {
-                    if (!id) return
-
-                    if (!prop) {
-                        // not random
-                        rewards.push({ type: 'item', id, count })
-                    } else {
-                        totalProp += Number(prop)
-                        randomRewards.push({ type: 'item', id, count, prop: Number(prop) })
-                    }
-                })
-            }
-        }
-    }
-
-    // process Check - into needed array
-    if (questInfo.Check && questInfo.Check[index]) {
-        let obj = questInfo.Check[index]
-        for (let k in obj) {
-            if (k == 'npc') continue
-            if (obj[k] && typeof obj[k] == 'string') {
-                let propertyName = k
-                if (propertyName == 'lvmin') propertyName = 'level'
-                needed.push({ type: propertyName, count: JSON.stringify(obj[k]) })
-                continue
-            }
-
-            if (k != 'item' && k != 'mob' && k != 'quest' && k != 'equipAllNeed') continue
-
-            // 'equipAllNeed' array
-            if (k == 'equipAllNeed') {
-                let arr = Object.values(obj[k])
-                arr.forEach(itemId => {
-                    needed.push({ type: k, id: itemId })
-                })
-                continue
-            }
-
-            // 'item' / 'mob' / 'quest' array
-            let arr = Object.values(obj[k])
-            arr.forEach(propObj => {
-                needed.push({ type: k, ...propObj })
-            })
-        }
-    }
-
-    const recursiveFind = (obj) => {
-        let res = []
-        for (let k in obj) {
-            if (typeof obj[k] == 'string') {
-                res.push(obj[k])
-                continue
-            }
-            let deeperRes = recursiveFind(obj[k])
-            res.push(...deeperRes)
-        }
-        return res
-    }
-
-    // process Say - into  dialogueNormal/dialogueYes/dialogueNo/dialogueStop/dialoguelost
-    if (questInfo.Say && questInfo.Say[index]) {
-        let obj = questInfo.Say[index]
-        for (let k in obj) {
-            if (k == 'yes') {
-                dialogueYes.push(...recursiveFind(obj[k]))
-            } else if (k == 'no') {
-                dialogueNo.push(...recursiveFind(obj[k]))
-            } else if (k == 'stop') {
-                dialogueStop.push(...recursiveFind(obj[k]))
-            } else if (k == 'lost') {
-                dialogueLost.push(...recursiveFind(obj[k]))
-            } else {
-                dialogueNormal.push(obj[k])
-            }
-        }
-    }
-
-    // console.log(needed)
-    // console.log(dialogueNormal)
-    // console.log(dialogueYes)
-    // console.log(dialogueNo)
-    // console.log(dialogueStop)
-    // console.log(dialogueLost)
-
-
-    return (
-        <Tab eventKey={index} title={index} key={index}>
-            {/* QuestInfo - Background, what u see at in-game Quest Window */}
-            {renderBackground(questInfoString)}
-
-            {/* Act - Reward/Random Rewards*/}
-            {renderReward(rewards, randomRewards, totalProp)}
-
-            {/* Check - Needed of Level/Mob Kill/Items*/}
-            {renderNeeded(needed)}
-
-            {/* Say - Dialogue */}
-            <Accordion defaultActiveKey='999' flush className="my-3">
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>Dialogue</Accordion.Header>
-                    <Accordion.Body>
-                        {renderDialogSection(dialogueNormal, '')}
-                        {renderDialogSection(dialogueYes, 'Yes')}
-                        {renderDialogSection(dialogueNo, 'No')}
-                        {renderDialogSection(dialogueStop, 'Stop')}
-                        {renderDialogSection(dialogueLost, 'Lost')}
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
-        </Tab>
-    )
+const renderNPCImageAndName = (npc_id) => {
+    return <div key={npc_id} className="ms-3">
+        <Link to={generateNPCLink(npc_id)}>
+            {renderImageWithNPCId(npc_id)}
+        </Link>
+        <Link to={generateNPCLink(npc_id)}>
+            <span className="ms-3">{convertNpcIdToName(npc_id)}</span>
+        </Link>
+    </div>
 }
 
-const renderBackground = (questInfoString) => {
+const renderMobCountTable = (mobs) => {
     return (
-        <Accordion defaultActiveKey='999' flush className="my-3">
-            <Accordion.Item eventKey="0">
-                <Accordion.Header>Background</Accordion.Header>
-                <Accordion.Body>
-                    <p dangerouslySetInnerHTML={{ __html: translateText(questInfoString) }}></p>
-                    {/* {translateText(questInfoString) } */}
-                </Accordion.Body>
-            </Accordion.Item>
-        </Accordion>
-    )
-}
-
-const renderReward = (rewards, randomRewards, totalProp) => {
-    return (
-        <>
-            <h5>Rewards : </h5>
-            <ul>
-                {rewards.map((obj, i) =>
-                    obj.type === 'item'
-                        ? <li key={'reward' + obj.id + i}>
-                            <Link to={itemIdToNavUrl(obj.id)}>
-                                {renderItemImageWrapper(obj.id)}
+        <Table bordered hover className="text-center">
+            <tbody >
+                <tr>
+                    <th className="bg-transparent">Image</th>
+                    <th className="bg-transparent">Name</th>
+                    <th className="bg-transparent">Count</th>
+                </tr>
+                {mobs.map(([mob_id, count]) =>
+                    <tr key={mob_id + count}>
+                        <td>
+                            <Link to={convertMobIdToUrl(mob_id)}>
+                                {renderImageWithMobId(mob_id)}
                             </Link>
-                            <Link to={itemIdToNavUrl(obj.id)}>
-                                {convertItemIdToName(obj.id)}
-                            </Link> :
-                            <span className={`${obj.count < 0 && 'text-danger'} ms-1`}>{obj.count}</span>
-                        </li>
-                        : obj.type === 'nextQuest'
-                            ? <li key={'check' + obj.id + i}>
-                                {obj.type} :
-                                <Link to={`../id=${obj.count.slice(1, -1)}`}>{questIdToName(obj.count.slice(1, -1))} </Link>
-                            </li>
-                            : <li key={'reward' + obj.id + i}>
-                                {obj.type} : {obj.count}
-                            </li>
+                        </td>
+                        <td>
+                            <Link to={convertMobIdToUrl(mob_id)}>
+                                <span className="ms-3">{convertMobIdToName(mob_id)}</span>
+                            </Link>
+                        </td>
+                        <td>{count}</td>
+                    </tr>
                 )}
-            </ul>
-            <h5>Random Rewards : </h5>
-            <ul>
-                {randomRewards.map((obj, i) =>
-                    // calculate probability too
-                    <li key={'rewardRand' + obj.id + i}>
-                        <Link to={itemIdToNavUrl(obj.id)}>
-                            {renderItemImageWrapper(obj.id)}
-                        </Link>
-                        <Link to={itemIdToNavUrl(obj.id)}>
-                            {convertItemIdToName(obj.id)}
-                        </Link> x {obj.count}
-                        <span className="ms-3"> ({(obj.prop / totalProp * 100).toFixed(2)}%)
-                        </span>
-                    </li>
+            </tbody>
+        </Table>
+    )
+}
+
+const renderPortalTable = (mapInfo) => {
+    if(!mapInfo.portal) return <></>
+    let portals = mapInfo.portal
+        .filter(({ tm }) => tm != "999999999")
+        .filter(({ tm }) => tm != mapInfo.mapId)  // ignore same-map tp
+
+    portals = Array.from(new Set(portals.map(({ tm }) => tm)))
+
+    if (!portals.length) return <p className="opacity-50">None</p>
+
+    return (
+        <Table bordered hover className="text-center">
+            <tbody >
+                <tr>
+                    <th className="bg-transparent">Map</th>
+                    <th className="bg-transparent">Name</th>
+                </tr>
+                {portals.map(nextMapId =>
+                    <tr key={nextMapId}>
+                        <td>
+                            <Link to={convertMapIdToUrl(nextMapId)}>
+                                {renderImageWithMapId(nextMapId)}
+                            </Link>
+                        </td>
+                        <td>
+                            <Link to={convertMapIdToUrl(nextMapId)}>
+                                <span className="ms-3">{convertMapIdToName(nextMapId)}</span>
+                            </Link>
+                        </td>
+                    </tr>
                 )}
-            </ul>
-        </>
+            </tbody>
+        </Table>
     )
 }
 
-const renderNeeded = (needed) => {
-    // console.log(needed)
+
+
+
+const renderMP3 = (audioName) => {
+    if(!audioName) return <></>
+    audioName = audioName.split('/')[1]
+    const OST_URL = `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${audioName}.mp3`
+    return <audio className="w-100" controls src={OST_URL}></audio>
+}
+
+
+const renderMapStats = (mapInfo) => {
+    let unwanted = new Set(["portal", "mapCategory", "mapName", "streetName", 'mob', 'npc'])
+    let keys = Object.keys(mapInfo)
+        .filter(k => !unwanted.has(k))
+        .sort((a, b) => a.localeCompare(b))
     return (
-        <Accordion defaultActiveKey='0' flush className="my-3">
-            <Accordion.Item eventKey="0">
-                <Accordion.Header>Needed</Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        {needed.map((obj, i) =>
-                            obj.type === 'item'
-                                ? <li key={'check' + obj.id + i}>
-                                    <Link to={itemIdToNavUrl(obj.id)}>
-                                        {renderItemImageWrapper(obj.id)}
-                                    </Link>
-                                    <Link to={itemIdToNavUrl(obj.id)}>
-                                        {convertItemIdToName(obj.id)}
-                                    </Link> x {obj.count}
-                                </li>
-                                : obj.type === 'mob'
-                                    ? <li key={'check' + obj.id + i}>
-                                        <Link to={convertMobIdToUrl(obj.id)}>
-                                            {renderImageWithMobId(obj.id)}
-                                        </Link>
-                                        <Link to={convertMobIdToUrl(obj.id)}>
-                                            {convertMobIdToName(obj.id)}
-                                        </Link> x {obj.count}
-                                    </li>
-                                    : obj.type === 'quest'
-                                        ? <li key={'check' + obj.id + i}>
-                                            {obj.type} :
-                                            <Link to={`../id=${obj.id}`}>{questIdToName(obj.id)} </Link>
-                                            . State : {obj.state}
-                                        </li>
-                                        : obj.type === 'equipAllNeed'
-                                            ? <li key={'check' + obj.id + i}>
-                                                {renderItemImageWrapper(obj.id)}
-                                                {convertItemIdToName(obj.id)}
-                                            </li>
-                                            : <li key={'check' + obj.id + i}>
-                                                {obj.type} : {obj.count}
-                                            </li>
-                        )}
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-        </Accordion>
+        <Table bordered hover className="text-center">
+            <tbody>
+                <tr>
+                    <td>Map id </td>
+                    <td>{mapInfo.mapId} </td>
+                </tr>
+                {keys.map(k =>
+                    <tr key={k}>
+                        <td>{k}</td>
+                        <td>{mapInfo[k]}</td>
+                    </tr>
+                )}
+            </tbody>
+        </Table>
     )
 }
-
-const renderDialogSection = (dialogArr, title) => {
-    if (!dialogArr.length) return <></>
-    return (
-        <>
-            <h5>{title}</h5>
-            {/* {dialogArr.map((str, i) => <p key={title + str + i}>{translateText(str)}</p>)} */}
-            {dialogArr.map((str, i) => <p key={title + str + i} dangerouslySetInnerHTML={{ __html: translateText(str) }}></p>)}
-        </>
-    )
-}
-

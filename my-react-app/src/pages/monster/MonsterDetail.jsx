@@ -35,7 +35,7 @@ export default function MonsterDetail() {
     // console.log(mobInfo)
 
     useEffect(() => {
-        const mob_Id = mobId.split("=")[1]
+        const mob_Id = Number(mobId.split("=")[1])
         const obj = {
             ...data_mobStats[mob_Id],
             id: mob_Id,

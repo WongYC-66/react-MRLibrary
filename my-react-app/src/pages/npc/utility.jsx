@@ -1,6 +1,7 @@
 import { useSearchParams, Link } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
+import data_NPC from "../../../data/data_NPC.json"
 // 
 export const filterNPCList = (npcLibrary) => {
     const [searchParams] = useSearchParams()
@@ -165,6 +166,12 @@ export const renderImageWithNPCId = (npcId) => {
 
     return ImageComponent
 }
+
+export const convertNpcIdToName = (npcId) => {
+    return data_NPC[npcId].name || 'npc name not found'
+}
+
+
 const BEAUTY_KEYWORDS = new Set([
     "Beauty Assistant",
     "Hair Salon Owner",
