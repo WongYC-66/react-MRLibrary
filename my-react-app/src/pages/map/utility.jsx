@@ -1,4 +1,5 @@
 import { useSearchParams, Link } from "react-router-dom"
+import { decode } from 'html-entities'
 // 
 import Image from "react-bootstrap/Image"
 // 
@@ -19,8 +20,8 @@ export const filterMapList = (questLibrary) => {
     const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
 
     searchTermArr = searchTermArr.filter(Boolean)  // filter out space
-    console.log(searchTermArr)
-    console.log(location)
+    // console.log(searchTermArr)
+    // console.log(location)
 
     // console.log(filteredQuestLibrary)
 
@@ -134,9 +135,9 @@ export const renderHDImageWithMapId = (mapId) => {
         const fileName = `${mapId.padStart(9, 0)}.png`
         const img = e.target
         // find suitable image src from:
-        // 1: server file under /images/
-        // 2: maplelegends
-        // 3: maplestory.io
+        // 1: maplestory.io
+        // 2: server file under /images/
+        // 3: maplelegends
 
         if (img.getAttribute("myimgindex") === '0') {
             img.setAttribute("myimgindex", "1")
@@ -189,7 +190,8 @@ export const convertMapIdToName = (id) => {
     if (!id) return `map name error : ${id}`
     id = Number(id)
     if (!data_Map[id]) return `map name error : ${id}`
-    return `${data_Map[id].streetName} - ${data_Map[id].mapName} `
+    const name = `${data_Map[id].streetName} - ${data_Map[id].mapName}`
+    return decode(name)
 }
 
 // 

@@ -8,6 +8,7 @@ import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
 import { filterNPCList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+import { convertMapIdToUrl, convertMapIdToName } from "../map/utility.jsx"
 
 import data_NPC from "../../../data/data_NPC.json"
 import data_NPCStats from "../../../data/data_NPCStats.json"
@@ -164,17 +165,11 @@ const renderNPCList = (filteredNPCList) => {
             <td>{renderImageWithNPCId(npc_id)}</td>
             <td>{obj.name}</td>
             <td>{obj.func ? obj.func : ''}</td>
-            <td>{!obj.npcLocation ? '' : obj.npcLocation.map(([mapId, mapObj], i) => {
-                if (!mapObj) return <p key={npc_id + "-" + mapId + '-' + i}>error : map id: {mapId}</p>
-
-                // hasHiddenStreetUrl
-                const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
-                const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
-
-                let fullMapName = decode(mapObj.streetName + " : " + mapObj.mapName)
-
-                return <a href={mapUrl} target="_blank" key={npc_id + "-" + mapId + '-' + i}><p>{fullMapName}</p></a>
-            })}</td>
+            <td>{obj.npcLocation && obj.npcLocation.length && obj.npcLocation.map(([mapId]) =>
+                <Link to={convertMapIdToUrl(mapId)} key={npc_id + mapId} className="d-block">
+                    {convertMapIdToName(mapId)}
+                </Link>
+            )}</td>
         </tr>
     )
 }

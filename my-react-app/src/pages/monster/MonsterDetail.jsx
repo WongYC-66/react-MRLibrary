@@ -19,6 +19,9 @@ import {
     sortDropsToFourArr,
     itemIdToNavUrl,
 } from "./utility.jsx"
+
+import { convertMapIdToUrl, convertMapIdToName } from '../map/utility.jsx'
+
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
 import data_MB from "../../../data/data_MB.json"
@@ -179,7 +182,7 @@ const renderTableOfMap = (mapArr) => {
     })
 
     const handleMapLinkClick = (hasHiddenStreetUrl) => {
-        if(hasHiddenStreetUrl) return 
+        if (hasHiddenStreetUrl) return
         if (hasAlerted) return
         setHasAlerted(true)
         alert('You are being redirected to mapleLegends library. Come back later. Be aware that both site look similar but different mob drops.')
@@ -201,7 +204,7 @@ const renderTableOfMap = (mapArr) => {
 const MapRowCard = ({ map, handleMapLinkClick }) => {
     //  {mapCategory: __ , mapName: __, streetName: ___}
     const [mapId, mapObj, mobCount] = [...map]
-    const { streetName , mapName } = {...mapObj}
+    const { streetName, mapName } = { ...mapObj }
     // hasHiddenStreetUrl
     const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
     const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
@@ -209,22 +212,38 @@ const MapRowCard = ({ map, handleMapLinkClick }) => {
     return (
         <tr key={mapId}>
             <td className="bg-transparent">
-                <a href={mapUrl} target="_blank" onClick={() => handleMapLinkClick(hasUrl)}>
-                    {streetName ?
-                        <>
-                            {/* Map Name */}
-                            <span dangerouslySetInnerHTML={{ __html: `${streetName + ":" + mapName}` }}></span>
-                            {/* Badge of legends or hidden street */}
-                            <Badge bg={`${hasUrl ? 'success' : 'danger'}`} className="mx-3">{hasUrl ? "hidden-street" : "legends"}</Badge>
-                        </>
-                        : `map info missing. map_id : ${mapId}`
-                    }
-
-                </a>
+                {streetName
+                    ? <Link to={convertMapIdToUrl(mapId)}>
+                        {convertMapIdToName(mapId)}
+                    </Link>
+                    : <p>`map info missing. map_id : ${mapId}`</p>
+                }
             </td>
             <td className="bg-transparent">{mobCount}</td>
         </tr>
     )
+
+
+
+    // return (
+    //     <tr key={mapId}>
+    //         <td className="bg-transparent">
+    //             <a href={mapUrl} target="_blank" onClick={() => handleMapLinkClick(hasUrl)}>
+    //                 {streetName ?
+    //                     <>
+    //                         {/* Map Name */}
+    //                         <span dangerouslySetInnerHTML={{ __html: `${streetName + ":" + mapName}` }}></span>
+    //                         {/* Badge of legends or hidden street */}
+    //                         <Badge bg={`${hasUrl ? 'success' : 'danger'}`} className="mx-3">{hasUrl ? "hidden-street" : "legends"}</Badge>
+    //                     </>
+    //                     : `map info missing. map_id : ${mapId}`
+    //                 }
+
+    //             </a>
+    //         </td>
+    //         <td className="bg-transparent">{mobCount}</td>
+    //     </tr>
+    // )
 }
 
 const renderSortedDrops = ({ EquipDrops, UseDrops, SetupDrops, EtcDrops, result }) => {

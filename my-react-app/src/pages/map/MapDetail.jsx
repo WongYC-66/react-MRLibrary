@@ -35,8 +35,8 @@ export default function MapDetail() {
         ...data_MapStats[hashMapId],
     }
 
-    console.log(map_id)
-    console.log(mapInfo)
+    // console.log(map_id)
+    // console.log(mapInfo)
 
     return (
         <div className="map-detail" key={map_id}>
