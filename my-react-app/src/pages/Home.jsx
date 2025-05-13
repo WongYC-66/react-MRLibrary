@@ -51,6 +51,11 @@ export default function Home() {
 
     return (
         <div className="home text-center">
+            {/* Announcement title */}
+            <a href="https://royals.ms/forum/threads/un-official-mapleroyals-library-scottys-version.229606/page-6#post-1530878" target="_blank">
+                <h2 className="text-danger">Important Announcement : Use it at your own risk!</h2>
+            </a>
+
             <h2 className="display-6">Welcome to </h2>
 
             <h2 className="display-5 my-3 p-0">MapleRoyals Library (Un-official)</h2>

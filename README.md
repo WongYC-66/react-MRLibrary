@@ -116,6 +116,9 @@ png
 ## Log - May 13 2025
 1. done - fea : Map
 
+## Log - May 14 2025
+1. done - Add : Announcement from Royals crew
+
 
 Next:
 - grouped by region ?
