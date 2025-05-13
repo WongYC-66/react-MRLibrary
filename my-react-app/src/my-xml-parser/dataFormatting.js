@@ -4,6 +4,8 @@ import { parseItemJSON, itemIdToCategory } from './utility.js';
 var inspect = util.inspect;
 
 
+
+
 export function legacyTextCheck(str) {
     // check for '
     str = str.replaceAll("&apos;", "'")
@@ -696,6 +698,32 @@ export function NPCLocationFormatting(obj, data_NPC) {
 
     // console.log(data_NPC)
     return data_NPC
+}
+
+function generateArrayWithDistinctEl(arr, itemToAdd) {
+    let set = new Set(arr)
+    set.add(itemToAdd)
+    return [...set]
+}
+
+export function NPCLocation2Formatting(data_NPC, data_MapStats) {
+    // Read and write JSON file of data_MapStats.json
+    console.log("running NPCLocation-2-Formatting")
+
+    // add 
+    for (let npcId in data_NPC) {
+        if (!data_NPC[npcId].location) continue
+
+        // if (npcId != 2041016) continue // check, Vega should be at 221022000
+
+        Object.values(data_NPC[npcId].location).forEach(mapId => {
+            if (!(mapId in data_MapStats)) return
+            if (!data_MapStats[mapId].npc) data_MapStats[mapId].npc = []
+            data_MapStats[mapId].npc = generateArrayWithDistinctEl(data_MapStats[mapId].npc, npcId)
+        })
+    }
+    // console.log(data_MapStats)
+    return data_MapStats
 }
 
 // module.exports = {

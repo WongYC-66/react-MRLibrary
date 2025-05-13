@@ -29,6 +29,7 @@ import {
     NPCDataFormatting,
     NPCStatsDataFormatting,
     NPCLocationFormatting,
+    NPCLocation2Formatting,
 } from './dataFormatting.js';
 
 async function MB() {
@@ -155,10 +156,20 @@ async function NPCStats() {
 
 import data_NPC from '../../data/data_NPC.json' with {type: 'json'}
 async function NPCLocation() {
+    // update npc location to data_NPC.json
     console.time()
     const obj = await parseXML(path.join(__dirname, "../../data/", 'NpcLocation.img.xml'))
     const simpleData = NPCLocationFormatting(obj, data_NPC)
     diskWriterInJSON(path.join(__dirname, "../../data/", 'data_NPC.json'), simpleData)
+    console.timeEnd()
+}
+
+import data_MapStats from '../../data/data_MapStats.json' with {type: 'json'}
+async function NPCLocation2() {
+    // update npc location to data_MapStats.json
+    console.time()
+    const simpleData = NPCLocation2Formatting(data_NPC, data_MapStats)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_MapStats.json'), simpleData)
     console.timeEnd()
 }
 
@@ -175,7 +186,7 @@ function main() {
     // GearStats() // Read multiple IMG files in multiple folders
     // MobStats()
     // Map_MobCount()
-    Map_stats()
+    // Map_stats()
     // ItemStats()
     // Skill()
     // SkillStats()
@@ -184,6 +195,7 @@ function main() {
     // NPC()
     // NPCStats()
     // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
+    NPCLocation2()  // run NPC() & Map_stats() first
 }
 
 main()
