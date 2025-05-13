@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterMapList, renderImageWithMapId, convertMapIdToUrl, updateSearchResultCount } from "./utility.jsx"
+import { filterMapList, renderImageWithMapId, convertMapIdToUrl, updateSearchResultCount, convertMapIdToName } from "./utility.jsx"
 
 import data_Map from "../../../data/data_Map.json"
 
@@ -131,7 +131,7 @@ const mapCard = (map_id, obj) => {
             </td>
             <td>{
                 <Link to={convertMapIdToUrl(map_id)}>
-                    {obj?.streetName + " - " + obj?.mapName}
+                    {convertMapIdToName(map_id)}
                 </Link>}
             </td>
         </tr>)
