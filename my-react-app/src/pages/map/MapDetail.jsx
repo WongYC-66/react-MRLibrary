@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom"
+import { decode } from 'html-entities'
 // 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,7 +9,7 @@ import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
 
 // 
-import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName } from "./utility.jsx"
+import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName } from "./utility.jsx"
 
 import { renderImageWithMobId } from "../monster/utility.jsx"
 import { renderImageWithNPCId, convertNpcIdToName } from "../npc/utility.jsx"
@@ -71,7 +72,7 @@ const renderTableLeft = (mapInfo) => {
     return <tbody>
         {/* Street Name */}
         <tr>
-            <th className="rounded-5">{mapInfo.streetName}</th>
+            <th className="rounded-5">{decode(mapInfo.streetName)}</th>
         </tr>
         {/* Map Image */}
         <tr>
@@ -79,13 +80,13 @@ const renderTableLeft = (mapInfo) => {
         </tr>
         {/* Map Name */}
         <tr>
-            <td>{mapInfo.mapName}</td>
+            <td>{decode(mapInfo.mapName)}</td>
         </tr>
         {/* BGM */}
         <tr>
             <td>
                 {renderMP3(mapInfo.bgm)}
-                <p>{mapInfo?.bgm?.split("/")[1] + '.mp3'}</p>
+                <p>{mapInfo.bgm && parseBgmToName(mapInfo.bgm)}</p>
             </td>
         </tr>
     </tbody>
@@ -223,7 +224,7 @@ const renderPortalTable = (mapInfo) => {
 
 const renderMP3 = (audioName) => {
     if(!audioName) return <></>
-    audioName = audioName.split('/')[1]
+    audioName = parseBgmToName(audioName) 
     const OST_URL = `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${audioName}.mp3`
     return <audio className="w-100" controls src={OST_URL}></audio>
 }

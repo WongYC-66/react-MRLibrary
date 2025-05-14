@@ -194,6 +194,10 @@ export const convertMapIdToName = (id) => {
     return decode(name)
 }
 
+export const parseBgmToName = (rawName) => {
+    return decode(rawName.split('/')[1])
+}
+
 // 
 export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")
