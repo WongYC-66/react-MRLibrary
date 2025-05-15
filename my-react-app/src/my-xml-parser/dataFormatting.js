@@ -291,21 +291,37 @@ export function MapStatsDataFormatting(objArr) {
             stats[key] = value  // {key1 : value1, key2: value2}
         })
 
+        // getminiMap
+        const miniMapInfo = x.children.find(y => y.attributes.name === "miniMap")
+        if (miniMapInfo) {
+            const miniMapStats = {}
+            let { width: canvasWidth, height: canvasHeight } = miniMapInfo.children.find(obj => obj.name === 'canvas').attributes
+
+            miniMapInfo.children.forEach(obj => {
+                let name = obj.attributes.name
+                miniMapStats[name] = obj.attributes.value
+            })
+
+            miniMapStats.canvasHeight = canvasHeight
+            miniMapStats.canvasWidth = canvasWidth
+            stats['miniMap'] = miniMapStats
+        }
+
         // get portal
         const portalsInfo = x.children.find(y => y.attributes.name === "portal")
-        if (!portalsInfo) return
-        const portal = portalsInfo.children.map(y => {
-            // console.log(y)
-            let subPortStat = {}
-            y.children.forEach(z => {
-                let key = z.attributes.name
-                let value = z.attributes.value
-                subPortStat[key] = value
+        if (portalsInfo) {
+            const portal = portalsInfo.children.map(y => {
+                // console.log(y)
+                let subPortStat = {}
+                y.children.forEach(z => {
+                    let key = z.attributes.name
+                    let value = z.attributes.value
+                    subPortStat[key] = value
+                })
+                return subPortStat
             })
-            return subPortStat
-        })
-
-        stats['portal'] = portal
+            stats['portal'] = portal
+        }
 
         simpleData[mapId] = stats // {id : {key1 : value1, key2: value2}}
         return

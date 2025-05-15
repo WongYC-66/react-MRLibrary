@@ -1,13 +1,15 @@
 import { useParams, Link } from "react-router-dom"
 import { decode } from 'html-entities'
 // 
+import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from "react-bootstrap/Table"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
-
+// 
+import LabelledMap from "./LabelledMap.jsx";
 // 
 import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName } from "./utility.jsx"
 
@@ -137,6 +139,7 @@ const renderTableRight = (mapInfo) => {
 
             {/* Portals Tab */}
             <Tab eventKey="Portals" title="Portals">
+                {renderLabelledMapAndTable(mapInfo)}
                 {renderPortalTable(mapInfo)}
             </Tab>
         </Tabs>
@@ -184,7 +187,7 @@ const renderMobCountTable = (mobs) => {
 }
 
 const renderPortalTable = (mapInfo) => {
-    if(!mapInfo.portal) return <></>
+    if (!mapInfo.portal) return <></>
     let portals = mapInfo.portal
         .filter(({ tm }) => tm != "999999999")
         .filter(({ tm }) => tm != mapInfo.mapId)  // ignore same-map tp
@@ -223,15 +226,15 @@ const renderPortalTable = (mapInfo) => {
 
 
 const renderMP3 = (audioName) => {
-    if(!audioName) return <></>
-    audioName = parseBgmToName(audioName) 
+    if (!audioName) return <></>
+    audioName = parseBgmToName(audioName)
     const OST_URL = `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${audioName}.mp3`
     return <audio className="w-100" controls src={OST_URL}></audio>
 }
 
 
 const renderMapStats = (mapInfo) => {
-    let unwanted = new Set(["portal", "mapCategory", "mapName", "streetName", 'mob', 'npc'])
+    let unwanted = new Set(["portal", "mapCategory", "mapName", "streetName", 'mob', 'npc', 'miniMap'])
     let keys = Object.keys(mapInfo)
         .filter(k => !unwanted.has(k))
         .sort((a, b) => a.localeCompare(b))
@@ -250,5 +253,50 @@ const renderMapStats = (mapInfo) => {
                 )}
             </tbody>
         </Table>
+    )
+}
+
+const renderLabelledMapAndTable = (mapInfo) => {
+    // console.log(mapInfo)
+    return (
+        <Accordion defaultActiveKey="null" className="mb-3">
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>Show Labelled Mini Map</Accordion.Header>
+                <Accordion.Body>
+                    {/*  Map with labelled portal */}
+                    <LabelledMap
+                        mapId={mapInfo.mapId}
+                        portals={mapInfo.portal}
+                        miniMap={mapInfo.miniMap}
+                    />
+
+                    {/* Table of Portal */}
+                    {/* pn: "sp", pt: "0", tm: "999999999", tn: "", x: "-218", y: "93" */}
+                    <Table bordered hover className="text-center">
+                        <tbody>
+                            <tr>
+                                <th> pn </th>
+                                <th> pt </th>
+                                <th> tm </th>
+                                <th> tn </th>
+                                <th> x </th>
+                                <th> y </th>
+                            </tr>
+                            {mapInfo.portal.map(({ pn, pt, tm, tn, x, y }, index) =>
+                                <tr key={mapInfo.mapId + "-" + index + '-' + pn}>
+                                    <td>{pn}</td>
+                                    <td>{pt}</td>
+                                    <td>{tm}</td>
+                                    <td>{tn}</td>
+                                    <td>{x}</td>
+                                    <td>{y}</td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </Table>
+
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
     )
 }
