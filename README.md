@@ -119,6 +119,8 @@ png
 ## Log - May 14 2025
 1. done - Add : Announcement from Royals crew
 
+## Log - Mat 15 2025
+1. done - Add : labelled Map , nonHD type
 
 Next:
 - grouped by region ?

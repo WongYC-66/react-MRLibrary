@@ -257,6 +257,7 @@ const renderMapStats = (mapInfo) => {
 }
 
 const renderLabelledMapAndTable = (mapInfo) => {
+    if(!mapInfo.portal) return <></>
     // console.log(mapInfo)
     return (
         <Accordion defaultActiveKey="null" className="mb-3">
