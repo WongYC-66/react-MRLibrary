@@ -1,12 +1,10 @@
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo } from "react"
 import { useParams, useNavigate, Link } from 'react-router-dom';
 // 
 import Container from "react-bootstrap/esm/Container"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FormBS from "react-bootstrap/Form"
-import Button from "react-bootstrap/Button"
-import Table from "react-bootstrap/Table"
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
@@ -63,6 +61,7 @@ export default function Questline() {
     ]
 
     const areaToQuestlineDict = useMemo(generateQuestline, [])
+    // console.log(areaToQuestlineDict)
 
     const areaToQuestline = areaNames
         .map(name => areaToQuestlineDict[name] || [])
@@ -179,8 +178,8 @@ export default function Questline() {
                                                         <div className="p-3 border border-opacity-50 rounded" style={{ width: "48%" }}>
                                                             <h6>Rewards:</h6>
                                                             {/* EXP */}
-                                                            { nextQuestData.Act && nextQuestData.Act['1']?.exp && <p>Exp : {nextQuestData.Act['1'].exp}</p>}
-                                                            
+                                                            {nextQuestData.Act && nextQuestData.Act['1']?.exp && <p>Exp : {nextQuestData.Act['1'].exp}</p>}
+
                                                             {/* fixed item reward */}
                                                             {
                                                                 nextQuestData.Act && nextQuestData.Act['1']?.item
@@ -279,7 +278,7 @@ const renderNPC = (npcId) => {
 
 const renderItemAndQty = ({ id: itemId, count, prop }, i, questId) => {
     if (prop) return ""
-    if(count <= 0) return ""
+    if (count <= 0) return ""
 
     return <div key={`${questId}-${itemId}-${i}`}>
         <Link to={itemIdToNavUrl(itemId)}>
@@ -293,7 +292,7 @@ const renderItemAndQty = ({ id: itemId, count, prop }, i, questId) => {
 
 const renderRandomItemAndQty = ({ id: itemId, count, prop }, i, questId) => {
     if (!prop) return ""
-    if(count <= 0) return ""
+    if (count <= 0) return ""
 
     return <div key={`${questId}-${itemId}-${i}`}>
         <Link to={itemIdToNavUrl(itemId)}>

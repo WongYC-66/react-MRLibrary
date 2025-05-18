@@ -14,6 +14,8 @@ export const filterSkillList = (skillLibrary) => {
     const order = filterOption.order || 'id'
     const sort = filterOption.sort || 'ascending'
 
+    const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
+
     let filteredSkillList = Object.entries(skillLibrary)
     // return filteredSkillList
     // console.log(filter)
@@ -22,6 +24,7 @@ export const filterSkillList = (skillLibrary) => {
         // fuzzy seach for any name matched with space separated text, with OR condition
         .filter(([_id, { name }]) => {
             if (!name) return false
+            if(_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         // filter by job/any/special/magician/pirate/rogue ....

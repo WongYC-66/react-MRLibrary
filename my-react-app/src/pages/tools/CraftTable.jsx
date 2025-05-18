@@ -130,11 +130,16 @@ const filterCraftItemList = (itemLibrary) => {
         return [id, newObj]
     })
 
+
     // filter by craft-item-name OR material-item-name
     filteredItemList = filteredItemList
-        .filter(([_, { itemName, materials }]) => {
+        .filter(([id, { itemName, materials }]) => {
             // check if craft-item name
             if (searchTermArr.some(term => itemName.includes(term))) return true
+
+            // if user search by item ID, match craft item or materials
+            if (id === exactSearchTerm) return true
+            if (materials.some(({materialId}) => materialId === exactSearchTerm)) return true
 
             // check each material-item name
             return searchTermArr.some(term => materials.some(({ materialName }) => materialName && materialName.includes(term)))
@@ -151,15 +156,15 @@ const filterCraftItemList = (itemLibrary) => {
             obj.materials.forEach(({ materialName }) => { // option-2 adopted
                 materialNameMatchCount += materialName && searchTermArr.some(term =>
                     materialName.includes(term))
-                if(materialName === exactSearchTerm) hasExact = true
+                if (materialName === exactSearchTerm) hasExact = true
             })
-            if(obj.itemName === exactSearchTerm) hasExact = true
+            if (obj.itemName === exactSearchTerm) hasExact = true
 
             return [id, obj, craftNameMatchCount, materialNameMatchCount, hasExact]
         })
         .sort((a, b) => {
             // if hasExact, goto front
-            if(a[4] != b[4]) return b[4] - a[4]
+            if (a[4] != b[4]) return b[4] - a[4]
 
             if (a[2] != b[2]) return b[2] - a[2] // by craftNameMatchCount DESC
             if (a[3] != b[3]) return b[3] - a[3] // by materialNameMatchCount DESC

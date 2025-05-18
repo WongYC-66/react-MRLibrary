@@ -5,35 +5,38 @@ import Image from "react-bootstrap/Image"
 // 
 import data_Map from "../../../data/data_Map.json"
 // 
-export const filterMapList = (questLibrary) => {
+export const filterMapList = (mapLibrary) => {
     const [searchParams] = useSearchParams()
 
-    let filteredQuestLibrary = Object.entries(questLibrary)
+    let filteredMapLibrary = Object.entries(mapLibrary)
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
     // No filter at first loading or if URL don't have query param 
-    if (!Object.keys(filterOption).length) return filteredQuestLibrary
+    if (!Object.keys(filterOption).length) return filteredMapLibrary
 
     const location = filterOption.location || 'all'
 
     let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
     const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
+    const exactSearchTermID = exactSearchTerm ? exactSearchTerm.replace(/^0+/, '') : null
 
     searchTermArr = searchTermArr.filter(Boolean)  // filter out space
     // console.log(searchTermArr)
+    // console.log(exactSearchTermID)
     // console.log(location)
 
-    // console.log(filteredQuestLibrary)
+    // console.log(filteredMapLibrary)
 
-    filteredQuestLibrary = filteredQuestLibrary
+    filteredMapLibrary = filteredMapLibrary
         .filter(([_id, obj]) => {
             if (!searchTermArr.length) return true
             const streetName = obj.streetName || ''
             const mapName = obj.mapName || ''
 
+            if (_id === exactSearchTermID) return true
+
             return searchTermArr.some(term => streetName.toLowerCase().includes(term))
                 || searchTermArr.some(term => mapName.toLowerCase().includes(term))
-                || _id === exactSearchTerm
         })
         // filter by type user selected ['maple', 'victoria-island', 'elin', 'thai', ...]
         .filter(([_id, { mapCategory }]) => {
@@ -62,7 +65,7 @@ export const filterMapList = (questLibrary) => {
         })
         .map(([_id, obj, matchCount]) => [_id, obj])
 
-    return filteredQuestLibrary
+    return filteredMapLibrary
 }
 
 // 

@@ -24,6 +24,7 @@ export const filterMobElementalList = (mobLibrary) => {
         // fuzzy seach for any name matched with space separated text, with OR condition
         .filter(([_id, { name }]) => {
             if (!name) return false
+            if(_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         // reformat data to be [_id, {obj with elemMap}, matchCount]

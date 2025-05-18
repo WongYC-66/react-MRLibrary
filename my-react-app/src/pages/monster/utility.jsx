@@ -26,9 +26,12 @@ export const filterMobList = (mobLibrary) => {
     const sort = filterOption.sort
     let filteredMobList = Object.entries(mobLibrary)
 
+    // console.log(filteredMobList)
+
     // console.log("before filter = ",filteredMobList)
     filteredMobList = filteredMobList
         .filter(x => {
+            if (x[0] === exactSearchTerm) return true // id matched
             if (!x[1].hasOwnProperty('name')) return false
             if (x[1].name.toLowerCase().includes(searchTerm)) return true
         })

@@ -30,6 +30,7 @@ export const filterEquipList = (equipLibrary) => {
     filteredEquipList = filteredEquipList
         .filter(([_id, { name }]) => {
             if (!name) return false
+            if (_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
 

@@ -17,6 +17,7 @@ export const filterNPCList = (npcLibrary) => {
 
     let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
     const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
+    const exactSearchTermID = exactSearchTerm ? exactSearchTerm.replace(/^0+/, '') : null
 
     searchTermArr = searchTermArr.filter(Boolean)  // filter out space
     // console.log(searchTermArr)
@@ -36,10 +37,10 @@ export const filterNPCList = (npcLibrary) => {
     filteredNPCLibrary = filteredNPCLibrary
         .filter(([_id, { name, func }]) => {
             if (!name) return false
-            if(!searchTermArr.length) return true
+            if (!searchTermArr.length) return true
 
             if (func && searchTermArr.some(term => func.toLowerCase().includes(term))) return true
-            if (exactSearchTerm === _id) return true
+            if (exactSearchTermID === _id) return true
 
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
@@ -79,11 +80,11 @@ const filterFnByLocation = (filteredNPCLibrary, location) => {
 
     let idBoundaryArr = locationToIdRange[location]
     // console.log({idBoundaryArr})
-    if(location === 'other'){ // all cannot have every single map
+    if (location === 'other') { // all cannot have every single map
         idBoundaryArr = []
         Object.values(locationToIdRange).forEach(arr => idBoundaryArr.push(...arr))
-        filteredNPCLibrary =filteredNPCLibrary.filter(([_, {npcLocation}]) => {
-            if(!npcLocation) return false
+        filteredNPCLibrary = filteredNPCLibrary.filter(([_, { npcLocation }]) => {
+            if (!npcLocation) return false
             return npcLocation.every(([mapId, _]) => {
                 mapId = Number(mapId)
                 return idBoundaryArr.every(([lowerBound, upperBound]) => mapId < lowerBound || mapId > upperBound)
@@ -91,15 +92,15 @@ const filterFnByLocation = (filteredNPCLibrary, location) => {
         })
     } else {
         filteredNPCLibrary = filteredNPCLibrary.filter(([_, { npcLocation }]) => {
-            if(!npcLocation) return false
-            
+            if (!npcLocation) return false
+
             return npcLocation.some(([mapId, _]) => {
                 mapId = Number(mapId)
                 return idBoundaryArr.some(([lowerBound, upperBound]) => lowerBound <= mapId && mapId <= upperBound)
             })
         })
     }
-        
+
     return filteredNPCLibrary
 }
 

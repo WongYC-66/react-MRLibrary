@@ -45,7 +45,7 @@ export const filterQuestList = (questLibrary) => {
 
             return searchTermArr.some(term => QuestInfo.name.toLowerCase().includes(term))
                 || searchTermArr.some(term => obj.npcName?.toLowerCase().includes(term))
-                || searchTermArr.some(term => obj.npcId?.includes(term))
+                || searchTermArr.some(term => obj.npcId === term)
         })
         // filter by type user selected ['victoria-island', 'leafre', 'neo-tokyo', ...]
         .filter(([_id, { QuestInfo }]) => {

@@ -14,6 +14,7 @@ export const filterItemList = (itemLibrary) => {
         let filteredItemList = Object.entries(itemLibrary)
             .filter(([_id, { name }]) => {
                 if (!name) return false
+                if(_id === exactSearchTerm) return true
                 return searchTermArr.some(term => name.toLowerCase().includes(term))
             })
 
@@ -271,8 +272,9 @@ export const filterGachaList = (itemLibrary) => {
     const type = filterOption.type
 
     let filteredItemList = itemLibrary
-        .filter(({ name }) => {
+        .filter(({ name, itemId }) => {
             if (!name) return false
+            if(itemId === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         .filter(obj => {
