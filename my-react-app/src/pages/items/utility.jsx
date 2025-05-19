@@ -62,6 +62,7 @@ export const filterUseItemList = (itemLibrary) => {
         // fuzzy seach for any name matched with space separated text, with OR condition
         .filter(([_id, { name }]) => {
             if (!name) return false
+            if(_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         // 
