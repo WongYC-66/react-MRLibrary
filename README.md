@@ -119,8 +119,14 @@ png
 ## Log - May 14 2025
 1. done - Add : Announcement from Royals crew
 
-## Log - Mat 15 2025
+## Log - May 15 2025
 1. done - Add : labelled Map , nonHD type
+
+## Log - May 18 2025
+1. done - add : search input now allow ID, itemId, mobId, skillId, etc....
+
+## Log - May 19 2025
+1. done - add : accuracy calculator, but only for physical
 
 Next:
 - grouped by region ?

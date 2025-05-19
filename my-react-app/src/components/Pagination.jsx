@@ -72,6 +72,9 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
         if (urlPathname === "/map") {
             return `?page=${inputNumber}&location=all&search=`
         }
+        if (urlPathname === "/accuracy-calc") {
+            return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
+        }
 
     }
 

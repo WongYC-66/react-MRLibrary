@@ -31,6 +31,7 @@ import GPQSolver from './pages/tools/GPQSolver.jsx'
 import { OPQSolver, OPQSimulator } from './pages/tools/OPQSolver.jsx'
 import QuestLine from './pages/tools/Questline.jsx'
 import Music from './pages/tools/Music.jsx'
+import AccuracyCalc, { accuracyAction } from './pages/tools/AccuracyCalc.jsx'
 
 import NPC, { npcAction } from './pages/npc/NPC.jsx'
 
@@ -119,6 +120,8 @@ const router = createBrowserRouter(
         </Route >
 
         <Route path="music" element={< Music />} />
+
+        <Route path="accuracy-calc" element={< AccuracyCalc />} action={accuracyAction} />
 
 
         {/* NPC */}
