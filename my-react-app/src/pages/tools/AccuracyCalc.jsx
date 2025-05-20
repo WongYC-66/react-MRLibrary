@@ -30,6 +30,8 @@ export default function AccuracyCalc() {
         setMobLibrary(data_mobStats)
     }, [])
 
+    const magicAcc = getMagicalAccuracy(playerStats)
+
     const handleAdvancedSearchClick = (e) => {
         document.getElementById("advanced-table").classList.toggle("d-none")
         e.target.classList.toggle("d-none")
@@ -42,7 +44,7 @@ export default function AccuracyCalc() {
             val = Math.min(200, Number(val))
             val = Math.max(1, Number(val))
         }
-        if (statName == 'playerAcc') {     // between 1-9999
+        if (statName == 'playerAcc' || statName == 'playerINT' || statName == 'playerLUK') {     // between 1-9999
             val = Math.min(9999, Number(val))
             val = Math.max(1, Number(val))
         }
@@ -50,24 +52,29 @@ export default function AccuracyCalc() {
         newStats[statName] = val
         setPlayerStats(newStats)
     }
+    // console.log(playerStats)
 
     return (
-        <div className="monster d-flex flex-column">
+        <div className="accuracy-tab d-flex flex-column">
 
             {/* Player Stats Input */}
             <div className="d-flex w-100">
-                {/* {Left - Warrior Img} */}
+                {/* {Left - Warrior/Mage Img} */}
                 <div className="me-3">
-                    <img src={'/images/accuracy_calc/warrior.png'} alt="warriorPic" className="rounded-3"></img>
+                    <img src={playerStats.isMage ? '/images/accuracy_calc/mage.png' : '/images/accuracy_calc/warrior.png'}
+                        alt="warriorPic"
+                        className="rounded-3"
+                        onClick={() => handlePlayerStatsChange('isMage', !playerStats.isMage)}
+                        style={{ cursor: 'pointer' }}>
+                    </img>
                 </div>
 
                 {/* Right  - Level / Acc / INT / LUK */}
-                <div className="d-flex w-50 gap-4">
+                <div className="d-flex gap-2">
                     {/* Player Level */}
                     <FloatingLabel
                         controlId="floatingLevel"
                         label="Player Level"
-                        className="h-100"
                         style={{ fontSize: '1.5rem', minWidth: '2.5rem' }}
                     >
                         <FormBS.Control aria-label="playerLevel" type="Number" min='1' max='200'
@@ -79,23 +86,67 @@ export default function AccuracyCalc() {
                         </FormBS.Control>
                     </FloatingLabel>
 
-                    <FloatingLabel
-                        controlId="floatingAccuracy"
-                        label="Accuracy"
-                        className="h-100"
-                        style={{ fontSize: '1.5rem', minWidth: '2.5rem' }}
-                    >
-                        <FormBS.Control aria-label="playerLevel" type="Number" min='1' max='9999'
-                            value={playerStats.playerAcc}
-                            onChange={e => handlePlayerStatsChange('playerAcc', e.target.value)}
-                            style={{ fontSize: '3rem' }}
-                            className="text-center h-100">
-                        </FormBS.Control>
-                    </FloatingLabel>
+                    {/* Physical Accuracy */}
+                    {!playerStats.isMage &&
+                        <FloatingLabel
+                            controlId="floatingAccuracy"
+                            label="Accuracy"
+                            className="h-100"
+                            style={{ fontSize: '1.5rem', minWidth: '2.5rem' }}
+                        >
+                            <FormBS.Control aria-label="playerAccuracy" type="Number" min='1' max='9999'
+                                value={playerStats.playerAcc}
+                                onChange={e => handlePlayerStatsChange('playerAcc', e.target.value)}
+                                style={{ fontSize: '3rem' }}
+                                className="text-center h-100"
+                                disabled={playerStats.isMage}>
+                            </FormBS.Control>
+                        </FloatingLabel>
+                    }
 
+                    {/* Magic INT */}
+                    {playerStats.isMage &&
+                        <FloatingLabel
+                            controlId="floatingINT"
+                            label="INT"
+                            className="h-100"
+                            style={{ fontSize: '1.5rem', minWidth: '2.5rem' }}
+                        >
+                            <FormBS.Control aria-label="playerINT" type="Number" min='1' max='9999'
+                                value={playerStats.playerINT}
+                                onChange={e => handlePlayerStatsChange('playerINT', e.target.value)}
+                                style={{ fontSize: '3rem' }}
+                                className="text-center h-100"
+                                disabled={!playerStats.isMage}>
+                            </FormBS.Control>
+                        </FloatingLabel>
+                    }
+
+                    {/* Magic LUK */}
+                    {playerStats.isMage &&
+                        <FloatingLabel
+                            controlId="floatingLUK"
+                            label="LUK"
+                            className="h-100"
+                            style={{ fontSize: '1.5rem', minWidth: '2.5rem' }}
+                        >
+                            <FormBS.Control aria-label="playerLUK" type="Number" min='1' max='9999'
+                                value={playerStats.playerLUK}
+                                onChange={e => handlePlayerStatsChange('playerLUK', e.target.value)}
+                                style={{ fontSize: '3rem' }}
+                                className="text-center h-100"
+                                disabled={!playerStats.isMage}>
+                            </FormBS.Control>
+                        </FloatingLabel>
+                    }
 
                 </div>
+
+
             </div>
+
+            {/* Magic Accuracy for mage */}
+            {playerStats.isMage && <p className="w-100 text-end">Magic Accuracy : {magicAcc}</p>}
 
             <hr />
 
@@ -179,9 +230,15 @@ export default function AccuracyCalc() {
                         <th>Image</th>
                         <th>Name</th>
                         <th>Level</th>
-                        <th>Hit rate (mrsoupman's)</th>
-                        <th>Hit rate(Mana's)</th>
-                        <th>Accuracy for (100%)</th>
+
+                        {/* Physical  Accuracy*/}
+                        {!playerStats.isMage && <th>Hit rate (mrsoupman's)</th>}
+                        {!playerStats.isMage && <th>Hit rate (ayumilove's)</th>}
+                        {!playerStats.isMage && <th>Accuracy for (100%)</th>}
+
+                        {/* Magic  Accuracy*/}
+                        {playerStats.isMage && <th>Hit rate (ayumilove's)</th>}
+                        {playerStats.isMage && <th>Accuracy for (100%)</th>}
                     </tr>
                 </thead>
                 <tbody>
@@ -196,9 +253,7 @@ export default function AccuracyCalc() {
             <p className="my-0">Source_1 : <a href="https://ayumilovemaple.wordpress.com/2008/09/03/maplestory-accuracy-calculator-how-to-100-hit-without-miss/" target="_blank">Ayumilove</a></p>
             <p className="my-0">Source_2 : <a href="https://royals.ms/forum/threads/horntail-party-quest-bossing-guide.6152/" target="_blank">Matts' Horntail Party Quest & Bossing Guide</a></p>
             <p className="my-0">Source_3 : <a href="https://mrsoupman.github.io/Maple-ACC-calculator/" target="_blank">mrsoupman</a></p>
-            <p className="my-0">Source_4 : <a href="https://forum.maplelegends.com/index.php?threads/manas-physical-accuracy-guide.55286/" target="_blank">Mana's Physical accuracy guide</a></p>
-
-
+            <p className="my-0">Source_4 : <a href="https://ayumilovemaple.wordpress.com/2009/09/06/maplestory-formula-compilation/" target="_blank">Ayumilove</a></p>
         </div>
 
     )
@@ -215,12 +270,17 @@ const renderMobList = (filteredMobList, playerStats) => {
     filteredMobList = filteredMobList.slice(sliceStartIndex, sliceEndIndex)
     // [ ["100100", {name: xxx, exp: xxx, maxHP: xxx}], ... ...]
 
-    console.log(filteredMobList)
+    // console.log(filteredMobList)
     return filteredMobList.map(x => {
         const mobId = x[0]
-        const accuracyToHitNoMiss = calculateAccForNoMiss(x[1], playerStats)
-        const currentHitRate = calculateHitRate(accuracyToHitNoMiss, playerStats)
-        const currentHitRate2 = calculateHitRate2(x[1], playerStats)
+        const accuracyToHitNoMissPhysical = calculateAccForNoMissPhysical(x[1], playerStats)
+        const currentPhysicalHitRate = calculatePhysicalHitRate(accuracyToHitNoMissPhysical, playerStats)
+        const currentPhysicalHitRate2 = calculatePhysicalHitRate2(x[1], playerStats)
+
+        const accuracyToHitNoMissMagic = calculateAccForNoMissMagic(x[1], playerStats)
+        // const currentMagicalHitRate = calculateMagicalHitRate(x[1], playerStats)
+        const currentMagicalHitRate = calculateMagicalHitRate(accuracyToHitNoMissMagic, playerStats)
+
 
         return (
             <tr key={x[0]} className="">
@@ -235,15 +295,22 @@ const renderMobList = (filteredMobList, playerStats) => {
                     </Link>
                 </td>
                 <td>{x[1].level}</td>
-                <td>{currentHitRate.toFixed(1)}%</td>
-                <td>{currentHitRate2.toFixed(1)}%</td>
-                <td>{accuracyToHitNoMiss}</td>
+
+                {/* Physical Accuracy */}
+                {!playerStats.isMage && <td>{currentPhysicalHitRate.toFixed(1)}%</td>}
+                {!playerStats.isMage && <td>{currentPhysicalHitRate2.toFixed(1)}%</td>}
+                {!playerStats.isMage && <td>{accuracyToHitNoMissPhysical}</td>}
+
+                {/* Magical Accuracy */}
+                {playerStats.isMage && <td>{currentMagicalHitRate.toFixed(1)}%</td>}
+                {playerStats.isMage && <td>{accuracyToHitNoMissMagic}</td>}
+
             </tr>
         )
     })
 }
 
-const calculateAccForNoMiss = (mobStats, playerStats) => {
+const calculateAccForNoMissPhysical = (mobStats, playerStats) => {
     // https://royals.ms/forum/threads/horntail-party-quest-bossing-guide.6152/
     // https://ayumilovemaple.wordpress.com/2008/09/03/maplestory-accuracy-calculator-how-to-100-hit-without-miss/
 
@@ -251,14 +318,13 @@ const calculateAccForNoMiss = (mobStats, playerStats) => {
     // = (55+2*lvl difference) * mob avoid/15 
     // = (55+2*5)*30/15 = 120
 
-    const { level: mobLevel, eva: mobAvoid } = mobStats
-    let levelDiff = (mobLevel || 0) - playerStats.playerLevel     // mobLevel - playerLevel
-    levelDiff = Math.max(0, levelDiff)
+    const mobAvoid = getMobAvoid(mobStats)
+    const levelDiff = getLevelDiff(mobStats, playerStats)
 
     return Math.ceil((55 + 2 * levelDiff) * (mobAvoid) / 15)
 }
 
-const calculateHitRate = (accuracyToHitNoMiss, playerStats) => {
+const calculatePhysicalHitRate = (accuracyToHitNoMiss, playerStats) => {
     // view-source:https://mrsoupman.github.io/Maple-ACC-calculator/
 
     // formula of player current hit rate on this mob
@@ -272,22 +338,96 @@ const calculateHitRate = (accuracyToHitNoMiss, playerStats) => {
     return hitRate * 100
 }
 
-const calculateHitRate2 = (mobStats, playerStats) => {
-    // https://forum.maplelegends.com/index.php?threads/manas-physical-accuracy-guide.55286/
+const calculatePhysicalHitRate2 = (mobStats, playerStats) => {
+    // https://ayumilovemaple.wordpress.com/2009/09/06/maplestory-formula-compilation/
 
-    // To find your %chance to hit with your current accuracy :
-    // Credit to Ayumilove
-    // Accuracy/((1.84 + 0.07 * D) * Avoid) - 1
+    // Chance to Hit = Accuracy/((1.84 + 0.07 * D) * Avoid) - 1
+    // (D = monster level - your level. If negative, make it 0.)
 
-    const { level: mobLevel, eva: mobAvoid } = mobStats
-    let levelDiff = (mobLevel || 0) - playerStats.playerLevel     // mobLevel - playerLevel
-    levelDiff = Math.max(0, levelDiff)
+    const levelDiff = getLevelDiff(mobStats, playerStats)
+    const mobAvoid = getMobAvoid(mobStats)
 
     let hitRate = playerStats.playerAcc / ((1.84 + 0.07 * levelDiff) * mobAvoid) - 1
     hitRate = Math.max(0, hitRate)
     hitRate = Math.min(1, hitRate)
 
     return hitRate * 100
+}
+
+// const calculateMagicalHitRate = (mobStats, playerStats) => {
+const calculateMagicalHitRate = (accuracyToHitNoMissMagic, playerStats) => {
+    // BUGGY - NOT WORKING
+    // https://ayumilovemaple.wordpress.com/2009/09/06/maplestory-formula-compilation/
+
+    //  Magical Accuracy:
+    //  Thikket and Nekonecat's version:
+    //  Quote:
+    //  Let x = (trunc(INT/10) + trunc(LUK/10))/(Avoid+1)*(1+0.0415*D), where D is the level difference between the player and the monster.
+    //  Then
+    //  hitrate% = -2.5795x^2 + 5.2343x - 1.6749
+
+
+    // const levelDiff = getLevelDiff(mobStats, playerStats)
+    // const mobAvoid = getMobAvoid(mobStats)
+
+    // let x = Math.floor(playerStats.playerINT / 10) + Math.floor(playerStats.playerLUK / 10)
+    // x /= (mobAvoid + 1)
+    // x *= (1 + 0.0415 * levelDiff)
+
+    // let hitRate = -2.5795 * (x ** 2) + (5.2343 * x) - 1.6749
+    // console.log(x, hitRate)
+    // hitRate = Math.min(1, hitRate)
+    // hitRate = Math.max(0, hitRate)
+    // return hitRate * 100
+
+    // A Direct port from mrsoupman formula
+    let currAcc = getMagicalAccuracy(playerStats)
+    if (currAcc >= accuracyToHitNoMissMagic) return 100
+
+    let acc100 = accuracyToHitNoMissMagic
+    let acc1 = Math.round(0.41 * acc100)
+    let accPart = (currAcc - acc1 + 1) / (acc100 - acc1 + 1)
+    let accRatio = ((-0.7011618132 * Math.pow(accPart, 2)) + (1.702139835 * accPart));
+    accRatio = Math.max(0, accRatio)
+    accRatio = Math.min(1, accRatio)
+    return accRatio * 100
+}
+
+const calculateAccForNoMissMagic = (mobStats, playerStats) => {
+    // https://ayumilovemaple.wordpress.com/2009/09/06/maplestory-formula-compilation/
+
+    // Stianweij's version:
+    // Quote:
+    // Magic Accuracy = trunc(total int/10)+ trunc(luk/10) (source: Sleepywood forum)
+
+    // Accuracy to hit 100% = (Avoid+1)(1+D/24) = (34+1)*(1+(100-68)/24) = 81.67 (** this formula is simplified by myself, slighly differs from the one found in SW thread)
+    // Min Accuracy to hit at all = Max Accuracy *10/24
+
+    // D = level difference
+
+    const levelDiff = getLevelDiff(mobStats, playerStats)
+    const mobAvoid = getMobAvoid(mobStats)
+
+    return Math.ceil((mobAvoid + 1) * (1 + levelDiff / 24));
+}
+
+const getLevelDiff = (mobStats, playerStats) => {
+    let { level: mobLevel } = mobStats
+    mobLevel = Number(mobLevel) || 0
+
+    let levelDiff = mobLevel - playerStats.playerLevel
+    levelDiff = Math.max(0, levelDiff)
+
+    return levelDiff
+}
+
+const getMobAvoid = (mobStats) => {
+    const { eva: mobAvoid } = mobStats
+    return Number(mobAvoid) || 0
+}
+
+const getMagicalAccuracy = (playerStats) => {
+    return Math.floor(playerStats.playerINT / 10) + Math.floor(playerStats.playerLUK / 10)
 }
 
 export const accuracyAction = async ({ request }) => {

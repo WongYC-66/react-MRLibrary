@@ -126,7 +126,7 @@ png
 1. done - add : search input now allow ID, itemId, mobId, skillId, etc....
 
 ## Log - May 19 2025
-1. done - add : accuracy calculator, but only for physical
+1. done - add : accuracy calculator, physical and magical(untested)
 
 Next:
 - grouped by region ?
