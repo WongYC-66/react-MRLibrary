@@ -148,6 +148,9 @@ export default function RootLayout() {
                   <LinkContainer to="/music">
                     <NavDropdown.Item>Music</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/accuracy-calc">
+                    <NavDropdown.Item>Accuracy Calc</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
 
                 <LinkContainer to="/npc">
