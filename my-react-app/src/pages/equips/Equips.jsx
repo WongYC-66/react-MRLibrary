@@ -44,6 +44,14 @@ export default function Equips() {
         setEquipLibrary(filtered_data_GearStats)
     }, [])
 
+    const handleOrderByChange = (e) => {
+        // improve UX, when user done selecting OrderBy attributes, automatically update to "Descending" order for certain stats
+        const attributesIncOrder = new Set(['id', 'reqLevel', 'attackSpeed'])
+        const DOM_SORT_BY = document.getElementById('sort-by')
+        const isToSortByIncOrder = attributesIncOrder.has(e.target.value)
+        DOM_SORT_BY.value = isToSortByIncOrder ? 'ascending' : 'descending'
+    }
+
     const handleAdvancedSearchClick = (e) => {
         document.getElementById("advanced-table").classList.toggle("d-none")
         e.target.classList.toggle("d-none")
@@ -93,7 +101,7 @@ export default function Equips() {
 
                                     {/* Order By dropdown */}
                                     <td className="bg-transparent">
-                                        <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy">
+                                        <FormBS.Select aria-label="order by" data-bs-theme="light" name="orderBy" onChange={e => handleOrderByChange(e)}>
 
                                             {orderByList.map(({ text, value }) =>
                                                 <option key={value} value={value}>{text}</option>
@@ -111,7 +119,7 @@ export default function Equips() {
 
                                     {/* Sort dropdown */}
                                     <td className="bg-transparent">
-                                        <FormBS.Select aria-label="sort by" data-bs-theme="light" name="sortBy">
+                                        <FormBS.Select aria-label="sort by" data-bs-theme="light" name="sortBy" id='sort-by'>
                                             <option value="ascending">Ascending</option>
                                             <option value="descending">Descending</option>
                                         </FormBS.Select>

@@ -128,6 +128,9 @@ png
 ## Log - May 19 2025
 1. done - add : accuracy calculator, physical and magical(untested)
 
+## Log - May 21 2025
+1. done - UX : Equip page, auto select DESC order for some stats selection
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?
