@@ -130,6 +130,7 @@ png
 
 ## Log - May 21 2025
 1. done - UX : Equip page, auto select DESC order for some stats selection
+2. done - add : filter by map region to Monster page / Elementable Table page
 
 Next:
 - grouped by region ?

@@ -4,6 +4,7 @@ import { decode } from 'html-entities'
 import Image from "react-bootstrap/Image"
 // 
 import data_Map from "../../../data/data_Map.json"
+import data_MapRange from "../../../data/data_MapRange.json"
 // 
 export const filterMapList = (mapLibrary) => {
     const [searchParams] = useSearchParams()
@@ -144,7 +145,7 @@ export const renderHDImageWithMapId = (mapId) => {
 
         if (img.getAttribute("myimgindex") === '0') {
             img.setAttribute("myimgindex", "1")
-            img.src = `https://maplestory.io/api/GMS/64/map/${Number(mapId)}/render`
+            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
             return
         }
         if (img.getAttribute("myimgindex") === '1') {
@@ -199,6 +200,65 @@ export const convertMapIdToName = (id) => {
 
 export const parseBgmToName = (rawName) => {
     return decode(rawName.split('/')[1])
+}
+
+export const mapCategory = [
+    "Amoria",
+    "Aquarium",
+    "Ariant",
+    "AriantPQ",
+    "Boat",
+    "CPQ",
+    "CPQ2",
+    "China",
+    "Dojo",
+    "EPQ",
+    "EasternChina",
+    "ElNath",
+    "EllinForest",
+    "Events",
+    "FlorinaBeach",
+    "GM",
+    "GPQ",
+    "HauntedHouse",
+    "HerbTown",
+    "KoreanFolkTown",
+    "LHC",
+    "LMPQ",
+    "LPQ",
+    "Leafre",
+    "Ludibrium",
+    "Magatia",
+    "Malaysia",
+    "MapleIsland",
+    "MuLung",
+    "NewLeafCity",
+    "OPQ",
+    "OmegaSector",
+    "Orbis",
+    "Others",
+    "PPQ",
+    "PhantomForest/CWK",
+    "RJPQ",
+    "Singapore",
+    "Sleepywood",
+    "TempleOfTime",
+    "Thailand",
+    "VictoriaIsland",
+    "Zakum",
+    "Zipangu"
+]
+
+export const findMapCategoryByMapId = (mapId) => {
+    mapId = Number(mapId)
+    for(let {region, minMapId, maxMapId} of data_MapRange){
+        minMapId = Number(minMapId)
+        maxMapId = Number(maxMapId)
+        if(minMapId <= mapId && mapId <= maxMapId){
+            return region
+        }
+    }
+    return "NULL" // not found
 }
 
 // 

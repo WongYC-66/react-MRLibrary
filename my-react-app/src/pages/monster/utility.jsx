@@ -7,7 +7,6 @@ import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
 import data_fixMobImg from "./data_fixMobImg.json"
-import data_MapUrl from "../../../data/data_MapUrl.json"
 
 // 
 const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x), Object.values(x)]))
@@ -22,11 +21,13 @@ export const filterMobList = (mobLibrary) => {
     const exactSearchTerm = filterOption.search.toLowerCase()
 
     const filter = filterOption.filter
+    const mapCategory = filterOption.category
     const order = filterOption.order
     const sort = filterOption.sort
     let filteredMobList = Object.entries(mobLibrary)
 
     // console.log(filteredMobList)
+    // console.log(mapCategory)
 
     // console.log("before filter = ",filteredMobList)
     filteredMobList = filteredMobList
@@ -39,6 +40,11 @@ export const filterMobList = (mobLibrary) => {
             if (filter === "any") return true
             if (filter === "boss" && x[1]?.boss === "1") return true
             if (filter === "monster" && !x[1].hasOwnProperty("boss")) return true
+        })
+        .filter(([_, { mapCategory: appearedMap }]) => {
+            if (mapCategory === "any") return true
+            if (!appearedMap) return false
+            return appearedMap.has(mapCategory)
         })
         .sort((a, b) => {
             // exact term sort to front, then sort by property

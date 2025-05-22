@@ -38,7 +38,7 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
             return `?page=${inputNumber}&job=0&order=id&sort=ascending&cosmetic=null&search=`
         }
         if (urlPathname === "/monster") {
-            return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`
+            return `?page=${inputNumber}&filter=any&category=any&order=id&sort=ascending&search=`
         }
         if (urlPathname === "/use") {
             return `?page=${inputNumber}&filter=any&order=id&sort=ascending&cbox=&search=`
@@ -52,7 +52,7 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
             return `?page=${inputNumber}&location=all&type=all&search=`
         }
         if (urlPathname === "/elemental-table") {
-            return `?page=${inputNumber}&filter=any&order=level&sort=ascending&search=`
+            return `?page=${inputNumber}&filter=any&category=any&order=level&sort=ascending&search=`
         }
         if (urlPathname === "/skill") {
             return `?page=${inputNumber}&filter=any&order=id&sort=ascending&search=`

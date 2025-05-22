@@ -7,8 +7,12 @@ import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
 import { renderImageWithMobId, filterMobList, updateSearchResultCount } from "./utility.jsx"
+import { mapCategory, findMapCategoryByMapId } from "../map/utility.jsx"
+
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
+import data_mapMobCount from "../../../data/data_MapMobCount.json"
+import data_mobMap from "../../../data/data_Mob_MapOnly.json"
 
 export default function Monster() {
     const [mobLibrary, setMobLibrary] = useState({})
@@ -19,6 +23,46 @@ export default function Monster() {
                 data_mobStats[mobId] = { ...data_mobStats[mobId], name: mobName }
             }
         })
+
+        // HEAVY CALC MAPPING
+        const addMapCategoryToMobStats = () => {
+            const mapIdToCategory = {}  //  '100000000' => 'Henesys'
+
+            // data from inside data_MapMobCount (map.wz)
+            for (let mapId in data_mapMobCount) {
+                if (!(mapId in mapIdToCategory)) {
+                    mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+                }
+
+                Object.keys(data_mapMobCount[mapId]).forEach(mobId => {
+                    if (!data_mobStats[mobId]) return
+                    if (!data_mobStats[mobId].mapCategory) {
+                        data_mobStats[mobId].mapCategory = new Set()
+                    }
+                    data_mobStats[mobId].mapCategory.add(mapIdToCategory[mapId])
+                })
+            }
+
+            // there is a problem, boss-type mob not inside data_MapMobCount
+            // combine data from monsterbook together then (string.wz)
+            // might have bugs for LKC mobs
+            for (let mobId in data_mobMap) {
+                if (!data_mobStats[mobId]) continue
+                data_mobMap[mobId].forEach(mapId => {
+                    if (!(mapId in mapIdToCategory)) {
+                        mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+                    }
+
+                    if (!data_mobStats[mobId].mapCategory) {
+                        data_mobStats[mobId].mapCategory = new Set()
+                    }
+                    data_mobStats[mobId].mapCategory.add(mapIdToCategory[mapId])    
+                })
+            }
+        }
+
+        addMapCategoryToMobStats()
+
         setMobLibrary(data_mobStats)
     }, [])
 
@@ -27,17 +71,20 @@ export default function Monster() {
         e.target.classList.toggle("d-none")
     }
 
+
+
     return (
         <div className="monster d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
             <Form method="post" action="/monster">
                 <div className="d-flex flex-wrap">
-                    
+
                     <div id="advanced-table" className="col-lg-6 flex-grow-1 d-none d-md-block">
                         <Table className="text-center" borderless >
                             <thead>
                                 <tr>
                                     <th className="bg-transparent">Filter</th>
+                                    <th className="bg-transparent">Category</th>
                                     <th className="bg-transparent">Order By</th>
                                     <th className="bg-transparent">Sort</th>
                                 </tr>
@@ -49,6 +96,14 @@ export default function Monster() {
                                             <option value="any">Any</option>
                                             <option value="monster">Monster</option>
                                             <option value="boss">Boss</option>
+                                        </FormBS.Select>
+                                    </td>
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="category by" data-bs-theme="light" name="categoryBy">
+                                            <option value="any">Any</option>
+                                            {mapCategory.map(mapName =>
+                                                <option key={mapName} value={mapName}>{mapName}</option>
+                                            )}
                                         </FormBS.Select>
                                     </td>
                                     <td className="bg-transparent">
@@ -69,7 +124,7 @@ export default function Monster() {
                             </tbody>
                         </Table>
                     </div>
-                    
+
                     <div className="col-12 flex-grow-1 d-md-none px-2"><Button onClick={handleAdvancedSearchClick} className="w-100" variant="secondary">Advanced Search</Button></div>
 
                     <div className="col-lg-6 flex-grow-1">
@@ -137,6 +192,8 @@ const renderMobList = (filteredMobList) => {
     filteredMobList = filteredMobList.slice(sliceStartIndex, sliceEndIndex)
     // [ ["100100", {name: xxx, exp: xxx, maxHP: xxx}], ... ...]
 
+    // console.log(filteredMobList)
+
     return filteredMobList.map(x => {
         const mobId = x[0]
         return (
@@ -148,7 +205,7 @@ const renderMobList = (filteredMobList) => {
                 </td>
                 <td>
                     <Link to={`/monster/id=${mobId}`}>
-                        <p dangerouslySetInnerHTML={{__html: x[1].name}}></p>
+                        <p dangerouslySetInnerHTML={{ __html: x[1].name }}></p>
                         {/* {x[1].name} */}
                     </Link>
                 </td>
@@ -165,6 +222,7 @@ export const monsterAction = async ({ request }) => {
 
     const submission = {
         filterBy: data.get('filterBy'),
+        categoryBy: data.get('categoryBy'),
         orderBy: data.get('orderBy'),
         sortBy: data.get('sortBy'),
         searchName: data.get('searchName'),
@@ -175,7 +233,8 @@ export const monsterAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = `/monster?page=1&filter=${submission.filterBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
+    const actionUrl = `/monster?page=1&filter=${submission.filterBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
+
     return redirect(actionUrl)
 }
 

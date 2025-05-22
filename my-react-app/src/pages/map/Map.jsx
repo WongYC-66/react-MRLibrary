@@ -9,12 +9,24 @@ import { updatePagination } from "../../components/Pagination.jsx"
 import { filterMapList, renderImageWithMapId, convertMapIdToUrl, updateSearchResultCount, convertMapIdToName } from "./utility.jsx"
 
 import data_Map from "../../../data/data_Map.json"
+import data_MapStats from "../../../data/data_MapStats.json"
 
 export default function Quest() {
     const [mapLibrary, setMapLibrary] = useState({})
 
     useEffect(() => {
-        setMapLibrary(data_Map)
+        const allMapData = { ...data_Map }
+        Object.keys(data_MapStats).forEach(key => {
+            if (key in allMapData) return
+            // not in, add dummy data
+            allMapData[key] = {
+                "mapCategory": "",
+                "streetName": "",
+                "mapName": "",
+            }
+        })
+
+        setMapLibrary(allMapData)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {

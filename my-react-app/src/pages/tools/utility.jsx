@@ -1,7 +1,5 @@
 import { useSearchParams } from "react-router-dom"
 // 
-import Image from "react-bootstrap/Image"
-// 
 
 export const filterMobElementalList = (mobLibrary) => {
     const [searchParams] = useSearchParams()
@@ -12,6 +10,7 @@ export const filterMobElementalList = (mobLibrary) => {
     const exactSearchTerm = filterOption.search?.toLowerCase() || ''
 
     const filter = filterOption.filter?.split('-') || ['any', '']
+    const mapCategory = filterOption.category || 'any'
     const order = filterOption.order || 'level'
     const sort = filterOption.sort || 'ascending'
 
@@ -24,7 +23,7 @@ export const filterMobElementalList = (mobLibrary) => {
         // fuzzy seach for any name matched with space separated text, with OR condition
         .filter(([_id, { name }]) => {
             if (!name) return false
-            if(_id === exactSearchTerm) return true
+            if (_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         // reformat data to be [_id, {obj with elemMap}, matchCount]
@@ -32,7 +31,7 @@ export const filterMobElementalList = (mobLibrary) => {
 
             // 1. decode elemAttr into elemMap
             obj.elemMap = {
-                'undead' : '',
+                'undead': '',
                 'holy': '',
                 'fire': '',
                 'ice': '',
@@ -57,13 +56,27 @@ export const filterMobElementalList = (mobLibrary) => {
             if (type == 'immune') return obj.elemMap[el] === 'Immune'
             return false
         })
+        .filter(([_, obj, __]) => {
+            let [type, el] = filter
+            if (type === "any") return true
+            if (type === "undead") return obj.elemMap['undead'] === 'undead'
+            if (type == 'weak') return obj.elemMap[el] === 'Weak'
+            if (type == 'strong') return obj.elemMap[el] === 'Strong'
+            if (type == 'immune') return obj.elemMap[el] === 'Immune'
+            return false
+        })
+        .filter(([_, { mapCategory: appearedMap }]) => {
+            if (mapCategory === "any") return true
+            if (!appearedMap) return false
+            return appearedMap.has(mapCategory)
+        })
         .sort((a, b) => {
             // a = [_id, obj, matchCount]
             // exact term sort to front, then sort by matchCount DESC, then property user select...
             if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
             if (a[1].name.toLowerCase() === exactSearchTerm) return -1
             if (b[1].name.toLowerCase() === exactSearchTerm) return 1
-            
+
             if (a[2] !== b[2]) return b[2] - a[2]   // matchCount
 
             // if same value, sort by mobId then
@@ -96,7 +109,7 @@ const elementValToValue = {
 }
 
 export const updateWithElemAttr = (undead, elemMap, elemAttr) => {
-    if(undead === '1') elemMap['undead'] = 'undead'
+    if (undead === '1') elemMap['undead'] = 'undead'
 
     if (!elemAttr) return
     elemAttr.match(/.{2}/g).forEach(str => {

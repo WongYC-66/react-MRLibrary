@@ -1,0 +1,105 @@
+[
+    {"region": "MapleIsland", "minMapId" : "0", "maxMapId": "099999999"},
+    {"region": "VictoriaIsland", "minMapId" : "100000000", "maxMapId": "104040002"},
+    {"region": "Sleepywood", "minMapId" : "105030000", "maxMapId": "105090900"},
+    {"region": "Sleepywood", "minMapId" : "105100000", "maxMapId": "105100401"},
+    {"region": "VictoriaIsland", "minMapId" : "106000000", "maxMapId": "107000400"},
+    {"region": "VictoriaIsland", "minMapId" : "107000401", "maxMapId": "108010501"},
+
+    {"region": "Events", "minMapId" : "109010000", "maxMapId": "109090304"},
+    {"region": "Events", "minMapId" : "209000000", "maxMapId": "209000100"},
+    {"region": "Events", "minMapId" : "209080000", "maxMapId": "209080100"},
+    {"region": "Events", "minMapId" : "209080000", "maxMapId": "209080100"},
+    {"region": "Events", "minMapId" : "219000000", "maxMapId": "219020301"},
+    {"region": "Events", "minMapId" : "229020000", "maxMapId": "229020400"},
+    {"region": "Events", "minMapId" : "390000000", "maxMapId": "390009999"},
+    {"region": "Events", "minMapId" : "680100000", "maxMapId": "680100003"},
+    {"region": "Events", "minMapId" : "681000000", "maxMapId": "681000000"},
+    {"region": "Events", "minMapId" : "683000000", "maxMapId": "683000129"},
+    {"region": "Events", "minMapId" : "686000000", "maxMapId": "686000001"},
+    {"region": "Events", "minMapId" : "686000002", "maxMapId": "686000003"},
+    {"region": "Events", "minMapId" : "690010000", "maxMapId": "690010020"},
+    {"region": "Events", "minMapId" : "706041000", "maxMapId": "706041008"},
+    {"region": "Events", "minMapId" : "709000604", "maxMapId": "709000605"},
+    {"region": "Events", "minMapId" : "741000200", "maxMapId": "741000200"},
+    {"region": "Events", "minMapId" : "749040000", "maxMapId": "749040008"},
+    {"region": "Events", "minMapId" : "749050000", "maxMapId": "749050502"},
+    {"region": "Events", "minMapId" : "809040000", "maxMapId": "809040100"},
+    {"region": "Events", "minMapId" : "810000000", "maxMapId": "810000000"},
+    {"region": "Events", "minMapId" : "880000000", "maxMapId": "880000000"},
+    {"region": "Events", "minMapId" : "881000000", "maxMapId": "881000000"},
+    {"region": "Events", "minMapId" : "889100000", "maxMapId": "889100100"},
+    {"region": "Events", "minMapId" : "890000001", "maxMapId": "890000001"},
+    {"region": "Events", "minMapId" : "922230000", "maxMapId": "922241100"},
+    {"region": "Events", "minMapId" : "960001000", "maxMapId": "960006502"},
+    {"region": "Events", "minMapId" : "960000040", "maxMapId": "960000049"},
+    {"region": "Events", "minMapId" : "970000200", "maxMapId": "970000229"},
+    {"region": "Events", "minMapId" : "970001000", "maxMapId": "970101200"},
+    {"region": "Events", "minMapId" : "980040000", "maxMapId": "980044200"},
+    
+    
+    {"region": "GM", "minMapId" : "180000000", "maxMapId": "180000004"},
+
+    {"region": "FlorinaBeach", "minMapId" : "110000000", "maxMapId": "110040000"},
+    {"region": "VictoriaIsland", "minMapId" : "120000000", "maxMapId": "120010000"},
+    {"region": "VictoriaIsland", "minMapId" : "193000000", "maxMapId": "193000000"},
+
+    
+    {"region": "Orbis", "minMapId" : "200000000", "maxMapId": "200082301"},
+
+    {"region": "Boat", "minMapId" : "200090000", "maxMapId": "200090510"},
+
+    {"region": "ElNath", "minMapId" : "211000000", "maxMapId": "211050000"},
+    {"region": "Zakum", "minMapId" : "280010000", "maxMapId": "280090001"},
+    {"region": "LHC", "minMapId" : "211060000", "maxMapId": "211080600"},
+    {"region": "LHC", "minMapId" : "921140001", "maxMapId": "921140003"},
+    
+    {"region": "Ludibrium", "minMapId" : "220000000", "maxMapId": "220080001"},
+    {"region": "Ludibrium", "minMapId" : "221020000", "maxMapId": "221024500"},
+    {"region": "Ludibrium", "minMapId" : "222020001", "maxMapId": "222020400"},
+    
+    {"region": "OmegaSector", "minMapId" : "221000000", "maxMapId": "221019999"},
+    {"region": "OmegaSector", "minMapId" : "221024501", "maxMapId": "221040402"},
+    {"region": "KoreanFolkTown", "minMapId" : "222000000", "maxMapId": "222020000"},
+    
+    {"region": "Aquarium", "minMapId" : "230000000", "maxMapId": "230040420"},
+    {"region": "Leafre", "minMapId" : "240000000", "maxMapId": "240060200"},
+    {"region": "MuLung", "minMapId" : "250000000", "maxMapId": "250999999"},
+    {"region": "HerbTown", "minMapId" : "251000000", "maxMapId": "251010500"},
+    {"region": "Ariant", "minMapId" : "260000000", "maxMapId": "260999999"},
+    {"region": "Magatia", "minMapId" : "261000000", "maxMapId": "261040000"},
+    {"region": "TempleOfTime", "minMapId" : "270000000", "maxMapId": "270050300"},
+    
+    {"region": "EllinForest", "minMapId" : "300000000", "maxMapId": "300030500"},
+    
+    {"region": "Thailand", "minMapId" : "500000000", "maxMapId": "500020400"},
+    {"region": "Singapore", "minMapId" : "540000000", "maxMapId": "541020800"},
+    {"region": "Malaysia", "minMapId" : "550000000", "maxMapId": "551030200"},
+
+    {"region": "NewLeafCity", "minMapId" : "600000000", "maxMapId": "600020600"},
+    {"region": "PhantomForest/CWK", "minMapId" : "610010000", "maxMapId": "610030800"},
+    {"region": "HauntedHouse", "minMapId" : "682000000", "maxMapId": "682020300"},
+
+    {"region": "Amoria", "minMapId" : "670000100", "maxMapId": "680010100"},
+    {"region": "China", "minMapId" : "701000000", "maxMapId": "701010600"},
+    {"region": "EasternChina", "minMapId" : "702000000", "maxMapId": "702100000"},
+
+    {"region": "Zipangu", "minMapId" : "800000000", "maxMapId": "809030000"},
+
+    {"region": "LMPQ", "minMapId" : "809050000", "maxMapId": "809050017"},
+
+    {"region": "OPQ", "minMapId" : "920010000", "maxMapId": "920011300"},
+    {"region": "LPQ", "minMapId" : "922010000", "maxMapId": "922011100"},
+    {"region": "Dojo", "minMapId" : "925020000", "maxMapId": "925040001"},
+    {"region": "PPQ", "minMapId" : "925100000", "maxMapId": "925100700"},
+    {"region": "AriantPQ", "minMapId" : "926010000", "maxMapId": "926023500"},
+    {"region": "AriantPQ", "minMapId" : "980010000", "maxMapId": "980010301"},
+    {"region": "RJPQ", "minMapId" : "926100000", "maxMapId": "926110700"},
+    {"region": "EPQ", "minMapId" : "930000000", "maxMapId": "930000800"},
+    {"region": "CPQ", "minMapId" : "980000000", "maxMapId": "980000604"},
+    {"region": "CPQ2", "minMapId" : "980030000", "maxMapId": "980033400"},
+    {"region": "GPQ", "minMapId" : "990000000", "maxMapId": "999999999"},
+
+    {"region": "Others", "minMapId" : "0", "maxMapId": "999999999"}
+]
+
