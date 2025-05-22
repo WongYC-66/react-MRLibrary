@@ -6,7 +6,16 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterMapList, renderImageWithMapId, convertMapIdToUrl, updateSearchResultCount, convertMapIdToName } from "./utility.jsx"
+import {
+    filterMapList,
+    renderImageWithMapId,
+    convertMapIdToUrl,
+    updateSearchResultCount,
+    convertMapIdToName,
+    mapCategory,
+    findMapCategoryByMapId,
+} from "./utility.jsx"
+
 
 import data_Map from "../../../data/data_Map.json"
 import data_MapStats from "../../../data/data_MapStats.json"
@@ -16,15 +25,27 @@ export default function Quest() {
 
     useEffect(() => {
         const allMapData = { ...data_Map }
-        Object.keys(data_MapStats).forEach(key => {
-            if (key in allMapData) return
-            // not in, add dummy data
-            allMapData[key] = {
-                "mapCategory": "",
-                "streetName": "",
-                "mapName": "",
+
+        const giveDummyName = () => {
+            Object.keys(data_MapStats).forEach(key => {     // give dummy name to unnamed map that existed in map.wz, but not in string.wz
+                if (key in allMapData) return
+                // not in, add dummy data
+                allMapData[key] = {
+                    "mapCategory": "",
+                    "streetName": "",
+                    "mapName": "",
+                }
+            })
+        }
+
+        const giveMyCustomMapCategoryName = () => {
+            for (let mapId in allMapData) {
+                allMapData[mapId].myMapCateogry = findMapCategoryByMapId(mapId)
             }
-        })
+        }
+
+        giveDummyName()
+        giveMyCustomMapCategoryName()
 
         setMapLibrary(allMapData)
     }, [])
@@ -34,7 +55,7 @@ export default function Quest() {
         e.target.classList.toggle("d-none")
     }
 
-    const allMapCategory = useMemo(generateAllMapCategory, [])
+    // const allMapCategory = useMemo(generateAllMapCategory, [])
 
     // console.log(mapLibrary)
 
@@ -55,7 +76,8 @@ export default function Quest() {
                                 <tr>
                                     <td className="bg-transparent">
                                         <FormBS.Select aria-label="location by" data-bs-theme="light" name="locationBy">
-                                            {allMapCategory.map(category =>
+                                            <option value='any'>Any</option>
+                                            {mapCategory.map(category =>
                                                 <option key={category} value={category}>{category} </option>
                                             )}
                                         </FormBS.Select>
@@ -127,6 +149,8 @@ const renderMapList = (filteredMapList) => {
     const sliceEndIndex = sliceStartIndex + 10
     filteredMapList = filteredMapList.slice(sliceStartIndex, sliceEndIndex)
 
+    // console.log(filteredMapList)
+
     return filteredMapList.map(([map_id, obj]) => mapCard(map_id, obj))
 }
 
@@ -135,7 +159,7 @@ const mapCard = (map_id, obj) => {
     return (
         <tr key={map_id}>
             <td>
-                {obj.mapCategory}
+                {obj.myMapCateogry}
             </td>
             <td className="d-flex flex-column">
                 {<Link to={convertMapIdToUrl(map_id)}>

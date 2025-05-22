@@ -1,4 +1,4 @@
-import { useSearchParams, Link } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 import { decode } from 'html-entities'
 // 
 import Image from "react-bootstrap/Image"
@@ -40,9 +40,9 @@ export const filterMapList = (mapLibrary) => {
                 || searchTermArr.some(term => mapName.toLowerCase().includes(term))
         })
         // filter by type user selected ['maple', 'victoria-island', 'elin', 'thai', ...]
-        .filter(([_id, { mapCategory }]) => {
-            if (location === 'all') return true
-            return mapCategory === location
+        .filter(([_id, { myMapCateogry }]) => {
+            if (location === 'any') return true
+            return myMapCateogry === location
         })
         // sort list by  number of search term matches, most matched at first
         .map(([_id, obj]) => {
