@@ -133,6 +133,10 @@ png
 2. done - add : filter by map region to Monster page / Elementable Table page
 3. done - UX : Revamped Map page location filter
 
+## LOg - May 23 2025
+1. done - Audio : can loop
+2. done - fea : WorldMap Page
+
 Next:
 - grouped by region ?
 - show path from map to map with graph data stuctrue ?

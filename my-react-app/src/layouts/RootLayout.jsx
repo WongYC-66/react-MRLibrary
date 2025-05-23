@@ -139,6 +139,7 @@ export default function RootLayout() {
                   <LinkContainer to="/gpq-solver">
                     <NavDropdown.Item>GPQ solver</NavDropdown.Item>
                   </LinkContainer>
+                  <NavDropdown.Divider />
                   <LinkContainer to="/opq-solver">
                     <NavDropdown.Item>OPQ solver</NavDropdown.Item>
                   </LinkContainer>
@@ -150,6 +151,9 @@ export default function RootLayout() {
                   </LinkContainer>
                   <LinkContainer to="/accuracy-calc">
                     <NavDropdown.Item>Accuracy Calc</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/worldmap">
+                    <NavDropdown.Item>WorldMap</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
 
