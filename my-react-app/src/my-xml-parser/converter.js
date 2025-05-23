@@ -30,6 +30,7 @@ import {
     NPCStatsDataFormatting,
     NPCLocationFormatting,
     NPCLocation2Formatting,
+    WorldMapDataFormatting,
 } from './dataFormatting.js';
 
 async function MB() {
@@ -173,6 +174,14 @@ async function NPCLocation2() {
     console.timeEnd()
 }
 
+async function WorldMap() {
+    console.time()
+    const objArr = await parseXMLinBulk(path.join(__dirname, "../../data/Map/WorldMap"), "")
+    const simpleData = WorldMapDataFormatting(objArr)
+    diskWriterInJSON(path.join(__dirname, "../../data/", 'data_WorldMap.json'), simpleData)
+    console.timeEnd()
+}
+
 
 function main() {
     // MB()
@@ -195,7 +204,8 @@ function main() {
     // NPC()
     // NPCStats()
     // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
-    NPCLocation2()  // run NPC() & Map_stats() first
+    // NPCLocation2()  // run NPC() & Map_stats() first
+    WorldMap()  // run NPC() & Map_stats() first
 }
 
 main()

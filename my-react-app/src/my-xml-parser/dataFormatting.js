@@ -742,6 +742,47 @@ export function NPCLocation2Formatting(data_NPC, data_MapStats) {
     return data_MapStats
 }
 
+export function WorldMapDataFormatting(objArr) {
+    // for Map.Wz ONLY
+    // Create better data-structure
+    console.log("running WorldMapDataFormatting")
+    // console.log(objArr)
+
+    const simpleData = {}   // {id1 : {key1 : value1, key2: value2}, id2 : ..., id3 : ..., ...}
+
+    const recursiveParse = (arr) => {
+        if (!arr.length) return null
+        let returnObj = {}
+
+        arr.forEach(obj => {
+            let key = obj.attributes.name
+            let { name, ...otherAttributes } = obj.attributes
+            returnObj[key] = otherAttributes
+
+            if(obj.children){
+                let subObj = recursiveParse(obj.children)
+                returnObj[key] = {...returnObj[key], ...subObj}
+            }
+        })
+
+        return returnObj
+    }
+
+    objArr.forEach(obj => {
+        let mapName = obj.root.attributes.name.split('.')[0]  // 'WorldMap.img' => 'WorldMap'
+
+        let arr = obj.root.children
+        let data = recursiveParse(arr)
+        // if (mapName !== 'WorldMap000') return
+        // console.log(inspect(obj, { colors: true, depth: Infinity }));
+        // Write into simpleData
+        simpleData[mapName] = data // {id : {}}
+    })
+
+    // console.log(simpleData)
+    return simpleData
+}
+
 // module.exports = {
 //     MBdataFormatting,
 //     MobIdDataFormatting,
