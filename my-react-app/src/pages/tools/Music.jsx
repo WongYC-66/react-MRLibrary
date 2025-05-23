@@ -55,7 +55,7 @@ export default function Music() {
                 <div className='ms-3 w-50'>
                     <figure>
                         <figcaption>Listen to {selectedOST}:</figcaption>
-                        <audio controls src={OST_URL}></audio>
+                        <audio controls src={OST_URL} loop></audio>
                         <p>
                             <a href={OST_URL} download={OST_URL} className="btn btn-primary mt-2"> Download audio </a>
                         </p>
