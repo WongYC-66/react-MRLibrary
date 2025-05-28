@@ -10,6 +10,7 @@ import { updatePagination } from "../../components/Pagination.jsx"
 import { renderImageWithMobId, filterMobList, updateSearchResultCount } from "../monster/utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
+import { mapCategory, findMapCategoryByMapId } from "../map/utility.jsx"
 
 export default function AccuracyCalc() {
     const [playerStats, setPlayerStats] = useState({
@@ -159,6 +160,7 @@ export default function AccuracyCalc() {
                             <thead>
                                 <tr>
                                     <th className="bg-transparent">Filter</th>
+                                    <th className="bg-transparent">Category</th>
                                     <th className="bg-transparent">Order By</th>
                                     <th className="bg-transparent">Sort</th>
                                 </tr>
@@ -170,6 +172,14 @@ export default function AccuracyCalc() {
                                             <option value="any">Any</option>
                                             <option value="monster">Monster</option>
                                             <option value="boss">Boss</option>
+                                        </FormBS.Select>
+                                    </td>
+                                    <td className="bg-transparent">
+                                        <FormBS.Select aria-label="category by" data-bs-theme="light" name="categoryBy">
+                                            <option value="any">Any</option>
+                                            {mapCategory.map(mapName =>
+                                                <option key={mapName} value={mapName}>{mapName}</option>
+                                            )}
                                         </FormBS.Select>
                                     </td>
                                     <td className="bg-transparent">
@@ -435,6 +445,7 @@ export const accuracyAction = async ({ request }) => {
 
     const submission = {
         filterBy: data.get('filterBy'),
+        categoryBy: data.get('categoryBy'),
         orderBy: data.get('orderBy'),
         sortBy: data.get('sortBy'),
         searchName: data.get('searchName'),
@@ -445,6 +456,6 @@ export const accuracyAction = async ({ request }) => {
     // ....
 
     // redirect the user
-    const actionUrl = `/accuracy-calc?page=1&filter=${submission.filterBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
+    const actionUrl = `/accuracy-calc?page=1&filter=${submission.filterBy}&category=${submission.categoryBy}&order=${submission.orderBy}&sort=${submission.sortBy}&search=${submission.searchName}`
     return redirect(actionUrl)
 }
