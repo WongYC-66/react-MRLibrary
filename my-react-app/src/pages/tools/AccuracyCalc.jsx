@@ -8,9 +8,12 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
 import { renderImageWithMobId, filterMobList, updateSearchResultCount } from "../monster/utility.jsx"
+import { mapCategory, findMapCategoryByMapId } from "../map/utility.jsx"
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
-import { mapCategory, findMapCategoryByMapId } from "../map/utility.jsx"
+
+import data_mapMobCount from "../../../data/data_MapMobCount.json"
+import data_mobMap from "../../../data/data_Mob_MapOnly.json"
 
 export default function AccuracyCalc() {
     const [playerStats, setPlayerStats] = useState({
@@ -28,6 +31,46 @@ export default function AccuracyCalc() {
                 data_mobStats[mobId] = { ...data_mobStats[mobId], name: mobName }
             }
         })
+
+        // HEAVY CALC MAPPING
+        const addMapCategoryToMobStats = () => {
+            const mapIdToCategory = {}  //  '100000000' => 'Henesys'
+
+            // data from inside data_MapMobCount (map.wz)
+            for (let mapId in data_mapMobCount) {
+                if (!(mapId in mapIdToCategory)) {
+                    mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+                }
+
+                Object.keys(data_mapMobCount[mapId]).forEach(mobId => {
+                    if (!data_mobStats[mobId]) return
+                    if (!data_mobStats[mobId].mapCategory) {
+                        data_mobStats[mobId].mapCategory = new Set()
+                    }
+                    data_mobStats[mobId].mapCategory.add(mapIdToCategory[mapId])
+                })
+            }
+
+            // there is a problem, boss-type mob not inside data_MapMobCount
+            // combine data from monsterbook together then (string.wz)
+            // might have bugs for LKC mobs
+            for (let mobId in data_mobMap) {
+                if (!data_mobStats[mobId]) continue
+                data_mobMap[mobId].forEach(mapId => {
+                    if (!(mapId in mapIdToCategory)) {
+                        mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+                    }
+
+                    if (!data_mobStats[mobId].mapCategory) {
+                        data_mobStats[mobId].mapCategory = new Set()
+                    }
+                    data_mobStats[mobId].mapCategory.add(mapIdToCategory[mapId])
+                })
+            }
+        }
+
+        addMapCategoryToMobStats()
+
         setMobLibrary(data_mobStats)
     }, [])
 
