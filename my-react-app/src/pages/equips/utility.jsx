@@ -147,7 +147,8 @@ const queryFilterByCategory = ({ category, filteredEquipList }) => {
         "crossbow": "CrossBow",
         "claw": "Claw",
         "knuckle": "Knuckle",
-        "gun": "Gun"
+        "gun": "Gun",
+        "cash": "Cash",
     }
     const cat_keyword = categoryKeywords[category]
     return filteredEquipList.filter(([_id, { category }]) => {
@@ -190,10 +191,10 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
 
             //  category[2] =  "Hat" /  "Face Accessory" /"Eye Decoration"  / "Earrings" / "Top"  / "Overall" /"Bottom" / "Shoes" / "Glove" / "Shield"/ "Cape" / "Ring"/ "Pendant" / "Belt" / "Medal"/ "One-Handed / Sword" / "One-Handed Axe"/ "One-Handed Blunt Weapon" / "Dagger"/ "Wand"/ "Staff"/ "Two-Handed Sword"/"Two-Handed Axe" / "Two-Handed Blunt Weapon" / "Spear" / "Pole Arm"/"Bow" / "CrossBow" / "Claw" / "Knuckle"/"Gun"/          
 
-            let words = isWeaponPage ? category[1] : category[2]
-            words = words.toLowerCase()
+            let categoryDescription = isWeaponPage ? category[1] : category[2]
+            categoryDescription = categoryDescription.toLowerCase()
             // return words.toLowerCase().includes(keyword)
-            return isWeaponPage ? words.toLowerCase().includes(keyword) : words === keyword
+            return isWeaponPage ? categoryDescription.includes(keyword) : categoryDescription === keyword
         })
 }
 // 
@@ -387,10 +388,11 @@ export const rangeCalculator = (x, type = "", hardCap = 5) => {
 
 export function equipIdToCategory(id) {
     // info used from https://maplestory.io/api/GMS/64/item/category
+    // also, https://maplestory.io/api/GMS/196/item/category
     id = parseInt(id)
     let overallCategory = "Equip"
-    let category = undefined
-    let subCategory = undefined
+    let category = 'undefined'
+    let subCategory = 'undefined'
     const isIDInRange = (min, max) => id >= min && id <= max
 
     const catogeryRangeList = {
@@ -410,6 +412,8 @@ export function equipIdToCategory(id) {
         "Two-Handed Axe": { min: 1410000, max: 1420000, category: "Two-Handed Weapon" },
         "Spear": { min: 1430000, max: 1440000, category: "Two-Handed Weapon" },
         "Pole Arm": { min: 1440000, max: 1450000, category: "Two-Handed Weapon" },
+
+        "Cash": { min: 1701000, max: 1704000, category: "One-Handed Weapon" },
 
         "Hat": { min: 1000000, max: 1010000, category: "Armor" },
         "Face Accessory": { min: 1010000, max: 1020000, category: "Accessory" },
@@ -438,15 +442,12 @@ export function equipIdToCategory(id) {
     }
 
     Object.entries(catogeryRangeList).forEach(x => {
-        // console.log(x)
         if (isIDInRange(x[1].min, x[1].max)) {
             category = x[1].category
             subCategory = x[0]
-            // console.log("found")
         }
     })
 
-    // console.log(Object.entries(catogeryRangeList).length)
     return [overallCategory, category, subCategory]
     // ['Equip', 'Two-Handed Weapon', 'Gun']
     // ['Equip', 'Armor', 'Bottom']

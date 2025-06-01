@@ -38,7 +38,7 @@ export default function Equips() {
         let filtered_data_GearStats = Object.fromEntries(
             Object.entries(data_GearStats)
                 .filter(([_id, { name }]) => name) // filtered out those without name
-                .filter(([_id, { category }]) => !category.includes(undefined)) // filtered out those without category/subcategory
+            // .filter(([_id, { category }]) => !category.includes('undefined')) // filtered out those without category/subcategory
         )
 
         setEquipLibrary(filtered_data_GearStats)
@@ -208,7 +208,10 @@ const weaponCategoryList = [
     { text: "Crossbow", value: "crossbow" },
     { text: "Claw", value: "claw" },
     { text: "Knuckle", value: "knuckle" },
-    { text: "Gun", value: "gun" }
+    { text: "Gun", value: "gun" },
+
+    { text: "Cash", value: "cash" },
+    // { text: "Undefined", value: "undefined" },
 ]
 
 const weaponOrderByList = [

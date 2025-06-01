@@ -14,7 +14,7 @@ import {
     itemIdToNavUrl,
 } from "./utility.jsx"
 
-import{
+import {
     renderImageWithNPCId
 } from '../npc/utility.jsx'
 
@@ -152,17 +152,18 @@ export const renderGlobalList = (filteredGlobalList) => {
     filteredGlobalList = filteredGlobalList.slice(sliceStartIndex, sliceEndIndex)
     // [ { id : xxx, name: xxx, type: monster/etc/equip }] , {} , {} , ... ]
 
+    // console.log(filteredGlobalList)
+
     return filteredGlobalList?.map(({ id, name, type }) => {
+        let navUrl = '/error'
         if (type == "monster") {
-            var navUrl = `/monster/id=${id}`
+            navUrl = `/monster/id=${id}`
         } else if (type == 'skill') {
-            var navUrl = `/skill/id=${id}`
+            navUrl = `/skill/id=${id}`
         } else if (type == 'npc') {
-            var navUrl = `/npc?page=1&location=all&type=all&search=${id}`
+            navUrl = `/npc?page=1&location=all&type=all&search=${id}`
         } else if (["equip", "use", "setup", "etc"].includes(type)) {
-            var navUrl = itemIdToNavUrl(id)
-        } else {
-            var navUrl = '/error'
+            navUrl = itemIdToNavUrl(id)
         }
 
         return (

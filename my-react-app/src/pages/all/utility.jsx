@@ -247,7 +247,7 @@ export const itemIdToNavUrl = (itemId) => {
 
     const catogeryRangeList = {
         "Weapon": { min: 1300000, max: 1500000, category: "Equip", url: "/weapon" },
-
+        
         "Hat": { min: 1000000, max: 1010000, category: "Armor", url: "/hat" },
         "Face Accessory": { min: 1010000, max: 1020000, category: "Accessory", url: "/faceacc" },
         "Eye Decoration": { min: 1020000, max: 1030000, category: "Accessory", url: "/eyeacc" },
@@ -264,11 +264,12 @@ export const itemIdToNavUrl = (itemId) => {
         "Top": { min: 1040000, max: 1050000, category: "Armor", url: "/top" },
         "Bottom": { min: 1060000, max: 1070000, category: "Armor", url: "/bottom" },
         "Shoes": { min: 1070000, max: 1080000, category: "Armor", url: "/shoes" },
-
+        
         "Use": { min: 2000000, max: 2999999, category: "Item", url: "/use" },
         "Setup": { min: 3000000, max: 3999999, category: "Item", url: "/setup" },
         "Etc": { min: 4000000, max: 4999999, category: "Item", url: "/etc" },
 
+        "Cash": { min: 1701000, max: 1704000, category: "Equip", url: "/weapon" },
     }
 
     itemId = parseInt(itemId)

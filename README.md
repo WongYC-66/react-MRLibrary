@@ -166,5 +166,8 @@ png
 1. done - add : my-harerepacker-output-organizer folder
 2. done - update library to v95.2
 
+## Log - June 1 2025
+1. done - fix & add : weapon category of Cash
+
 Next:
 - show path from map to map with graph data stuctrue ?

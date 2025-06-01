@@ -1,10 +1,7 @@
 import util from 'util'
 import { decode } from 'html-entities';
-import { parseItemJSON, itemIdToCategory } from './utility.js';
+import { parseItemJSON } from './utility.js';
 var inspect = util.inspect;
-
-
-
 
 export function legacyTextCheck(str) {
     // check for '
@@ -195,13 +192,7 @@ export function GearStatsDataFormatting(objArr) {
             if (unwantedStats.some(z => key === z)) return // if property is one of unwantedStats, skip
             stats[key] = value  // {key1 : value1, key2: value2}
         })
-        //  Category are based on item Id range
-        // disabled. enable this will exceed quota to store in localStorage
-        // const [overallCategory, category, subCategory] = itemIdToCategory(itemId)
-        // stats["overallCategory"] = overallCategory 
-        // stats["category"] = category 
-        // stats["subCategory"] = subCategory 
-        // 
+        
         simpleData[itemId] = stats // {id : {key1 : value1, key2: value2}}
     })
     return simpleData
