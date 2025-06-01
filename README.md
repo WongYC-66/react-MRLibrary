@@ -5,6 +5,28 @@
 3. npm run dev
 4. access web at http://localhost:5173/
 
+<hr>
+
+### my notes:
+1. Data files of ./data/data_xxxx.json are all output from :
+    1. wz files -> batch xml with WZ-Explorer-Rebuild-master
+    1. copy -> ./data as :
+        ![alt text](dataFolderStructure.png)
+    1. run `node ./my-xml-parser/converter.js`, each parser function 
+2. ./public/images/ are extracted using harepacker
+    1. Character.wz -> ./public/images/characters  // weapon 01702786.img crashed when export， only Accessory, Cap, Cape, Coat, Face, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon
+    1. Item.wz -> ./public/images/items
+    1. Map.wz -> ./public/images/maps
+    1. Mob.wz -> ./public/images/monsters
+    1. Npc.wz -> ./public/images/npcs
+    1. Skill.wz -> ./public/images/skills
+    1. Map.wz -> ./public/images/worldmaps
+    1. run `node ./my-harepacker-output-organizer/dumpFileCentralizer.js`, and copy the output to ./public/images
+3. mp3 files are extracted using harepacker too, but i filtered out the short mp3, and uploaded it to separate [github repo](https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio) to save bandwidth
+    1. run `node ./my-harepacker-output-organizer/generateMusicJson.js`, and copy the output to ./data
+
+<hr>
+
 <!-- next to update -->
 
 ## Log - July 27 2024
@@ -139,6 +161,9 @@ png
 
 ## Log - May 28 2025
 1. done - fix : Accuracy_calc, with Region category add-in
+
+## Log - May 31 2025
+1. done - update library to v95.2
 
 Next:
 - show path from map to map with graph data stuctrue ?
