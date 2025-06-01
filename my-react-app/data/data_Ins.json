@@ -2099,6 +2099,14 @@
     "name": "Dozing Duckling Chair",
     "desc": "Shhhh don't wake the duck, Recover 100 HP/MP every 10 seconds."
   },
+  "3015541": {
+    "name": "Pink Bean Ice Cream Umbrella",
+    "desc": "<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+  },
+  "3015618": {
+    "name": "Forest Sanctuary Chair",
+    "desc": "All is well when you&amp;apos;re with your forest friends.\\r\\n<b>Restores 100 HP and 50 MP every 10 seconds.</b>"
+  },
   "3015628": {
     "name": "Spooky Creeps Chair",
     "desc": "Look! You made a friend! Recovers 50 HP and 50 MP every 10 seconds."
@@ -2686,6 +2694,10 @@
   "3019935": {
     "name": "Pumpkin Bed Chair",
     "desc": "Have a snooze in this cozy pumpkin bed chair.\\r\\n<b>Restores 50 HP and MP every 10 seconds.</b>"
+  },
+  "3019936": {
+    "desc": "Take a rest on this special 12th Anniversary throne. <b>Restores 120 HP and 120 MP every 10 seconds.</b>",
+    "name": "12th Anniversary Throne"
   },
   "3990000": {
     "name": "Red No. 1",

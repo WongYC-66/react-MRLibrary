@@ -7994,7 +7994,8 @@
     "exp": "0",
     "undead": "0",
     "pushed": "1000000",
-    "elemAttr": "L3"
+    "elemAttr": "L3",
+    "boss": "1"
   },
   "8830004": {
     "level": "1",
@@ -8010,7 +8011,8 @@
     "exp": "0",
     "undead": "0",
     "pushed": "1",
-    "hideName": "1"
+    "hideName": "1",
+    "boss": "1"
   },
   "8830005": {
     "level": "1",
@@ -8026,7 +8028,8 @@
     "exp": "0",
     "undead": "0",
     "pushed": "1",
-    "hideName": "1"
+    "hideName": "1",
+    "boss": "1"
   },
   "8830006": {
     "level": "1",

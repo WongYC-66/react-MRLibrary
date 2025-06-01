@@ -56843,6 +56843,107 @@
       "hideName": "1"
     }
   },
+  "9999814": {
+    "eye": {
+      "0": {
+        "origin": null,
+        "z": "0",
+        "_hash": "9b9da9060731e08ab751ba2e91e75cbd08d905a15d9217f059cf58dc780165e1"
+      },
+      "1": {
+        "origin": null,
+        "z": "0",
+        "_hash": "58d4f0788e1f69960ee9f4974f37a529a3fb063d66b1095a384ae19f15dc9051"
+      },
+      "2": {
+        "origin": null,
+        "z": "0",
+        "_hash": "c66325c452a12954ddbd30f2d8c3c118703b0215b73e78f37e5ddb060b6bb6eb"
+      },
+      "3": {
+        "origin": null,
+        "z": "0",
+        "_hash": "d66884f7ac498a8cb0414925a1486762653a5fddb3d7b87da37a0c9033f6817d"
+      },
+      "4": {
+        "origin": null,
+        "z": "0",
+        "_hash": "a289c7919387d65b16a78aaef210cd6e2b5fe8d2600737f6299d8fd95928daee"
+      },
+      "5": {
+        "origin": null,
+        "z": "0",
+        "_hash": "933c6a38de516c3e03d00f9d7ac68bad970d9607cd0898128486cfcdcbb6b526"
+      },
+      "6": {
+        "origin": null,
+        "z": "0",
+        "_hash": "ad033327416ad9bd97c2918872b3e4c9cfe5ff7d9ed143abdb2f1225615b22fe"
+      },
+      "7": {
+        "origin": null,
+        "z": "0",
+        "_hash": "d693a17aa4a2cc5dbcc2d5f13abc38c318545048baefea146da89feb5bfb47ee"
+      },
+      "8": {
+        "origin": null,
+        "z": "0",
+        "_hash": "5fb77ea8f2824fb1cdacf4658bbda76c6d503bf8a45071fb0e83cfbc25cb0135"
+      },
+      "9": {
+        "origin": null,
+        "z": "0",
+        "_hash": "c274b430500ba8e8fbcb13d9be70edf9c02ed8ca5d76d644f585ffa6da264834"
+      },
+      "10": {
+        "origin": null,
+        "z": "0",
+        "_hash": "dfb4a91d142379e54854f3b6ecff44028624811d98d03acd91a7f6fb4c53bf24"
+      },
+      "11": "../say0/0"
+    },
+    "say1": {
+      "0": "../say0/0",
+      "1": "../say0/1",
+      "2": "../say0/2",
+      "3": "../say0/0",
+      "speak": {
+        "0": "d0",
+        "1": "d1"
+      }
+    },
+    "say0": {
+      "0": {
+        "origin": null,
+        "z": "0",
+        "_hash": "78d8545de9f00a6e3143f5b5567880d5b4946fc75a9ba286d9d6038be2e7fa29"
+      },
+      "1": {
+        "origin": null,
+        "z": "0",
+        "_hash": "921f840230ef930d8235071c8277e72f396c23c0a1b6e7c0291749113071cf7f"
+      },
+      "2": {
+        "origin": null,
+        "z": "0",
+        "_hash": "dba1c01dfe8844bb588e66c5b1ec62925da634c8c4d3782a69fd3b8faac4b1b8"
+      },
+      "3": "1",
+      "speak": {
+        "0": "n0",
+        "1": "n1"
+      }
+    },
+    "shop": {
+      "0": "../say0/0"
+    },
+    "info": null
+  },
+  "9999815": {
+    "info": {
+      "link": "9999814"
+    }
+  },
   "9999900": {
     "info": {
       "speak": {

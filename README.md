@@ -163,7 +163,8 @@ png
 1. done - fix : Accuracy_calc, with Region category add-in
 
 ## Log - May 31 2025
-1. done - update library to v95.2
+1. done - add : my-harerepacker-output-organizer folder
+2. done - update library to v95.2
 
 Next:
 - show path from map to map with graph data stuctrue ?

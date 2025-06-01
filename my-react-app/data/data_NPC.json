@@ -8728,8 +8728,9 @@
     "d0": "Do you know about the Artifact?",
     "d1": "Did you see my glasses?",
     "name": "Gaga",
-    "s0": "Would you like to help me?",
-    "s1": "Would you like to help me?",
+    "s0": "Would you like to know about the event?",
+    "s1": "How's the Great Maple Tree doing?",
+    "func": "12th Anniversary",
     "location": {
       "0": "100000000",
       "1": "101000000",
@@ -17119,6 +17120,22 @@
   },
   "9999813": {
     "name": "Amos the Strong"
+  },
+  "9999814": {
+    "name": "Cassandra",
+    "func": "Coin Shop",
+    "n0": "Happy 12th Anniversary!!",
+    "n1": "Found any Anniversary Coins on your travels?",
+    "d0": "Happy 12th Anniversary!!",
+    "d1": "Found any Anniversary Coins on your travels?"
+  },
+  "9999815": {
+    "d1": "Found any Anniversary Coins on your travels?",
+    "d0": "Happy 12th Anniversary!!",
+    "n1": "Found any Anniversary Coins on your travels?",
+    "n0": "Happy 12th Anniversary!!",
+    "func": "Coin Shop",
+    "name": "Cassandra"
   },
   "9999900": {
     "func": "Pet Food Merchant",

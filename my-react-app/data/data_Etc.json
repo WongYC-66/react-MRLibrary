@@ -10383,6 +10383,10 @@
     "name": "Pet Guide: Polar Cub",
     "desc": "A guide that contains all the commands for your Polar Cub pet.\\n<b>Double-click on the item to open the guide.</b>"
   },
+  "4160207": {
+    "name": "Pet Guide: Shiba Inu Pets",
+    "desc": "A guide that contains all the commands for Shiba Inu Pets.\\n<b>Double-click on the item to open the guide.</b>"
+  },
   "4160500": {
     "name": "Pet Guide: Furry Elwin",
     "desc": "A guide that contains all the commands for Furry Elwin.\\n<b>Double-click on the item to open the guide.</b>"
@@ -11492,7 +11496,7 @@
     "desc": "A beautiful card with season's greetings. Double click on it to read!"
   },
   "4310000": {
-    "desc": "A nice, shiny coin said to bring good fortune! It is earned by participating in the event, and can be used to get various special items!\r\n<b>Expires when the event is over.</b>",
-    "name": "Lucky Coin"
+    "desc": "A limited-edition coin released to mark MapleRoyals' 12th Anniversary. It can be used during the 12th Anniversary to purchase special items.\r\n<b>Expires when the event is over.</b>",
+    "name": "12th Anniversary Coin"
   }
 }

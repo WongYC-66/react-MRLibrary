@@ -76529,6 +76529,17 @@
     "reqINT": "0",
     "reqLUK": "0"
   },
+  "1004778": {
+    "islot": "Cp",
+    "vslot": "CpH5",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "tradeBlock": "1"
+  },
   "1004783": {
     "islot": "Cp",
     "vslot": "CpH1H5",
@@ -79754,9 +79765,7 @@
     "reqSTR": "0",
     "reqDEX": "0",
     "reqINT": "0",
-    "reqLUK": "0",
-    "tradeBlock": "1",
-    "isDonor": "1"
+    "reqLUK": "0"
   },
   "1005679": {
     "islot": "Cp",
@@ -79766,9 +79775,7 @@
     "reqSTR": "0",
     "reqDEX": "0",
     "reqINT": "0",
-    "reqLUK": "0",
-    "isDonor": "1",
-    "tradeBlock": "1"
+    "reqLUK": "0"
   },
   "1005681": {
     "islot": "Cp",
@@ -79778,9 +79785,7 @@
     "reqSTR": "0",
     "reqDEX": "0",
     "reqINT": "0",
-    "reqLUK": "0",
-    "isDonor": "1",
-    "tradeBlock": "1"
+    "reqLUK": "0"
   },
   "1005682": {
     "islot": "Cp",
@@ -79790,9 +79795,7 @@
     "reqSTR": "0",
     "reqDEX": "0",
     "reqINT": "0",
-    "reqLUK": "0",
-    "isDonor": "1",
-    "tradeBlock": "1"
+    "reqLUK": "0"
   },
   "1005683": {
     "islot": "Cp",
@@ -79802,9 +79805,7 @@
     "reqSTR": "0",
     "reqDEX": "0",
     "reqINT": "0",
-    "reqLUK": "0",
-    "isDonor": "1",
-    "tradeBlock": "1"
+    "reqLUK": "0"
   },
   "1005684": {
     "islot": "Cp",
@@ -79814,9 +79815,7 @@
     "reqSTR": "0",
     "reqDEX": "0",
     "reqINT": "0",
-    "reqLUK": "0",
-    "isDonor": "1",
-    "tradeBlock": "1"
+    "reqLUK": "0"
   },
   "1005685": {
     "islot": "Cp",
@@ -104071,6 +104070,17 @@
     "tradeBlock": "1",
     "isDonor": "1"
   },
+  "1053050": {
+    "islot": "MaPn",
+    "vslot": "MaPn",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "tradeBlock": "1"
+  },
   "1053051": {
     "islot": "MaPn",
     "vslot": "MaPn",
@@ -121324,6 +121334,17 @@
     "tradeBlock": "1",
     "isDonor": "1"
   },
+  "1073149": {
+    "islot": "So",
+    "vslot": "So",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "tradeBlock": "1"
+  },
   "1073150": {
     "islot": "So",
     "vslot": "So",
@@ -132205,6 +132226,17 @@
     "reqLUK": "0",
     "tradeBlock": "1",
     "isDonor": "1"
+  },
+  "1102931": {
+    "islot": "Sr",
+    "vslot": "Sr",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqSTR": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqLUK": "0",
+    "tradeBlock": "1"
   },
   "1102934": {
     "islot": "Sr",
@@ -151641,6 +151673,24 @@
     "tuc": "0",
     "vslot": "Me"
   },
+  "1142972": {
+    "vslot": "Me",
+    "incDEX": "2",
+    "incINT": "2",
+    "incLUK": "2",
+    "incSTR": "2",
+    "islot": "Me",
+    "only": "1",
+    "price": "0",
+    "reqDEX": "0",
+    "reqINT": "0",
+    "reqJob": "0",
+    "reqLevel": "0",
+    "reqLUK": "0",
+    "reqSTR": "0",
+    "tradeBlock": "1",
+    "tuc": "0"
+  },
   "1152900": {
     "islot": "Sh",
     "vslot": "Sh",
@@ -168354,8 +168404,7 @@
     "reqDEX": "0",
     "reqINT": "0",
     "reqLUK": "0",
-    "tradeBlock": "1",
-    "isDonor": "1"
+    "tradeBlock": "1"
   },
   "1702692": {
     "islot": "Wp",
@@ -172246,6 +172295,21 @@
     "tradeBlock": "1"
   },
   "1802631": {
+    "tuc": "7",
+    "reqLevel": "0",
+    "tradeBlock": "1"
+  },
+  "1802641": {
+    "tuc": "7",
+    "reqLevel": "0",
+    "tradeBlock": "1"
+  },
+  "1802642": {
+    "tuc": "7",
+    "reqLevel": "0",
+    "tradeBlock": "1"
+  },
+  "1802643": {
     "tuc": "7",
     "reqLevel": "0",
     "tradeBlock": "1"
