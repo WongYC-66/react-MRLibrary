@@ -47,7 +47,7 @@ export function OPQSolver() {
     return (
         <div className="d-flex flex-column p-3">
             <div className="instruction">
-                <h4 className="text-danger"> Pending to test, use it at your own risk !</h4>
+                {/* <h4 className="text-danger"> Pending to test, use it at your own risk !</h4> */}
                 <h4>APQ stage-2 / OPQ's sealed room solver</h4>
                 <h5>Instructions</h5>
                 <p>Start with "500", click and read info from npc, then submit the feedback here, you will see next guess prepared for you.</p>
@@ -57,9 +57,13 @@ export function OPQSolver() {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>E.g.</Accordion.Header>
                         <Accordion.Body>
-                            <p className="m-0 ms-3"><span className="fw-bolder"> 0 </span> platforms match</p>
-                            <p className="m-0 ms-3"><span className="fw-bolder"> 1 </span> platform matches</p>
+                            <p className="m-0">OPQ:</p>
+                            {/* https://royals.ms/forum/threads/un-official-mapleroyals-library-scottys-version.229606/page-6#post-1535239 */}
+                            <p className="m-0 ms-3">All platforms weigh <span className="fw-bolder"> differently </span> </p>
+                            <p className="m-0 ms-3">The weight on platform 1 is <span className="fw-bolder"> correct </span></p>
 
+                            <p className="m-0">APQ:</p>
+                            {/* https://www.youtube.com/watch?v=O8ApWQBl9is&t=186s */}
                             <p className="m-0 ms-3"> All the steps weigh <span className="fw-bolder"> different </span> </p>
                             <p className="m-0 ms-3"> All 1 steps weigh the <span className="fw-bolder"> same </span> </p>
                         </Accordion.Body>
@@ -83,7 +87,7 @@ export function OPQSolver() {
                     <tbody>
                         <tr>
                             {nextGuess === ''
-                                ? <td colSpan={3} className="text-bg-danger">Oopps, no more remaining, please reset.</td>
+                                ? <td colSpan={3} className="text-bg-danger">Oopps, no more remaining, please reset solver and in-game puzzle.</td>
                                 : nextGuess.split('').map((num, i) =>
                                     <td className="fw-bolder fs-5" key={num + '-' + i}>
                                         {num}
@@ -98,8 +102,8 @@ export function OPQSolver() {
             {/* Feedback section */}
             <h4>Feedback:</h4>
             <div className="d-flex justify-content-center gap-3">
-                <Button variant="primary" onClick={() => handleFeedback(1)}> Same / 1 Match </Button>
-                <Button variant="primary" onClick={() => handleFeedback(0)}> Diff / 0 Match </Button>
+                <Button variant="primary" onClick={() => handleFeedback(1)}> Same / Correct </Button>
+                <Button variant="primary" onClick={() => handleFeedback(0)}> Different </Button>
             </div>
 
             {/* Reset Button */}
@@ -147,6 +151,12 @@ export function OPQSolver() {
             <div className="mt-3">
                 <h6>References:</h6>
                 Test it at <Link to='/opq-simulator'>My Simulator</Link>
+                <p className="m-0">
+                    <a href="https://royals.ms/forum/threads/un-official-mapleroyals-library-scottys-version.229606/page-6#post-1535239" target="_blank">NPC's response(OPQ)</a>
+                </p>
+                <p className="m-0">
+                    <a href="https://www.youtube.com/watch?v=O8ApWQBl9is" target="_blank">NPC's response(APQ)</a>
+                </p>
             </div>
         </div>)
 }
@@ -289,7 +299,8 @@ export function OPQSimulator() {
 
                 {/* Game Feedback section */}
                 <div className="npc-feedback my-3 p-3 bg-body-secondary" style={{ height: 100 }}>
-                    {feedback}
+                    <p dangerouslySetInnerHTML={{ __html: feedback }}></p>
+                    {/* {feedback} */}
                 </div>
             </div>}
 
@@ -380,10 +391,16 @@ const getFeedback = (guess, answer) => {
     if (sameSlotCount === 3) {
         hasWin = true
     } else if (sameSlotCount === 0) {
-        feedback = '0 platforms match / All the steps weigh different'
+        feedback = `
+            <p> OPQ : All platforms weigh differently </p>
+            <p> APQ : All the steps weigh different </p>
+        `
     } else {
         // 1 match
-        feedback = '1 platform matches / All 1 steps weigh the same'
+        feedback = `
+            <p> OPQ : The weight on platform 1 is correct </p>
+            <p> APQ : All 1 steps weigh the same </p>
+        `
     }
 
     return { hasWin, feedback }

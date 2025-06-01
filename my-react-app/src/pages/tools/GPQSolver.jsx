@@ -106,7 +106,7 @@ export default function GPQSolver() {
                         <tr>
                             {/* render the next guess dynamically, icon + legend */}
                             {nextGuess === ''
-                                ? <td colSpan={4} className="text-center text-bg-danger">Oopps, no more remaining, please reset.</td>
+                                ? <td colSpan={4} className="text-center text-bg-danger">Oopps, no more remaining, please reset solver and in-game puzzle.</td>
                                 : nextGuess.split('').map((char, i) =>
                                     <td className="text-center fw-bolder" key={char + i}>
                                         {generateItemImgTag(char)}

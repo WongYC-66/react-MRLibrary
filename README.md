@@ -168,6 +168,7 @@ png
 
 ## Log - June 1 2025
 1. done - fix & add : weapon category of Cash
+2. done - UI : update text on opq/gpq solver
 
 Next:
 - show path from map to map with graph data stuctrue ?
