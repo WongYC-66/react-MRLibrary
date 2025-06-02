@@ -13,28 +13,26 @@ const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x)
 
 export const filterMobList = (mobLibrary) => {
     const [searchParams] = useSearchParams()
-    if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
+    // if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
 
-    // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
-    const searchTerm = filterOption.search.toLowerCase()
-    const exactSearchTerm = filterOption.search.toLowerCase()
+    const searchTerm = filterOption.search?.toLowerCase() || ''
+    const exactSearchTerm = filterOption.search?.toLowerCase() || ''
 
-    const filter = filterOption.filter
-    const mapCategory = filterOption.category
-    const order = filterOption.order
-    const sort = filterOption.sort
+    const filter = filterOption.filter || 'any'
+    const mapCategory = filterOption.category || 'any'
+    const order = filterOption.order || 'id'
+    const sort = filterOption.sort || 'ascending'
+
     let filteredMobList = Object.entries(mobLibrary)
 
     // console.log(filteredMobList)
-    // console.log(mapCategory)
 
-    // console.log("before filter = ",filteredMobList)
     filteredMobList = filteredMobList
         .filter(x => {
             if (x[0] === exactSearchTerm) return true // id matched
-            if (!x[1].hasOwnProperty('name')) return false
-            if (x[1].name.toLowerCase().includes(searchTerm)) return true
+            if (!x[1].name) return false
+            if (x[1]?.name?.toLowerCase()?.includes(searchTerm)) return true
         })
         .filter(x => {
             if (filter === "any") return true

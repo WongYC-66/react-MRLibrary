@@ -56,7 +56,7 @@ export default function Monster() {
                     if (!data_mobStats[mobId].mapCategory) {
                         data_mobStats[mobId].mapCategory = new Set()
                     }
-                    data_mobStats[mobId].mapCategory.add(mapIdToCategory[mapId])    
+                    data_mobStats[mobId].mapCategory.add(mapIdToCategory[mapId])
                 })
             }
         }
