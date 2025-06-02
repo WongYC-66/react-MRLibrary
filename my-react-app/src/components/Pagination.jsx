@@ -1,13 +1,15 @@
-import { useSearchParams, useLocation, useNavigate, Link } from "react-router-dom"
-import { useCallback, useState } from "react"
+import { useSearchParams, useLocation } from "react-router-dom"
+import { useNavigate } from "react-router"
+import { useState } from "react"
 // 
 import Pagination from "react-bootstrap/Pagination"
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from "react-bootstrap/Button"
 
 export const updatePagination = (data, ...para) => {
-    const [searchParams] = useSearchParams()
-    const { search: urlSearch, pathname: urlPathname } = useLocation()
+    const [searchParams] = useSearchParams();
+    const { search: urlSearch, pathname: urlPathname } = useLocation();
+    const navigate = useNavigate();
 
     const [paginationBarStatus, setPaginationBarStatus] = useState({
         isNext: true,
@@ -80,11 +82,15 @@ export const updatePagination = (data, ...para) => {
     for (let i = currentPage - 2; i <= currentPage + 2; i++) {
         if (i <= 1 || i >= lastPageIndex) continue
         const obj = {
-            pathname: `${urlPathname}`,
-            search: generateQueryString(i),
-            text: i
+            // pathname: `${urlPathname}`,
+            // search: generateQueryString(i),
+            text: i,
         }
         pageButtonArr.push(obj)
+    }
+
+    const handlePageBtnClick = (pageNum) => {
+        navigate(`${urlPathname}${generateQueryString(pageNum)}`)
     }
 
     const handleEllipsisPageBtnClick = (direction) => {
@@ -110,16 +116,16 @@ export const updatePagination = (data, ...para) => {
             <Pagination id="paginationGroup" className="d-flex justify-content-center">
 
                 {/* page 1 */}
-                <Pagination.Item className={`bg-white ${lastPageIndex <= 1 ? "rounded-5" : "rounded-start-5"} `} active={currentPage === 1}>
-                    <Link to={{ pathname: urlPathname, search: generateQueryString(1) }}> 1 </Link>
+                <Pagination.Item className={`bg-white ${lastPageIndex <= 1 ? "rounded-5" : "rounded-start-5"} `} active={currentPage === 1} onClick={() => handlePageBtnClick(1)}>
+                    1
                 </Pagination.Item>
 
                 {/* <...> button for pages far ahead */}
                 {currentPage >= 5 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('prev')} />}
 
                 {pageButtonArr.map(x =>
-                    <Pagination.Item className='bg-white' key={x.text} active={x.text == Number(currentPage)}>
-                        <Link to={{ pathname: x.pathname, search: x.search }}>{x.text}</Link>
+                    <Pagination.Item className='bg-white' key={x.text} active={x.text == Number(currentPage)} onClick={() => handlePageBtnClick(x.text)}>
+                        {x.text}
                     </Pagination.Item>
                 )}
 
@@ -127,8 +133,8 @@ export const updatePagination = (data, ...para) => {
                 {currentPage <= lastPageIndex - 4 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('next')} />}
 
                 {/* page Last */}
-                {lastPageIndex >= 2 && <Pagination.Item className='bg-white rounded-end-5' active={currentPage === lastPageIndex}>
-                    <Link to={{ pathname: urlPathname, search: generateQueryString(lastPageIndex) }}> {lastPageIndex} </Link>
+                {lastPageIndex >= 2 && <Pagination.Item className='bg-white rounded-end-5' active={currentPage === lastPageIndex} onClick={() => handlePageBtnClick(lastPageIndex)}>
+                    {lastPageIndex}
                 </Pagination.Item>}
             </Pagination>
 
