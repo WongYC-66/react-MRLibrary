@@ -17,6 +17,8 @@ export default function Setup() {
         setItemLibrary(data_Ins)
     }, [])
 
+    const filteredItem = filterItemList(itemLibrary)
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
@@ -48,12 +50,12 @@ export default function Setup() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderItemList(filterItemList(itemLibrary), "setup")}
+                    {renderItemList(filteredItem, "setup")}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(itemLibrary, filterItemList)}
+            {updatePagination(filteredItem)}
         </div>
 
     )

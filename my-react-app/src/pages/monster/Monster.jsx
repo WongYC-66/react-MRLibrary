@@ -71,7 +71,7 @@ export default function Monster() {
         e.target.classList.toggle("d-none")
     }
 
-
+    const filteredMobList = filterMobList(mobLibrary)
 
     return (
         <div className="monster d-flex flex-column">
@@ -169,12 +169,12 @@ export default function Monster() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderMobList(filterMobList(mobLibrary))}
+                    {renderMobList(filteredMobList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(mobLibrary, filterMobList)}
+            {updatePagination(filteredMobList)}
 
         </div>
 

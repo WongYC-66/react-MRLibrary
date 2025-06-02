@@ -97,6 +97,8 @@ export default function All() {
         setGlobalLibrary(globalArr)
     }, [])
 
+    const filteredGlobalList = filterGlobalList(globalLibrary)
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
@@ -130,12 +132,12 @@ export default function All() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderGlobalList(filterGlobalList(globalLibrary))}
+                    {renderGlobalList(filteredGlobalList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(globalLibrary, filterGlobalList)}
+            {updatePagination(filteredGlobalList)}
         </div>
 
     )

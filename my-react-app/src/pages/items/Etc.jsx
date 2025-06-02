@@ -17,6 +17,8 @@ export default function Etc() {
         setItemLibrary(data_Etc)
     }, [])
 
+    const filteredItem = filterItemList(itemLibrary)
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
@@ -49,14 +51,14 @@ export default function Etc() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderItemList(filterItemList(itemLibrary), "etc")}
+                    {renderItemList(filteredItem, "etc")}
                 </tbody>
             </Table>
 
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
 
             {/* Pagination */}
-            {updatePagination(itemLibrary, filterItemList)}
+            {updatePagination(filteredItem)}
         </div>
 
     )

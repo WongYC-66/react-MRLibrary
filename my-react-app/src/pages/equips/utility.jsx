@@ -9,6 +9,7 @@ export const filterEquipList = (equipLibrary) => {
 
     let equipLibraryArr = Object.entries(equipLibrary)
 
+    // first filter, filter library into Weapon/ Cape/ Top ...etc
     let filteredEquipList = filterByCategory({ equipLibraryArr, urlPathname, isWeaponPage })
 
     // No further filter at first loading or if URL don't have query param 
@@ -36,7 +37,7 @@ export const filterEquipList = (equipLibrary) => {
 
     // 2. query filter - by weapon category // ONLY FOR WEAPON PAGE
     filteredEquipList = isWeaponPage
-        ? queryFilterByCategory({ category, filteredEquipList })
+        ? filterWeaponByCategory({ category, filteredEquipList })
         : filteredEquipList
 
     // 3. query filter - by job class
@@ -129,72 +130,68 @@ const queryFilterByJob = ({ job, filteredEquipList }) => {
     })
 }
 
-const queryFilterByCategory = ({ category, filteredEquipList }) => {
-    const categoryKeywords = {
-        "any": "any",
-        "OHSword": "One-Handed Sword",
-        "OHAxe": "One-Handed Axe",
-        "OHMace": "One-Handed Blunt Weapon",
-        "dagger": "Dagger",
-        "wand": "Wand",
-        "staff": "Staff",
-        "THSword": "Two-Handed Sword",
-        "THAxe": "Two-Handed Axe",
-        "THMace": "Two-Handed Blunt Weapon",
-        "spear": "Spear",
-        "polearm": "Pole Arm",
-        "bow": "Bow",
-        "crossbow": "CrossBow",
-        "claw": "Claw",
-        "knuckle": "Knuckle",
-        "gun": "Gun",
-        "cash": "Cash",
-    }
-    const cat_keyword = categoryKeywords[category]
-    return filteredEquipList.filter(([_id, { category }]) => {
-        if (cat_keyword === "any") return true
-        const words = category[2] // Gun/Knucle/Bow, ... 
-        return words === cat_keyword
-    })
+export const categoryQueryToCategory = {
+    "any": "any",
+    "OHSword": "One-Handed Sword",
+    "OHAxe": "One-Handed Axe",
+    "OHMace": "One-Handed Blunt Weapon",
+    "dagger": "Dagger",
+    "wand": "Wand",
+    "staff": "Staff",
+    "THSword": "Two-Handed Sword",
+    "THAxe": "Two-Handed Axe",
+    "THMace": "Two-Handed Blunt Weapon",
+    "spear": "Spear",
+    "polearm": "Pole Arm",
+    "bow": "Bow",
+    "crossbow": "CrossBow",
+    "claw": "Claw",
+    "knuckle": "Knuckle",
+    "gun": "Gun",
+    "cash": "Cash",
+}
+
+const filterWeaponByCategory = ({ category, filteredEquipList }) => {
+    const weaponCategory = categoryQueryToCategory[category]
+    if (weaponCategory === "any") return filteredEquipList     // no filter
+
+    return filteredEquipList.filter(([_id, { category }]) => weaponCategory === category[2]) // Gun/Knucle/Bow, ... 
+}
+
+export const urlPathToCategoryName = {
+    "/weapon": "weapon",
+    "/hat": "Hat",
+    "/top": "Top",
+    "/bottom": "Bottom",
+    "/overall": "Overall",
+    "/shoes": "Shoes",
+    "/gloves": "Glove",
+    "/cape": "Cape",
+    "/shield": "Shield",
+    "/faceacc": "Face Accessory",
+    "/eyeacc": "Eye Decoration",
+    "/earring": "Earrings",
+    "/ring": "Ring",
+    "/pendant": "Pendant",
+    "/belt": "Belt",
+    "/medal": "Medal",
+    "/shoulder": "Shoulder Accessory",
 }
 
 const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
     // first filter, filter library into Weapon/ Cape/ Top ...etc
-    const filterKeywords = {
-        "/weapon": "weapon",
-        "/hat": "Hat",
-        "/top": "Top",
-        "/bottom": "Bottom",
-        "/overall": "Overall",
-        "/shoes": "Shoes",
-        "/gloves": "Glove",
-        "/cape": "Cape",
-        "/shield": "Shield",
-        "/faceacc": "Face Accessory",
-        "/eyeacc": "Eye Decoration",
-        "/earring": "Earrings",
-        "/ring": "Ring",
-        "/pendant": "Pendant",
-        "/belt": "Belt",
-        "/medal": "Medal",
-        "/shoulder": "Shoulder Accessory",
-    }
-    const keyword = filterKeywords[urlPathname].toLowerCase()
 
-    // console.log(equipLibraryArr.slice())
+    const keyword = urlPathToCategoryName[urlPathname].toLowerCase()
     return equipLibraryArr
         .filter(([id, { category }]) => {
             // category : ['Equip', 'Armor', 'Hat']
             //  category[0] = 'Equip' always
-
             //  category[1] = 'Armor' / 'Accessory' / 'One-Handed Weapon' / 'Two-Handed Weapon'
-
             //  category[2] =  "Hat" /  "Face Accessory" /"Eye Decoration"  / "Earrings" / "Top"  / "Overall" /"Bottom" / "Shoes" / "Glove" / "Shield"/ "Cape" / "Ring"/ "Pendant" / "Belt" / "Medal"/ "One-Handed / Sword" / "One-Handed Axe"/ "One-Handed Blunt Weapon" / "Dagger"/ "Wand"/ "Staff"/ "Two-Handed Sword"/"Two-Handed Axe" / "Two-Handed Blunt Weapon" / "Spear" / "Pole Arm"/"Bow" / "CrossBow" / "Claw" / "Knuckle"/"Gun"/          
 
             let categoryDescription = isWeaponPage ? category[1] : category[2]
             categoryDescription = categoryDescription.toLowerCase()
-            // return words.toLowerCase().includes(keyword)
-            return isWeaponPage ? categoryDescription.includes(keyword) : categoryDescription === keyword
+            return isWeaponPage ? categoryDescription.includes('weapon') : categoryDescription === keyword
         })
 }
 // 
@@ -315,40 +312,9 @@ export const renderImageWithItemId = (itemId, itemName) => {
         alt="Image not found"
         onError={handleError} />
 
-
-    // findGoodItemImgUrl({ id: itemId, name: itemName }).then(x => {
-    //     let el = document.getElementById(`image-${itemId}`)
-    //     if (el) el.src = x
-    // })
-
     return ImageComponent
 }
-// 
 
-// export const findGoodEquipImgUrl = ({ id }) => {
-
-//     // 1. fetch from MapleLegends
-//     let p1 = new Promise((resolve, reject) => {
-//         let x = fetch(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`, {
-//             mode: "no-cors"
-//         })
-//             .then(res => resolve(`https://maplelegends.com/static/images/lib/character/${id.padStart(8, 0)}.png`))
-//             .catch(err => reject(err))
-//     })
-
-//     // 2. fetch from MapleStory.io
-//     let p2 = new Promise((resolve, reject) => {
-//         let x = fetch(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`, {
-//             mode: "no-cors"
-//         })
-//             .then(res => resolve(`https://maplestory.io/api/SEA/198/item/${id}/icon?resize=1.0`))
-//             .catch(err => reject(err))
-//     })
-
-//     return Promise.any([p1, p2])
-// }
-
-//
 export const itemIdToExceptionUrl = ({ id, name }) => {
     name = name.toLowerCase()
     if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
@@ -386,69 +352,72 @@ export const rangeCalculator = (x, type = "", hardCap = 5) => {
     return returnString
 }
 
-export function equipIdToCategory(id) {
+export const catogeryRangeList = {
     // info used from https://maplestory.io/api/GMS/64/item/category
     // also, https://maplestory.io/api/GMS/196/item/category
-    id = parseInt(id)
+    "Gun": { min: 1490000, max: 1500000, category: "Two-Handed Weapon" },
+    "Knuckle": { min: 1480000, max: 1490000, category: "Two-Handed Weapon" },
+    "Claw": { min: 1470000, max: 1480000, category: "Two-Handed Weapon" },
+    "Dagger": { min: 1330000, max: 1340000, category: "One-Handed Weapon" },
+    "Bow": { min: 1450000, max: 1460000, category: "Two-Handed Weapon" },
+    "CrossBow": { min: 1460000, max: 1470000, category: "Two-Handed Weapon" },
+    "Staff": { min: 1380000, max: 1390000, category: "One-Handed Weapon" },
+    "Wand": { min: 1370000, max: 1380000, category: "One-Handed Weapon" },
+    "One-Handed Sword": { min: 1300000, max: 1310000, category: "One-Handed Weapon" },
+    "Two-Handed Sword": { min: 1400000, max: 1410000, category: "Two-Handed Weapon" },
+    "One-Handed Blunt Weapon": { min: 1320000, max: 1330000, category: "One-Handed Weapon" },
+    "Two-Handed Blunt Weapon": { min: 1420000, max: 1430000, category: "Two-Handed Weapon" },
+    "One-Handed Axe": { min: 1310000, max: 1320000, category: "One-Handed Weapon" },
+    "Two-Handed Axe": { min: 1410000, max: 1420000, category: "Two-Handed Weapon" },
+    "Spear": { min: 1430000, max: 1440000, category: "Two-Handed Weapon" },
+    "Pole Arm": { min: 1440000, max: 1450000, category: "Two-Handed Weapon" },
+
+    "Cash": { min: 1701000, max: 1704000, category: "One-Handed Weapon" },
+
+    "Hat": { min: 1000000, max: 1010000, category: "Armor" },
+    "Face Accessory": { min: 1010000, max: 1020000, category: "Accessory" },
+    "Eye Decoration": { min: 1020000, max: 1030000, category: "Accessory" },
+    "Glove": { min: 1080000, max: 1090000, category: "Armor" },
+    "Pendant": { min: 1120000, max: 1130000, category: "Accessory" },
+    "Belt": { min: 1130000, max: 1140000, category: "Accessory" },
+    "Medal": { min: 1140000, max: 1150000, category: "Accessory" },
+    "Shoulder": { min: 1150000, max: 1160000, category: "Accessory", url: "/shoulder" },
+    "Cape": { min: 1100000, max: 1110000, category: "Armor" },
+    "Earrings": { min: 1030000, max: 1040000, category: "Accessory" },
+    "Ring": { min: 1110000, max: 1120000, category: "Accessory" },
+    "Shield": { min: 1090000, max: 1100000, category: "Armor" },
+    "Overall": { min: 1050000, max: 1060000, category: "Armor" },
+    "Top": { min: 1040000, max: 1050000, category: "Armor" },
+    "Bottom": { min: 1060000, max: 1070000, category: "Armor" },
+    "Shoes": { min: 1070000, max: 1080000, category: "Armor" },
+    "Test Armor": { min: 1690100, max: 1690200, category: "Armor" },
+
+    "Badge": { min: 1180000, max: 1190000, category: "Accessory" },
+    "Emblem": { min: 1190000, max: 1190500, category: "Accessory" },
+    "Pocket Item": { min: 1160000, max: 1170000, category: "Accessory" },
+    "Power Source": { min: 1190200, max: 1190300, category: "Accessory" },
+    "Shoulder Accessory": { min: 1150000, max: 1160000, category: "Accessory" },
+    "Totem": { min: 1202000, max: 1202200, category: "Accessory" },
+}
+
+export function equipIdToCategory(id) {
+    id = Number(id)
     let overallCategory = "Equip"
-    let category = 'undefined'
-    let subCategory = 'undefined'
+    let itemCategory = 'undefined'
+    let itemSubCategory = 'undefined'
+
     const isIDInRange = (min, max) => id >= min && id <= max
 
-    const catogeryRangeList = {
-        "Gun": { min: 1490000, max: 1500000, category: "Two-Handed Weapon" },
-        "Knuckle": { min: 1480000, max: 1490000, category: "Two-Handed Weapon" },
-        "Claw": { min: 1470000, max: 1480000, category: "Two-Handed Weapon" },
-        "Dagger": { min: 1330000, max: 1340000, category: "One-Handed Weapon" },
-        "Bow": { min: 1450000, max: 1460000, category: "Two-Handed Weapon" },
-        "CrossBow": { min: 1460000, max: 1470000, category: "Two-Handed Weapon" },
-        "Staff": { min: 1380000, max: 1390000, category: "One-Handed Weapon" },
-        "Wand": { min: 1370000, max: 1380000, category: "One-Handed Weapon" },
-        "One-Handed Sword": { min: 1300000, max: 1310000, category: "One-Handed Weapon" },
-        "Two-Handed Sword": { min: 1400000, max: 1410000, category: "Two-Handed Weapon" },
-        "One-Handed Blunt Weapon": { min: 1320000, max: 1330000, category: "One-Handed Weapon" },
-        "Two-Handed Blunt Weapon": { min: 1420000, max: 1430000, category: "Two-Handed Weapon" },
-        "One-Handed Axe": { min: 1310000, max: 1320000, category: "One-Handed Weapon" },
-        "Two-Handed Axe": { min: 1410000, max: 1420000, category: "Two-Handed Weapon" },
-        "Spear": { min: 1430000, max: 1440000, category: "Two-Handed Weapon" },
-        "Pole Arm": { min: 1440000, max: 1450000, category: "Two-Handed Weapon" },
-
-        "Cash": { min: 1701000, max: 1704000, category: "One-Handed Weapon" },
-
-        "Hat": { min: 1000000, max: 1010000, category: "Armor" },
-        "Face Accessory": { min: 1010000, max: 1020000, category: "Accessory" },
-        "Eye Decoration": { min: 1020000, max: 1030000, category: "Accessory" },
-        "Glove": { min: 1080000, max: 1090000, category: "Armor" },
-        "Pendant": { min: 1120000, max: 1130000, category: "Accessory" },
-        "Belt": { min: 1130000, max: 1140000, category: "Accessory" },
-        "Medal": { min: 1140000, max: 1150000, category: "Accessory" },
-        "Shoulder": { min: 1150000, max: 1160000, category: "Accessory", url: "/shoulder" },
-        "Cape": { min: 1100000, max: 1110000, category: "Armor" },
-        "Earrings": { min: 1030000, max: 1040000, category: "Accessory" },
-        "Ring": { min: 1110000, max: 1120000, category: "Accessory" },
-        "Shield": { min: 1090000, max: 1100000, category: "Armor" },
-        "Overall": { min: 1050000, max: 1060000, category: "Armor" },
-        "Top": { min: 1040000, max: 1050000, category: "Armor" },
-        "Bottom": { min: 1060000, max: 1070000, category: "Armor" },
-        "Shoes": { min: 1070000, max: 1080000, category: "Armor" },
-        "Test Armor": { min: 1690100, max: 1690200, category: "Armor" },
-
-        "Badge": { min: 1180000, max: 1190000, category: "Accessory" },
-        "Emblem": { min: 1190000, max: 1190500, category: "Accessory" },
-        "Pocket Item": { min: 1160000, max: 1170000, category: "Accessory" },
-        "Power Source": { min: 1190200, max: 1190300, category: "Accessory" },
-        "Shoulder Accessory": { min: 1150000, max: 1160000, category: "Accessory" },
-        "Totem": { min: 1202000, max: 1202200, category: "Accessory" },
+    for (let gearClass in catogeryRangeList) {
+        let { min, max, category } = catogeryRangeList[gearClass]
+        if (isIDInRange(min, max)) {
+            itemCategory = category
+            itemSubCategory = gearClass
+            break
+        }
     }
 
-    Object.entries(catogeryRangeList).forEach(x => {
-        if (isIDInRange(x[1].min, x[1].max)) {
-            category = x[1].category
-            subCategory = x[0]
-        }
-    })
-
-    return [overallCategory, category, subCategory]
+    return [overallCategory, itemCategory, itemSubCategory]
     // ['Equip', 'Two-Handed Weapon', 'Gun']
     // ['Equip', 'Armor', 'Bottom']
 }
@@ -485,13 +454,6 @@ export const decodeReqJobToList = (reqJob) => {
     return lib[reqJob]
 }
 
-
-
-export const updateSearchResultCount = (number) => {
-    const countEl = document.getElementById("record-count")
-    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
-}
-
 export const isNotRedundantProp = (itemProp, isWeaponPage) => {
     const weaponPageRedundantProp = ['id', 'reqLevel', 'attackSpeed', 'incPAD', 'incMAD', 'tuc']
     const nonWeaponPageRedundantProp = ['id', 'reqLevel', 'tuc']
@@ -511,4 +473,9 @@ const statFields = [
 
 const isNotCosmetic = (itemData) => {
     return statFields.some(stat => itemData[stat] && Number(itemData[stat]) > 0);
+}
+
+export const updateSearchResultCount = (number) => {
+    const countEl = document.getElementById("record-count")
+    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
 }

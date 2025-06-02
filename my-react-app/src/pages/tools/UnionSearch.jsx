@@ -190,7 +190,7 @@ export default function UnionSearch() {
             </Table>
 
             {/* Pagination */}
-            {updatePagination(mobLibrary, filterMobBySelectedItem, selectedItems)}
+            {updatePagination(filteredMobs, selectedItems)}
         </div>
 
     )

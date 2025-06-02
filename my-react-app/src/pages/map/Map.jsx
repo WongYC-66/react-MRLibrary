@@ -58,6 +58,7 @@ export default function Quest() {
     // const allMapCategory = useMemo(generateAllMapCategory, [])
 
     // console.log(mapLibrary)
+    const filteredMapList = filterMapList(mapLibrary)
 
     return (
         <div className="quest d-flex flex-column">
@@ -129,12 +130,12 @@ export default function Quest() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderMapList(filterMapList(mapLibrary))}
+                    {renderMapList(filteredMapList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(mapLibrary, filterMapList)}
+            {updatePagination(filteredMapList)}
         </div>
     )
 }

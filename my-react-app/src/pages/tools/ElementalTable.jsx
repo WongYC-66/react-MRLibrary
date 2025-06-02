@@ -74,6 +74,7 @@ export default function ElementalTable() {
     }
 
     // return <>Elemental Table</>
+    const filteredMobElementalList = filterMobElementalList(mobLibrary)
 
     return (
         <div className="monster d-flex flex-column">
@@ -186,12 +187,12 @@ export default function ElementalTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderMobList(filterMobElementalList(mobLibrary))}
+                    {renderMobList(filteredMobElementalList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(mobLibrary, filterMobElementalList)}
+            {updatePagination(filteredMobElementalList)}
 
         </div>
 

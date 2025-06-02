@@ -57,6 +57,8 @@ export default function Equips() {
         e.target.classList.toggle("d-none")
     }
 
+    const filteredEquipList = filterEquipList(equipLibrary)
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
@@ -180,12 +182,12 @@ export default function Equips() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderEquipList(filterEquipList(equipLibrary), `${urlPathname.slice(1,)}`, extraColumns)}
+                    {renderEquipList(filteredEquipList, `${urlPathname.slice(1,)}`, extraColumns)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(equipLibrary, filterEquipList)}
+            {updatePagination(filteredEquipList)}
         </div >
 
     )
@@ -212,30 +214,6 @@ const weaponCategoryList = [
 
     { text: "Cash", value: "cash" },
     // { text: "Undefined", value: "undefined" },
-]
-
-const weaponOrderByList = [
-    { text: "ID", value: "id" },
-    { text: "Level", value: "reqLevel" },
-    { text: "W.Attack", value: "incPAD" },
-    { text: "M.Attack", value: "incMAD" },
-    { text: "Attack Speed", value: "attackSpeed" },
-    { text: "Slots", value: "tuc" }
-]
-
-const armorOrderByList = [
-    ...weaponOrderByList.slice(0, 4),
-    { text: "HP", value: "incMHP" },
-    { text: "MP", value: "incMMP" },
-    { text: "STR", value: "incSTR" },
-    { text: "DEX", value: "incDEX" },
-    { text: "INT", value: "incINT" },
-    { text: "LUK", value: "intLUK" },
-    { text: "W.def", value: "incPDD" },
-    { text: "M.def", value: "incMDD" },
-    { text: "Accuracy", value: "incACC" },
-    { text: "Avoidability", value: "incEVA" },
-    { text: "Slots", value: "tuc" }
 ]
 
 const orderByList = [

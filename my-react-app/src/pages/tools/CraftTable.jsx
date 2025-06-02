@@ -52,6 +52,8 @@ export default function CraftTable() {
     // console.log(itemLibrary)
     // return "im craft table"
 
+    const filteredCraftItemList = filterCraftItemList(itemLibrary)
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
@@ -84,14 +86,14 @@ export default function CraftTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderItemList(filterCraftItemList(itemLibrary))}
+                    {renderItemList(filteredCraftItemList)}
                 </tbody>
             </Table>
 
             <p id="record-count" className="m-0 p-0  me-2 text-end"></p>
 
             {/* Pagination */}
-            {updatePagination(itemLibrary, filterCraftItemList)}
+            {updatePagination(filteredCraftItemList)}
 
             <p>Source : <a href="https://royals.ms/forum/threads/zancks-crafting-guide.214322/" target="_blank">Zancks' Crafting Guide</a></p>
 

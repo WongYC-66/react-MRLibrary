@@ -45,6 +45,7 @@ export default function NPC() {
     }
 
     // console.log(npcLibrary)
+    const filteredNPCList = filterNPCList(npcLibrary)
 
     return (
         <div className="npc d-flex flex-column">
@@ -138,12 +139,12 @@ export default function NPC() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderNPCList(filterNPCList(npcLibrary))}
+                    {renderNPCList(filteredNPCList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(npcLibrary, filterNPCList)}
+            {updatePagination(filteredNPCList)}
         </div>
     )
 }

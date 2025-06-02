@@ -34,8 +34,8 @@ export default function Quest() {
     }
 
     // console.log(questLibrary)
+    const filteredQuestList = filterQuestList(questLibrary)
 
-    // return 'a'
     return (
         <div className="quest d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
@@ -129,12 +129,12 @@ export default function Quest() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderQuestList(filterQuestList(questLibrary))}
+                    {renderQuestList(filteredQuestList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(questLibrary, filterQuestList)}
+            {updatePagination(filteredQuestList)}
         </div>
     )
 }

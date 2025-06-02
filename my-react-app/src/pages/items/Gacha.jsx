@@ -37,6 +37,8 @@ export default function Gacha() {
         e.target.classList.toggle("d-none")
     }
 
+    const filteredGachaList = filterGachaList(itemLibrary)
+
     return (
         <div className="gacha d-flex flex-column">
             {/* DropDown filter and Search input and Button */}
@@ -132,12 +134,12 @@ export default function Gacha() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderGachaList(filterGachaList(itemLibrary), itemIdToNameDict)}
+                    {renderGachaList(filteredGachaList, itemIdToNameDict)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(itemLibrary, filterGachaList)}
+            {updatePagination(filteredGachaList)}
 
             <p className="my-0">Source_1 : <a href="https://royals.ms/forum/threads/lets-play-gachapon.110983/" target="_blank">Let's Play Gachapon!</a></p>
             <p className="my-0">Source_2 : <a href="https://royals.ms/forum/threads/lhc-exchange-rewards-cs-ws-bwg-taru-totem-rewards-found.193830/" target="_blank">LHC exchange rewards</a></p>

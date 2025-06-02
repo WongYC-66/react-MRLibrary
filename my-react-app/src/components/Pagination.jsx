@@ -1,32 +1,30 @@
-import { useSearchParams, useLocation, useNavigate } from "react-router-dom"
-import { LinkContainer } from 'react-router-bootstrap'
+import { useSearchParams, useLocation, useNavigate, Link } from "react-router-dom"
 import { useCallback, useState } from "react"
 // 
 import Pagination from "react-bootstrap/Pagination"
-// import Modal from "react-bootstrap/Modal"
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from "react-bootstrap/Button"
 
-export const updatePagination = (library, filterLibraryFunction, ...para) => {
+export const updatePagination = (data, ...para) => {
     const [searchParams] = useSearchParams()
-    const navigate = useNavigate();
+    const { search: urlSearch, pathname: urlPathname } = useLocation()
 
-    const [showPaginationModal, setShowPaginationModal] = useState(false);  // modal to skip pages <...>
-    const [isNextPage, setIsNextPage] = useState(true);  // modal 
+    const [paginationBarStatus, setPaginationBarStatus] = useState({
+        isNext: true,
+        toShow: false
+    });  // OffCanvas to skip pages <...>
 
-    const urlSearch = useLocation().search
-    const currentPage = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
+    const currentPage = getCurrentPage(searchParams)
 
-    const urlPathname = useLocation().pathname
-    const lastPageIndex = Math.ceil(filterLibraryFunction(library, ...para).length / 10)
+    const lastPageIndex = Math.ceil(data.length / 10)
 
-    const generateSearchString = (inputNumber) => {
+    const generateQueryString = (inputNumber) => {
         const queryParaCount = searchParams.size
-        // console.log(urlSearch)
+        // just replace url query string with new page number
         if (queryParaCount >= 1) return urlSearch.replace(/\?page=\d+/, (...para) => {
-            // console.log({para})
             return `?page=${inputNumber}`
         })
+        // --------------------------------------------------------------------
         // else when URL:query has nothing. It is initial loading, render the button with URL of:
         if (urlPathname === "/all") {
             return `?page=${inputNumber}&search=`
@@ -78,47 +76,22 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
 
     }
 
-    const RemovePaginationActiveAttribute = useCallback(() => {
-        new Promise((resolve, reject) => {
-            setTimeout(() => resolve(""), 100)
-        }).then(x => {
-            document.getElementById("paginationGroup")
-                .querySelectorAll("li").forEach(x => {
-                    if (x.classList.contains("current")) return // if page item = query page number. Make it active
-                    x.classList.remove("active") // else remove the active class tag
-                })
-        })
-    }, [])
-
-    // Generate [1][2][3]...[lastPage] button Object : {text: 1, pathname ..., seach:...}
     let pageButtonArr = []
-    for (let i = currentPage - 2; i <= lastPageIndex; i++) {
+    for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+        if (i <= 1 || i >= lastPageIndex) continue
         const obj = {
             pathname: `${urlPathname}`,
-            // search: `?page=${i}&${urlSearch.slice(1,).replace(/page=\d+&/, "")}`,
-            search: generateSearchString(i),
+            search: generateQueryString(i),
             text: i
         }
         pageButtonArr.push(obj)
     }
-    pageButtonArr = pageButtonArr.filter(x =>
-        (x.text >= 1) && (x.text - currentPage <= 2)
-        && (x.text != 1 && x.text != lastPageIndex)
-    )
 
-
-    RemovePaginationActiveAttribute()
-
-    let text = 'save changes'
-    // Modal related
-    const handleClose = () => setShowPaginationModal(false);
-    const handleShow = () => setShowPaginationModal(true);
-
-    const handleEllipsisPageBtnClick = (text) => {
-        // pop modal to jump to which page
-        // text = 'ahead' or 'behind'
-        setIsNextPage(text === 'next')
-        handleShow()
+    const handleEllipsisPageBtnClick = (direction) => {
+        // pop OffCanvas to jump to which page
+        setPaginationBarStatus(prev => {
+            return { toShow: true, isNext: direction === 'next' }
+        })
 
         // remove backdrop overlay effect
         setTimeout(() => {
@@ -128,75 +101,85 @@ export const updatePagination = (library, filterLibraryFunction, ...para) => {
             }
         }, 50); // Delay to ensure the backdrop is in the DOM
     }
-    const handleModalBtnClick = (val) => {
-        val = isNextPage ? +val : -val      // red btn = -5/-10/-20/-50, blue btn= +5/+10/+20/+50
-        let nextPageNum = val + currentPage
-        nextPageNum = Math.max(nextPageNum, 0)      // if exceed 0, becomes 0
-        nextPageNum = Math.min(lastPageIndex, nextPageNum)  // if exceed lastPage, becomes lastPage
-        let queryStr = generateSearchString(nextPageNum)
-        // handleClose()
-        navigate(`${urlPathname}${queryStr}`)   // redirect to new url
-    }
 
-    // console.log({currentPage, lastPageIndex})
-
+    // console.log(pageButtonArr)
+    // console.log(currentPage)
 
     return (
         <>
             <Pagination id="paginationGroup" className="d-flex justify-content-center">
 
                 {/* page 1 */}
-                <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(1) }} key='first'>
-                    {/* <Pagination.First className="bg-transparent" style="--bs-bg-opacity: .5;" /> */}
-                    <Pagination.Item className={`bg-white ${lastPageIndex <= 1 ? "rounded-5" : "rounded-start-5"} ${currentPage === 1 && "current"}`}>1</Pagination.Item>
-                </LinkContainer>
+                <Pagination.Item className={`bg-white ${lastPageIndex <= 1 ? "rounded-5" : "rounded-start-5"} `} active={currentPage === 1}>
+                    <Link to={{ pathname: urlPathname, search: generateQueryString(1) }}> 1 </Link>
+                </Pagination.Item>
 
                 {/* <...> button for pages far ahead */}
-                {currentPage >= 4 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('prev')} />}
+                {currentPage >= 5 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('prev')} />}
 
                 {pageButtonArr.map(x =>
-                    <LinkContainer to={{ pathname: x.pathname, search: x.search }} key={x.text}>
-                        <Pagination.Item className={`bg-white ${x.text === currentPage && "current"}`}>{x.text}</Pagination.Item>
-                    </LinkContainer>
+                    <Pagination.Item className='bg-white' key={x.text} active={x.text == Number(currentPage)}>
+                        <Link to={{ pathname: x.pathname, search: x.search }}>{x.text}</Link>
+                    </Pagination.Item>
                 )}
 
                 {/* <...> button for pages far behind */}
                 {currentPage <= lastPageIndex - 4 && <Pagination.Ellipsis onClick={() => handleEllipsisPageBtnClick('next')} />}
 
                 {/* page Last */}
-                {lastPageIndex >= 2 && // >= 2 for bugfix of no result page
-                    <LinkContainer to={{ pathname: urlPathname, search: generateSearchString(lastPageIndex) }} key="last">
-                        {/*  <Pagination.Last /> */}
-                        <Pagination.Item className={`bg-white rounded-end-5 ${currentPage === lastPageIndex && "current"}`}>{lastPageIndex}</Pagination.Item>
-                    </LinkContainer>
-                }
+                {lastPageIndex >= 2 && <Pagination.Item className='bg-white rounded-end-5' active={currentPage === lastPageIndex}>
+                    <Link to={{ pathname: urlPathname, search: generateQueryString(lastPageIndex) }}> {lastPageIndex} </Link>
+                </Pagination.Item>}
             </Pagination>
 
-            {/* Modals show when <...> btn click */}
-            {/* Not using model */}
-            {/* <Modal onHide={handleClose} size="sm" centered>
-                <Modal.Header className='bg-dark text-white' closeButton>
-                    <Modal.Title><h5>Skip to page</h5> </Modal.Title>
-                </Modal.Header>
-                <Modal.Body className='bg-dark'>
-                    {[5, 10, 20, 50].map(num =>
-                        <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{ width: 50 }} onClick={() => handleModalBtnClick(num)}>
-                            {isNextPage ? '+' : '-'}{num}
-                        </Button>)}
-                </Modal.Body >
-            </Modal > */}
-
             {/* Bottom Offcanvas shows when <...> btn click */}
-            <Offcanvas show={showPaginationModal} onHide={handleClose} placement="bottom"    backdropClassName="custom-offcanvas-backdrop" style={{ height: "7.5vh" }}>
-                <Offcanvas.Body className='bg-dark d-flex justify-content-center align-items-center' >
-                    <h5 className="text-white mx-5">Skip to page</h5>
-                    {[5, 10, 20, 50].map(num =>
-                        <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{ width: 50 }} onClick={() => handleModalBtnClick(num)}>
-                            {isNextPage ? '+' : '-'}{num}
-                        </Button>)}
-                </Offcanvas.Body>
-            </Offcanvas>
-
+            <PaginationBar
+                paginationBarStatus={paginationBarStatus}
+                setPaginationBarStatus={setPaginationBarStatus}
+                generateQueryString={generateQueryString}
+                lastPageIndex={lastPageIndex}
+            />
         </>
     );
+}
+
+function PaginationBar({ paginationBarStatus, setPaginationBarStatus, generateQueryString, lastPageIndex }) {
+
+    const [searchParams] = useSearchParams()
+    const { pathname: urlPathname } = useLocation()
+    const navigate = useNavigate();
+
+    const handleClose = () => {
+        setPaginationBarStatus(prev => {
+            return { ...prev, toShow: false }
+        })
+    };
+
+    const isNextPage = paginationBarStatus.isNext
+    const currentPage = getCurrentPage(searchParams)
+
+    const handleBtnClick = (val) => {
+        val = isNextPage ? +val : -val      // red btn = -5/-10/-20/-50, blue btn= +5/+10/+20/+50
+        let nextPageNum = val + currentPage
+        nextPageNum = Math.max(nextPageNum, 0)      // if exceed 0, becomes 0
+        nextPageNum = Math.min(lastPageIndex, nextPageNum)  // if exceed lastPage, becomes lastPage
+        let queryStr = generateQueryString(nextPageNum)
+        navigate(`${urlPathname}${queryStr}`)   // redirect to new url
+    }
+
+    return (
+        <Offcanvas show={paginationBarStatus.toShow} onHide={handleClose} placement="bottom" style={{ height: "7.5vh" }}>
+            <Offcanvas.Body className='bg-dark d-flex justify-content-center align-items-center' >
+                <h5 className="text-white mx-5">Skip to page</h5>
+                {[5, 10, 20, 50].map(num =>
+                    <Button key={num} variant={isNextPage ? 'primary' : 'danger'} className="m-1" style={{ width: 50 }} onClick={() => handleBtnClick(num)}>
+                        {isNextPage ? '+' : '-'}{num}
+                    </Button>)}
+            </Offcanvas.Body>
+        </Offcanvas>
+    )
+}
+
+const getCurrentPage = (searchParams) => {
+    return Number(Object.fromEntries([...searchParams.entries()]).page) || 1
 }

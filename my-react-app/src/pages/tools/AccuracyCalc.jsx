@@ -98,6 +98,8 @@ export default function AccuracyCalc() {
     }
     // console.log(playerStats)
 
+    const filteredMobList = filterMobList(mobLibrary)
+
     return (
         <div className="accuracy-tab d-flex flex-column">
 
@@ -295,12 +297,12 @@ export default function AccuracyCalc() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderMobList(filterMobList(mobLibrary), playerStats)}
+                    {renderMobList(filteredMobList, playerStats)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(mobLibrary, filterMobList)}
+            {updatePagination(filteredMobList)}
 
             {/* References */}
             <p className="my-0">Source_1 : <a href="https://ayumilovemaple.wordpress.com/2008/09/03/maplestory-accuracy-calculator-how-to-100-hit-without-miss/" target="_blank">Ayumilove</a></p>

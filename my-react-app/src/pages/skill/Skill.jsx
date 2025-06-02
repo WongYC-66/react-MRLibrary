@@ -31,6 +31,7 @@ export default function ElementalTable() {
         e.target.classList.toggle("d-none")
     }
 
+    const filteredSkillList = filterSkillList(skillLibrary)
 
     return (
         <div className="monster d-flex flex-column">
@@ -137,12 +138,12 @@ export default function ElementalTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderSkillList(filterSkillList(skillLibrary))}
+                    {renderSkillList(filteredSkillList)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(skillLibrary, filterSkillList)}
+            {updatePagination(filteredSkillList)}
 
         </div>
 

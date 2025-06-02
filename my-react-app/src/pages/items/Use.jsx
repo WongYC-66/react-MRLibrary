@@ -67,6 +67,9 @@ export default function Use() {
     //     let item = Object.entries(itemLibrary).filter(([id, obj]) => obj[k]).slice(0,2)
     //     console.log(k, item)
     // }
+
+    const filteredUseItemList = filterUseItemList(itemLibrary)
+
     return (
         <div className="use d-flex flex-column">
             {/* Search input and Button */}
@@ -181,12 +184,12 @@ export default function Use() {
                     </tr>
                 </thead>
                 <tbody>
-                    {renderUseItemList(filterUseItemList(itemLibrary), showingProperty)}
+                    {renderUseItemList(filteredUseItemList, showingProperty)}
                 </tbody>
             </Table>
 
             {/* Pagination */}
-            {updatePagination(itemLibrary, filterUseItemList)}
+            {updatePagination(filteredUseItemList)}
         </div>
 
     )
