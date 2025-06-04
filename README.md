@@ -169,6 +169,10 @@ png
 ## Log - June 1 2025
 1. done - fix & add : weapon category of Cash
 2. done - UI : update text on opq/gpq solver
+3. done - netlify : add Netlify Edge Functions for blocking AI bots crawler, to save bandwith
+
+## Log - June 4 2025
+1. done - UI : update logo & favicon
 
 Next:
 - show path from map to map with graph data stuctrue ?

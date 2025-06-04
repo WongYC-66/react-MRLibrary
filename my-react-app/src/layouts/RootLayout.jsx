@@ -27,7 +27,8 @@ export default function RootLayout() {
         <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
           <Container fluid>
             <LinkContainer to="/">
-              <Navbar.Brand className="w-25" ><Image src="/logov5.webp" width="175px" /></Navbar.Brand>
+              {/* <Navbar.Brand className="w-25" ><Image src="/logov5.webp" width="175px" /></Navbar.Brand> */}
+              <Navbar.Brand className="w-25" ><Image src="/library_logo_v1.png" width="175px" /></Navbar.Brand>
             </LinkContainer>
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
