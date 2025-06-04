@@ -351,8 +351,8 @@ const renderMobListFromUS = (filteredMobs, itemLibrary) => {
     // [ [id, name, hash set(dropItemsID) ], ... ...]
 
     return filteredMobs.map(([mobId, name, dropSet]) =>
-        <tr key={mobId} className="text-start" style={{ backgroundColor: '#FFDFD6' }}>
-            <td className="p-4 align-middle rounded-start-5 border-0">
+        <tr key={mobId} className="text-start">
+            <td className="p-4 align-middle rounded-start-5">
                 {/* Mob Image */}
                 <Link to={`/monster/id=${mobId}`}>
                     <div className='rounded-circle p-2 d-flex justify-content-center align-items-center' style={{ height: '75px', width: '75px', backgroundColor: '#E3A5C7' }}>
@@ -362,7 +362,6 @@ const renderMobListFromUS = (filteredMobs, itemLibrary) => {
             </td>
             <td className="p-4 align-middle"><Link className="text-decoration-none" to={`/monster/id=${mobId}`}>
                 {/* Mob Name */}
-                {/* <span className="fw-bold" style={{ color: '#694F8E' }}>{name}</span> */}
                 <span className="fw-bold">{name}</span>
             </Link></td>
             <td className="p-4 align-middle rounded-end-5">
