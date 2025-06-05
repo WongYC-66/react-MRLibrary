@@ -103,8 +103,8 @@ const getSpawnMap = (targetMobId) => {
 }
 
 
-export const filterMobList = (mobLibrary) => {
-    const [searchParams] = useSearchParams()
+export const filterMobList = ({mobLibrary, searchParams}) => {
+    // const [searchParams] = useSearchParams()
     // if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
 
     const filterOption = Object.fromEntries([...searchParams.entries()])

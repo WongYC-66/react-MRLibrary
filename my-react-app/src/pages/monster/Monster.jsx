@@ -1,4 +1,4 @@
-import { useSearchParams, Form, redirect, useLocation, NavLink, Link } from "react-router-dom"
+import { useSearchParams, Form, redirect, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
@@ -10,6 +10,8 @@ import { generateMobLibrary, renderImageWithMobId, filterMobList, updateSearchRe
 import { mapCategory } from "../map/utility.jsx"
 
 export default function Monster() {
+    const [searchParams] = useSearchParams()
+
     const [mobLibrary, setMobLibrary] = useState({})
 
     useEffect(() => {
@@ -22,7 +24,7 @@ export default function Monster() {
         e.target.classList.toggle("d-none")
     }
 
-    const filteredMobList = filterMobList(mobLibrary)
+    const filteredMobList = filterMobList({mobLibrary, searchParams})
 
     return (
         <div className="monster d-flex flex-column">

@@ -587,9 +587,7 @@ const getSpawnMap = (targetMobId) => {
     return spawnMaps
 }
 
-export const filterMobList = (mobLibrary) => {
-    const [searchParams] = useSearchParams()
-    // if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
+export const filterMobList = ({mobLibrary, searchParams}) => {
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTerm = filterOption.search?.toLowerCase() || ''
@@ -677,7 +675,7 @@ export const organizeSpawnMap = (returnMob) => {
 }
 
 export const translateMobStats = (returnMob) => {
-    if ('elemAttr' in returnMob) {
+    if (returnMob.elemAttr) {
         returnMob.elemAttr = [returnMob.elemAttr, decodeElemAttr(returnMob.elemAttr)]
     }
     if ('exp' in returnMob) {

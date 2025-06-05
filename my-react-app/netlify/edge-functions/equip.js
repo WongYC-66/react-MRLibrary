@@ -41,7 +41,15 @@ export default async (request, context) => {
             returnEquip = addGachaLoc(returnEquip)
             returnEquip = translateStats(returnEquip)
 
-            return new Response(JSON.stringify(returnEquip))
+            return new Response(
+                JSON.stringify(returnEquip),
+                {
+                    status: 200,
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
 
         } else {
             // 2. return Array of Object

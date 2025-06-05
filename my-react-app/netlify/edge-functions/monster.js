@@ -9,6 +9,12 @@ import {
     organizeSpawnMap,
 } from "../utility.js"
 
+// API-support
+// 1. /api/v1/mosnter?id=1302000
+//      - return 1 mob
+// 2. /api/v1/monster?filter=any&category=Amoria&order=level&sort=ascending&search=
+//      - return array of mobs
+
 const mobLibrary = generateMobLibrary()
 
 export default (request, context) => {
@@ -32,36 +38,34 @@ export default (request, context) => {
             returnMob = translateMobStats(returnMob)
             returnMob = categorizeItemDrops(returnMob)
 
-            return new Response(JSON.stringify(returnMob))
+            return new Response(
+                JSON.stringify(returnMob),
+                {
+                    status: 200,
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
         } else {
             // 2. return Array of Object
 
-            // continue here
+            let filteredMobList = filterMobList({ mobLibrary, searchParams })
+                .map(([mobId, mobData]) => { return { id: mobId, ...mobData } })
 
-            // const overallCategory = searchParams.get('overallcategory')
+            let returnMobList = addImageURL(filteredMobList, 'monsters', context)
+                .map(returnMob => addMapCategory(returnMob, mobLibrary))
+                .map(translateMobStats)
 
-            // const urlPathname = "/" + overallCategory
-
-            // if (!(urlPathname in urlPathToCategoryName)) {
-            //     throw new Error('overallcategory error')
-            // }
-
-            // let filteredEquipList = filterEquipList({ equipLibrary, searchParams, urlPathname })
-            //     .map(([equipId, equipData]) => { return { id: equipId, ...equipData } })
-
-            // let returnEquipList = addImageURL(filteredEquipList, 'characters', context)
-            // returnEquipList = returnEquipList.map(el => translateStats(el))
-
-            // return new Response(
-            //     JSON.stringify(returnEquipList),
-            //     {
-            //         status: 200,
-            //         headers: {
-            //             "Content-Type": "application/json",
-            //         },
-            //     }
-            // );
-            return new Response("Monster")
+            return new Response(
+                JSON.stringify(returnMobList),
+                {
+                    status: 200,
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
         }
     } catch (err) {
         return new Response(
