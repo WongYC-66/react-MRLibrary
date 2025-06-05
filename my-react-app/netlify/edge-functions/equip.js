@@ -1,15 +1,22 @@
-import { generateEquipLibrary, filterEquipList, urlPathToCategoryName } from "../utility.js"
+import {
+    generateEquipLibrary,
+    filterEquipList,
+    urlPathToCategoryName,
+    addImageURL
+} from "../utility.js"
 
 const equipLibrary = generateEquipLibrary()
 
-// /weapon?page=1&job=0&category=dagger&order=reqLevel&sort=ascending&cosmetic=null&search=maple
-
-// /api/v1/equip?id=1302000
-// /api/v1/equip?overallcategory=weapon&job=0&category=dagger&order=reqLevel&sort=ascending&cosmetic=null&search=maple
+// API-support
+// 1. /api/v1/equip?id=1302000
+//      - return 1 item
+// 2. /api/v1/equip?overallcategory=weapon&job=0&category=dagger&order=reqLevel&sort=ascending&cosmetic=null&search=maple
+//      - return array of items
 
 
 export default async (request, context) => {
     console.log(context.url.href)
+    // console.log(Object.keys(equipLibrary).length)
     try {
         const searchParams = context.url.searchParams
 
@@ -20,24 +27,29 @@ export default async (request, context) => {
                 throw new Error('EquipId not Found')
             }
 
-            return new Response(JSON.stringify(equipLibrary[equipId]))
+            let returnEquip = equipLibrary[equipId]
+            returnEquip = { id: equipId, ...returnEquip }
+
+            returnEquip = addImageURL(returnEquip, 'characters', context)
+
+            return new Response(JSON.stringify(returnEquip))
         } else {
             // 2. return Array of Object
             const overallCategory = searchParams.get('overallcategory')
 
             const urlPathname = "/" + overallCategory
 
-            // console.log({ overallCategory, urlPathname })
             if (!(urlPathname in urlPathToCategoryName)) {
                 throw new Error('overallcategory error')
             }
 
-            const filteredEquipList = filterEquipList({ equipLibrary, searchParams, urlPathname })
+            let filteredEquipList = filterEquipList({ equipLibrary, searchParams, urlPathname })
                 .map(([equipId, equipData]) => { return { id: equipId, ...equipData } })
 
+            const returnEquipList = addImageURL(filteredEquipList, 'characters', context)
 
             return new Response(
-                JSON.stringify(filteredEquipList),
+                JSON.stringify(returnEquipList),
                 {
                     status: 200,
                     headers: {

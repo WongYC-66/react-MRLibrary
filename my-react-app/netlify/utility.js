@@ -17,47 +17,31 @@ export const generateEquipLibrary = () => {
     let filtered_data_GearStats = equipLib.filter(([_, { name }]) => name)
 
     return Object.fromEntries(filtered_data_GearStats)
-
-    // Object.entries(data_Eqp).forEach(([eqpId, eqpName]) => {
-    //     if (data_GearStats.hasOwnProperty(eqpId)) {
-    //         data_GearStats[eqpId] = {
-    //             ...data_GearStats[eqpId],
-    //             name: eqpName,
-    //             category: equipIdToCategory(eqpId)
-    //         }
-    //     }
-    // })
-    // let filtered_data_GearStats = Object.fromEntries(
-    //     Object.entries(data_GearStats)
-    //         .filter(([_id, { name }]) => name) // filtered out those without name
-    //     // .filter(([_id, { category }]) => !category.includes('undefined')) // filtered out those without category/subcategory
-    // )
-    // return filtered_data_GearStats
 }
 
 export const filterEquipList = ({ equipLibrary, searchParams, urlPathname }) => {
-    // const [searchParams] = useSearchParams()
-    // const urlPathname = useLocation().pathname
+    // console.log({urlPathname})
     const isWeaponPage = urlPathname === "/weapon"
 
     let equipLibraryArr = Object.entries(equipLibrary)
 
     // first filter, filter library into Weapon/ Cape/ Top ...etc
     let filteredEquipList = filterByCategory({ equipLibraryArr, urlPathname, isWeaponPage })
+    // console.log(filteredEquipList.length)
 
     // No further filter at first loading or if URL don't have query param 
     if (searchParams.size <= 0) return filteredEquipList
 
     // If URL has query param, further filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
-    const searchTermArr = filterOption.search.toLowerCase().split(" ")
-    const exactSearchTerm = filterOption.search.toLowerCase()
+    const searchTermArr = filterOption?.search?.toLowerCase().split(" ") || ['']
+    const exactSearchTerm = filterOption?.search?.toLowerCase() || ''
 
-    const job = filterOption.job
-    const category = filterOption.category
-    const order = filterOption.order  // id, reqLevel
-    const sort = filterOption.sort   // ascending, descending
-    const onCosmetic = filterOption.cosmetic   // ascending, descending
+    const job = filterOption.job || '0'
+    const category = filterOption.category || 'any'
+    const order = filterOption.order || 'id' // id, reqLevel
+    const sort = filterOption.sort || 'ascending'  // ascending, descending
+    const onCosmetic = filterOption.cosmetic || 'on'  // ascending, descending
     // console.log(filterOption)
 
     // 1. query filter - by search name
@@ -69,7 +53,7 @@ export const filterEquipList = ({ equipLibrary, searchParams, urlPathname }) => 
         })
 
     // 2. query filter - by weapon category // ONLY FOR WEAPON PAGE
-    filteredEquipList = (isWeaponPage && urlPathname !== '/any')
+    filteredEquipList = isWeaponPage
         ? filterWeaponByCategory({ category, filteredEquipList })
         : filteredEquipList
 
@@ -376,7 +360,26 @@ const isNotCosmetic = (itemData) => {
     return statFields.some(stat => itemData[stat] && Number(itemData[stat]) > 0);
 }
 
-export const updateSearchResultCount = (number) => {
-    const countEl = document.getElementById("record-count")
-    if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
+export const addImageURL = (target, type, context) => {
+    if (!Array.isArray(target)) {
+        let id = normalizedID(type, target.id)
+        target.imgURL = `${context.url.origin}/images/${type}/${id}.png`
+        return target
+    } else {
+        return target.map(t => {
+            let id = normalizedID(type, t.id)
+            t.imgURL = `${context.url.origin}/images/${type}/${id}.png`
+            return t
+        })
+    }
+}
+
+const normalizedID = (type, id) => {
+    // console.log({ type, id })
+    switch (type) {
+        case 'characters':
+            return String(id).padStart(8, '0')
+        default:
+            return id
+    }
 }
