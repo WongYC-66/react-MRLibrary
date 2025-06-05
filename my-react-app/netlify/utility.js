@@ -1,5 +1,9 @@
 import data_Eqp from "../data/data_Eqp.json" assert { type: 'json' };
 import data_GearStats from "../data/data_GearStats.json" assert { type: 'json' };
+import data_MB from "../data/data_MB.json" assert { type: 'json' };
+import data_Mob from "../data/data_Mob.json" assert { type: 'json' };
+import data_Gacha from "../data/data_Gacha.json" assert { type: 'json' };
+
 
 export const generateEquipLibrary = () => {
 
@@ -13,8 +17,11 @@ export const generateEquipLibrary = () => {
         }
     }
 
-    // remove one without name
-    let filtered_data_GearStats = equipLib.filter(([_, { name }]) => name)
+    let [minEquipId, maxEquipId] = findEquipRange()
+
+    let filtered_data_GearStats = equipLib
+        .filter(([_, { name }]) => name)                // remove one without name
+        .filter(([id,]) => Number(id) >= minEquipId && Number(id) <= maxEquipId)       // removed Eye Rendering image..etc
 
     return Object.fromEntries(filtered_data_GearStats)
 }
@@ -126,23 +133,13 @@ const querySorting = ({ order, filteredEquipList, exactSearchTerm }) => {
     return listCopy
 }
 
+
+
 const queryFilterByJob = ({ job, filteredEquipList }) => {
-    const lib = {
-        "-1": [-1],   //'BEGINNER',
-        "0": [-1, 1, 2, 4, 8, 16],    // 'ALL',
-        "1": [1],       // 'WARRIOR'
-        "2": [2],       // 'MAGICIAN'
-        "3": [1, 2],                   // ['WARRIOR','MAGICIAN'],
-        "4": [4],       // 'BOWMAN'
-        "8": [8],       // 'THIEF',
-        "9": [1, 8],                 // ['WARRIOR','THIEF'],
-        "13": [1, 4, 8],             // ['WARRIOR','BOWMAN', 'THIEF'],
-        "16": [16]      // 'PIRATE',
-    }
     return filteredEquipList.filter(([_id, { reqJob }]) => {
         if (job === "0") return true
         if (reqJob === "0") return true
-        const jobArr = lib[reqJob]
+        const jobArr = reqJobToList[reqJob]
         return jobArr?.includes(parseInt(job))
     })
 }
@@ -238,6 +235,16 @@ export const rangeCalculator = (x, type = "", hardCap = 5) => {
     return returnString
 }
 
+const findEquipRange = () => {
+    let minId = Infinity
+    let maxId = -Infinity
+    for (let { min, max } of Object.values(catogeryRangeList)) {
+        minId = Math.min(minId, min)
+        maxId = Math.max(maxId, max)
+    }
+    return [minId, maxId]
+}
+
 export const catogeryRangeList = {
     // info used from https://maplestory.io/api/GMS/64/item/category
     // also, https://maplestory.io/api/GMS/196/item/category
@@ -323,20 +330,23 @@ export function attkSpeedToText(x) {
     return text;
 }
 
-export const decodeReqJobToList = (reqJob) => {
-    const lib = {
-        "-1": [-1],   //'BEGINNER',
-        "0": [-1, 1, 2, 4, 8, 16],    // 'ALL',
-        "1": [1],       // 'WARRIOR'
-        "2": [2],       // 'MAGICIAN'
-        "3": [1, 2],                   // ['WARRIOR','MAGICIAN'],
-        "4": [4],       // 'BOWMAN'
-        "8": [8],       // 'THIEF',
-        "9": [1, 8],                 // ['WARRIOR','THIEF'],
-        "13": [1, 4, 8],             // ['WARRIOR','BOWMAN', 'THIEF'],
-        "16": [16]      // 'PIRATE',
-    }
-    return lib[reqJob]
+const reqJobToList = {
+    "-1": [-1],   //'BEGINNER',
+    "0": [-1, 1, 2, 4, 8, 16],    // 'ALL',
+    "1": [1],       // 'WARRIOR'
+    "2": [2],       // 'MAGICIAN'
+    "3": [1, 2],                   // ['WARRIOR','MAGICIAN'],
+    "4": [4],       // 'BOWMAN'
+    "8": [8],       // 'THIEF',
+    "9": [1, 8],                 // ['WARRIOR','THIEF'],
+    "10": [2, 8],                // ['MAGICIAN','THIEF'],
+    "13": [1, 4, 8],             // ['WARRIOR','BOWMAN', 'THIEF'],
+    "16": [16],      // 'PIRATE',
+    "21": [1, 4],                 // ['WARRIOR', "BOWMAN"],
+}
+
+const decodeReqJobToList = (reqJob) => {
+    return reqJobToList[reqJob]
 }
 
 export const isNotRedundantProp = (itemProp, isWeaponPage) => {
@@ -360,6 +370,16 @@ const isNotCosmetic = (itemData) => {
     return statFields.some(stat => itemData[stat] && Number(itemData[stat]) > 0);
 }
 
+const normalizedID = (type, id) => {
+    // console.log({ type, id })
+    switch (type) {
+        case 'characters':
+            return String(id).padStart(8, '0')
+        default:
+            return id
+    }
+}
+
 export const addImageURL = (target, type, context) => {
     if (!Array.isArray(target)) {
         let id = normalizedID(type, target.id)
@@ -374,12 +394,97 @@ export const addImageURL = (target, type, context) => {
     }
 }
 
-const normalizedID = (type, id) => {
-    // console.log({ type, id })
-    switch (type) {
-        case 'characters':
-            return String(id).padStart(8, '0')
-        default:
-            return id
+
+export const addMobThatDrops = (returnEquip, itemDropLibrary) => {
+    const mobIdList = itemDropLibrary[returnEquip.id]
+    returnEquip.droppedBy = mobIdList?.map(mobId => {
+        return { id: mobId, name: convertMobIdToName(mobId) }
+    })
+    return returnEquip
+}
+
+export const addGachaLoc = (returnEquip) => {
+    let gacha = []
+    for (let { location, itemId } of data_Gacha) {
+        if (Number(returnEquip.id) == Number(itemId)) {
+            gacha.push(location)
+        }
     }
+    if(gacha.length) returnEquip.gacha = gacha
+    return returnEquip
+}
+
+export const generateItemDropLibrary = () => {
+    // [[mobId, Set()], ...]
+    let itemIdToMobId = {}
+    for (let mobId in data_MB) {
+        for (let itemId of data_MB[mobId]) {
+            if (!(itemId in itemIdToMobId)) {
+                itemIdToMobId[itemId] = []
+            }
+            itemIdToMobId[itemId].push(mobId)
+        }
+    }
+    return itemIdToMobId
+}
+
+export const convertMobIdToName = (id) => {
+    try {
+        let mobName = data_Mob[Number(id)]
+        if (!mobName) throw Error()
+        return mobName
+    } catch {
+        return `mob name error : ${id}`
+    }
+}
+
+export const translateStats = (returnEquip) => {
+    if ('reqJob' in returnEquip) {
+        let jobList = decodeReqJobToList(returnEquip.reqJob)
+        returnEquip.reqJob = [returnEquip.reqJob, jobList.map(jobIdToName)]
+    }
+    if ('attackSpeed' in returnEquip) {
+        returnEquip.attackSpeed = [returnEquip.attackSpeed, attkSpeedToText(returnEquip.attackSpeed)]
+    }
+    if ('tuc' in returnEquip) {
+        returnEquip.upgradeAvail = returnEquip.tuc
+        delete returnEquip.tuc
+    }
+    if ('tradeBlock' in returnEquip) {
+        returnEquip.untradeable = 1
+        delete returnEquip.tradeBlock
+    }
+    if ('only' in returnEquip) {
+        returnEquip['one-of-a-kind-item'] = 1
+        delete returnEquip.only
+    }
+
+    const godlyAdd5Stats = ['incSTR', 'incDEX', 'incINT', 'incLUK', 'incPAD', 'incMAD', 'incACC', 'incEVA', 'incSpeed', 'incJump']
+    const godlyAdd10Stats = ['incMHP', 'incMMP', 'incPDD', 'incMDD']
+
+    for (let stat of godlyAdd5Stats) {
+        if (stat in returnEquip) {
+            returnEquip[stat] = [returnEquip[stat], rangeCalculator(returnEquip[stat])]
+        }
+    }
+    for (let stat of godlyAdd10Stats) {
+        if (stat in returnEquip) {
+            returnEquip[stat] = [returnEquip[stat], rangeCalculator(returnEquip[stat], "", 10)]
+        }
+    }
+
+    return returnEquip
+}
+
+
+const jobIdToName = (jobId) => {
+    const reqJobToList = {
+        "-1": 'BEGINNER',
+        1: 'WARRIOR',
+        2: 'MAGICIAN',
+        4: 'BOWMAN',
+        8: 'THIEF',
+        16: 'PIRATE',
+    }
+    return reqJobToList[jobId]
 }

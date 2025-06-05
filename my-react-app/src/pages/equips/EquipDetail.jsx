@@ -112,8 +112,8 @@ export default function EquipDetail() {
                                         <td colSpan={6} className="bg-transparent p-0" >
                                             <div className="d-flex flex-wrap">
                                                 <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(-1) && "text-warning"}`}>Beginner</div>
-                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(2) && "text-warning"}`}>Magician</div>
                                                 <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(1) && "text-warning"}`}>Warrior</div>
+                                                <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(2) && "text-warning"}`}>Magician</div>
                                                 <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(4) && "text-warning"}`}>Bowman</div>
                                                 <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(8) && "text-warning"}`}>Thief</div>
                                                 <div className={`rounded-4 bg-dark px-3 me-1 ${jobList.includes(16) && "text-warning"}`}>Pirate</div>

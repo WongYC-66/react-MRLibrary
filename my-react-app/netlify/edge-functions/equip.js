@@ -1,11 +1,17 @@
 import {
     generateEquipLibrary,
+    generateItemDropLibrary,
     filterEquipList,
     urlPathToCategoryName,
-    addImageURL
+    addImageURL,
+    addMobThatDrops,
+    addGachaLoc,
+    translateStats,
 } from "../utility.js"
 
 const equipLibrary = generateEquipLibrary()
+const itemDropLibrary = generateItemDropLibrary()
+console.log('run')
 
 // API-support
 // 1. /api/v1/equip?id=1302000
@@ -31,8 +37,12 @@ export default async (request, context) => {
             returnEquip = { id: equipId, ...returnEquip }
 
             returnEquip = addImageURL(returnEquip, 'characters', context)
+            returnEquip = addMobThatDrops(returnEquip, itemDropLibrary)
+            returnEquip = addGachaLoc(returnEquip)
+            returnEquip = translateStats(returnEquip)
 
             return new Response(JSON.stringify(returnEquip))
+
         } else {
             // 2. return Array of Object
             const overallCategory = searchParams.get('overallcategory')
@@ -46,7 +56,8 @@ export default async (request, context) => {
             let filteredEquipList = filterEquipList({ equipLibrary, searchParams, urlPathname })
                 .map(([equipId, equipData]) => { return { id: equipId, ...equipData } })
 
-            const returnEquipList = addImageURL(filteredEquipList, 'characters', context)
+            let returnEquipList = addImageURL(filteredEquipList, 'characters', context)
+            returnEquipList = returnEquipList.map(el => translateStats(el))
 
             return new Response(
                 JSON.stringify(returnEquipList),
