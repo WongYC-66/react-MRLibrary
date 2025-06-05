@@ -11,7 +11,7 @@ import {
 
 const equipLibrary = generateEquipLibrary()
 const itemDropLibrary = generateItemDropLibrary()
-console.log('run')
+// console.log('run')
 
 // API-support
 // 1. /api/v1/equip?id=1302000
