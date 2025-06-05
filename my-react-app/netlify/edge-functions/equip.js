@@ -39,7 +39,7 @@ export default async (request, context) => {
             returnEquip = addImageURL(returnEquip, 'characters', context)
             returnEquip = addMobThatDrops(returnEquip, itemDropLibrary)
             returnEquip = addGachaLoc(returnEquip)
-            returnEquip = translateStats(returnEquip)
+            returnEquip = translateEquipStats(returnEquip)
 
             return new Response(
                 JSON.stringify(returnEquip),
@@ -65,7 +65,7 @@ export default async (request, context) => {
                 .map(([equipId, equipData]) => { return { id: equipId, ...equipData } })
 
             let returnEquipList = addImageURL(filteredEquipList, 'characters', context)
-            returnEquipList = returnEquipList.map(el => translateStats(el))
+            returnEquipList = returnEquipList.map(translateEquipStats)
 
             return new Response(
                 JSON.stringify(returnEquipList),
