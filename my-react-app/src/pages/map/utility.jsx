@@ -251,10 +251,10 @@ export const mapCategory = [
 
 export const findMapCategoryByMapId = (mapId) => {
     mapId = Number(mapId)
-    for(let {region, minMapId, maxMapId} of data_MapRange){
+    for (let { region, minMapId, maxMapId } of data_MapRange) {
         minMapId = Number(minMapId)
         maxMapId = Number(maxMapId)
-        if(minMapId <= mapId && mapId <= maxMapId){
+        if (minMapId <= mapId && mapId <= maxMapId) {
             return region
         }
     }

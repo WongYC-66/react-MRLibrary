@@ -8,10 +8,13 @@ import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
 import data_fixMobImg from "./data_fixMobImg.json"
 // 
-import data_mob from "../../../data/data_Mob.json"
-import data_mobStats from "../../../data/data_MobStats.json"
-import data_mapMobCount from "../../../data/data_MapMobCount.json"
-import data_mobMap from "../../../data/data_Mob_MapOnly.json"
+import data_Mob from "../../../data/data_Mob.json"
+import data_MB from "../../../data/data_MB.json"
+import data_MobStats from "../../../data/data_MobStats.json"
+import data_MapMobCount from "../../../data/data_MapMobCount.json"
+import data_MobMap from "../../../data/data_Mob_MapOnly.json"
+// 
+import data_Map from "../../../data/data_Map.json"
 // 
 import { findMapCategoryByMapId } from "../map/utility.jsx"
 
@@ -21,13 +24,23 @@ const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x)
 export const generateMobLibrary = () => {
     const mobLibrary = {}
 
-    Object.entries(data_mob).forEach(([mobId, mobName]) => {
-        if (mobId in data_mobStats) {
-            mobLibrary[mobId] = { ...data_mobStats[mobId], name: mobName }
+    Object.entries(data_Mob).forEach(([mobId, mobName]) => {
+        if (mobId in data_MobStats) {
+            mobLibrary[mobId] = { ...data_MobStats[mobId], name: mobName }
         }
     })
     addMapCategoryToMob(mobLibrary)
     return mobLibrary
+}
+
+export const generateMobInfo = (mobId) => {
+    return {
+        ...data_MobStats[mobId],
+        id: mobId,
+        name: data_Mob[mobId],
+        drops: data_MB[mobId],
+        spawnMap: getSpawnMap(mobId)
+    }
 }
 
 // HEAVY CALC MAPPING
@@ -40,10 +53,10 @@ const addMapCategoryToMob = (mobLibrary) => {
     }
 
     // data from inside data_MapMobCount (map.wz)
-    for (let mapId in data_mapMobCount) {
+    for (let mapId in data_MapMobCount) {
         if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
 
-        Object.keys(data_mapMobCount[mapId]).forEach(mobId => {
+        Object.keys(data_MapMobCount[mapId]).forEach(mobId => {
             if (!mobLibrary[mobId]) return  // skip, mobId not exist
             addMapTagToMob(mobId, mapId)
         })
@@ -52,13 +65,41 @@ const addMapCategoryToMob = (mobLibrary) => {
     // there is a problem, boss-type mob not inside data_MapMobCount
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
-    for (let mobId in data_mobMap) {
+    for (let mobId in data_MobMap) {
         if (!mobLibrary[mobId]) continue        // skip, mobId not exist
-        data_mobMap[mobId].forEach(mapId => {
+        data_MobMap[mobId].forEach(mapId => {
             if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
             addMapTagToMob(mobId, mapId)
         })
     }
+}
+
+const getSpawnMap = (targetMobId) => {
+    const spawnMaps = []
+    // data from inside data_MapMobCount (map.wz)
+    let seen_mapId = new Set()
+    Object.entries(data_MapMobCount).forEach(([mapId, mobId_to_count_obj]) => {
+        Object.entries(mobId_to_count_obj).forEach(([mobId, count]) => {
+            if (Number(mobId) === Number(targetMobId)) {
+                const mapNameObj = data_Map[mapId]
+                spawnMaps.push([mapId, mapNameObj, count])
+                seen_mapId.add(mapId)
+            }
+        })
+    })
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    let monsterBookLocationArr = data_MobMap[targetMobId]
+    if (monsterBookLocationArr) {
+        monsterBookLocationArr.forEach(mapId => {
+            if (seen_mapId.has(mapId)) return
+            const mapNameObj = data_Map[mapId]
+            spawnMaps.push([mapId, mapNameObj, 1])
+            seen_mapId.add(mapId)
+        })
+    }
+    return spawnMaps
 }
 
 
@@ -378,3 +419,5 @@ export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")
     if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
 }
+
+/// don touch me

@@ -1,10 +1,22 @@
 import data_Eqp from "../data/data_Eqp.json" assert { type: 'json' };
 import data_GearStats from "../data/data_GearStats.json" assert { type: 'json' };
-import data_MB from "../data/data_MB.json" assert { type: 'json' };
+import data_Consume from "../data/data_Consume.json" assert { type: 'json' };
+import data_Ins from "../data/data_Ins.json" assert { type: 'json' };
+import data_Etc from "../data/data_Etc.json" assert { type: 'json' };
+// 
 import data_Mob from "../data/data_Mob.json" assert { type: 'json' };
+import data_MB from "../data/data_MB.json" assert { type: 'json' };
+// 
 import data_Gacha from "../data/data_Gacha.json" assert { type: 'json' };
+// 
+import data_MobStats from "../data/data_MobStats.json" assert { type: 'json' };
+import data_MapMobCount from "../data/data_MapMobCount.json" assert { type: 'json' };
+import data_MobMap from "../data/data_Mob_MapOnly.json" assert { type: 'json' };
+// 
+import data_Map from "../data/data_Map.json" assert { type: 'json' };
+import data_MapRange from "../data/data_MapRange.json" assert { type: 'json' };
 
-
+//  ------------- EQUIP API -----------
 export const generateEquipLibrary = () => {
 
     let equipLib = Object.entries(data_GearStats)
@@ -25,6 +37,8 @@ export const generateEquipLibrary = () => {
 
     return Object.fromEntries(filtered_data_GearStats)
 }
+
+
 
 export const filterEquipList = ({ equipLibrary, searchParams, urlPathname }) => {
     // console.log({urlPathname})
@@ -375,6 +389,8 @@ const normalizedID = (type, id) => {
     switch (type) {
         case 'characters':
             return String(id).padStart(8, '0')
+        case 'monsters':
+            return String(id).padStart(7, '0')
         default:
             return id
     }
@@ -410,7 +426,7 @@ export const addGachaLoc = (returnEquip) => {
             gacha.push(location)
         }
     }
-    if(gacha.length) returnEquip.gacha = gacha
+    if (gacha.length) returnEquip.gacha = gacha
     return returnEquip
 }
 
@@ -438,7 +454,7 @@ export const convertMobIdToName = (id) => {
     }
 }
 
-export const translateStats = (returnEquip) => {
+export const translateEquipStats = (returnEquip) => {
     if ('reqJob' in returnEquip) {
         let jobList = decodeReqJobToList(returnEquip.reqJob)
         returnEquip.reqJob = [returnEquip.reqJob, jobList.map(jobIdToName)]
@@ -487,4 +503,270 @@ const jobIdToName = (jobId) => {
         16: 'PIRATE',
     }
     return reqJobToList[jobId]
+}
+
+//  ------------- MONSTER API -----------
+export const generateMobLibrary = () => {
+    const mobLibrary = {}
+
+    Object.entries(data_Mob).forEach(([mobId, mobName]) => {
+        if (mobId in data_MobStats) {
+            mobLibrary[mobId] = { ...data_MobStats[mobId], name: mobName }
+        }
+    })
+    addMapCategoryToMob(mobLibrary)
+    return mobLibrary
+}
+
+// HEAVY CALC MAPPING
+const addMapCategoryToMob = (mobLibrary) => {
+    const mapIdToCategory = {}  //  '100000000' => 'Henesys'
+
+    const addMapTagToMob = (mobId, mapId) => {
+        if (!mobLibrary[mobId].mapCategory) mobLibrary[mobId].mapCategory = new Set()
+        mobLibrary[mobId].mapCategory.add(mapIdToCategory[mapId])
+    }
+
+    // data from inside data_MapMobCount (map.wz)
+    for (let mapId in data_MapMobCount) {
+        if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+
+        Object.keys(data_MapMobCount[mapId]).forEach(mobId => {
+            if (!mobLibrary[mobId]) return  // skip, mobId not exist
+            addMapTagToMob(mobId, mapId)
+        })
+    }
+
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    for (let mobId in data_MobMap) {
+        if (!mobLibrary[mobId]) continue        // skip, mobId not exist
+        data_MobMap[mobId].forEach(mapId => {
+            if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+            addMapTagToMob(mobId, mapId)
+        })
+    }
+}
+
+export const generateMobInfo = (mobId) => {
+    return {
+        ...data_MobStats[mobId],
+        id: mobId,
+        name: data_Mob[mobId],
+        drops: data_MB[mobId],
+        spawnMap: getSpawnMap(mobId)
+    }
+}
+
+const getSpawnMap = (targetMobId) => {
+    const spawnMaps = []
+    // data from inside data_MapMobCount (map.wz)
+    let seen_mapId = new Set()
+    Object.entries(data_MapMobCount).forEach(([mapId, mobId_to_count_obj]) => {
+        Object.entries(mobId_to_count_obj).forEach(([mobId, count]) => {
+            if (Number(mobId) === Number(targetMobId)) {
+                const mapNameObj = data_Map[mapId]
+                spawnMaps.push([mapId, mapNameObj, count])
+                seen_mapId.add(mapId)
+            }
+        })
+    })
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    let monsterBookLocationArr = data_MobMap[targetMobId]
+    if (monsterBookLocationArr) {
+        monsterBookLocationArr.forEach(mapId => {
+            if (seen_mapId.has(mapId)) return
+            const mapNameObj = data_Map[mapId]
+            spawnMaps.push([mapId, mapNameObj, 1])
+            seen_mapId.add(mapId)
+        })
+    }
+    return spawnMaps
+}
+
+export const filterMobList = (mobLibrary) => {
+    const [searchParams] = useSearchParams()
+    // if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
+
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+    const searchTerm = filterOption.search?.toLowerCase() || ''
+    const exactSearchTerm = filterOption.search?.toLowerCase() || ''
+
+    const filter = filterOption.filter || 'any'
+    const mapCategory = filterOption.category || 'any'
+    const order = filterOption.order || 'id'
+    const sort = filterOption.sort || 'ascending'
+
+    let filteredMobList = Object.entries(mobLibrary)
+
+    // console.log(filteredMobList)
+
+    filteredMobList = filteredMobList
+        .filter(x => {
+            if (x[0] === exactSearchTerm) return true // id matched
+            if (!x[1].name) return false
+            if (x[1]?.name?.toLowerCase()?.includes(searchTerm)) return true
+        })
+        .filter(x => {
+            if (filter === "any") return true
+            if (filter === "boss" && x[1]?.boss === "1") return true
+            if (filter === "monster" && !x[1].hasOwnProperty("boss")) return true
+        })
+        .filter(([_, { mapCategory: appearedMap }]) => {
+            if (mapCategory === "any") return true
+            if (!appearedMap) return false
+            return appearedMap.has(mapCategory)
+        })
+        .sort((a, b) => {
+            // exact term sort to front, then sort by property
+            // if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0    // seems buggy
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase() && a[1].name.toLowerCase() === exactSearchTerm) {
+                // fix, if exact search matched. then sort these same mobs with "level" or default by Id
+                return Number(a[1][order]) - Number(b[1][order]) || Number(a[0]) - Number(b[0])
+            }
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+
+            // default is ascending, if descend, then reverse upon return
+
+            // order by  - [level/exp/maxHP]
+            // if no data, sort to end, 0,1,2,...1000, NaN
+            if (a[1][order] === undefined && b[1][order] === undefined) return 0
+            if (a[1][order] === undefined) return 1
+            if (b[1][order] === undefined) return -1
+
+            // if level/exp/maxHP same, sub-sort by id Ascending
+            if (a[1][order] === b[1][order]) return Number(a[0]) - Number(b[0])
+
+            // sort by order-property ascendingly
+            return Number(a[1][order]) - Number(b[1][order])
+        })
+
+    // console.log("after filter = ", filteredMobList)
+    // console.log(`found : ${filteredMobList.length} records`)
+    filteredMobList = sort === "descending" ? filteredMobList.reverse() : filteredMobList
+
+    // split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+    filteredMobList = [
+        ...filteredMobList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
+        ...filteredMobList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
+    ]
+
+    return filteredMobList
+}
+
+export const addMapCategory = (returnMob, mobLibrary) => {
+    const mobId = returnMob.id
+    if (!mobLibrary[mobId].mapCategory) return returnMob
+
+    returnMob.mapCategory = [...mobLibrary[mobId].mapCategory]
+    return returnMob
+}
+
+export const organizeSpawnMap = (returnMob) => {
+    returnMob.spawnMap = returnMob.spawnMap
+        .map(([mapId, mapObj, count]) => {
+            return { mapId, ...mapObj, count }
+        })
+        .toSorted((a, b) => b.count - a.count)
+
+    return returnMob
+}
+
+export const translateMobStats = (returnMob) => {
+    if ('elemAttr' in returnMob) {
+        returnMob.elemAttr = [returnMob.elemAttr, decodeElemAttr(returnMob.elemAttr)]
+    }
+    if ('exp' in returnMob) {
+        returnMob.exp = Math.floor(returnMob.exp * 3.2)
+    }
+    return returnMob
+}
+
+const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
+
+export const decodeElemAttr = (elemAttr) => {
+    let elemRelation = {}
+    elemAttr.match(/.{2}/g).map(x => {
+        let el = elemList[x[0]]
+        switch (x[1]) {
+            case '1':
+                elemRelation[el] = 'immune'
+                break;
+            case '2':
+                elemRelation[el] = 'strong'
+                break;
+            case '3':
+                elemRelation[el] = 'weak'
+                break
+            default:
+                elemRelation[el] = 'none'
+                break
+        }
+    })
+    return elemRelation
+}
+
+export const categorizeItemDrops = (returnMob) => {
+    if (!returnMob.drops) return returnMob
+
+    const { EquipDrops, UseDrops, SetupDrops, EtcDrops } = sortDropsToFourArr(returnMob.drops)
+    returnMob.drops = {
+        EquipDrops,
+        UseDrops,
+        SetupDrops,
+        EtcDrops
+    }
+    return returnMob
+}
+
+const sortDropsToFourArr = (dropsArr) => {
+    const EquipDrops = []
+    const UseDrops = []
+    const SetupDrops = []
+    const EtcDrops = []
+
+    dropsArr.forEach(itemId => {
+        if (data_Eqp.hasOwnProperty(itemId)) return EquipDrops.push({
+            id: itemId,
+            name: data_Eqp[itemId]
+        })
+
+        if (data_Consume.hasOwnProperty(itemId)) return UseDrops.push({
+            id: itemId,
+            name: data_Consume[itemId].name,
+            // desc: data_Consume[itemId].desc
+        })
+
+        if (data_Ins.hasOwnProperty(itemId)) return SetupDrops.push({
+            id: itemId,
+            name: data_Ins[itemId].name,
+            // desc: data_Ins[itemId].desc
+        })
+
+        if (data_Etc.hasOwnProperty(itemId)) return EtcDrops.push({
+            id: itemId,
+            name: data_Etc[itemId].name,
+            // desc: data_Etc[itemId].desc
+        })
+    })
+
+    return { EquipDrops, UseDrops, SetupDrops, EtcDrops }
+}
+
+//  ------- MAP API -----
+
+export const findMapCategoryByMapId = (mapId) => {
+    mapId = Number(mapId)
+    for (let { region, minMapId, maxMapId } of data_MapRange) {
+        minMapId = Number(minMapId)
+        maxMapId = Number(maxMapId)
+        if (minMapId <= mapId && mapId <= maxMapId) {
+            return region
+        }
+    }
+    return "NULL" // not found
 }

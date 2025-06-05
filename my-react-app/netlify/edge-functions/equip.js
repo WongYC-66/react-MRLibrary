@@ -6,7 +6,7 @@ import {
     addImageURL,
     addMobThatDrops,
     addGachaLoc,
-    translateStats,
+    translateEquipStats,
 } from "../utility.js"
 
 const equipLibrary = generateEquipLibrary()
