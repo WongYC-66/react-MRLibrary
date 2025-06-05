@@ -1,10 +1,6 @@
-import { useSearchParams, useLocation, Link } from "react-router-dom"
-// 
-import Image from "react-bootstrap/Image"
-// 
-import data_Eqp from "../../../data/data_Eqp.json"
-import data_GearStats from "../../../data/data_GearStats.json"
-// 
+import data_Eqp from "../data/data_Eqp.json" assert { type: 'json' };
+import data_GearStats from "../data/data_GearStats.json" assert { type: 'json' };
+
 export const generateEquipLibrary = () => {
 
     let equipLib = Object.entries(data_GearStats)
@@ -73,7 +69,7 @@ export const filterEquipList = ({ equipLibrary, searchParams, urlPathname }) => 
         })
 
     // 2. query filter - by weapon category // ONLY FOR WEAPON PAGE
-    filteredEquipList = isWeaponPage
+    filteredEquipList = (isWeaponPage && urlPathname !== '/any')
         ? filterWeaponByCategory({ category, filteredEquipList })
         : filteredEquipList
 
@@ -213,12 +209,16 @@ export const urlPathToCategoryName = {
     "/belt": "Belt",
     "/medal": "Medal",
     "/shoulder": "Shoulder Accessory",
+    "/any": "any",
 }
 
 const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
     // first filter, filter library into Weapon/ Cape/ Top ...etc
 
     const keyword = urlPathToCategoryName[urlPathname].toLowerCase()
+
+    if (keyword === 'any') return equipLibraryArr
+
     return equipLibraryArr
         .filter(([id, { category }]) => {
             // category : ['Equip', 'Armor', 'Hat']
@@ -231,142 +231,7 @@ const filterByCategory = ({ equipLibraryArr, urlPathname, isWeaponPage }) => {
             return isWeaponPage ? categoryDescription.includes('weapon') : categoryDescription === keyword
         })
 }
-// 
 
-export const renderEquipList = (filteredEquipList, type = "use", extraColumns = []) => {
-    const [searchParams] = useSearchParams()
-
-    updateSearchResultCount(filteredEquipList.length)
-
-    const isWeaponPage = useLocation().pathname === "/weapon"
-    const pageNum = Number(Object.fromEntries([...searchParams.entries()]).page) || 1
-    const sliceStartIndex = (pageNum - 1) * 10
-    const sliceEndIndex = sliceStartIndex + 10
-
-    // console.log(filteredEquipList?.length)
-    filteredEquipList = filteredEquipList?.slice(sliceStartIndex, sliceEndIndex)
-    // console.log(filteredEquipList)
-    // [ [EquipId, {name : xxxx , reqInt : xxx}] , [] , [] , ... ]
-
-    // return <tr><td>a</td></tr>
-    return filteredEquipList.map(([EquipId, info]) => {
-        return (
-            <tr key={EquipId}>
-                <td>
-                    <Link to={`/${type}/id=${EquipId}`}>
-                        {renderImageWithItemId(EquipId, info.name)}
-                    </Link>
-                </td>
-                <td>
-                    <Link to={`/${type}/id=${EquipId}`}>
-                        {info.name}
-                    </Link>
-                </td>
-                {isWeaponPage && <td>{info.category[2] || "no info"}</td>}
-
-                <td>{info.reqLevel || "no info"}</td>
-
-                {isWeaponPage && <td>{!info.attackSpeed ? "no info" : `${attkSpeedToText(info.attackSpeed)} (${info.attackSpeed})`}</td>}
-
-                {isWeaponPage && <td>
-                    <p className="p-0 m-0">{info.incPAD && `${rangeCalculator(info.incPAD)} W.att`}</p>
-                    <p className="p-0 m-0">{info.incMAD && `${rangeCalculator(info.incMAD)} Magic`}</p>
-                </td>}
-
-                <td>{info.tuc || "-"}</td>
-
-                {/* render dynamical extra column as per user selected OrderBy */}
-                {extraColumns.map(itemProp =>
-                    <td key={EquipId + itemProp} className="p-0 m-0">{info[itemProp]}</td>
-                )}
-
-            </tr>
-        )
-    })
-}
-
-// 
-export const renderImageWithItemId = (itemId, itemName) => {
-    if (!itemId || !itemName) return
-
-    const handleError = e => {
-        // console.log("trigger handleError")
-        const fileName = `${itemId.padStart(8, 0)}.png`
-        const img = e.target
-        // find suitable image src from:
-        // 1: server file under /images/
-        // 2: maplelegends
-        // 3: maplestory.io exception list
-        // 4: maplestory.io
-
-        if (img.getAttribute("myimgindex") === '0') {
-            // switch to server file under /images/ (option - 1)
-            // console.log("switch to option-1")
-            img.setAttribute("myimgindex", "1")
-            img.src = `\\images\\characters\\${fileName}`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '1') {
-            // switch to maplestory.io source (option - 2)
-            // console.log("switch to option-2")
-            img.setAttribute("myimgindex", "2")
-            img.src = `https://maplelegends.com/static/images/lib/character/${fileName}`
-            // console.log(img.src)
-            return
-        }
-        if (img.getAttribute("myimgindex") === '2') {
-            // switch to maplestory.io exception list (option - 3)
-            // console.log("switch to option-3")
-            img.setAttribute("myimgindex", "3")
-            img.src = itemIdToExceptionUrl({ id: itemId, name: itemName })
-            return
-        }
-        if (img.getAttribute("myimgindex") === '3') {
-            // switch to maplestory.io  (option - 4)
-            // console.log("switch to option-4")
-            img.setAttribute("myimgindex", "4")
-            img.src = `https://maplestory.io/api/SEA/198/item/${itemId}/icon?resize=1.0`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '4') {
-            // switch to maplestory.io source (option - 5 - spare)
-            // console.log("switch to option-5")
-            img.setAttribute("myimgindex", "5")
-            img.src = "/error"
-            return
-        }
-        if (img.getAttribute("myimgindex") === '5') {
-            // return console.log('end')
-            return
-        }
-    }
-
-    const ImageComponent = <Image
-        myimgindex="0"
-        src={`...`} // by default, make it trigger error
-        id={`image-${itemId}`}
-        fluid
-        alt="Image not found"
-        onError={handleError} />
-
-    return ImageComponent
-}
-
-export const itemIdToExceptionUrl = ({ id, name }) => {
-    name = name.toLowerCase()
-    if (["scroll", "10%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040200/icon?resize=1.0`
-    if (["scroll", "30%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040108/icon?resize=1.0`
-    if (["scroll", "60%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2044501/icon?resize=1.0`
-    if (["scroll", "70%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2040814/icon?resize=1.0`
-    if (["scroll", "100%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2041300/icon?resize=1.0`
-    if (["scroll", "clean slate", "1%"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049000/icon?resize=1.0`
-    if (["scroll", "chaos"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/2049100/icon?resize=1.0`
-    if (["nx cash", "1000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680151/icon?resize=1.0`
-    if (["nx cash", "5000"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/5680578/icon?resize=1.0`
-    if (["white scroll fragment"].every(x => name.includes(x))) return `https://maplestory.io/api/SEA/198/item/4001533/icon?resize=1.0`
-    return null
-}
-// 
 export const rangeCalculator = (x, type = "", hardCap = 5) => {
     // data from https://mapleroyals.com/forum/threads/staff-blog-september-2022.209642/
     if (!x) return "no info"
