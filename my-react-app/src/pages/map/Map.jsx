@@ -1,5 +1,5 @@
 import { useSearchParams, Form, redirect, Link } from "react-router-dom"
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
@@ -13,41 +13,16 @@ import {
     updateSearchResultCount,
     convertMapIdToName,
     mapCategory,
-    findMapCategoryByMapId,
+    generateMapLibrary,
 } from "./utility.jsx"
 
-
-import data_Map from "../../../data/data_Map.json"
-import data_MapStats from "../../../data/data_MapStats.json"
-
 export default function Quest() {
+    const [searchParams] = useSearchParams()
     const [mapLibrary, setMapLibrary] = useState({})
 
     useEffect(() => {
-        const allMapData = { ...data_Map }
-
-        const giveDummyName = () => {
-            Object.keys(data_MapStats).forEach(key => {     // give dummy name to unnamed map that existed in map.wz, but not in string.wz
-                if (key in allMapData) return
-                // not in, add dummy data
-                allMapData[key] = {
-                    "mapCategory": "",
-                    "streetName": "",
-                    "mapName": "",
-                }
-            })
-        }
-
-        const giveMyCustomMapCategoryName = () => {
-            for (let mapId in allMapData) {
-                allMapData[mapId].myMapCateogry = findMapCategoryByMapId(mapId)
-            }
-        }
-
-        giveDummyName()
-        giveMyCustomMapCategoryName()
-
-        setMapLibrary(allMapData)
+        const generatedLib = generateMapLibrary()
+        setMapLibrary(generatedLib)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -55,10 +30,8 @@ export default function Quest() {
         e.target.classList.toggle("d-none")
     }
 
-    // const allMapCategory = useMemo(generateAllMapCategory, [])
-
     // console.log(mapLibrary)
-    const filteredMapList = filterMapList(mapLibrary)
+    const filteredMapList = filterMapList({ mapLibrary, searchParams })
 
     return (
         <div className="quest d-flex flex-column">
@@ -175,14 +148,6 @@ const mapCard = (map_id, obj) => {
             </td>
         </tr>)
 
-}
-
-const generateAllMapCategory = () => {
-    let category = new Set()
-    for (let { mapCategory } of Object.values(data_Map)) {
-        category.add(mapCategory)
-    }
-    return ['all', ...category]
 }
 
 export const mapAction = async ({ request }) => {

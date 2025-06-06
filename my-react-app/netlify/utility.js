@@ -22,6 +22,7 @@ import data_NPC from "../data/data_NPC.json" assert { type: 'json' };
 import data_NPCStats from "../data/data_NPCStats.json" assert { type: 'json' };
 // 
 import data_Map from "../data/data_Map.json" assert { type: 'json' };
+import data_MapStats from "../data/data_MapStats.json" assert { type: 'json' };
 import data_MapRange from "../data/data_MapRange.json" assert { type: 'json' };
 // 
 import data_Music from "../data/data_Music.json" assert {type: 'json'}
@@ -397,6 +398,8 @@ const isNotCosmetic = (itemData) => {
 const normalizedID = (type, id) => {
     // console.log({ type, id })
     switch (type) {
+        case 'maps':
+            return String(id).padStart(9, '0')
         case 'characters':
         case 'items':
             return String(id).padStart(8, '0')
@@ -1168,10 +1171,10 @@ export const generateNPCLibrary = () => {
 }
 
 export const organizeNpcLocation = (returnNPC) => {
-    if(!returnNPC.npcLocation) return returnNPC
+    if (!returnNPC.npcLocation) return returnNPC
     returnNPC.npcLocation = returnNPC.npcLocation
         .map(([mapId, mapObj]) => {
-            return { mapId, ...mapObj}
+            return { mapId, ...mapObj }
         })
     return returnNPC
 }
@@ -1285,6 +1288,10 @@ const locationToIdRange = {
     'ossyria': [[200000000, 280090001]],
     'victoria-island': [[100000000, 180000004]],
     'world-tour': [[500000000, 551030200], [701000000, 702100000], [800000000, 809030000]],         // malaysia/singapore/zipangu/ china
+}
+
+export const convertNpcIdToName = (npcId) => {
+    return data_NPC[npcId].name || 'npc name not found'
 }
 
 const BEAUTY_KEYWORDS = new Set([
@@ -1606,6 +1613,88 @@ const WEDDING_KEYWORDS = new Set([
 ]);
 
 //  ------- MAP API -----
+export const generateMapLibrary = () => {
+    const library = { ...data_Map }
+
+    // MAP.WZ has some maps but not given name in STRING.WZ
+    Object.keys(data_MapStats).forEach(key => {     // give dummy name to unnamed map that existed in map.wz, but not in string.wz
+        if (key in library) return
+        library[key] = {
+            "mapCategory": "",
+            "streetName": "",
+            "mapName": "",
+        }
+    })
+
+    // giveMyCustomMapCategoryName
+    for (let mapId in library) {
+        library[mapId].myMapCateogry = findMapCategoryByMapId(mapId)
+    }
+    return library
+}
+
+export const filterMapList = ({ mapLibrary, searchParams }) => {
+
+    let filteredMapLibrary = Object.entries(mapLibrary)
+
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+    // No filter at first loading or if URL don't have query param 
+    if (!Object.keys(filterOption).length) return filteredMapLibrary
+
+    const location = filterOption.location || 'all'
+
+    let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
+    const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
+    const exactSearchTermID = exactSearchTerm ? exactSearchTerm.replace(/^0+/, '') : null
+
+    searchTermArr = searchTermArr.filter(Boolean)  // filter out space
+    // console.log(searchTermArr)
+    // console.log(exactSearchTermID)
+    // console.log(location)
+
+    // console.log(filteredMapLibrary)
+
+    filteredMapLibrary = filteredMapLibrary
+        .filter(([_id, obj]) => {
+            if (!searchTermArr.length) return true
+            const streetName = obj.streetName || ''
+            const mapName = obj.mapName || ''
+
+            if (_id === exactSearchTermID) return true
+
+            return searchTermArr.some(term => streetName.toLowerCase().includes(term))
+                || searchTermArr.some(term => mapName.toLowerCase().includes(term))
+        })
+        // filter by type user selected ['maple', 'victoria-island', 'elin', 'thai', ...]
+        .filter(([_id, { myMapCateogry }]) => {
+            if (location === 'any') return true
+            return myMapCateogry === location
+        })
+        // sort list by  number of search term matches, most matched at first
+        .map(([_id, obj]) => {
+            let matchCount = 0
+            if (obj.streetName) {
+                searchTermArr.forEach(term => matchCount += obj.streetName.toLowerCase().includes(term))
+            }
+            if (obj.mapName) {
+                searchTermArr.forEach(term => matchCount += obj.mapName.toLowerCase().includes(term))
+            }
+            return [_id, obj, matchCount]
+        })
+        .sort((a, b) => {
+            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+            if (a[1]?.streetName?.toLowerCase() === exactSearchTerm) return -1
+            if (b[1]?.streetName?.toLowerCase() === exactSearchTerm) return 1
+
+            if (a[2] != b[2]) return b[2] - a[2]    // matchcount
+
+            return a[0] - b[0]          // last, id
+        })
+        .map(([_id, obj, matchCount]) => [_id, obj])
+
+    return filteredMapLibrary
+}
+
 
 export const findMapCategoryByMapId = (mapId) => {
     mapId = Number(mapId)
@@ -1617,6 +1706,76 @@ export const findMapCategoryByMapId = (mapId) => {
         }
     }
     return "NULL" // not found
+}
+
+export const addHDMapImageURL = (returnMap) => {
+    let id = normalizedID('maps', returnMap.id)
+    returnMap.HDImgURL = `https://maplestory.io/api/GMS/83/map/${id}/render`
+    return returnMap
+}
+
+export const addMapStats = (returnMap) => {
+    let mapId = returnMap.id
+    if (!(mapId in data_MapStats)) return returnMap
+    returnMap = {
+        ...returnMap,
+        ...data_MapStats[mapId],
+    }
+    return returnMap
+}
+
+export const addMapBgmURL = (returnMap) => {
+    let bgm = returnMap.bgm.split('/')[1]
+    returnMap.bgmURL = `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${bgm}.mp3`
+    return returnMap
+}
+
+export const translateNPCId = (returnMap) => {
+    if (!returnMap.npc) return returnMap
+    returnMap.npc = returnMap.npc.map(npcId => {
+        return { id: npcId, name: convertNpcIdToName(npcId) }
+    })
+    return returnMap
+}
+
+export const addMobSpawn = (returnMap) => {
+    // from map.wz
+    let mapId = Number(returnMap.id)
+    if (!(mapId in data_MapMobCount)) return returnMap
+
+    returnMap.mob = data_MapMobCount[mapId]
+    return returnMap
+}
+
+export const addMonsterBookSpawn = (returnMap) => {
+    // check /map/id=280030000, zak mobs
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    let currMapId = Number(returnMap.id)
+    const seenMobId = new Set(Object.keys(returnMap?.mob || {}))
+
+    for (let mobId in data_MobMap) {
+        if (seenMobId.has(mobId)) continue
+        let mapIdList = data_MobMap[mobId].map(Number)
+        if (mapIdList.includes(currMapId)) {
+            // add boss into spawn
+            returnMap.mob = {
+                ...returnMap.mob,
+                [mobId]: 1
+            }
+        }
+    }
+    return returnMap
+}
+
+export const organizeMobSpawn = (returnMap) => {
+    if (!returnMap.mob) return returnMap
+    returnMap.mob = Object.entries(returnMap.mob)
+        .map(([mobId, count]) => {
+            return { mobId, name: convertMobIdToName(mobId), count }
+        })
+    return returnMap
 }
 
 // ---------- MUSIC API ------------
