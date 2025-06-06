@@ -27,6 +27,9 @@ export default function AboutMe() {
                     <li>Kibito</li>
                     <li>Nerd</li>
                     <li>noobgamer97</li>
+                    <li>nomade</li>
+                    <li>Apoc_Ellipsis</li>
+                    <li>LoroPiana</li>
                 </ul>
             </div>
 
