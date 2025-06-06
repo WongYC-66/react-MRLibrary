@@ -41,7 +41,6 @@ export const filterItemList = ({ itemLibrary, searchParams }) => {
 }
 // 
 export const filterUseItemList = ({itemLibrary, searchParams}) => {
-    // const [searchParams] = useSearchParams()
     if (searchParams.size <= 0) return Object.entries(itemLibrary)  // No filter at first loading or if URL don't have query param 
 
     // If URL has query param, filter ...

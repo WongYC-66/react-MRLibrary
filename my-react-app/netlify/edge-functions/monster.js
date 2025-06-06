@@ -12,7 +12,7 @@ import {
 const mobLibrary = generateMobLibrary()
 
 // API-support
-// 1. /api/v1/mosnter?id=1302000
+// 1. /api/v1/monster?id=1302000
 //      - return 1 mob
 // 2. /api/v1/monster?filter=any&category=Amoria&order=level&sort=ascending&search=
 //      - return array of mobs

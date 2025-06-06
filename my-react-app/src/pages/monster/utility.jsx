@@ -1,5 +1,3 @@
-import { useSearchParams } from "react-router-dom"
-// 
 import Image from "react-bootstrap/Image"
 // 
 import data_Eqp from "../../../data/data_Eqp.json"
