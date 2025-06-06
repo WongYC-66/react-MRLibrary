@@ -20,6 +20,8 @@ import data_SkillStats from "../data/data_SkillStats.json" assert { type: 'json'
 //
 import data_Map from "../data/data_Map.json" assert { type: 'json' };
 import data_MapRange from "../data/data_MapRange.json" assert { type: 'json' };
+// 
+import data_Music from "../data/data_Music.json" assert {type: 'json'}
 
 //  ------------- EQUIP API -----------
 export const generateEquipLibrary = () => {
@@ -957,7 +959,7 @@ const filterUseItemList = ({ itemLibrary, searchParams }) => {
 // --------- SKILL API -------------
 
 export const generateSkillLibrary = () => {
-    const library = {...data_Skill}
+    const library = { ...data_Skill }
     return library
 }
 
@@ -1127,13 +1129,15 @@ const skillIdToJobString = (id) => {
 
 export const addSkillStats = (returnSkill) => {
     let skill_id = returnSkill.id
-    if(!(skill_id) in data_SkillStats) return returnSkill
+    if (!(skill_id) in data_SkillStats) return returnSkill
     returnSkill = {
         ...returnSkill,
         ...data_SkillStats[skill_id]
     }
     return returnSkill
 }
+
+
 
 //  ------- MAP API -----
 
@@ -1147,4 +1151,35 @@ export const findMapCategoryByMapId = (mapId) => {
         }
     }
     return "NULL" // not found
+}
+
+// ---------- MUSIC API ------------
+export const generateMusicLibrary = () => {
+    let musicLib = {}
+    for (let name in data_Music) {
+        let trimmednName = name
+            .replaceAll('.mp3', '')
+            .toLowerCase()
+
+        musicLib[trimmednName] = {
+            ...data_Music[name],
+            bgm: name,
+            bgmURL: `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${name}`
+        }
+    }
+    return musicLib
+}
+
+export const filterMusicLibrary = ({ musicLibrary, searchParams }) => {
+
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+
+    const searchTerm = filterOption.search?.toLowerCase() || ''
+
+    let filteredMusicList = Object.entries(musicLibrary)
+
+    filteredMusicList = filteredMusicList
+        .filter(([name], property) => name.includes(searchTerm))
+
+    return filteredMusicList
 }
