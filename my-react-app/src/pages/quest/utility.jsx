@@ -1,5 +1,3 @@
-import { useSearchParams, Link } from "react-router-dom"
-// 
 import Image from "react-bootstrap/Image"
 import { renderImageWithItemIdType } from "../all/utility.jsx"
 // 
@@ -15,9 +13,21 @@ import data_Map from "../../../data/data_Map.json"
 
 import data_Mob from '../../../data/data_Mob.json'
 // 
-export const filterQuestList = (questLibrary) => {
-    const [searchParams] = useSearchParams()
+export const generateQuestLibrary = () => {
+    const lib = { ...data_Quest }
+    // add npc_id + npc_name searchable
+    for (let questId of Object.keys(lib)) {
+        const npc_id = lib[questId].Check && lib[questId].Check['0']
+            ? lib[questId].Check['0'].npc
+            : null
+        const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : null
+        lib[questId].npcId = npc_id
+        lib[questId].npcName = npcName
+    }
+    return lib
+}
 
+export const filterQuestList = ({ questLibrary, searchParams }) => {
     let filteredQuestLibrary = Object.entries(questLibrary)
 
     const filterOption = Object.fromEntries([...searchParams.entries()])

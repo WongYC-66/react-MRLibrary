@@ -25,6 +25,8 @@ import data_Map from "../data/data_Map.json" assert { type: 'json' };
 import data_MapStats from "../data/data_MapStats.json" assert { type: 'json' };
 import data_MapRange from "../data/data_MapRange.json" assert { type: 'json' };
 // 
+import data_Quest from "../data/data_Quest.json" assert { type: 'json' };
+// 
 import data_Music from "../data/data_Music.json" assert {type: 'json'}
 
 //  ------------- EQUIP API -----------
@@ -1776,6 +1778,159 @@ export const organizeMobSpawn = (returnMap) => {
             return { mobId, name: convertMobIdToName(mobId), count }
         })
     return returnMap
+}
+// --------- QUEST API ----------
+export const generateQuestLibrary = () => {
+    const lib = { ...data_Quest }
+    // add npc_id + npc_name searchable
+    for (let questId of Object.keys(lib)) {
+        const npc_id = lib[questId].Check && lib[questId].Check['0']
+            ? lib[questId].Check['0'].npc
+            : null
+        const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : null
+        lib[questId].npcId = npc_id
+        lib[questId].npcName = npcName
+    }
+    return lib
+}
+
+export const filterQuestList = ({ questLibrary, searchParams }) => {
+    let filteredQuestLibrary = Object.entries(questLibrary)
+
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+    // No filter at first loading or if URL don't have query param 
+    if (!Object.keys(filterOption).length) return filteredQuestLibrary
+
+    const location = filterOption.location || 'all'
+    const type = filterOption.type || 'all'
+
+    let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
+    const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
+
+    searchTermArr = searchTermArr.filter(Boolean)  // filter out space
+    // console.log(searchTermArr)
+
+    // console.log(filteredQuestLibrary)
+
+    filteredQuestLibrary = filteredQuestLibrary
+        .filter(([_id, obj]) => {
+            const { QuestInfo } = obj
+            if (!searchTermArr.length) return true
+            if (exactSearchTerm === _id) return true
+            if (!QuestInfo) return false
+            if (!QuestInfo.name) return false
+
+            return searchTermArr.some(term => QuestInfo.name.toLowerCase().includes(term))
+                || searchTermArr.some(term => obj.npcName?.toLowerCase().includes(term))
+                || searchTermArr.some(term => obj.npcId === term)
+        })
+        // filter by type user selected ['victoria-island', 'leafre', 'neo-tokyo', ...]
+        .filter(([_id, { QuestInfo }]) => {
+            if (location === 'all') return true
+            if (!QuestInfo) return false
+            if (!QuestInfo.area) return false
+
+            const locationToAreaCode = {
+                'job': '10',
+                'maple-island': '20',
+                'victoria': '30',
+                'elnath': '33',
+                'ludus': '37',
+                'ellin': '39',
+                'leafre': '41',
+                'neo-tokyo': '43',
+                'mulung': '44',
+                'masteria': '45',
+                'temple': '46',
+                'party': '47',
+                'world': '48',
+                'malaysia': '49',
+                'event': '50',
+                'title': '51',
+                'zakum': '11',
+                'hero': '6',
+            }
+
+            return QuestInfo.area === locationToAreaCode[location]
+        })
+        // sort list by  number of search term matches, most matched at first
+        .map(([_id, obj]) => {
+            let matchCount = 0
+            if (obj.QuestInfo && obj.QuestInfo.name) {
+                searchTermArr.forEach(term => matchCount += obj.QuestInfo.name.toLowerCase().includes(term))
+            }
+            if (obj.npcName) {
+                searchTermArr.forEach(term => matchCount += obj.npcName.toLowerCase().includes(term))
+            }
+            return [_id, obj, matchCount]
+        })
+        .sort((a, b) => {
+            if (!a[1].QuestInfo || !a[1].QuestInfo.name) return 1
+            if (!b[1].QuestInfo || !b[1].QuestInfo.name) return -1
+
+            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+            if (a[1].QuestInfo.name.toLowerCase() === b[1].QuestInfo.name.toLowerCase()) return 0
+            if (a[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].QuestInfo.name.toLowerCase() === exactSearchTerm) return 1
+
+            if (a[2] != b[2]) return b[2] - a[2]
+
+            return a[0] - b[0]
+        })
+        .map(([_id, obj, matchCount]) => [_id, obj])
+
+    return filteredQuestLibrary
+}
+
+const convertAreaCodeToName = (val) => {
+    const map = {
+        6: 'Hero With The Lost Memory',
+        10: 'Job',
+        15: 'Cygnus Knights',
+        11: 'Zakum',
+        20: 'Maple Island',
+        30: 'Victoria Island',
+        33: 'Elnath Mt + Aquaroad',
+        37: 'Ludus Lake',
+        39: 'Ellin Forest',
+        41: 'Leafre',
+        43: 'Neo Tokyo',
+        44: 'Mu Lung + Nihal Desert',
+        45: 'Masteria',
+        46: 'Temple of Time',
+        47: 'Party Quest',
+        48: 'World Tour',
+        49: 'Malaysia',
+        50: 'Event',
+        51: 'Title',
+    }
+    return map[val]
+}
+
+export const addQuestLocation = (returnQuest) => {
+    if (!returnQuest.QuestInfo) return returnQuest
+    if (!returnQuest.QuestInfo.area) return returnQuest
+
+    returnQuest.location = convertAreaCodeToName(returnQuest.QuestInfo.area)
+    return returnQuest
+}
+
+export const sanitizeQuestInfo = (returnQuest) => {
+    // remove too much info, refer to Quest Search Page for clean data
+    let deepClone = JSON.parse(JSON.stringify(returnQuest))
+    delete deepClone.Act
+    delete deepClone.Check
+    delete deepClone.Say
+    if (deepClone.QuestInfo) {
+        let i = 0
+        do {
+            delete deepClone.QuestInfo[i]
+            i++
+        } while (i in deepClone.QuestInfo)
+
+        delete deepClone.QuestInfo.parent
+    }
+    return deepClone
 }
 
 // ---------- MUSIC API ------------
