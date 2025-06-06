@@ -1,20 +1,16 @@
 import {
     generateItemLibrary,
     generateItemDropLibrary,
-    filterEquipList,
-    urlPathToCategoryName,
     addImageURL,
     addItemStats,
     addMobThatDrops,
     addGachaLoc,
     filterByType,
-    translateEquipStats,
     sanitizeItemLibrary,
 } from "../utility.js"
 
 const itemLibrary = generateItemLibrary()
 const itemDropLibrary = generateItemDropLibrary()
-// console.log('run')
 
 // API-support
 // 1. /api/v1/item?id=1302000
@@ -32,7 +28,7 @@ export default async (request, context) => {
             // 1. return single Object if has ID
             const itemId = Number(searchParams.get('id'))
             if (!(itemId in itemLibrary)) {
-                throw new Error('EquipId not Found')
+                throw new Error('ItemId not Found')
             }
 
             let returnItem = itemLibrary[itemId]

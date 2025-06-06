@@ -23,13 +23,12 @@ export default function SkillDetail() {
 
     useEffect(() => {
         let skill_Id = skillId.split("=")[1]
-        let obj = {}
-        obj = {
+        let skillData = {
             ...data_skillStats[skill_Id],
             ...data_skill[skill_Id],
             id: skill_Id,
         }
-        setSkillInfo(obj)
+        setSkillInfo(skillData)
     }, [])
 
     // console.log(skillInfo)

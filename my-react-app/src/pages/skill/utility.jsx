@@ -1,11 +1,24 @@
-import { useSearchParams } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
 // 
+import data_skill from "../../../data/data_Skill.json"
+import data_skillStats from "../../../data/data_SkillStats.json"
 // 
 
-export const filterSkillList = (skillLibrary) => {
-    const [searchParams] = useSearchParams()
+export const generateSkillLibrary = () => {
+    const library = {}
+    Object.entries(data_skill).forEach(([skill_id, objString]) => {
+        if (skill_id in data_skillStats) {
+            library[skill_id] = {
+                ...data_skillStats[skill_id],
+                ...objString
+            }
+        }
+    })
+    return library
+}
+
+export const filterSkillList = ({ skillLibrary, searchParams }) => {
 
     // If URL has query param, filter ...
     const filterOption = Object.fromEntries([...searchParams.entries()])
@@ -24,7 +37,7 @@ export const filterSkillList = (skillLibrary) => {
         // fuzzy seach for any name matched with space separated text, with OR condition
         .filter(([_id, { name }]) => {
             if (!name) return false
-            if(_id === exactSearchTerm) return true
+            if (_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         // filter by job/any/special/magician/pirate/rogue ....
