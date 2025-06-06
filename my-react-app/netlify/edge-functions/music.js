@@ -1,6 +1,7 @@
 import {
     generateMusicLibrary,
     filterMusicLibrary,
+    applyPagination,
 } from "../utility.js"
 
 const musicLibrary = generateMusicLibrary()
@@ -41,6 +42,8 @@ export default async (request, context) => {
             // 2. return Array of Object
             let filteredMusicList = filterMusicLibrary({ musicLibrary, searchParams })
                 .map(([name, property]) => { return { name, ...property } })
+
+            filteredMusicList = applyPagination(filteredMusicList, searchParams, 'music')
 
             return new Response(
                 JSON.stringify(filteredMusicList),

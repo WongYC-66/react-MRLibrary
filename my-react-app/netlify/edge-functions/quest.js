@@ -3,6 +3,7 @@ import {
     addQuestLocation,
     filterQuestList,
     sanitizeQuestInfo,
+    applyPagination,
 } from "../utility.js"
 
 const questLibrary = generateQuestLibrary()
@@ -47,6 +48,8 @@ export default async (request, context) => {
                 .map(([questId, questData]) => { return { id: questId, ...questData } })
                 .map(sanitizeQuestInfo) // save bandwidth!
                 .map(addQuestLocation)
+
+            filteredQuestList = applyPagination(filteredQuestList, searchParams, 'quest')
 
             return new Response(
                 JSON.stringify(filteredQuestList),

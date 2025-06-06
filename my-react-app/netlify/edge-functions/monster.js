@@ -7,6 +7,7 @@ import {
     categorizeItemDrops,
     generateMobInfo,
     organizeSpawnMap,
+    applyPagination,
 } from "../utility.js"
 
 const mobLibrary = generateMobLibrary()
@@ -56,6 +57,8 @@ export default (request, context) => {
             let returnMobList = addImageURL(filteredMobList, 'monsters', context)
                 .map(returnMob => addMapCategory(returnMob, mobLibrary))
                 .map(translateMobStats)
+
+            returnMobList = applyPagination(returnMobList, searchParams, 'monster')
 
             return new Response(
                 JSON.stringify(returnMobList),

@@ -7,6 +7,7 @@ import {
     addMobThatDrops,
     addGachaLoc,
     translateEquipStats,
+    applyPagination,
 } from "../utility.js"
 
 const equipLibrary = generateEquipLibrary()
@@ -66,6 +67,8 @@ export default async (request, context) => {
 
             let returnEquipList = addImageURL(filteredEquipList, 'characters', context)
             returnEquipList = returnEquipList.map(translateEquipStats)
+
+            returnEquipList = applyPagination(returnEquipList, searchParams, 'equip')    
 
             return new Response(
                 JSON.stringify(returnEquipList),

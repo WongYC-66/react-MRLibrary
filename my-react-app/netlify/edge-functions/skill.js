@@ -4,6 +4,7 @@ import {
     addJobCategory,
     addSkillStats,
     filterSkillList,
+    applyPagination,
 } from "../utility.js"
 
 const skillLibrary = generateSkillLibrary()
@@ -51,6 +52,8 @@ export default async (request, context) => {
 
             filteredSkillList = addImageURL(filteredSkillList, 'skills', context)
                 .map(addJobCategory)
+
+            filteredSkillList = applyPagination(filteredSkillList, searchParams, 'skill')
 
             return new Response(
                 JSON.stringify(filteredSkillList),

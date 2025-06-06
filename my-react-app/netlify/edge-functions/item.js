@@ -7,6 +7,7 @@ import {
     addGachaLoc,
     filterByType,
     sanitizeItemLibrary,
+    applyPagination,
 } from "../utility.js"
 
 const itemLibrary = generateItemLibrary()
@@ -53,7 +54,7 @@ export default async (request, context) => {
             // 2. return Array of Object
             const overallCategory = searchParams.get('overallcategory')?.toLowerCase()
 
-            if (!(['use', 'setup', 'etc'].includes(overallCategory))) {
+            if (!(['any', 'use', 'setup', 'etc'].includes(overallCategory))) {
                 throw new Error('overallcategory error')
             }
 
@@ -63,6 +64,8 @@ export default async (request, context) => {
                 .map(([itemId, itemData]) => { return { id: itemId, ...itemData } })
 
             filteredItemList = addImageURL(filteredItemList, 'items', context)
+
+            filteredItemList = applyPagination(filteredItemList, searchParams, 'item') 
 
             return new Response(
                 JSON.stringify(filteredItemList),

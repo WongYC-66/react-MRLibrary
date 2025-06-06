@@ -796,6 +796,8 @@ export const addItemStats = (returnItem) => {
 }
 
 export const sanitizeItemLibrary = (itemLibrary, overallCategory) => {
+    if (overallCategory == 'any') return itemLibrary // not sanitized
+
     const categoryToItemRanges = {
         'use': { min: 2000000, max: 2999999 },
         'setup': { min: 3000000, max: 3999999 },
@@ -814,6 +816,7 @@ export const sanitizeItemLibrary = (itemLibrary, overallCategory) => {
 export const filterByType = ({ itemLibrary, searchParams, overallCategory }) => {
     switch (overallCategory) {
         case 'use':
+        case 'any':
             itemLibrary = preprocessUseLibrary(itemLibrary)
             return filterUseItemList({ itemLibrary, searchParams })
         case 'setup':
@@ -1962,4 +1965,29 @@ export const filterMusicLibrary = ({ musicLibrary, searchParams }) => {
         .filter(([name], property) => name.includes(searchTerm))
 
     return filteredMusicList
+}
+
+// ----------- PAGINATION -------------
+export const applyPagination = (resArr, searchParams, type) => {
+    // BEST BANDWITH SAVING METHOD!
+    const itemPerPage = 50 // max gain = 99% size reduction
+    const NoNeedPaginationType = new Set([
+        'music',     //  28 KB -> 8 KB
+    ])
+    const NeedPaginationType = new Set([
+        'equip',     //    3 MB -> 16 KB
+        'item',      // 1.54 MB -> 11 KB
+        'map',       // 1.52 MB -> 10 KB
+        'monster',   //  456 KB -> 17 KB
+        'npc',       // 1.18 MB -> 32 KB
+        'quest',     //  464 KB ->  7 KB
+        'skill',     //  520 KB -> 49 KB
+    ])
+
+    if (NoNeedPaginationType.has(type)) return resArr    // not paginated
+
+    const pageNum = searchParams.get('page') || 1
+    const startIdx = (pageNum - 1) * itemPerPage
+    const endIdx = startIdx + itemPerPage
+    return resArr.slice(startIdx, endIdx)
 }

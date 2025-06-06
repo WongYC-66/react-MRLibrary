@@ -3,6 +3,7 @@ import {
     filterNPCList,
     addImageURL,
     organizeNpcLocation,
+    applyPagination,
 } from "../utility.js"
 
 const npcLibrary = generateNPCLibrary()
@@ -48,6 +49,8 @@ export default (request, context) => {
 
             filteredNPCList = addImageURL(filteredNPCList, 'npcs', context)
                 .map(organizeNpcLocation)
+            
+            filteredNPCList = applyPagination(filteredNPCList, searchParams, 'npc')
 
             return new Response(
                 JSON.stringify(filteredNPCList),

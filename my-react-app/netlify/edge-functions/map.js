@@ -9,6 +9,7 @@ import {
     addMonsterBookSpawn,
     organizeMobSpawn,
     filterMapList,
+    applyPagination,
 } from "../utility.js"
 
 const mapLibrary = generateMapLibrary()
@@ -60,6 +61,8 @@ export default async (request, context) => {
                 .map(([mapId, mapData]) => { return { id: mapId, ...mapData } })
 
             filteredMapList = addImageURL(filteredMapList, 'maps', context)
+
+            filteredMapList = applyPagination(filteredMapList, searchParams, 'map')
 
             return new Response(
                 JSON.stringify(filteredMapList),
