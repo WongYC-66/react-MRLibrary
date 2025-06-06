@@ -1,6 +1,8 @@
 import data_Eqp from "../data/data_Eqp.json" assert { type: 'json' };
 import data_GearStats from "../data/data_GearStats.json" assert { type: 'json' };
 import data_Consume from "../data/data_Consume.json" assert { type: 'json' };
+import data_ItemStats from "../data/data_ItemStats.json" assert { type: 'json' };
+
 import data_Ins from "../data/data_Ins.json" assert { type: 'json' };
 import data_Etc from "../data/data_Etc.json" assert { type: 'json' };
 // 
@@ -388,6 +390,7 @@ const normalizedID = (type, id) => {
     // console.log({ type, id })
     switch (type) {
         case 'characters':
+        case 'items':
             return String(id).padStart(8, '0')
         case 'monsters':
             return String(id).padStart(7, '0')
@@ -754,6 +757,199 @@ const sortDropsToFourArr = (dropsArr) => {
 
     return { EquipDrops, UseDrops, SetupDrops, EtcDrops }
 }
+
+// --------- ITEM API ------------
+
+export const generateItemLibrary = () => {
+    const itemLibrary = {
+        ...data_Consume,
+        ...data_Ins,
+        ...data_Etc,
+    }
+
+    return itemLibrary
+}
+
+export const addItemStats = (returnItem) => {
+    let itemId = returnItem.id
+    if (!(itemId in data_ItemStats)) return returnItem
+    returnItem = {
+        ...returnItem,
+        ...data_ItemStats[itemId],
+    }
+    return returnItem
+}
+
+export const sanitizeItemLibrary = (itemLibrary, overallCategory) => {
+    const categoryToItemRanges = {
+        'use': { min: 2000000, max: 2999999 },
+        'setup': { min: 3000000, max: 3999999 },
+        'etc': { min: 4000000, max: 4999999 },
+    }
+    const { min, max } = categoryToItemRanges[overallCategory]
+
+    let sanitized = { ...itemLibrary }
+    for (let itemId in sanitized) {       // remove the key of hashtable if not in range
+        if (min <= Number(itemId) && Number(itemId) <= max) continue
+        delete sanitized[itemId]
+    }
+    return sanitized
+}
+
+export const filterByType = ({ itemLibrary, searchParams, overallCategory }) => {
+    switch (overallCategory) {
+        case 'use':
+            itemLibrary = preprocessUseLibrary(itemLibrary)
+            return filterUseItemList({ itemLibrary, searchParams })
+        case 'setup':
+        case 'etc':
+            return filterItemList({ itemLibrary, searchParams })
+    }
+}
+
+const filterItemList = ({ itemLibrary, searchParams }) => {
+    if (searchParams.size) { // If URL has query param, filter ...
+
+        const filterOption = Object.fromEntries([...searchParams.entries()])
+        const searchTermArr = filterOption?.search?.toLowerCase()?.split(' ') || [''] // split 'dark int' to ['dark', 'int']
+        const exactSearchTerm = filterOption?.search?.toLowerCase() || ''
+
+        let filteredItemList = Object.entries(itemLibrary)
+            .filter(([_id, { name }]) => {
+                if (!name) return false
+                if (_id === exactSearchTerm) return true
+                return searchTermArr.some(term => name.toLowerCase().includes(term))
+            })
+
+        // sort list by  number of search term matches, most matched at first
+        filteredItemList = filteredItemList.map(([_id, obj]) => {
+            let matchCount = 0
+            searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+            return [_id, obj, matchCount]
+        })
+
+        filteredItemList.sort((a, b) => {
+            // exact term sort to front, then sort by matchCount DESC, then sort by id ASC
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+
+            return b[1] - a[1]
+        })
+
+        filteredItemList = filteredItemList.map(([_id, obj, matchCount]) => [_id, obj])
+        return filteredItemList
+    }
+    // No filter at first loading or if URL don't have query param 
+    return Object.entries(itemLibrary)
+}
+
+const preprocessUseLibrary = (itemLibrary) => {
+    const processed = { ...itemLibrary }
+    for (let itemId in processed) {
+        processed[itemId] = {
+            ...itemLibrary[itemId],
+            ...data_ItemStats[itemId],
+            id: itemId
+        }
+    }
+    return processed
+}
+
+const filterUseItemList = ({ itemLibrary, searchParams }) => {
+    // const [searchParams] = useSearchParams()
+    if (searchParams.size <= 0) return Object.entries(itemLibrary)  // No filter at first loading or if URL don't have query param 
+
+    // If URL has query param, filter ...
+    const filterOption = Object.fromEntries([...searchParams.entries()])
+    const searchTermArr = filterOption?.search?.toLowerCase()?.split(' ') || ['']  // split 'dark int' to ['dark', 'int']
+    const exactSearchTerm = filterOption?.search?.toLowerCase() || ''
+
+    const filter = filterOption.filter || 'any'
+    const order = filterOption.order || 'id'
+    const sort = filterOption.sort || 'ascending'
+    let filteredUseItemList = Object.entries(itemLibrary)
+
+    // console.log("before filter = ", filteredUseItemList)
+    const potionKeys = ['hp', 'hpR', 'mp', 'mpR', 'eva', 'acc', 'speed', 'jump', 'mad', 'pad', 'mdd', 'pdd', 'poison', 'seal', 'weakness', 'curse']
+
+    filteredUseItemList = filteredUseItemList
+        // fuzzy seach for any name matched with space separated text, with OR condition
+        .filter(([_id, { name }]) => {
+            if (!name) return false
+            if (_id === exactSearchTerm) return true
+            return searchTermArr.some(term => name.toLowerCase().includes(term))
+        })
+        // 
+        .filter(([_, obj]) => {
+            if (filter === "any") return true
+
+            if (filter === "scroll") return obj.hasOwnProperty("success")
+                && !obj.hasOwnProperty("masterLevel")
+
+            if (filter === "potion") return potionKeys.some(k => obj[k] !== undefined)
+                && !obj.hasOwnProperty("monsterBook")
+                && !obj.hasOwnProperty("morph")
+
+            if (filter === "tp") return obj.hasOwnProperty('moveTo')
+            if (filter === "morph") return obj.hasOwnProperty('morph')
+            if (filter === "mastery") return obj.hasOwnProperty('masterLevel')
+            if (filter === "sack") return obj.hasOwnProperty('type')
+            if (filter === "mbook") return obj.hasOwnProperty('monsterBook')
+            if (filter === "other") return !obj.hasOwnProperty("success")   // not scroll
+                && !obj.hasOwnProperty('moveTo')                            // not tp
+                && !obj.hasOwnProperty('morph')                            // not morphing
+                && !obj.hasOwnProperty('type')                            // not sack bag
+                && !obj.hasOwnProperty('masterLevel')                      // not mastery book
+                && potionKeys.every(k => obj[k] == undefined)           // not potion
+        })
+        // reformat data to be [_id, {obj}, matchCount]
+        .map(([_id, obj]) => {
+            // matchCount for fuzzy search
+            let matchCount = 0
+            searchTermArr.forEach(term => matchCount += obj.name.toLowerCase().includes(term))
+
+            return [_id, obj, matchCount]
+        })
+        .sort((a, b) => {
+            // a = [_id, obj, matchCount]
+            // exact term sort to front, then sort by matchCount DESC, then sort by property user select
+            if (a[1].name.toLowerCase() === b[1].name.toLowerCase()) return 0
+            if (a[1].name.toLowerCase() === exactSearchTerm) return -1
+            if (b[1].name.toLowerCase() === exactSearchTerm) return 1
+
+            // 1. sort by fuzzy search matchCount, desc, most-matched come first
+            if (a[2] !== b[2]) return b[2] - a[2]
+
+            // if undefined, sort the undefined to the end
+            if (a[1][order] == undefined && b[1][order] == undefined) return 0
+            if (a[1][order] == undefined) return 1
+            if (b[1][order] == undefined) return -1
+
+            // if same value, sort by mobId then
+            if (a[1][order] === b[1][order]) return a[0] - b[0]
+
+
+            // else, sort ascendingly, for Property of "level/...."
+            return a[1][order] - b[1][order]
+        })
+        // remove the mathCount
+        .map(([_id, obj, matchCount]) => [_id, obj])
+
+    // console.log("after filter = ", filteredMobList)
+    // console.log(`found : ${filteredMobList.length} records`)
+
+    filteredUseItemList = sort === "ascending" ? filteredUseItemList : filteredUseItemList.reverse()
+
+    // split into 2 sections. 1st section has Order_By-property user selected.. 2nd section dont have
+    filteredUseItemList = [
+        ...filteredUseItemList.filter(([_id, obj]) => obj.hasOwnProperty(order)),  // with
+        ...filteredUseItemList.filter(([_id, obj]) => !obj.hasOwnProperty(order))  // without
+    ]
+
+    return filteredUseItemList
+}
+
 
 //  ------- MAP API -----
 
