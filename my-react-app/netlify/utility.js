@@ -524,7 +524,7 @@ const addMapCategoryToMob = (mobLibrary) => {
 
     const addMapTagToMob = (mobId, mapId) => {
         if (!mobLibrary[mobId].mapCategory) mobLibrary[mobId].mapCategory = new Set()
-        mobLibrary[mobId].mapCategory.add(mapIdToCategory[mapId])
+        mobLibrary[mobId].mapCategory.add(mapIdToCategory[mapId].toLowerCase())
     }
 
     // data from inside data_MapMobCount (map.wz)
@@ -587,14 +587,14 @@ const getSpawnMap = (targetMobId) => {
     return spawnMaps
 }
 
-export const filterMobList = ({mobLibrary, searchParams}) => {
+export const filterMobList = ({ mobLibrary, searchParams }) => {
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
     const searchTerm = filterOption.search?.toLowerCase() || ''
     const exactSearchTerm = filterOption.search?.toLowerCase() || ''
 
     const filter = filterOption.filter || 'any'
-    const mapCategory = filterOption.category || 'any'
+    const mapCategory = filterOption?.category?.toLowerCase() || 'any'
     const order = filterOption.order || 'id'
     const sort = filterOption.sort || 'ascending'
 
