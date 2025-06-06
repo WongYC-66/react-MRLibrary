@@ -54,7 +54,7 @@ export default async (request, context) => {
 
         } else {
             // 2. return Array of Object
-            const overallCategory = searchParams.get('overallcategory')
+            const overallCategory = searchParams.get('overallcategory')?.toLowerCase() || 'any'
 
             const urlPathname = "/" + overallCategory
 

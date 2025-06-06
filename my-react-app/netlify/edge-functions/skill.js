@@ -23,7 +23,7 @@ export default async (request, context) => {
 
         if (searchParams.has('id')) {
             // 1. return single Object if has ID
-            const skillId = Number(searchParams.get('id'))
+            const skillId = searchParams.get('id')
             if (!(skillId in skillLibrary)) {
                 throw new Error('SkillId not Found')
             }

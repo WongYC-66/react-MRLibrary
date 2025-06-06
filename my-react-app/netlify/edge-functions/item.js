@@ -52,7 +52,7 @@ export default async (request, context) => {
 
         } else {
             // 2. return Array of Object
-            const overallCategory = searchParams.get('overallcategory')?.toLowerCase()
+            const overallCategory = searchParams.get('overallcategory')?.toLowerCase() || 'any'
 
             if (!(['any', 'use', 'setup', 'etc'].includes(overallCategory))) {
                 throw new Error('overallcategory error')
