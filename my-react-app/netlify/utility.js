@@ -1987,7 +1987,8 @@ export const applyPagination = (resArr, searchParams, type) => {
 
     if (NoNeedPaginationType.has(type)) return resArr    // not paginated
 
-    const pageNum = Number(searchParams.get('page') || 1)
+    let pageNum = Number(searchParams.get('page') || 1)
+    if(pageNum <= 0) pageNum = 1
     const startIdx = (pageNum - 1) * itemsPerPage
     const endIdx = startIdx + itemsPerPage
 

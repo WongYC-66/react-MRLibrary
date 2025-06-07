@@ -1,8 +1,8 @@
 # API v1 Documentation
 
 ### Equip
-- [`GET /api/v1/equip?id=1302000`](https://test-royals-library.netlify.app/api/v1/equip?id=1302000)   : Get 1 equip detailed info
-- [`GET /api/v1/equip`](https://test-royals-library.netlify.app/api/v1/equip)               : Get paginated Equips
+- [`GET /api/v1/equip?id=1302000`](http://localhost:8888/api/v1/equip?id=1302000)   : Get 1 equip detailed info
+- [`GET /api/v1/equip`](http://localhost:8888/api/v1/equip)               : Get paginated Equips
     <details>
         <summary> optional params </summary>
 
@@ -21,8 +21,8 @@
     </details>
 
 ### Item
-- [`GET /api/v1/item?id=2000000`](https://test-royals-library.netlify.app/api/v1/item?id=2000000)     : Get 1 item detailed info
-- [`GET /api/v1/item`](https://test-royals-library.netlify.app/api/v1/item/)               : Get paginated Items
+- [`GET /api/v1/item?id=2000000`](http://localhost:8888/api/v1/item?id=2000000)     : Get 1 item detailed info
+- [`GET /api/v1/item`](http://localhost:8888/api/v1/item/)               : Get paginated Items
     <details>
         <summary> optional params </summary>
 
@@ -39,8 +39,8 @@
     </details>
 
 ### Map
-- [`GET /api/v1/map?id=104040000`](https://test-royals-library.netlify.app/api/v1/map?id=104040000)    : Get 1 map detailed info
-- [`GET /api/v1/map`](https://test-royals-library.netlify.app/api/v1/map)                  : Get paginated Items
+- [`GET /api/v1/map?id=104040000`](http://localhost:8888/api/v1/map?id=104040000)    : Get 1 map detailed info
+- [`GET /api/v1/map`](http://localhost:8888/api/v1/map)                  : Get paginated Items
     <details>
         <summary> optional params </summary>
 
@@ -52,8 +52,8 @@
     </details>
 
 ### Monster
-- [`GET /api/v1/monster?id=100100`](https://test-royals-library.netlify.app/api/v1/monster?id=100100)    : Get 1 monster detailed info
-- [`GET /api/v1/monster`](https://test-royals-library.netlify.app/api/v1/monster)             : Get paginated Items
+- [`GET /api/v1/monster?id=100100`](http://localhost:8888/api/v1/monster?id=100100)    : Get 1 monster detailed info
+- [`GET /api/v1/monster`](http://localhost:8888/api/v1/monster)             : Get paginated Items
     <details>
         <summary> optional params </summary>
 
@@ -68,8 +68,8 @@
     </details>
 
 ### Music
-- [`GET /api/v1/music?name=amoria`](https://test-royals-library.netlify.app/api/v1/music?name=amoria)    : Get 1 music detailed info
-- [`GET /api/v1/music`](https://test-royals-library.netlify.app/api/v1/music)                : Get paginated Musics
+- [`GET /api/v1/music?name=amoria`](http://localhost:8888/api/v1/music?name=amoria)    : Get 1 music detailed info
+- [`GET /api/v1/music`](http://localhost:8888/api/v1/music)                : Get paginated Musics
     <details>
         <summary> optional params </summary>
 
@@ -80,8 +80,8 @@
     </details>
 
 ### Npc
-- [`GET /api/v1/npc?id=2002`](https://test-royals-library.netlify.app/api/v1/npc?id=2002)          : Get 1 npc info
-- [`GET /api/v1/npc`](https://test-royals-library.netlify.app/api/v1/npc)                  : Get paginated NPCs
+- [`GET /api/v1/npc?id=2002`](http://localhost:8888/api/v1/npc?id=2002)          : Get 1 npc info
+- [`GET /api/v1/npc`](http://localhost:8888/api/v1/npc)                  : Get paginated NPCs
     <details>
         <summary> optional params </summary>
 
@@ -94,8 +94,8 @@
     </details>
 
 ### Quest
-- [`GET /api/v1/quest?id=2017`](https://test-royals-library.netlify.app/api/v1/quest?id=2017)        : Get 1 quest info
-- [`GET /api/v1/quest`](https://test-royals-library.netlify.app/api/v1/quest)                : Get paginated Quests
+- [`GET /api/v1/quest?id=2017`](http://localhost:8888/api/v1/quest?id=2017)        : Get 1 quest info
+- [`GET /api/v1/quest`](http://localhost:8888/api/v1/quest)                : Get paginated Quests
     <details>
         <summary> optional params </summary>
 
@@ -107,8 +107,8 @@
     </details>
 
 ### Skill
-- [`GET /api/v1/skill?id=1001004`](https://test-royals-library.netlify.app/api/v1/skill?id=1001004)     : Get 1 skill info
-- [`GET /api/v1/skill`](https://test-royals-library.netlify.app/api/v1/skill)                : Get paginated Skills
+- [`GET /api/v1/skill?id=1001004`](http://localhost:8888/api/v1/skill?id=1001004)     : Get 1 skill info
+- [`GET /api/v1/skill`](http://localhost:8888/api/v1/skill)                : Get paginated Skills
     <details>
         <summary> optional params </summary>
 
