@@ -9,8 +9,10 @@
         - e.g. `GET /api/v1/equip?page=1&overallcategory=weapon&job=0&category=dagger&order=reqLevel&sort=ascending&cosmetic=null&search=maple`
 
         - overallcategory = ['any', 'weapon', 'hat', 'top', 'bottom', 'overall', 'shoes', 'gloves', 'cape', 'shield', 'faceacc', 'eyeacc', 'earring', 'ring', 'pendant', 'belt', 'medal']
-        - category = ['any', 'OHSword', 'OHAxe', 'OHMace', 'dagger', 'wand', 'staff', 'THSword', 'THAxe', 'THMace', 'spear', 'polearm', 'bow', 'crossbow', 'claw', 'knuckle', 'gun', 'cash'] // for weapon-only
-        - job = ['0', '1', '2', '4', '8', '16', '-1'] // ['any', 'warrior', 'magician', 'archer', 'thief', 'pirate', 'beginner']
+        - category = ['any', 'OHSword', 'OHAxe', 'OHMace', 'dagger', 'wand', 'staff', 'THSword', 'THAxe', 'THMace', 'spear', 'polearm', 'bow', 'crossbow', 'claw', 'knuckle', 'gun', 'cash']   
+            **Note**: Only applies to weapons
+        - job = ['0', '1', '2', '4', '8', '16', '-1'] 
+            **Note**: ['any', 'warrior', 'magician', 'archer', 'thief', 'pirate', 'beginner']
         - order = ['id', 'reqLevel', 'incPAD', 'incMAD', 'attackSpeed', 'incSTR', 'incDEX', 'incINT', 'incLUK', 'incACC', 'incEVA', 'tuc', 'incSpeed', 'incJump', 'incMHP', 'incMMP', 'incPDD', 'incMDD']
         - sort = ['ascending', 'descending']
         - cosmetic = ['on', 'null']
@@ -26,8 +28,10 @@
         - e.g. `GET /api/v1/item?page=1&overallcategory=use&filter=potion&order=id&sort=ascending&search=blue`
 
         - overallcategory = ['any', 'use', 'setup', 'etc']
-        - filter = ['any', 'scroll', 'potion', 'tp', 'morph', 'mastery', 'sack', 'mbook', 'other'] // for USE-only
-        - order = ['id', 'hp', 'hpR', 'mp', 'mpR', 'pad','mad', 'acc', 'incPAD', 'incMAD', 'incACC', 'incMHP', 'incSTR', 'incDEX', 'incINT', 'incLUK', 'incSpeed', 'incJump'] // for USE-only
+        - filter = ['any', 'scroll', 'potion', 'tp', 'morph', 'mastery', 'sack', 'mbook', 'other'] 
+            **Note**: for USE-only
+        - order = ['id', 'hp', 'hpR', 'mp', 'mpR', 'pad','mad', 'acc', 'incPAD', 'incMAD', 'incACC', 'incMHP', 'incSTR', 'incDEX', 'incINT', 'incLUK', 'incSpeed', 'incJump'] 
+            **Note**: for USE-only
         - sort = ['ascending', 'descending']
         - search = any string
     </details>
