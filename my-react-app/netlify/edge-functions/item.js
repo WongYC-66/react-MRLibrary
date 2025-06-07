@@ -14,9 +14,9 @@ const itemLibrary = generateItemLibrary()
 const itemDropLibrary = generateItemDropLibrary()
 
 // API-support
-// 1. /api/v1/item?id=1302000
+// 1. /api/v1/item?id=2000000
 //      - return 1 item
-// 2. /api/v1/item?overallcategory=use&filter=potion&order=id&sort=ascending&search=
+// 2. /api/v1/item?page=1&overallcategory=use&filter=potion&order=id&sort=ascending&search=blue
 //      - return array of items
 
 

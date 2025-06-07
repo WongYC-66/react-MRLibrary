@@ -17,7 +17,7 @@ const itemDropLibrary = generateItemDropLibrary()
 // API-support
 // 1. /api/v1/equip?id=1302000
 //      - return 1 item
-// 2. /api/v1/equip?overallcategory=weapon&job=0&category=dagger&order=reqLevel&sort=ascending&cosmetic=null&search=maple
+// 2. /api/v1/equip?page=1&overallcategory=weapon&job=0&category=dagger&order=reqLevel&sort=ascending&cosmetic=null&search=maple
 //      - return array of items
 
 

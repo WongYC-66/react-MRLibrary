@@ -10,7 +10,7 @@ const musicLibrary = generateMusicLibrary()
 // API-support
 // 1. /api/v1/music?name=amoria
 //      - return 1 item
-// 2. /api/v1/music?search=amoria
+// 2. /api/v1/music?page=1&search=amoria
 //      - return array of items
 
 

@@ -17,7 +17,7 @@ const mapLibrary = generateMapLibrary()
 // API-support
 // 1. /api/v1/map?id=104040000
 //      - return 1 item
-// 2. /api/v1/map?location=VictoriaIsland&search=hunting
+// 2. /api/v1/map?page=1&location=VictoriaIsland&search=hunting
 //      - return array of items
 
 

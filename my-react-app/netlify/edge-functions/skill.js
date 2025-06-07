@@ -10,9 +10,9 @@ import {
 const skillLibrary = generateSkillLibrary()
 
 // API-support
-// 1. /api/v1/item?id=1302000
+// 1. /api/v1/item?id=1001004
 //      - return 1 item
-// 2. /api/v1/skill?filter=mm&order=id&sort=ascending&search=
+// 2. /api/v1/skill?page=1&filter=mm&order=id&sort=ascending&search=crossbow
 //      - return array of items
 
 

@@ -13,10 +13,10 @@ import {
 const mobLibrary = generateMobLibrary()
 
 // API-support
-// 1. /api/v1/monster?id=1302000
-//      - return 1 mob
-// 2. /api/v1/monster?filter=any&category=Amoria&order=level&sort=ascending&search=
-//      - return array of mobs
+// 1. /api/v1/monster?id=100100
+//      - return 1 item
+// 2. /api/v1/monster?page=1&filter=any&category=victoriaisland&order=level&sort=ascending&search=mushroom
+//      - return array of items
 
 export default (request, context) => {
     console.log(context.url.href)

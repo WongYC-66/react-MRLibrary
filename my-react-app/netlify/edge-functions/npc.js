@@ -9,10 +9,10 @@ import {
 const npcLibrary = generateNPCLibrary()
 
 // API-support
-// 1. /api/v1/npc?id=1302000
-//      - return 1 mob
-// 2. /api/v1/npc?location=amoria&type=beauty&search=
-//      - return array of mobs
+// 1. /api/v1/npc?id=2002
+//      - return 1 item
+// 2. /api/v1/npc?page=1&location=victoria-island&type=all&search=instructor
+//      - return array of items
 
 export default (request, context) => {
     console.log(context.url.href)

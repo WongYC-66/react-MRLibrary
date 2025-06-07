@@ -11,7 +11,7 @@ const questLibrary = generateQuestLibrary()
 // API-support
 // 1. /api/v1/quest?id=2017
 //      - return 1 item
-// 2. /api/v1/quest?location=victoria&type=all&search=arwen
+// 2. /api/v1/quest?page=1&location=victoria&type=all&search=arwen
 //      - return array of items
 
 
