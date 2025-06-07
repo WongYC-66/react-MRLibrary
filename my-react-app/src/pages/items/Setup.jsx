@@ -1,4 +1,4 @@
-import { Form, redirect } from "react-router-dom"
+import { Form, redirect, useSearchParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
 import FormBS from "react-bootstrap/Form"
@@ -11,13 +11,15 @@ import { filterItemList, renderItemList } from "./utility.jsx"
 import data_Ins from "../../../data/data_Ins.json"
 
 export default function Setup() {
+    const [searchParams] = useSearchParams()
+
     const [itemLibrary, setItemLibrary] = useState({})
 
     useEffect(() => {
         setItemLibrary(data_Ins)
     }, [])
 
-    const filteredItem = filterItemList(itemLibrary)
+    const filteredItem = filterItemList({ itemLibrary, searchParams })
 
     return (
         <div className="use d-flex flex-column">

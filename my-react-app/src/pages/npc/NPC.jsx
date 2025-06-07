@@ -1,42 +1,23 @@
 import { useSearchParams, Form, redirect, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { decode } from 'html-entities'
 // 
 import FormBS from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterNPCList, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
+import { filterNPCList, generateNPCLibrary, renderImageWithNPCId, updateSearchResultCount } from "./utility.jsx"
 import { convertMapIdToUrl, convertMapIdToName } from "../map/utility.jsx"
-
-import data_NPC from "../../../data/data_NPC.json"
-import data_NPCStats from "../../../data/data_NPCStats.json"
-import data_Map from "../../../data/data_Map.json"
-import data_MapUrl from "../../../data/data_MapUrl.json"
+// 
 
 export default function NPC() {
+    const [searchParams] = useSearchParams()
+
     const [npcLibrary, setNPCLibrary] = useState({})
 
     useEffect(() => {
-        const combined = { ...data_NPC }
-        Object.entries(data_NPCStats).forEach(([id, obj]) => {
-            if (!(id in combined)) return        // if id not found, skip
-            Object.keys(obj).forEach(k => combined[id][k] = obj[k])
-        })
-
-        // map location_id to mapObj
-        Object.entries(combined).forEach(([id, obj]) => {
-            if (!obj.location) return
-            const mapArr = []
-            Object.values(obj.location).forEach(mapId => {
-                mapArr.push([mapId, data_Map[mapId]])
-            })
-            delete obj.location
-            return obj.npcLocation = mapArr
-        })
-
-        setNPCLibrary(combined)
+        const generatedLib = generateNPCLibrary()
+        setNPCLibrary(generatedLib)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -45,7 +26,7 @@ export default function NPC() {
     }
 
     // console.log(npcLibrary)
-    const filteredNPCList = filterNPCList(npcLibrary)
+    const filteredNPCList = filterNPCList({ npcLibrary, searchParams })
 
     return (
         <div className="npc d-flex flex-column">
@@ -162,12 +143,12 @@ const renderNPCList = (filteredNPCList) => {
     // console.log(filteredNPCList)
 
     return filteredNPCList.map(([npc_id, obj]) =>
-        <tr key={npc_id + obj.name}>
+        <tr key={npc_id + "-" + obj.name}>
             <td>{renderImageWithNPCId(npc_id)}</td>
             <td>{obj.name}</td>
             <td>{obj.func ? obj.func : ''}</td>
             <td>{obj.npcLocation && obj.npcLocation.length && obj.npcLocation.map(([mapId]) =>
-                <Link to={convertMapIdToUrl(mapId)} key={npc_id + mapId} className="d-block">
+                <Link to={convertMapIdToUrl(mapId)} key={npc_id + "-" + mapId} className="d-block">
                     {convertMapIdToName(mapId)}
                 </Link>
             )}</td>

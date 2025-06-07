@@ -1,10 +1,38 @@
-import { useSearchParams, Link } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
-import data_NPC from "../../../data/data_NPC.json"
 // 
-export const filterNPCList = (npcLibrary) => {
-    const [searchParams] = useSearchParams()
+import data_NPC from "../../../data/data_NPC.json"
+import data_NPCStats from "../../../data/data_NPCStats.json"
+import data_Map from "../../../data/data_Map.json"
+// 
+
+export const generateNPCLibrary = () => {
+    const library = { ...data_NPC }
+
+    // combined data_NPC & data_NPCStats, if npcId same
+    for (let npcId in data_NPCStats) {
+        if (!(npcId in library)) continue
+        library[npcId] = {
+            ...library[npcId],
+            ...data_NPCStats[npcId]
+        }
+    }
+
+    // map location_id to mapObj
+    for (let npcId in library) {
+        if (!library[npcId].location) continue
+        let locationArr = Object.values(library[npcId].location)
+
+        locationArr = [...new Set(locationArr)] // clean duplicate npcLocation
+
+        library[npcId].npcLocation = locationArr.map(mapId => [mapId, data_Map[mapId]])
+        delete library[npcId].location
+    }
+
+    return library
+}
+
+export const filterNPCList = ({ npcLibrary, searchParams }) => {
 
     let filteredNPCLibrary = Object.entries(npcLibrary)
 

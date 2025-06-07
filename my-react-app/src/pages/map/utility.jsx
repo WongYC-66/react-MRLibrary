@@ -1,13 +1,34 @@
-import { useSearchParams } from "react-router-dom"
 import { decode } from 'html-entities'
 // 
 import Image from "react-bootstrap/Image"
 // 
 import data_Map from "../../../data/data_Map.json"
 import data_MapRange from "../../../data/data_MapRange.json"
+import data_MapStats from "../../../data/data_MapStats.json"
+import data_MobMap from "../../../data/data_Mob_MapOnly.json"
 // 
-export const filterMapList = (mapLibrary) => {
-    const [searchParams] = useSearchParams()
+export const generateMapLibrary = () => {
+    const library = { ...data_Map }
+
+    // MAP.WZ has some maps but not given name in STRING.WZ
+    Object.keys(data_MapStats).forEach(key => {     // give dummy name to unnamed map that existed in map.wz, but not in string.wz
+        if (key in library) return
+        library[key] = {
+            "mapCategory": "",
+            "streetName": "",
+            "mapName": "",
+        }
+    })
+
+    // giveMyCustomMapCategoryName
+    for (let mapId in library) {
+        library[mapId].myMapCateogry = findMapCategoryByMapId(mapId)
+    }
+    return library
+}
+
+
+export const filterMapList = ({ mapLibrary, searchParams }) => {
 
     let filteredMapLibrary = Object.entries(mapLibrary)
 
@@ -15,7 +36,7 @@ export const filterMapList = (mapLibrary) => {
     // No filter at first loading or if URL don't have query param 
     if (!Object.keys(filterOption).length) return filteredMapLibrary
 
-    const location = filterOption.location || 'all'
+    const location = filterOption.location || 'any'
 
     let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
     const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
@@ -251,14 +272,37 @@ export const mapCategory = [
 
 export const findMapCategoryByMapId = (mapId) => {
     mapId = Number(mapId)
-    for(let {region, minMapId, maxMapId} of data_MapRange){
+    for (let { region, minMapId, maxMapId } of data_MapRange) {
         minMapId = Number(minMapId)
         maxMapId = Number(maxMapId)
-        if(minMapId <= mapId && mapId <= maxMapId){
+        if (minMapId <= mapId && mapId <= maxMapId) {
             return region
         }
     }
     return "NULL" // not found
+}
+
+export const addMonsterBookSpawn = (mapInfo) => {
+    // check /map/id=280030000, zak mobs
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    let currMapId = Number(mapInfo.mapId)
+    const seenMobId = new Set(Object.keys(mapInfo?.mob || {}))
+
+    for (let mobId in data_MobMap) {
+        if (seenMobId.has(mobId)) continue
+        let mapIdList = data_MobMap[mobId].map(Number)
+        if (mapIdList.includes(currMapId)) {
+            // add boss into spawn
+            mapInfo.mob = {
+                ...mapInfo.mob,
+                [mobId]: 1
+            }
+        }
+    }
+    // console.log(mapInfo)
+    return mapInfo
 }
 
 // 

@@ -6,26 +6,16 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterQuestList, renderImageWithNPCId, updateSearchResultCount, convertAreaCodeToName, generateNPCLink } from "./utility.jsx"
-
-import data_Quest from "../../../data/data_Quest.json"
-import data_NPC from "../../../data/data_NPC.json"
+import { filterQuestList, renderImageWithNPCId, updateSearchResultCount, convertAreaCodeToName, generateNPCLink, generateQuestLibrary } from "./utility.jsx"
 
 export default function Quest() {
+    const [searchParams] = useSearchParams()
+
     const [questLibrary, setQuestLibrary] = useState({})
 
     useEffect(() => {
-        const combined = { ...data_Quest }
-        // add npc_id + npc_name searchable
-        for (let questId of Object.keys(combined)) {
-            const npc_id = combined[questId].Check && combined[questId].Check['0']
-                ? combined[questId].Check['0'].npc
-                : null
-            const npcName = data_NPC[npc_id] ? data_NPC[npc_id].name : null
-            combined[questId].npcId = npc_id
-            combined[questId].npcName = npcName
-        }
-        setQuestLibrary(combined)
+        const generatedLib = generateQuestLibrary()
+        setQuestLibrary(generatedLib)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -34,7 +24,7 @@ export default function Quest() {
     }
 
     // console.log(questLibrary)
-    const filteredQuestList = filterQuestList(questLibrary)
+    const filteredQuestList = filterQuestList({questLibrary, searchParams})
 
     return (
         <div className="quest d-flex flex-column">

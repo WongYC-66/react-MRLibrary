@@ -1,9 +1,8 @@
-import { useSearchParams, Link } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
 // 
-export const filterItemList = (itemLibrary) => {
-    const [searchParams] = useSearchParams()
+export const filterItemList = ({ itemLibrary, searchParams }) => {
     if (searchParams.size) { // If URL has query param, filter ...
 
         const filterOption = Object.fromEntries([...searchParams.entries()])
@@ -14,7 +13,7 @@ export const filterItemList = (itemLibrary) => {
         let filteredItemList = Object.entries(itemLibrary)
             .filter(([_id, { name }]) => {
                 if (!name) return false
-                if(_id === exactSearchTerm) return true
+                if (_id === exactSearchTerm) return true
                 return searchTermArr.some(term => name.toLowerCase().includes(term))
             })
 
@@ -41,8 +40,7 @@ export const filterItemList = (itemLibrary) => {
     return Object.entries(itemLibrary)
 }
 // 
-export const filterUseItemList = (itemLibrary) => {
-    const [searchParams] = useSearchParams()
+export const filterUseItemList = ({itemLibrary, searchParams}) => {
     if (searchParams.size <= 0) return Object.entries(itemLibrary)  // No filter at first loading or if URL don't have query param 
 
     // If URL has query param, filter ...
@@ -62,7 +60,7 @@ export const filterUseItemList = (itemLibrary) => {
         // fuzzy seach for any name matched with space separated text, with OR condition
         .filter(([_id, { name }]) => {
             if (!name) return false
-            if(_id === exactSearchTerm) return true
+            if (_id === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         // 
@@ -275,7 +273,7 @@ export const filterGachaList = (itemLibrary) => {
     let filteredItemList = itemLibrary
         .filter(({ name, itemId }) => {
             if (!name) return false
-            if(itemId === exactSearchTerm) return true
+            if (itemId === exactSearchTerm) return true
             return searchTermArr.some(term => name.toLowerCase().includes(term))
         })
         .filter(obj => {

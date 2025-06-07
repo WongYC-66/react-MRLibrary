@@ -6,24 +6,15 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterSkillList, renderImageWithSkillId, updateSearchResultCount, skillIdToJobString } from "./utility.jsx"
-
-import data_skill from "../../../data/data_Skill.json"
-import data_skillStats from "../../../data/data_SkillStats.json"
+import { generateSkillLibrary, filterSkillList, renderImageWithSkillId, updateSearchResultCount, skillIdToJobString } from "./utility.jsx"
 
 export default function ElementalTable() {
+    const [searchParams] = useSearchParams()
     const [skillLibrary, setSkillLibrary] = useState({})
 
     useEffect(() => {
-        Object.entries(data_skill).forEach(([skill_id, objString]) => {
-            if (data_skillStats.hasOwnProperty(skill_id)) {
-                data_skillStats[skill_id] = {
-                    ...data_skillStats[skill_id],
-                    ...objString
-                }
-            }
-        })
-        setSkillLibrary(data_skillStats)
+        const generatedLibrary = generateSkillLibrary()
+        setSkillLibrary(generatedLibrary)
     }, [])
 
     const handleAdvancedSearchClick = (e) => {
@@ -31,7 +22,7 @@ export default function ElementalTable() {
         e.target.classList.toggle("d-none")
     }
 
-    const filteredSkillList = filterSkillList(skillLibrary)
+    const filteredSkillList = filterSkillList({skillLibrary, searchParams})
 
     return (
         <div className="monster d-flex flex-column">

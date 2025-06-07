@@ -7,18 +7,18 @@ import Table from "react-bootstrap/Table"
 
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterEquipList, renderEquipList, equipIdToCategory, isNotRedundantProp } from "./utility.jsx"
-import data_Eqp from "../../../data/data_Eqp.json"
-import data_GearStats from "../../../data/data_GearStats.json"
+import { generateEquipLibrary, filterEquipList, renderEquipList, isNotRedundantProp } from "./utility.jsx"
 
 export default function Equips() {
+
+    const [searchParams] = useSearchParams()
+    const urlPathname = useLocation().pathname
+
     const [equipLibrary, setEquipLibrary] = useState({})
 
-    const urlPathname = useLocation().pathname
     const isWeaponPage = urlPathname === "/weapon"
 
     // dynamically add 1 column based on user "order by" selection
-    const [searchParams, _] = useSearchParams();
     const extraColumns = searchParams.get('order')
         ? [searchParams.get('order')].filter(itemProp => isNotRedundantProp(itemProp, isWeaponPage))
         : []
@@ -26,21 +26,7 @@ export default function Equips() {
     // console.log(equipLibrary)
 
     useEffect(() => {
-        Object.entries(data_Eqp).forEach(([eqpId, eqpName]) => {
-            if (data_GearStats.hasOwnProperty(eqpId)) {
-                data_GearStats[eqpId] = {
-                    ...data_GearStats[eqpId],
-                    name: eqpName,
-                    category: equipIdToCategory(eqpId)
-                }
-            }
-        })
-        let filtered_data_GearStats = Object.fromEntries(
-            Object.entries(data_GearStats)
-                .filter(([_id, { name }]) => name) // filtered out those without name
-            // .filter(([_id, { category }]) => !category.includes('undefined')) // filtered out those without category/subcategory
-        )
-
+        const filtered_data_GearStats = generateEquipLibrary()
         setEquipLibrary(filtered_data_GearStats)
     }, [])
 
@@ -57,7 +43,7 @@ export default function Equips() {
         e.target.classList.toggle("d-none")
     }
 
-    const filteredEquipList = filterEquipList(equipLibrary)
+    const filteredEquipList = filterEquipList({ equipLibrary, searchParams, urlPathname })
 
     return (
         <div className="use d-flex flex-column">

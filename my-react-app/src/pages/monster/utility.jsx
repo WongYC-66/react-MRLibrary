@@ -1,5 +1,3 @@
-import { useSearchParams } from "react-router-dom"
-// 
 import Image from "react-bootstrap/Image"
 // 
 import data_Eqp from "../../../data/data_Eqp.json"
@@ -7,12 +5,104 @@ import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
 import data_fixMobImg from "./data_fixMobImg.json"
+// 
+import data_Mob from "../../../data/data_Mob.json"
+import data_MB from "../../../data/data_MB.json"
+import data_MobStats from "../../../data/data_MobStats.json"
+import data_MapMobCount from "../../../data/data_MapMobCount.json"
+import data_MobMap from "../../../data/data_Mob_MapOnly.json"
+// 
+import data_Map from "../../../data/data_Map.json"
+// 
+import { findMapCategoryByMapId } from "../map/utility.jsx"
 
 // 
 const data_MobIdImg = Object.fromEntries(data_fixMobImg.map(x => [Object.keys(x), Object.values(x)]))
 
-export const filterMobList = (mobLibrary) => {
-    const [searchParams] = useSearchParams()
+export const generateMobLibrary = () => {
+    const mobLibrary = {}
+
+    Object.entries(data_Mob).forEach(([mobId, mobName]) => {
+        if (mobId in data_MobStats) {
+            mobLibrary[mobId] = { ...data_MobStats[mobId], name: mobName }
+        }
+    })
+    addMapCategoryToMob(mobLibrary)
+    return mobLibrary
+}
+
+export const generateMobInfo = (mobId) => {
+    return {
+        ...data_MobStats[mobId],
+        id: mobId,
+        name: data_Mob[mobId],
+        drops: data_MB[mobId],
+        spawnMap: getSpawnMap(mobId)
+    }
+}
+
+// HEAVY CALC MAPPING
+const addMapCategoryToMob = (mobLibrary) => {
+    const mapIdToCategory = {}  //  '100000000' => 'Henesys'
+
+    const addMapTagToMob = (mobId, mapId) => {
+        if (!mobLibrary[mobId].mapCategory) mobLibrary[mobId].mapCategory = new Set()
+        mobLibrary[mobId].mapCategory.add(mapIdToCategory[mapId])
+    }
+
+    // data from inside data_MapMobCount (map.wz)
+    for (let mapId in data_MapMobCount) {
+        if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+
+        Object.keys(data_MapMobCount[mapId]).forEach(mobId => {
+            if (!mobLibrary[mobId]) return  // skip, mobId not exist
+            addMapTagToMob(mobId, mapId)
+        })
+    }
+
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    for (let mobId in data_MobMap) {
+        if (!mobLibrary[mobId]) continue        // skip, mobId not exist
+        data_MobMap[mobId].forEach(mapId => {
+            if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
+            addMapTagToMob(mobId, mapId)
+        })
+    }
+}
+
+const getSpawnMap = (targetMobId) => {
+    const spawnMaps = []
+    // data from inside data_MapMobCount (map.wz)
+    let seen_mapId = new Set()
+    Object.entries(data_MapMobCount).forEach(([mapId, mobId_to_count_obj]) => {
+        Object.entries(mobId_to_count_obj).forEach(([mobId, count]) => {
+            if (Number(mobId) === Number(targetMobId)) {
+                const mapNameObj = data_Map[mapId]
+                spawnMaps.push([mapId, mapNameObj, count])
+                seen_mapId.add(mapId)
+            }
+        })
+    })
+    // there is a problem, boss-type mob not inside data_MapMobCount
+    // combine data from monsterbook together then (string.wz)
+    // might have bugs for LKC mobs
+    let monsterBookLocationArr = data_MobMap[targetMobId]
+    if (monsterBookLocationArr) {
+        monsterBookLocationArr.forEach(mapId => {
+            if (seen_mapId.has(mapId)) return
+            const mapNameObj = data_Map[mapId]
+            spawnMaps.push([mapId, mapNameObj, 1])
+            seen_mapId.add(mapId)
+        })
+    }
+    return spawnMaps
+}
+
+
+export const filterMobList = ({mobLibrary, searchParams}) => {
+    // const [searchParams] = useSearchParams()
     // if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
@@ -218,41 +308,6 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
     return ImageComponent
 }
 
-
-export const findGoodImgUrl = ({ id }) => {
-    // obsolete
-    // 1. fetch from MapleLegends
-    let p1 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`, {
-            mode: "no-cors"
-        })
-            .then(res => resolve(`https://maplelegends.com/static/images/lib/monster/${id.padStart(7, 0)}.png`))
-            .catch(err => reject(err))
-    })
-    // 2. fetch from MapleStory.io
-    let p2 = new Promise((resolve, reject) => {
-        let x = fetch(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`, {
-            mode: "no-cors"
-        })
-            .then(res => {
-                resolve(`https://maplestory.io/api/SEA/198/mob/${id}/render/stand`)
-            })
-            .catch(err => reject(err))
-    })
-    // 3. fetch from Maplestory.io , but populated from List of manual record
-    let p3 = new Promise((resolve, reject) => {
-        let x = data_MobIdImg[id] // {region : xxx , version : xxx , animation : ...}
-        if (!x) return
-        x = x[0]
-        fetch(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`, {
-            mode: "no-cors"
-        })
-            .then(res => resolve(`https://maplestory.io/api/${x.region}/${x.version}/mob/${id}/render/${x.animation}`))
-            .catch(err => reject(err))
-    })
-    return Promise.any([p1, p2, p3])
-}
-
 export const decodeElemAttr = (elemAttr) => {
     if (!elemAttr || elemAttr === "") return ["weak : none", "strong : none", "immune : none"]
     const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
@@ -318,33 +373,35 @@ export const itemIdToExceptionUrl = ({ id, name }) => {
     return null
 }
 
+export const catogeryRangeList = {
+    "Weapon": { min: 1300000, max: 1500000, category: "Equip", url: "/weapon" },
+
+    "Hat": { min: 1000000, max: 1009999, category: "Armor", url: "/hat" },
+    "Face Accessory": { min: 1010000, max: 1019999, category: "Accessory", url: "/faceacc" },
+    "Eye Decoration": { min: 1020000, max: 1029999, category: "Accessory", url: "/eyeacc" },
+    "Glove": { min: 1080000, max: 1089999, category: "Armor", url: "/gloves" },
+    "Pendant": { min: 1120000, max: 1129999, category: "Accessory", url: "/pendant" },
+    "Belt": { min: 1130000, max: 1139999, category: "Accessory", url: "/belt" },
+    "Medal": { min: 1140000, max: 1149999, category: "Accessory", url: "/medal" },
+    "Cape": { min: 1100000, max: 1109999, category: "Armor", url: "/cape" },
+    "Earrings": { min: 1030000, max: 1039999, category: "Accessory", url: "/earring" },
+    "Ring": { min: 1110000, max: 1119999, category: "Accessory", url: "/ring" },
+    "Shield": { min: 1090000, max: 1099999, category: "Armor", url: "/shield" },
+    "Overall": { min: 1050000, max: 1059999, category: "Armor", url: "/overall" },
+    "Top": { min: 1040000, max: 1049999, category: "Armor", url: "/top" },
+    "Bottom": { min: 1060000, max: 1069999, category: "Armor", url: "/bottom" },
+    "Shoes": { min: 1070000, max: 1079999, category: "Armor", url: "/shoes" },
+    "Shoulder Accessory": { min: 1150000, max: 1159999, category: "Accessory", url: "/shoulder" },
+
+
+    "Use": { min: 2000000, max: 2999999, category: "Item", url: "/use" },
+    "Setup": { min: 3000000, max: 3999999, category: "Item", url: "/setup" },
+    "Etc": { min: 4000000, max: 4999999, category: "Item", url: "/etc" },
+
+}
+
 export const itemIdToNavUrl = (itemId) => {
     if (!itemId) return
-
-    const catogeryRangeList = {
-        "Weapon": { min: 1300000, max: 1500000, category: "Equip", url: "/weapon" },
-
-        "Hat": { min: 1000000, max: 1010000, category: "Armor", url: "/hat" },
-        "Face Accessory": { min: 1010000, max: 1020000, category: "Accessory", url: "/faceacc" },
-        "Eye Decoration": { min: 1020000, max: 1030000, category: "Accessory", url: "/eyeacc" },
-        "Glove": { min: 1080000, max: 1090000, category: "Armor", url: "/gloves" },
-        "Pendant": { min: 1120000, max: 1130000, category: "Accessory", url: "/pendant" },
-        "Belt": { min: 1130000, max: 1140000, category: "Accessory", url: "/belt" },
-        "Medal": { min: 1140000, max: 1150000, category: "Accessory", url: "/medal" },
-        "Cape": { min: 1100000, max: 1110000, category: "Armor", url: "/cape" },
-        "Earrings": { min: 1030000, max: 1040000, category: "Accessory", url: "/earring" },
-        "Ring": { min: 1110000, max: 1120000, category: "Accessory", url: "/ring" },
-        "Shield": { min: 1090000, max: 1100000, category: "Armor", url: "/shield" },
-        "Overall": { min: 1050000, max: 1060000, category: "Armor", url: "/overall" },
-        "Top": { min: 1040000, max: 1050000, category: "Armor", url: "/top" },
-        "Bottom": { min: 1060000, max: 1070000, category: "Armor", url: "/bottom" },
-        "Shoes": { min: 1070000, max: 1080000, category: "Armor", url: "/shoes" },
-
-        "Use": { min: 2000000, max: 2999999, category: "Item", url: "/use" },
-        "Setup": { min: 3000000, max: 3999999, category: "Item", url: "/setup" },
-        "Etc": { min: 4000000, max: 4999999, category: "Item", url: "/etc" },
-
-    }
 
     itemId = parseInt(itemId)
     if (isNaN(itemId)) return "/error"
@@ -360,3 +417,5 @@ export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")
     if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
 }
+
+/// don touch me

@@ -46,6 +46,8 @@ import NotFound from './pages/NotFound.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 
+import ApiDocs from './pages/ApiDocs.jsx'
+
 // layouts
 import RootLayout from './layouts/RootLayout.jsx'
 
@@ -147,6 +149,10 @@ const router = createBrowserRouter(
         <Route path="all" element={< All />} action={globalSearchAction} />
 
         <Route path="*" element={< NotFound />} />
+
+        {/* API doc */}
+        <Route path="/api/v1" element={< ApiDocs url="/docs/api_v1.md" />} />
+
 
       </Route>
     </Route>

@@ -11,7 +11,7 @@ import Tab from "react-bootstrap/Tab"
 // 
 import LabelledMap from "./LabelledMap.jsx";
 // 
-import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName } from "./utility.jsx"
+import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName, addMonsterBookSpawn } from "./utility.jsx"
 
 import { renderImageWithMobId } from "../monster/utility.jsx"
 import { renderImageWithNPCId, convertNpcIdToName } from "../npc/utility.jsx"
@@ -31,13 +31,13 @@ export default function MapDetail() {
 
     const hashMapId = Number(map_id)
 
-    const mapInfo = {
+    let mapInfo = {
         mapId: map_id,
         mob: data_MapMobCount[hashMapId],
         ...data_Map[hashMapId],
         ...data_MapStats[hashMapId],
     }
-
+    mapInfo = addMonsterBookSpawn(mapInfo)
     // console.log(map_id)
     // console.log(mapInfo)
 

@@ -68,7 +68,7 @@ export default function Use() {
     //     console.log(k, item)
     // }
 
-    const filteredUseItemList = filterUseItemList(itemLibrary)
+    const filteredUseItemList = filterUseItemList({ itemLibrary, searchParams })
 
     return (
         <div className="use d-flex flex-column">

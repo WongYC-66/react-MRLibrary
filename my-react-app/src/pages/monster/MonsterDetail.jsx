@@ -5,14 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from "react-bootstrap/Table"
-import Image from "react-bootstrap/Image"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import Badge from 'react-bootstrap/Badge';
 // 
 import {
+    generateMobInfo,
     decodeElemAttr,
     renderImageWithItemIdType,
     renderImageWithMobId,
@@ -22,57 +21,15 @@ import {
 
 import { convertMapIdToUrl, convertMapIdToName } from '../map/utility.jsx'
 
-import data_mob from "../../../data/data_Mob.json"
-import data_mobStats from "../../../data/data_MobStats.json"
-import data_MB from "../../../data/data_MB.json"
-import data_MapMobCount from "../../../data/data_MapMobCount.json"
-import data_Mob_MapOnly from "../../../data/data_Mob_MapOnly.json"
-import data_Map from "../../../data/data_Map.json"
-import data_MapUrl from "../../../data/data_MapUrl.json"
-
 export default function MonsterDetail() {
 
     const [mobInfo, setMobInfo] = useState({})
     let { mobId } = useParams();
 
-    // console.log(mobInfo)
-
     useEffect(() => {
-        const mob_Id = Number(mobId.split("=")[1])
-        const obj = {
-            ...data_mobStats[mob_Id],
-            id: mob_Id,
-            name: data_mob[mob_Id],
-            drops: data_MB[mob_Id],
-        }
-        const spawnMaps = []
-        // data from inside data_MapMobCount (map.wz)
-        let seen_mapId = new Set()
-        Object.entries(data_MapMobCount).forEach(([mapId, mobId_to_count_obj]) => {
-            Object.entries(mobId_to_count_obj).forEach(([MobId, count]) => {
-                if (Number(MobId) === Number(mob_Id)) {
-                    const mapNameObj = data_Map[mapId]
-                    spawnMaps.push([mapId, mapNameObj, count])
-                    seen_mapId.add(mapId)
-                }
-            })
-        })
-        // there is a problem, boss-type mob not inside data_MapMobCount
-        // combine data from monsterbook together then (string.wz)
-        // might have bugs for LKC mobs
-        let monsterBookLocationArr = data_Mob_MapOnly[mob_Id]
-        if (monsterBookLocationArr) {
-            monsterBookLocationArr.forEach(mapId => {
-                if (seen_mapId.has(mapId)) return
-                const mapNameObj = data_Map[mapId]
-                spawnMaps.push([mapId, mapNameObj, 1])
-                seen_mapId.add(mapId)
-            })
-        }
-        // 
-        obj.spawnMap = spawnMaps
-
-        setMobInfo(obj)
+        let targetMobId = Number(mobId.split("=")[1])
+        const generated = generateMobInfo(targetMobId)
+        setMobInfo(generated)
     }, [])
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
@@ -204,10 +161,7 @@ const renderTableOfMap = (mapArr) => {
 const MapRowCard = ({ map, handleMapLinkClick }) => {
     //  {mapCategory: __ , mapName: __, streetName: ___}
     const [mapId, mapObj, mobCount] = [...map]
-    const { streetName, mapName } = { ...mapObj }
-    // hasHiddenStreetUrl
-    const hasUrl = data_MapUrl[mapId] && data_MapUrl[mapId][1]
-    const mapUrl = hasUrl ? data_MapUrl[mapId][0] : `https://maplelegends.com/lib/map?id=${mapId}`
+    const { streetName } = { ...mapObj }
 
     return (
         <tr key={mapId}>
@@ -222,28 +176,6 @@ const MapRowCard = ({ map, handleMapLinkClick }) => {
             <td className="bg-transparent">{mobCount}</td>
         </tr>
     )
-
-
-
-    // return (
-    //     <tr key={mapId}>
-    //         <td className="bg-transparent">
-    //             <a href={mapUrl} target="_blank" onClick={() => handleMapLinkClick(hasUrl)}>
-    //                 {streetName ?
-    //                     <>
-    //                         {/* Map Name */}
-    //                         <span dangerouslySetInnerHTML={{ __html: `${streetName + ":" + mapName}` }}></span>
-    //                         {/* Badge of legends or hidden street */}
-    //                         <Badge bg={`${hasUrl ? 'success' : 'danger'}`} className="mx-3">{hasUrl ? "hidden-street" : "legends"}</Badge>
-    //                     </>
-    //                     : `map info missing. map_id : ${mapId}`
-    //                 }
-
-    //             </a>
-    //         </td>
-    //         <td className="bg-transparent">{mobCount}</td>
-    //     </tr>
-    // )
 }
 
 const renderSortedDrops = ({ EquipDrops, UseDrops, SetupDrops, EtcDrops, result }) => {
@@ -287,7 +219,6 @@ const dropsOverlayWrapper = ({ id, name, desc }) => {
         >
             <Link to={itemIdToNavUrl(id)}>
                 {renderImageWithItemIdType(id, name, para)}
-                {/* <Image src={itemIdToImgUrl(para, { id, name })} alt="img not found" className="me-1" /> */}
             </Link>
         </OverlayTrigger>
     )

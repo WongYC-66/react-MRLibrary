@@ -2,9 +2,46 @@ import { useSearchParams, useLocation, Link } from "react-router-dom"
 // 
 import Image from "react-bootstrap/Image"
 // 
-export const filterEquipList = (equipLibrary) => {
-    const [searchParams] = useSearchParams()
-    const urlPathname = useLocation().pathname
+import data_Eqp from "../../../data/data_Eqp.json"
+import data_GearStats from "../../../data/data_GearStats.json"
+// 
+export const generateEquipLibrary = () => {
+
+    let equipLib = Object.entries(data_GearStats)
+
+    // give name & category if name found
+    for (let [eqpId, eqpData] of equipLib) {
+        if (eqpId in data_Eqp) {
+            eqpData.name = data_Eqp[eqpId]
+            eqpData.category = equipIdToCategory(eqpId)
+        }
+    }
+
+    // remove one without name
+    let filtered_data_GearStats = equipLib.filter(([_, { name }]) => name)
+
+    return Object.fromEntries(filtered_data_GearStats)
+
+    // Object.entries(data_Eqp).forEach(([eqpId, eqpName]) => {
+    //     if (data_GearStats.hasOwnProperty(eqpId)) {
+    //         data_GearStats[eqpId] = {
+    //             ...data_GearStats[eqpId],
+    //             name: eqpName,
+    //             category: equipIdToCategory(eqpId)
+    //         }
+    //     }
+    // })
+    // let filtered_data_GearStats = Object.fromEntries(
+    //     Object.entries(data_GearStats)
+    //         .filter(([_id, { name }]) => name) // filtered out those without name
+    //     // .filter(([_id, { category }]) => !category.includes('undefined')) // filtered out those without category/subcategory
+    // )
+    // return filtered_data_GearStats
+}
+
+export const filterEquipList = ({ equipLibrary, searchParams, urlPathname }) => {
+    // const [searchParams] = useSearchParams()
+    // const urlPathname = useLocation().pathname
     const isWeaponPage = urlPathname === "/weapon"
 
     let equipLibraryArr = Object.entries(equipLibrary)
@@ -110,22 +147,10 @@ const querySorting = ({ order, filteredEquipList, exactSearchTerm }) => {
 }
 
 const queryFilterByJob = ({ job, filteredEquipList }) => {
-    const lib = {
-        "-1": [-1],   //'BEGINNER',
-        "0": [-1, 1, 2, 4, 8, 16],    // 'ALL',
-        "1": [1],       // 'WARRIOR'
-        "2": [2],       // 'MAGICIAN'
-        "3": [1, 2],                   // ['WARRIOR','MAGICIAN'],
-        "4": [4],       // 'BOWMAN'
-        "8": [8],       // 'THIEF',
-        "9": [1, 8],                 // ['WARRIOR','THIEF'],
-        "13": [1, 4, 8],             // ['WARRIOR','BOWMAN', 'THIEF'],
-        "16": [16]      // 'PIRATE',
-    }
     return filteredEquipList.filter(([_id, { reqJob }]) => {
         if (job === "0") return true
         if (reqJob === "0") return true
-        const jobArr = lib[reqJob]
+        const jobArr = reqJobToList[reqJob]
         return jobArr?.includes(parseInt(job))
     })
 }
@@ -437,20 +462,23 @@ export function attkSpeedToText(x) {
     return text;
 }
 
+const reqJobToList = {
+    "-1": [-1],   //'BEGINNER',
+    "0": [-1, 1, 2, 4, 8, 16],    // 'ALL',
+    "1": [1],       // 'WARRIOR'
+    "2": [2],       // 'MAGICIAN'
+    "3": [1, 2],                   // ['WARRIOR','MAGICIAN'],
+    "4": [4],       // 'BOWMAN'
+    "8": [8],       // 'THIEF',
+    "9": [1, 8],                 // ['WARRIOR','THIEF'],
+    "10": [2, 8],                // ['MAGICIAN','THIEF'],
+    "13": [1, 4, 8],             // ['WARRIOR','BOWMAN', 'THIEF'],
+    "16": [16],      // 'PIRATE',
+    "21": [1, 4],                 // ['WARRIOR', "BOWMAN"],
+}
+
 export const decodeReqJobToList = (reqJob) => {
-    const lib = {
-        "-1": [-1],   //'BEGINNER',
-        "0": [-1, 1, 2, 4, 8, 16],    // 'ALL',
-        "1": [1],       // 'WARRIOR'
-        "2": [2],       // 'MAGICIAN'
-        "3": [1, 2],                   // ['WARRIOR','MAGICIAN'],
-        "4": [4],       // 'BOWMAN'
-        "8": [8],       // 'THIEF',
-        "9": [1, 8],                 // ['WARRIOR','THIEF'],
-        "13": [1, 4, 8],             // ['WARRIOR','BOWMAN', 'THIEF'],
-        "16": [16]      // 'PIRATE',
-    }
-    return lib[reqJob]
+    return reqJobToList[reqJob]
 }
 
 export const isNotRedundantProp = (itemProp, isWeaponPage) => {
