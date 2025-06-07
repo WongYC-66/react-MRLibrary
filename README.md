@@ -174,5 +174,8 @@ png
 ## Log - June 4 2025
 1. done - UI : update logo & favicon
 
+## Log - June 7 2025
+1. done - API : add API v1 support & [documentation](https://royals-library.netlify.app/api/v1)
+
 Next:
 - show path from map to map with graph data stuctrue ?
