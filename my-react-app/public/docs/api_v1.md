@@ -40,7 +40,7 @@
 
 ### Map
 - [`GET /api/v1/map?id=104040000`](https://royals-library.netlify.app/api/v1/map?id=104040000)    : Get 1 map detailed info
-- [`GET /api/v1/map`](https://royals-library.netlify.app/api/v1/map)                  : Get paginated Items
+- [`GET /api/v1/map`](https://royals-library.netlify.app/api/v1/map)                  : Get paginated Maps
     <details>
         <summary> optional params </summary>
 
@@ -53,7 +53,7 @@
 
 ### Monster
 - [`GET /api/v1/monster?id=100100`](https://royals-library.netlify.app/api/v1/monster?id=100100)    : Get 1 monster detailed info
-- [`GET /api/v1/monster`](https://royals-library.netlify.app/api/v1/monster)             : Get paginated Items
+- [`GET /api/v1/monster`](https://royals-library.netlify.app/api/v1/monster)             : Get paginated Monsters
     <details>
         <summary> optional params </summary>
 
@@ -124,5 +124,5 @@
 ---
 
 - current pagination = 50 items per page
-- paginated data not detailed, but as much as what you see in unofficial-library page
+- paginated data are not in detail, but as much as what you see in unofficial-library page
 - optional query params, if not labelled, please refer to dropdown option at unofficial-library
