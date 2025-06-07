@@ -58,10 +58,10 @@ export default (request, context) => {
                 .map(returnMob => addMapCategory(returnMob, mobLibrary))
                 .map(translateMobStats)
 
-            returnMobList = applyPagination(returnMobList, searchParams, 'monster')
+            const paginatedResponse = applyPagination(returnMobList, searchParams, 'monster')
 
             return new Response(
-                JSON.stringify(returnMobList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

@@ -1644,12 +1644,12 @@ export const filterMapList = ({ mapLibrary, searchParams }) => {
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
     // No filter at first loading or if URL don't have query param 
-    if (!Object.keys(filterOption).length) return filteredMapLibrary
+    // if (!Object.keys(filterOption).length) return filteredMapLibrary
 
-    const location = filterOption.location || 'all'
+    const location = filterOption.location || 'any'
 
     let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
-    const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null
+    const exactSearchTerm = filterOption.search?.toLowerCase().trim() || ''
     const exactSearchTermID = exactSearchTerm ? exactSearchTerm.replace(/^0+/, '') : null
 
     searchTermArr = searchTermArr.filter(Boolean)  // filter out space
@@ -1970,11 +1970,12 @@ export const filterMusicLibrary = ({ musicLibrary, searchParams }) => {
 // ----------- PAGINATION -------------
 export const applyPagination = (resArr, searchParams, type) => {
     // BEST BANDWITH SAVING METHOD!
-    const itemPerPage = 50 // max gain = 99% size reduction
+    const itemsPerPage = 50 // max gain = 99% size reduction
     const NoNeedPaginationType = new Set([
-        'music',     //  28 KB -> 8 KB
+        // 
     ])
     const NeedPaginationType = new Set([
+        'music',     //  28 KB -> 8 KB
         'equip',     //    3 MB -> 16 KB
         'item',      // 1.54 MB -> 11 KB
         'map',       // 1.52 MB -> 10 KB
@@ -1986,8 +1987,40 @@ export const applyPagination = (resArr, searchParams, type) => {
 
     if (NoNeedPaginationType.has(type)) return resArr    // not paginated
 
-    const pageNum = searchParams.get('page') || 1
-    const startIdx = (pageNum - 1) * itemPerPage
-    const endIdx = startIdx + itemPerPage
-    return resArr.slice(startIdx, endIdx)
+    const pageNum = Number(searchParams.get('page') || 1)
+    const startIdx = (pageNum - 1) * itemsPerPage
+    const endIdx = startIdx + itemsPerPage
+
+    const data = resArr.slice(startIdx, endIdx)
+    const totalItems = resArr.length
+    const totalPages = Math.ceil(totalItems / itemsPerPage)
+    const lastIdx = resArr.length - 1
+
+    const hasMore = endIdx < lastIdx
+
+    return {
+        data,
+        pagination: {
+            page: pageNum,
+            itemsPerPage,
+            totalPages,
+            totalItems,
+            hasMore,
+        }
+    }
+    /*
+    {
+        "data": [
+            { "id": 1, "name": "Item A" },
+            { "id": 2, "name": "Item B" }
+        ],
+        "pagination": {
+            "page": 1,
+            "pageSize": 2,
+            "totalPages": 5,
+            "totalItems": 10,
+            "hasMore": true
+        }
+    }  
+    */
 }

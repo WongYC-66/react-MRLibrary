@@ -68,10 +68,10 @@ export default async (request, context) => {
             let returnEquipList = addImageURL(filteredEquipList, 'characters', context)
             returnEquipList = returnEquipList.map(translateEquipStats)
 
-            returnEquipList = applyPagination(returnEquipList, searchParams, 'equip')    
+            const paginatedResponse = applyPagination(returnEquipList, searchParams, 'equip')    
 
             return new Response(
-                JSON.stringify(returnEquipList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

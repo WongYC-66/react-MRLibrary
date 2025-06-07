@@ -36,7 +36,7 @@ export const filterMapList = ({ mapLibrary, searchParams }) => {
     // No filter at first loading or if URL don't have query param 
     if (!Object.keys(filterOption).length) return filteredMapLibrary
 
-    const location = filterOption.location || 'all'
+    const location = filterOption.location || 'any'
 
     let searchTermArr = filterOption.search?.toLowerCase().split(' ') || [''] // split 'dark int' to ['dark', 'int']
     const exactSearchTerm = filterOption.search?.toLowerCase().trim() || null

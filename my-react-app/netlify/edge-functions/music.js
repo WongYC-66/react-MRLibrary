@@ -43,10 +43,10 @@ export default async (request, context) => {
             let filteredMusicList = filterMusicLibrary({ musicLibrary, searchParams })
                 .map(([name, property]) => { return { name, ...property } })
 
-            filteredMusicList = applyPagination(filteredMusicList, searchParams, 'music')
+            const paginatedResponse = applyPagination(filteredMusicList, searchParams, 'music')
 
             return new Response(
-                JSON.stringify(filteredMusicList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

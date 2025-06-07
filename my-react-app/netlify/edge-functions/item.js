@@ -65,10 +65,10 @@ export default async (request, context) => {
 
             filteredItemList = addImageURL(filteredItemList, 'items', context)
 
-            filteredItemList = applyPagination(filteredItemList, searchParams, 'item') 
+            const paginatedResponse = applyPagination(filteredItemList, searchParams, 'item') 
 
             return new Response(
-                JSON.stringify(filteredItemList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

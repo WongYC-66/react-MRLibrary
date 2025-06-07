@@ -53,10 +53,10 @@ export default async (request, context) => {
             filteredSkillList = addImageURL(filteredSkillList, 'skills', context)
                 .map(addJobCategory)
 
-            filteredSkillList = applyPagination(filteredSkillList, searchParams, 'skill')
+            const paginatedResponse = applyPagination(filteredSkillList, searchParams, 'skill')
 
             return new Response(
-                JSON.stringify(filteredSkillList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

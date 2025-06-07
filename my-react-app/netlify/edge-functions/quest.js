@@ -49,10 +49,10 @@ export default async (request, context) => {
                 .map(sanitizeQuestInfo) // save bandwidth!
                 .map(addQuestLocation)
 
-            filteredQuestList = applyPagination(filteredQuestList, searchParams, 'quest')
+            const paginatedResponse = applyPagination(filteredQuestList, searchParams, 'quest')
 
             return new Response(
-                JSON.stringify(filteredQuestList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

@@ -62,10 +62,10 @@ export default async (request, context) => {
 
             filteredMapList = addImageURL(filteredMapList, 'maps', context)
 
-            filteredMapList = applyPagination(filteredMapList, searchParams, 'map')
+            const paginatedResponse = applyPagination(filteredMapList, searchParams, 'map')
 
             return new Response(
-                JSON.stringify(filteredMapList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {

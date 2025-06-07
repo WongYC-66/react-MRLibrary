@@ -50,10 +50,10 @@ export default (request, context) => {
             filteredNPCList = addImageURL(filteredNPCList, 'npcs', context)
                 .map(organizeNpcLocation)
             
-            filteredNPCList = applyPagination(filteredNPCList, searchParams, 'npc')
+            const paginatedResponse = applyPagination(filteredNPCList, searchParams, 'npc')
 
             return new Response(
-                JSON.stringify(filteredNPCList),
+                JSON.stringify(paginatedResponse),
                 {
                     status: 200,
                     headers: {
