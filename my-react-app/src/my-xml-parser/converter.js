@@ -183,29 +183,29 @@ async function WorldMap() {
 }
 
 
-function main() {
-    // MB()
-    // MB_MapOnly()
-    // Mob()
-    // Consume()
-    // Etc()
-    // Eqp()
-    // Ins()
-    // Maps()
-    // GearStats() // Read multiple IMG files in multiple folders
-    // MobStats()
-    // Map_MobCount()
-    // Map_stats()
-    // ItemStats()
-    // Skill()
-    // SkillStats()
-    // Quest()
-    // QuestLine()     // run Quest() first bcoz it use data_Quest.json
-    // NPC()
-    // NPCStats()
-    // NPCLocation()  // run NPC() first bcoz it use data_NPC.json
-    // NPCLocation2()  // run NPC() & Map_stats() first
-    WorldMap()  // run NPC() & Map_stats() first
+async function main() {
+    await MB()
+    await MB_MapOnly()
+    await Mob()
+    await Consume()
+    await Etc()
+    await Eqp()
+    await Ins()
+    await Maps()
+    await GearStats() // Read multiple IMG files in multiple folders
+    await MobStats()
+    await Map_MobCount()
+    await Map_stats()
+    await ItemStats()
+    await Skill()
+    await SkillStats()
+    await Quest()
+    await QuestLine()     // run Quest() first bcoz it use data_Quest.json
+    await NPC()
+    await NPCStats()
+    await NPCLocation()  // run NPC() first bcoz it use data_NPC.json
+    await NPCLocation2()  // run NPC() & Map_stats() first
+    await WorldMap()  // run NPC() & Map_stats() first
 }
 
 main()

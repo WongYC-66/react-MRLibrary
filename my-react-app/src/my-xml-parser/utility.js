@@ -21,13 +21,12 @@ export function diskWriter(path, simpleData) {
 export function diskWriterInJSON(path, simpleData) {
     console.log("Writing" + path)
     let jsonData = JSON.stringify(simpleData, null, 2);
-    fs.writeFile(path, jsonData, (err) => {
-        if (err) {
-            console.error(`Error writing to file : ${path}`, err);
-        } else {
-            console.log("Write succesfully into" + path)
-        }
-    });
+    try {
+        fs.writeFileSync(path, jsonData);
+        console.log("Write successfully into " + path);
+    } catch (err) {
+        console.error(`Error writing to file: ${path}`, err);
+    }
 }
 
 export async function parseXML(FilePath) {

@@ -3,8 +3,8 @@
 // 2. crawl and copy important images/mp3 to a centralized folder
 // 3. then copy to ./public/images/  or upload to audio repo : https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const mainFolder = 'C:/Users/User/Desktop/TO DEL/harepacker_dump';       // enter your folder of harerepacker extraction as png/mp3
 const outputFolder = 'C:/Users/User/Desktop/TO DEL/harepacker_dump/output';     //  enter your output destination to centralize images/mp3
