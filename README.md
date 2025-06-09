@@ -179,6 +179,7 @@ png
 
 ## Log - June 9 2025
 1. done - update library to v95.3
+2. done - Monster Page show a tab of mob stats
 
 Next:
 - show path from map to map with graph data stuctrue ?

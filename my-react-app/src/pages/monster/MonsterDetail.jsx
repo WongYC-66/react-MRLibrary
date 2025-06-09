@@ -101,19 +101,28 @@ export default function MonsterDetail() {
                         </div>
 
                     </Col>
-                    {/* Monster Drop / Map Spawn */}
+                    {/* Monster Drop / Map Spawn / Mob Stats*/}
                     <Col lg={8}>
                         <div className="mob-drops-locations-card">
                             <Tabs
                                 id="controlled-tab-example"
                                 className="mb-3"
                             >
+                                {/* Drops Tab */}
                                 <Tab eventKey="Drops" title="Drops">
                                     {renderSortedDrops(sortDropsToFourArr(mobInfo.drops))}
                                 </Tab>
+
+                                {/* Locations Tab */}
                                 <Tab eventKey="Locations" title="Locations">
                                     {renderTableOfMap(mobInfo.spawnMap)}
                                 </Tab>
+
+                                {/* Stats Tab */}
+                                <Tab eventKey="Stats" title="Stats">
+                                    {renderMobStats(mobInfo)}
+                                </Tab>
+
                             </Tabs>
 
                         </div>
@@ -221,6 +230,34 @@ const dropsOverlayWrapper = ({ id, name, desc }) => {
                 {renderImageWithItemIdType(id, name, para)}
             </Link>
         </OverlayTrigger>
+    )
+}
+
+const renderMobStats = (mobInfo) => {
+    console.log(mobInfo)
+    let unwanted = new Set(["spawnMap", "drops", "id", "name"])
+    let keys = Object.keys(mobInfo)
+        .filter(k => !unwanted.has(k))
+        .sort()
+    return (
+        <Table bordered hover className="text-center">
+            <tbody>
+                <tr>
+                    <td>Name </td>
+                    <td dangerouslySetInnerHTML={{ __html: mobInfo.name }}></td>
+                </tr>
+                <tr>
+                    <td>Mob id </td>
+                    <td>{mobInfo.id} </td>
+                </tr>
+                {keys.map(k =>
+                    <tr key={k}>
+                        <td>{k}</td>
+                        <td>{mobInfo[k]}</td>
+                    </tr>
+                )}
+            </tbody>
+        </Table>
     )
 }
 
