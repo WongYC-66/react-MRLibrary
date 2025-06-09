@@ -177,5 +177,8 @@ png
 ## Log - June 7 2025
 1. done - API : add API v1 support & [documentation](https://royals-library.netlify.app/api/v1)
 
+## Log - June 9 2025
+1. done - update library to v95.3
+
 Next:
 - show path from map to map with graph data stuctrue ?
