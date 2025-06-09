@@ -7924,7 +7924,7 @@
     "hideName": "1"
   },
   "8830000": {
-    "level": "105",
+    "level": "80",
     "maxHP": "25000000",
     "maxMP": "300000",
     "speed": "0",
@@ -7981,7 +7981,7 @@
     "elemAttr": "I3"
   },
   "8830003": {
-    "level": "105",
+    "level": "80",
     "maxHP": "1000000000",
     "maxMP": "50000",
     "speed": "0",
@@ -8595,7 +8595,7 @@
     "acc": "10",
     "eva": "10",
     "pushed": "999999999",
-    "fixedDamage": "10",
+    "fixedDamage": "12",
     "exp": "0",
     "mobType": "1N",
     "ignoreFieldOut": "1",
@@ -8617,7 +8617,7 @@
     "pushed": "1",
     "boss": "1",
     "mobType": "1N",
-    "fixedDamage": "11"
+    "fixedDamage": "12"
   },
   "9010147": {
     "level": "1",
@@ -8635,7 +8635,7 @@
     "pushed": "1",
     "boss": "1",
     "mobType": "1N",
-    "fixedDamage": "11"
+    "fixedDamage": "12"
   },
   "9010148": {
     "level": "1",
@@ -8653,7 +8653,7 @@
     "pushed": "1",
     "boss": "1",
     "mobType": "1N",
-    "fixedDamage": "11"
+    "fixedDamage": "12"
   },
   "9100000": {
     "level": "200",
@@ -18343,7 +18343,7 @@
     "exp": "30000",
     "undead": "0",
     "pushed": "3000",
-    "fixedDamage": "11",
+    "fixedDamage": "12",
     "boss": "1"
   },
   "9400607": {
@@ -19443,7 +19443,7 @@
     "mobType": "1N"
   },
   "9410070": {
-    "level": "21",
+    "level": "10",
     "maxHP": "285",
     "maxMP": "20",
     "speed": "-50",
@@ -19452,7 +19452,7 @@
     "MADamage": "0",
     "MDDamage": "30",
     "acc": "120",
-    "eva": "25",
+    "eva": "5",
     "exp": "38",
     "undead": "0",
     "pushed": "100000",
@@ -19461,7 +19461,7 @@
     "onlyNormalAttack": "1"
   },
   "9410071": {
-    "level": "25",
+    "level": "10",
     "maxHP": "550",
     "maxMP": "0",
     "speed": "-50",
@@ -19470,7 +19470,7 @@
     "MADamage": "0",
     "MDDamage": "40",
     "acc": "55",
-    "eva": "9",
+    "eva": "5",
     "exp": "47",
     "undead": "0",
     "pushed": "100000",
@@ -19480,7 +19480,7 @@
     "onlyNormalAttack": "1"
   },
   "9410072": {
-    "level": "40",
+    "level": "10",
     "maxHP": "1800",
     "maxMP": "100",
     "speed": "-50",
@@ -19489,7 +19489,7 @@
     "MADamage": "0",
     "MDDamage": "160",
     "acc": "150",
-    "eva": "17",
+    "eva": "5",
     "exp": "95",
     "undead": "0",
     "pushed": "100000",
@@ -19499,7 +19499,7 @@
     "onlyNormalAttack": "1"
   },
   "9410073": {
-    "level": "55",
+    "level": "10",
     "maxHP": "4400",
     "maxMP": "110",
     "speed": "-50",
@@ -19508,7 +19508,7 @@
     "MADamage": "0",
     "MDDamage": "120",
     "acc": "120",
-    "eva": "20",
+    "eva": "5",
     "exp": "175",
     "undead": "0",
     "pushed": "100000",
@@ -19536,7 +19536,7 @@
     "invincible": "1"
   },
   "9410075": {
-    "level": "40",
+    "level": "10",
     "maxHP": "1800",
     "maxMP": "100",
     "speed": "-50",
@@ -19545,7 +19545,7 @@
     "MADamage": "0",
     "MDDamage": "160",
     "acc": "150",
-    "eva": "17",
+    "eva": "5",
     "exp": "95",
     "undead": "0",
     "pushed": "100",
@@ -21422,7 +21422,7 @@
     "pushed": "1000"
   },
   "9600037": {
-    "level": "30",
+    "level": "10",
     "maxHP": "30",
     "maxMP": "0",
     "speed": "-5",
@@ -21431,14 +21431,13 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
+    "eva": "5",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
-    "fixedDamage": "11"
+    "fixedDamage": "12"
   },
   "9600038": {
-    "level": "30",
     "maxMP": "0",
     "speed": "3",
     "PADamage": "100",
@@ -21446,15 +21445,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600039": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-5",
     "PADamage": "100",
@@ -21462,15 +21461,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600040": {
-    "level": "30",
     "maxMP": "0",
     "speed": "0",
     "PADamage": "100",
@@ -21478,15 +21477,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600041": {
-    "level": "30",
     "maxMP": "0",
     "speed": "0",
     "PADamage": "100",
@@ -21494,15 +21493,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600042": {
-    "level": "30",
     "maxMP": "0",
     "flySpeed": "3",
     "PADamage": "100",
@@ -21510,15 +21509,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600043": {
-    "level": "30",
     "maxMP": "0",
     "speed": "0",
     "PADamage": "100",
@@ -21526,15 +21525,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600044": {
-    "level": "30",
     "maxMP": "0",
     "speed": "1",
     "PADamage": "100",
@@ -21542,15 +21541,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600045": {
-    "level": "30",
     "maxMP": "0",
     "speed": "3",
     "PADamage": "100",
@@ -21558,15 +21557,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600046": {
-    "level": "30",
     "maxMP": "0",
     "speed": "0",
     "PADamage": "100",
@@ -21574,15 +21573,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600047": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-20",
     "PADamage": "100",
@@ -21590,15 +21589,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600048": {
-    "level": "30",
     "maxMP": "0",
     "speed": "3",
     "PADamage": "100",
@@ -21606,15 +21605,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600049": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-20",
     "PADamage": "100",
@@ -21622,15 +21621,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600050": {
-    "level": "30",
     "maxMP": "0",
     "speed": "2",
     "PADamage": "100",
@@ -21638,15 +21637,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600051": {
-    "level": "30",
     "maxMP": "0",
     "speed": "3",
     "PADamage": "100",
@@ -21654,15 +21653,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600052": {
-    "level": "30",
     "maxMP": "0",
     "speed": "3",
     "PADamage": "100",
@@ -21670,15 +21669,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600053": {
-    "level": "30",
     "maxMP": "0",
     "speed": "5",
     "PADamage": "100",
@@ -21686,15 +21685,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600054": {
-    "level": "30",
     "maxMP": "0",
     "speed": "2",
     "PADamage": "100",
@@ -21702,15 +21701,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600055": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-3",
     "PADamage": "100",
@@ -21718,15 +21717,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600056": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-15",
     "PADamage": "100",
@@ -21734,15 +21733,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600057": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-5",
     "PADamage": "100",
@@ -21750,15 +21749,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600058": {
-    "level": "30",
     "maxMP": "0",
     "speed": "5",
     "PADamage": "100",
@@ -21766,15 +21765,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600059": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-15",
     "PADamage": "100",
@@ -21782,15 +21781,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600060": {
-    "level": "30",
     "maxMP": "0",
     "speed": "-3",
     "PADamage": "100",
@@ -21798,15 +21797,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600061": {
-    "level": "30",
     "maxMP": "0",
     "speed": "5",
     "PADamage": "100",
@@ -21814,15 +21813,15 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9600062": {
-    "level": "30",
     "maxMP": "0",
     "speed": "5",
     "PADamage": "100",
@@ -21830,12 +21829,13 @@
     "MADamage": "100",
     "MDDamage": "40",
     "acc": "57",
-    "eva": "20",
     "exp": "53",
     "undead": "0",
     "pushed": "0",
     "maxHP": "30",
-    "fixedDamage": "11"
+    "eva": "5",
+    "level": "10",
+    "fixedDamage": "12"
   },
   "9700004": {
     "level": "39",

@@ -22,7 +22,7 @@
     1. Skill.wz -> ./public/images/skills
     1. Map.wz -> ./public/images/worldmaps
     1. run `node ./my-harepacker-output-organizer/dumpFileCentralizer.js`, and copy the output to ./public/images
-3. mp3 files are extracted using harepacker too, but i filtered out the short mp3, and uploaded it to separate [github repo](https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio) to save bandwidth
+3. mp3 files are extracted using harepacker too, from Sound.wz, but i filtered out the short mp3, and uploaded it to separate [github repo](https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio) to save bandwidth
     1. run `node ./my-harepacker-output-organizer/generateMusicJson.js`, and copy the output to ./data
 
 <hr>
