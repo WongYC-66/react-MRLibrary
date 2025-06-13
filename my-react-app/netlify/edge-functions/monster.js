@@ -8,6 +8,7 @@ import {
     generateMobInfo,
     organizeSpawnMap,
     applyPagination,
+    addHasMobDrop,
 } from "../utility.js"
 
 const mobLibrary = generateMobLibrary()
@@ -57,6 +58,7 @@ export default (request, context) => {
             let returnMobList = addImageURL(filteredMobList, 'monsters', context)
                 .map(returnMob => addMapCategory(returnMob, mobLibrary))
                 .map(translateMobStats)
+                .map(addHasMobDrop)
 
             const paginatedResponse = applyPagination(returnMobList, searchParams, 'monster')
 

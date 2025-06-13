@@ -577,6 +577,13 @@ export const generateMobInfo = (mobId) => {
     }
 }
 
+export const addHasMobDrop = (mobInfo) => {
+    return {
+        ...mobInfo,
+        drops: (mobInfo.id in data_MB)
+    }
+}
+
 const getSpawnMap = (targetMobId) => {
     const spawnMaps = []
     // data from inside data_MapMobCount (map.wz)
@@ -1988,7 +1995,7 @@ export const applyPagination = (resArr, searchParams, type) => {
     if (NoNeedPaginationType.has(type)) return resArr    // not paginated
 
     let pageNum = Number(searchParams.get('page') || 1)
-    if(pageNum <= 0) pageNum = 1
+    if (pageNum <= 0) pageNum = 1
     const startIdx = (pageNum - 1) * itemsPerPage
     const endIdx = startIdx + itemsPerPage
 
