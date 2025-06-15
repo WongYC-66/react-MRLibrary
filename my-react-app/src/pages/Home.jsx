@@ -59,7 +59,7 @@ export default function Home() {
             <h2 className="display-6">Welcome to </h2>
 
             <h2 className="display-5 my-3 p-0">MapleRoyals Library (Un-official)</h2>
-            <h5 className="my-3 p-0"> Game version : v95.3 </h5>
+            <h5 className="my-3 p-0"> Game version : v95.3.1 </h5>
 
             <Form className="d-flex m-5 p-3" method="post" action="/all">
                 <FormBS.Control

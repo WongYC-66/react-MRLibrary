@@ -99,44 +99,39 @@ export const renderImageWithMapId = (mapId) => {
         const img = e.target
         // find suitable image src from:
         // 1: server file under /images/
-        // 2: maplelegends
-        // 3: maplestory.io
+        // 2: rendered HD map by me
+        // 3: maplelegends
+        // 4: maplestory.io
+        // 5: maplestory.io
 
         if (img.getAttribute("myimgindex") === '0') {
-            // switch to server file under /images/ (option - 1)
-            // console.log("switch to option-1")
             img.setAttribute("myimgindex", "1")
             img.src = `\\images\\maps\\${fileName}`
             return
         }
         if (img.getAttribute("myimgindex") === '1') {
-            // switch to maplelegends (option - 2)
-            // console.log("switch to option-2")
             img.setAttribute("myimgindex", "2")
+            img.src = `https://raw.githubusercontent.com/scotty66f/royals-rendered-map/refs/heads/main/Map/${fileName}`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '2') {
+            img.setAttribute("myimgindex", "3")
             img.src = `https://maplelegends.com/static/images/lib/map/${fileName}`
             return
         }
-        // error again? 
-        if (img.getAttribute("myimgindex") === '2') {
-            // switch to maplestory.io exception list (option - 3)
-            // console.log("switch to option-3")
-            img.setAttribute("myimgindex", "3")
-            // beware, this is HD , bandwith issue!
-            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
-            return
-        }
         if (img.getAttribute("myimgindex") === '3') {
-            // switch to maplestory.io exception list (option - 4)
-            // console.log("switch to option-4")
             img.setAttribute("myimgindex", "4")
-            // beware, this is HD , bandwith issue!
-            img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
+            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
             return
         }
         if (img.getAttribute("myimgindex") === '4') {
             img.setAttribute("myimgindex", "5")
+            img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '5') {
+            img.setAttribute("myimgindex", "6")
             img.src = "/error"
-            // return console.log('end')
             return
         }
     }
@@ -160,33 +155,40 @@ export const renderHDImageWithMapId = (mapId) => {
         const fileName = `${String(mapId).padStart(9, 0)}.png`
         const img = e.target
         // find suitable image src from:
-        // 1: maplestory.io
-        // 2: server file under /images/
-        // 3: maplelegends
+        // 1: rendered HD map by me
+        // 2: maplestory.io
+        // 3: maplestory.io
+        // 4: server file under /images/
+        // 5: maplelegends
 
         if (img.getAttribute("myimgindex") === '0') {
             img.setAttribute("myimgindex", "1")
-            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
+            img.src = `https://raw.githubusercontent.com/scotty66f/royals-rendered-map/refs/heads/main/Map/${fileName}`
             return
         }
         if (img.getAttribute("myimgindex") === '1') {
             img.setAttribute("myimgindex", "2")
+            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '2') {
+            img.setAttribute("myimgindex", "3")
             img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
             return
         }
 
-        if (img.getAttribute("myimgindex") === '2') {
-            img.setAttribute("myimgindex", "3")
-            img.src = `\\images\\maps\\${fileName}`
-            return
-        }
         if (img.getAttribute("myimgindex") === '3') {
             img.setAttribute("myimgindex", "4")
-            img.src = `https://maplelegends.com/static/images/lib/map/${fileName}`
+            img.src = `\\images\\maps\\${fileName}`
             return
         }
         if (img.getAttribute("myimgindex") === '4') {
             img.setAttribute("myimgindex", "5")
+            img.src = `https://maplelegends.com/static/images/lib/map/${fileName}`
+            return
+        }
+        if (img.getAttribute("myimgindex") === '5') {
+            img.setAttribute("myimgindex", "6")
             img.src = "/error"
             return
         }

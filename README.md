@@ -14,7 +14,7 @@
         ![alt text](dataFolderStructure.png)
     1. run `node ./my-xml-parser/converter.js`, each parser function 
 2. ./public/images/ are extracted using harepacker
-    1. Character.wz -> ./public/images/characters  // weapon 01702786.img crashed when export， only Accessory, Cap, Cape, Coat, Face, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon
+    1. Character.wz -> ./public/images/characters  // weapon 01702786.img crashed when export， only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon
     1. Item.wz -> ./public/images/items
     1. Map.wz -> ./public/images/maps
     1. Mob.wz -> ./public/images/monsters
@@ -180,6 +180,11 @@ png
 ## Log - June 9 2025
 1. done - update library to v95.3
 2. done - Monster Page show a tab of mob stats
+
+## Log - June 15 2025
+1. done - update library to v95.3.1
+2. done - fix : Map version issue with Rendered Map from github 
+
 
 Next:
 - show path from map to map with graph data stuctrue ?

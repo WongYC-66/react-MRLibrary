@@ -24,7 +24,9 @@ export default function LabelledMap({ mapId, portals, miniMap }) {
 
   useEffect(() => {
     const image = new Image();
-    const imageUrl = `/images/maps/${mapId}.png`;
+    // const imageUrl = `/images/maps/${mapId}.png`;
+    const fileName = `${String(mapId).padStart(9, 0)}.png`
+    const imageUrl = `https://raw.githubusercontent.com/scotty66f/royals-rendered-map/refs/heads/main/Map/${fileName}`;
     image.crossOrigin = "anonymous";
     image.src = imageUrl;
 
