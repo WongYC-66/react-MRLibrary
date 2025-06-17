@@ -185,6 +185,8 @@ png
 1. done - update library to v95.3.1
 2. done - fix : Map version issue with Rendered Map from github 
 
+## Log - June 17 2025
+1. done - Add : Real Time Map Renderer
 
 Next:
 - show path from map to map with graph data stuctrue ?
