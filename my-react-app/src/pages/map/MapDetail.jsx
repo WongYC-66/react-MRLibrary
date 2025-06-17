@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom"
 import { decode } from 'html-entities'
 // 
@@ -8,8 +9,10 @@ import Col from 'react-bootstrap/Col';
 import Table from "react-bootstrap/Table"
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
+import FormBS from "react-bootstrap/Form"
 // 
 import LabelledMap from "./LabelledMap.jsx";
+import RenderedMap from "./RenderedMap.jsx";
 // 
 import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName, addMonsterBookSpawn } from "./utility.jsx"
 
@@ -26,6 +29,13 @@ export default function MapDetail() {
 
     // const [questInfo, setQuestInfo] = useState({})
     let { mapId } = useParams();
+
+    const [canvasOption, setCanvasOption] = useState({
+        showMob: true,
+        showNpc: true,
+        showPortal: true,
+        showReactor: true,
+    })
 
     const map_id = mapId.split("=")[1]
 
@@ -58,7 +68,7 @@ export default function MapDetail() {
                     {/* Map Stats, monster spawn, npc, portals */}
                     <Col lg={8}>
                         <div>
-                            {renderTableRight(mapInfo)}
+                            {renderTableRight(mapInfo, canvasOption, setCanvasOption)}
                         </div>
                     </Col>
                 </Row>
@@ -94,7 +104,7 @@ const renderTableLeft = (mapInfo) => {
     </tbody>
 };
 
-const renderTableRight = (mapInfo) => {
+const renderTableRight = (mapInfo, canvasOption, setCanvasOption) => {
     if (!Object.keys(mapInfo).length) return <></>
 
     const npcs = mapInfo.npc
@@ -104,6 +114,10 @@ const renderTableRight = (mapInfo) => {
     const hasUrl = data_MapUrl[map_id] && data_MapUrl[map_id][1]
     const mapUrl = hasUrl ? data_MapUrl[map_id][0] : `https://maplelegends.com/lib/map?id=${map_id}`
 
+    const handleCheckboxClick = (val, property) => {
+        let nextObj = { ...canvasOption, [property]: val }
+        setCanvasOption(nextObj)
+    }
 
     return (
         <Tabs id="controlled-tab-example" className="mb-3">
@@ -141,6 +155,16 @@ const renderTableRight = (mapInfo) => {
             <Tab eventKey="Portals" title="Portals">
                 {renderLabelledMapAndTable(mapInfo)}
                 {renderPortalTable(mapInfo)}
+            </Tab>
+
+            {/* Canvas Tab */}
+            <Tab eventKey="Canvas" title="Canvas">
+                <FormBS.Check inline label='Mob' name="Mob" type='checkbox' id='Mob' checked={canvasOption.showMob} onChange={e => handleCheckboxClick(e.target.checked, 'showMob')} />
+                <FormBS.Check inline label='Npc' name="Npc" type='checkbox' id='Npc' checked={canvasOption.showNpc} onChange={e => handleCheckboxClick(e.target.checked, 'showNpc')} />
+                <FormBS.Check inline label='Reactor' name="Reactor" type='checkbox' id='Reactor' checked={canvasOption.showReactor} onChange={e => handleCheckboxClick(e.target.checked, 'showReactor')} />
+                <FormBS.Check inline label='Portal' name="Portal" type='checkbox' id='Portal' checked={canvasOption.showPortal} onChange={e => handleCheckboxClick(e.target.checked, 'showPortal')} />
+
+                <RenderedMap mapId={map_id} canvasOption={canvasOption} />
             </Tab>
         </Tabs>
     )
@@ -257,7 +281,7 @@ const renderMapStats = (mapInfo) => {
 }
 
 const renderLabelledMapAndTable = (mapInfo) => {
-    if(!mapInfo.portal) return <></>
+    if (!mapInfo.portal) return <></>
     // console.log(mapInfo)
     return (
         <Accordion defaultActiveKey="null" className="mb-3">

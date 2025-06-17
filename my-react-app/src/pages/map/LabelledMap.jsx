@@ -102,3 +102,5 @@ export default function LabelledMap({ mapId, portals, miniMap }) {
     </div>
   );
 }
+
+
