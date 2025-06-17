@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { decode } from 'html-entities';
 
 import data_RenderMobOrigin from '../../../data/data_RenderMobOrigin.json';
@@ -7,6 +7,8 @@ import data_RenderObjOrigin from '../../../data/data_RenderObjOrigin.json';
 import data_RenderPortalOrigin from '../../../data/data_RenderPortalOrigin.json';
 import data_RenderReactorOrigin from '../../../data/data_RenderReactorOrigin.json';
 import data_RenderTileOrigin from '../../../data/data_RenderTileOrigin.json';
+
+import { portalPtValueToType } from './utility';
 
 const CDN_URL = `https://raw.githubusercontent.com/scotty66f/royals-map/refs/heads/main`
 const DOMAIN_URL = window.location.origin
@@ -23,9 +25,13 @@ export default function LabelledMap({ mapId, canvasOption }) {
   // get json
   useEffect(() => {
     const fetchAndUpdate = async () => {
-      const id = mapId.toString().padStart(9, '0')
-      const data = await fetchMapJSON(id)
-      setMapData(data)
+      try {
+        const id = mapId.toString().padStart(9, '0')
+        const data = await fetchMapJSON(id)
+        setMapData(data)
+      } catch (e) {
+        console.error(`Failed to fetch JSON : ${mapId}, ${e}`)
+      }
     }
     setIsReadyToRender(false)
     fetchAndUpdate()
@@ -42,9 +48,13 @@ export default function LabelledMap({ mapId, canvasOption }) {
       })
 
       const fetchTasks = fetchItems.map(async ({ url, key }) => {
-        if (key in loadImage) return  // slight optimisation
-        const img = await loadImage(url)
-        loadedImage[key] = img
+        if (key in loadedImage) return  // slight optimisation
+        try {
+          const img = await loadImage(url)
+          loadedImage[key] = img
+        } catch (e) {
+          console.error(`Failed to fetch image : ${url}`)
+        }
       })
       await Promise.all(fetchTasks)
       setIsReadyToRender(true)
@@ -55,51 +65,62 @@ export default function LabelledMap({ mapId, canvasOption }) {
   // render canvas
   useEffect(() => {
     if (!isReadyToRender) return
-    const map = mapData
-    const [mapWidth, mapHeight, offsetX, offsetY] = getMapGeometry(map)
-    if (!mapWidth || !mapHeight) throw new Error(`❌ Invalid canvas size`);
+    const renderCanvas = () => {
+      try {
 
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = mapWidth;
-    canvas.height = mapHeight;
+        const map = mapData
+        const [mapWidth, mapHeight, offsetX, offsetY] = getMapGeometry(map)
+        if (!mapWidth || !mapHeight) throw new Error(`Invalid canvas size`);
 
-    let drawList = generateDrawList(mapData)
-    drawList = filterByCanvasOption(drawList, canvasOption)
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = mapWidth;
+        canvas.height = mapHeight;
 
-    // sort by layer, then sort by type , then sort by Z value, smaller render first
-    drawList.sort((a, b) => {
-      if (a.layer !== b.layer) return a.layer - b.layer;
-      const typeA = getAssetPriority(a.type);
-      const typeB = getAssetPriority(b.type);
-      if (typeA !== typeB) return typeA - typeB;
-      return (a.z ?? 0) - (b.z ?? 0);
-    });
+        let drawList = generateDrawList(mapData)
 
-    for (const item of drawList) {
-      const img = loadCachedImage(item, loadedImage);
-      if (!img) continue;
+        if (!drawList.length) {
+          throw new Error('No item to render.');
+        }
 
-      let [drawX, drawY] = calculateItemDrawPosition(item, offsetX, offsetY);
+        drawList = filterByCanvasOption(drawList, canvasOption)
 
-      // draw
-      if (item.flip) {
-        ctx.save();
-        ctx.scale(-1, 1);
-        ctx.drawImage(img, -drawX - img.width, drawY);
-        ctx.restore();
-      } else {
-        ctx.drawImage(img, drawX, drawY);
+        // sort by layer, then sort by type , then sort by Z value, smaller render first
+        drawList.sort((a, b) => {
+          if (a.layer !== b.layer) return a.layer - b.layer;
+          const typeA = getAssetPriority(a.type);
+          const typeB = getAssetPriority(b.type);
+          if (typeA !== typeB) return typeA - typeB;
+          return (a.z ?? 0) - (b.z ?? 0);
+        });
+
+        for (const item of drawList) {
+          const img = loadCachedImage(item, loadedImage);
+          if (!img) continue;
+
+          let [drawX, drawY] = calculateItemDrawPosition(item, offsetX, offsetY);
+
+          // draw
+          if (item.flip) {
+            ctx.save();
+            ctx.scale(-1, 1);
+            ctx.drawImage(img, -drawX - img.width, drawY);
+            ctx.restore();
+          } else {
+            ctx.drawImage(img, drawX, drawY);
+          }
+        }
+
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          setImageData(url);
+        });
+      } catch (e) {
+        console.error(`❌ Failed to Render : ${e}`)
       }
     }
 
-    // 
-    if (!drawList.length) {
-      console.log(`❌ Not Rendered: ${mapId}`);
-    } else {
-      console.log('finish rendered')
-      setImageData(canvas.toDataURL('image/png'));
-    }
+    renderCanvas()
   }, [isReadyToRender, canvasOption])
 
   return (
@@ -118,30 +139,14 @@ export default function LabelledMap({ mapId, canvasOption }) {
 }
 
 //  LOAD AND CACHE
-const portalPtValueToType = {
-  0: 'sp',            // start point
-  1: 'pi',            // invisible
-  2: 'pv',            // visible
-  3: 'pc',            // collision
-  4: 'pg',            // changable
-  5: 'tp',            // town portal
-  6: 'ps',            // script
-  7: 'pgi',           // changable invisible
-  8: 'psi',           // script invisible
-  9: 'pcs',           // script collision
-  10: 'ph',           // hidden
-  11: 'psh',          // script hidden
-  12: 'pcj',          // vertical sprting
-  13: 'pci',          // custom impact spring
-  14: 'pcig',         // unknown PCIG
-}
+
 
 const loadImage = async (url) =>
   new Promise((resolve, reject) => {
     const img = new Image();
     img.crossOrigin = "anonymous"; // Needed for cross-origin drawing if needed
     img.onload = () => resolve(img);
-    img.onerror = console.error(`Failed to fetch image : ${url}`);
+    img.onerror = () => reject();
     img.src = url;
   });
 
@@ -168,6 +173,9 @@ const generateFetchURL = (item) => {
       return `${DOMAIN_URL}/images/monsters/${id}.png`
     case 'npc':
       id = item.id
+      if (data_RenderNpcOrigin?.[id]?.link) {
+        id = data_RenderNpcOrigin[id].link
+      }
       return `${DOMAIN_URL}/images/npcs/${id}.png`
     case 'reactor':
       // probably has link to other id
@@ -211,28 +219,28 @@ const loadCachedImage = (item, loadedImage) => {
 
 //  GET IMAGE ORIGIN OFFSET
 const getTileOrigin = (tS, u, no) => {
-  return data_RenderTileOrigin[tS][u][no]
+  return data_RenderTileOrigin[tS][u][no] || { x: 0, y: 0 }
 }
 
 const getObjOrigin = (oS, l0, l1, l2) => {
-  return data_RenderObjOrigin[oS][l0][l1][l2]
+  return data_RenderObjOrigin[oS][l0][l1][l2] || { x: 0, y: 0 }
 }
 
 const getReactorOrigin = (id) => {
-  return data_RenderReactorOrigin[id]
+  return data_RenderReactorOrigin[id] || { x: 0, y: 0 }
 }
 
 const getNpcOrigin = (id) => {
-  return data_RenderNpcOrigin[id]
+  return data_RenderNpcOrigin[id] || { x: 0, y: 0 }
 }
 
 const getMobOrigin = (id) => {
-  return data_RenderMobOrigin[id]
+  return data_RenderMobOrigin[id] || { x: 0, y: 0 }
 }
 
 const getPortalOrigin = (pt) => {
   const type = portalPtValueToType[pt]
-  return data_RenderPortalOrigin[type]
+  return data_RenderPortalOrigin[type] || { x: 0, y: 0 }
 }
 
 // RENDERING
@@ -265,7 +273,7 @@ const fetchMapJSON = async (mapId) => {
     }
     return parsed
   } catch (e) {
-    console.error(`Failed to fetch map JSON : ${e}`)
+    throw new Error(e)
   }
 }
 

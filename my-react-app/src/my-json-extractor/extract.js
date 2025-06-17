@@ -1,4 +1,4 @@
-import fs, { link } from "fs";
+import fs from "fs";
 import path from "path";
 import { decode } from "html-entities";
 
@@ -6,8 +6,7 @@ const mapJsonFolder = "C:/Users/User/Desktop/TO DEL/harepacker_dump/MapJson.wz";
 const mobJsonFolder = "C:/Users/User/Desktop/TO DEL/harepacker_dump/MobJson.wz";
 const npcJsonFolder = "C:/Users/User/Desktop/TO DEL/harepacker_dump/NpcJson.wz";
 const reactorJsonFolder = "C:/Users/User/Desktop/TO DEL/harepacker_dump/ReactorJson.wz";
-const rootFolder = "C:/Users/User/Desktop/TO DEL/harepacker_dump";
-const outputFolder = path.join(import.meta.dirname, 'jsonOutput')
+const outputFolder = path.join(import.meta.dirname)
 
 console.log(outputFolder)
 
@@ -144,7 +143,13 @@ const extractNpcOrigin = () => {
 
         const origin = content?.stand?.['0']?.origin || { _x: 0, _y: 0 }
 
-        obj[id] = { x: origin._x, y: origin._y }
+        if (content?.info?.link) {
+            const linkId = content.info.link._value
+            const linkedNpc = obj[linkId]
+            obj[id] = { ...linkedNpc, link: linkId }
+        } else {
+            obj[id] = { x: origin._x, y: origin._y }
+        }
     }
     const saveFileName = `data_RenderNpcOrigin.json`
     fs.writeFileSync(saveFileName, JSON.stringify(obj, null, '\t'))

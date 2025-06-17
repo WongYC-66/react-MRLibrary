@@ -83,8 +83,11 @@ export default function LabelledMap({ mapId, portals, miniMap }) {
         ctx.fillText(p.pn, labelX, labelY);
       });
 
-      // Save canvas to PNG
-      setImageData(canvas.toDataURL('image/png'));
+      // setImageData(canvas.toDataURL('image/png'));  // performance issue
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        setImageData(url);
+      });
     };
   }, [mapId, portals, miniMap]);
 

@@ -7,6 +7,9 @@ import data_MapRange from "../../../data/data_MapRange.json"
 import data_MapStats from "../../../data/data_MapStats.json"
 import data_MobMap from "../../../data/data_Mob_MapOnly.json"
 // 
+import RenderedMap from "./RenderedMap.jsx";
+import { useState } from 'react'
+// 
 export const generateMapLibrary = () => {
     const library = { ...data_Map }
 
@@ -91,63 +94,42 @@ export const filterMapList = ({ mapLibrary, searchParams }) => {
 }
 
 // 
-export const renderImageWithMapId = (mapId) => {
-    if (!mapId) return
+export const RenderImageWithMapId = ({ mapId }) => {
+    if (!mapId) return null;
 
-    const handleError = e => {
-        const fileName = `${String(mapId).padStart(9, 0)}.png`
-        const img = e.target
-        // find suitable image src from:
-        // 1: server file under /images/
-        // 2: rendered HD map by me
-        // 3: maplelegends
-        // 4: maplestory.io
-        // 5: maplestory.io
+    const [hasError, setHasError] = useState(false);
+    const fileName = `${String(mapId).padStart(9, '0')}.png`;
+    const imagePath = `/images/maps/${fileName}`; // Use forward slashes
 
-        if (img.getAttribute("myimgindex") === '0') {
-            img.setAttribute("myimgindex", "1")
-            img.src = `\\images\\maps\\${fileName}`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '1') {
-            img.setAttribute("myimgindex", "2")
-            img.src = `https://raw.githubusercontent.com/scotty66f/royals-rendered-map/refs/heads/main/Map/${fileName}`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '2') {
-            img.setAttribute("myimgindex", "3")
-            img.src = `https://maplelegends.com/static/images/lib/map/${fileName}`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '3') {
-            img.setAttribute("myimgindex", "4")
-            img.src = `https://maplestory.io/api/GMS/83/map/${Number(mapId)}/render`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '4') {
-            img.setAttribute("myimgindex", "5")
-            img.src = `https://maplestory.io/api/SEA/198/map/${Number(mapId)}/render`
-            return
-        }
-        if (img.getAttribute("myimgindex") === '5') {
-            img.setAttribute("myimgindex", "6")
-            img.src = "/error"
-            return
-        }
+    const canvasOption = {
+        showMob: false,
+        showNpc: false,
+        showReactor: false,
+        showPortal: false,
     }
 
-    const ImageComponent = <Image
-        id={`image-${mapId}`}
-        myimgindex="0"
-        src={`...`} // by default, make it trigger error
-        className="mw-50"
-        fluid
-        alt="Image not found"
-        onError={handleError} />
+    return (
+        <>
+            {hasError
+                ? <RenderedMap mapId={mapId} canvasOption={canvasOption} />
+                : <Image
+                    id={`image-${mapId}`}
+                    myimgindex="0"
+                    src={imagePath}
+                    className="mw-50"
+                    fluid
+                    alt="Image not found"
+                    onError={() => {
+                        console.error(`Failed to load image: ${imagePath}`);
+                        setHasError(true);
+                    }}
+                />
+            }
+        </>
+    );
+};
 
-    return ImageComponent
-}
-
+// obsolete
 export const renderHDImageWithMapId = (mapId) => {
     if (!mapId) return
 
@@ -305,6 +287,42 @@ export const addMonsterBookSpawn = (mapInfo) => {
     }
     // console.log(mapInfo)
     return mapInfo
+}
+
+export const portalPtValueToType = {
+    0: 'sp',            // start point
+    1: 'pi',            // invisible
+    2: 'pv',            // visible
+    3: 'pc',            // collision
+    4: 'pg',            // changable
+    5: 'tp',            // town portal
+    6: 'ps',            // script
+    7: 'pgi',           // changable invisible
+    8: 'psi',           // script invisible
+    9: 'pcs',           // script collision
+    10: 'ph',           // hidden
+    11: 'psh',          // script hidden
+    12: 'pcj',          // vertical sprting
+    13: 'pci',          // custom impact spring
+    14: 'pcig',         // unknown PCIG
+}
+
+export const portalPtValueToTypeName = {
+    0: 'start point',
+    1: 'invisible',
+    2: 'visible',
+    3: 'collision',
+    4: 'changable',
+    5: 'town portal',
+    6: 'script',
+    7: 'changable invisible',
+    8: 'script invisible',
+    9: 'script collision',
+    10: 'hidden',
+    11: 'script hidden',
+    12: 'vertical sprting',
+    13: 'custom impact spring',
+    14: 'unknown PCIG',
 }
 
 // 

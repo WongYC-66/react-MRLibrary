@@ -14,7 +14,7 @@ import FormBS from "react-bootstrap/Form"
 import LabelledMap from "./LabelledMap.jsx";
 import RenderedMap from "./RenderedMap.jsx";
 // 
-import { renderImageWithMapId, renderHDImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName, addMonsterBookSpawn } from "./utility.jsx"
+import { RenderImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName, addMonsterBookSpawn, portalPtValueToTypeName } from "./utility.jsx"
 
 import { renderImageWithMobId } from "../monster/utility.jsx"
 import { renderImageWithNPCId, convertNpcIdToName } from "../npc/utility.jsx"
@@ -80,6 +80,13 @@ export default function MapDetail() {
 
 const renderTableLeft = (mapInfo) => {
     if (!Object.keys(mapInfo).length) return <></>
+    const mapId = mapInfo.mapId
+    const canvasOption = {
+        showMob: false,
+        showNpc: false,
+        showPortal: false,
+        showReactor: false,
+    }
 
     return <tbody>
         {/* Street Name */}
@@ -88,7 +95,8 @@ const renderTableLeft = (mapInfo) => {
         </tr>
         {/* Map Image */}
         <tr>
-            <td className="bg-transparent">{renderHDImageWithMapId(mapInfo.mapId)}</td>
+            {/* <td className="bg-transparent">{renderHDImageWithMapId(mapInfo.mapId)}</td> */}
+            <td className="bg-transparent">{<RenderedMap mapId={mapId} canvasOption={canvasOption} />}</td>
         </tr>
         {/* Map Name */}
         <tr>
@@ -231,7 +239,7 @@ const renderPortalTable = (mapInfo) => {
                     <tr key={nextMapId}>
                         <td>
                             <Link to={convertMapIdToUrl(nextMapId)}>
-                                {renderImageWithMapId(nextMapId)}
+                                <RenderImageWithMapId mapId={nextMapId} />
                             </Link>
                         </td>
                         <td>
@@ -245,8 +253,6 @@ const renderPortalTable = (mapInfo) => {
         </Table>
     )
 }
-
-
 
 
 const renderMP3 = (audioName) => {
@@ -310,7 +316,7 @@ const renderLabelledMapAndTable = (mapInfo) => {
                             {mapInfo.portal.map(({ pn, pt, tm, tn, x, y }, index) =>
                                 <tr key={mapInfo.mapId + "-" + index + '-' + pn}>
                                     <td>{pn}</td>
-                                    <td>{pt}</td>
+                                    <td>{portalPtValueToTypeName[pt]}</td>
                                     <td>{tm}</td>
                                     <td>{tn}</td>
                                     <td>{x}</td>

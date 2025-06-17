@@ -8,7 +8,7 @@ import Table from "react-bootstrap/Table"
 import { updatePagination } from "../../components/Pagination.jsx"
 import {
     filterMapList,
-    renderImageWithMapId,
+    RenderImageWithMapId,
     convertMapIdToUrl,
     updateSearchResultCount,
     convertMapIdToName,
@@ -142,7 +142,7 @@ const mapCard = (map_id, obj) => {
 
                 <div className="mt-auto ms-auto" style={{ maxWidth: '150px' }}>
                     {<Link to={convertMapIdToUrl(map_id)}>
-                        {renderImageWithMapId(map_id)}
+                        <RenderImageWithMapId mapId={map_id} />
                     </Link>}
                 </div>
             </td>
