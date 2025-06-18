@@ -1,9 +1,14 @@
 # react-MRLibrary
 
 1. cd /my-react-app
-2. npm install
-3. npm run dev
-4. access web at http://localhost:5173/
+1. npm install
+1. npm run dev
+1. access web at http://localhost:5173/
+
+# to test API
+1. npm install -g netlify-cli
+1. netlify dev
+1. access API at http://localhost:8888/api/v1
 
 <hr>
 
@@ -187,6 +192,7 @@ png
 
 ## Log - June 17 2025
 1. done - Add : Real Time Map Renderer
+2. done - fix : Map page where NPC inaccurate /mob error, UI of NPC use grid-auto
 
 Next:
 - show path from map to map with graph data stuctrue ?
