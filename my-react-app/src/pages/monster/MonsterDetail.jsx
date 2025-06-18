@@ -234,7 +234,7 @@ const dropsOverlayWrapper = ({ id, name, desc }) => {
 }
 
 const renderMobStats = (mobInfo) => {
-    console.log(mobInfo)
+    // console.log(mobInfo)
     let unwanted = new Set(["spawnMap", "drops", "id", "name"])
     let keys = Object.keys(mobInfo)
         .filter(k => !unwanted.has(k))

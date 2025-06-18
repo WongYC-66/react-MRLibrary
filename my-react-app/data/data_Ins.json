@@ -1,7 +1,7 @@
 {
   "3010000": {
     "name": "The Relaxer",
-    "desc": "Catch your breath and relax by sitting on this chair to recover 50 HP every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "Catch your breath and relax by sitting on this chair to recover 50 HP every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010001": {
     "name": "Sky-blue Wooden Chair",
@@ -45,11 +45,11 @@
   },
   "3010011": {
     "name": "Amorian Relaxer",
-    "desc": "A chair crafted by Jacob. Recovers 75 HP every 10 seconds.\\n<b>Cannot be traded.</b>"
+    "desc": "A chair crafted by Jacob. Recovers 75 HP every 10 seconds.\\n#cCannot be traded.#"
   },
   "3010012": {
     "name": "Warrior Throne",
-    "desc": "A powerful chair used often on the battlefield. Recovers 60 HP every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "A powerful chair used often on the battlefield. Recovers 60 HP every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010013": {
     "name": "Beach Chair",
@@ -236,7 +236,7 @@
     "desc": "A chair makes you feel like you're sitting in the lap of luxury. Also recovers 50 HP every 10 seconds."
   },
   "3010061": {
-    "name": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;",
+    "name": "Underneath the Maple Tree…",
     "desc": "A white chair created to celebrate Maple Story's 5th Anniversary. Sit on it to restore 35 HP and 10 MP every 10 seconds."
   },
   "3010062": {
@@ -349,7 +349,7 @@
   },
   "3010101": {
     "name": "Christmas Gift Box",
-    "desc": "A huge X-mas Gift Box big enough to fit a grownup. It has a message that reads, &quot;I am here for you.&quot; Sitting in it will recover 50 HP and MP every 10 seconds."
+    "desc": "A huge X-mas Gift Box big enough to fit a grownup. It has a message that reads, \"I am here for you.\" Sitting in it will recover 50 HP and MP every 10 seconds."
   },
   "3010102": {
     "name": "Happy Stars",
@@ -413,7 +413,7 @@
   },
   "3010117": {
     "name": "Magic Book Chair",
-    "desc": "Take a break by sitting on this floating chair to recover 50 HP and 30 MP every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "Take a break by sitting on this floating chair to recover 50 HP and 30 MP every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010118": {
     "name": "Musical Note Chair",
@@ -645,7 +645,7 @@
   },
   "3010194": {
     "name": "Campfire Chair",
-    "desc": "A campfire used for warmth and protection when camping outside.\\n<b>Recovers 60 HP and 30 MP every 10 seconds.</b>"
+    "desc": "A campfire used for warmth and protection when camping outside.\\n#cRecovers 60 HP and 30 MP every 10 seconds.#"
   },
   "3010196": {
     "name": "Bubble Bath Chair",
@@ -736,8 +736,8 @@
     "desc": "Sit on this chair to feel the warmth from the furnace. You can recover 40 HP and 20 MP every 10 seconds."
   },
   "3010233": {
-    "desc": "Bunny chair that recovers HP every 10 seconds.",
-    "name": "Bunny Chair"
+    "name": "Bunny Chair",
+    "desc": "Bunny chair that recovers HP every 10 seconds."
   },
   "3010234": {
     "name": "Giant HP Bottle",
@@ -861,7 +861,7 @@
   },
   "3010289": {
     "name": "Storytime Chair",
-    "desc": "Story time with grandma is always so relaxing, but watch out...impostors could show up at any moment! Restores 50 HP and 50 MP every 10 seconds. <b>Caution: Users may experience extreme old people smell.</b>"
+    "desc": "Story time with grandma is always so relaxing, but watch out...impostors could show up at any moment! Restores 50 HP and 50 MP every 10 seconds. #cCaution: Users may experience extreme old people smell.#"
   },
   "3010290": {
     "name": "Demon Throne",
@@ -993,7 +993,7 @@
   },
   "3010375": {
     "name": "Mysterious Power Elixir Chair",
-    "desc": "Power Elixir chair emitting mysterious light. Let's you recover HP &amp; MP slightly faster than from other potion chairs. Restores 110 HP and 60 MP every 10 seconds. "
+    "desc": "Power Elixir chair emitting mysterious light. Let's you recover HP & MP slightly faster than from other potion chairs. Restores 110 HP and 60 MP every 10 seconds. "
   },
   "3010376": {
     "name": "Passionate Red Potion Chair",
@@ -1116,7 +1116,7 @@
     "desc": "The chair Kyrin made for the Chivalrous pirates. Sit on it to restore 50 HP every 10 secs."
   },
   "3010410": {
-    "name": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;",
+    "name": "Elize’s Lap",
     "desc": "Restores 50 HP and 50 MP every 10 seceonds."
   },
   "3010411": {
@@ -1129,7 +1129,7 @@
   },
   "3010419": {
     "name": "Sengoku Command Post",
-    "desc": "Commanding warriors love to dole out orders from atop this chair. \\n<b>Restores 60 HP and 30 MP every 10 seconds.</b>"
+    "desc": "Commanding warriors love to dole out orders from atop this chair. \\n#cRestores 60 HP and 30 MP every 10 seconds.#"
   },
   "3010421": {
     "name": "Big Money Chair",
@@ -1205,15 +1205,15 @@
   },
   "3010444": {
     "name": "Pink Gamepad Chair",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "Girl gamers are real, and they’re made of marshmallows, and they smell like unicorns. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010445": {
     "name": "Bright Night Owl Chair",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "Just hoo’in around. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010446": {
     "name": "Skin Empress Chair",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "The chair isn’t made of skin, but it sure is nice on yours! Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010447": {
     "name": "Sleepy Bird Chair",
@@ -1221,7 +1221,7 @@
   },
   "3010449": {
     "name": "Ten Week Stay Chair",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "What’s better than recreating that time you broke your spine in half at band camp? Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010450": {
     "name": "Elize Chair",
@@ -1360,156 +1360,156 @@
     "desc": "These adorable penguins are singing a Christmas carol just for you! Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010532": {
-    "desc": "This Sky-blue Wooden Chair is only specially sold in Lith Harbor. Recovers 35 HP every 10 seconds.",
-    "name": "Sky-blue Wooden Chair"
+    "name": "Sky-blue Wooden Chair",
+    "desc": "This Sky-blue Wooden Chair is only specially sold in Lith Harbor. Recovers 35 HP every 10 seconds."
   },
   "3010533": {
-    "desc": "A beach chair that's laid out in the cool shades of the Ariant palm trees. Recovers 40 HP and 20 MP every 10 seconds.",
-    "name": "Palm Tree Beach Chair"
+    "name": "Palm Tree Beach Chair",
+    "desc": "A beach chair that's laid out in the cool shades of the Ariant palm trees. Recovers 40 HP and 20 MP every 10 seconds."
   },
   "3010534": {
-    "desc": "Sit on this adorable desert rabbit to recover 60 HP every 10 seconds.",
-    "name": "Male Desert Rabbit Cushion"
+    "name": "Male Desert Rabbit Cushion",
+    "desc": "Sit on this adorable desert rabbit to recover 60 HP every 10 seconds."
   },
   "3010535": {
-    "desc": "A velvet sofa with a lot of pizazz. Recovers 60 HP every 10 seconds.",
-    "name": "Navy Velvet Sofa"
+    "name": "Navy Velvet Sofa",
+    "desc": "A velvet sofa with a lot of pizazz. Recovers 60 HP every 10 seconds."
   },
   "3010536": {
-    "desc": "An ergonomic red chair. Recovers 60 HP every 10 seconds.",
-    "name": "Red Designer Chair"
+    "name": "Red Designer Chair",
+    "desc": "An ergonomic red chair. Recovers 60 HP every 10 seconds."
   },
   "3010537": {
-    "desc": "A Soul Teddy Chair. Recovers 60 HP every 10 seconds.",
-    "name": "Soul Teddy Chair"
+    "name": "Soul Teddy Chair",
+    "desc": "A Soul Teddy Chair. Recovers 60 HP every 10 seconds."
   },
   "3010538": {
-    "desc": "A mechanical chair that recovers HP every 10 seconds.",
-    "name": "Mechanical Chair"
+    "name": "Mechanical Chair",
+    "desc": "A mechanical chair that recovers HP every 10 seconds."
   },
   "3010539": {
-    "desc": "It's a little on the hot side, but at least it comes with a wicked red dragon! Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Red Dragon Chair"
+    "name": "Red Dragon Chair",
+    "desc": "It's a little on the hot side, but at least it comes with a wicked red dragon! Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010541": {
-    "desc": "Everybody's a billionaire in this chair! Recovers 100 HP and 50 MP every 10 seconds.",
-    "name": "Big Money Chair"
+    "name": "Big Money Chair",
+    "desc": "Everybody's a billionaire in this chair! Recovers 100 HP and 50 MP every 10 seconds."
   },
   "3010543": {
-    "desc": "Smells a whole lot like sweat and cotton candy... MAGIC! Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Pink Bean's Magic Chair"
+    "name": "Pink Bean's Magic Chair",
+    "desc": "Smells a whole lot like sweat and cotton candy... MAGIC! Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010544": {
-    "desc": "Filled with refreshing fruit, guaranteed to soak your bottom! Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Tropical Cooler Chair"
+    "name": "Tropical Cooler Chair",
+    "desc": "Filled with refreshing fruit, guaranteed to soak your bottom! Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010545": {
-    "desc": "You're going to get a little wet and you'll probably be covered in fur. Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Rainy Fox Chair"
+    "name": "Rainy Fox Chair",
+    "desc": "You're going to get a little wet and you'll probably be covered in fur. Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010546": {
-    "desc": "Cool people always wear black. ALWAYS. Even at night on their bicycles. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Black Dragon Devil Throne"
+    "name": "Black Dragon Devil Throne",
+    "desc": "Cool people always wear black. ALWAYS. Even at night on their bicycles. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010547": {
-    "desc": "You just feel so much smarter than everybody else. Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Magical Book"
+    "name": "Magical Book",
+    "desc": "You just feel so much smarter than everybody else. Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010548": {
-    "desc": "A lovely chair for lovely couples. Lonely people may also sit in it, but it won't be fun. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Beautiful Music Chair"
+    "name": "Beautiful Music Chair",
+    "desc": "A lovely chair for lovely couples. Lonely people may also sit in it, but it won't be fun. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010551": {
-    "desc": "A chair with an overwhelming stare. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Devil Black Dog Throne"
+    "name": "Devil Black Dog Throne",
+    "desc": "A chair with an overwhelming stare. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010552": {
-    "desc": "Gives lousy hugs, but you get what you pay for. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Free Hug Cat Chair"
+    "name": "Free Hug Cat Chair",
+    "desc": "Gives lousy hugs, but you get what you pay for. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010553": {
-    "desc": "A truly devilish sheep. Napping not advised. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Devil Sheep Chair"
+    "name": "Devil Sheep Chair",
+    "desc": "A truly devilish sheep. Napping not advised. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010554": {
-    "desc": "Girl gamers are real, and they're made of marshmallows, and they smell like unicorns. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Pink Gamepad Chair"
+    "name": "Pink Gamepad Chair",
+    "desc": "Girl gamers are real, and they're made of marshmallows, and they smell like unicorns. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010555": {
-    "desc": "Just hoo'in around. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Bright Night Owl Chair"
+    "name": "Bright Night Owl Chair",
+    "desc": "Just hoo'in around. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010556": {
-    "desc": "The chair isn't made of skin, but it sure is nice on yours! Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Skin Empress Chair"
+    "name": "Skin Empress Chair",
+    "desc": "The chair isn't made of skin, but it sure is nice on yours! Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010557": {
-    "desc": "Drowse among the baby birds free of all your worldly concerns.",
-    "name": "Sleepy Bird Chair"
+    "name": "Sleepy Bird Chair",
+    "desc": "Drowse among the baby birds free of all your worldly concerns."
   },
   "3010558": {
-    "desc": "Makes you feel clean. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Bubble Bath Chair"
+    "name": "Bubble Bath Chair",
+    "desc": "Makes you feel clean. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010559": {
-    "desc": "It is the cracked egg that recovers 50 HP and 50 MP every 10 seconds, if your butt is in the right place.",
-    "name": "Dragon Egg Chair"
+    "name": "Dragon Egg Chair",
+    "desc": "It is the cracked egg that recovers 50 HP and 50 MP every 10 seconds, if your butt is in the right place."
   },
   "3010560": {
-    "desc": "A swing that is moved by a baby dragon. Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Baby Dragon Swing"
+    "name": "Baby Dragon Swing",
+    "desc": "A swing that is moved by a baby dragon. Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010561": {
-    "desc": "Challenge the limits of your nerves. You could get high-fived at any moment! Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Lord Zakum Throne"
+    "name": "Lord Zakum Throne",
+    "desc": "Challenge the limits of your nerves. You could get high-fived at any moment! Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010562": {
-    "desc": "What's better than recreating that time you broke your spine in half at band camp? Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Ten Week Stay Chair"
+    "name": "Ten Week Stay Chair",
+    "desc": "What's better than recreating that time you broke your spine in half at band camp? Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010563": {
-    "desc": "A pretty moon cushion. Recovers 60 HP every 10 seconds.",
-    "name": "Moon and Star Cushion"
+    "name": "Moon and Star Cushion",
+    "desc": "A pretty moon cushion. Recovers 60 HP every 10 seconds."
   },
   "3010564": {
-    "desc": "Old guys tell the best stories. Recovers 100 HP and 50 MP every 10 seconds. ",
-    "name": "Arkarium Storytime Chair"
+    "name": "Arkarium Storytime Chair",
+    "desc": "Old guys tell the best stories. Recovers 100 HP and 50 MP every 10 seconds. "
   },
   "3010565": {
-    "desc": "A chair that embodies the huge popularity of Cygnus. Recovers 100 HP and 50 MP every 10 seconds. ",
-    "name": "Oh My Empress"
+    "name": "Oh My Empress",
+    "desc": "A chair that embodies the huge popularity of Cygnus. Recovers 100 HP and 50 MP every 10 seconds. "
   },
   "3010566": {
-    "desc": "How does a Demon Slayer celebrate a birthday? Do they even have them? 100 HP and 50 MP restored every 10 seconds. ",
-    "name": "Demonic Birthday"
+    "name": "Demonic Birthday",
+    "desc": "How does a Demon Slayer celebrate a birthday? Do they even have them? 100 HP and 50 MP restored every 10 seconds. "
   },
   "3010567": {
-    "desc": "Enjoy a special performance by the one and only Mercedes! Recovers 100 HP and 50 MP every 10 seconds. ",
-    "name": "Elluel Concerto"
+    "name": "Elluel Concerto",
+    "desc": "Enjoy a special performance by the one and only Mercedes! Recovers 100 HP and 50 MP every 10 seconds. "
   },
   "3010568": {
-    "desc": "Sit on this chair to become more beautiful with Hilla! Recovers 100 HP and 50 MP every 10 seconds.",
-    "name": "Hilla's Style Maker"
+    "name": "Hilla's Style Maker",
+    "desc": "Sit on this chair to become more beautiful with Hilla! Recovers 100 HP and 50 MP every 10 seconds."
   },
   "3010569": {
-    "desc": "Sit on this drill machine chair to recover 50 HP and MP every 10 seconds. ",
-    "name": "Drill Machine Chair"
+    "name": "Drill Machine Chair",
+    "desc": "Sit on this drill machine chair to recover 50 HP and MP every 10 seconds. "
   },
   "3010570": {
-    "desc": "Sit on this Mini Shinsoo chair to recover 50 HP and MP every 10 seconds. ",
-    "name": "Mini Shinsoo Chair"
+    "name": "Mini Shinsoo Chair",
+    "desc": "Sit on this Mini Shinsoo chair to recover 50 HP and MP every 10 seconds. "
   },
   "3010571": {
-    "desc": "They're seriously fun guys! They are also fungi. That was the joke. Recovers 100 HP and 50 MP every 10 seconds. ",
-    "name": "Shroom Buddy Chair"
+    "name": "Shroom Buddy Chair",
+    "desc": "They're seriously fun guys! They are also fungi. That was the joke. Recovers 100 HP and 50 MP every 10 seconds. "
   },
   "3010572": {
-    "desc": "FINALLY, you can be Elize's best friend. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Elize Chair"
+    "name": "Elize Chair",
+    "desc": "FINALLY, you can be Elize's best friend. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010573": {
-    "desc": "A luxurious toilet chair. Don't forget to put the seat down! Recovers 100 HP and 50 MP every 10 seconds. ",
-    "name": "The Porcelain Throne"
+    "name": "The Porcelain Throne",
+    "desc": "A luxurious toilet chair. Don't forget to put the seat down! Recovers 100 HP and 50 MP every 10 seconds. "
   },
   "3010574": {
     "name": "Starry Night Chair",
@@ -1541,7 +1541,7 @@
   },
   "3010595": {
     "name": "Know-How Chair",
-    "desc": "Tot knows how to teach, and this chair keeps it going forever and ever and ever.\\nIf you sit in Know-How Chair, 50 HP and 50 MP are recovered every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "Tot knows how to teach, and this chair keeps it going forever and ever and ever.\\nIf you sit in Know-How Chair, 50 HP and 50 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010596": {
     "name": "Kite Cushion",
@@ -1565,19 +1565,19 @@
   },
   "3010606": {
     "name": "Unpainted Masterpiece Chair",
-    "desc": "What is a blank canvas, but an invitation to dazzle?\\nIf you sit in Unpainted Masterpiece Chair, 10 HP and 10 MP are recovered every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "What is a blank canvas, but an invitation to dazzle?\\nIf you sit in Unpainted Masterpiece Chair, 10 HP and 10 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010607": {
     "name": "Sort of a Painting Chair",
-    "desc": "This painting could have gotten a little more love.\\nIf you sit in Sort of a Painting Chair, 30 HP and 30 MP are recovered every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "This painting could have gotten a little more love.\\nIf you sit in Sort of a Painting Chair, 30 HP and 30 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010608": {
     "name": "Ultimate Masterpiece Chair",
-    "desc": "Holy moly look at this work! The line weight, the brush work, the chiaroscuro lighting!\\nIf you sit in Ultimate Masterpiece Chair, 50 HP and 50 MP are recovered every 10 seconds.\\n<b>Cannot be traded or dropped.</b>"
+    "desc": "Holy moly look at this work! The line weight, the brush work, the chiaroscuro lighting!\\nIf you sit in Ultimate Masterpiece Chair, 50 HP and 50 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
   },
   "3010609": {
     "name": "All the Single Ladies",
-    "desc": "Calling all the single ladies! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "Calling all the single ladies! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3010615": {
     "name": "Nao Resting",
@@ -1589,15 +1589,15 @@
   },
   "3010631": {
     "name": "Arowana Chair",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "Giant Golden Arowana Chair。Recover 200 HP and MP when seated."
   },
   "3010634": {
-    "desc": "Recovers 50 HP/MP every 10 seconds.",
-    "name": "Hero's Chair-Aran"
+    "name": "Hero's Chair-Aran",
+    "desc": "Recovers 50 HP/MP every 10 seconds."
   },
   "3010635": {
-    "desc": "Oh my gosh, did you see how cute she was?!! I THINK SHE TOUCHED MY HAND! Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Angelic Adoration Chair"
+    "name": "Angelic Adoration Chair",
+    "desc": "Oh my gosh, did you see how cute she was?!! I THINK SHE TOUCHED MY HAND! Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010643": {
     "name": "5th Anniversary Cake",
@@ -1612,8 +1612,8 @@
     "desc": "Stick your behind on this 10th Anniversary cake to rest and recover 50 HP and 50 MP every 10 seconds."
   },
   "3010646": {
-    "desc": "Feel like a king or queen by sitting on this 10th Anniversary Throne. Recover 50 HP and 50 MP every 10 seconds.",
-    "name": "10th Anniversary Throne"
+    "name": "10th Anniversary Throne",
+    "desc": "Feel like a king or queen by sitting on this 10th Anniversary Throne. Recover 50 HP and 50 MP every 10 seconds."
   },
   "3010659": {
     "name": "Bus Stop Chair",
@@ -1636,8 +1636,8 @@
     "desc": "Sit in this observatory chair and gaze at the beautiful night sky. Oh, there's a shooting star shaped like Arkarium! Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010683": {
-    "desc": "This curious chair is full of familiar-looking toys. Recovers 50 HP and 50 MP every 10 seconds.",
-    "name": "Scary Toy Gift"
+    "name": "Scary Toy Gift",
+    "desc": "This curious chair is full of familiar-looking toys. Recovers 50 HP and 50 MP every 10 seconds."
   },
   "3010698": {
     "name": "Gollux Chair",
@@ -1657,11 +1657,11 @@
   },
   "3010705": {
     "name": "Slime Launcher Chair",
-    "desc": "Spring Bunny is using a dough roller to bounce Slimes into space. <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "Spring Bunny is using a dough roller to bounce Slimes into space. #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3010721": {
     "name": "Comic Book Lounger",
-    "desc": "It's always a good time for comic books! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "It's always a good time for comic books! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3010726": {
     "name": "Thanksgiving Turkey",
@@ -1709,7 +1709,7 @@
   },
   "3010769": {
     "name": "Spooky Bath Chair",
-    "undefined": ""
+    "desc": ""
   },
   "3010797": {
     "name": "New Year's with Mercedes!",
@@ -1753,7 +1753,7 @@
   },
   "3010841": {
     "name": "Marry Me Chair",
-    "desc": "<b>Restores 200 HP and 200 MP every 10 seconds.</b>\\r\\nDesigned by China MapleStory player Liu Liu Jiang for MapleStory's 9th Anniversary."
+    "desc": "#cRestores 200 HP and 200 MP every 10 seconds.#\\r\\nDesigned by China MapleStory player Liu Liu Jiang for MapleStory's 9th Anniversary."
   },
   "3010848": {
     "name": "Red Carpet Chair",
@@ -1772,8 +1772,8 @@
     "desc": "Legends say Princess No sat in this chair. I wonder why they say such things? Recovers 100 HP and MP every 10 seconds."
   },
   "3010867": {
-    "desc": "You can become best friends with Cygnus. Recovers 50 HP and 50 MP every 10 seconds. ",
-    "name": "Cygnus' Best Friend"
+    "name": "Cygnus' Best Friend",
+    "desc": "You can become best friends with Cygnus. Recovers 50 HP and 50 MP every 10 seconds. "
   },
   "3010878": {
     "name": "Soccer Fan Chair",
@@ -1821,7 +1821,7 @@
   },
   "3010974": {
     "name": "Jawdestroyer Chair",
-    "desc": "Too big to eat, but you&amp;apos;re always welcome to try. \\r\\n<b>Restores 60 HP and 60 MP every 10 seconds.</b>"
+    "desc": "Too big to eat, but you&apos;re always welcome to try. \\r\\n#cRestores 60 HP and 60 MP every 10 seconds.#"
   },
   "3010996": {
     "name": "Red Christmas Heater",
@@ -1868,12 +1868,12 @@
     "desc": "The Fox God watches over those who take care of their friends! Sit with a buddy to get a special effect. Recovers 60 HP every 10 seconds."
   },
   "3012008": {
-    "desc": "If you sit in chair that looks like a harvest god, 60 HP is recovered every 10 seconds.",
-    "name": "Komainu"
+    "name": "Komainu",
+    "desc": "If you sit in chair that looks like a harvest god, 60 HP is recovered every 10 seconds."
   },
   "3012009": {
-    "desc": "Sit solo amongst Christmas holly, or sit near a friend for a Christmas snow globe to appear around the two of you.",
-    "name": "Buddy Snow Globe Chair"
+    "name": "Buddy Snow Globe Chair",
+    "desc": "Sit solo amongst Christmas holly, or sit near a friend for a Christmas snow globe to appear around the two of you."
   },
   "3012010": {
     "name": "Half-Heart Chocolate Cake Chair",
@@ -1984,8 +1984,8 @@
     "desc": "You can drink hot cocoa with the cutest sheep in the whole wide world! \\r\\n#cRecovers 100 HP and 100 MP every 10 seconds."
   },
   "3015035": {
-    "desc": "Grandma Benson simply created too many pies during Thanksgiving, and recycled the leftovers into this epic throne.",
-    "name": "Pumpkin Pie Throne"
+    "name": "Pumpkin Pie Throne",
+    "desc": "Grandma Benson simply created too many pies during Thanksgiving, and recycled the leftovers into this epic throne."
   },
   "3015045": {
     "name": "Shear Wool Chair",
@@ -2013,7 +2013,7 @@
   },
   "3015112": {
     "name": "Chicken Dream Chair",
-    "desc": "Chicken all day, everyday! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "Chicken all day, everyday! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3015174": {
     "name": "Hidden Henesys Chair",
@@ -2085,7 +2085,7 @@
   },
   "3015425": {
     "name": "Monkey Percussion Chair",
-    "desc": "Become a Professional Percussionist with Monkey! \\r\\n#cRecover 50 MP&amp;HP every 10 sec."
+    "desc": "Become a Professional Percussionist with Monkey! \\r\\n#cRecover 50 MP&HP every 10 sec."
   },
   "3015446": {
     "name": "Easter Egg Nest Chair",
@@ -2101,11 +2101,11 @@
   },
   "3015541": {
     "name": "Pink Bean Ice Cream Umbrella",
-    "desc": "<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3015618": {
     "name": "Forest Sanctuary Chair",
-    "desc": "All is well when you&amp;apos;re with your forest friends.\\r\\n<b>Restores 100 HP and 50 MP every 10 seconds.</b>"
+    "desc": "All is well when you&apos;re with your forest friends.\\r\\n#cRestores 100 HP and 50 MP every 10 seconds.#"
   },
   "3015628": {
     "name": "Spooky Creeps Chair",
@@ -2125,7 +2125,7 @@
   },
   "3015666": {
     "name": "Chick Keeper Chair",
-    "desc": "These cute chickadees are so fun to cuddle! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "These cute chickadees are so fun to cuddle! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3015694": {
     "name": "Pink Bean on Ice Chair",
@@ -2157,7 +2157,7 @@
   },
   "3015747": {
     "name": "Pajama Party Chair",
-    "desc": "Today&amp;apos;s only plan: laying all comfy with my stuffies and chattering away! \\r\\n<b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "Today&apos;s only plan: laying all comfy with my stuffies and chattering away! \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3015748": {
     "name": "Holiday Latte Chair",
@@ -2165,7 +2165,7 @@
   },
   "3015759": {
     "name": "Nova Enchanter Chair",
-    "desc": "This chair radiates the power of the Nova. \\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>\\nDesigned by the Taiwan MapleStory player aixidiya."
+    "desc": "This chair radiates the power of the Nova. \\n#cRestores 50 HP and 50 MP every 10 seconds.#\\nDesigned by the Taiwan MapleStory player aixidiya."
   },
   "3015814": {
     "name": "Chocolate Bunny Chair",
@@ -2173,19 +2173,19 @@
   },
   "3015818": {
     "name": "Diabolical Chair",
-    "desc": "Look out! It's probably a trap! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "Look out! It's probably a trap! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3015848": {
     "name": "Deadly Biteysnek Chair",
-    "desc": "A group of hungry Deadly Biteysneks.\\r\\n<b>&quot;Don't heck with them Deadly Biteysneks. Just boop their snoot 'n make a run for it!&quot; - Head Prospector Maynard</b>\\r\\nRecovers 50 HP and 50 MP every 10 seconds. "
+    "desc": "A group of hungry Deadly Biteysneks.\\r\\n#c\"Don't heck with them Deadly Biteysneks. Just boop their snoot 'n make a run for it!\" - Head Prospector Maynard#\\r\\nRecovers 50 HP and 50 MP every 10 seconds. "
   },
   "3015935": {
     "name": "Mirror Chair",
-    "desc": "<b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3015962": {
-    "desc": "You unraveled the hidden truth in the Swamp of Memory.",
-    "name": "Chaotic Morass Chair"
+    "name": "Chaotic Morass Chair",
+    "desc": "You unraveled the hidden truth in the Swamp of Memory."
   },
   "3015994": {
     "name": "Pepe Orange Mushroom Chair.",
@@ -2193,47 +2193,47 @@
   },
   "3017022": {
     "name": "Crimson Stirge Cube Chair",
-    "desc": "A chair obtained from the Monster Collection.\\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "A chair obtained from the Monster Collection.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017028": {
     "name": "Halloween Skull Cube Chair",
-    "desc": "It's a Halloween Skull Cube Chair.\\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "It's a Halloween Skull Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017029": {
     "name": "Halloween Zombie Cube Chair",
-    "desc": "It's a Halloween Zombie Cube Chair.\\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "It's a Halloween Zombie Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017030": {
     "name": "Halloween Vampire Cube Chair",
-    "desc": "It's a Halloween Vampire Cube Chair.\\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "It's a Halloween Vampire Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017031": {
     "name": "Halloween Pumpkin Cube Chair",
-    "desc": "It's a Halloween Pumpkin Cube Chair.\\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "It's a Halloween Pumpkin Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017032": {
     "name": "Halloween Cat Cube Chair",
-    "desc": "It's a Halloween Cat Cube Chair.\\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "It's a Halloween Cat Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017033": {
     "name": "Dorothy Cube Chair",
-    "desc": "A chair obtained from the Monster Collection. \\r\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "A chair obtained from the Monster Collection. \\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017046": {
     "name": "Chinese Zodiac Cube Chair: Tiger",
-    "desc": "A chair commemorating the Zodiac Tiger! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "A chair commemorating the Zodiac Tiger! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017047": {
-    "desc": "A chair commemorating the Zodiac Rabbit! <b>Restores 50 HP and 50 MP every 10 seconds.</b>",
-    "name": "Chinese Zodiac Cube Chair: Rabbit"
+    "name": "Chinese Zodiac Cube Chair: Rabbit",
+    "desc": "A chair commemorating the Zodiac Rabbit! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017048": {
-    "desc": "A chair commemorating the Zodiac Dragon! <b>Restores 50 HP and 50 MP every 10 seconds.</b>",
-    "name": "Chinese Zodiac Cube Chair: Dragon"
+    "name": "Chinese Zodiac Cube Chair: Dragon",
+    "desc": "A chair commemorating the Zodiac Dragon! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017049": {
     "name": "Chinese Zodiac Cube Chair: Snake",
-    "desc": "A chair commemorating the Zodiac Snake! <b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "A chair commemorating the Zodiac Snake! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017056": {
     "name": "Lunar New Year Xing Cube Chair",
@@ -2253,7 +2253,7 @@
   },
   "3018003": {
     "name": "Sea Lion Igloo Chair",
-    "desc": "It's an igloo chair complete with adorable sea lion! \\r\\n<b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "It's an igloo chair complete with adorable sea lion! \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018006": {
     "name": "Kaworu Duet Chair",
@@ -2273,11 +2273,11 @@
   },
   "3018138": {
     "name": "Android Companion Chair",
-    "desc": "Go on an outing with a beloved <b>Android.# \\n #cRestores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "Go on an outing with a beloved #cAndroid.# \\n #cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018140": {
     "name": "Scarboss Chair",
-    "desc": "A must-have chair for the true Scarboss fan. \\n<b>Restores 100 HP and 100 MP every 10 seconds.</b> \\nDesigned by the China MapleStory player FaithReaperX."
+    "desc": "A must-have chair for the true Scarboss fan. \\n#cRestores 100 HP and 100 MP every 10 seconds.# \\nDesigned by the China MapleStory player FaithReaperX."
   },
   "3018222": {
     "name": "Forest Tranquility Chair: Table",
@@ -2285,23 +2285,23 @@
   },
   "3018224": {
     "name": "Window on the Farm Chair",
-    "desc": "Enjoy the view of the farm from this convenient window. \\r\\n<b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "Enjoy the view of the farm from this convenient window. \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018236": {
     "name": "Ghastly Snowglobe Chair",
-    "desc": "This eerie snowglobe captures the haunting essence of Halloween night.\\r\\n<b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "This eerie snowglobe captures the haunting essence of Halloween night.\\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018247": {
     "name": "Exclusive Holiday Party Chair",
-    "desc": "You have been invited to a small but very special holiday party. <b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "You have been invited to a small but very special holiday party. #cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018259": {
     "name": "Lunar New Year For One Chair",
-    "desc": "Spending the Lunar New Year alone at home isn't so bad. <b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "Spending the Lunar New Year alone at home isn't so bad. #cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018270": {
-    "desc": "A thorough soak in semi-sweet chocolate is bound to brighten anyone&amp;apos;s day!\\n<b>Restores 100 HP and 100 MP every 10 seconds.</b>",
-    "name": "Chocolate Spa"
+    "name": "Chocolate Spa",
+    "desc": "A thorough soak in semi-sweet chocolate is bound to brighten anyone&apos;s day!\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018361": {
     "name": "Resplendent Summer Night Chair",
@@ -2309,11 +2309,11 @@
   },
   "3018428": {
     "name": "Giant Teddy Bear Chair",
-    "desc": "Sink into the soft and comfy security of this Giant Teddy Bear chair. Everyone deserves a break sometimes.\\n<b>Restores 50 HP and 50 MP every 10 seconds.</b>"
+    "desc": "Sink into the soft and comfy security of this Giant Teddy Bear chair. Everyone deserves a break sometimes.\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3018436": {
     "name": "Do It Again! Chair",
-    "desc": "N-no... I don't wanna... \\n<b>Restores 100 HP and 100 MP every 10 seconds.</b>"
+    "desc": "N-no... I don't wanna... \\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
   "3018520": {
     "name": "Green Pea",
@@ -2344,32 +2344,32 @@
     "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Inugami'."
   },
   "3019848": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'IronShichika'.",
-    "name": "Cuddling With Eliza"
+    "name": "Cuddling With Eliza",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'IronShichika'."
   },
   "3019849": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Marrry'.",
-    "name": "Omok Against Taggrin"
+    "name": "Omok Against Taggrin",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Marrry'."
   },
   "3019850": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'ilyssia'.",
-    "name": "Blackboard"
+    "name": "Blackboard",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'ilyssia'."
   },
   "3019851": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'JinJinChuChu'.",
-    "name": "I'm Just A Grass Standee"
+    "name": "I'm Just A Grass Standee",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'JinJinChuChu'."
   },
   "3019852": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Doton'.",
-    "name": "Snow Buddies"
+    "name": "Snow Buddies",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Doton'."
   },
   "3019853": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'CitizenLenny'.",
-    "name": "Picture Day"
+    "name": "Picture Day",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'CitizenLenny'."
   },
   "3019854": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Shanni'.",
-    "name": "Cozy Homework Time"
+    "name": "Cozy Homework Time",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Shanni'."
   },
   "3019855": {
     "name": "Goldfish Scooping",
@@ -2380,20 +2380,20 @@
     "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Eirudy'."
   },
   "3019857": {
-    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'RoseGardener'.",
-    "name": "Papulatus' Last Apprentice"
+    "name": "Papulatus' Last Apprentice",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'RoseGardener'."
   },
   "3019858": {
     "name": "Lycanthrope's bench",
     "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'LichWiz'."
   },
   "3019859": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Haoshoku'.",
-    "name": "Horntail Tamer"
+    "name": "Horntail Tamer",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Haoshoku'."
   },
   "3019860": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Alimi'.",
-    "name": "Chair of Life V2"
+    "name": "Chair of Life V2",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Alimi'."
   },
   "3019861": {
     "name": "It's Morphin Time",
@@ -2420,32 +2420,32 @@
     "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Hamil'."
   },
   "3019867": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'iTechG'.",
-    "name": "Nature Vibe"
+    "name": "Nature Vibe",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'iTechG'."
   },
   "3019868": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Crowley'.",
-    "name": "Bob Ross"
+    "name": "Bob Ross",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Crowley'."
   },
   "3019869": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Inusama'.",
-    "name": "Great Grey Wolf Chair"
+    "name": "Great Grey Wolf Chair",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Inusama'."
   },
   "3019870": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'sax707070'.",
-    "name": "Violet Crystal"
+    "name": "Violet Crystal",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'sax707070'."
   },
   "3019871": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Evan'.",
-    "name": "Eggceptional Hatching Technique"
+    "name": "Eggceptional Hatching Technique",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Evan'."
   },
   "3019872": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'.",
-    "name": "The Heartstopper"
+    "name": "The Heartstopper",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'."
   },
   "3019873": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Tim'.",
-    "name": "Bamboo-zled"
+    "name": "Bamboo-zled",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Tim'."
   },
   "3019874": {
     "name": "Alcoholic",
@@ -2608,96 +2608,96 @@
     "desc": "Let the robot commander, Vergamot, watch over you. Recovers 50 HP, 50 MP every 10 seconds."
   },
   "3019914": {
-    "desc": "You'll be on the edge of your seat with this riveting chair! Restores 100 HP and 100 MP every 10 seconds.",
-    "name": "Movie Night Chair"
+    "name": "Movie Night Chair",
+    "desc": "You'll be on the edge of your seat with this riveting chair! Restores 100 HP and 100 MP every 10 seconds."
   },
   "3019915": {
-    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Yakamoz'.",
-    "name": "Subspace Crack"
+    "name": "Subspace Crack",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Yakamoz'."
   },
   "3019916": {
-    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Devastated'.",
-    "name": "Always With Me"
+    "name": "Always With Me",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Devastated'."
   },
   "3019917": {
-    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Succubus'.",
-    "name": "Quest Specialist"
+    "name": "Quest Specialist",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Succubus'."
   },
   "3019918": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'.",
-    "name": "It's Sparkling!"
+    "name": "It's Sparkling!",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'."
   },
   "3019919": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Inugami'.",
-    "name": "Ducky's Ramen"
+    "name": "Ducky's Ramen",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Inugami'."
   },
   "3019920": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'wrosie'.",
-    "name": "Sweet Sugar Shop"
+    "name": "Sweet Sugar Shop",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'wrosie'."
   },
   "3019921": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'CitizenLenny'.",
-    "name": "A Bigger Splash"
+    "name": "A Bigger Splash",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'CitizenLenny'."
   },
   "3019922": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'BigCat'.",
-    "name": "Kitty and Husky"
+    "name": "Kitty and Husky",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'BigCat'."
   },
   "3019923": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'bamh'.",
-    "name": "The Piece"
+    "name": "The Piece",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'bamh'."
   },
   "3019924": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'yeyicheng'.",
-    "name": "Skeleton Corps"
+    "name": "Skeleton Corps",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'yeyicheng'."
   },
   "3019925": {
-    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Becca'.",
-    "name": "Garden of Three Colors"
+    "name": "Garden of Three Colors",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Becca'."
   },
   "3019926": {
-    "desc": "Take a little piece of Lith Harbor with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Lith Harbor Chair"
+    "name": "Lith Harbor Chair",
+    "desc": "Take a little piece of Lith Harbor with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019927": {
-    "desc": "Take a little piece of Perion with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Perion Chair"
+    "name": "Perion Chair",
+    "desc": "Take a little piece of Perion with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019928": {
-    "desc": "Take a little piece of Ellinia with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Ellinia Chair"
+    "name": "Ellinia Chair",
+    "desc": "Take a little piece of Ellinia with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019929": {
-    "desc": "Take a little piece of Henesys with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Henesys Chair"
+    "name": "Henesys Chair",
+    "desc": "Take a little piece of Henesys with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019930": {
-    "desc": "Take a little piece of Kerning City with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Kerning City Chair"
+    "name": "Kerning City Chair",
+    "desc": "Take a little piece of Kerning City with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019931": {
-    "desc": "Take a little piece of Nautilus with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Nautilus Chair"
+    "name": "Nautilus Chair",
+    "desc": "Take a little piece of Nautilus with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019932": {
-    "desc": "Take a little piece of Sleepywood with you wherever you go in the Maple World! <b>Restores 200 HP and 200 MP every 10 seconds.</b>",
-    "name": "Sleepywood Chair"
+    "name": "Sleepywood Chair",
+    "desc": "Take a little piece of Sleepywood with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
   },
   "3019933": {
     "name": "11th Anniversary Chair",
-    "desc": "Take a rest on this special 11th Anniversary chair. <b>Restores 110 HP and 110 MP every 10 seconds.</b>"
+    "desc": "Take a rest on this special 11th Anniversary chair. #cRestores 110 HP and 110 MP every 10 seconds.#"
   },
   "3019934": {
     "name": "Haunted Mansion Chair",
-    "desc": "Rest your legs with this spooky haunted mansion chair\\r\\n<b> Restores 50 HP and MP every 10 seconds.</b> "
+    "desc": "Rest your legs with this spooky haunted mansion chair\\r\\n#c Restores 50 HP and MP every 10 seconds.# "
   },
   "3019935": {
     "name": "Pumpkin Bed Chair",
-    "desc": "Have a snooze in this cozy pumpkin bed chair.\\r\\n<b>Restores 50 HP and MP every 10 seconds.</b>"
+    "desc": "Have a snooze in this cozy pumpkin bed chair.\\r\\n#cRestores 50 HP and MP every 10 seconds.#"
   },
   "3019936": {
-    "desc": "Take a rest on this special 12th Anniversary throne. <b>Restores 120 HP and 120 MP every 10 seconds.</b>",
-    "name": "12th Anniversary Throne"
+    "name": "12th Anniversary Throne",
+    "desc": "Take a rest on this special 12th Anniversary throne. #cRestores 120 HP and 120 MP every 10 seconds.#"
   },
   "3990000": {
     "name": "Red No. 1",
@@ -2780,228 +2780,228 @@
     "desc": "A green #0 to decorate the tree."
   },
   "3990020": {
-    "name": "Red &quot; + &quot;",
-    "desc": "A red &quot; + &quot; to decorate the tree."
+    "name": "Red \" + \"",
+    "desc": "A red \" + \" to decorate the tree."
   },
   "3990021": {
-    "name": "Red &quot; - &quot;",
-    "desc": "A red &quot; - &quot; to decorate the tree."
+    "name": "Red \" - \"",
+    "desc": "A red \" - \" to decorate the tree."
   },
   "3990022": {
-    "name": "Green &quot; + &quot;",
-    "desc": "A green &quot; + &quot; to decorate the tree."
+    "name": "Green \" + \"",
+    "desc": "A green \" + \" to decorate the tree."
   },
   "3990023": {
-    "name": "Green &quot; - &quot;",
-    "desc": "A green &quot; - &quot; to decorate the tree."
+    "name": "Green \" - \"",
+    "desc": "A green \" - \" to decorate the tree."
   },
   "3991000": {
-    "name": "Red &quot;A&quot;",
-    "desc": "A red &quot;A&quot; to decorate the tree."
+    "name": "Red \"A\"",
+    "desc": "A red \"A\" to decorate the tree."
   },
   "3991001": {
-    "name": "Red &quot;B&quot;",
-    "desc": "A red &quot;B&quot; to decorate the tree."
+    "name": "Red \"B\"",
+    "desc": "A red \"B\" to decorate the tree."
   },
   "3991002": {
-    "name": "Red &quot;C&quot;",
-    "desc": "A red &quot;C&quot; to decorate the tree."
+    "name": "Red \"C\"",
+    "desc": "A red \"C\" to decorate the tree."
   },
   "3991003": {
-    "name": "Red &quot;D&quot;",
-    "desc": "A red &quot;D&quot; to decorate the tree."
+    "name": "Red \"D\"",
+    "desc": "A red \"D\" to decorate the tree."
   },
   "3991004": {
-    "name": "Red &quot;E&quot;",
-    "desc": "A red &quot;E&quot; to decorate the tree."
+    "name": "Red \"E\"",
+    "desc": "A red \"E\" to decorate the tree."
   },
   "3991005": {
-    "name": "Red &quot;F&quot;",
-    "desc": "A red &quot;F&quot; to decorate the tree."
+    "name": "Red \"F\"",
+    "desc": "A red \"F\" to decorate the tree."
   },
   "3991006": {
-    "name": "Red &quot;G&quot;",
-    "desc": "A red &quot;G&quot; to decorate the tree."
+    "name": "Red \"G\"",
+    "desc": "A red \"G\" to decorate the tree."
   },
   "3991007": {
-    "name": "Red &quot;H&quot;",
-    "desc": "A red &quot;H&quot; to decorate the tree."
+    "name": "Red \"H\"",
+    "desc": "A red \"H\" to decorate the tree."
   },
   "3991008": {
-    "name": "Red &quot;I&quot;",
-    "desc": "A red &quot;I&quot; to decorate the tree."
+    "name": "Red \"I\"",
+    "desc": "A red \"I\" to decorate the tree."
   },
   "3991009": {
-    "name": "Red &quot;J&quot;",
-    "desc": "A red &quot;J&quot; to decorate the tree."
+    "name": "Red \"J\"",
+    "desc": "A red \"J\" to decorate the tree."
   },
   "3991010": {
-    "name": "Red &quot;K&quot;",
-    "desc": "A red &quot;K&quot; to decorate the tree."
+    "name": "Red \"K\"",
+    "desc": "A red \"K\" to decorate the tree."
   },
   "3991011": {
-    "name": "Red &quot;L&quot;",
-    "desc": "A red &quot;L&quot; to decorate the tree."
+    "name": "Red \"L\"",
+    "desc": "A red \"L\" to decorate the tree."
   },
   "3991012": {
-    "name": "Red &quot;M&quot;",
-    "desc": "A red &quot;M&quot; to decorate the tree."
+    "name": "Red \"M\"",
+    "desc": "A red \"M\" to decorate the tree."
   },
   "3991013": {
-    "name": "Red &quot;N&quot;",
-    "desc": "A red &quot;N&quot; to decorate the tree."
+    "name": "Red \"N\"",
+    "desc": "A red \"N\" to decorate the tree."
   },
   "3991014": {
-    "name": "Red &quot;O&quot;",
-    "desc": "A red &quot;O&quot; to decorate the tree."
+    "name": "Red \"O\"",
+    "desc": "A red \"O\" to decorate the tree."
   },
   "3991015": {
-    "name": "Red &quot;P&quot;",
-    "desc": "A red &quot;P&quot; to decorate the tree."
+    "name": "Red \"P\"",
+    "desc": "A red \"P\" to decorate the tree."
   },
   "3991016": {
-    "name": "Red &quot;Q&quot;",
-    "desc": "A red &quot;Q&quot; to decorate the tree."
+    "name": "Red \"Q\"",
+    "desc": "A red \"Q\" to decorate the tree."
   },
   "3991017": {
-    "name": "Red &quot;R&quot;",
-    "desc": "A red &quot;R&quot; to decorate the tree."
+    "name": "Red \"R\"",
+    "desc": "A red \"R\" to decorate the tree."
   },
   "3991018": {
-    "name": "Red &quot;S&quot;",
-    "desc": "A red &quot;S&quot; to decorate the tree."
+    "name": "Red \"S\"",
+    "desc": "A red \"S\" to decorate the tree."
   },
   "3991019": {
-    "name": "Red &quot;T&quot;",
-    "desc": "A red &quot;T&quot; to decorate the tree."
+    "name": "Red \"T\"",
+    "desc": "A red \"T\" to decorate the tree."
   },
   "3991020": {
-    "name": "Red &quot;U&quot;",
-    "desc": "A red &quot;U&quot; to decorate the tree."
+    "name": "Red \"U\"",
+    "desc": "A red \"U\" to decorate the tree."
   },
   "3991021": {
-    "name": "Red &quot;V&quot;",
-    "desc": "A red &quot;V&quot; to decorate the tree."
+    "name": "Red \"V\"",
+    "desc": "A red \"V\" to decorate the tree."
   },
   "3991022": {
-    "name": "Red &quot;W&quot;",
-    "desc": "A red &quot;W&quot; to decorate the tree."
+    "name": "Red \"W\"",
+    "desc": "A red \"W\" to decorate the tree."
   },
   "3991023": {
-    "name": "Red &quot;X&quot;",
-    "desc": "A red &quot;X&quot; to decorate the tree."
+    "name": "Red \"X\"",
+    "desc": "A red \"X\" to decorate the tree."
   },
   "3991024": {
-    "name": "Red &quot;Y&quot;",
-    "desc": "A red &quot;Y&quot; to decorate the tree."
+    "name": "Red \"Y\"",
+    "desc": "A red \"Y\" to decorate the tree."
   },
   "3991025": {
-    "name": "Red &quot;Z&quot;",
-    "desc": "A red &quot;Z&quot; to decorate the tree."
+    "name": "Red \"Z\"",
+    "desc": "A red \"Z\" to decorate the tree."
   },
   "3991026": {
-    "name": "Green &quot;A&quot;",
-    "desc": "A green &quot;A&quot; to decorate the tree."
+    "name": "Green \"A\"",
+    "desc": "A green \"A\" to decorate the tree."
   },
   "3991027": {
-    "name": "Green &quot;B&quot;",
-    "desc": "A green &quot;B&quot; to decorate the tree."
+    "name": "Green \"B\"",
+    "desc": "A green \"B\" to decorate the tree."
   },
   "3991028": {
-    "name": "Green &quot;C&quot;",
-    "desc": "A green &quot;C&quot; to decorate the tree."
+    "name": "Green \"C\"",
+    "desc": "A green \"C\" to decorate the tree."
   },
   "3991029": {
-    "name": "Green &quot;D&quot;",
-    "desc": "A green &quot;D&quot; to decorate the tree."
+    "name": "Green \"D\"",
+    "desc": "A green \"D\" to decorate the tree."
   },
   "3991030": {
-    "name": "Green &quot;E&quot;",
-    "desc": "A green &quot;E&quot; to decorate the tree."
+    "name": "Green \"E\"",
+    "desc": "A green \"E\" to decorate the tree."
   },
   "3991031": {
-    "name": "Green &quot;F&quot;",
-    "desc": "A green &quot;F&quot; to decorate the tree."
+    "name": "Green \"F\"",
+    "desc": "A green \"F\" to decorate the tree."
   },
   "3991032": {
-    "name": "Green &quot;G&quot;",
-    "desc": "A green &quot;G&quot; to decorate the tree."
+    "name": "Green \"G\"",
+    "desc": "A green \"G\" to decorate the tree."
   },
   "3991033": {
-    "name": "Green &quot;H&quot;",
-    "desc": "A green &quot;H&quot; to decorate the tree."
+    "name": "Green \"H\"",
+    "desc": "A green \"H\" to decorate the tree."
   },
   "3991034": {
-    "name": "Green &quot;I&quot;",
-    "desc": "A green &quot;I&quot; to decorate the tree."
+    "name": "Green \"I\"",
+    "desc": "A green \"I\" to decorate the tree."
   },
   "3991035": {
-    "name": "Green &quot;J&quot;",
-    "desc": "A green &quot;J&quot; to decorate the tree."
+    "name": "Green \"J\"",
+    "desc": "A green \"J\" to decorate the tree."
   },
   "3991036": {
-    "name": "Green &quot;K&quot;",
-    "desc": "A green &quot;K&quot; to decorate the tree."
+    "name": "Green \"K\"",
+    "desc": "A green \"K\" to decorate the tree."
   },
   "3991037": {
-    "name": "Green &quot;L&quot;",
-    "desc": "A green &quot;L&quot; to decorate the tree."
+    "name": "Green \"L\"",
+    "desc": "A green \"L\" to decorate the tree."
   },
   "3991038": {
-    "name": "Green &quot;M&quot;",
-    "desc": "A green &quot;M&quot; to decorate the tree."
+    "name": "Green \"M\"",
+    "desc": "A green \"M\" to decorate the tree."
   },
   "3991039": {
-    "name": "Green &quot;N&quot;",
-    "desc": "A green &quot;N&quot; to decorate the tree."
+    "name": "Green \"N\"",
+    "desc": "A green \"N\" to decorate the tree."
   },
   "3991040": {
-    "name": "Green &quot;O&quot;",
-    "desc": "A green &quot;O&quot; to decorate the tree."
+    "name": "Green \"O\"",
+    "desc": "A green \"O\" to decorate the tree."
   },
   "3991041": {
-    "name": "Green &quot;P&quot;",
-    "desc": "A green &quot;P&quot; to decorate the tree."
+    "name": "Green \"P\"",
+    "desc": "A green \"P\" to decorate the tree."
   },
   "3991042": {
-    "name": "Green &quot;Q&quot;",
-    "desc": "A green &quot;Q&quot; to decorate the tree."
+    "name": "Green \"Q\"",
+    "desc": "A green \"Q\" to decorate the tree."
   },
   "3991043": {
-    "name": "Green &quot;R&quot;",
-    "desc": "A green &quot;R&quot; to decorate the tree."
+    "name": "Green \"R\"",
+    "desc": "A green \"R\" to decorate the tree."
   },
   "3991044": {
-    "name": "Green &quot;S&quot;",
-    "desc": "A green &quot;S&quot; to decorate the tree."
+    "name": "Green \"S\"",
+    "desc": "A green \"S\" to decorate the tree."
   },
   "3991045": {
-    "name": "Green &quot;T&quot;",
-    "desc": "A green &quot;T&quot; to decorate the tree."
+    "name": "Green \"T\"",
+    "desc": "A green \"T\" to decorate the tree."
   },
   "3991046": {
-    "name": "Green &quot;U&quot;",
-    "desc": "A green &quot;U&quot; to decorate the tree."
+    "name": "Green \"U\"",
+    "desc": "A green \"U\" to decorate the tree."
   },
   "3991047": {
-    "name": "Green &quot;V&quot;",
-    "desc": "A green &quot;V&quot; to decorate the tree."
+    "name": "Green \"V\"",
+    "desc": "A green \"V\" to decorate the tree."
   },
   "3991048": {
-    "name": "Green &quot;W&quot;",
-    "desc": "A green &quot;W&quot; to decorate the tree."
+    "name": "Green \"W\"",
+    "desc": "A green \"W\" to decorate the tree."
   },
   "3991049": {
-    "name": "Green &quot;X&quot;",
-    "desc": "A green &quot;X&quot; to decorate the tree."
+    "name": "Green \"X\"",
+    "desc": "A green \"X\" to decorate the tree."
   },
   "3991050": {
-    "name": "Green &quot;Y&quot;",
-    "desc": "A green &quot;Y&quot; to decorate the tree."
+    "name": "Green \"Y\"",
+    "desc": "A green \"Y\" to decorate the tree."
   },
   "3991051": {
-    "name": "Green &quot;Z&quot;",
-    "desc": "A green &quot;Z&quot; to decorate the tree."
+    "name": "Green \"Z\"",
+    "desc": "A green \"Z\" to decorate the tree."
   },
   "3992000": {
     "name": "Santa Ornament",
@@ -3188,104 +3188,104 @@
     "desc": "A red luck sack with 'luck' written on it."
   },
   "3994000": {
-    "name": "Wooden Alphabet &quot;A&quot;",
-    "desc": "An alphabet &quot;A&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"A\"",
+    "desc": "An alphabet \"A\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994001": {
-    "name": "Wooden Alphabet &quot;E&quot;",
-    "desc": "An alphabet &quot;E&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"E\"",
+    "desc": "An alphabet \"E\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994002": {
-    "name": "Wooden Alphabet &quot;I&quot;",
-    "desc": "An alphabet &quot;I&quot; made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+    "name": "Wooden Alphabet \"I\"",
+    "desc": "An alphabet \"I\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
   },
   "3994003": {
-    "name": "Wooden Alphabet &quot;L&quot;",
-    "desc": "An alphabet &quot;L&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"L\"",
+    "desc": "An alphabet \"L\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994004": {
-    "name": "Wooden Alphabet &quot;N&quot;",
-    "desc": "An alphabet &quot;N&quot; made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+    "name": "Wooden Alphabet \"N\"",
+    "desc": "An alphabet \"N\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
   },
   "3994005": {
-    "name": "Wooden Alphabet &quot;O&quot;",
-    "desc": "An alphabet &quot;O&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"O\"",
+    "desc": "An alphabet \"O\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994006": {
-    "name": "Wooden Alphabet &quot;P&quot;",
-    "desc": "An alphabet &quot;P&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"P\"",
+    "desc": "An alphabet \"P\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994007": {
-    "name": "Wooden Alphabet &quot;R&quot;",
-    "desc": "An alphabet &quot;R&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"R\"",
+    "desc": "An alphabet \"R\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994008": {
-    "name": "Wooden Alphabet &quot;T&quot;",
-    "desc": "An alphabet &quot;T&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"T\"",
+    "desc": "An alphabet \"T\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994009": {
-    "name": "Wooden Alphabet &quot;X&quot;",
-    "desc": "An alphabet &quot;X&quot; made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+    "name": "Wooden Alphabet \"X\"",
+    "desc": "An alphabet \"X\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
   },
   "3994010": {
-    "name": "Wooden Alphabet &quot;Y&quot;",
-    "desc": "An alphabet &quot;Y&quot; made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Wooden Alphabet \"Y\"",
+    "desc": "An alphabet \"Y\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994011": {
-    "name": "Wooden Alphabet &quot;Z&quot;",
-    "desc": "An alphabet &quot;Z&quot; made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+    "name": "Wooden Alphabet \"Z\"",
+    "desc": "An alphabet \"Z\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
   },
   "3994012": {
-    "name": "Special &quot;M&quot;",
-    "desc": "A special alphabet &quot;M&quot;. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Special \"M\"",
+    "desc": "A special alphabet \"M\". Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994013": {
-    "name": "Special &quot;S&quot;",
-    "desc": "A special alphabet &quot;S&quot;. Gather up other alphabets, and bring them all to the Maple Administrator."
+    "name": "Special \"S\"",
+    "desc": "A special alphabet \"S\". Gather up other alphabets, and bring them all to the Maple Administrator."
   },
   "3994014": {
-    "name": "Special &quot;W&quot;",
-    "desc": "A special alphabet &quot;W&quot;. Gather up other alphabets, and bring them all to the GM to..."
+    "name": "Special \"W\"",
+    "desc": "A special alphabet \"W\". Gather up other alphabets, and bring them all to the GM to..."
   },
   "3994015": {
     "name": "Wooden Alphabet C",
-    "undefined": ""
+    "desc": ""
   },
   "3994016": {
     "name": "Wooden Alphabet H",
-    "undefined": ""
+    "desc": ""
   },
   "3994017": {
     "name": "Alphabet A",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet A. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994018": {
     "name": "Alphabet E",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet E. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994019": {
     "name": "Alphabet H",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet H. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994020": {
     "name": "Alphabet N",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet N. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994021": {
     "name": "Alphabet P",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet P. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994022": {
     "name": "Alphabet R",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet R. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994023": {
     "name": "Alphabet W",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet W. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994024": {
     "name": "Alphabet Y",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An alphabet Y. Collect other alphabets and hand them to Maple Administrator to…"
   },
   "3994085": {
     "name": "Admin's Candle",
@@ -3465,6 +3465,6 @@
   },
   "3995000": {
     "name": ".",
-    "undefined": ""
+    "desc": ""
   }
 }

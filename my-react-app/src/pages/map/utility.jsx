@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image"
 import data_Map from "../../../data/data_Map.json"
 import data_MapRange from "../../../data/data_MapRange.json"
 import data_MapStats from "../../../data/data_MapStats.json"
-import data_MobMap from "../../../data/data_Mob_MapOnly.json"
+import data_MB_Maps from "../../../data/data_MB_Maps.json"
 // 
 import RenderedMap from "./RenderedMap.jsx";
 import { useState } from 'react'
@@ -272,11 +272,15 @@ export const addMonsterBookSpawn = (mapInfo) => {
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
     let currMapId = Number(mapInfo.mapId)
+    mapInfo.mob = Object.entries(mapInfo.mob).reduce((obj, [mobId, count]) => {
+        obj[Number(mobId)] = count
+        return obj
+    }, {})
     const seenMobId = new Set(Object.keys(mapInfo?.mob || {}))
 
-    for (let mobId in data_MobMap) {
+    for (let mobId in data_MB_Maps) {
         if (seenMobId.has(mobId)) continue
-        let mapIdList = data_MobMap[mobId].map(Number)
+        let mapIdList = data_MB_Maps[mobId].map(Number)
         if (mapIdList.includes(currMapId)) {
             // add boss into spawn
             mapInfo.mob = {

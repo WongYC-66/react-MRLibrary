@@ -11,7 +11,6 @@ import Accordion from 'react-bootstrap/Accordion';
 
 // 
 import {
-    renderImageWithNPCId,
     renderItemImageWrapper,
     convertAreaCodeToName,
     questIdToName,
@@ -22,6 +21,8 @@ import {
     generateNPCLink,
     convertQuestParentNameToUrl
 } from "./utility.jsx"
+
+import { renderImageWithNPCId, } from "../npc/utility.jsx"
 
 import { renderImageWithMobId, itemIdToNavUrl } from "../monster/utility.jsx"
 
@@ -309,7 +310,7 @@ const renderReward = (rewards, randomRewards, totalProp) => {
                         : obj.type === 'nextQuest'
                             ? <li key={'check' + obj.id + i}>
                                 {obj.type} :
-                                <Link to={`../id=${obj.count.slice(1, -1)}`}>{questIdToName(obj.count.slice(1, -1))} </Link>
+                                <Link to={`../id=${obj.count}`}> {questIdToName(obj.count)} </Link>
                             </li>
                             : <li key={'reward' + obj.id + i}>
                                 {obj.type} : {obj.count}

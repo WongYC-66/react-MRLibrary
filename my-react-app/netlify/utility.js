@@ -7,13 +7,13 @@ import data_Ins from "../data/data_Ins.json" assert { type: 'json' };
 import data_Etc from "../data/data_Etc.json" assert { type: 'json' };
 // 
 import data_Mob from "../data/data_Mob.json" assert { type: 'json' };
-import data_MB from "../data/data_MB.json" assert { type: 'json' };
+import data_MB_Drops from "../data/data_MB_Drops.json" assert { type: 'json' };
 // 
 import data_Gacha from "../data/data_Gacha.json" assert { type: 'json' };
 // 
 import data_MobStats from "../data/data_MobStats.json" assert { type: 'json' };
 import data_MapMobCount from "../data/data_MapMobCount.json" assert { type: 'json' };
-import data_MobMap from "../data/data_Mob_MapOnly.json" assert { type: 'json' };
+import data_MB_Maps from "../data/data_MB_Maps.json" assert { type: 'json' };
 // 
 import data_Skill from "../data/data_Skill.json" assert { type: 'json' };
 import data_SkillStats from "../data/data_SkillStats.json" assert { type: 'json' };
@@ -451,8 +451,8 @@ export const addGachaLoc = (returnEquip) => {
 export const generateItemDropLibrary = () => {
     // [[mobId, Set()], ...]
     let itemIdToMobId = {}
-    for (let mobId in data_MB) {
-        for (let itemId of data_MB[mobId]) {
+    for (let mobId in data_MB_Drops) {
+        for (let itemId of data_MB_Drops[mobId]) {
             if (!(itemId in itemIdToMobId)) {
                 itemIdToMobId[itemId] = []
             }
@@ -558,9 +558,9 @@ const addMapCategoryToMob = (mobLibrary) => {
     // there is a problem, boss-type mob not inside data_MapMobCount
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
-    for (let mobId in data_MobMap) {
+    for (let mobId in data_MB_Maps) {
         if (!mobLibrary[mobId]) continue        // skip, mobId not exist
-        data_MobMap[mobId].forEach(mapId => {
+        data_MB_Maps[mobId].forEach(mapId => {
             if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
             addMapTagToMob(mobId, mapId)
         })
@@ -572,7 +572,7 @@ export const generateMobInfo = (mobId) => {
         ...data_MobStats[mobId],
         id: mobId,
         name: data_Mob[mobId],
-        drops: data_MB[mobId],
+        drops: data_MB_Drops[mobId],
         spawnMap: getSpawnMap(mobId)
     }
 }
@@ -580,7 +580,7 @@ export const generateMobInfo = (mobId) => {
 export const addHasMobDrop = (mobInfo) => {
     return {
         ...mobInfo,
-        drops: (mobInfo.id in data_MB)
+        drops: (mobInfo.id in data_MB_Drops)
     }
 }
 
@@ -600,7 +600,7 @@ const getSpawnMap = (targetMobId) => {
     // there is a problem, boss-type mob not inside data_MapMobCount
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
-    let monsterBookLocationArr = data_MobMap[targetMobId]
+    let monsterBookLocationArr = data_MB_Maps[targetMobId]
     if (monsterBookLocationArr) {
         monsterBookLocationArr.forEach(mapId => {
             if (seen_mapId.has(mapId)) return
@@ -1767,9 +1767,9 @@ export const addMonsterBookSpawn = (returnMap) => {
     let currMapId = Number(returnMap.id)
     const seenMobId = new Set(Object.keys(returnMap?.mob || {}))
 
-    for (let mobId in data_MobMap) {
+    for (let mobId in data_MB_Maps) {
         if (seenMobId.has(mobId)) continue
-        let mapIdList = data_MobMap[mobId].map(Number)
+        let mapIdList = data_MB_Maps[mobId].map(Number)
         if (mapIdList.includes(currMapId)) {
             // add boss into spawn
             returnMap.mob = {
@@ -1861,7 +1861,7 @@ export const filterQuestList = ({ questLibrary, searchParams }) => {
                 'hero': '6',
             }
 
-            return QuestInfo.area === locationToAreaCode[location]
+            return QuestInfo.area == locationToAreaCode[location]
         })
         // sort list by  number of search term matches, most matched at first
         .map(([_id, obj]) => {

@@ -117,7 +117,7 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
 
     const handleError = e => {
         // console.log("trigger handleError")
-        const fileName = `${itemId.padStart(8, 0)}.png`
+        const fileName = `${itemId.toString().padStart(8, 0)}.png`
         const img = e.target
         // find suitable image src from:
         // 1: server file under /images/

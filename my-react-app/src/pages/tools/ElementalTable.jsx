@@ -13,8 +13,8 @@ import { mapCategory, findMapCategoryByMapId } from "../map/utility.jsx"
 
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
-import data_mapMobCount from "../../../data/data_MapMobCount.json"
-import data_mobMap from "../../../data/data_Mob_MapOnly.json"
+import data_MapMobCount from "../../../data/data_MapMobCount.json"
+import data_MB_Maps from "../../../data/data_MB_Maps.json"
 
 export default function ElementalTable() {
     const [mobLibrary, setMobLibrary] = useState({})
@@ -31,12 +31,12 @@ export default function ElementalTable() {
             const mapIdToCategory = {}  //  '100000000' => 'Henesys'
 
             // data from inside data_MapMobCount (map.wz)
-            for (let mapId in data_mapMobCount) {
+            for (let mapId in data_MapMobCount) {
                 if (!(mapId in mapIdToCategory)) {
                     mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
                 }
 
-                Object.keys(data_mapMobCount[mapId]).forEach(mobId => {
+                Object.keys(data_MapMobCount[mapId]).forEach(mobId => {
                     if (!data_mobStats[mobId]) return
                     if (!data_mobStats[mobId].mapCategory) {
                         data_mobStats[mobId].mapCategory = new Set()
@@ -48,9 +48,9 @@ export default function ElementalTable() {
             // there is a problem, boss-type mob not inside data_MapMobCount
             // combine data from monsterbook together then (string.wz)
             // might have bugs for LKC mobs
-            for (let mobId in data_mobMap) {
+            for (let mobId in data_MB_Maps) {
                 if (!data_mobStats[mobId]) continue
-                data_mobMap[mobId].forEach(mapId => {
+                data_MB_Maps[mobId].forEach(mapId => {
                     if (!(mapId in mapIdToCategory)) {
                         mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
                     }

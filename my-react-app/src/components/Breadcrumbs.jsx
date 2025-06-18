@@ -36,7 +36,7 @@ export default function Breadcrumbs() {
         // generate category name and url from equipId
         let weaponCategory = equipIdToCategory(id)[2]  // subCategory
         let filterKey = weaponCategoryToFilterKey(weaponCategory)
-        let symbolObj = <LinkContainer to={{ pathname: "/weapon", search: `?page=1&job=0&category=${filterKey}&order=id&sort=ascending&cosmetic=null&search=` }} >
+        let symbolObj = <LinkContainer to={{ pathname: "/weapon", search: `?page=1&job=0&category=${filterKey}&order=id&sort=ascending&cosmetic=null&search=` }} key={'symbolObj'}>
             <Breadcrumb.Item> {weaponCategory.toLowerCase()} </Breadcrumb.Item>
         </LinkContainer >
         crumbs.splice(1, 0, symbolObj)

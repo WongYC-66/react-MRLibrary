@@ -20,7 +20,7 @@ import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
 
 import data_mob from "../../../data/data_Mob.json"
-import data_MB from "../../../data/data_MB.json"
+import data_MB_Drops from "../../../data/data_MB_Drops.json"
 
 export default function UnionSearch() {
 
@@ -49,7 +49,7 @@ export default function UnionSearch() {
 
         // Mob
         let mobArr = Object.entries(data_mob)
-            .map(([id, name]) => [id, name, new Set(data_MB[id])])
+            .map(([id, name]) => [id, name, new Set(data_MB_Drops[id])])
         setMobLibrary(mobArr)           // [id, name, hashSet([itemIDs])]
 
         // extract URL itemId

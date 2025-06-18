@@ -147,7 +147,7 @@ export const renderImageWithNPCId = (npcId) => {
     if (!npcId) return
 
     const handleError = e => {
-        const fileName = `${npcId.padStart(7, 0)}.png`
+        const fileName = `${npcId.toString().padStart(7, 0)}.png`
         const img = e.target
         // find suitable image src from:
         // 1: server file under /images/

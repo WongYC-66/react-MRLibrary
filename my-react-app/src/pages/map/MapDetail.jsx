@@ -134,7 +134,9 @@ const renderTableRight = (mapInfo, canvasOption, setCanvasOption) => {
                 <div>
                     <h5>NPC</h5>
                     {npcs
-                        ? npcs.map(renderNPCImageAndName)
+                        ? <div className="d-grid gap-0" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', justifyItems: 'start' }}>
+                            {npcs.map(renderNPCImageAndName)}
+                        </div>
                         : <p className="opacity-50 ms-3">None</p>
                     }
                 </div>
@@ -179,12 +181,16 @@ const renderTableRight = (mapInfo, canvasOption, setCanvasOption) => {
 };
 
 const renderNPCImageAndName = (npc_id) => {
-    return <div key={npc_id} className="ms-3">
+    return <div key={npc_id} className="ms-3 d-flex flex-column align-items-center">
         <Link to={generateNPCLink(npc_id)}>
-            {renderImageWithNPCId(npc_id)}
+            <div style={{ maxWidth: '50px' }}>
+                {renderImageWithNPCId(npc_id)}
+            </div>
+
         </Link>
         <Link to={generateNPCLink(npc_id)}>
-            <span className="ms-3">{convertNpcIdToName(npc_id)}</span>
+            {/* <span className="ms-3">{convertNpcIdToName(npc_id)}</span> */}
+            <p className="ms-3 text-center">{convertNpcIdToName(npc_id)}</p>
         </Link>
     </div>
 }

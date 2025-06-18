@@ -11,7 +11,7 @@ import Tab from "react-bootstrap/Tab"
 import { renderImageWithItemId } from "./utility.jsx"
 import { gachaLocationMapping } from './Gacha.jsx'
 import data_mob from "../../../data/data_Mob.json"
-import data_MB from "../../../data/data_MB.json"
+import data_MB_Drops from "../../../data/data_MB_Drops.json"
 import data_Consume from "../../../data/data_Consume.json"
 import data_Ins from "../../../data/data_Ins.json"
 import data_Etc from "../../../data/data_Etc.json"
@@ -36,7 +36,7 @@ export default function ItemDetail() {
             desc: data?.desc,
         }
         const droppedBy = []
-        Object.entries(data_MB).forEach(([mobId, drops]) => {
+        Object.entries(data_MB_Drops).forEach(([mobId, drops]) => {
             if (drops.includes(item_Id)) {
                 droppedBy.push({
                     id: mobId,

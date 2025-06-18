@@ -7,10 +7,10 @@ import data_Etc from "../../../data/data_Etc.json"
 import data_fixMobImg from "./data_fixMobImg.json"
 // 
 import data_Mob from "../../../data/data_Mob.json"
-import data_MB from "../../../data/data_MB.json"
+import data_MB_Drops from "../../../data/data_MB_Drops.json"
 import data_MobStats from "../../../data/data_MobStats.json"
 import data_MapMobCount from "../../../data/data_MapMobCount.json"
-import data_MobMap from "../../../data/data_Mob_MapOnly.json"
+import data_MB_Maps from "../../../data/data_MB_Maps.json"
 // 
 import data_Map from "../../../data/data_Map.json"
 // 
@@ -36,7 +36,7 @@ export const generateMobInfo = (mobId) => {
         ...data_MobStats[mobId],
         id: mobId,
         name: data_Mob[mobId],
-        drops: data_MB[mobId],
+        drops: data_MB_Drops[mobId],
         spawnMap: getSpawnMap(mobId)
     }
 }
@@ -63,9 +63,9 @@ const addMapCategoryToMob = (mobLibrary) => {
     // there is a problem, boss-type mob not inside data_MapMobCount
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
-    for (let mobId in data_MobMap) {
+    for (let mobId in data_MB_Maps) {
         if (!mobLibrary[mobId]) continue        // skip, mobId not exist
-        data_MobMap[mobId].forEach(mapId => {
+        data_MB_Maps[mobId].forEach(mapId => {
             if (!(mapId in mapIdToCategory)) mapIdToCategory[mapId] = findMapCategoryByMapId(mapId)
             addMapTagToMob(mobId, mapId)
         })
@@ -88,7 +88,7 @@ const getSpawnMap = (targetMobId) => {
     // there is a problem, boss-type mob not inside data_MapMobCount
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
-    let monsterBookLocationArr = data_MobMap[targetMobId]
+    let monsterBookLocationArr = data_MB_Maps[targetMobId]
     if (monsterBookLocationArr) {
         monsterBookLocationArr.forEach(mapId => {
             if (seen_mapId.has(mapId)) return
@@ -246,7 +246,7 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
 
     const handleError = e => {
         // console.log("trigger handleError")
-        const fileName = `${itemId.padStart(8, 0)}.png`
+        const fileName = `${itemId.toString().padStart(8, 0)}.png`
         const img = e.target
         // find suitable image src from:
         // 1: server file under /images/

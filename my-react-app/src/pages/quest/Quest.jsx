@@ -6,7 +6,8 @@ import Button from "react-bootstrap/Button"
 import Table from "react-bootstrap/Table"
 // 
 import { updatePagination } from "../../components/Pagination.jsx"
-import { filterQuestList, renderImageWithNPCId, updateSearchResultCount, convertAreaCodeToName, generateNPCLink, generateQuestLibrary } from "./utility.jsx"
+import { filterQuestList,  updateSearchResultCount, convertAreaCodeToName, generateNPCLink, generateQuestLibrary } from "./utility.jsx"
+import { renderImageWithNPCId,  } from "../npc/utility.jsx"
 
 export default function Quest() {
     const [searchParams] = useSearchParams()

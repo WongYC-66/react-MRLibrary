@@ -62,29 +62,7 @@ export const filterQuestList = ({ questLibrary, searchParams }) => {
             if (location === 'all') return true
             if (!QuestInfo) return false
             if (!QuestInfo.area) return false
-
-            const locationToAreaCode = {
-                'job': '10',
-                'maple-island': '20',
-                'victoria': '30',
-                'elnath': '33',
-                'ludus': '37',
-                'ellin': '39',
-                'leafre': '41',
-                'neo-tokyo': '43',
-                'mulung': '44',
-                'masteria': '45',
-                'temple': '46',
-                'party': '47',
-                'world': '48',
-                'malaysia': '49',
-                'event': '50',
-                'title': '51',
-                'zakum': '11',
-                'hero': '6',
-            }
-
-            return QuestInfo.area === locationToAreaCode[location]
+            return QuestInfo.area == locationToAreaCode[location]
         })
         // sort list by  number of search term matches, most matched at first
         .map(([_id, obj]) => {
@@ -113,6 +91,27 @@ export const filterQuestList = ({ questLibrary, searchParams }) => {
         .map(([_id, obj, matchCount]) => [_id, obj])
 
     return filteredQuestLibrary
+}
+
+const locationToAreaCode = {
+    'job': '10',
+    'maple-island': '20',
+    'victoria': '30',
+    'elnath': '33',
+    'ludus': '37',
+    'ellin': '39',
+    'leafre': '41',
+    'neo-tokyo': '43',
+    'mulung': '44',
+    'masteria': '45',
+    'temple': '46',
+    'party': '47',
+    'world': '48',
+    'malaysia': '49',
+    'event': '50',
+    'title': '51',
+    'zakum': '11',
+    'hero': '6',
 }
 
 export const convertAreaCodeToName = (val) => {

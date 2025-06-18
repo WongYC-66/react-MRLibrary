@@ -832,12 +832,12 @@
     "desc": "A horse skull from the horse of Skeleton Commander."
   },
   "4000209": {
-    "name": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;",
+    "name": "Co-ke Slime’s Bell",
     "desc": "The bell of Co-ke Slime that has been taken off."
   },
   "4000210": {
-    "name": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "name": "Co-ke Pig’s Ribbon",
+    "desc": "A piece of Co-ke Pig’s ribbon."
   },
   "4000211": {
     "name": "Coca-Cola Cube",
@@ -1293,7 +1293,7 @@
   },
   "4000345": {
     "name": "Castellan's Stolen Armrest",
-    "desc": "An armrest that has the word &quot;Kamedeya&quot; stitched on it for some reason."
+    "desc": "An armrest that has the word \"Kamedeya\" stitched on it for some reason."
   },
   "4000346": {
     "name": "Emperor Toad Wallet",
@@ -1545,7 +1545,7 @@
   },
   "4000421": {
     "name": "Qualified Knitting Ball",
-    "desc": "Qualified Knitting Ball to make the Christmas Sock. <b>Please click and drag</b> this item into the Socks Frame UI to make your own socks."
+    "desc": "Qualified Knitting Ball to make the Christmas Sock. #cPlease click and drag# this item into the Socks Frame UI to make your own socks."
   },
   "4000422": {
     "name": "Christmas Present box (White)",
@@ -1769,11 +1769,11 @@
   },
   "4000487": {
     "name": "Shadow Meso",
-    "undefined": ""
+    "desc": ""
   },
   "4000488": {
     "name": "MasteriaPQ Mob Summon",
-    "undefined": ""
+    "desc": ""
   },
   "4000489": {
     "name": "Tutorial Tino's Feather",
@@ -2084,8 +2084,8 @@
     "desc": "An old gold watch. An article left by Alex's late mother."
   },
   "4001004": {
-    "name": "&quot;Blackbull's&quot; deed to the land",
-    "desc": "A lost deed to the land for &quot;Blackbull&quot; of Perion."
+    "name": "\"Blackbull's\" deed to the land",
+    "desc": "A lost deed to the land for \"Blackbull\" of Perion."
   },
   "4001005": {
     "name": "Ancient Scroll",
@@ -2469,7 +2469,7 @@
   },
   "4001107": {
     "name": "[Storybook]Black book",
-    "desc": "A book with a black cover.  I got a eery and evil energy from it and could not open it. I should take it to Bishop Gritto.\\nOnly for : <b>Bishop</b>"
+    "desc": "A book with a black cover.  I got a eery and evil energy from it and could not open it. I should take it to Bishop Gritto.\\nOnly for : #cBishop#"
   },
   "4001108": {
     "name": "Cold Flame",
@@ -2481,15 +2481,15 @@
   },
   "4001110": {
     "name": "[Storybook] Unknown Letter",
-    "desc": "It's an anonymous letter.  It just said <b> 'I have what you want.  Meet me at the Cloud Balcony'#.\\nOnly for : #cNight Lord</b>"
+    "desc": "It's an anonymous letter.  It just said #c 'I have what you want.  Meet me at the Cloud Balcony'#.\\nOnly for : #cNight Lord#"
   },
   "4001111": {
     "name": "[Storybook] Crimson Balrog's Proposal",
-    "desc": "It's half of the note about the plan to kidnap Tylus that Crimson Balrog had.\\nOnly for : <b>4th job Warrior</b>"
+    "desc": "It's half of the note about the plan to kidnap Tylus that Crimson Balrog had.\\nOnly for : #c4th job Warrior#"
   },
   "4001112": {
     "name": "[Storybook] Indecipherable Book",
-    "desc": "It's a book written with monster language that I can't read.  Would Manji know about the book?\\nOnly for : <b>4th Job Warrior</b>"
+    "desc": "It's a book written with monster language that I can't read.  Would Manji know about the book?\\nOnly for : #c4th Job Warrior#"
   },
   "4001113": {
     "name": "Phoenix's Egg",
@@ -2705,19 +2705,19 @@
   },
   "4001170": {
     "name": "Shocked",
-    "undefined": ""
+    "desc": ""
   },
   "4001171": {
     "name": "Touched",
-    "undefined": ""
+    "desc": ""
   },
   "4001172": {
     "name": "Surprised",
-    "undefined": ""
+    "desc": ""
   },
   "4001173": {
     "name": "Despaired",
-    "undefined": ""
+    "desc": ""
   },
   "4001174": {
     "name": "Practice Shoes",
@@ -3440,8 +3440,8 @@
     "desc": "A dried rose vine. It makes the Golems look a bit prettier."
   },
   "4009172": {
-    "desc": "Shining powder obtained from a Golen Bee. Exchange it with Cecilia outside of the Rose Garden.",
-    "name": "Shiny Flower Powder"
+    "name": "Shiny Flower Powder",
+    "desc": "Shining powder obtained from a Golen Bee. Exchange it with Cecilia outside of the Rose Garden."
   },
   "4009700": {
     "name": "Alphabet A",
@@ -3548,12 +3548,12 @@
     "desc": "This is Alphabet Z!"
   },
   "4009800": {
-    "desc": "Ripped from the Green Mushroom. Do not seem safe to eat.",
-    "name": "Proto Spores"
+    "name": "Proto Spores",
+    "desc": "Ripped from the Green Mushroom. Do not seem safe to eat."
   },
   "4009801": {
-    "desc": "Noone quite knows what these crystals do. They grow on the back of Blue Wyverns.",
-    "name": "Eternium Crystal"
+    "name": "Eternium Crystal",
+    "desc": "Noone quite knows what these crystals do. They grow on the back of Blue Wyverns."
   },
   "4009802": {
     "name": "Dark Cornian Tail",
@@ -3620,312 +3620,312 @@
     "desc": "A very heavy jar with unknown contents. Whatever is inside, seems to be jelly-like."
   },
   "4009818": {
-    "desc": "A giant, glistening leaf. When held, one can sense its strange aura.",
-    "name": "Leaf of Instinct"
+    "name": "Leaf of Instinct",
+    "desc": "A giant, glistening leaf. When held, one can sense its strange aura."
   },
   "4009819": {
-    "desc": "It's the gigantic jawbone taken from Skelegon. Gross.",
-    "name": "Skelegon Jawbone"
+    "name": "Skelegon Jawbone",
+    "desc": "It's the gigantic jawbone taken from Skelegon. Gross."
   },
   "4009820": {
-    "desc": "A very rare dragon skull, which seems to contain a living soul, even when separated from its body.",
-    "name": "Genesis Skull "
+    "name": "Genesis Skull ",
+    "desc": "A very rare dragon skull, which seems to contain a living soul, even when separated from its body."
   },
   "4009821": {
-    "desc": "A glowing container which contains a forsaken soul. It is trapped forever, never being put to rest.",
-    "name": "Forsaken Soul"
+    "name": "Forsaken Soul",
+    "desc": "A glowing container which contains a forsaken soul. It is trapped forever, never being put to rest."
   },
   "4009822": {
-    "desc": "A sack containing a strange substance known as ectoplasm. Its properties are unknown.",
-    "name": "Ectoplasm"
+    "name": "Ectoplasm",
+    "desc": "A sack containing a strange substance known as ectoplasm. Its properties are unknown."
   },
   "4009823": {
-    "desc": "A special leash which traps the bearer in a state outside of the normal flow of time.",
-    "name": "Temporal Leash"
+    "name": "Temporal Leash",
+    "desc": "A special leash which traps the bearer in a state outside of the normal flow of time."
   },
   "4009824": {
-    "desc": "It's the horn taken from a Birk. It's very heavy.",
-    "name": "Birk Horn"
+    "name": "Birk Horn",
+    "desc": "It's the horn taken from a Birk. It's very heavy."
   },
   "4009825": {
-    "desc": "The hoof from Black Kentaurus.",
-    "name": "Black Kentaurus Hoof"
+    "name": "Black Kentaurus Hoof",
+    "desc": "The hoof from Black Kentaurus."
   },
   "4009826": {
-    "desc": "A broken off horn from the giant dragon, Brexton.",
-    "name": "Brexton Horn"
+    "name": "Brexton Horn",
+    "desc": "A broken off horn from the giant dragon, Brexton."
   },
   "4009827": {
-    "desc": "A thick slab of scaly skin, cut from a Dragon Turtle.",
-    "name": "Dragon Turtle Scales"
+    "name": "Dragon Turtle Scales",
+    "desc": "A thick slab of scaly skin, cut from a Dragon Turtle."
   },
   "4009828": {
-    "desc": "A gnarled tooth extracted from the mouth of Hobi.",
-    "name": "Hobi Tooth"
+    "name": "Hobi Tooth",
+    "desc": "A gnarled tooth extracted from the mouth of Hobi."
   },
   "4009829": {
-    "desc": "One of the wooden horns growing on Rash.",
-    "name": "Rash Twig"
+    "name": "Rash Twig",
+    "desc": "One of the wooden horns growing on Rash."
   },
   "4009830": {
     "name": "Snake Meat",
     "desc": "A rare flesh poached from the mighty Pythons of Thailand."
   },
   "4009831": {
-    "desc": "A mysterious burning entity left behind by the Bains.",
-    "name": "Essence of Rage"
+    "name": "Essence of Rage",
+    "desc": "A mysterious burning entity left behind by the Bains."
   },
   "4009832": {
-    "desc": "A flammable purple oil used by Ninto.",
-    "name": "Purple Lifeblood"
+    "name": "Purple Lifeblood",
+    "desc": "A flammable purple oil used by Ninto."
   },
   "4009833": {
-    "desc": "A shiny heirloom taken from a wealthy family in Lushan Town.",
-    "name": "Stolen Locket"
+    "name": "Stolen Locket",
+    "desc": "A shiny heirloom taken from a wealthy family in Lushan Town."
   },
   "4009834": {
-    "desc": "A potent cologne mixed with poison. Used by Male Burglars to escape from defeat.",
-    "name": "Cologne"
+    "name": "Cologne",
+    "desc": "A potent cologne mixed with poison. Used by Male Burglars to escape from defeat."
   },
   "4009835": {
-    "desc": "A translucent sphere that shimmers with a bright red hue.",
-    "name": "Red Slime Bubble"
+    "name": "Red Slime Bubble",
+    "desc": "A translucent sphere that shimmers with a bright red hue."
   },
   "4009836": {
-    "desc": "An overgrown remnant left behind by Mossy Mushrooms.",
-    "name": "Dead Moss"
+    "name": "Dead Moss",
+    "desc": "An overgrown remnant left behind by Mossy Mushrooms."
   },
   "4009837": {
-    "desc": "A sprout believed to hold ancient powers harnessed by the beings of Ellin Forest.",
-    "name": "Flower Bud"
+    "name": "Flower Bud",
+    "desc": "A sprout believed to hold ancient powers harnessed by the beings of Ellin Forest."
   },
   "4009838": {
-    "desc": "A mud clump gathered from the floor of Ellin Forest. ",
-    "name": "Mud Clump"
+    "name": "Mud Clump",
+    "desc": "A mud clump gathered from the floor of Ellin Forest. "
   },
   "4009839": {
-    "desc": "A preserved tail of a powerful and ancient boar that once roamed the lands of the Maple World.",
-    "name": "Primitive Boar Tail"
+    "name": "Primitive Boar Tail",
+    "desc": "A preserved tail of a powerful and ancient boar that once roamed the lands of the Maple World."
   },
   "4009840": {
-    "desc": "A concoction of some sorts that has a beautiful fragrance.",
-    "name": "Fairy Perfume"
+    "name": "Fairy Perfume",
+    "desc": "A concoction of some sorts that has a beautiful fragrance."
   },
   "4009841": {
-    "desc": "A beautiful tulip picked from the forest floor.",
-    "name": "Tulip"
+    "name": "Tulip",
+    "desc": "A beautiful tulip picked from the forest floor."
   },
   "4009842": {
-    "desc": "This fur is surprisingly fluffy despite being exposed to such icy elements. ",
-    "name": "Beast Fur"
+    "name": "Beast Fur",
+    "desc": "This fur is surprisingly fluffy despite being exposed to such icy elements. "
   },
   "4009843": {
-    "desc": "A bottle of cold water from the darkest depths of the ocean.",
-    "name": "Bottle of Frigid Water"
+    "name": "Bottle of Frigid Water",
+    "desc": "A bottle of cold water from the darkest depths of the ocean."
   },
   "4009844": {
-    "desc": "A tough and durable skin of the elusive Goby found deep inside Aqua Road.",
-    "name": "Fish Skin"
+    "name": "Fish Skin",
+    "desc": "A tough and durable skin of the elusive Goby found deep inside Aqua Road."
   },
   "4009845": {
-    "desc": "A beautiful pink flower that grows around Fantasy Theme Park.",
-    "name": "Aster"
+    "name": "Aster",
+    "desc": "A beautiful pink flower that grows around Fantasy Theme Park."
   },
   "4009846": {
-    "desc": "A seed with magical properties known to be the very essence of creating life within the outskirts of Ulu City.",
-    "name": "Giant Seed"
+    "name": "Giant Seed",
+    "desc": "A seed with magical properties known to be the very essence of creating life within the outskirts of Ulu City."
   },
   "4009847": {
-    "desc": "A tree log that Beserkie has grown quite fond of. ",
-    "name": "Tree Log"
+    "name": "Tree Log",
+    "desc": "A tree log that Beserkie has grown quite fond of. "
   },
   "4009848": {
-    "desc": "A sack filled to the brim with gold coins. Upon closer inspection, they seem to be of the chocolate variety.",
-    "name": "Sack of 'Gold' Coins"
+    "name": "Sack of 'Gold' Coins",
+    "desc": "A sack filled to the brim with gold coins. Upon closer inspection, they seem to be of the chocolate variety."
   },
   "4009849": {
-    "desc": "A vial full of black liquid. Nobody really knows what this is, or what it's made of.",
-    "name": "Mysterious Black Liquid"
+    "name": "Mysterious Black Liquid",
+    "desc": "A vial full of black liquid. Nobody really knows what this is, or what it's made of."
   },
   "4009850": {
-    "desc": "A marble carried around by Mr. Anchor. It is said to contain the soul of a lost sailor.",
-    "name": "Soul Marble"
+    "name": "Soul Marble",
+    "desc": "A marble carried around by Mr. Anchor. It is said to contain the soul of a lost sailor."
   },
   "4009851": {
-    "desc": "These sticks are bound by an entity reluctant to give them back. They contain materials coveted by the monks of Lushan Town and highly sought after.",
-    "name": "Incense Sticks"
+    "name": "Incense Sticks",
+    "desc": "These sticks are bound by an entity reluctant to give them back. They contain materials coveted by the monks of Lushan Town and highly sought after."
   },
   "4009852": {
-    "desc": "Useful study notes from an Extra D.",
-    "name": "Study Notes"
+    "name": "Study Notes",
+    "desc": "Useful study notes from an Extra D."
   },
   "4009853": {
-    "desc": "A feather plucked from a Giant Eagle.",
-    "name": "Eagle Tailfeather"
+    "name": "Eagle Tailfeather",
+    "desc": "A feather plucked from a Giant Eagle."
   },
   "4009854": {
-    "desc": "These bones are said to contain ancient magic, these very hands have mastered the skill of long forgotten techniques that used to be passed down for generations.",
-    "name": "Elderwraith Hand"
+    "name": "Elderwraith Hand",
+    "desc": "These bones are said to contain ancient magic, these very hands have mastered the skill of long forgotten techniques that used to be passed down for generations."
   },
   "4009855": {
-    "desc": "A fang that's been ripped off a Nightshadow's mask. It denotes a glorious victory over an elite warrior of the Corrupt Army.",
-    "name": "Nightshadow Fang"
+    "name": "Nightshadow Fang",
+    "desc": "A fang that's been ripped off a Nightshadow's mask. It denotes a glorious victory over an elite warrior of the Corrupt Army."
   },
   "4009856": {
-    "desc": "The soul dust obtained from a Crimson Guardian. The very essence of these ancient defenders are contained within.",
-    "name": "Red Soul Dust"
+    "name": "Red Soul Dust",
+    "desc": "The soul dust obtained from a Crimson Guardian. The very essence of these ancient defenders are contained within."
   },
   "4009857": {
-    "desc": "An ancient scroll carried by a Windraider. It's said to be as old as the wind itself.",
-    "name": "Wind Scroll"
+    "name": "Wind Scroll",
+    "desc": "An ancient scroll carried by a Windraider. It's said to be as old as the wind itself."
   },
   "4009858": {
-    "desc": "A flame wielded by a Firebrand.",
-    "name": "Mystical Fire"
+    "name": "Mystical Fire",
+    "desc": "A flame wielded by a Firebrand."
   },
   "4009859": {
-    "desc": "A tome holding secrets known only to the Stormcasters.",
-    "name": "Ancient Tome"
+    "name": "Ancient Tome",
+    "desc": "A tome holding secrets known only to the Stormcasters."
   },
   "4009860": {
-    "desc": "A piece of cloth used to cover Jonin's face.",
-    "name": "Dirty Cloth"
+    "name": "Dirty Cloth",
+    "desc": "A piece of cloth used to cover Jonin's face."
   },
   "4009861": {
-    "desc": "A honey-filled pot that's over 200 years old.",
-    "name": "Ancient Honey"
+    "name": "Ancient Honey",
+    "desc": "A honey-filled pot that's over 200 years old."
   },
   "4009862": {
-    "desc": "A beautiful bunch of pretty blue flowers.",
-    "name": "Harvestbells"
+    "name": "Harvestbells",
+    "desc": "A beautiful bunch of pretty blue flowers."
   },
   "4009863": {
-    "desc": "A leafy pouch Rexton keeps nearby to store herbs and medicine.",
-    "name": "Leafy Pouch"
+    "name": "Leafy Pouch",
+    "desc": "A leafy pouch Rexton keeps nearby to store herbs and medicine."
   },
   "4009864": {
-    "desc": "A bundle of grass gathered by Nest Golem.",
-    "name": "Bundle of Grass"
+    "name": "Bundle of Grass",
+    "desc": "A bundle of grass gathered by Nest Golem."
   },
   "4009865": {
-    "desc": "A warm fire that fuels the Red Wyvern's rage.",
-    "name": "Wyvern Flame"
+    "name": "Wyvern Flame",
+    "desc": "A warm fire that fuels the Red Wyvern's rage."
   },
   "4009866": {
-    "desc": "This sand has been around for eons. As old as the stars in the sky.",
-    "name": "Mysterious Sand"
+    "name": "Mysterious Sand",
+    "desc": "This sand has been around for eons. As old as the stars in the sky."
   },
   "4009867": {
-    "desc": "A bunch of red grapes that grow around the outskirts of Leafre forest. ",
-    "name": "Red Grapes"
+    "name": "Red Grapes",
+    "desc": "A bunch of red grapes that grow around the outskirts of Leafre forest. "
   },
   "4009868": {
-    "desc": "The corrupted soul of a Dark Wyvern. An evil energy can be felt when holding it.",
-    "name": "Wyvern Soul"
+    "name": "Wyvern Soul",
+    "desc": "The corrupted soul of a Dark Wyvern. An evil energy can be felt when holding it."
   },
   "4009869": {
-    "desc": "A horn taken from the humanoid creatures of the Dragon Forest.",
-    "name": "Cornian's Horn"
+    "name": "Cornian's Horn",
+    "desc": "A horn taken from the humanoid creatures of the Dragon Forest."
   },
   "4009870": {
-    "desc": "The crystallized essense of frost itself. It's said that the Blue Kentaurus draws its glacial power from here. ",
-    "name": "Frost Crystal"
+    "name": "Frost Crystal",
+    "desc": "The crystallized essense of frost itself. It's said that the Blue Kentaurus draws its glacial power from here. "
   },
   "4009871": {
-    "desc": "A delicate handful of feathers gathered from a Harp. It smells like fresh rain.",
-    "name": "Sacred Feathers"
+    "name": "Sacred Feathers",
+    "desc": "A delicate handful of feathers gathered from a Harp. It smells like fresh rain."
   },
   "4009872": {
-    "desc": "A handful of redcurrants the Red kentaurus had gathered earlier. ",
-    "name": "Redcurrants"
+    "name": "Redcurrants",
+    "desc": "A handful of redcurrants the Red kentaurus had gathered earlier. "
   },
   "4009873": {
-    "desc": "Tangerines collected by Beetle. A tasty fruit native to Leafre.",
-    "name": "Tangerines"
+    "name": "Tangerines",
+    "desc": "Tangerines collected by Beetle. A tasty fruit native to Leafre."
   },
   "4009874": {
-    "desc": "An angelic feather plucked from the tail of a Blood Harp. It's said to have tremendous healing powers.",
-    "name": "Blood Tailfeather"
+    "name": "Blood Tailfeather",
+    "desc": "An angelic feather plucked from the tail of a Blood Harp. It's said to have tremendous healing powers."
   },
   "4009875": {
-    "desc": "An exquisite looking fruit that grows on the outskirts of Leafre.",
-    "name": "Golden Apple"
+    "name": "Golden Apple",
+    "desc": "An exquisite looking fruit that grows on the outskirts of Leafre."
   },
   "4009876": {
-    "desc": "A little bug that hitched a ride on a Dark Rash. ",
-    "name": "Small Bug"
+    "name": "Small Bug",
+    "desc": "A little bug that hitched a ride on a Dark Rash. "
   },
   "4009877": {
-    "desc": "Dew collected in the early hours of the morning around Leafre by Hankie.",
-    "name": "Morning Dew"
+    "name": "Morning Dew",
+    "desc": "Dew collected in the early hours of the morning around Leafre by Hankie."
   },
   "4009878": {
-    "desc": "A residue that lingers behind after a Spiking Viking has been destroyed. It has a slightly grisly appearance.",
-    "name": "Ghastly Residue"
+    "name": "Ghastly Residue",
+    "desc": "A residue that lingers behind after a Spiking Viking has been destroyed. It has a slightly grisly appearance."
   },
   "4009879": {
-    "desc": "A gemstone long lost to the sea many years ago.",
-    "name": "Heart of the Ocean"
+    "name": "Heart of the Ocean",
+    "desc": "A gemstone long lost to the sea many years ago."
   },
   "4009880": {
-    "desc": "A liquid that has been lost in time. It looks like it contains some otherworldly properties that doesn't appear to make sense in our timeline.",
-    "name": "Time Lost Liquid"
+    "name": "Time Lost Liquid",
+    "desc": "A liquid that has been lost in time. It looks like it contains some otherworldly properties that doesn't appear to make sense in our timeline."
   },
   "4009881": {
-    "desc": "The blood of a Wild Kargo found deep in the Sleepywood Dungeon. It is highly desired by the local shamans for rituals of vitality.",
-    "name": "Kargo Blood"
+    "name": "Kargo Blood",
+    "desc": "The blood of a Wild Kargo found deep in the Sleepywood Dungeon. It is highly desired by the local shamans for rituals of vitality."
   },
   "4009882": {
-    "desc": "Noxious fumes emanate from this tiny little crystal. I better get this to Reuel before I pass out from the stench.",
-    "name": "Crystalized Poison"
+    "name": "Crystalized Poison",
+    "desc": "Noxious fumes emanate from this tiny little crystal. I better get this to Reuel before I pass out from the stench."
   },
   "4009883": {
-    "desc": "A small remnant of life left behind from a long time ago.",
-    "name": "Life Force"
+    "name": "Life Force",
+    "desc": "A small remnant of life left behind from a long time ago."
   },
   "4009884": {
-    "desc": "A charming little purple flower that grows deep within the clouds around Orbis.",
-    "name": "Lilac"
+    "name": "Lilac",
+    "desc": "A charming little purple flower that grows deep within the clouds around Orbis."
   },
   "4009885": {
-    "desc": "Gathered from the top of the ocean. It is not known why it is found deep in the ocean.",
-    "name": "Sea Foam"
+    "name": "Sea Foam",
+    "desc": "Gathered from the top of the ocean. It is not known why it is found deep in the ocean."
   },
   "4009886": {
-    "desc": "The heart of a werewolf found deep within El Nath. Terrifying creatures, but their heart is said to contain an unusual magical property sought after by other alchemists.",
-    "name": "Werewolf Heart"
+    "name": "Werewolf Heart",
+    "desc": "The heart of a werewolf found deep within El Nath. Terrifying creatures, but their heart is said to contain an unusual magical property sought after by other alchemists."
   },
   "4009887": {
-    "desc": "Nobody really knows what kind of liquid this is.",
-    "name": "Curious Liquid"
+    "name": "Curious Liquid",
+    "desc": "Nobody really knows what kind of liquid this is."
   },
   "4009888": {
-    "desc": "A rare golden peach harvested and kept by the Peach Monkeys.",
-    "name": "Golden Peach"
+    "name": "Golden Peach",
+    "desc": "A rare golden peach harvested and kept by the Peach Monkeys."
   },
   "4009889": {
-    "desc": "A rare alligator skin with incredible durability.",
-    "name": "Alligator Skin"
+    "name": "Alligator Skin",
+    "desc": "A rare alligator skin with incredible durability."
   },
   "4009900": {
-    "desc": "A gift for Chang'e, the Goddess of the Moon, containing a lot of fruit.",
-    "name": "Fruit Gift"
+    "name": "Fruit Gift",
+    "desc": "A gift for Chang'e, the Goddess of the Moon, containing a lot of fruit."
   },
   "4009901": {
-    "desc": "A delicious mooncake for Chang'e, the Goddess of the Moon.",
-    "name": "Mooncake"
+    "name": "Mooncake",
+    "desc": "A delicious mooncake for Chang'e, the Goddess of the Moon."
   },
   "4009902": {
-    "desc": "A fragment that contains some of Ephenia's soul.",
-    "name": "Ephenia's Soul Shard"
+    "name": "Ephenia's Soul Shard",
+    "desc": "A fragment that contains some of Ephenia's soul."
   },
   "4009903": {
     "name": "Ellin Crystal",
     "desc": "A wondrous stone with a thousand facets. Who knows powers it contains?"
   },
   "4009904": {
-    "desc": "According to rumors, this golden medallion contains a part of Von Leon's soul.",
-    "name": "Von Leon's Medallion"
+    "name": "Von Leon's Medallion",
+    "desc": "According to rumors, this golden medallion contains a part of Von Leon's soul."
   },
   "4009905": {
     "name": "Von Leon's Parchment",
@@ -3940,28 +3940,28 @@
     "desc": "An old raggedy Gachapon Ticket. Probably doesn't work in regular Gachapon machines."
   },
   "4009993": {
-    "desc": "Increases the amount of Experience gained by 20%",
-    "name": "1.2x Exp Coupon"
+    "name": "1.2x Exp Coupon",
+    "desc": "Increases the amount of Experience gained by 20%"
   },
   "4009994": {
-    "desc": "Increases the amount of Drops and Mesos gained by 20%",
-    "name": "1.2x Drop/Mesos Coupon"
+    "name": "1.2x Drop/Mesos Coupon",
+    "desc": "Increases the amount of Drops and Mesos gained by 20%"
   },
   "4009995": {
-    "desc": "Increases the amount of Experience, Drops, and Mesos gained by 10%",
-    "name": "1.1x Exp/Drop/Mesos Coupon"
+    "name": "1.1x Exp/Drop/Mesos Coupon",
+    "desc": "Increases the amount of Experience, Drops, and Mesos gained by 10%"
   },
   "4009996": {
     "name": "Bobby's Coupon",
     "desc": "A coupon Bobby Buzzcut gave me for helping him out, he said he'd change my look for me at anytime."
   },
   "4009997": {
-    "desc": "Increases the amount of Experience, Drops, and Mesos gained by 20%",
-    "name": "1.2x Exp/Drop/Mesos Coupon"
+    "name": "1.2x Exp/Drop/Mesos Coupon",
+    "desc": "Increases the amount of Experience, Drops, and Mesos gained by 20%"
   },
   "4009998": {
-    "desc": "Increases the amount of Experience gained by 50%.",
-    "name": "1.5x Exp Coupon"
+    "name": "1.5x Exp Coupon",
+    "desc": "Increases the amount of Experience gained by 50%."
   },
   "4009999": {
     "name": "2x Exp/Drop/Mesos Coupon",
@@ -4201,7 +4201,7 @@
   },
   "4030032": {
     "name": "Rousseau's Key",
-    "desc": "Rousseau dropped this mysterious key. You can probably free the <b>imprisoned souls</b> with it."
+    "desc": "Rousseau dropped this mysterious key. You can probably free the #cimprisoned souls# with it."
   },
   "4030033": {
     "name": "Freed Soul Crystal",
@@ -4217,7 +4217,7 @@
   },
   "4030036": {
     "name": "Rose Seed",
-    "desc": "A mysterious rose seed. The <b>rose</b> that grows from it must be lovely."
+    "desc": "A mysterious rose seed. The #crose# that grows from it must be lovely."
   },
   "4031000": {
     "name": "Maria's Letter",
@@ -4257,15 +4257,15 @@
   },
   "4031009": {
     "name": "Grendel the Really Old's Letter",
-    "desc": "A letter from Grendel the Really Old of Ellinia. Needs to be shown to the &quot;Test Instructor For Magicians&quot; at somewhere around the forrest."
+    "desc": "A letter from Grendel the Really Old of Ellinia. Needs to be shown to the \"Test Instructor For Magicians\" at somewhere around the forrest."
   },
   "4031010": {
     "name": "Athena Pierce's Letter",
-    "desc": "A letter from Athena Pierce of Henesys. Needs to be shown to the &quot;Test Instructor For Bowmen&quot; at somewhere around the Dungeon."
+    "desc": "A letter from Athena Pierce of Henesys. Needs to be shown to the \"Test Instructor For Bowmen\" at somewhere around the Dungeon."
   },
   "4031011": {
     "name": "Dark Lord's Letter",
-    "desc": "A letter from &quot;Dark Lord&quot; of Kerning City. Needs to be shown to the &quot;Test Instructor For Thieves&quot; at somewhere around the city. "
+    "desc": "A letter from \"Dark Lord\" of Kerning City. Needs to be shown to the \"Test Instructor For Thieves\" at somewhere around the city. "
   },
   "4031012": {
     "name": "The Proof of a Hero",
@@ -4449,7 +4449,7 @@
   },
   "4031057": {
     "name": "The Necklace of Strength",
-    "desc": "A necklace earned by deservingly defeating the &quot;other self&quot; at the Other Dimension with power."
+    "desc": "A necklace earned by deservingly defeating the \"other self\" at the Other Dimension with power."
   },
   "4031058": {
     "name": "The Necklace of Wisdom",
@@ -4457,7 +4457,7 @@
   },
   "4031059": {
     "name": "Black Charm",
-    "desc": "A charm earned by defeating the &quot;other self&quot; at the world of new dimension."
+    "desc": "A charm earned by defeating the \"other self\" at the world of new dimension."
   },
   "4031060": {
     "name": "Nick's Ring",
@@ -4845,7 +4845,7 @@
   },
   "4031156": {
     "name": "Sparkling Glass Marble",
-    "desc": "A huge glass marble that is transparent and radiates in multiple colors. At the corner of it says &quot;To My Friend Utah.&quot;"
+    "desc": "A huge glass marble that is transparent and radiates in multiple colors. At the corner of it says \"To My Friend Utah.\""
   },
   "4031157": {
     "name": "Maple History Book I",
@@ -4889,15 +4889,15 @@
   },
   "4031167": {
     "name": "Blue Present Box for Training",
-    "desc": "A blue present box that the GM hung on the monster for the event &quot;Face the Hotness.&quot;"
+    "desc": "A blue present box that the GM hung on the monster for the event \"Face the Hotness.\""
   },
   "4031168": {
     "name": "Yellow Present Box for Training",
-    "desc": "A yellow present box that the GM hung on the monster for the event &quot;Face the Hotness.&quot;"
+    "desc": "A yellow present box that the GM hung on the monster for the event \"Face the Hotness.\""
   },
   "4031169": {
     "name": "Green Present Box for Training",
-    "desc": "A green present box that the GM hung on the monster for the event &quot;Face the Hotness.&quot;"
+    "desc": "A green present box that the GM hung on the monster for the event \"Face the Hotness.\""
   },
   "4031170": {
     "name": "Tachion",
@@ -4925,15 +4925,15 @@
   },
   "4031176": {
     "name": "Piece of Cracked Dimension A",
-    "desc": "This must be what Flo mentioned as &quot;a piece of cracked dimension.&quot;"
+    "desc": "This must be what Flo mentioned as \"a piece of cracked dimension.\""
   },
   "4031177": {
     "name": "Piece of Cracked Dimension B",
-    "desc": "This must be what Flo mentioned as &quot;a piece of cracked dimension.&quot;"
+    "desc": "This must be what Flo mentioned as \"a piece of cracked dimension.\""
   },
   "4031178": {
     "name": "Piece of Cracked Dimension C",
-    "desc": "This must be what Flo mentioned as &quot;a piece of cracked dimension.&quot;"
+    "desc": "This must be what Flo mentioned as \"a piece of cracked dimension.\""
   },
   "4031179": {
     "name": "Piece of Cracked Dimension",
@@ -4985,11 +4985,11 @@
   },
   "4031191": {
     "name": "Golden Bell",
-    "desc": "A small gold bell that is needed to make a new necklace for Nero.\\n<b>Used as a : Quest Item</b>"
+    "desc": "A small gold bell that is needed to make a new necklace for Nero.\\n#cUsed as a : Quest Item#"
   },
   "4031192": {
     "name": "Red Ribbon",
-    "desc": "A red ribbon needed to make a new necklace for Nero.\\n<b>Used as a : Quest Item</b>"
+    "desc": "A red ribbon needed to make a new necklace for Nero.\\n#cUsed as a : Quest Item#"
   },
   "4031193": {
     "name": "Soul Collector",
@@ -5061,7 +5061,7 @@
   },
   "4031210": {
     "name": "Robinson's ID",
-    "desc": "The pilot Robinson's ID.\\n\\n<b>Name : Robinson\\nTeam : Transport - Pilot\\nID number : XXX-XXXXX</b>"
+    "desc": "The pilot Robinson's ID.\\n\\n#cName : Robinson\\nTeam : Transport - Pilot\\nID number : XXX-XXXXX#"
   },
   "4031211": {
     "name": "Lama's Sign",
@@ -5385,7 +5385,7 @@
   },
   "4031294": {
     "name": "Dog Food",
-    "undefined": ""
+    "desc": ""
   },
   "4031295": {
     "name": "Yan Zi's Letter",
@@ -5404,8 +5404,8 @@
     "desc": "The storybook that features the Korean Folk Tale 'The Story of Axes'."
   },
   "4031299": {
-    "name": "Stamp for &quot;Excellent&quot;",
-    "desc": "Stamp for &quot;Excellent&quot;"
+    "name": "Stamp for \"Excellent\"",
+    "desc": "Stamp for \"Excellent\""
   },
   "4031300": {
     "name": "Maple Stamp",
@@ -5673,7 +5673,7 @@
   },
   "4031377": {
     "name": "Invitation - Chapel",
-    "desc": "A Wedding Invitation. Only the people you invite will be able to come into your Wedding ceremony. To invite someone, simply <b>Double-Click</b> the invitation and put the character name you want to invite. Please check your spelling for the character name before sending."
+    "desc": "A Wedding Invitation. Only the people you invite will be able to come into your Wedding ceremony. To invite someone, simply #cDouble-Click# the invitation and put the character name you want to invite. Please check your spelling for the character name before sending."
   },
   "4031382": {
     "name": "Party Dress",
@@ -5721,7 +5721,7 @@
   },
   "4031395": {
     "name": "Invitation - Cathedral",
-    "desc": "A Wedding Invitation. Only the people you invite will be able to come into your Wedding ceremony. To invite someone, simply <b>Double-Click</b> the invitation and put the character name you want to invite. Please check your spelling for the character name before sending."
+    "desc": "A Wedding Invitation. Only the people you invite will be able to come into your Wedding ceremony. To invite someone, simply #cDouble-Click# the invitation and put the character name you want to invite. Please check your spelling for the character name before sending."
   },
   "4031396": {
     "name": "Strange Flower",
@@ -5761,11 +5761,11 @@
   },
   "4031406": {
     "name": "Invitation - Chapel",
-    "desc": "A Wedding Invitation. Only the people invited can enter the Special Wedding. For detailed information, please Double-Click this invitation. Also, if the Wedding for this invitation is started, <b>Double-Click</b> the item as well to instantly enter the Wedding."
+    "desc": "A Wedding Invitation. Only the people invited can enter the Special Wedding. For detailed information, please Double-Click this invitation. Also, if the Wedding for this invitation is started, #cDouble-Click# the item as well to instantly enter the Wedding."
   },
   "4031407": {
     "name": "Invitation - Cathedral",
-    "desc": "A Wedding Invitation. Only the people invited can enter the Special Wedding. For detailed information, please Double-Click this invitation. Also, if the Wedding for this invitation is started, <b>Double-Click</b> the item as well to instantly enter the Wedding."
+    "desc": "A Wedding Invitation. Only the people invited can enter the Special Wedding. For detailed information, please Double-Click this invitation. Also, if the Wedding for this invitation is started, #cDouble-Click# the item as well to instantly enter the Wedding."
   },
   "4031408": {
     "name": "Gachapon Stamp",
@@ -5852,16 +5852,16 @@
     "desc": "A handful of straw that filled up the straw hats."
   },
   "4031430": {
-    "name": "The Legendary Being's Scroll &lt;Beginner&gt;",
-    "desc": "A scroll that describes the &lt;Beginner&gt; courses of the studies of becoming The Legendary Being. On the cover of the scroll has number 1 written in Chinese."
+    "name": "The Legendary Being's Scroll <Beginner>",
+    "desc": "A scroll that describes the <Beginner> courses of the studies of becoming The Legendary Being. On the cover of the scroll has number 1 written in Chinese."
   },
   "4031431": {
-    "name": "The Legendary Being's Scroll &lt;Intermediate&gt;",
-    "desc": "A scroll that describes the &lt;Intermediate&gt; courses of the studies of becoming The Legendary Being. On the cover of the scroll has number 1 written in Chinese."
+    "name": "The Legendary Being's Scroll <Intermediate>",
+    "desc": "A scroll that describes the <Intermediate> courses of the studies of becoming The Legendary Being. On the cover of the scroll has number 1 written in Chinese."
   },
   "4031432": {
-    "name": "The Legendary Being's Scroll &lt;Advanced&gt;",
-    "desc": "A scroll that describes the &lt;Advanced&gt; courses of the studies of becoming The Legendary Being. On the cover of the scroll has number 1 written in Chinese."
+    "name": "The Legendary Being's Scroll <Advanced>",
+    "desc": "A scroll that describes the <Advanced> courses of the studies of becoming The Legendary Being. On the cover of the scroll has number 1 written in Chinese."
   },
   "4031433": {
     "name": "Kitty Spirit",
@@ -6208,8 +6208,8 @@
     "desc": "An NX cash card worth 1000 points. Redeemable in the Cash Shop."
   },
   "4031533": {
-    "desc": "An NX cash card worth 5000 points. Redeemable in the Cash Shop.",
-    "name": "NX Cash Card - 5000 Points"
+    "name": "NX Cash Card - 5000 Points",
+    "desc": "An NX cash card worth 5000 points. Redeemable in the Cash Shop."
   },
   "4031542": {
     "name": "Mouse",
@@ -6232,12 +6232,12 @@
     "desc": "A stack of treasures Lord Pirate had collected over the years. Looks very expensive."
   },
   "4031552": {
-    "name": "Body &amp; Physics Medicine Herb Pouch",
-    "desc": "A herb pouch ready to be heated and squeezed out to make Body &amp; Physics Medicine."
+    "name": "Body & Physics Medicine Herb Pouch",
+    "desc": "A herb pouch ready to be heated and squeezed out to make Body & Physics Medicine."
   },
   "4031553": {
-    "name": "Mind &amp; Heart Medicine Herb Pouch",
-    "desc": "A herb pouch ready to be heated and squeezed out to make Mind &amp; Heart Medicine."
+    "name": "Mind & Heart Medicine Herb Pouch",
+    "desc": "A herb pouch ready to be heated and squeezed out to make Mind & Heart Medicine."
   },
   "4031554": {
     "name": "Peach Tree Herb Pouch",
@@ -6420,12 +6420,12 @@
     "desc": "A candle for birthday cakes. Used for the MapleRoyals 5th Anniversary Event."
   },
   "4031600": {
-    "desc": "A candle for birthday cakes. Used for the MapleRoyals 6th Anniversary Event.",
-    "name": "6th Anniversary Candle"
+    "name": "6th Anniversary Candle",
+    "desc": "A candle for birthday cakes. Used for the MapleRoyals 6th Anniversary Event."
   },
   "4031601": {
-    "desc": "A candle for birthday cakes. Used for the MapleRoyals 7th Anniversary Event.",
-    "name": "7th Anniversary Candle"
+    "name": "7th Anniversary Candle",
+    "desc": "A candle for birthday cakes. Used for the MapleRoyals 7th Anniversary Event."
   },
   "4031602": {
     "name": "8th Anniversary Candle ",
@@ -6505,7 +6505,7 @@
   },
   "4031627": {
     "name": "Whitebait (3cm)",
-    "desc": "It measures 3cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious &amp; low in fats."
+    "desc": "It measures 3cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious & low in fats."
   },
   "4031628": {
     "name": "Sailfish (120cm)",
@@ -6529,19 +6529,19 @@
   },
   "4031633": {
     "name": "Whitebait (3.6cm)",
-    "desc": "It measures 3.6cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious &amp; low in fats."
+    "desc": "It measures 3.6cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious & low in fats."
   },
   "4031634": {
     "name": "Whitebait (5cm)",
-    "desc": "It measures 5cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious &amp; low in fats."
+    "desc": "It measures 5cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious & low in fats."
   },
   "4031635": {
     "name": "Whitebait (6.5cm)",
-    "desc": "It measures 6.5cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious &amp; low in fats."
+    "desc": "It measures 6.5cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious & low in fats."
   },
   "4031636": {
     "name": "Whitebait (10cm)",
-    "desc": "It measures 10cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious &amp; low in fats."
+    "desc": "It measures 10cm in length, with high nutritional value, and it is suitable for steaming with the egg ingredients. It is delicious & low in fats."
   },
   "4031637": {
     "name": "Carp (53cm)",
@@ -6637,7 +6637,7 @@
   },
   "4031669": {
     "name": "Luck Sack",
-    "desc": "A red sack of &quot;luck&quot; with a Chinese character for luck engraved on the front."
+    "desc": "A red sack of \"luck\" with a Chinese character for luck engraved on the front."
   },
   "4031674": {
     "name": "Elpam Magnet",
@@ -6936,7 +6936,7 @@
     "desc": "A worn, happy looking doll that has seen better days."
   },
   "4031768": {
-    "name": "&quot;Perfect&quot; Sophilia Doll",
+    "name": "\"Perfect\" Sophilia Doll",
     "desc": "A doll that is a chilling likeness of Sophilia but looks odd and unnatural."
   },
   "4031769": {
@@ -7009,11 +7009,11 @@
   },
   "4031786": {
     "name": "Xuzhu's Letter",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "Xuzhu’s letter to Guoqing asking for his whereabouts."
   },
   "4031787": {
     "name": "Guoqing letter",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "Guoqing’s letter to Xuzhu reporting that he is safe."
   },
   "4031788": {
     "name": "Red Marble",
@@ -7164,7 +7164,7 @@
     "desc": "A piece of a mirror. If I have this with me, I'll be able to see ghosts with my own eyes."
   },
   "4031832": {
-    "name": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;",
+    "name": "Sophelia’s Portrait",
     "desc": "A portrait of Sophelia."
   },
   "4031833": {
@@ -7176,7 +7176,7 @@
     "desc": "The most perfect tool for making dolls."
   },
   "4031835": {
-    "name": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;",
+    "name": "Lyudmilla’s Earring",
     "desc": "The earrings that Lyudmilla lost. They shine with brilliance."
   },
   "4031836": {
@@ -7197,7 +7197,7 @@
   },
   "4031840": {
     "name": "Old Orgel",
-    "desc": "A beautiful, yet old orgel that shows the traces of time. Written on the inside of the orgel are the words, &quot;For Dear Miss Helena&quot;. "
+    "desc": "A beautiful, yet old orgel that shows the traces of time. Written on the inside of the orgel are the words, \"For Dear Miss Helena\". "
   },
   "4031841": {
     "name": "Magic Flask (Empty)",
@@ -7245,7 +7245,7 @@
   },
   "4031852": {
     "name": "Dress",
-    "desc": "A fancy, fashionable dress made by Madame Ming Ming herself.  The inscription says &quot;Kyrin&quot;."
+    "desc": "A fancy, fashionable dress made by Madame Ming Ming herself.  The inscription says \"Kyrin\"."
   },
   "4031853": {
     "name": "Abel's Glasses ",
@@ -7377,11 +7377,11 @@
   },
   "4031885": {
     "name": "Mapler Recommendation",
-    "desc": "Recommendation written by Happyville people. <b>Item cannot be dropped.</b>"
+    "desc": "Recommendation written by Happyville people. #cItem cannot be dropped.#"
   },
   "4031886": {
     "name": "Completed Socks",
-    "desc": "Happyville Trend Socks made with skill from Mrs. Santa Claus. <b>Item cannot be dropped.</b>"
+    "desc": "Happyville Trend Socks made with skill from Mrs. Santa Claus. #cItem cannot be dropped.#"
   },
   "4031887": {
     "name": "Tamed Rudolph",
@@ -7749,7 +7749,7 @@
   },
   "4032018": {
     "name": "Translated Communique",
-    "undefined": ""
+    "desc": ""
   },
   "4032021": {
     "name": "Triferium Fuel Cell",
@@ -7797,7 +7797,7 @@
   },
   "4032032": {
     "name": "Coded Communique",
-    "undefined": ""
+    "desc": ""
   },
   "4032033": {
     "name": "Entrance pass for tomato farm 1 ",
@@ -7860,7 +7860,7 @@
     "desc": "An attendance sheet that checks your daily attendance to MapleStory."
   },
   "4032058": {
-    "name": "PB &amp; J Sandwich",
+    "name": "PB & J Sandwich",
     "desc": "A scrumptious Peanut Butter and Jelly Sandwich. The staple of lunch for all ages!"
   },
   "4032059": {
@@ -8033,11 +8033,11 @@
   },
   "4032130": {
     "name": "Pig Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll that resembles a pig. However, something doesn't seem right…"
   },
   "4032131": {
     "name": "Pig Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll that resembles a pig. However, something doesn't seem right…"
   },
   "4032132": {
     "name": "Roca's Mission Report",
@@ -8045,11 +8045,11 @@
   },
   "4032133": {
     "name": "Zakum Diamond",
-    "undefined": ""
+    "desc": ""
   },
   "4032134": {
     "name": "Stone Denari",
-    "undefined": ""
+    "desc": ""
   },
   "4032135": {
     "name": "Growth Powder",
@@ -8065,7 +8065,7 @@
   },
   "4032138": {
     "name": "Bubbling Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll that was designed based on Bubbling, but something doesn't seem right. It's in…tears."
   },
   "4032139": {
     "name": "Old Key",
@@ -8073,7 +8073,7 @@
   },
   "4032140": {
     "name": "Bubbling Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll that was designed based on Bubbling, but something doesn't seem right. It's in…tears."
   },
   "4032141": {
     "name": "Mattias' Mission Report",
@@ -8097,11 +8097,11 @@
   },
   "4032146": {
     "name": "Wooden Mask Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll modeled after the Wooden Mask, but something doesn't seem right…"
   },
   "4032147": {
     "name": "Rocky Mask Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll modeled after the Stone Mask, but something doesn't seem right…"
   },
   "4032148": {
     "name": "Detector",
@@ -8237,7 +8237,7 @@
   },
   "4032190": {
     "name": "Orange Mushroom Doll",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "An adorable doll modeled after the Orange Mushroom, but something doesn't seem right…"
   },
   "4032191": {
     "name": "Kamuna Expedition Spawn NPC",
@@ -8397,7 +8397,7 @@
   },
   "4032273": {
     "name": "Pencil of Courage X 10  ",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "A pencil that's used to write things you don’t have the courage to say. "
   },
   "4032275": {
     "name": "Pure Normal Sprout  ",
@@ -8425,15 +8425,15 @@
   },
   "4032281": {
     "name": "Pencil of Courage X 100  ",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "A pencil that's used to write things you don’t have the courage to say. "
   },
   "4032282": {
     "name": "Pencil of Courage X 1000  ",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "AA pencil that's used to write things you don’t have the courage to say. "
   },
   "4032283": {
     "name": "Pencil of Courage X 10000  ",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "A pencil that's used to write things you don’t have the courage to say. "
   },
   "4032284": {
     "name": "Child's Broken Toy  ",
@@ -8661,7 +8661,7 @@
   },
   "4032361": {
     "name": "Operational Unit Particle",
-    "desc": "&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;&#43690;"
+    "desc": "A particle of the operational unit that strengthened Dunas. What is this for…?"
   },
   "4032362": {
     "name": "Summon Underling of Dunas/Auf Haven",
@@ -8701,7 +8701,7 @@
   },
   "4032372": {
     "name": "Giant Polearm Image",
-    "undefined": ""
+    "desc": ""
   },
   "4032373": {
     "name": "Tutorial Muru's Furball",
@@ -8736,16 +8736,16 @@
     "desc": "It's a piece of cake."
   },
   "4032383": {
-    "desc": "It's a piece of cake.",
-    "name": "Piece of Cake"
+    "name": "Piece of Cake",
+    "desc": "It's a piece of cake."
   },
   "4032384": {
-    "desc": "It's a piece of cake.",
-    "name": "Piece of Cake"
+    "name": "Piece of Cake",
+    "desc": "It's a piece of cake."
   },
   "4032385": {
-    "desc": "A small present box. It seems that Pink Bean will exchange it for another item.",
-    "name": "Mini Present Box"
+    "name": "Mini Present Box",
+    "desc": "A small present box. It seems that Pink Bean will exchange it for another item."
   },
   "4032386": {
     "name": "King Pepe's Crown",
@@ -8784,8 +8784,8 @@
     "desc": "Sand Mole Hat"
   },
   "4032403": {
-    "desc": "A token of gratitude obtained from Pink Bean. It seems that Patty will exchange it for points.",
-    "name": "Token of Gratitude"
+    "name": "Token of Gratitude",
+    "desc": "A token of gratitude obtained from Pink Bean. It seems that Patty will exchange it for points."
   },
   "4032404": {
     "name": "Miwok Artifact Piece",
@@ -9025,7 +9025,7 @@
   },
   "4032480": {
     "name": "Stanlica's Guitar",
-    "desc": "Music can expose the most painful roots of the heart, but it will always reveal the truth.\\r\\n<b>- Chief Stan -</b>"
+    "desc": "Music can expose the most painful roots of the heart, but it will always reveal the truth.\\r\\n#c- Chief Stan -#"
   },
   "4032481": {
     "name": "Unseemly Ocarina",
@@ -9033,7 +9033,7 @@
   },
   "4032482": {
     "name": "Darkween's Monster Drum",
-    "desc": "You must live life with passion, so that the rest of the world might learn how to live.\\r\\n<b>- Dark Lord -</b>"
+    "desc": "You must live life with passion, so that the rest of the world might learn how to live.\\r\\n#c- Dark Lord -#"
   },
   "4032483": {
     "name": "Solomon's Sealed Bow",
@@ -9041,7 +9041,7 @@
   },
   "4032484": {
     "name": "Kyrinvana's Guitar",
-    "desc": "Blast this song until the rhythm pumps your blood and the chorus echoes through your bones...\\r\\n<b>- Kyrin -</b>"
+    "desc": "Blast this song until the rhythm pumps your blood and the chorus echoes through your bones...\\r\\n#c- Kyrin -#"
   },
   "4032485": {
     "name": "Large Model of a Coin",
@@ -9057,7 +9057,7 @@
   },
   "4032488": {
     "name": "Ayan Mercury's Microphone",
-    "desc": "I will love my life just as I love the melody of this song.(Use it on the dirty Treasure Map.)\\r\\n<b>- Ayan -</b>"
+    "desc": "I will love my life just as I love the melody of this song.(Use it on the dirty Treasure Map.)\\r\\n#c- Ayan -#"
   },
   "4032489": {
     "name": "Ink Sack",
@@ -9201,15 +9201,15 @@
   },
   "4032576": {
     "name": "Green Mardi Gras Feather",
-    "undefined": ""
+    "desc": ""
   },
   "4032577": {
     "name": "Purple Mardi Gras Feather",
-    "undefined": ""
+    "desc": ""
   },
   "4032578": {
     "name": "Red Mardi Gras Feather",
-    "undefined": ""
+    "desc": ""
   },
   "4032654": {
     "name": "Spade 6 Card",
@@ -9309,7 +9309,7 @@
   },
   "4039005": {
     "name": "Pierre's Surprise Box",
-    "desc": "Pierre's Surprise Box.\\n<b>Bring it to Malady to find out what's inside!</b>."
+    "desc": "Pierre's Surprise Box.\\n#cBring it to Malady to find out what's inside!#."
   },
   "4039006": {
     "name": "Blin's Flame",
@@ -9336,16 +9336,16 @@
     "desc": "Chun Ji conjured up this liquid that has the potential to become The Breath of Lava... it is however lacking the final component... magic."
   },
   "4039012": {
-    "desc": "A small shard of what looks almost like ice. It feels very heavy and glows dimly in the dark.",
-    "name": "Dragonglass Shard"
+    "name": "Dragonglass Shard",
+    "desc": "A small shard of what looks almost like ice. It feels very heavy and glows dimly in the dark."
   },
   "4039013": {
     "name": "Billion Meso Coin",
-    "desc": "A shiny coin worth 1 billion mesos, useful for trading large sums of money. This item can be sold in an NPC shop for 1 billion mesos at any time. When trading to another player, a tax fee of 30 million mesos per Billion Meso Coin will be deducted automatically from your inventory.\r\n<b>This item cannot be dropped.</b>\r\n#cThis item cannot be sold in a personal store/merchant."
+    "desc": "A shiny coin worth 1 billion mesos, useful for trading large sums of money. This item can be sold in an NPC shop for 1 billion mesos at any time. When trading to another player, a tax fee of 30 million mesos per Billion Meso Coin will be deducted automatically from your inventory.\r\n#cThis item cannot be dropped.#\r\n#cThis item cannot be sold in a personal store/merchant."
   },
   "4039014": {
     "name": "Mystery Gift Box",
-    "desc": "A mystery gift box signed with the name &quot;Mrs. Claus&quot;."
+    "desc": "A mystery gift box signed with the name \"Mrs. Claus\"."
   },
   "4039015": {
     "name": "Swirly Egg",
@@ -9392,8 +9392,8 @@
     "desc": "A piece of Subani's sacred scroll. Its contents can't be deciphered. If only the rest of the scroll could be located..."
   },
   "4039026": {
-    "desc": "A ribbon left over from an Easter Egg. This might come in handy later.",
-    "name": "Easter Egg Ribbon"
+    "name": "Easter Egg Ribbon",
+    "desc": "A ribbon left over from an Easter Egg. This might come in handy later."
   },
   "4039027": {
     "name": "Hay",
@@ -9408,8 +9408,8 @@
     "desc": "A healing herb, said to expedite growth in children."
   },
   "4039030": {
-    "desc": "An easter egg that an Eggy Pop stole, return it to the Mad Bunny!",
-    "name": "Golden Easter Egg"
+    "name": "Golden Easter Egg",
+    "desc": "An easter egg that an Eggy Pop stole, return it to the Mad Bunny!"
   },
   "4039031": {
     "name": "Token of Teamwork",
@@ -9440,7 +9440,7 @@
     "desc": "Just an icon of the PQ."
   },
   "4039038": {
-    "name": "Romeo &amp; Juliet PQ Icon",
+    "name": "Romeo & Juliet PQ Icon",
     "desc": "Just an icon of the PQ."
   },
   "4039039": {
@@ -9516,80 +9516,80 @@
     "desc": "This ancient manuscript contains a language you cannot understand."
   },
   "4039057": {
-    "desc": "Mar the Fairy's enchanted chalice. When filled with truly pure, magic water, it is said that drinking from it will restore one's youth and vitality.",
-    "name": "Empty Chalice"
+    "name": "Empty Chalice",
+    "desc": "Mar the Fairy's enchanted chalice. When filled with truly pure, magic water, it is said that drinking from it will restore one's youth and vitality."
   },
   "4055000": {
     "name": "Cassandra's Divine Coupon",
-    "desc": "Use this at <b>Henesys Plastic Surgery# to #ctemporarily</b> change face once"
+    "desc": "Use this at #cHenesys Plastic Surgery# to #ctemporarily# change face once"
   },
   "4055001": {
     "name": "Cassandra's Divine Coupon",
-    "desc": "Use this at <b>Kerning City# Hair Salon to #ctemporarily</b> change hairstyle once"
+    "desc": "Use this at #cKerning City# Hair Salon to #ctemporarily# change hairstyle once"
   },
   "4055004": {
     "name": "Henesys Plastic Surgery Event Coupon",
-    "desc": "Use this at <b>Henesys Plastic Surgery# to #ctemporarily</b> change face once"
+    "desc": "Use this at #cHenesys Plastic Surgery# to #ctemporarily# change face once"
   },
   "4055005": {
     "name": "Kerning City Hair Salon Coupon",
-    "desc": "Use this at <b>Kerning City# Hair Salon to #ctemporarily</b> change hairstyle once"
+    "desc": "Use this at #cKerning City# Hair Salon to #ctemporarily# change hairstyle once"
   },
   "4060000": {
     "name": "Token of Teamwork",
-    "undefined": ""
+    "desc": ""
   },
   "4060001": {
     "name": "Golden Easter Egg",
-    "undefined": ""
+    "desc": ""
   },
   "4080000": {
-    "name": "Slime &amp; Mushroom Omok Set",
+    "name": "Slime & Mushroom Omok Set",
     "desc": "A set that allows you to play Omok. Uses slime and mushroom-shaped figures for the game."
   },
   "4080001": {
-    "name": "Slime &amp; Octopus Omok Set",
+    "name": "Slime & Octopus Omok Set",
     "desc": "A set that allows you to play Omok. Uses slime and octopus-shaped figures for the game."
   },
   "4080002": {
-    "name": "Slime &amp; Pig Omok Set",
+    "name": "Slime & Pig Omok Set",
     "desc": "A set that allows you to play Omok. Uses pig and slime-shaped figures for the game."
   },
   "4080003": {
-    "name": "Octopus &amp; Mushroom Omok Set",
+    "name": "Octopus & Mushroom Omok Set",
     "desc": "A set that allows you to play Omok. Uses octopus and mushroom-shaped figures for the game."
   },
   "4080004": {
-    "name": "Pig &amp; Octopus Omok Set",
+    "name": "Pig & Octopus Omok Set",
     "desc": "A set that allows you to play Omok. Uses pig and octopus-shaped figures for the game."
   },
   "4080005": {
-    "name": "Pig &amp; Mushroom Omok Set",
+    "name": "Pig & Mushroom Omok Set",
     "desc": "A set that allows you to play Omok. Uses pig and mushroom-shaped figures for the game."
   },
   "4080006": {
-    "name": "Bloctopus &amp; Pink Teddy Omok Set",
-    "desc": "A set that allows you to play Omok. Uses Bloctopus &amp; Pink Teddy-shaped figures for the game."
+    "name": "Bloctopus & Pink Teddy Omok Set",
+    "desc": "A set that allows you to play Omok. Uses Bloctopus & Pink Teddy-shaped figures for the game."
   },
   "4080007": {
-    "name": "Bloctopus &amp; Trixter Omok Set",
-    "desc": "A set that allows you to play Omok. Uses Bloctopus &amp; Trixter-shaped figures for the game."
+    "name": "Bloctopus & Trixter Omok Set",
+    "desc": "A set that allows you to play Omok. Uses Bloctopus & Trixter-shaped figures for the game."
   },
   "4080008": {
-    "name": "Pink Teddy &amp; Trixter Omok Set",
-    "desc": "A set that allows you to play Omok. Uses Pink Teddy &amp; Trixter-shaped figures for the game."
+    "name": "Pink Teddy & Trixter Omok Set",
+    "desc": "A set that allows you to play Omok. Uses Pink Teddy & Trixter-shaped figures for the game."
   },
   "4080009": {
-    "name": "Panda Teddy &amp; Blocktopus Omok Set",
-    "desc": "A set that allows you to play Omok. Uses Blocktopus &amp; Panda Teddy-shaped figures for the game."
+    "name": "Panda Teddy & Blocktopus Omok Set",
+    "desc": "A set that allows you to play Omok. Uses Blocktopus & Panda Teddy-shaped figures for the game."
   },
   "4080010": {
-    "name": "Panda Teddy &amp; Pink Teddy Omok Set",
-    "desc": "A set that allows you to play Omok. Uses Panda Teddy &amp; Pink Teddy-shaped figures for the game."
+    "name": "Panda Teddy & Pink Teddy Omok Set",
+    "desc": "A set that allows you to play Omok. Uses Panda Teddy & Pink Teddy-shaped figures for the game."
   },
   "4080011": {
-    "name": "Panda Teddy &amp; Trixter Omok Set",
-    "desc": "A set that allows you to play Omok. Uses Panda Teddy &amp; Trixter-shaped figures for the game."
+    "name": "Panda Teddy & Trixter Omok Set",
+    "desc": "A set that allows you to play Omok. Uses Panda Teddy & Trixter-shaped figures for the game."
   },
   "4080100": {
     "name": "A set of Match Cards",
@@ -9688,8 +9688,8 @@
     "desc": "Use this when making a shield to change the item option. Beware that this also carries a 10% risk of ruining the item production."
   },
   "4130024": {
-    "desc": "Use this when making earrings to change the item option. ",
-    "name": "Earring Production Stimulator"
+    "name": "Earring Production Stimulator",
+    "desc": "Use this when making earrings to change the item option. "
   },
   "4131000": {
     "name": "One-Handed Sword Forging Manual",
@@ -9773,7 +9773,7 @@
   },
   "4140103": {
     "name": "Certificate of Assistant",
-    "desc": "Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140200": {
     "name": "Chocolate Basket",
@@ -9781,15 +9781,15 @@
   },
   "4140201": {
     "name": "Candy Basket for White Day",
-    "desc": "A candy basket full of sweet candies. It does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "A candy basket full of sweet candies. It does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140300": {
     "name": "Power of Moon",
-    "desc": "A piece of rock that contains the mysterious power of moon. It does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "A piece of rock that contains the mysterious power of moon. It does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140301": {
     "name": "Power of Star",
-    "desc": "A piece of rock that contains the mysterious power of a star. It does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "A piece of rock that contains the mysterious power of a star. It does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140302": {
     "name": "Defense Charm",
@@ -9797,15 +9797,15 @@
   },
   "4140900": {
     "name": "White Day - Strawberry Candy",
-    "desc": "A sweet strawberry candy. Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "A sweet strawberry candy. Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140901": {
     "name": "White Day - Candy Basket",
-    "desc": "A candy basket full of love. Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "A candy basket full of love. Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140902": {
     "name": "Pineapple Candy",
-    "desc": "A sweet pineapple candy. Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. <b>Can be used ONCE within the expiration date</b>"
+    "desc": "A sweet pineapple candy. Much like the Safety Charm, it does not let the user lose EXP points after death, as long as it's in possession. #cCan be used ONCE within the expiration date#"
   },
   "4140903": {
     "name": "Easter Charm",
@@ -9813,495 +9813,495 @@
   },
   "4160000": {
     "name": "Pet Guide: Puppy",
-    "desc": "A guide that has all the commands for the puppy.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the puppy.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160001": {
     "name": "Pet Guide: Kitty",
-    "desc": "A guide that has all the commands for the Kitty.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Kitty.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160002": {
     "name": "Pet Guide: Bunny",
-    "desc": "A guide that has all the commands for the Bunny.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Bunny.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160003": {
     "name": "Pet Guide: Mini Kargo",
-    "desc": "A guide that has all the commands for Mini Kargo.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Mini Kargo.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160004": {
     "name": "Pet Guide: Husky",
-    "desc": "A guide that has all the commands for the Husky.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Husky.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160005": {
     "name": "Pet Guide: Pig",
-    "desc": "A guide that has all the commands for the pig.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the pig.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160006": {
     "name": "Pet Guide: Panda",
-    "desc": "A guide that has all the commands for the Panda.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Panda.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160007": {
     "name": "Pet Guide: Dino",
-    "desc": "A guide that has all the commands for the Dino.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Dino.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160008": {
     "name": "Pet Guide: White Tiger",
-    "desc": "A guide that has all the commands for the White Tiger.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the White Tiger.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160009": {
     "name": "Pet Guide: Rudolph",
-    "desc": "A guide that has all the commands for the Rudolph.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Rudolph.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160010": {
     "name": "Pet Guide: Monkey",
-    "desc": "A guide that has all the commands for Monkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Monkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160011": {
     "name": "Pet AP Reset Scroll",
-    "desc": "An important scroll that enables one to adjust the pet ability points. \\n<b>Double-click on the item for more information.</b>"
+    "desc": "An important scroll that enables one to adjust the pet ability points. \\n#cDouble-click on the item for more information.#"
   },
   "4160012": {
     "name": "Pet Guide: Mini Yeti",
-    "desc": "A guidebook that details the commands that can be said to Mini Yeti.<b>Double-click on the item to open the book.</b>"
+    "desc": "A guidebook that details the commands that can be said to Mini Yeti.#cDouble-click on the item to open the book.#"
   },
   "4160013": {
     "name": "Pet Guide: Robot",
-    "desc": "A guide that has all the commands for the Robot.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Robot.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160014": {
     "name": "Pet Guide: Penguin",
-    "desc": "A guide that has all the commands for the Penguin.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Penguin.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160015": {
     "name": "Pet Guide: Jr. Balrog",
-    "desc": "A guide that has all the commands for the Jr. Balrog.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Jr. Balrog.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160016": {
     "name": "Pet Guide: Red Elly",
-    "desc": "A guide that has all the commands for Red Elly.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Red Elly.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160017": {
     "name": "Pet Guide: Golden Pig",
-    "desc": "A guide that has all the commands for the Golden Pig.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Golden Pig.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160019": {
     "name": "Pet Guide: Sun Wu Kong",
-    "desc": "A guide that has all the commands for Sun Wu Kong.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Sun Wu Kong.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160020": {
     "name": "Pet Guide: Turkey",
-    "desc": "A guide that has all the commands for the Turkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Turkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160022": {
     "name": "Pet Guide: Baby Dragon",
-    "desc": "A guide that has all the commands for the Baby Dragon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Baby Dragon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160023": {
     "name": "Pet Guide: Green/Red/Blue Dragon",
-    "desc": "A guide that has all the commands for the Green/Red/Blue Dragon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Green/Red/Blue Dragon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160024": {
     "name": "Pet Guide: Black Dragon",
-    "desc": "A guide that has all the commands for the Black Dragon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Black Dragon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160025": {
     "name": "Pet Guide: White Monkey",
-    "desc": "A guide that has all the commands for the White Monkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the White Monkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160026": {
     "name": "Pet Guide: Jr. Reaper",
-    "desc": "A guide that has all the commands for the Jr. Reaper.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Jr. Reaper.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160027": {
     "name": "Pet Guide: Porcupine",
-    "desc": "A guide that has all the commands for the porcupine.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the porcupine.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160028": {
     "name": "Pet Guide: Jr. Reaper",
-    "desc": "A guide that has all the commands for the pet Jr. Reaper.n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the pet Jr. Reaper.n#cDouble-click on the item to open the guide.#"
   },
   "4160029": {
     "name": "Pet Guide: Snowman",
-    "desc": "A guide that has all the commands for the Snowman.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Snowman.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160031": {
     "name": "Pet Guide: Hedgehog",
-    "desc": "A guide that has all the commands for the pet hedgehog.n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the pet hedgehog.n#cDouble-click on the item to open the guide.#"
   },
   "4160032": {
     "name": "Pet Guide: Skunk",
-    "desc": "A guide that has all the commands for the Skunk.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Skunk.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160033": {
     "name": "Pet Guide: Kino",
-    "desc": "A guide that has all the commands for the pet Kino.n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the pet Kino.n#cDouble-click on the item to open the guide.#"
   },
   "4160034": {
     "name": "Pet Guide: Baby Robo",
-    "desc": "A guide that has all the commands for the Baby Robo.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Baby Robo.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160035": {
     "name": "Pet Guide: Blue/Red/Green/Gold Robo",
-    "desc": "A guide that has all the commands for the Blue/Red/Green/Gold Robo.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Blue/Red/Green/Gold Robo.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160036": {
     "name": "Pet Guide: Gorilla Robo",
-    "desc": "A guide that has all the commands for the Gorilla Robo.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Gorilla Robo.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160037": {
     "name": "Pet Guide: Crystal Rudolph",
-    "desc": "A guide that has all the commands for the Crystal Rudolph.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Crystal Rudolph.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160038": {
     "name": "Pet Guide: Toucan",
-    "desc": "A guide that has all the commands for the puppy.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the puppy.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160039": {
     "name": "Pet Guide: White Duck",
-    "desc": "A guide that has all the commands for the pet white duck.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the pet white duck.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160040": {
     "name": "Pet Guide: Pink Bean",
-    "desc": "A guide that has all the commands for the Pink Bean.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Pink Bean.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160041": {
     "name": "Pet Guide: Gold Pig",
-    "desc": "A guide that has all the commands for the Gold Pig.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Gold Pig.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160044": {
     "name": "Pet Guide: Baby Tiger",
-    "desc": "A guide that contains commands for Baby Tiger. \\n<b>You can open the book by double-clicking on it.</b>"
+    "desc": "A guide that contains commands for Baby Tiger. \\n#cYou can open the book by double-clicking on it.#"
   },
   "4160046": {
     "name": "Pet Guide: Baby Tiger",
-    "desc": "A guide that has all the commands for the Baby Tiger.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Baby Tiger.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160047": {
     "name": "Pet Guide: Mir/Ruby",
-    "desc": "A guide that has all the commands for the pet Mir/Ruby\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the pet Mir/Ruby\\n#cDouble-click on the item to open the guide.#"
   },
   "4160048": {
     "name": "Pet Guide: White Duck",
-    "desc": "A guide that has all the commands for the White Duck.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the White Duck.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160049": {
     "name": "Pet Guide: Skunk",
-    "desc": "A guide that has all the commands for the Skunk.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Skunk.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160050": {
     "name": "Pet Guide: Bing Monkey",
-    "desc": "A guide that has all the commands for Visitor Research Monkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Visitor Research Monkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160052": {
     "name": "Pet Guide: Corgi Pup",
-    "desc": "A guide that has all the commands for the Corgi Pup.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Corgi Pup.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160054": {
     "name": "Pet Guide: Persian Cat",
-    "desc": "A guide that has all the commands for the Persian Cat.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Persian Cat.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160055": {
     "name": "Pet Guide: Cake",
-    "desc": "A guide that has all the commands for the Cake pet.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Cake pet.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160056": {
     "name": "Pet Guide: Pie",
-    "desc": "A guide that has all the commands for the Pie pet.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Pie pet.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160057": {
     "name": "Pet Guide: Unicorn",
-    "desc": "A guide that has all the commands for the Unicorn.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Unicorn.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160065": {
     "name": "Pet Guide: Shark",
-    "desc": "A guide that has all the commands for Shark.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Shark.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160066": {
     "name": "Pet Guide: Pink Bean",
-    "desc": "A guide that has all the commands for Pink Bean.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Pink Bean.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160067": {
     "name": "Pet Guide: Craw",
-    "desc": "A guide containing all the commands for Craw.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide containing all the commands for Craw.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160068": {
     "name": "Pet Guide: Adriano",
-    "desc": "A guide containing all the commands for Adriano.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide containing all the commands for Adriano.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160069": {
     "name": "Pet Guide: Bonkey",
-    "desc": "A guide containing all the commands for Bonkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide containing all the commands for Bonkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160070": {
     "name": "Pet Guide: Corgi Pup",
-    "desc": "A guide to all the commands your Corgi Pup can learn.\\n<b>Double-click to open the guide.</b>"
+    "desc": "A guide to all the commands your Corgi Pup can learn.\\n#cDouble-click to open the guide.#"
   },
   "4160071": {
     "name": "Pet Guide: Dragon",
-    "desc": "A guide containing all the commands for Dragon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide containing all the commands for Dragon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160072": {
     "name": "Pet Guide: Fennec Fox",
-    "desc": "A guide that has all the commands for Fennec Fox.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Fennec Fox.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160073": {
     "name": "Pet Guide: Pirate Parrot",
-    "desc": "A guide that has all the commands for the Pirate Parrot.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Pirate Parrot.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160074": {
     "name": "Pet Guide: Demon",
-    "desc": "A guide containing all the commands for Demon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide containing all the commands for Demon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160075": {
     "name": "Pet Guide: Chunky Raccoon",
-    "desc": "A guide that has all the commands for the Chunky Raccoon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Chunky Raccoon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160076": {
     "name": "Pet Guide: Burro",
-    "desc": "A guide that has all the commands for the Burro pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Burro pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160077": {
     "name": "Hilla's Pet Guide: Blackheart",
-    "desc": "A guide that has all the commands for Blackheart.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Blackheart.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160078": {
     "name": "Pet Guide: Harp Seal",
-    "desc": "A guide that has all the commands for the Harp Seal.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Harp Seal.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160079": {
     "name": "Pet Guide: Puffram",
-    "desc": "A guide that has all the commands for the Puffram.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Puffram.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160080": {
     "name": "Pet Guide: Gingerbready",
-    "desc": "A guide that has all the commands for the Gingerbready.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Gingerbready.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160081": {
     "name": "Pet Guide: Icy Knight",
-    "desc": "A guide that has all the commands for the Icy Knight.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Icy Knight.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160082": {
     "name": "Pet Guide: Demon",
-    "desc": "A guide that has all the commands for little Demons.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for little Demons.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160083": {
     "name": "Pet Guide: Merlion",
-    "desc": "A guide that has all the commands for Merlion.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Merlion.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160084": {
     "name": "Pet Guide: Butterfly",
-    "desc": "A guide that has all the commands for Butterfly.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Butterfly.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160087": {
     "name": "Pet Guide: Starwing",
-    "desc": "A guide that has all the commands for Starwing.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Starwing.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160088": {
     "name": "Pet Guide: Shark",
-    "desc": "A guide that has all the commands for a Shark.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for a Shark.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160090": {
     "name": "Pet Guide: Dragon",
-    "desc": "A guide that has all the commands for a Dragon.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for a Dragon.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160092": {
     "name": "Pet Guide: Teddy",
-    "desc": "A guide that has all the commands for Teddy pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Teddy pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160094": {
     "name": "Pet Guide: Pumpkin",
-    "desc": "A guide that has all the commands for Pumpkin pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Pumpkin pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160095": {
     "name": "Pet Guide: Sassy Snake",
-    "desc": "A guide that has all the commands for Sassy Snake pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Sassy Snake pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160096": {
     "name": "Pet Guide: Kangaroo",
-    "desc": "A guide that has all the commands for Kangaroo pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Kangaroo pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160097": {
     "name": "Pet Guide: Koalas",
-    "desc": "A guide that has all the commands for Koala pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Koala pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160098": {
     "name": "Pet Guide: Squirrel",
-    "desc": "A guide that has all the commands for Chipmunk pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Chipmunk pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160100": {
     "name": "Pet Guide: Angels",
-    "desc": "A guide that has all the commands for Angels.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Angels.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160102": {
     "name": "Pet Guide: Roo-bot",
-    "desc": "A guide that has all the commands for Roo-bot.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Roo-bot.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160103": {
     "name": "Pet Guide: Devils",
-    "desc": "A guide that has all the commands for Devils.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Devils.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160104": {
     "name": "Pet Guide: Root Abyss",
-    "desc": "A guide that has all the commands for Root Abyss.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Root Abyss.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160105": {
     "name": "Pet Guide: Yeti Robo",
-    "desc": "A guide that has all the commands for Yeti Robo.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Yeti Robo.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160106": {
     "name": "Pet Guide: Ice Knight",
-    "desc": "A guide that has all the commands for the Ice Knight. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Ice Knight. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160107": {
     "name": "Pet Guide: Dilo",
-    "desc": "A guide that has all the commands for Dilo. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Dilo. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160108": {
     "name": "Pet Guide: Stickman",
-    "desc": "A guide that has all the commands for Stickman. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Stickman. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160109": {
     "name": "Pet Guide: Jr. Commander",
-    "desc": "A guide that has all the commands for Jr. Commanders.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Jr. Commanders.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160110": {
     "name": "Pet Guide: Bandit",
-    "desc": "A guide that has all the commands for Bandit.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Bandit.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160111": {
     "name": "Pet Guide: Kangaroo",
-    "desc": "A guide that has all the commands for Kangaroo pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Kangaroo pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160112": {
     "name": "Pet Guide: Chestnut",
-    "desc": "A guide that has all the commands for Chestnut pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Chestnut pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160113": {
     "name": "Pet Guide: Gollux",
-    "desc": "A guide that has all the commands for Gollux.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Gollux.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160115": {
     "name": "Pet Guide: Candle",
-    "desc": "A guide that has all the commands for Candles.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Candles.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160116": {
     "name": "Pet Guide: RED Rudolph",
-    "desc": "A guide that has all the commands for the RED Rudolph.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the RED Rudolph.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160117": {
     "name": "Pet Guide: RED Yeti",
-    "desc": "A guidebook that details the commands that can be said to RED Yeti.<b>Double-click on the item to open the book.</b>"
+    "desc": "A guidebook that details the commands that can be said to RED Yeti.#cDouble-click on the item to open the book.#"
   },
   "4160118": {
     "name": "Pet Guide: RED Penguin",
-    "desc": "A guide that has all the commands for the RED Penguin.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the RED Penguin.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160119": {
     "name": "Pet Guide: Creampuff",
-    "desc": "A guide that has all the commands for Creampuffs.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Creampuffs.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160120": {
     "name": "Pet Guide: Happy Bean",
-    "desc": "A guide that has all the commands for Happy Beans.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Happy Beans.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160121": {
     "name": "Pet Guide: Li'l Lai",
-    "desc": "A guide that has all the commands for Li'l Lai.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Li'l Lai.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160122": {
     "name": "Pet Guide: Li'l Fort",
-    "desc": "A guide that has all the commands for Li'l Fort.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Li'l Fort.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160123": {
     "name": "Pet Guide: Li'l Arby",
-    "desc": "A guide that has all the commands for Li'l Arby.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Li'l Arby.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160124": {
     "name": "Pet Guide: Pengy",
-    "desc": "A guide that has all the commands for Pengys.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Pengys.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160126": {
     "name": "Pet Guide: Toto",
-    "desc": "A guide that has all the commands for Totos.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Totos.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160127": {
     "name": "Pet Guide: Frankie",
-    "desc": "A guide that has all the commands for the Frankie pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Frankie pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160128": {
     "name": "Pet Guide: Abel/Axel/Adel",
-    "desc": "A guide that contains all the commands for Abel, Axel, and Adel.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Abel, Axel, and Adel.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160129": {
     "name": "Pet Guide: Lil Moonbeam",
-    "desc": "A guide that contains all the commands for your Lil Moonbeam pet.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Lil Moonbeam pet.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160133": {
     "name": "Pet Guide: Bing Monkey",
-    "desc": "A guide that has all the commands for Visitor Research Monkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Visitor Research Monkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160135": {
     "name": "Pet Guide: Toy World",
-    "desc": "A guide that has all the commands for the Toy World pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Toy World pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160136": {
     "name": "Pet Guide: Chameleon",
-    "desc": "A guide that has all the commands for Chameleon pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Chameleon pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160137": {
     "name": "Pet Guide: Shining Star",
-    "desc": "A guide that has all the commands for the Shining Star pet.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for the Shining Star pet.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160138": {
     "name": "Pet Guide: Lil' Bobble",
-    "desc": "A guide that has all the commands for Lil' Bobble.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Lil' Bobble.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160139": {
     "name": "Pet Guide: Black Heaven Pets",
-    "desc": "A guide that has all the commands for Black Heaven pets. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Black Heaven pets. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160140": {
     "name": "Pet Guide: Fluffram",
-    "desc": "A guide that has all the commands for Fluffram.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Fluffram.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160141": {
     "name": "Pet Guide: Tea Time",
-    "desc": "A guide that has all the commands for Tea Time Pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Tea Time Pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160142": {
     "name": "Pet Guide: Holoyeti",
-    "desc": "A guide that contains all the commands for your Holoyeti.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Holoyeti.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160143": {
     "name": "Pet Guide: Guardian Sheep",
-    "desc": "A guide that contains all the commands for your Guardian Sheep pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Guardian Sheep pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160146": {
     "name": "Pet Guide: Tea",
-    "desc": "A guide that has all the commands for Visitor Research Monkey.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that has all the commands for Visitor Research Monkey.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160147": {
     "name": "Pet Guide: Jr. Ryan",
-    "desc": "A guide that contains all the commands for Jr. Ryan.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Jr. Ryan.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160148": {
     "name": "Pet Guide: Jr. Sierra",
-    "desc": "A guide that contains all the commands for Jr. Sierra.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Jr. Sierra.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160149": {
     "name": "Pet Guide: Jr. Orchid",
-    "desc": "A guide that contains all the commands for Jr. Orchid.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Jr. Orchid.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160150": {
     "name": "Pet Guide: Ducky",
-    "desc": "A guide that contains all the commands for Ducky.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Ducky.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160152": {
     "name": "Pet Guide: Meerkat Mob",
-    "desc": "A guide that has all the commands for the Meerkat Mob. \\r\\n<b>Double-click on the item to open the guide.</b> \r\n"
+    "desc": "A guide that has all the commands for the Meerkat Mob. \\r\\n#cDouble-click on the item to open the guide.# \r\n"
   },
   "4160157": {
     "name": "Pet Guide: Lil Zakum",
-    "desc": "A guide that contains all the commands for Lil Zakum.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Lil Zakum.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160159": {
     "name": "Pet Guide: Mouse Monkey",
@@ -10309,235 +10309,235 @@
   },
   "4160161": {
     "name": "Pet Guide: Damien and Captives",
-    "desc": "A guide that contains all the commands for your Damien and Captives.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Damien and Captives.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160163": {
     "name": "Pet Guide: Gym Cat",
-    "desc": "A guide that contains all the commands for your Gym Cat.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Gym Cat.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160164": {
     "name": "Pet Guide: Iron Rabbit",
-    "desc": "A guide that contains all the commands for your Iron Rabbit.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Iron Rabbit.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160168": {
     "name": "Pet Guide: Lil Nenne",
-    "desc": "A guide that contains all the commands for Lil Nenne.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Lil Nenne.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160169": {
     "name": "Pet Guide: Lil Lingling",
-    "desc": "A guide that contains all the commands for Lil Lingling.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Lil Lingling.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160170": {
     "name": "Pet Guide: Lil Tutu",
-    "desc": "A guide that contains all the commands for Lil Tutu.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Lil Tutu.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160171": {
     "name": "Pet Guide: Samoyed",
-    "desc": "A guide that contains all the commands for your Samoyed.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Samoyed.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160174": {
     "name": "Pet Guide: Lil Tengu",
-    "desc": "A guide that contains all the commands for the Lil Tengu pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Lil Tengu pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160175": {
     "name": "Pet Guide: Beagle",
-    "desc": "A guide that contains all the commands for the Beagle pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Beagle pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160177": {
     "name": "Pet Guide: Witch's Cat",
-    "desc": "A guide that contains all the commands for the Salem, Binx and Kit cat pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Salem, Binx and Kit cat pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160178": {
     "name": "Pet Guide: Bichon",
-    "desc": "A guide that contains all the commands for the Bichon pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Bichon pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160180": {
     "name": "Pet Guide: Yodeling Hen",
-    "desc": "A guide that contains all the commands for the Yodeling Hen pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Yodeling Hen pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160183": {
     "name": "Pet Guide: Yellow Chick",
-    "desc": "A guide that contains all the commands for the Baby Chickie pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Baby Chickie pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160184": {
     "name": "Pet Guide: Mini Chicken",
-    "desc": "A guide that contains all the commands for your Mini Chicken pet.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Mini Chicken pet.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160185": {
     "name": "Pet Guide: Fried Shrimp",
-    "desc": "A guide that contains all the commands for the Fried Shrimp pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Fried Shrimp pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160186": {
     "name": "Pet Guide: Vampire Cat",
-    "desc": "A guide that contains all the commands for the Vampire Cat pet. \\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for the Vampire Cat pet. \\n#cDouble-click on the item to open the guide.#"
   },
   "4160188": {
     "name": "Pet Guide: Alpaca",
-    "desc": "A guide that contains all the commands for your Alpaca.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Alpaca.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160191": {
     "name": "Pet Guide: Fish Men",
-    "desc": "A guide that contains all the commands for your Fish Men pets\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Fish Men pets\\n#cDouble-click on the item to open the guide.#"
   },
   "4160194": {
     "name": "Pet Guide: Polar Cub",
-    "desc": "A guide that contains all the commands for your Polar Cub pet.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for your Polar Cub pet.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160207": {
     "name": "Pet Guide: Shiba Inu Pets",
-    "desc": "A guide that contains all the commands for Shiba Inu Pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Shiba Inu Pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160500": {
     "name": "Pet Guide: Furry Elwin",
-    "desc": "A guide that contains all the commands for Furry Elwin.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Furry Elwin.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160501": {
-    "name": "Pet Guide: Fluffy Lily &amp; Baby Nero",
-    "desc": "A guide that contains all the commands for Fluffy Lily.\\n<b>Double-click on the item to open the guide.</b>"
+    "name": "Pet Guide: Fluffy Lily & Baby Nero",
+    "desc": "A guide that contains all the commands for Fluffy Lily.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160502": {
     "name": "Pet Guide: Lil Nenne",
-    "desc": "A guide that contains all the commands for Lil Nenne.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Lil Nenne.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160503": {
     "name": "Pet Guide: Retriever",
-    "desc": "A guide that contains all the commands for Retriever.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Retriever.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160504": {
     "name": "Pet Guide: Sheepdog",
-    "desc": "A guide that contains all the commands for Sheepdog.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Sheepdog.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160505": {
     "name": "Pet Guide: Lil Aran",
-    "desc": "A guide that contains all the commands for Lil Aran.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Lil Aran.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160506": {
-    "desc": "A guide that contains all the commands for Cooked Egg pets.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Cooked Eggs"
+    "name": "Pet Guide: Cooked Eggs",
+    "desc": "A guide that contains all the commands for Cooked Egg pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160507": {
-    "desc": "A guide that contains all the commands for Microslime.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Microslime"
+    "name": "Pet Guide: Microslime",
+    "desc": "A guide that contains all the commands for Microslime.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160508": {
-    "desc": "A guide that contains all the commands for Microyeti.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Microyeti"
+    "name": "Pet Guide: Microyeti",
+    "desc": "A guide that contains all the commands for Microyeti.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160509": {
-    "desc": "A guide that contains all the commands for Bearcat pets.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Bearcat"
+    "name": "Pet Guide: Bearcat",
+    "desc": "A guide that contains all the commands for Bearcat pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160510": {
-    "desc": "A guide that contains all the commands for Honey B.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Honey B"
+    "name": "Pet Guide: Honey B",
+    "desc": "A guide that contains all the commands for Honey B.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160511": {
-    "desc": "A guide that contains all the commands for Boston.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Boston"
+    "name": "Pet Guide: Boston",
+    "desc": "A guide that contains all the commands for Boston.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160512": {
-    "desc": "A guide that contains all the commands for Yorkshire.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Yorkshire"
+    "name": "Pet Guide: Yorkshire",
+    "desc": "A guide that contains all the commands for Yorkshire.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160513": {
-    "desc": "A guide that contains all the commands for Westie.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Westie"
+    "name": "Pet Guide: Westie",
+    "desc": "A guide that contains all the commands for Westie.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160514": {
     "name": "Pet Guide: Tubby Tiger",
-    "desc": "A guide that contains all the commands for Tubby Tiger.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Tubby Tiger.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160515": {
-    "desc": "A guide that contains all the commands for Dalsoo.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Dalsoo"
+    "name": "Pet Guide: Dalsoo",
+    "desc": "A guide that contains all the commands for Dalsoo.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160516": {
-    "desc": "A guide that contains all the commands for Balloon Dog.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Balloon Dog"
+    "name": "Pet Guide: Balloon Dog",
+    "desc": "A guide that contains all the commands for Balloon Dog.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160517": {
-    "desc": "A guide that contains all the commands for Pudgycat.\\n<b>Double-click on the item to open the guide.</b>",
-    "name": "Pet Guide: Pudgycat"
+    "name": "Pet Guide: Pudgycat",
+    "desc": "A guide that contains all the commands for Pudgycat.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160518": {
     "name": "Pet Guide: Bubble Pets",
-    "desc": "A guide that contains all the commands for Bubble Pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Bubble Pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160519": {
     "name": "Pet Guide: Meow Pets",
-    "desc": "A guide that contains all the commands for Meow Pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Meow Pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4160520": {
     "name": "Pet Guide: Emotional Speech Bubble Pets",
-    "desc": "A guide that contains all the commands for Emotional Speech Bubble Pets.\\n<b>Double-click on the item to open the guide.</b>"
+    "desc": "A guide that contains all the commands for Emotional Speech Bubble Pets.\\n#cDouble-click on the item to open the guide.#"
   },
   "4161000": {
     "name": "Gwin's Diary",
-    "desc": "A diary that was inside what appears to be Gwin's bag. Can we findout his whereabouts?\\n<b>Double-click on the item to open the diary.</b>"
+    "desc": "A diary that was inside what appears to be Gwin's bag. Can we findout his whereabouts?\\n#cDouble-click on the item to open the diary.#"
   },
   "4161001": {
     "name": "Beginner's Guide",
-    "desc": "A thorough guide for the beginners.\\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A thorough guide for the beginners.\\n#cDouble-click on the item to open the book.#"
   },
   "4161002": {
     "name": "Attendance Book",
-    "desc": "An attendance book that proves you are an honest traveler.\\n<b>You can open the book by double clicking the item.</b>"
+    "desc": "An attendance book that proves you are an honest traveler.\\n#cYou can open the book by double clicking the item.#"
   },
   "4161003": {
     "name": "Attendance Book",
-    "desc": "An attendance book that proves you are an honest traveler.\\n<b>You can open the book by double clicking the item.</b>"
+    "desc": "An attendance book that proves you are an honest traveler.\\n#cYou can open the book by double clicking the item.#"
   },
   "4161004": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161005": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161006": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161007": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161008": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161009": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161010": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161011": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161012": {
     "name": "Attendance Book",
-    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A diligent traveler in MapleStory can now prove his/her diligence in traveling through this attendance book. \\n#cDouble-click on the item to open the book.#"
   },
   "4161013": {
     "name": "Leafre Guidebook",
-    "desc": "A book that details different ways to get to Leafre in Ossyria. \\n<b>Double-click on the item to open the book.</b>"
+    "desc": "A book that details different ways to get to Leafre in Ossyria. \\n#cDouble-click on the item to open the book.#"
   },
   "4161014": {
     "name": "Diary of the Goddess",
-    "desc": "This diary is written by Minerva the Goddess.\\n<b>Double-click on the item to read the book.</b>"
+    "desc": "This diary is written by Minerva the Goddess.\\n#cDouble-click on the item to read the book.#"
   },
   "4161015": {
     "name": "[Storybook] Burning Book of Fire",
-    "desc": "A book with a flaming cover. There's nothing written inside. Perhaps Bishop Gritto can help?\\nJob : <b>Arch Mage (Fire/Poison)</b>"
+    "desc": "A book with a flaming cover. There's nothing written inside. Perhaps Bishop Gritto can help?\\nJob : #cArch Mage (Fire/Poison)#"
   },
   "4161016": {
     "name": "[Storybook] Frozen Book of Ice",
-    "desc": "A book with frozen ice on its cover. There's nothing written inside.  Perhaps Bishop Gritto can help?\\nJob : <b>Arch Mage (Ice/Lightning)</b>"
+    "desc": "A book with frozen ice on its cover. There's nothing written inside.  Perhaps Bishop Gritto can help?\\nJob : #cArch Mage (Ice/Lightning)#"
   },
   "4161017": {
     "name": "Caron's Note",
@@ -10545,7 +10545,7 @@
   },
   "4161018": {
     "name": "[Storybook] Ancient Book",
-    "desc": "A strange, blank book with neither a title nor anything written inside it.  Wiz the librarian might know something about this book.\\nOnly for :<b>4th Job Bowman</b>"
+    "desc": "A strange, blank book with neither a title nor anything written inside it.  Wiz the librarian might know something about this book.\\nOnly for :#c4th Job Bowman#"
   },
   "4161019": {
     "name": "Sayram's Journey",
@@ -10557,7 +10557,7 @@
   },
   "4161021": {
     "name": "[Storybook] Formula for Black Cloud",
-    "desc": "A book that features the blueprint on the device that creates black clouds, as well as the step-by-step guide to using the device.\\nJob : <b>Shadower</b>"
+    "desc": "A book that features the blueprint on the device that creates black clouds, as well as the step-by-step guide to using the device.\\nJob : #cShadower#"
   },
   "4161022": {
     "name": "Burning Book of Fire",
@@ -10661,27 +10661,27 @@
   },
   "4161047": {
     "name": "Noblesse Guide",
-    "desc": "A guide for Noblesses.\\n<b>The book can be opened by double-clicking on it.</b>  "
+    "desc": "A guide for Noblesses.\\n#cThe book can be opened by double-clicking on it.#  "
   },
   "4161048": {
     "name": "Legend's Guide",
-    "desc": "A guide strictly for the Legends. \\n<b>Double-click the item to open.</b>"
+    "desc": "A guide strictly for the Legends. \\n#cDouble-click the item to open.#"
   },
   "4161049": {
     "name": "Dragon Types and Characteristics (Vol.I) ",
-    "desc": "A book that describes the different types of dragons and their characteristics. It appears that there is a second volume as well. \\n<b>Double-click to open the book</b>"
+    "desc": "A book that describes the different types of dragons and their characteristics. It appears that there is a second volume as well. \\n#cDouble-click to open the book#"
   },
   "4161050": {
     "name": "Dragon Types and Characteristics (Vol.II)",
-    "desc": "A book that describes the different types of dragons and their characteristics. It appears that there is a first volume as well. \\n<b>Double-click to open the book</b>"
+    "desc": "A book that describes the different types of dragons and their characteristics. It appears that there is a first volume as well. \\n#cDouble-click to open the book#"
   },
   "4161051": {
     "name": "Crew Member's Voyage Log",
-    "desc": "A Voyage Log written by a Crew Member. It's said to contain information about dragons... \\n<b>You can open the book by double-clicking it.</b>"
+    "desc": "A Voyage Log written by a Crew Member. It's said to contain information about dragons... \\n#cYou can open the book by double-clicking it.#"
   },
   "4161052": {
     "name": "Evan Guide ",
-    "desc": "A guide for Evan. \\n<b>You can open the book by double-clicking on it.</b>"
+    "desc": "A guide for Evan. \\n#cYou can open the book by double-clicking on it.#"
   },
   "4161053": {
     "name": "Puzzle King Guide",
@@ -10689,11 +10689,11 @@
   },
   "4161079": {
     "name": "Mercedes Guide",
-    "desc": "A guide for Mercedes. \\n<b>Double-click to open it.</b>"
+    "desc": "A guide for Mercedes. \\n#cDouble-click to open it.#"
   },
   "4161080": {
     "name": "Aria's Diary",
-    "desc": "Part of a diary written by Aria. It's full of personal things, but has been damaged to the point that there are only few sections that you can actually read.\\n<b>Double-click on the item to open the book.</b>"
+    "desc": "Part of a diary written by Aria. It's full of personal things, but has been damaged to the point that there are only few sections that you can actually read.\\n#cDouble-click on the item to open the book.#"
   },
   "4161081": {
     "name": "Mesoranger Action Guide",
@@ -10701,39 +10701,39 @@
   },
   "4162000": {
     "name": "7th Anniversary Diary",
-    "desc": "A diary in which you can read all about the 7th Anniversary event. You can also see how close you are to earning a Joyous 7th Medal and your progress on the Rising Star mission. \\n<b>Double-click to read.</b>"
+    "desc": "A diary in which you can read all about the 7th Anniversary event. You can also see how close you are to earning a Joyous 7th Medal and your progress on the Rising Star mission. \\n#cDouble-click to read.#"
   },
   "4162001": {
     "name": "Chivalry Log",
-    "desc": "A book which can be used to check event paricipation status.\\r\\n<b>Double-click on it to check your participation, as well as rewards.</b>"
+    "desc": "A book which can be used to check event paricipation status.\\r\\n#cDouble-click on it to check your participation, as well as rewards.#"
   },
   "4162002": {
     "name": "Tasty Watermelon Farming Journal",
-    "desc": "A farming journal in which you can check the number days spent cultivating Tasty Watermelons.\\r\\n<b>Double-click on it to check your progress.</b>"
+    "desc": "A farming journal in which you can check the number days spent cultivating Tasty Watermelons.\\r\\n#cDouble-click on it to check your progress.#"
   },
   "4162003": {
     "name": "Secret Heat-Beating Recipe",
-    "desc": "A secret recipe book in which you can check your progress in Special Fruit Sundae crafting.\\r\\n<b>Double-click on it to check your participation status and rewards.</b>"
+    "desc": "A secret recipe book in which you can check your progress in Special Fruit Sundae crafting.\\r\\n#cDouble-click on it to check your participation status and rewards.#"
   },
   "4162004": {
     "name": "Pirate Treasure Map Book",
-    "desc": "A collection of pirate treasure maps.\\r\\n<b>Double-click on it to check your participation status and rewards.</b>"
+    "desc": "A collection of pirate treasure maps.\\r\\n#cDouble-click on it to check your participation status and rewards.#"
   },
   "4162005": {
     "name": "Monkey Doll Recovery Record",
-    "desc": "A book which can be used to check how many Monkey Dolls you have recovered.\\r\\n<b>Double-click on it to check your recovery status and rewards.</b>"
+    "desc": "A book which can be used to check how many Monkey Dolls you have recovered.\\r\\n#cDouble-click on it to check your recovery status and rewards.#"
   },
   "4162006": {
     "name": "Legendary Fruit Juice Book",
-    "desc": "A secret guide to making legendary fruit juices. This is just what you need to become a Legendary Fruit Juice Master! You can also record your juice-making triumphs in here.\\r\\n<b>Double-click on it to check your current juice-making record.</b>"
+    "desc": "A secret guide to making legendary fruit juices. This is just what you need to become a Legendary Fruit Juice Master! You can also record your juice-making triumphs in here.\\r\\n#cDouble-click on it to check your current juice-making record.#"
   },
   "4162007": {
     "name": "Eco Mapleteer Strategy Journal",
-    "desc": "A strategy journal that records all the activities of Eco Mapleteers. If you use the Going Green skill once a day, mark it down in this book.\\r\\n<b>Double-click on it to check your Eco Mapleteer activity record.</b>"
+    "desc": "A strategy journal that records all the activities of Eco Mapleteers. If you use the Going Green skill once a day, mark it down in this book.\\r\\n#cDouble-click on it to check your Eco Mapleteer activity record.#"
   },
   "4162008": {
     "name": "Monster Mop-Up Journal",
-    "desc": "A monster mop-up journal from the Administrator. You can receive a stamp in it once a day by defeating 200 monsters.\\r\\n<b>Double-click on it to check your monster mop-up record and rewards.</b>"
+    "desc": "A monster mop-up journal from the Administrator. You can receive a stamp in it once a day by defeating 200 monsters.\\r\\n#cDouble-click on it to check your monster mop-up record and rewards.#"
   },
   "4162009": {
     "name": "Memory Journal",
@@ -10741,7 +10741,7 @@
   },
   "4162010": {
     "name": "Mini Maple Tree Cultivation Journal",
-    "desc": "A journal for recording your progress in cultivating the Mini Maple Tree.\\r\\n<b>Double-click on it to check your progress.</b>"
+    "desc": "A journal for recording your progress in cultivating the Mini Maple Tree.\\r\\n#cDouble-click on it to check your progress.#"
   },
   "4162011": {
     "name": "Christmas Tree Journal",
@@ -10793,11 +10793,11 @@
   },
   "4170009": {
     "name": "Pigmy Egg",
-    "desc": "An egg laid by Pigmy in Notilus. The egg is so steely strong, that unless a special device is used, this doesn't crack. <b>Double-click it to put it on the incubator.</b>"
+    "desc": "An egg laid by Pigmy in Notilus. The egg is so steely strong, that unless a special device is used, this doesn't crack. #cDouble-click it to put it on the incubator.#"
   },
   "4170012": {
     "name": "DS Egg  ",
-    "desc": "A small egg taken out of the DS egg basket. The egg is hard as steel and cannot be opened without a special device. <b>Will be placed in an incubator when you double-click it.</b>   "
+    "desc": "A small egg taken out of the DS egg basket. The egg is hard as steel and cannot be opened without a special device. #cWill be placed in an incubator when you double-click it.#   "
   },
   "4210000": {
     "name": "Moon stone ring",
@@ -11221,23 +11221,23 @@
   },
   "4220148": {
     "name": "Portrait of an Orange Mushroom  ",
-    "desc": "Drawing paper on which you can draw a portrait of an Orange Mushroom. The portrait of an Orange Mushroom can be completed by using the Amazing, Mystical, or Magical watercolor paint on it. \\r\\n<b>Can be opened by double-clicking on it with the mouse.</b>  "
+    "desc": "Drawing paper on which you can draw a portrait of an Orange Mushroom. The portrait of an Orange Mushroom can be completed by using the Amazing, Mystical, or Magical watercolor paint on it. \\r\\n#cCan be opened by double-clicking on it with the mouse.#  "
   },
   "4220149": {
     "name": "Portrait of an Octopus  ",
-    "desc": "Drawing paper on which you can draw a portrait of an Octopus. The portrait of an Octupus can be completed by using the Amazing, Mystical, or Magical watercolor paint on it. \\r\\n<b>Can be opened by double-clicking on it with the mouse.</b> "
+    "desc": "Drawing paper on which you can draw a portrait of an Octopus. The portrait of an Octupus can be completed by using the Amazing, Mystical, or Magical watercolor paint on it. \\r\\n#cCan be opened by double-clicking on it with the mouse.# "
   },
   "4220150": {
     "name": "Portrait of a Yeti  ",
-    "desc": "Drawing paper on which you can draw a portrait of a Yeti. The portrait of a Yeti can be completed by using the Amazing, Mystical, or Magical watercolor paint on it. \\r\\n<b>Can be opened by double-clicking on it with the mouse.</b>   "
+    "desc": "Drawing paper on which you can draw a portrait of a Yeti. The portrait of a Yeti can be completed by using the Amazing, Mystical, or Magical watercolor paint on it. \\r\\n#cCan be opened by double-clicking on it with the mouse.#   "
   },
   "4220151": {
     "name": "Hanging Scroll  ",
-    "desc": "A Hanging Scroll given to you by the Black Wing Shadow Warrior. The erased content can be restored by using special ink.\\r\\n<b>Can be opened by double-clicking on it with a mouse.</b>"
+    "desc": "A Hanging Scroll given to you by the Black Wing Shadow Warrior. The erased content can be restored by using special ink.\\r\\n#cCan be opened by double-clicking on it with a mouse.#"
   },
   "4220152": {
     "name": "Rainbow Drawing",
-    "desc": "A sheet of sketch paper that has a rainbow drawing.  \\r\\n<b>You can open it with your mouse by double-clicking.</b>"
+    "desc": "A sheet of sketch paper that has a rainbow drawing.  \\r\\n#cYou can open it with your mouse by double-clicking.#"
   },
   "4220153": {
     "name": "Dirty Treasure Map",
@@ -11496,7 +11496,15 @@
     "desc": "A beautiful card with season's greetings. Double click on it to read!"
   },
   "4310000": {
-    "desc": "A limited-edition coin released to mark MapleRoyals' 12th Anniversary. It can be used during the 12th Anniversary to purchase special items.\r\n<b>Expires when the event is over.</b>",
-    "name": "12th Anniversary Coin"
+    "name": "12th Anniversary Coin",
+    "desc": "A limited-edition coin released to mark MapleRoyals' 12th Anniversary. It can be used during the 12th Anniversary to purchase special items.\r\n#cExpires when the event is over.#"
+  },
+  "_dirName": {
+    "name": "",
+    "desc": ""
+  },
+  "_dirType": {
+    "name": "",
+    "desc": ""
   }
 }

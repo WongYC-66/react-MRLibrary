@@ -252,20 +252,20 @@ export const renderEquipList = (filteredEquipList, type = "use", extraColumns = 
                 </td>
                 {isWeaponPage && <td>{info.category[2] || "no info"}</td>}
 
-                <td>{info.reqLevel || "no info"}</td>
+                <td>{info.reqLevel || 0}</td>
 
                 {isWeaponPage && <td>{!info.attackSpeed ? "no info" : `${attkSpeedToText(info.attackSpeed)} (${info.attackSpeed})`}</td>}
 
                 {isWeaponPage && <td>
-                    <p className="p-0 m-0">{info.incPAD && `${rangeCalculator(info.incPAD)} W.att`}</p>
-                    <p className="p-0 m-0">{info.incMAD && `${rangeCalculator(info.incMAD)} Magic`}</p>
+                    {Boolean(info.incPAD) && <p className="p-0 m-0">{rangeCalculator(info.incPAD)} W.att</p>}
+                    {Boolean(info.incMAD) && <p className="p-0 m-0">{rangeCalculator(info.incMAD)} M.att</p>}
                 </td>}
 
                 <td>{info.tuc || "-"}</td>
 
                 {/* render dynamical extra column as per user selected OrderBy */}
                 {extraColumns.map(itemProp =>
-                    <td key={EquipId + itemProp} className="p-0 m-0">{info[itemProp]}</td>
+                    <td key={EquipId + itemProp} className="p-0 m-0">{info[itemProp] || 0}</td>
                 )}
 
             </tr>
@@ -357,6 +357,7 @@ export const itemIdToExceptionUrl = ({ id, name }) => {
 // 
 export const rangeCalculator = (x, type = "", hardCap = 5) => {
     // data from https://mapleroyals.com/forum/threads/staff-blog-september-2022.209642/
+    if (!x) return "0"
     if (!x) return "no info"
     let base = parseInt(x)
     let M = Math.ceil(0.10 * base) || 1

@@ -6,8 +6,8 @@ import { renderImageWithMobId } from "../monster/utility"
 import data_worldMap from "../../../data/data_WorldMap.json"
 import data_map from "../../../data/data_Map.json"
 
-import data_mobMap from "../../../data/data_Mob_MapOnly.json"
-import data_mapMobCount from "../../../data/data_MapMobCount.json"
+import data_MB_Maps from "../../../data/data_MB_Maps.json"
+import data_MapMobCount from "../../../data/data_MapMobCount.json"
 
 import data_mob from "../../../data/data_Mob.json"
 import data_mobStats from "../../../data/data_MobStats.json"
@@ -19,7 +19,7 @@ export default function WorldMap() {
         let mapIdToMobs = {}
 
         // monsterbook from String.wz
-        Object.entries(data_mobMap).forEach(([mobId, mapList]) => {
+        Object.entries(data_MB_Maps).forEach(([mobId, mapList]) => {
             mapList.forEach(mapId => {
                 if (!mapIdToMobs[mapId]) mapIdToMobs[mapId] = new Set()
                 if (!data_mobStats[mobId] || !data_mob[mobId]) return    // filter out weird mob
@@ -28,7 +28,7 @@ export default function WorldMap() {
         })
 
         // from Map.wz
-        Object.entries(data_mapMobCount).forEach(([mapId, mobCountObj]) => {
+        Object.entries(data_MapMobCount).forEach(([mapId, mobCountObj]) => {
             if (!mapIdToMobs[mapId]) mapIdToMobs[mapId] = new Set()
             Object.keys(mobCountObj).forEach(mobId => {
                 if (!data_mobStats[mobId] || !data_mob[mobId]) return    // filter out weird mob
@@ -58,41 +58,42 @@ const renderLabelledlWorldMap = (worldMapName, mapIdToMobList) => {
 }
 
 const worldMapList = [
-    "WorldMap",
+    // "WorldMap",
     "WorldMap000",
-    "WorldMap010",
-    "WorldMap011",
-    "WorldMap012",
-    "WorldMap013",
-    "WorldMap014",
-    "WorldMap015",
-    "WorldMap016",
-    "WorldMap020",
-    "WorldMap021",
-    "WorldMap022",
-    "WorldMap030",
-    "WorldMap031",
-    "WorldMap032",
-    "WorldMap040",
-    "WorldMap050",
-    "WorldMap051",
-    "WorldMap060",
-    "WorldMap070",
-    "WorldMap080",
-    "WorldMap090",
-    "WorldMap091",
-    "WorldMap092",
-    "WorldMap093",
-    "WorldMap094",
-    "WorldMap140",
-    "WorldMap141",
-    "WorldMap142",
+    // "WorldMap010",
+    // "WorldMap011",
+    // "WorldMap012",
+    // "WorldMap013",
+    // "WorldMap014",
+    // "WorldMap015",
+    // "WorldMap016",
+    // "WorldMap020",
+    // "WorldMap021",
+    // "WorldMap022",
+    // "WorldMap030",
+    // "WorldMap031",
+    // "WorldMap032",
+    // "WorldMap040",
+    // "WorldMap050",
+    // "WorldMap051",
+    // "WorldMap060",
+    // "WorldMap070",
+    // "WorldMap080",
+    // "WorldMap090",
+    // "WorldMap091",
+    // "WorldMap092",
+    // "WorldMap093",
+    // "WorldMap094",
+    // "WorldMap140",
+    // "WorldMap141",
+    // "WorldMap142",
 ]
 
 const InteractiveWorldMap = ({ worldMapName, data, mapIdToMobList }) => {
     // by chatGPT
     // console.log(worldMapName)
     // console.log(data)
+    // console.log(mapIdToMobList)
 
     const [renderedMap, setRenderedMap] = useState(null);
     const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, mapId: null, mapName: null });
@@ -107,7 +108,7 @@ const InteractiveWorldMap = ({ worldMapName, data, mapIdToMobList }) => {
     const formatted_mapList = Object.entries(mapList).map(([_, entry]) => {
         const x = Number(entry.spot.x) + originX;
         const y = Number(entry.spot.y) + originY;
-        const mapId = Number(entry.mapNo['0'].value)
+        const mapId = Number(entry.mapNo['0'])
         // console.log(mapIdToMobList[mapId])
         return { x, y, mapId }
     })
@@ -130,7 +131,7 @@ const InteractiveWorldMap = ({ worldMapName, data, mapIdToMobList }) => {
             for (const [_, entry] of Object.entries(mapList)) {
                 const spotX = Number(entry.spot.x) + originX;
                 const spotY = Number(entry.spot.y) + originY;
-                const type = Number(entry.type.value)
+                const type = Number(entry.type)
 
                 switch (type) {
                     case 0:
@@ -149,8 +150,12 @@ const InteractiveWorldMap = ({ worldMapName, data, mapIdToMobList }) => {
                 }
             }
 
-            const url = canvas.toDataURL('image/png');
-            setRenderedMap(url);
+            // const url = canvas.toDataURL('image/png');
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                setRenderedMap(url);
+            });
+            // setRenderedMap(url);
         }
     }, []);
 
