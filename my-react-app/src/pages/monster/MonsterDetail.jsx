@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
+import data_Mob from "../../../data/data_Mob.json"
+// 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -25,15 +27,16 @@ export default function MonsterDetail() {
 
     const [mobInfo, setMobInfo] = useState({})
     let { mobId } = useParams();
+    const targetMobId = Number(mobId.split("=")[1])
 
     useEffect(() => {
-        let targetMobId = Number(mobId.split("=")[1])
         const generated = generateMobInfo(targetMobId)
         setMobInfo(generated)
     }, [])
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
 
+    if(!data_Mob[targetMobId]) throw new Error("No such Mob Id")
     // console.log(mobInfo)
 
     return (

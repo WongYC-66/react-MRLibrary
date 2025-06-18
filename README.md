@@ -5,14 +5,21 @@
 1. npm run dev
 1. access web at http://localhost:5173/
 
-# to test API
+# API & test
 1. npm install -g netlify-cli
 1. netlify dev
 1. access API at http://localhost:8888/api/v1
+1. run simple self-test with `node ./netlify/api.test.js`
+
+# Full Installation Notes / how to extract from WZ and upate library
+
+### Prerequisite
+1. Installed [Harepacker](https://github.com/lastbattle/Harepacker-resurrected/releases)
 
 <hr>
 
-### my notes:
+## Steps:
+
 1. Ready data_xxx.json for library:
     1. wz files -> export as json with Harepacker, without MP3/PNG, as below:
 
@@ -20,8 +27,15 @@
 
     1. Copy the json folder (Harepacker dump) under ./data, then run `node ./my-json-extractor/converter.js`, 
     - or update the data_root_dir inside converter.js, if u wish to separate harepacker dump file
-2. Ready images for library - ./public/images/ are extracted using harepacker export as PNG
-    1. Character.wz -> ./public/images/characters  **Note: weapon 01702786.img crashed when export， only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon**
+
+2. Ready images for library i.e. ./public/images/ , use harepacker export as PNG
+
+    1. Character.wz -> ./public/images/characters  
+
+    **Note: weapon 01702786.img crashed when export, delete it**
+
+    **only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon**
+
     1. Item.wz -> ./public/images/items
     1. Map.wz -> ./public/images/maps
     1. Mob.wz -> ./public/images/monsters

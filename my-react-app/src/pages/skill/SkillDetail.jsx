@@ -20,9 +20,9 @@ export default function SkillDetail() {
 
     const [skillInfo, setSkillInfo] = useState({})
     let { skillId } = useParams();
+    const skill_Id = skillId.split("=")[1]
 
     useEffect(() => {
-        let skill_Id = skillId.split("=")[1]
         let skillData = {
             ...data_skillStats[skill_Id],
             ...data_skill[skill_Id],
@@ -31,6 +31,7 @@ export default function SkillDetail() {
         setSkillInfo(skillData)
     }, [])
 
+    if(!data_skill[skill_Id]) throw new Error('No such Skill Id')
     // console.log(skillInfo)
 
     return (

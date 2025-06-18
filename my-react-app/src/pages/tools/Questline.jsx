@@ -17,7 +17,6 @@ import data_Questline from "../../../data/data_Questline.json"
 
 
 import {
-    renderImageWithNPCId,
     renderItemImageWrapper,
     convertAreaCodeToName,
     convertItemIdToName,
@@ -26,6 +25,9 @@ import {
     generateNPCLink,
     convertQuestIdToUrl,
 } from "../quest/utility.jsx"
+
+import { renderImageWithNPCId } from "../npc/utility.jsx"
+
 import { renderImageWithMobId, itemIdToNavUrl } from "../monster/utility.jsx"
 
 export default function Questline() {

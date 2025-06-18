@@ -31,19 +31,11 @@ import data_NPC from "../../../data/data_NPC.json"
 
 export default function QuestDetail() {
 
-    // const [questInfo, setQuestInfo] = useState({})
     let { questId } = useParams();
+    const quest_Id = questId.split("=")[1]
+    const questInfo = { quest_Id, ...data_Quest[quest_Id] }
 
-    useEffect(() => {
-        let quest_Id = questId.split("=")[1]
-        let obj = { quest_Id, ...data_Quest[quest_Id] }
-        // setQuestInfo(obj)
-    }, [])
-
-    let quest_Id = questId.split("=")[1]
-    let obj = { quest_Id, ...data_Quest[quest_Id] }
-    const questInfo = obj
-
+    if (!data_Quest[quest_Id]) throw new Error("No such quest id")
     // console.log(questInfo)
 
     return (

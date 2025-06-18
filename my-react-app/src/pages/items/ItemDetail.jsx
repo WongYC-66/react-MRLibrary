@@ -24,10 +24,9 @@ export default function ItemDetail() {
     const [itemInfo, setItemInfo] = useState({})
     let { itemId } = useParams();
 
-    // console.log(itemInfo)
+    const item_Id = itemId.split("=")[1]
 
     useEffect(() => {
-        const item_Id = itemId.split("=")[1]
         const data = data_Consume[item_Id] || data_Ins[item_Id] || data_Etc[item_Id]
         const obj = {
             ...data_ItemStats[item_Id],
@@ -37,7 +36,7 @@ export default function ItemDetail() {
         }
         const droppedBy = []
         Object.entries(data_MB_Drops).forEach(([mobId, drops]) => {
-            if (drops.includes(item_Id)) {
+            if (drops.includes(Number(item_Id))) {
                 droppedBy.push({
                     id: mobId,
                     name: data_mob[mobId]
@@ -68,6 +67,8 @@ export default function ItemDetail() {
         setItemInfo(obj)
     }, [])
 
+    const combinedCheck = {...data_Consume, ...data_Ins,...data_Etc,}
+    if(!combinedCheck[item_Id]) throw new Error("No such item id")
     // console.log(itemInfo)
 
     const numFormatter = num => Number(num).toLocaleString("en-US")

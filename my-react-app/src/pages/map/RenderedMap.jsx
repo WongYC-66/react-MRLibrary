@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { decode } from 'html-entities';
 
 import data_RenderMobOrigin from '../../../data/data_RenderMobOrigin.json';
@@ -13,7 +13,7 @@ import { portalPtValueToType } from './utility';
 const CDN_URL = `https://raw.githubusercontent.com/scotty66f/royals-map/refs/heads/main`
 const DOMAIN_URL = window.location.origin
 
-export default function LabelledMap({ mapId, canvasOption }) {
+export default function RenderedMap({ mapId, canvasOption }) {
 
   const [mapData, setMapData] = useState(null);       // json
   const [loadedImage, setLoadedImage] = useState({})  // fetch cache

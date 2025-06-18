@@ -29,9 +29,9 @@ export default function EquipDetail() {
     let { equipId } = useParams();
 
     // console.log(equipInfo)
+    const equip_Id = equipId.split("=")[1]
 
     useEffect(() => {
-        const equip_Id = equipId.split("=")[1]
         const name = data_Eqp[equip_Id]
         const obj = {
             ...data_GearStats[equip_Id],
@@ -42,7 +42,7 @@ export default function EquipDetail() {
         const droppedBy = []
 
         Object.entries(data_MB_Drops).forEach(([mobId, drops]) => {
-            if (drops.includes(equip_Id)) {
+            if (drops.includes(Number(equip_Id))) {
                 droppedBy.push({
                     id: mobId,
                     name: data_mob[mobId]
@@ -76,7 +76,8 @@ export default function EquipDetail() {
     const numFormatter = num => Number(num).toLocaleString("en-US")
     const jobList = decodeReqJobToList(equipInfo.reqJob) || []
 
-    // console.log(equipInfo)
+    if (!data_Eqp[equip_Id]) throw new Error("No such Equip Id")
+    console.log(equipInfo)
 
     return (
         <div className="equip-detail">

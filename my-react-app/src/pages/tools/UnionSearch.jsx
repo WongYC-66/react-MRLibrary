@@ -229,7 +229,7 @@ const filterMobBySelectedItem = (mobLibrary, selectedItems) => {
     if (!selectedItems || !selectedItems.length) return []
     let filteredMobs = mobLibrary
         .filter(([id, mob, dropSet]) => {
-            return selectedItems.every(itemId => dropSet.has(itemId))
+            return selectedItems.every(itemId => dropSet.has(Number(itemId)))
         })
         .sort((a, b) => a[0].localeCompare(b[0])) // sort by mobId
 

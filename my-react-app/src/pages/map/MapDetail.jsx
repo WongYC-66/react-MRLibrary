@@ -27,7 +27,8 @@ import data_MapMobCount from "../../../data/data_MapMobCount.json"
 
 export default function MapDetail() {
 
-    // const [questInfo, setQuestInfo] = useState({})
+    const [mapBlob, setMapBlob] = useState(null)
+
     let { mapId } = useParams();
 
     const [canvasOption, setCanvasOption] = useState({
@@ -48,6 +49,8 @@ export default function MapDetail() {
         ...data_MapStats[hashMapId],
     }
     mapInfo = addMonsterBookSpawn(mapInfo)
+
+    if (!data_MapStats[hashMapId]) throw new Error('No such Map Id')
     // console.log(map_id)
     // console.log(mapInfo)
 

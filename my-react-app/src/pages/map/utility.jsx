@@ -189,14 +189,14 @@ export const renderHDImageWithMapId = (mapId) => {
 }
 
 export const convertMapIdToUrl = (id) => {
-    if (!id) return '/error'
+    if (isNaN(Number(id))) return '/error'
     id = Number(id)
     id = String(id).padStart(9, '0')
     return `/map/id=${id}`
 }
 
 export const convertMapIdToName = (id) => {
-    if (!id) return `map name error : ${id}`
+    if (isNaN(Number(id))) return '/error'
     id = Number(id)
     if (!data_Map[id]) return `map name error : ${id}`
     const name = `${data_Map[id].streetName} - ${data_Map[id].mapName}`
@@ -272,7 +272,7 @@ export const addMonsterBookSpawn = (mapInfo) => {
     // combine data from monsterbook together then (string.wz)
     // might have bugs for LKC mobs
     let currMapId = Number(mapInfo.mapId)
-    mapInfo.mob = Object.entries(mapInfo.mob).reduce((obj, [mobId, count]) => {
+    mapInfo.mob = Object.entries(mapInfo.mob || {}).reduce((obj, [mobId, count]) => {
         obj[Number(mobId)] = count
         return obj
     }, {})
