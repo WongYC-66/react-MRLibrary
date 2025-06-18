@@ -13,7 +13,7 @@ import { portalPtValueToType } from './utility';
 const CDN_URL = `https://raw.githubusercontent.com/scotty66f/royals-map/refs/heads/main`
 const DOMAIN_URL = window.location.origin
 
-export default function RenderedMap({ mapId, canvasOption }) {
+export default function RenderedMap({ mapId, canvasOption, onRenderComplete }) {
 
   const [mapData, setMapData] = useState(null);       // json
   const [loadedImage, setLoadedImage] = useState({})  // fetch cache
@@ -119,9 +119,14 @@ export default function RenderedMap({ mapId, canvasOption }) {
         console.error(`❌ Failed to Render : ${e}`)
       }
     }
-
     renderCanvas()
   }, [isReadyToRender, canvasOption])
+
+  useEffect(() => {
+    if (onRenderComplete) {
+      onRenderComplete(imageData)
+    }
+  }, [imageData])
 
   return (
     <div>
@@ -415,6 +420,13 @@ const generateDrawList = (map) => {
 }
 
 const filterByCanvasOption = (drawList, canvasOption) => {
+  if (!canvasOption) canvasOption = { // no option passed, dont show anything
+    showMob: false,
+    showNpc: false,
+    showReactor: false,
+    showPortal: false,
+  }
+
   let copied = [...drawList]
   if (!canvasOption.showMob) {
     copied = copied.filter(item => item.type !== 'mob')

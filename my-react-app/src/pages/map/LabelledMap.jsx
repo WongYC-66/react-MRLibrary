@@ -19,16 +19,17 @@ const colorSequence = [
   '#FFF0F5', '#7CFC00', '#FFFACD', '#ADD8E6'
 ];
 
-export default function LabelledMap({ mapId, portals, miniMap }) {
+export default function LabelledMap({ mapId, portals, miniMap, mapBlob }) {
+  // mapBlob = blob image data, reusable from Render at LeftTable
   const [imageData, setImageData] = useState(null);
 
   useEffect(() => {
     const image = new Image();
     // const imageUrl = `/images/maps/${mapId}.png`;
-    const fileName = `${String(mapId).padStart(9, 0)}.png`
-    const imageUrl = `https://raw.githubusercontent.com/scotty66f/royals-rendered-map/refs/heads/main/Map/${fileName}`;
+    // const fileName = `${String(mapId).padStart(9, 0)}.png`
+    // const imageUrl = `https://raw.githubusercontent.com/scotty66f/royals-rendered-map/refs/heads/main/Map/${fileName}`;
     image.crossOrigin = "anonymous";
-    image.src = imageUrl;
+    image.src = mapBlob;  // no more fetch from CDN, use rendered map
 
     image.onload = () => {
       const canvas = document.createElement('canvas');
@@ -89,7 +90,7 @@ export default function LabelledMap({ mapId, portals, miniMap }) {
         setImageData(url);
       });
     };
-  }, [mapId, portals, miniMap]);
+  }, [mapBlob]);
 
   return (
     <div>

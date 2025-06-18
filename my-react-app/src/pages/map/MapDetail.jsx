@@ -27,9 +27,7 @@ import data_MapMobCount from "../../../data/data_MapMobCount.json"
 
 export default function MapDetail() {
 
-    const [mapBlob, setMapBlob] = useState(null)
-
-    let { mapId } = useParams();
+    const [mapBlob, setMapBlob] = useState(null)    // recyle
 
     const [canvasOption, setCanvasOption] = useState({
         showMob: true,
@@ -37,6 +35,8 @@ export default function MapDetail() {
         showPortal: true,
         showReactor: true,
     })
+
+    let { mapId } = useParams();
 
     const map_id = mapId.split("=")[1]
 
@@ -50,6 +50,10 @@ export default function MapDetail() {
     }
     mapInfo = addMonsterBookSpawn(mapInfo)
 
+    const onRenderComplete = (blob) => {
+        setMapBlob(blob)
+    }
+
     if (!data_MapStats[hashMapId]) throw new Error('No such Map Id')
     // console.log(map_id)
     // console.log(mapInfo)
@@ -62,7 +66,7 @@ export default function MapDetail() {
                     <Col lg={4}>
                         <div className="text-center">
                             <Table bordered hover>
-                                {renderTableLeft(mapInfo)}
+                                {renderTableLeft(mapInfo, onRenderComplete)}
                             </Table>
 
                         </div>
@@ -71,7 +75,7 @@ export default function MapDetail() {
                     {/* Map Stats, monster spawn, npc, portals */}
                     <Col lg={8}>
                         <div>
-                            {renderTableRight(mapInfo, canvasOption, setCanvasOption)}
+                            {renderTableRight(mapInfo, canvasOption, setCanvasOption, mapBlob)}
                         </div>
                     </Col>
                 </Row>
@@ -81,15 +85,9 @@ export default function MapDetail() {
     )
 }
 
-const renderTableLeft = (mapInfo) => {
+const renderTableLeft = (mapInfo, onRenderComplete) => {
     if (!Object.keys(mapInfo).length) return <></>
     const mapId = mapInfo.mapId
-    const canvasOption = {
-        showMob: false,
-        showNpc: false,
-        showPortal: false,
-        showReactor: false,
-    }
 
     return <tbody>
         {/* Street Name */}
@@ -99,7 +97,7 @@ const renderTableLeft = (mapInfo) => {
         {/* Map Image */}
         <tr>
             {/* <td className="bg-transparent">{renderHDImageWithMapId(mapInfo.mapId)}</td> */}
-            <td className="bg-transparent">{<RenderedMap mapId={mapId} canvasOption={canvasOption} />}</td>
+            <td className="bg-transparent">{<RenderedMap mapId={mapId} onRenderComplete={onRenderComplete} />}</td>
         </tr>
         {/* Map Name */}
         <tr>
@@ -115,7 +113,7 @@ const renderTableLeft = (mapInfo) => {
     </tbody>
 };
 
-const renderTableRight = (mapInfo, canvasOption, setCanvasOption) => {
+const renderTableRight = (mapInfo, canvasOption, setCanvasOption, mapBlob) => {
     if (!Object.keys(mapInfo).length) return <></>
 
     const npcs = mapInfo.npc
@@ -166,7 +164,7 @@ const renderTableRight = (mapInfo, canvasOption, setCanvasOption) => {
 
             {/* Portals Tab */}
             <Tab eventKey="Portals" title="Portals">
-                {renderLabelledMapAndTable(mapInfo)}
+                {renderLabelledMapAndTable(mapInfo, mapBlob)}
                 {renderPortalTable(mapInfo)}
             </Tab>
 
@@ -228,6 +226,7 @@ const renderMobCountTable = (mobs) => {
 }
 
 const renderPortalTable = (mapInfo) => {
+    // Next Map Table
     if (!mapInfo.portal) return <></>
     let portals = mapInfo.portal
         .filter(({ tm }) => tm != "999999999")
@@ -295,7 +294,7 @@ const renderMapStats = (mapInfo) => {
     )
 }
 
-const renderLabelledMapAndTable = (mapInfo) => {
+const renderLabelledMapAndTable = (mapInfo, mapBlob) => {
     if (!mapInfo.portal) return <></>
     // console.log(mapInfo)
     return (
@@ -308,6 +307,7 @@ const renderLabelledMapAndTable = (mapInfo) => {
                         mapId={mapInfo.mapId}
                         portals={mapInfo.portal}
                         miniMap={mapInfo.miniMap}
+                        mapBlob={mapBlob}
                     />
 
                     {/* Table of Portal */}
