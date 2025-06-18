@@ -28,6 +28,7 @@ export default function RenderedMap({ mapId, canvasOption, onRenderComplete }) {
       try {
         const id = mapId.toString().padStart(9, '0')
         const data = await fetchMapJSON(id)
+        setLoadedImage({})
         setMapData(data)
       } catch (e) {
         console.error(`Failed to fetch JSON : ${mapId}, ${e}`)
@@ -35,6 +36,7 @@ export default function RenderedMap({ mapId, canvasOption, onRenderComplete }) {
     }
     setIsReadyToRender(false)
     fetchAndUpdate()
+    // console.log('do fetchAndUpdate')
   }, [mapId])
 
   // get render material
@@ -60,11 +62,13 @@ export default function RenderedMap({ mapId, canvasOption, onRenderComplete }) {
       setIsReadyToRender(true)
     }
     updateCache()
+    // console.log('do updateCache')
   }, [mapData])
 
   // render canvas
   useEffect(() => {
     if (!isReadyToRender) return
+
     const renderCanvas = () => {
       try {
 
@@ -112,6 +116,10 @@ export default function RenderedMap({ mapId, canvasOption, onRenderComplete }) {
         }
 
         canvas.toBlob((blob) => {
+          // Revoke old one before replacing
+          if (imageData) {
+            URL.revokeObjectURL(imageData); // cleanup previous
+          }
           const url = URL.createObjectURL(blob);
           setImageData(url);
         });
