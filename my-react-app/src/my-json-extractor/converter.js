@@ -3,8 +3,8 @@ import path from 'path';
 // USER CONFIG
 const __dirname = import.meta.dirname;
 const data_root_dir = path.join(__dirname, "../../data/json")   // JSON ROOT FOLDER of Harepacker Dump
-// const out_dir = path.join(__dirname, "../../data/")
-const out_dir = __dirname
+const out_dir = path.join(__dirname, "../../data/")
+// const out_dir = __dirname
 
 console.log({ __dirname, data_root_dir, out_dir })
 
@@ -238,7 +238,7 @@ async function QuestLine() {
     console.time('Running QuestLines')
     const inputData = await readOneFile(path.join(out_dir, 'data_Quest.json'))
     const outputData = QuestLineDataFormatting(inputData)
-    await diskWriterInJSON(path.join(out_dir, 'data_QuestLine.json'), outputData)
+    await diskWriterInJSON(path.join(out_dir, 'data_Questline.json'), outputData)
     console.timeEnd('Running QuestLines')
 }
 
