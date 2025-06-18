@@ -13,13 +13,15 @@
 <hr>
 
 ### my notes:
-1. Data files of ./data/data_xxxx.json are all output from :
-    1. wz files -> batch xml with WZ-Explorer-Rebuild-master
-    1. copy -> ./data as :
+1. Ready data_xxx.json for library:
+    1. wz files -> export as json with Harepacker, without MP3/PNG, as below:
+
         ![alt text](dataFolderStructure.png)
-    1. run `node ./my-xml-parser/converter.js`, each parser function 
-2. ./public/images/ are extracted using harepacker
-    1. Character.wz -> ./public/images/characters  // weapon 01702786.img crashed when export， only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon
+
+    1. Copy the json folder (Harepacker dump) under ./data, then run `node ./my-json-extractor/converter.js`, 
+    - or update the data_root_dir inside converter.js, if u wish to separate harepacker dump file
+2. Ready images for library - ./public/images/ are extracted using harepacker export as PNG
+    1. Character.wz -> ./public/images/characters  **Note: weapon 01702786.img crashed when export， only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon**
     1. Item.wz -> ./public/images/items
     1. Map.wz -> ./public/images/maps
     1. Mob.wz -> ./public/images/monsters
@@ -27,8 +29,21 @@
     1. Skill.wz -> ./public/images/skills
     1. Map.wz -> ./public/images/worldmaps
     1. run `node ./my-harepacker-output-organizer/dumpFileCentralizer.js`, and copy the output to ./public/images
-3. mp3 files are extracted using harepacker too, from Sound.wz, but i filtered out the short mp3, and uploaded it to separate [github repo](https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio) to save bandwidth
+3. Ready MP3 files for library - extract with harepacker as Audio/mp3
+    1. Sound.wz  ->  filter out the short mp3, and upload it to your CDN, refer to [github repo](https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio)
     1. run `node ./my-harepacker-output-organizer/generateMusicJson.js`, and copy the output to ./data
+    1. update ./src/pages/tools/Music.jsx, to point to your CDN
+    1. update ./src/pages/map/MapDetail.jsx, to point to your CDN
+4. Ready CDN for library map renderer
+    1. refer to this [repo](https://github.com/scotty66f/royals-map)
+    1. copy json/png dumped from Harepacker as below 5 folders, upload to your CDN
+        - image type - Map.wz/Obj
+        - image type - Map.wz/Tile
+        - image type - Map.wz/MapHelper.img
+        - image type - Reactor.wz
+        - json type - Map.wz/Map
+    1. update ./src/pages/map/RenderedMap.jsx, to point to your CDN
+
 
 <hr>
 
