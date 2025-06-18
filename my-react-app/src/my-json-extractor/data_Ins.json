@@ -1,0 +1,3470 @@
+{
+  "3010000": {
+    "name": "The Relaxer",
+    "desc": "Catch your breath and relax by sitting on this chair to recover 50 HP every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010001": {
+    "name": "Sky-blue Wooden Chair",
+    "desc": "A specially-made sky-blue wooden chair that's only available in Lith Harbor. Recover 35 HP every 10 seconds."
+  },
+  "3010002": {
+    "name": "Green Chair",
+    "desc": "A comfortable, plush green chair, complete with arm-rests. Recovers 50 HP every 10 seconds."
+  },
+  "3010003": {
+    "name": "Red Chair",
+    "desc": "A comfortable, plush red chair, complete with arm-rests.. Recovers 50 HP every 10 seconds."
+  },
+  "3010004": {
+    "name": "The Yellow Relaxer",
+    "desc": "Catch your breath and relax by sitting on this chair to recover 50 HP every 10 seconds.  Perfect for a quick break from training."
+  },
+  "3010005": {
+    "name": "The Red Relaxer",
+    "desc": "Catch your breath and relax by sitting on this chair to recover 50 HP every 10 seconds.  Perfect for a quick break from training."
+  },
+  "3010006": {
+    "name": "Yellow Chair",
+    "desc": "A comfortable, plush yellow chair, complete with arm-rests.. Recovers 50 HP every 10 seconds."
+  },
+  "3010007": {
+    "name": "Pink Seal Cushion",
+    "desc": "An adorable pink cushion that resembles a seal.  Recovers HP 60 every 10 seconds."
+  },
+  "3010008": {
+    "name": "Blue Seal Cushion",
+    "desc": "An adorable blue cushion that resembles a seal.  Recovers HP 60 every 10 seconds."
+  },
+  "3010009": {
+    "name": "Red Round Chair",
+    "desc": "Rumored to be crafted in Amoria, this special chair is also known as the Love Seat. Recover 20 HP and 20 MP every 10 seconds."
+  },
+  "3010010": {
+    "name": "White Seal Cushion",
+    "desc": "An adorable white cushion that resembles a seal.  Recovers HP 50 every 10 seconds."
+  },
+  "3010011": {
+    "name": "Amorian Relaxer",
+    "desc": "A chair crafted by Jacob. Recovers 75 HP every 10 seconds.\\n#cCannot be traded.#"
+  },
+  "3010012": {
+    "name": "Warrior Throne",
+    "desc": "A powerful chair used often on the battlefield. Recovers 60 HP every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010013": {
+    "name": "Beach Chair",
+    "desc": "A chair straight from the relaxation experts in Florina Beach. Recover 20 HP every 10 seconds."
+  },
+  "3010014": {
+    "name": "Moon Star Chair",
+    "desc": "A light, stylish chair that seems to be sent from the heavens. Recover 30 HP and 30 MP every 10 seconds."
+  },
+  "3010015": {
+    "name": "The Red Relaxer",
+    "desc": "A chair with magical properties crafted in Ellinia. Restores 35 MP per 10 Seconds while sitting."
+  },
+  "3010016": {
+    "name": "Black Seal Cushion",
+    "desc": "An adorable grey cushion that resembles a seal.  Recovers HP 60 every 10 seconds."
+  },
+  "3010017": {
+    "name": "Gold Seal Cushion",
+    "desc": "An adorable gold cushion that resembles a seal.  Recovers MP 60 every 10 seconds."
+  },
+  "3010018": {
+    "name": "Palm Tree Beach Chair",
+    "desc": "A beach chair placed in the shades under the palm tree at Ariant. Sit on it to recover HP 40 and MP 20 every 10 seconds."
+  },
+  "3010019": {
+    "name": "Kadomatsu",
+    "desc": "A specially-made chair that's only available in Mushroom Shrine. Recover 60 MP every 10 seconds."
+  },
+  "3010020": {
+    "name": "Kotatsu",
+    "desc": "Relax and just take a soothing nap."
+  },
+  "3010021": {
+    "name": "Wooden Tub",
+    "desc": "Enjoy a bath and relax in this spacious wooden tub to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010022": {
+    "name": "White Coke Bear",
+    "desc": "A White Coke bear holding a nice refreshing Coca-Cola."
+  },
+  "3010023": {
+    "name": "Brown Coke Bear",
+    "desc": "A Brown Coke bear hold a nice refreshing Coca-cola."
+  },
+  "3010024": {
+    "name": "Pink Teddy",
+    "desc": "A Bowing pink teddy? Is this really a chair?"
+  },
+  "3010025": {
+    "name": "Under the Maple Tree...",
+    "desc": "A white chair commemorating the 5th anniversary of MapleStory. Sit on it to recover HP 35 and MP 10 every 10 seconds."
+  },
+  "3010026": {
+    "name": "Soul Teddy Chair",
+    "desc": "A Ghostly, but cuddly, Soul teddy"
+  },
+  "3010027": {
+    "name": "Cheeto Pirate",
+    "desc": "A Lonely skull defending his flag of Cheetos"
+  },
+  "3010028": {
+    "name": "Lord Pirate",
+    "desc": "Lord Pirate has you tied up!"
+  },
+  "3010029": {
+    "name": "Blue Olympic Ring",
+    "desc": "A Blue Olympic Ring for Beijing 2008."
+  },
+  "3010030": {
+    "name": "Black Olympic Ring",
+    "desc": "A Black Olympic Ring for Beijing 2008."
+  },
+  "3010031": {
+    "name": "Red Olympic Ring",
+    "desc": "A Red Olympic Ring for Beijing 2008."
+  },
+  "3010032": {
+    "name": "Yellow Olympic Ring",
+    "desc": "A Yellow Olympic Ring for Beijing 2008."
+  },
+  "3010033": {
+    "name": "Green Olympic Ring",
+    "desc": "A Green Olympic Ring for Beijing 2008."
+  },
+  "3010034": {
+    "name": "Red Beach Chair",
+    "desc": "A chair straight from the relaxation experts in Florina Beach. Recover 20 HP every 10 seconds."
+  },
+  "3010035": {
+    "name": "Blue Beach Chair",
+    "desc": "When you sit in Beach Chair, 20 MP are recovered every 10 seconds."
+  },
+  "3010036": {
+    "name": "Maple Tree Chair",
+    "desc": "A maple tree with a hanging swing. You can recover 50 HP  every 10 seconds."
+  },
+  "3010037": {
+    "name": "Kayaributa Chair",
+    "desc": "A pig shaped ceramic incense burner! Recovers 20 HP and MP every 10 seconds."
+  },
+  "3010038": {
+    "name": "Clear Chair",
+    "desc": "When you sit in this chair, 50 HP are recovered every 10 seconds."
+  },
+  "3010039": {
+    "name": "Black Seal Cushion",
+    "desc": "An adorable black cushion that resembles a seal.  Recovers HP 50 every 10 seconds."
+  },
+  "3010040": {
+    "name": "The Stirge Seat",
+    "desc": "A chair hand-crafted by Stirgeman for aspiring superheroes! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010041": {
+    "name": "Skull Throne",
+    "desc": "A chair crafted within the Phantom Forest, complete with...ornaments...from unlucky travelers. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010043": {
+    "name": "Halloween Broomstick Chair",
+    "desc": "When you sit on the Halloween Broomstick Chair, 50 MP is restored every 10 seconds"
+  },
+  "3010044": {
+    "name": "Winter Red Chair ",
+    "desc": "A chair with a big umbrella. Recovers 30 HP and 30 MP every 10 seconds."
+  },
+  "3010045": {
+    "name": "Ice Chair",
+    "desc": "A chair made out of Ice Queen's ice pieces. Sit on it to recover HP 40 and MP 30 per 10 seconds."
+  },
+  "3010046": {
+    "name": "Dragon Chair(Inferno)",
+    "desc": "Inferno will comfort your body. Recovers 60 HP every 10 seconds."
+  },
+  "3010047": {
+    "name": "Dragon Chair(Abyss)",
+    "desc": "Abyss will comfort your mind. Recovers 60 MP every 10 seconds."
+  },
+  "3010048": {
+    "name": "Christmas Tree",
+    "desc": "A Christmas tree but where's Santa?"
+  },
+  "3010049": {
+    "name": "Igloo",
+    "desc": "Stay in this igloo made out of ice and snow to recover 40 HP and 30 MP every 10 seconds. "
+  },
+  "3010050": {
+    "name": "Shrine",
+    "desc": "A fancily decorated Shrine."
+  },
+  "3010051": {
+    "name": "Desert Rabbit (M)",
+    "desc": "A Male Desert Rabbit from Ariant."
+  },
+  "3010052": {
+    "name": "Sand Bunny",
+    "desc": "40 HP is restored every 10 seconds if you lean back on this cute Sand Bunny Cushion."
+  },
+  "3010053": {
+    "name": "Rabbit Sofa",
+    "desc": "When you sit on the Rabbit Sofa, 50 HP and 50 MP are recovered every 10 seconds."
+  },
+  "3010055": {
+    "name": "Mochi Ice Cream Chair",
+    "desc": "Relax in this mochi ice cream chair to recover 30 HP and MP every 10 seconds."
+  },
+  "3010056": {
+    "name": "Heater",
+    "desc": "An Electronic Heating device."
+  },
+  "3010057": {
+    "name": "Bloody Rose",
+    "desc": "You will recover 50 HP every 10 seconds. You will experience the might of a conqueror after recovery."
+  },
+  "3010058": {
+    "name": "World End",
+    "desc": "You will recover 50 HP every 10 seconds. Perhaps, as you recline, you will find the answer to many of life's questions."
+  },
+  "3010059": {
+    "name": "Chocolate Throne",
+    "desc": "A Throne and meal Fit for a king...of sweets!"
+  },
+  "3010060": {
+    "name": "Noblesse Chair",
+    "desc": "A chair makes you feel like you're sitting in the lap of luxury. Also recovers 50 HP every 10 seconds."
+  },
+  "3010061": {
+    "name": "Underneath the Maple Tree…",
+    "desc": "A white chair created to celebrate Maple Story's 5th Anniversary. Sit on it to restore 35 HP and 10 MP every 10 seconds."
+  },
+  "3010062": {
+    "name": "Bamboo Chair ",
+    "desc": "A chair that restores HP every 10 seconds when used. It's very strong since it was made from bamboo grown on Rien."
+  },
+  "3010063": {
+    "name": "Moon and Star Cushion",
+    "desc": "A pretty cushion shaped like a moon. Recovers 60 HP every 10 seconds."
+  },
+  "3010064": {
+    "name": "Male Desert Rabbit Cushion  ",
+    "desc": "60 HP is restored every 10 seconds if you lean back on this cute Male Desert Rabbit Cushion."
+  },
+  "3010065": {
+    "name": "Pink Beach Parasol",
+    "desc": "A pink beach chair that makes you want to go to the beach. Restores 60 HP every 10 seconds."
+  },
+  "3010066": {
+    "name": "Navy Velvet Sofa  ",
+    "desc": "A luxurious velvet sofa dyed with a beautiful shade of navy. Restores 60 HP every 10 seconds."
+  },
+  "3010067": {
+    "name": "Red Designer Chair  ",
+    "desc": "A designer chair that glows with a passionate red. Restores 60 HP every 10 seconds."
+  },
+  "3010068": {
+    "name": "Lotus Leaf Chair",
+    "desc": "Sit in the shade of a large lotus leaf! A cute doll hangs off the edge. Recovers 200 HP and MP every 10 seconds."
+  },
+  "3010069": {
+    "name": "Yellow Robot Chair",
+    "desc": "Perch yourself on the hand of this powerful yellow robot to recover 50 HP and 30 MP every 10 seconds."
+  },
+  "3010072": {
+    "name": "Miwok Chief's Chair",
+    "desc": "The chair in which the chiefs of the Miwok tribe sat. If you sit in this chair, you can receive the strength of the Miwok ancestors and recover 65MP in 10 seconds."
+  },
+  "3010073": {
+    "name": "Giant Pink Bean Cushion",
+    "desc": "A cushion that resembles Pink Bean, the underling of the Black Mage. Leaning against the cushion and resting will recover 50 HP and 30 MP every 10 seconds. "
+  },
+  "3010075": {
+    "name": "Music Box",
+    "desc": "50 HP is restored every 10 seconds if you lean back on this music box."
+  },
+  "3010077": {
+    "name": "It's a Hoot! Chair",
+    "desc": "When you sit in It's a Hoot! Chair, 50 HP and 50 MP are recovered every 10 seconds."
+  },
+  "3010080": {
+    "name": "Swing on the Persimmon Tree",
+    "desc": "There is a swing on the Persimmon Tree with ripe persimmons."
+  },
+  "3010081": {
+    "name": "Red Spin Hat Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see the adorable Moon Bunny dressed in Red Spin Hat dancing."
+  },
+  "3010082": {
+    "name": "Blue Spin Hat Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see the adorable Moon Bunny dressed in Blue Spin Hat dancing."
+  },
+  "3010083": {
+    "name": "Fan Dance Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see the amazing Moon Bunny tightrope while holding the fan."
+  },
+  "3010084": {
+    "name": "Korean Woodwind Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see the amazing Moon Bunny blow its heart out with the Korean woodwind instrument."
+  },
+  "3010085": {
+    "name": "Olivia's Chair",
+    "desc": "An eerie looking chair that resembles Olivia. Recovers 40 HP and 35 MP every 10 seconds"
+  },
+  "3010092": {
+    "name": "Witch's Broomstick",
+    "desc": "Hold onto the Broomstick so you don't fall off."
+  },
+  "3010093": {
+    "name": "Roasted Relaxer",
+    "desc": "Catch your breath and relax by sitting on this chair to recover HP+50/MP+30 every 10 seconds."
+  },
+  "3010094": {
+    "name": "Poor Ribbon Pig Chair",
+    "desc": "Why is this Ribbon Pig so sad? Sit and comfort him to recover 50 HP and MP every 10 seconds."
+  },
+  "3010095": {
+    "name": "Stone Golem Hand Chair",
+    "desc": "Take a break by leaning on the Stone Golem Hand to recover 50 HP and MP every 10 seconds."
+  },
+  "3010096": {
+    "name": "Dragon Skull Chair",
+    "desc": "Take a break by leaning on the Dragon Skull Chair to recover 50 HP and MP every 10 seconds."
+  },
+  "3010097": {
+    "name": "Strong Wooden Chair",
+    "desc": "A strong wooden chair personally crafted by Gustav. Recovers 50 HP every 10 seconds."
+  },
+  "3010098": {
+    "name": "TV Recliner",
+    "desc": "A new chair to recline and relax in throughout the Thanksgiving holiday.\\nRecovers 60 HP and 30 MP every 10 seconds."
+  },
+  "3010099": {
+    "name": "Cuddly Polar Bear",
+    "desc": "Cuddling with the Polar Bear for some cozy, comfy rest will recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010100": {
+    "name": "Mudkips",
+    "desc": "So i herd you like Mudkipzzz..."
+  },
+  "3010101": {
+    "name": "Christmas Gift Box",
+    "desc": "A huge X-mas Gift Box big enough to fit a grownup. It has a message that reads, \"I am here for you.\" Sitting in it will recover 50 HP and MP every 10 seconds."
+  },
+  "3010102": {
+    "name": "Happy Stars",
+    "desc": "Make your day brighter while relaxing with these happy stars \\r\\nRecovers 100 HP every 10 seconds."
+  },
+  "3010103": {
+    "name": "Ugly Chair",
+    "desc": "Couldn't afford a better one? \\r\\nRecover 100 HP every 10 seconds"
+  },
+  "3010104": {
+    "name": "Ice Cream Stand",
+    "desc": "Everyone loves Ice Cream! \\r\\nRecover 200 HP every 10 seconds"
+  },
+  "3010105": {
+    "name": "Building Blocks",
+    "desc": "Practice the alphabet while relaxin. \\r\\nRecover 26 HP every 10 seconds."
+  },
+  "3010106": {
+    "name": "Ryko Chair",
+    "desc": "Snuggle up with Aran's loyal mount, Ryko, to recover 50 HP and MP every 10 seconds."
+  },
+  "3010107": {
+    "name": "Dragon Egg",
+    "desc": "Sit on this cracked dragon egg shell and relax to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010108": {
+    "name": "Baby Swing ",
+    "desc": "Sit on this baby dragon swing to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010109": {
+    "name": "Furnace Chair",
+    "desc": "Sit on this chair to feel the warmth from the furnace. You can recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010110": {
+    "name": "Polar Bear Chair",
+    "desc": "Snuggle up in this cozy polar bear chair to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010111": {
+    "name": "Tiger Skin Chair",
+    "desc": "Lean back on this imposing Tiger Skin Chair to restore 50 HP and 30 MP every 10 seconds."
+  },
+  "3010112": {
+    "name": "Locker Chair",
+    "desc": "Recovers 50 HP every 10 seconds. "
+  },
+  "3010113": {
+    "name": "Soul Teddy Chair",
+    "desc": "Sit on this Soul Teddy chair to recover 50 HP every 10 seconds."
+  },
+  "3010114": {
+    "name": "Lord Pirate Chair",
+    "desc": "Sit on this Lord Pirate chair to recover 50 HP every 10 seconds."
+  },
+  "3010115": {
+    "name": "Teddy Bear Bed",
+    "desc": "Relax in this cozy teddy bear bed to recover 50 HP and MP every 10 seconds."
+  },
+  "3010116": {
+    "name": "The Spirit of Rock Chair",
+    "desc": "A new chair that makes you feel like a Rock Star.\\nRecovers 60 HP and 30 MP every 10 seconds."
+  },
+  "3010117": {
+    "name": "Magic Book Chair",
+    "desc": "Take a break by sitting on this floating chair to recover 50 HP and 30 MP every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010118": {
+    "name": "Musical Note Chair",
+    "desc": "A chair shaped like a musical note. Recovers 100 HP and MP every 10 seconds."
+  },
+  "3010119": {
+    "name": "Sheep Chair",
+    "desc": "A special chair shaped like Sheep. Recovers 50 HP and MP every 10 seconds. "
+  },
+  "3010120": {
+    "name": "Easter Egg Basket",
+    "desc": "Sit on this Easter Egg Basket for a sweet thrill of happiness.\\nRecovers 40 HP and 30 MP every 10 seconds while resting."
+  },
+  "3010121": {
+    "name": "Door of Truth",
+    "desc": "HP is reduced by 50 and 100 MP is recovered every 10 seconds sitting in the door of truth."
+  },
+  "3010122": {
+    "name": "Envy",
+    "desc": "HP is restored by 100 and MP is reduced by 50 every 10 seconds."
+  },
+  "3010123": {
+    "name": "Spring Flower Corsage Chair",
+    "desc": "Feel and Enjoy the Flower!!\\nRecovers 50 HP, MP every 10 seconds."
+  },
+  "3010124": {
+    "name": "Dunas Jet Chair",
+    "desc": "A futuristic chair that people in Neo Tokyo ride. It recovers 40 HP every 10 seconds."
+  },
+  "3010125": {
+    "name": "Nibergen Battleship Chair",
+    "desc": "A futuristic chair that people in Neo Tokyo ride. It recovers 40 HP every 10 seconds."
+  },
+  "3010126": {
+    "name": "Balrog Chair",
+    "desc": "A chair that resembles Balrog, an ancient demon that is rumored to be found deep inside Sleepywood Dungeon. When you sit in this menacing chair, 60 HP and 60 MP will be restored every 10 seconds."
+  },
+  "3010127": {
+    "name": "Zakum Chair",
+    "desc": " A chair that resembles Zakum, a monster that is worshipped by residents near the volcanic area. When you sit in this chair, you'll feel the power of Zakum. 80 HP and 50 MP will be restored every 10 seconds."
+  },
+  "3010128": {
+    "name": "Horntail Chair",
+    "desc": "A chair that resembles Horntail, an evil three-headed dragon that lives in Leafre's Dragon Forest. When you sit on a Horntail Chair, your injuries will heal quicker. 100 HP and 40 MP will be restored every 10 seconds."
+  },
+  "3010129": {
+    "name": "Chief Chair",
+    "desc": "A chair that symbolizes the authority of a chief. You can recover 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010130": {
+    "name": "Rose Chair",
+    "desc": "A chair with the romantic scent of roses. You can recover 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010131": {
+    "name": "Chewing Panda Chair",
+    "desc": "A chair with an adorable yet lazy panda chewing a bamboo stick. You can recover 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010132": {
+    "name": "Fuzzy Kitty Chair",
+    "desc": "A chair with a fuzzy kitty rubbing its face on its body. You can recover 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010133": {
+    "name": "Tent Chair",
+    "desc": "A chair that provides you the full wilderness experience. You can recover 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010134": {
+    "name": "Underneath the Maple Tree...",
+    "desc": "A white chair made to commemorate the beginning of MapleStory. You can recover 35 HP and 10 MP every 10 seconds."
+  },
+  "3010135": {
+    "name": "Lioner Chair",
+    "desc": "Recovers 70 HP and 70 MP every 10 seconds. "
+  },
+  "3010136": {
+    "name": "3rd Anniversary Chair",
+    "desc": "60 HP and 60 MP are restored every 10 seconds."
+  },
+  "3010137": {
+    "name": "Dragon Lord Chair",
+    "desc": "A special chair shaped like the Dragon Lord. Recovers 100 HP and 100 MP every 10 seconds. "
+  },
+  "3010138": {
+    "name": "Settee Chair",
+    "desc": "Moment of elegance. Recovers 50 HP every 10 seconds."
+  },
+  "3010139": {
+    "name": "Your Throne",
+    "desc": "Need some privacy? Recovers 50 HP every 10 seconds."
+  },
+  "3010140": {
+    "name": "Hospital Bed",
+    "desc": "Time to heal your wound. Recovers 100 HP every 10 seconds."
+  },
+  "3010141": {
+    "name": "Cake Chair",
+    "desc": "30 HP and 30 MP are restored every 10 seconds."
+  },
+  "3010142": {
+    "name": "Fish Tank Chair",
+    "desc": "Recovers 30 HP/MP every 10 seconds. "
+  },
+  "3010143": {
+    "name": "5th Anniversary Chair",
+    "desc": "Enjoy MapleRoyals 5th anniversary.\\nRecovers 50 HP and MP every 10 seconds."
+  },
+  "3010144": {
+    "name": "Gift Festival Chair",
+    "desc": "Recovers 10 HP and MP every 10 seconds."
+  },
+  "3010145": {
+    "name": "6th Anniversary Chair",
+    "desc": "60 HP and 60 MP are restored every 10 seconds."
+  },
+  "3010146": {
+    "name": "6th Anniversary Chair",
+    "desc": "60 HP and 60 MP are restored every 10 seconds."
+  },
+  "3010149": {
+    "name": "Cat lying in front of a Fan",
+    "desc": "Restores 10 HP and 10 MP every 10 seconds."
+  },
+  "3010150": {
+    "name": "4th Anniversary Chair",
+    "desc": "60 HP and 60 MP are restored every 10 seconds."
+  },
+  "3010151": {
+    "name": "Desert Island Chair",
+    "desc": "50 HP and 50 MP are restored every 10 seconds."
+  },
+  "3010152": {
+    "name": "Yellow Tent Chair",
+    "desc": "A chair that will allow you to enjoy camping even more. It recovers 40 HP and MP every 10 seconds."
+  },
+  "3010154": {
+    "name": "Mechanical Chair",
+    "desc": "Mechanical chair that recovers HP every 10 seconds."
+  },
+  "3010155": {
+    "name": "Owl Chair",
+    "desc": "A special chair shaped like Owl. Recovers 30 HP and 30 MP every 10 seconds. "
+  },
+  "3010156": {
+    "name": "Visitor Representative Machine",
+    "desc": "A chair made by modifying the machine the Visitor Representative used to ride. Sit on it and 50 HP and MP will be restored every 10 seconds."
+  },
+  "3010157": {
+    "name": "Guild Chair",
+    "desc": "A mechanical chair that recovers HP every 10 seconds."
+  },
+  "3010161": {
+    "name": "Squeep",
+    "desc": "This chair is shaped like the MWLB mascot. MWLB members can use this chair to regain 20 HP and 20 MP every 10 seconds."
+  },
+  "3010162": {
+    "name": "Suri Chair",
+    "desc": "When you sit on Suri Chair, 50 HP and 30 MP are recovered every 10 seconds."
+  },
+  "3010166": {
+    "name": "Yun Chair",
+    "desc": "When you sit on Yun Chair, 150  HP and 100 MP are recovered every 10 seconds."
+  },
+  "3010168": {
+    "name": "Chair on the Range",
+    "desc": "Friends are always valuable. Recovers 40 HP and 40 MP every 10 seconds."
+  },
+  "3010169": {
+    "name": "Kitten Chair",
+    "desc": "A lovely kitten makes you happy. Recover 40 HP and 40 MP every 10 seconds."
+  },
+  "3010170": {
+    "name": "December Chair",
+    "desc": "Winter is coming. Recovers 30 HP and 30 MP every 10 seconds."
+  },
+  "3010172": {
+    "name": "Sky Chair",
+    "desc": "Sitting this chair, you can count how many stars are in the sky. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010173": {
+    "name": "Psychic Chair",
+    "desc": "You can predict your future with this chair. Recover 40 HP and 40 MP every 10 seconds."
+  },
+  "3010174": {
+    "name": "Scary Witch Chair",
+    "desc": "A scary witch follows you for trick or treat! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010175": {
+    "name": "Easel Chair",
+    "desc": "You can be artistic with this chair. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010177": {
+    "name": "Gamepad Chair",
+    "desc": "Settle down to some serious gaming with this great chair! Recovers 40 HP and 40 MP every 10 seconds."
+  },
+  "3010179": {
+    "name": "Tea Time Chair",
+    "desc": "Recovers 50 HP every 10 seconds. "
+  },
+  "3010180": {
+    "name": "Giant HP Bottle",
+    "desc": "Recovers 50 HP every 10 seconds."
+  },
+  "3010181": {
+    "name": "Giant MP Bottle",
+    "desc": "Recovers 50 MP every 10 seconds."
+  },
+  "3010183": {
+    "name": "Carrot Chair",
+    "desc": "50 HP and 50 MP are restored every 10 seconds."
+  },
+  "3010184": {
+    "name": "Ice Fishing",
+    "desc": "50 HP is restored every 10 seconds."
+  },
+  "3010185": {
+    "name": "Pink Bean Pollen Pot Chair",
+    "desc": "If you sit in Pink Bean Pollen Pot Chair, 100 HP and 100 MP are recovered every 10 seconds."
+  },
+  "3010188": {
+    "name": "Von Leon Chair",
+    "desc": "Recovers 50 MP every 10 seconds."
+  },
+  "3010189": {
+    "name": "Xerxes Chair",
+    "desc": "Recovers 50 MP every 10 seconds."
+  },
+  "3010191": {
+    "name": "Love Chair",
+    "desc": "Love chair that recovers HP/MP every 10 seconds. You need to sit facing your spouse to complete the heart."
+  },
+  "3010194": {
+    "name": "Campfire Chair",
+    "desc": "A campfire used for warmth and protection when camping outside.\\n#cRecovers 60 HP and 30 MP every 10 seconds.#"
+  },
+  "3010196": {
+    "name": "Bubble Bath Chair",
+    "desc": "Makes you feel clean. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010197": {
+    "name": "Hero's Chair-Aran",
+    "desc": "Recovers 50 HP/MP every 10 seconds. "
+  },
+  "3010200": {
+    "name": "Hero's Chair-Evan",
+    "desc": "Recovers 50 HP/MP every 10 seconds. "
+  },
+  "3010201": {
+    "name": "Hero's Chair-Dual Blade",
+    "desc": "Recovers 50 HP/MP every 10 seconds. "
+  },
+  "3010202": {
+    "name": "Underneath the Maple Tree...",
+    "desc": "A chair created to celebrate the Legends Awards. Recovers 35 HP and 10 MP every 10 seconds."
+  },
+  "3010203": {
+    "name": "Pink Beach Parasol Chair",
+    "desc": "A pink beach chair that reminds you of sand and surf. Recovers 60 HP every 10 seconds."
+  },
+  "3010204": {
+    "name": "Alphonse and cat chair",
+    "desc": "When sitting in the chair of Alphonse and the cat, recover 50 MP every 10 seconds."
+  },
+  "3010205": {
+    "name": "Antique Phonograph Chair",
+    "desc": "An antique phonograph chair. Doesn't actually play music, but reminds you of it. Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3010206": {
+    "name": "Artistic Vision Chair",
+    "desc": "A small chair with an attached easel for letting your creativity flow. Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3010208": {
+    "name": "Tuxedo Kitty Chair",
+    "desc": "Let the butler kitty pour you some tea! Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3010211": {
+    "name": "Elven Throne",
+    "desc": "A chair designed for the ruler of the Elves. Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3010215": {
+    "name": "Chair of Aran the Guardian",
+    "desc": "A chair for Aran who guarded the past."
+  },
+  "3010216": {
+    "name": "Chair of Evan the Guardian",
+    "desc": "A chair for Evan who guarded the past."
+  },
+  "3010218": {
+    "name": "Coco Boss Chair",
+    "desc": "A chair that contains the evil spirit of Coco from the Silent Crusade. Recovers 50 HP and MP every 10 seconds."
+  },
+  "3010219": {
+    "name": "Dual Birk Chair",
+    "desc": "A chair that contains a tamed evil power. 50 HP every 10 seconds."
+  },
+  "3010222": {
+    "name": "Reading Chair",
+    "desc": "Restores 100 HP and 50 MP every 10 seconds."
+  },
+  "3010224": {
+    "name": "Mochi Ice Cream Chair",
+    "desc": "A heaping helping of mochi ice cream for you to relax in. Recovers 30 HP and 30 MP every 10 seconds while resting.  "
+  },
+  "3010225": {
+    "name": "Pink Bean Chair",
+    "desc": "A cuddly Pink Bean you can sit on. It's totally safe! Recovers 60 HP every 10 seconds."
+  },
+  "3010229": {
+    "name": "Igloo",
+    "desc": "Stay in this igloo made out of ice and snow to recover 40 HP and 30 MP every 10 seconds. "
+  },
+  "3010230": {
+    "name": "Cake Chair",
+    "desc": "30 HP and 30 MP are restored every 10 seconds."
+  },
+  "3010231": {
+    "name": "Polar Bear Chair",
+    "desc": "Snuggle up in this cozy polar bear chair to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010232": {
+    "name": "Furnace Chair",
+    "desc": "Sit on this chair to feel the warmth from the furnace. You can recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010233": {
+    "name": "Bunny Chair",
+    "desc": "Bunny chair that recovers HP every 10 seconds."
+  },
+  "3010234": {
+    "name": "Giant HP Bottle",
+    "desc": "Recovers 50 HP every 10 seconds."
+  },
+  "3010235": {
+    "name": "Giant MP Bottle",
+    "desc": "Recovers 50 MP every 10 seconds."
+  },
+  "3010236": {
+    "name": "Zakum Chair",
+    "desc": " A chair that resembles Zakum, a monster that is worshipped by residents near the volcanic area. When you sit in this chair, you'll feel the power of Zakum. 80 HP and 50 MP will be restored every 10 seconds."
+  },
+  "3010237": {
+    "name": "Horntail Chair",
+    "desc": "A chair that resembles Horntail, an evil three-headed dragon that lives in Leafre's Dragon Forest. When you sit on a Horntail Chair, your injuries will heal quicker. 100 HP and 40 MP will be restored every 10 seconds."
+  },
+  "3010238": {
+    "name": "Miwok Chief's Chair",
+    "desc": "The chair in which the chiefs of the Miwok tribe sat. If you sit in this chair, you can receive the strength of the Miwok ancestors and recover 65MP in 10 seconds."
+  },
+  "3010239": {
+    "name": "Cat's Love Chair",
+    "desc": "Hug me tightly. Recovers 30 HP and 30 MP every 10 seconds."
+  },
+  "3010241": {
+    "name": "Music Box",
+    "desc": "50 HP is restored every 10 seconds if you lean back on this music box."
+  },
+  "3010242": {
+    "name": "Desert Island Chair",
+    "desc": "50 HP and 50 MP are restored every 10 seconds."
+  },
+  "3010243": {
+    "name": "Tea Time Chair",
+    "desc": "Recovers 50 HP every 10 seconds. "
+  },
+  "3010244": {
+    "name": "Xerxes Chair",
+    "desc": "Recovers 50 MP every 10 seconds."
+  },
+  "3010245": {
+    "name": "Locker Chair",
+    "desc": "Recovers 50 HP every 10 seconds. "
+  },
+  "3010246": {
+    "name": "1st Anniversary Chair",
+    "desc": "60 HP and 60 MP are restored every 10 seconds."
+  },
+  "3010247": {
+    "name": "Tiger Skin Chair",
+    "desc": "Lean back on this imposing Tiger Skin Chair to restore 50 HP and 30 MP every 10 seconds."
+  },
+  "3010248": {
+    "name": "Swing on the Persimmon Tree",
+    "desc": "There is a swing on the Persimmon Tree with ripe persimmons."
+  },
+  "3010249": {
+    "name": "The Spirit of Rock Chair",
+    "desc": "A new chair that makes you feel like a Rock Star.\\nRecovers 60 HP and 30 MP every 10 seconds."
+  },
+  "3010250": {
+    "name": "Yellow Robot Chair",
+    "desc": "Perch yourself on the hand of this powerful yellow robot to recover 50 HP and 30 MP every 10 seconds."
+  },
+  "3010251": {
+    "name": "Dragon Egg",
+    "desc": "Sit on this cracked dragon egg shell and relax to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010253": {
+    "name": "Full Moon Chair",
+    "desc": "When you sit on Full Moon Chair, 35 HP and 10 MP are recovered every 10 seconds."
+  },
+  "3010254": {
+    "name": "Black Seal Cushion",
+    "desc": "An adorable black cushion that resembles a seal.  Recovers HP 50 every 10 seconds."
+  },
+  "3010255": {
+    "name": "Maple Crystal Chair",
+    "desc": "If you sit in the crystal chair made to commemorate the creation of MapleStory, 50 HP and 30 MP are recovered every 10 seconds."
+  },
+  "3010256": {
+    "name": "Clear Chair",
+    "desc": "When you sit in this chair, 50 HP are recovered every 10 seconds."
+  },
+  "3010257": {
+    "name": "Underneath the Maple Tree...",
+    "desc": "A chair to commemorate Homecoming. Recovers 35 HP and 10 MP every 10 seconds."
+  },
+  "3010279": {
+    "name": "Halloween Pumpkin Chair",
+    "desc": "A pumpkin-shaped chair made to celebrate Halloween. Recovers 50 HP every 10 seconds."
+  },
+  "3010282": {
+    "name": "Stork Swing",
+    "desc": "Careful! Don't wiggle too much or the stork'll drop you! Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010283": {
+    "name": "Carpet Chair",
+    "desc": "Ride the carpet to fly. Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010284": {
+    "name": "Pumpkin Chair",
+    "desc": "A comfy chair shaped like a pumpkin. Recovers 50 HP and MP every 10 seconds."
+  },
+  "3010285": {
+    "name": "Legends Awards Chair",
+    "desc": "Recovers 100 HP and MP every 10 seconds."
+  },
+  "3010286": {
+    "name": "Nautilus Chair",
+    "desc": "Mayday, mayday! Recovers 50 HP every 10 seconds."
+  },
+  "3010287": {
+    "name": "Royal Harp",
+    "desc": "The royal harp of the Elves, famous for its sublime timbre. Recovers 50 HP every 10 seconds."
+  },
+  "3010288": {
+    "name": "Pearly Clam Chair",
+    "desc": "Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010289": {
+    "name": "Storytime Chair",
+    "desc": "Story time with grandma is always so relaxing, but watch out...impostors could show up at any moment! Restores 50 HP and 50 MP every 10 seconds. #cCaution: Users may experience extreme old people smell.#"
+  },
+  "3010290": {
+    "name": "Demon Throne",
+    "desc": "An imposing throne fit for a master of darkness. Recovers 50 HP every 10 seconds."
+  },
+  "3010296": {
+    "name": "Peppermint Throne",
+    "desc": "The tastiest, mintiest throne in all of Maple World. Restores 50 HP every 10 seconds."
+  },
+  "3010297": {
+    "name": "Crystalline Dream",
+    "desc": "A chair JUST fancy enough for the greatest thief of all time. Recovers HP every 10 seconds."
+  },
+  "3010298": {
+    "name": "Polar Bear Chair",
+    "desc": "Snuggle up in this cozy polar bear chair to recover 40 HP and 20 MP every 10 seconds."
+  },
+  "3010301": {
+    "name": "Elixir Chair",
+    "desc": "Restores 50 HP every 10 seconds."
+  },
+  "3010302": {
+    "name": "Power Elixir Chair",
+    "desc": "Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010307": {
+    "name": "Pink Bean Chair",
+    "desc": "A cuddly Pink Bean you can sit on. It's totally safe! Recovers 60 HP every 10 seconds."
+  },
+  "3010308": {
+    "name": "Shamrock Chair",
+    "desc": "Restores 70 HP and 40 MP every 10 seconds. "
+  },
+  "3010313": {
+    "name": "Pink Zakum Chair",
+    "desc": " A chair that resembles Pink Zakum, a monster that is worshipped by residents near the volcanic area. When you sit in this chair, you'll feel the power of Pink Zakum. 80 HP and 50 MP will be restored every 10 seconds."
+  },
+  "3010314": {
+    "name": "Red-Hat Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see a cute Moon Bunny with a red hat do its thing!"
+  },
+  "3010315": {
+    "name": "Blue-Hat Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see a cute Moon Bunny with a blue hat do its thing!"
+  },
+  "3010316": {
+    "name": "Fan-Dance Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see a Moon Bunny doing a fan dance!"
+  },
+  "3010317": {
+    "name": "Trumpeting Moon Bunny Cushion",
+    "desc": "Sit on the cushion to see a Moon Bunny playing a trumpet with all its soul!"
+  },
+  "3010318": {
+    "name": "Oh My Empress",
+    "desc": "A chair that embodies the huge popularity of Cygnus. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010319": {
+    "name": "Teddy Bear Bed",
+    "desc": "Relax in this cozy teddy bear bed to recover 50 HP and MP every 10 seconds."
+  },
+  "3010320": {
+    "name": "Storytime Chair",
+    "desc": "Grandma sure does have a lot of crazy stories, but that cat smell is kind of overpowering. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010321": {
+    "name": "Arkarium Storytime Chair",
+    "desc": "Old guys tell the best stories. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010322": {
+    "name": "Lovely V Chair",
+    "desc": "Turns every day into Valentine's Day. Recovers 40 HP and 20 MP every 10 seconds. Sit face-to-face with someone you love to complete a heart shape!"
+  },
+  "3010354": {
+    "name": "Teatime With Madeleine",
+    "desc": "Have some sweet teatime with Madeleine the maid. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010355": {
+    "name": "Galacto-Drill Chair",
+    "desc": "The Galacto-Drill Chair is surprisingly comfortable, despite the fact that it was made for alien bottoms. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010358": {
+    "name": "It's a Hoot! Chair",
+    "desc": "When you sit in It's a Hoot! Chair, 50 HP and 50 MP are recovered every 10 seconds."
+  },
+  "3010359": {
+    "name": "Stork Swing",
+    "desc": "Careful! Don't wiggle too much or the stork'll drop you! Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010360": {
+    "name": "Knight of Light Chair",
+    "desc": "Given to the lightest of all knights. Recovers 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010364": {
+    "name": "Teatime With Sharyl",
+    "desc": "Have some sweet teatime with Prince Sharyl. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010365": {
+    "name": "Spiegelmann's Ancient Rock Chair",
+    "desc": "Ancient rock chair from the 2012 Artifact Hunt. Doesn't look very comfortable, but it looks beautiful! Recovers 50 HP and MP every 10 seconds. "
+  },
+  "3010368": {
+    "name": "Polar Bear Chair",
+    "desc": "Sit on this and you'll feel like you're getting a bear hug from a polar bear! Recovers 40 HP and 20 MP every 10 seconds."
+  },
+  "3010369": {
+    "name": "Lord Pirate Chair",
+    "desc": "Sit on this and you'll feel like you're one of Lord Pirate's hostages! Recovers 40 HP and 20 MP every 10 seconds."
+  },
+  "3010370": {
+    "name": "Jeweled Maple Chair",
+    "desc": "Radiant maple leaf chair made from jewels. Recovers 40 HP and 20 MP every 10 seconds."
+  },
+  "3010371": {
+    "name": "Under the Maple Tree",
+    "desc": "White chair made to celebrate 8th anniversary. Recovers 40 HP and 20 MP every 10 seconds."
+  },
+  "3010372": {
+    "name": "Jett's Chair",
+    "desc": "A chair given to those with Jett's sense of adventure. Recovers 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010373": {
+    "name": "The Porcelain Throne",
+    "desc": "A luxurious toilet chair. It has everything you'll need! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010374": {
+    "name": "Starry Night Chair",
+    "desc": "Sit on this and enjoy the respite of the quiet starry night! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010375": {
+    "name": "Mysterious Power Elixir Chair",
+    "desc": "Power Elixir chair emitting mysterious light. Let's you recover HP & MP slightly faster than from other potion chairs. Restores 110 HP and 60 MP every 10 seconds. "
+  },
+  "3010376": {
+    "name": "Passionate Red Potion Chair",
+    "desc": "A red potion chair that makes you feel like you'll recover HP slightly faster than from other chairs. Recovers 110 HP and 50 MP every 10 seconds. "
+  },
+  "3010377": {
+    "name": "Refreshing Blue Potion Chair",
+    "desc": "A blue potion chair that makes you feel like you'll recover MP slightly faster than from other chairs. Recovers 100 HP and 60 MP every 10 seconds. "
+  },
+  "3010378": {
+    "name": "Basic Mercedes Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010379": {
+    "name": "Basic Demon Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds.."
+  },
+  "3010380": {
+    "name": "Basic Resistance Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010381": {
+    "name": "Basic Aran Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010382": {
+    "name": "Basic Evan Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010383": {
+    "name": "Basic Explorer Flag Chair",
+    "desc": "A flag and a chair that symbolize Explorers. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010384": {
+    "name": "Basic Cygnus Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010385": {
+    "name": "Mercedes Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010386": {
+    "name": "Demon Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010387": {
+    "name": "Resistance Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010388": {
+    "name": "Aran Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010389": {
+    "name": "Evan Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010390": {
+    "name": "Explorer Flag Chair",
+    "desc": "A flag and a chair that symbolize Explorers. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010391": {
+    "name": "Cygnus Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010392": {
+    "name": "Deluxe Mercedes Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010393": {
+    "name": "Deluxe Demon Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010394": {
+    "name": "Deluxe Resistance Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010395": {
+    "name": "Deluxe Aran Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010396": {
+    "name": "Deluxe Evan Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010397": {
+    "name": "Deluxe Explorer Flag Chair",
+    "desc": "A flag and a chair that symbolize Explorers. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010398": {
+    "name": "Deluxe Cygnus Flag Chair",
+    "desc": "A flag-bearing chair to venerate long-serving Maple warriors. It's extremely patriotic. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010399": {
+    "name": "Maple BigWig Throne",
+    "desc": "A throne fit for the world's greatest kings... which means it's JUST good enough for a BigWig.\\nRecovers 100 HP, 100 MP every 10 seconds."
+  },
+  "3010402": {
+    "name": "Demonic Birthday",
+    "desc": "How does a Demon Slayer celebrate a birthday? Do they even have them? 100 HP and 50 MP restored every 10 seconds. "
+  },
+  "3010403": {
+    "name": "Elluel Concerto",
+    "desc": "Enjoy a special performance by the one and only Mercedes! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010404": {
+    "name": "Hilla's Style Maker",
+    "desc": "Sit on this chair to become more beautiful with Hilla! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010405": {
+    "name": "Drill Machine Chair",
+    "desc": "Sit on this drill machine chair to recover 50 HP and MP every 10 seconds. "
+  },
+  "3010406": {
+    "name": "Mini Shinsoo Chair",
+    "desc": "Sit on this Mini Shinsoo chair to recover 50 HP and MP every 10 seconds. "
+  },
+  "3010408": {
+    "name": " Chivalrous Chair ",
+    "desc": "The chair Kyrin made for the Chivalrous pirates. Sit on it to restore 50 HP every 10 secs."
+  },
+  "3010410": {
+    "name": "Elize’s Lap",
+    "desc": "Restores 50 HP and 50 MP every 10 seceonds."
+  },
+  "3010411": {
+    "name": "Merlion Chair",
+    "desc": "Recover HP and MP 50 every 10 seconds."
+  },
+  "3010412": {
+    "name": "Petronas Towers Chair",
+    "desc": "Recovers 50 HP/MP every 10 seconds. "
+  },
+  "3010419": {
+    "name": "Sengoku Command Post",
+    "desc": "Commanding warriors love to dole out orders from atop this chair. \\n#cRestores 60 HP and 30 MP every 10 seconds.#"
+  },
+  "3010421": {
+    "name": "Big Money Chair",
+    "desc": "Everybody's a billionaire in this chair! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010422": {
+    "name": "Game of Seats Chair",
+    "desc": "Anyone who isn't us is our enemy. Recovery 200 HP and 100 MP every 10 seconds."
+  },
+  "3010423": {
+    "name": "Shroom Buddy Chair",
+    "desc": "They're seriously fun guys! They are also fungi. That was the joke. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010424": {
+    "name": "Pimp Chair",
+    "desc": "Positively pimpin'. Recovery 50 HP and 50 MP every 10 seconds."
+  },
+  "3010425": {
+    "name": "The Aluminum Throne",
+    "desc": "A good king knows when to save his strength and when to destroy his enemies. Recovery 100 HP and 200 MP every 10 seconds."
+  },
+  "3010429": {
+    "name": "Red Dragon Chair",
+    "desc": "It's a little on the hot side, but at least it comes with a wicked red dragon! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010430": {
+    "name": "Blue Dragon Chair",
+    "desc": "It's a little on the cold side, but at least it comes with a wicked blue dragon! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010431": {
+    "name": "Cool Cat Chair ",
+    "desc": "Let's fool around with a cat next to a fan. Because, why not? Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010432": {
+    "name": "Coco Island Chair",
+    "desc": "You'll feel like you own a tiny island! Only you won't. You'll own a chair. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010433": {
+    "name": "Pink Bean's Magic Chair",
+    "desc": "Smells a whole lot like sweat and cotton candy... MAGIC! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010434": {
+    "name": "Tropical Cooler Chair",
+    "desc": "Filled with refreshing fruit, guaranteed to soak your bottom! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010435": {
+    "name": "Rainy Fox Chair",
+    "desc": "You're going to get a little wet and you'll probably be covered in fur. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010436": {
+    "name": "Black Dragon Devil Throne",
+    "desc": "Cool people always wear black. ALWAYS. Even at night on their bicycles.  Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010437": {
+    "name": "Magic Book Chair",
+    "desc": "You just feel so much smarter than everybody else. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010439": {
+    "name": "Sheep Sprout Chair",
+    "desc": "Is it just me, or is it sleepy in here? Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010440": {
+    "name": "Bunny Moon Homecoming Chair",
+    "desc": "It said it would return the day after tomorrow with rice cakes. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010442": {
+    "name": "Free Hug Cat Chair",
+    "desc": "Gives lousy hugs, but you get what you pay for. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010443": {
+    "name": "Devil Sheep Chair",
+    "desc": "A truly devilish sheep. Napping not advised. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010444": {
+    "name": "Pink Gamepad Chair",
+    "desc": "Girl gamers are real, and they’re made of marshmallows, and they smell like unicorns. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010445": {
+    "name": "Bright Night Owl Chair",
+    "desc": "Just hoo’in around. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010446": {
+    "name": "Skin Empress Chair",
+    "desc": "The chair isn’t made of skin, but it sure is nice on yours! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010447": {
+    "name": "Sleepy Bird Chair",
+    "desc": "Drowse among the baby birds without a worry. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010449": {
+    "name": "Ten Week Stay Chair",
+    "desc": "What’s better than recreating that time you broke your spine in half at band camp? Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010450": {
+    "name": "Elize Chair",
+    "desc": "FINALLY, you can be Elize's best friend. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010451": {
+    "name": "Dragon Egg Chair",
+    "desc": "It is the cracked egg that recovers 50 HP and 50 MP every 10 seconds, if your butt is in the right place. "
+  },
+  "3010452": {
+    "name": "Baby Dragon Swing",
+    "desc": "A swing that is moved by a baby dragon. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010455": {
+    "name": "Lord Zakum Throne",
+    "desc": "Challenge the limits of your nerves. You could get high-fived at any moment! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010456": {
+    "name": "Spring Chair ",
+    "desc": "Spring Chair. Sit to recover HP 100, MP 100 every 10 seconds."
+  },
+  "3010457": {
+    "name": "Lania Picnic Chair",
+    "desc": "Things are going so well! Nothing could possibly go wrong! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010458": {
+    "name": "Rolling Bunny Chair",
+    "desc": "Hop into the egg basket with a chubby rabbit! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010459": {
+    "name": "Angelic Adoration Chair",
+    "desc": "Oh my gosh, did you see how cute she was?!! I THINK SHE TOUCHED MY HAND! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010464": {
+    "name": "Magic Book Chair",
+    "desc": "You just feel so much smarter than everybody else. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010465": {
+    "name": "Beautiful Music Chair",
+    "desc": "A lovely chair for lovely couples. Lonely people may also sit in it, but it won't be fun. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010490": {
+    "name": "Presidential Elephant Chair",
+    "desc": "A cushy chair for discerning Republicans. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010491": {
+    "name": "Presidential Donkey Chair",
+    "desc": "A cushy chair for discerning Democrats. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010492": {
+    "name": "Head of State Chair",
+    "desc": "Hey, you're not the president! How'd you get in here?! Recovers 100 HP and 100 MP every 10 seconds."
+  },
+  "3010493": {
+    "name": "Split-Screen Magnus Chair",
+    "desc": "Even Magnus gets lonely sometimes. Say anything, and Magnus will always answer. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010499": {
+    "name": "Zombie Hunter Chair",
+    "desc": "Given to zombie menaces from the Halloween Masquerade. Recover 80 HP and 80 MP every 10 seconds."
+  },
+  "3010510": {
+    "name": "Kitty Basket Chair",
+    "desc": "The kittens just love the yarn! Recover 50 HP and MP every 10 seconds."
+  },
+  "3010511": {
+    "name": "Cat Bench",
+    "desc": "Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010512": {
+    "name": "Von Bon's Von Chair",
+    "desc": "A chair that gives you Von Bon's protection. Now you have nothing to be afraid of!"
+  },
+  "3010513": {
+    "name": "Happy Pierre Chair",
+    "desc": "Party with Pierre! Woo-hoo!"
+  },
+  "3010514": {
+    "name": "Crimson Queen's Throne",
+    "desc": "It's less crimson than you'd expect."
+  },
+  "3010515": {
+    "name": "Vellum Rock Chair",
+    "desc": "Chair that makes you feel like you are stuck in Vellum's cave."
+  },
+  "3010516": {
+    "name": "The Miwok Experience",
+    "desc": "Now you know what the Miwok Boys have been going through. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010517": {
+    "name": "Friend of the Miwoks",
+    "desc": "Fall deep into the calm of the jungle with the future of the Miwok Village. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010518": {
+    "name": "The Old and the Wise Chair",
+    "desc": "Sitting next to the elder is always a little awkward. Sit and recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010519": {
+    "name": "Loyal Royal Yeti Chair",
+    "desc": "No wonder King Pepe always looks so smug and superior. This thing could knock over a house! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010520": {
+    "name": "King Pepe Chair",
+    "desc": "It's hard to say why King Pepe has allowed himself to be a chair, but you don't second-guess comfort. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010521": {
+    "name": "Crystalline Chair",
+    "desc": "Like most expensive things, this chair is all hard angles and back pain, but your friends will be TOTALLY jealous. Recovers 50 HP and 50 MP every 10 seconds.  "
+  },
+  "3010522": {
+    "name": "Bunny Tornado Chair",
+    "desc": "It's a cute name, but seriously, find a mattress to hunker under until it passes. Those teeth are really sharp. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010523": {
+    "name": "Cloud Stroller Chair",
+    "desc": "Just keep in mind that clouds are made of frozen water when you're trying to explain away that giant puddle on your rear end. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010524": {
+    "name": "Welsh Corgi Chair",
+    "desc": "Truly, this must be heaven. Smelly, biting, slobbery heaven. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010525": {
+    "name": "Caged Owl Chair",
+    "desc": "Purchases by rodents or rodent-lovers not recommended. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010526": {
+    "name": "Stork Aviator Chair",
+    "desc": "So THAT's where chairs come from. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010529": {
+    "name": "Chinchillin' Chair",
+    "desc": "Everybody on Southperry.net knows that a Mapler's best friend is a giant fluffy Chinchilla; mostly because it doubles a pillow between adventures."
+  },
+  "3010531": {
+    "name": "Penguin Choir",
+    "desc": "These adorable penguins are singing a Christmas carol just for you! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010532": {
+    "name": "Sky-blue Wooden Chair",
+    "desc": "This Sky-blue Wooden Chair is only specially sold in Lith Harbor. Recovers 35 HP every 10 seconds."
+  },
+  "3010533": {
+    "name": "Palm Tree Beach Chair",
+    "desc": "A beach chair that's laid out in the cool shades of the Ariant palm trees. Recovers 40 HP and 20 MP every 10 seconds."
+  },
+  "3010534": {
+    "name": "Male Desert Rabbit Cushion",
+    "desc": "Sit on this adorable desert rabbit to recover 60 HP every 10 seconds."
+  },
+  "3010535": {
+    "name": "Navy Velvet Sofa",
+    "desc": "A velvet sofa with a lot of pizazz. Recovers 60 HP every 10 seconds."
+  },
+  "3010536": {
+    "name": "Red Designer Chair",
+    "desc": "An ergonomic red chair. Recovers 60 HP every 10 seconds."
+  },
+  "3010537": {
+    "name": "Soul Teddy Chair",
+    "desc": "A Soul Teddy Chair. Recovers 60 HP every 10 seconds."
+  },
+  "3010538": {
+    "name": "Mechanical Chair",
+    "desc": "A mechanical chair that recovers HP every 10 seconds."
+  },
+  "3010539": {
+    "name": "Red Dragon Chair",
+    "desc": "It's a little on the hot side, but at least it comes with a wicked red dragon! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010541": {
+    "name": "Big Money Chair",
+    "desc": "Everybody's a billionaire in this chair! Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3010543": {
+    "name": "Pink Bean's Magic Chair",
+    "desc": "Smells a whole lot like sweat and cotton candy... MAGIC! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010544": {
+    "name": "Tropical Cooler Chair",
+    "desc": "Filled with refreshing fruit, guaranteed to soak your bottom! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010545": {
+    "name": "Rainy Fox Chair",
+    "desc": "You're going to get a little wet and you'll probably be covered in fur. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010546": {
+    "name": "Black Dragon Devil Throne",
+    "desc": "Cool people always wear black. ALWAYS. Even at night on their bicycles. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010547": {
+    "name": "Magical Book",
+    "desc": "You just feel so much smarter than everybody else. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010548": {
+    "name": "Beautiful Music Chair",
+    "desc": "A lovely chair for lovely couples. Lonely people may also sit in it, but it won't be fun. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010551": {
+    "name": "Devil Black Dog Throne",
+    "desc": "A chair with an overwhelming stare. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010552": {
+    "name": "Free Hug Cat Chair",
+    "desc": "Gives lousy hugs, but you get what you pay for. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010553": {
+    "name": "Devil Sheep Chair",
+    "desc": "A truly devilish sheep. Napping not advised. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010554": {
+    "name": "Pink Gamepad Chair",
+    "desc": "Girl gamers are real, and they're made of marshmallows, and they smell like unicorns. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010555": {
+    "name": "Bright Night Owl Chair",
+    "desc": "Just hoo'in around. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010556": {
+    "name": "Skin Empress Chair",
+    "desc": "The chair isn't made of skin, but it sure is nice on yours! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010557": {
+    "name": "Sleepy Bird Chair",
+    "desc": "Drowse among the baby birds free of all your worldly concerns."
+  },
+  "3010558": {
+    "name": "Bubble Bath Chair",
+    "desc": "Makes you feel clean. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010559": {
+    "name": "Dragon Egg Chair",
+    "desc": "It is the cracked egg that recovers 50 HP and 50 MP every 10 seconds, if your butt is in the right place."
+  },
+  "3010560": {
+    "name": "Baby Dragon Swing",
+    "desc": "A swing that is moved by a baby dragon. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010561": {
+    "name": "Lord Zakum Throne",
+    "desc": "Challenge the limits of your nerves. You could get high-fived at any moment! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010562": {
+    "name": "Ten Week Stay Chair",
+    "desc": "What's better than recreating that time you broke your spine in half at band camp? Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010563": {
+    "name": "Moon and Star Cushion",
+    "desc": "A pretty moon cushion. Recovers 60 HP every 10 seconds."
+  },
+  "3010564": {
+    "name": "Arkarium Storytime Chair",
+    "desc": "Old guys tell the best stories. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010565": {
+    "name": "Oh My Empress",
+    "desc": "A chair that embodies the huge popularity of Cygnus. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010566": {
+    "name": "Demonic Birthday",
+    "desc": "How does a Demon Slayer celebrate a birthday? Do they even have them? 100 HP and 50 MP restored every 10 seconds. "
+  },
+  "3010567": {
+    "name": "Elluel Concerto",
+    "desc": "Enjoy a special performance by the one and only Mercedes! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010568": {
+    "name": "Hilla's Style Maker",
+    "desc": "Sit on this chair to become more beautiful with Hilla! Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3010569": {
+    "name": "Drill Machine Chair",
+    "desc": "Sit on this drill machine chair to recover 50 HP and MP every 10 seconds. "
+  },
+  "3010570": {
+    "name": "Mini Shinsoo Chair",
+    "desc": "Sit on this Mini Shinsoo chair to recover 50 HP and MP every 10 seconds. "
+  },
+  "3010571": {
+    "name": "Shroom Buddy Chair",
+    "desc": "They're seriously fun guys! They are also fungi. That was the joke. Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010572": {
+    "name": "Elize Chair",
+    "desc": "FINALLY, you can be Elize's best friend. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010573": {
+    "name": "The Porcelain Throne",
+    "desc": "A luxurious toilet chair. Don't forget to put the seat down! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010574": {
+    "name": "Starry Night Chair",
+    "desc": "Sit on this and enjoy the respite of the quiet starry night! Recovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3010583": {
+    "name": "Snake Chair",
+    "desc": "Recover 150 HP and MP every 10 seconds."
+  },
+  "3010584": {
+    "name": "Christmas Phantom",
+    "desc": "Happy Holidays 2014."
+  },
+  "3010585": {
+    "name": "Xenon Chair",
+    "desc": "A chair made just for Xenon. Recovers 50 HP every 10 seconds."
+  },
+  "3010587": {
+    "name": "Temporal Pod",
+    "desc": "Reverts time to greatly decrease skill cooldown."
+  },
+  "3010589": {
+    "name": "Robo Rabbit Recharger",
+    "desc": "Roo-D may never forgive you for making her work so hard, but you can feel yourself getting charged up! Recovers 50 HP every 10 seconds."
+  },
+  "3010592": {
+    "name": "Black Bean Chair",
+    "desc": "A cuddly Black Bean to sit on. It's totally safe, except for the radioactive, lead-based polyester filling. That stuff will kill you. Recovers 60 HP every 10 seconds."
+  },
+  "3010595": {
+    "name": "Know-How Chair",
+    "desc": "Tot knows how to teach, and this chair keeps it going forever and ever and ever.\\nIf you sit in Know-How Chair, 50 HP and 50 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010596": {
+    "name": "Kite Cushion",
+    "desc": "You Wolmyo! I wonder your face. Let's watch Pudibund Mistress's kite flying. HP is recovered by 50 every 10 seconds."
+  },
+  "3010597": {
+    "name": "Yutnolyi Wolmyo Cushion",
+    "desc": "A cushion that let you enjoy the Wolmyo Yutnolyi Festival. The Wolmyos are sad because their arms are too short to throw the Yut sticks. HP is recovered by 50 every 10 seconds."
+  },
+  "3010598": {
+    "name": "Fortune Chair",
+    "desc": "A chair made from the Fortune Sack a Moon Bunny used to ride on. Sitting in this chair will bring good fortune in the New Year. Recovers 50 HP every 10 seconds."
+  },
+  "3010600": {
+    "name": "Fuku rabbit chair",
+    "desc": "The moon rabbits carrying luck will greet the New Year. Recovers 50 HP every 10 seconds."
+  },
+  "3010602": {
+    "name": "Heart Cloud Chair",
+    "desc": "Is this what it's like to sit in a cloud? Probably not, clouds are just frozen gatherings of gaseous moisture! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010606": {
+    "name": "Unpainted Masterpiece Chair",
+    "desc": "What is a blank canvas, but an invitation to dazzle?\\nIf you sit in Unpainted Masterpiece Chair, 10 HP and 10 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010607": {
+    "name": "Sort of a Painting Chair",
+    "desc": "This painting could have gotten a little more love.\\nIf you sit in Sort of a Painting Chair, 30 HP and 30 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010608": {
+    "name": "Ultimate Masterpiece Chair",
+    "desc": "Holy moly look at this work! The line weight, the brush work, the chiaroscuro lighting!\\nIf you sit in Ultimate Masterpiece Chair, 50 HP and 50 MP are recovered every 10 seconds.\\n#cCannot be traded or dropped.#"
+  },
+  "3010609": {
+    "name": "All the Single Ladies",
+    "desc": "Calling all the single ladies! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3010615": {
+    "name": "Nao Resting",
+    "desc": "A chair that gives you a little quality time with Nao. Recovers 50 HP every 10 seconds. "
+  },
+  "3010620": {
+    "name": "Rowdy Chair",
+    "desc": "Catch your breath and relax by sitting on this chair to recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010631": {
+    "name": "Arowana Chair",
+    "desc": "Giant Golden Arowana Chair。Recover 200 HP and MP when seated."
+  },
+  "3010634": {
+    "name": "Hero's Chair-Aran",
+    "desc": "Recovers 50 HP/MP every 10 seconds."
+  },
+  "3010635": {
+    "name": "Angelic Adoration Chair",
+    "desc": "Oh my gosh, did you see how cute she was?!! I THINK SHE TOUCHED MY HAND! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010643": {
+    "name": "5th Anniversary Cake",
+    "desc": "Stick your behind on this 5th Anniversary cake to rest and recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010644": {
+    "name": "Caged Monkey",
+    "desc": "Watch out! This monkey is going bananas! Keep the monkey company to recover 50 HP and MP every 10 seconds."
+  },
+  "3010645": {
+    "name": "10th Anniversary Cake",
+    "desc": "Stick your behind on this 10th Anniversary cake to rest and recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010646": {
+    "name": "10th Anniversary Throne",
+    "desc": "Feel like a king or queen by sitting on this 10th Anniversary Throne. Recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010659": {
+    "name": "Bus Stop Chair",
+    "desc": "Rest on this chair while you're waiting for that bus. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010663": {
+    "name": "Maple Hero",
+    "desc": "Here's your chance to be a Maple Hero! \\r\\nRecover 60 HP/MP every 10 seconds."
+  },
+  "3010670": {
+    "name": "Absolute Ring Chair",
+    "desc": "Recovers 50 HP every 10 seconds."
+  },
+  "3010675": {
+    "name": "Von Bon's Fury",
+    "desc": "What is that you're cooking?! Von Bon has set his foot down to save his kind from being eaten during the Three Dog Days. Recovers 50 HP and 50 MP every 10 seconds.   "
+  },
+  "3010682": {
+    "name": "Observatory Chair",
+    "desc": "Sit in this observatory chair and gaze at the beautiful night sky. Oh, there's a shooting star shaped like Arkarium! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010683": {
+    "name": "Scary Toy Gift",
+    "desc": "This curious chair is full of familiar-looking toys. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010698": {
+    "name": "Gollux Chair",
+    "desc": "This chair is rocky, and more than a little uncomfortable. "
+  },
+  "3010699": {
+    "name": "Gollux Head Chair",
+    "desc": "Nothing is better than sitting on the head of a lordly entity."
+  },
+  "3010700": {
+    "name": "Giant Ducky Chair",
+    "desc": "It takes a lot to get an adventurer to bathe themselves. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010703": {
+    "name": "Rainbow chair",
+    "desc": "A delightful little rainbow. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010705": {
+    "name": "Slime Launcher Chair",
+    "desc": "Spring Bunny is using a dough roller to bounce Slimes into space. #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3010721": {
+    "name": "Comic Book Lounger",
+    "desc": "It's always a good time for comic books! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3010726": {
+    "name": "Thanksgiving Turkey",
+    "desc": "Happy Thanksgiving! You'll recover 50HP and 50MP while sitting on this."
+  },
+  "3010728": {
+    "name": "I Love MapleStory Chair",
+    "desc": "A gift for those who cherish MapleStory!"
+  },
+  "3010739": {
+    "name": "Yeti Barber Chair",
+    "desc": "Sit back and relax and Recover 100 HP/MP every 10 seconds."
+  },
+  "3010742": {
+    "name": "Code of Hammurabi Chair",
+    "desc": "You are right in the middle of history. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010743": {
+    "name": "Pyramid Chair",
+    "desc": "You are right in the middle of history. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010744": {
+    "name": "Maple Block Friends Chair",
+    "desc": "Meet your block friends in MapleStory. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010752": {
+    "name": "Rosy Birdcage",
+    "desc": "Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010754": {
+    "name": "Veritable Pandemonium",
+    "desc": "Sit on it to recover 50 HP and MP every 10 seconds."
+  },
+  "3010755": {
+    "name": "Toilet Duck Chair",
+    "desc": "Recovers 50 HP/MP every 10 seconds. "
+  },
+  "3010756": {
+    "name": "Maneki-Neko Chair",
+    "desc": "Recovers 50 HP/MP every 10 seconds. Designed by junior high school students 2013."
+  },
+  "3010766": {
+    "name": "Pointy-Ear Wooden Chair",
+    "desc": "A wooden chair with pointy ears. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010769": {
+    "name": "Spooky Bath Chair",
+    "desc": ""
+  },
+  "3010797": {
+    "name": "New Year's with Mercedes!",
+    "desc": "Celebrate New Year's with Mercedes. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010798": {
+    "name": "Fireworks Chair",
+    "desc": "Enjoy the fireworks from BOTH sides in this LUXURIOUS chair. Warning: Safety not guaranteed. Recovers 50 HP and MP every 10 seconds. "
+  },
+  "3010800": {
+    "name": "Elementary New Year's Bunny Chair",
+    "desc": "You feel like you should be giving allowances, yet you can feel yourself recover 50 HP and MP every 10 seconds instead."
+  },
+  "3010801": {
+    "name": "Kindergarten New Year's Bunny Chair",
+    "desc": "You feel like you should be giving allowances, yet you can feel yourself recover 50 HP and MP every 10 seconds instead."
+  },
+  "3010802": {
+    "name": "Middle School New Year's Bunny Chair",
+    "desc": "You feel like you should be giving allowances, yet you can feel yourself recover 50 HP and MP every 10 seconds instead."
+  },
+  "3010803": {
+    "name": "High School New Year's Bunny Chair",
+    "desc": "You feel like you should be giving allowances, yet you can feel yourself recover 50 HP and MP every 10 seconds instead."
+  },
+  "3010804": {
+    "name": "Soldier New Year's Bunny Chair",
+    "desc": "You're now old enough to collect your allowance from soldiers! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010806": {
+    "name": "Sakura Princess Chair",
+    "desc": "Enjoy the Sakura Blossoms with the Sakura Princess. Recovers 50 HP and MP every 10 seconds."
+  },
+  "3010821": {
+    "name": "My Childhood Memories",
+    "desc": "Look, it's that box of toys that you played with ages ago! You remember, right? Time to play! Restores 70 HP and MP every 10 seconds. Designed by MapleSEA player xLunaXSylvia."
+  },
+  "3010840": {
+    "name": "Super Giant Mushroom Chair",
+    "desc": "Designed by Chinese Mapler Yu Yu Yu for MapleStory's 9th Anniversary. \\r\\nRestores 200 HP and 200 MP every 10 sec."
+  },
+  "3010841": {
+    "name": "Marry Me Chair",
+    "desc": "#cRestores 200 HP and 200 MP every 10 seconds.#\\r\\nDesigned by China MapleStory player Liu Liu Jiang for MapleStory's 9th Anniversary."
+  },
+  "3010848": {
+    "name": "Red Carpet Chair",
+    "desc": "Roll this one out for the master of fashion!\\r\\nRecovers 50 HP every 10 seconds."
+  },
+  "3010851": {
+    "name": "Tangy Ade Chair",
+    "desc": "You need the right kind of 'ade for hot weather. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010854": {
+    "name": "Secret Monster Party",
+    "desc": "The truth is that the First Mushroom and all his monster friends love to kick back and relax together! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010864": {
+    "name": "Princess No Chair",
+    "desc": "Legends say Princess No sat in this chair. I wonder why they say such things? Recovers 100 HP and MP every 10 seconds."
+  },
+  "3010867": {
+    "name": "Cygnus' Best Friend",
+    "desc": "You can become best friends with Cygnus. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010878": {
+    "name": "Soccer Fan Chair",
+    "desc": "Cheer for your favorite World Cup team 2018. Recover 50 HP and 50 MP every 10 seconds."
+  },
+  "3010885": {
+    "name": "Hekaton's Rest",
+    "desc": "Take rest sitting by Hekaton, the cursed king of Kritias. R.I.P. Hekaton. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010927": {
+    "name": "Donkey Chair",
+    "desc": "Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3010931": {
+    "name": "Fun Cloud Chair",
+    "desc": "When you sit in this chair, 50 HP are recovered every 10 seconds."
+  },
+  "3010945": {
+    "name": "Thorny Chair",
+    "desc": "Restores 50 HP and 50 MP every 10 seconds."
+  },
+  "3010947": {
+    "name": "Among Gold Dragons",
+    "desc": "Rest under the watchful eye of your master and fellow students. Recovers 50 HP/MP every 10 seconds."
+  },
+  "3010948": {
+    "name": "Among Red Tigers",
+    "desc": "Rest under the watchful eye of your master and fellow students. Recovers 50 HP/MP every 10 seconds."
+  },
+  "3010953": {
+    "name": "Bookshelf Chair",
+    "desc": "Sitting on this chair makes you read a book automatically. Recovers 70 HP and 40 MP every 10 seconds."
+  },
+  "3010965": {
+    "name": "Mermaid's Coral Reef Runner",
+    "desc": "A mermaid's shelter, where waves lap and the winds blow. A chair designed by the Chinese MapleStory player, 'Xiaoshu'. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3010966": {
+    "name": "Ghost Ship Chair",
+    "desc": "Wait, so is the ship a ghost? \\nOr... Recovers 100 HP and 100 MP every 10 seconds."
+  },
+  "3010973": {
+    "name": "Cadeira de Morceguinho",
+    "desc": "Recovers 100 HP and 100 MP every 10 seconds."
+  },
+  "3010974": {
+    "name": "Jawdestroyer Chair",
+    "desc": "Too big to eat, but you&apos;re always welcome to try. \\r\\n#cRestores 60 HP and 60 MP every 10 seconds.#"
+  },
+  "3010996": {
+    "name": "Red Christmas Heater",
+    "desc": "Happy Holidays 2014."
+  },
+  "3010997": {
+    "name": "Green Christmas Heater",
+    "desc": "Happy Holidays 2014."
+  },
+  "3010998": {
+    "name": "Black Christmas Heater",
+    "desc": "Happy Holidays 2014."
+  },
+  "3010999": {
+    "name": "Baby Jack Frost",
+    "desc": "Happy Holidays 2014."
+  },
+  "3011000": {
+    "name": "Fishing Chair",
+    "desc": "The perfect chair for fishing."
+  },
+  "3012000": {
+    "name": "Heart Throne",
+    "desc": "A Heart Chair for Lovers."
+  },
+  "3012001": {
+    "name": "Stump",
+    "desc": "A Plain old Stump."
+  },
+  "3012002": {
+    "name": "Bath",
+    "desc": "Just relax and take a soothing bath."
+  },
+  "3012005": {
+    "name": "Amorian Loveseat",
+    "desc": "A comfortable, stylish seat that only forms when true love exists between two people.  Recovers 45 HP and 45 MP every 10 seconds."
+  },
+  "3012006": {
+    "name": "Moon Chair",
+    "desc": "When you sit in Moon Chair in the early evenings while the Moon is up, 60 HP and 60 MP are recovered every 10 seconds."
+  },
+  "3012007": {
+    "name": "Fox God",
+    "desc": "The Fox God watches over those who take care of their friends! Sit with a buddy to get a special effect. Recovers 60 HP every 10 seconds."
+  },
+  "3012008": {
+    "name": "Komainu",
+    "desc": "If you sit in chair that looks like a harvest god, 60 HP is recovered every 10 seconds."
+  },
+  "3012009": {
+    "name": "Buddy Snow Globe Chair",
+    "desc": "Sit solo amongst Christmas holly, or sit near a friend for a Christmas snow globe to appear around the two of you."
+  },
+  "3012010": {
+    "name": "Half-Heart Chocolate Cake Chair",
+    "desc": "Sink yourself into this heavenly cake chair next to someone else who owns it as well, and watch it create a scrumptious effect! Mmm, this chair is so delicious you'll recover 50 HP every 10 seconds."
+  },
+  "3012011": {
+    "name": "Chocolate Fondue Chair",
+    "desc": "Yummy! Use this chair next to someone else who's also using it, and a mouth-watering chocolate fondue appears. Smack your lips and dream about treats as you recover 50 HP every 10 seconds. "
+  },
+  "3012034": {
+    "name": "Carrot Basket Chair",
+    "desc": "An adorable basket of carrots that you can sit in, too! Restores 100 HP and 100 MP every 10 seconds. Designed by the China MapleStory player muzi."
+  },
+  "3013000": {
+    "name": "Cherry Blossoms Chair",
+    "desc": "When you sit in Cherry Blossoms Chair, 30 HP and 30 MP are restored every 10 seconds."
+  },
+  "3013001": {
+    "name": "Hot Day",
+    "desc": "Feeling a bit warm today? \\r\\nRecover 50 HP/MP every 10 seconds"
+  },
+  "3013002": {
+    "name": "Fireworks Chair",
+    "desc": "When you sit in Fireworks Chair, 30 HP and 30 MP are restored every 10 seconds."
+  },
+  "3013003": {
+    "name": "Snow Bench",
+    "desc": "Take a piece of El Nath with you anywhere you go \\r\\nRecover 50 MP every 10 seconds"
+  },
+  "3013008": {
+    "name": "Blue Bench",
+    "desc": "Recover 50 HP every 10 seconds"
+  },
+  "3013009": {
+    "name": "Mushmom",
+    "desc": "Did you steal Mushmoms house? \\r\\nRecover 50 HP/MP every 10 seconds"
+  },
+  "3013010": {
+    "name": "Ugly Table",
+    "desc": "This chair is so ugly it doesn't get a real description \\r\\nRecover 50 HP every 10 seconds."
+  },
+  "3015000": {
+    "name": "Ergoth's Throne",
+    "desc": "Recover 50 HP/MP every 10 seconds"
+  },
+  "3015011": {
+    "name": "With Childhood Friends",
+    "desc": "With three childhood friends...\\nRecovers 50 HP and MP every 10 seconds."
+  },
+  "3015012": {
+    "name": "Sasha, Armin, and Potatoes",
+    "desc": "Dual wield your potatoes! \\nRecovers 50 HP and MP every 10 seconds."
+  },
+  "3015015": {
+    "name": "Aries Chair",
+    "desc": "Birks escaped the scary forests and became a constellation, living happily and frolicking forevermore.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015016": {
+    "name": "Taurus Chair\r\n",
+    "desc": "The earnest wish of Lyka the temple guardian, who wanted to cherish their most beloved as a constellation.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015017": {
+    "name": "Pisces Chair\r\n",
+    "desc": "A shark who was big and miserable slimmed down to become a constellation of the sea.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015018": {
+    "name": "Gemini Chair\r\n",
+    "desc": "Natalie and Ms.Tan are different, but they are both beautiful in their own ways.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015019": {
+    "name": "Cancer Chair\r\n",
+    "desc": "Clang had big dreams and became the warrior of the skies, watching over the ocean.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015020": {
+    "name": "Leo Chair\r\n",
+    "desc": "Scarboss accomplished its dream of becoming a real lion, and roars over the night sky.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015021": {
+    "name": "Libra Chair\r\n",
+    "desc": "There is nothing more valuable than honesty. Gold Richie's call of conscience has made the Libra constellation rise in the sky.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015022": {
+    "name": "Scorpio Chair\r\n",
+    "desc": "Scorpion wanted to live in a higher place, and has made it all the way into space.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015023": {
+    "name": "Virgo Chair\r\n",
+    "desc": "If you desire something, you must work for it! Just like Malady!\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015024": {
+    "name": "Sagittarius Chair",
+    "desc": "Have a talent like Skeleton? Show the world what you can do, and maybe you'll end up like Sagittarius!\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015025": {
+    "name": "Capricorn Chair\r\n",
+    "desc": "Typhon's kind heart helped him become children's dreams in the night sky.\\r\\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015026": {
+    "name": "Aquarius Chair\r\n\r\n",
+    "desc": "A little abandoned bottle has become the source of the eternal Water of Life.\\r\\n\r\nRecovers 60 HP and MP every 10 seconds. "
+  },
+  "3015027": {
+    "name": "Andromeda Chair\r\n\r\n",
+    "desc": "The home of Star World and countless others. Only those that collected all 12 constellations can claim this.\\r\\nRecovers 150 HP and MP every 10 seconds. "
+  },
+  "3015034": {
+    "name": "Cocoa Sheep Chair",
+    "desc": "You can drink hot cocoa with the cutest sheep in the whole wide world! \\r\\n#cRecovers 100 HP and 100 MP every 10 seconds."
+  },
+  "3015035": {
+    "name": "Pumpkin Pie Throne",
+    "desc": "Grandma Benson simply created too many pies during Thanksgiving, and recycled the leftovers into this epic throne."
+  },
+  "3015045": {
+    "name": "Shear Wool Chair",
+    "desc": "A warm time with the sheep. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015052": {
+    "name": "Fortune Chair",
+    "desc": "A chair made from the Fortune Sack a Moon Bunny used to ride on. Sitting in this chair will bring good fortune in the New Year. Recovers 50 HP every 10 seconds."
+  },
+  "3015054": {
+    "name": "Dark King Chair",
+    "desc": "Once the twin brother of Dr. Cherry and the childhood friend of Darkhound, he has risen to be the strongest of all vampires, brutal and soulless."
+  },
+  "3015074": {
+    "name": "God of Wealth Chair",
+    "desc": "If there's one god you want on your side, it's this one! Recovers 100 HP and MP every 10 seconds."
+  },
+  "3015092": {
+    "name": "Chocolate Factory Chair",
+    "desc": "Don't need a golden ticket to enjoy this chair! Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015094": {
+    "name": "Schrodinger Chair",
+    "desc": "Recovers 150 HP and MP every 10 seconds."
+  },
+  "3015112": {
+    "name": "Chicken Dream Chair",
+    "desc": "Chicken all day, everyday! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3015174": {
+    "name": "Hidden Henesys Chair",
+    "desc": "Bet you can't find me in Henesys! \\r\\n#cRecovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015238": {
+    "name": "Slime Tank Chair",
+    "desc": "Recover 50 HP and MP every 10 seconds."
+  },
+  "3015240": {
+    "name": "Mini Mu Lung Dojo Chair",
+    "desc": "All you have to do is sit in this chair to feel like the champion of Mu Lung Dojo. \\nRecovers 100 HP and 50 MP every 10 seconds. "
+  },
+  "3015241": {
+    "name": "Mu Lung Scarecrow Chair",
+    "desc": "You've trained with the Mu Lung Dojo Scarecrow so often that you guys are best buds now. Recovers 100 HP and 50 MP every 10 seconds."
+  },
+  "3015244": {
+    "name": "Kinesis Chair",
+    "desc": "A chair from the Magician's Association. The perfect place to clear your head. \\r\\n#cRecovers 50 HP every 10 seconds. "
+  },
+  "3015279": {
+    "name": "Ursus Enslaved Throne",
+    "desc": "You've defeated the mighty Ursus and taken over his spot. \\r\\n#cRecovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015283": {
+    "name": "Baby Dino Chair",
+    "desc": "Recover 50 HP every 10 seconds."
+  },
+  "3015325": {
+    "name": "Full Moon Night Chair",
+    "desc": "The full moon hangs low on this auspicious night. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015329": {
+    "name": "Monster Altar Chair",
+    "desc": "Monster Altar Chair. \\nRecovers HP50, MP50 every 10 seconds."
+  },
+  "3015330": {
+    "name": "No Fear Chair",
+    "desc": "You think this would scare me? Me? Ha! \\nRecovers 50 HP and MP every 10 seconds. "
+  },
+  "3015332": {
+    "name": "Alluring Nine-Tailed Fox",
+    "desc": "Enjoy the charms of the Nine-Tailed Fox, and the next thing you know, you're healed! Recovers 100 HP and MP every 10 seconds. "
+  },
+  "3015340": {
+    "name": "Graveyard Chair",
+    "desc": "A chair you can rest peacefully in for eternity. Every 10 seconds, 50 HP and 50 MP will be recovered"
+  },
+  "3015370": {
+    "name": "Snowflake Chair",
+    "desc": "A snowflake chair made from a single snowflake. \\nRecovers 150 HP and MP every 10 seconds."
+  },
+  "3015376": {
+    "name": "Far East Fortune Chair",
+    "desc": "Recover 50 HP and MP every 10 seconds."
+  },
+  "3015404": {
+    "name": "Bloom, Elluel",
+    "desc": "Elluel blooms to the soft sound of the harpsichord and a gentle breeze.\\r\\nRecovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015405": {
+    "name": "Midwinter Aurora",
+    "desc": "I watched an aurora from the first-class seat. Even the snowman Yeti looks happy.\\r\\nRecovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015416": {
+    "name": "Hot Springs Chair",
+    "desc": "A chair to enjoy the hot springs.  Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015425": {
+    "name": "Monkey Percussion Chair",
+    "desc": "Become a Professional Percussionist with Monkey! \\r\\n#cRecover 50 MP&HP every 10 sec."
+  },
+  "3015446": {
+    "name": "Easter Egg Nest Chair",
+    "desc": "An easter egg nest chair. \\r\\n#cRecovers 100 HP and 100 MP every 10 seconds."
+  },
+  "3015451": {
+    "name": "Fluffy Snow Bunny Chair",
+    "desc": "Fluffy Snow Bunny chair relax in.\\nRestores 100 HP and 50 MP every 10 seconds."
+  },
+  "3015500": {
+    "name": "Dozing Duckling Chair",
+    "desc": "Shhhh don't wake the duck, Recover 100 HP/MP every 10 seconds."
+  },
+  "3015541": {
+    "name": "Pink Bean Ice Cream Umbrella",
+    "desc": "#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3015618": {
+    "name": "Forest Sanctuary Chair",
+    "desc": "All is well when you&apos;re with your forest friends.\\r\\n#cRestores 100 HP and 50 MP every 10 seconds.#"
+  },
+  "3015628": {
+    "name": "Spooky Creeps Chair",
+    "desc": "Look! You made a friend! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015639": {
+    "name": "Spirit Chair",
+    "desc": "#cRecovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015640": {
+    "name": "Dreamy Chair",
+    "desc": "#cRecovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015641": {
+    "name": "Deep Sea Chair",
+    "desc": "#cRecovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015666": {
+    "name": "Chick Keeper Chair",
+    "desc": "These cute chickadees are so fun to cuddle! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3015694": {
+    "name": "Pink Bean on Ice Chair",
+    "desc": "Poor Pink Bean is trapped in ice! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015695": {
+    "name": "Orange Mushroom on Ice Chair",
+    "desc": "That Orange Mushroom must be pretty chilly. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015696": {
+    "name": "Slime on Ice Chair",
+    "desc": "That Slime isn't so squishy now! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015697": {
+    "name": "Bone Fish on Ice Chair",
+    "desc": "That'll keep the Bone Fish nice and fresh.Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015698": {
+    "name": "Cactus on Ice Chair",
+    "desc": "Oh, the irony of a frozen Cactus! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015699": {
+    "name": "Ribbon Pig on Ice Chair",
+    "desc": "Hope that ribbon is warmer than it looks. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015713": {
+    "name": "Choco Syringe Chair",
+    "desc": "True love cannot be expressed through chocolate, but only a confession of the heart! Save the world from the chocolate onslaught by devouring it!\\r\\nRecovers 200 HP and 200 MP every 10 seconds. "
+  },
+  "3015747": {
+    "name": "Pajama Party Chair",
+    "desc": "Today&apos;s only plan: laying all comfy with my stuffies and chattering away! \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3015748": {
+    "name": "Holiday Latte Chair",
+    "desc": "Stay warm for the winter with this tasty latte! Recovers 100 HP and 100 MP every 10 seconds. "
+  },
+  "3015759": {
+    "name": "Nova Enchanter Chair",
+    "desc": "This chair radiates the power of the Nova. \\n#cRestores 50 HP and 50 MP every 10 seconds.#\\nDesigned by the Taiwan MapleStory player aixidiya."
+  },
+  "3015814": {
+    "name": "Chocolate Bunny Chair",
+    "desc": "There's no end to the wonders of this chocolate bunny! Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3015818": {
+    "name": "Diabolical Chair",
+    "desc": "Look out! It's probably a trap! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3015848": {
+    "name": "Deadly Biteysnek Chair",
+    "desc": "A group of hungry Deadly Biteysneks.\\r\\n#c\"Don't heck with them Deadly Biteysneks. Just boop their snoot 'n make a run for it!\" - Head Prospector Maynard#\\r\\nRecovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3015935": {
+    "name": "Mirror Chair",
+    "desc": "#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3015962": {
+    "name": "Chaotic Morass Chair",
+    "desc": "You unraveled the hidden truth in the Swamp of Memory."
+  },
+  "3015994": {
+    "name": "Pepe Orange Mushroom Chair.",
+    "desc": "Pepe and Orange Mushroom Snowman Chair. \\r\\nRecovers 100 HP and 100 MP every 10 seconds. "
+  },
+  "3017022": {
+    "name": "Crimson Stirge Cube Chair",
+    "desc": "A chair obtained from the Monster Collection.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017028": {
+    "name": "Halloween Skull Cube Chair",
+    "desc": "It's a Halloween Skull Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017029": {
+    "name": "Halloween Zombie Cube Chair",
+    "desc": "It's a Halloween Zombie Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017030": {
+    "name": "Halloween Vampire Cube Chair",
+    "desc": "It's a Halloween Vampire Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017031": {
+    "name": "Halloween Pumpkin Cube Chair",
+    "desc": "It's a Halloween Pumpkin Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017032": {
+    "name": "Halloween Cat Cube Chair",
+    "desc": "It's a Halloween Cat Cube Chair.\\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017033": {
+    "name": "Dorothy Cube Chair",
+    "desc": "A chair obtained from the Monster Collection. \\r\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017046": {
+    "name": "Chinese Zodiac Cube Chair: Tiger",
+    "desc": "A chair commemorating the Zodiac Tiger! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017047": {
+    "name": "Chinese Zodiac Cube Chair: Rabbit",
+    "desc": "A chair commemorating the Zodiac Rabbit! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017048": {
+    "name": "Chinese Zodiac Cube Chair: Dragon",
+    "desc": "A chair commemorating the Zodiac Dragon! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017049": {
+    "name": "Chinese Zodiac Cube Chair: Snake",
+    "desc": "A chair commemorating the Zodiac Snake! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017056": {
+    "name": "Lunar New Year Xing Cube Chair",
+    "desc": "This chair commemorates the Lunar New Year. It restores HP +88 and MP +88 every 10 seconds."
+  },
+  "3017057": {
+    "name": "Lunar New Year Nian Cube Chair",
+    "desc": "This chair commemorates the Lunar New Year. It restores HP +88 and MP +88 every 10 seconds."
+  },
+  "3017058": {
+    "name": "Lunar New Year Kuai Cube Chair",
+    "desc": "This chair commemorates the Lunar New Year. It restores HP +88 and MP +88 every 10 seconds."
+  },
+  "3017059": {
+    "name": "Lunar New Year Le Cube Chair",
+    "desc": "This chair commemorates the Lunar New Year. It restores HP +88 and MP +88 every 10 seconds."
+  },
+  "3018003": {
+    "name": "Sea Lion Igloo Chair",
+    "desc": "It's an igloo chair complete with adorable sea lion! \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018006": {
+    "name": "Kaworu Duet Chair",
+    "desc": "Kaworu Duet Chair. Recovers 50 HP and 50 MP every 10 seconds."
+  },
+  "3018008": {
+    "name": "Snowflake Elm Chair",
+    "desc": "Beautiful splarkling snowflakes glimmer in the winter light. Restores 100 HP and 100 MP every 10 seconds."
+  },
+  "3018039": {
+    "name": "Gold Mushroom Chair",
+    "desc": "The ultimate prize from Gold Richie's Treasure Vault. Sit down to recover 100 HP/MP every 10 seconds."
+  },
+  "3018042": {
+    "name": "Plum Blossom Window Chair",
+    "desc": "Enjoy the beauty of moonlight cascading across plum blossom petals. Recovers 50 HP and 50 MP every 10 seconds. "
+  },
+  "3018138": {
+    "name": "Android Companion Chair",
+    "desc": "Go on an outing with a beloved #cAndroid.# \\n #cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018140": {
+    "name": "Scarboss Chair",
+    "desc": "A must-have chair for the true Scarboss fan. \\n#cRestores 100 HP and 100 MP every 10 seconds.# \\nDesigned by the China MapleStory player FaithReaperX."
+  },
+  "3018222": {
+    "name": "Forest Tranquility Chair: Table",
+    "desc": "A table you can enjoy a picnic on with a friendly rabbit. #cRestores 150 HP and 150 MP every 10 seconds."
+  },
+  "3018224": {
+    "name": "Window on the Farm Chair",
+    "desc": "Enjoy the view of the farm from this convenient window. \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018236": {
+    "name": "Ghastly Snowglobe Chair",
+    "desc": "This eerie snowglobe captures the haunting essence of Halloween night.\\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018247": {
+    "name": "Exclusive Holiday Party Chair",
+    "desc": "You have been invited to a small but very special holiday party. #cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018259": {
+    "name": "Lunar New Year For One Chair",
+    "desc": "Spending the Lunar New Year alone at home isn't so bad. #cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018270": {
+    "name": "Chocolate Spa",
+    "desc": "A thorough soak in semi-sweet chocolate is bound to brighten anyone&apos;s day!\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018361": {
+    "name": "Resplendent Summer Night Chair",
+    "desc": "Restores 100 HP/MP every 10 seconds."
+  },
+  "3018428": {
+    "name": "Giant Teddy Bear Chair",
+    "desc": "Sink into the soft and comfy security of this Giant Teddy Bear chair. Everyone deserves a break sometimes.\\n#cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3018436": {
+    "name": "Do It Again! Chair",
+    "desc": "N-no... I don't wanna... \\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
+  "3018520": {
+    "name": "Green Pea",
+    "desc": "The green peas look very happy. Restores 100 HP and 100 MP every 10 seconds."
+  },
+  "3019700": {
+    "name": "Penguin's Fernweh",
+    "desc": "This penguin and his companions are longing for far-off lands. Will you join them on their journey?"
+  },
+  "3019701": {
+    "name": "Zombie Bean Chair",
+    "desc": "It's Pink Bean... but Zombified. Restores 666 HP per 10 Seconds while sitting. "
+  },
+  "3019702": {
+    "name": "Von Leon's Chair",
+    "desc": "Feel like a king by sitting on Von Leon's throne. Recovers 200 HP, 200 MP every 10 seconds."
+  },
+  "3019845": {
+    "name": "Snoozing Horntail",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Inusama'."
+  },
+  "3019846": {
+    "name": "Beginner Skill Tree",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'."
+  },
+  "3019847": {
+    "name": "Time Attack Trial",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Inugami'."
+  },
+  "3019848": {
+    "name": "Cuddling With Eliza",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'IronShichika'."
+  },
+  "3019849": {
+    "name": "Omok Against Taggrin",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Marrry'."
+  },
+  "3019850": {
+    "name": "Blackboard",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'ilyssia'."
+  },
+  "3019851": {
+    "name": "I'm Just A Grass Standee",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'JinJinChuChu'."
+  },
+  "3019852": {
+    "name": "Snow Buddies",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Doton'."
+  },
+  "3019853": {
+    "name": "Picture Day",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'CitizenLenny'."
+  },
+  "3019854": {
+    "name": "Cozy Homework Time",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Shanni'."
+  },
+  "3019855": {
+    "name": "Goldfish Scooping",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Dvvinny'."
+  },
+  "3019856": {
+    "name": "PixelRoyal",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Eirudy'."
+  },
+  "3019857": {
+    "name": "Papulatus' Last Apprentice",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'RoseGardener'."
+  },
+  "3019858": {
+    "name": "Lycanthrope's bench",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'LichWiz'."
+  },
+  "3019859": {
+    "name": "Horntail Tamer",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Haoshoku'."
+  },
+  "3019860": {
+    "name": "Chair of Life V2",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Alimi'."
+  },
+  "3019861": {
+    "name": "It's Morphin Time",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Allirea'."
+  },
+  "3019862": {
+    "name": "Goddess Statue",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Succubus'."
+  },
+  "3019863": {
+    "name": "Lucid Dream",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'LUCLD'."
+  },
+  "3019864": {
+    "name": "Tea Party With Balrog",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Joong'."
+  },
+  "3019865": {
+    "name": "My Friend Golem",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'jimbawb'."
+  },
+  "3019866": {
+    "name": "Chair Of Life",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Hamil'."
+  },
+  "3019867": {
+    "name": "Nature Vibe",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'iTechG'."
+  },
+  "3019868": {
+    "name": "Bob Ross",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Crowley'."
+  },
+  "3019869": {
+    "name": "Great Grey Wolf Chair",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Inusama'."
+  },
+  "3019870": {
+    "name": "Violet Crystal",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'sax707070'."
+  },
+  "3019871": {
+    "name": "Eggceptional Hatching Technique",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Evan'."
+  },
+  "3019872": {
+    "name": "The Heartstopper",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'."
+  },
+  "3019873": {
+    "name": "Bamboo-zled",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Tim'."
+  },
+  "3019874": {
+    "name": "Alcoholic",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'DonFrankie'."
+  },
+  "3019875": {
+    "name": "It was my brother!",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Shiyui'."
+  },
+  "3019876": {
+    "name": "Dragon Bone Throne",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jetz'."
+  },
+  "3019877": {
+    "name": "FM23",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Knoll'."
+  },
+  "3019878": {
+    "name": "Dyle Chair",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'sparky95'."
+  },
+  "3019879": {
+    "name": "Timeless Fountain",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Succubus'."
+  },
+  "3019880": {
+    "name": "The Mesorangers return!",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'TheRED'."
+  },
+  "3019881": {
+    "name": "Around The World",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'PalmTree'."
+  },
+  "3019882": {
+    "name": "Fighting Nepo",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by ' Binz03'."
+  },
+  "3019883": {
+    "name": "annabear n tako'",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Annabelle26'."
+  },
+  "3019884": {
+    "name": "Traveller's Caravan",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'TrousrBrowsr'."
+  },
+  "3019885": {
+    "name": "R.I.P. (aka procrastination 102)",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Imagination'."
+  },
+  "3019886": {
+    "name": "Ulu City Awaits",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Epok'."
+  },
+  "3019887": {
+    "name": "Maple Circus",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Garlands'."
+  },
+  "3019888": {
+    "name": "Fishy Situation",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Kaizoku'."
+  },
+  "3019889": {
+    "name": "Bag End",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Nouveau'."
+  },
+  "3019890": {
+    "name": "Chillin' with Manon (aka procrastination 101)",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Imagination'."
+  },
+  "3019891": {
+    "name": "Bath In The Woods",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Nouveau'."
+  },
+  "3019892": {
+    "name": "Dark Mage Chair",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'EwGross'."
+  },
+  "3019893": {
+    "name": "Bob Ross the Genie",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Veriloquent'."
+  },
+  "3019894": {
+    "name": "Magma chair",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Rimss'."
+  },
+  "3019895": {
+    "name": "The Essence of Spring",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'DeadTree'."
+  },
+  "3019896": {
+    "name": "Rainy Frog Friends",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Blades'."
+  },
+  "3019897": {
+    "name": "The Pirate's Spirit",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Kaizoku'."
+  },
+  "3019898": {
+    "name": "Pink Petals",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Succubus'."
+  },
+  "3019899": {
+    "name": "The Wise Book Tree",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'IGasaiyunoI'."
+  },
+  "3019900": {
+    "name": "Magic Snow Globe",
+    "desc": "This chair came in 1st place in the MapleRoyals Design A Chair event. \\nChair designed by 'crisk21'."
+  },
+  "3019901": {
+    "name": "Failed Party Quest",
+    "desc": "This chair came in 2nd place in the MapleRoyals Design A Chair event. \\nChair designed by 'Alcolizzato'."
+  },
+  "3019902": {
+    "name": "Under The Dome Chair",
+    "desc": "This chair came in 3rd place in the MapleRoyals Design A Chair event. \\nChair designed by 'Joong'."
+  },
+  "3019903": {
+    "name": "Color Chair",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Takah'."
+  },
+  "3019904": {
+    "name": "Up",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Gi'."
+  },
+  "3019905": {
+    "name": "Teddy Bear Couch",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Geox'."
+  },
+  "3019906": {
+    "name": "Enchanted Wings",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Alicatt'."
+  },
+  "3019907": {
+    "name": "Dusk",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Paradox'."
+  },
+  "3019908": {
+    "name": "Lovers Quarrel",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'illuminate'."
+  },
+  "3019909": {
+    "name": "Maple Island",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Chokladkakan'."
+  },
+  "3019910": {
+    "name": "Snow Pepe Chair",
+    "desc": "A chair given out to winners of the Guild Snow Collecting Event"
+  },
+  "3019911": {
+    "name": "Emperor Toad Chair",
+    "desc": "Sit by this giant, grotesque toad. Recovers 80 HP, 50 MP every 10 seconds."
+  },
+  "3019912": {
+    "name": "Auf Haven Chair",
+    "desc": "Have a rest on this bench with Auf Haven after a long battle. Recovers 100 HP, 100 MP every 10 seconds."
+  },
+  "3019913": {
+    "name": "Vergamot Chair",
+    "desc": "Let the robot commander, Vergamot, watch over you. Recovers 50 HP, 50 MP every 10 seconds."
+  },
+  "3019914": {
+    "name": "Movie Night Chair",
+    "desc": "You'll be on the edge of your seat with this riveting chair! Restores 100 HP and 100 MP every 10 seconds."
+  },
+  "3019915": {
+    "name": "Subspace Crack",
+    "desc": "This chair came in 1st place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Yakamoz'."
+  },
+  "3019916": {
+    "name": "Always With Me",
+    "desc": "This chair came in 2nd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Devastated'."
+  },
+  "3019917": {
+    "name": "Quest Specialist",
+    "desc": "This chair came in 3rd place in \\nthe MapleRoyals Design A Chair event. \\nChair designed by 'Succubus'."
+  },
+  "3019918": {
+    "name": "It's Sparkling!",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Jooon'."
+  },
+  "3019919": {
+    "name": "Ducky's Ramen",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Inugami'."
+  },
+  "3019920": {
+    "name": "Sweet Sugar Shop",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'wrosie'."
+  },
+  "3019921": {
+    "name": "A Bigger Splash",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'CitizenLenny'."
+  },
+  "3019922": {
+    "name": "Kitty and Husky",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'BigCat'."
+  },
+  "3019923": {
+    "name": "The Piece",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'bamh'."
+  },
+  "3019924": {
+    "name": "Skeleton Corps",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'yeyicheng'."
+  },
+  "3019925": {
+    "name": "Garden of Three Colors",
+    "desc": "This chair was a runner-up in the MapleRoyals Design A Chair event. \\nChair designed by 'Becca'."
+  },
+  "3019926": {
+    "name": "Lith Harbor Chair",
+    "desc": "Take a little piece of Lith Harbor with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019927": {
+    "name": "Perion Chair",
+    "desc": "Take a little piece of Perion with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019928": {
+    "name": "Ellinia Chair",
+    "desc": "Take a little piece of Ellinia with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019929": {
+    "name": "Henesys Chair",
+    "desc": "Take a little piece of Henesys with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019930": {
+    "name": "Kerning City Chair",
+    "desc": "Take a little piece of Kerning City with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019931": {
+    "name": "Nautilus Chair",
+    "desc": "Take a little piece of Nautilus with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019932": {
+    "name": "Sleepywood Chair",
+    "desc": "Take a little piece of Sleepywood with you wherever you go in the Maple World! #cRestores 200 HP and 200 MP every 10 seconds.#"
+  },
+  "3019933": {
+    "name": "11th Anniversary Chair",
+    "desc": "Take a rest on this special 11th Anniversary chair. #cRestores 110 HP and 110 MP every 10 seconds.#"
+  },
+  "3019934": {
+    "name": "Haunted Mansion Chair",
+    "desc": "Rest your legs with this spooky haunted mansion chair\\r\\n#c Restores 50 HP and MP every 10 seconds.# "
+  },
+  "3019935": {
+    "name": "Pumpkin Bed Chair",
+    "desc": "Have a snooze in this cozy pumpkin bed chair.\\r\\n#cRestores 50 HP and MP every 10 seconds.#"
+  },
+  "3019936": {
+    "name": "12th Anniversary Throne",
+    "desc": "Take a rest on this special 12th Anniversary throne. #cRestores 120 HP and 120 MP every 10 seconds.#"
+  },
+  "3990000": {
+    "name": "Red No. 1",
+    "desc": "A red #1 to decorate the tree."
+  },
+  "3990001": {
+    "name": "Red No. 2",
+    "desc": "A red #2 to decorate the tree."
+  },
+  "3990002": {
+    "name": "Red No. 3",
+    "desc": "A red #3 to decorate the tree."
+  },
+  "3990003": {
+    "name": "Red No. 4",
+    "desc": "A red #4 to decorate the tree."
+  },
+  "3990004": {
+    "name": "Red No. 5",
+    "desc": "A red #5 to decorate the tree."
+  },
+  "3990005": {
+    "name": "Red No. 6",
+    "desc": "A red #6 to decorate the tree."
+  },
+  "3990006": {
+    "name": "Red No. 7",
+    "desc": "A red #7 to decorate the tree."
+  },
+  "3990007": {
+    "name": "Red No. 8",
+    "desc": "A red #8 to decorate the tree."
+  },
+  "3990008": {
+    "name": "Red No. 9",
+    "desc": "A red #9 to decorate the tree."
+  },
+  "3990009": {
+    "name": "Red No. 0",
+    "desc": "A red #0 to decorate the tree."
+  },
+  "3990010": {
+    "name": "Green No. 1",
+    "desc": "A green #1 to decorate the tree."
+  },
+  "3990011": {
+    "name": "Green No. 2",
+    "desc": "A green #2 to decorate the tree."
+  },
+  "3990012": {
+    "name": "Green No. 3",
+    "desc": "A green #3 to decorate the tree."
+  },
+  "3990013": {
+    "name": "Green No. 4",
+    "desc": "A green #4 to decorate the tree."
+  },
+  "3990014": {
+    "name": "Green No. 5",
+    "desc": "A green #5 to decorate the tree."
+  },
+  "3990015": {
+    "name": "Green No. 6",
+    "desc": "A green #6 to decorate the tree."
+  },
+  "3990016": {
+    "name": "Green No. 7",
+    "desc": "A green #7 to decorate the tree."
+  },
+  "3990017": {
+    "name": "Green No. 8",
+    "desc": "A green #8 to decorate the tree."
+  },
+  "3990018": {
+    "name": "Green No. 9",
+    "desc": "A green #9 to decorate the tree."
+  },
+  "3990019": {
+    "name": "Green No. 0",
+    "desc": "A green #0 to decorate the tree."
+  },
+  "3990020": {
+    "name": "Red \" + \"",
+    "desc": "A red \" + \" to decorate the tree."
+  },
+  "3990021": {
+    "name": "Red \" - \"",
+    "desc": "A red \" - \" to decorate the tree."
+  },
+  "3990022": {
+    "name": "Green \" + \"",
+    "desc": "A green \" + \" to decorate the tree."
+  },
+  "3990023": {
+    "name": "Green \" - \"",
+    "desc": "A green \" - \" to decorate the tree."
+  },
+  "3991000": {
+    "name": "Red \"A\"",
+    "desc": "A red \"A\" to decorate the tree."
+  },
+  "3991001": {
+    "name": "Red \"B\"",
+    "desc": "A red \"B\" to decorate the tree."
+  },
+  "3991002": {
+    "name": "Red \"C\"",
+    "desc": "A red \"C\" to decorate the tree."
+  },
+  "3991003": {
+    "name": "Red \"D\"",
+    "desc": "A red \"D\" to decorate the tree."
+  },
+  "3991004": {
+    "name": "Red \"E\"",
+    "desc": "A red \"E\" to decorate the tree."
+  },
+  "3991005": {
+    "name": "Red \"F\"",
+    "desc": "A red \"F\" to decorate the tree."
+  },
+  "3991006": {
+    "name": "Red \"G\"",
+    "desc": "A red \"G\" to decorate the tree."
+  },
+  "3991007": {
+    "name": "Red \"H\"",
+    "desc": "A red \"H\" to decorate the tree."
+  },
+  "3991008": {
+    "name": "Red \"I\"",
+    "desc": "A red \"I\" to decorate the tree."
+  },
+  "3991009": {
+    "name": "Red \"J\"",
+    "desc": "A red \"J\" to decorate the tree."
+  },
+  "3991010": {
+    "name": "Red \"K\"",
+    "desc": "A red \"K\" to decorate the tree."
+  },
+  "3991011": {
+    "name": "Red \"L\"",
+    "desc": "A red \"L\" to decorate the tree."
+  },
+  "3991012": {
+    "name": "Red \"M\"",
+    "desc": "A red \"M\" to decorate the tree."
+  },
+  "3991013": {
+    "name": "Red \"N\"",
+    "desc": "A red \"N\" to decorate the tree."
+  },
+  "3991014": {
+    "name": "Red \"O\"",
+    "desc": "A red \"O\" to decorate the tree."
+  },
+  "3991015": {
+    "name": "Red \"P\"",
+    "desc": "A red \"P\" to decorate the tree."
+  },
+  "3991016": {
+    "name": "Red \"Q\"",
+    "desc": "A red \"Q\" to decorate the tree."
+  },
+  "3991017": {
+    "name": "Red \"R\"",
+    "desc": "A red \"R\" to decorate the tree."
+  },
+  "3991018": {
+    "name": "Red \"S\"",
+    "desc": "A red \"S\" to decorate the tree."
+  },
+  "3991019": {
+    "name": "Red \"T\"",
+    "desc": "A red \"T\" to decorate the tree."
+  },
+  "3991020": {
+    "name": "Red \"U\"",
+    "desc": "A red \"U\" to decorate the tree."
+  },
+  "3991021": {
+    "name": "Red \"V\"",
+    "desc": "A red \"V\" to decorate the tree."
+  },
+  "3991022": {
+    "name": "Red \"W\"",
+    "desc": "A red \"W\" to decorate the tree."
+  },
+  "3991023": {
+    "name": "Red \"X\"",
+    "desc": "A red \"X\" to decorate the tree."
+  },
+  "3991024": {
+    "name": "Red \"Y\"",
+    "desc": "A red \"Y\" to decorate the tree."
+  },
+  "3991025": {
+    "name": "Red \"Z\"",
+    "desc": "A red \"Z\" to decorate the tree."
+  },
+  "3991026": {
+    "name": "Green \"A\"",
+    "desc": "A green \"A\" to decorate the tree."
+  },
+  "3991027": {
+    "name": "Green \"B\"",
+    "desc": "A green \"B\" to decorate the tree."
+  },
+  "3991028": {
+    "name": "Green \"C\"",
+    "desc": "A green \"C\" to decorate the tree."
+  },
+  "3991029": {
+    "name": "Green \"D\"",
+    "desc": "A green \"D\" to decorate the tree."
+  },
+  "3991030": {
+    "name": "Green \"E\"",
+    "desc": "A green \"E\" to decorate the tree."
+  },
+  "3991031": {
+    "name": "Green \"F\"",
+    "desc": "A green \"F\" to decorate the tree."
+  },
+  "3991032": {
+    "name": "Green \"G\"",
+    "desc": "A green \"G\" to decorate the tree."
+  },
+  "3991033": {
+    "name": "Green \"H\"",
+    "desc": "A green \"H\" to decorate the tree."
+  },
+  "3991034": {
+    "name": "Green \"I\"",
+    "desc": "A green \"I\" to decorate the tree."
+  },
+  "3991035": {
+    "name": "Green \"J\"",
+    "desc": "A green \"J\" to decorate the tree."
+  },
+  "3991036": {
+    "name": "Green \"K\"",
+    "desc": "A green \"K\" to decorate the tree."
+  },
+  "3991037": {
+    "name": "Green \"L\"",
+    "desc": "A green \"L\" to decorate the tree."
+  },
+  "3991038": {
+    "name": "Green \"M\"",
+    "desc": "A green \"M\" to decorate the tree."
+  },
+  "3991039": {
+    "name": "Green \"N\"",
+    "desc": "A green \"N\" to decorate the tree."
+  },
+  "3991040": {
+    "name": "Green \"O\"",
+    "desc": "A green \"O\" to decorate the tree."
+  },
+  "3991041": {
+    "name": "Green \"P\"",
+    "desc": "A green \"P\" to decorate the tree."
+  },
+  "3991042": {
+    "name": "Green \"Q\"",
+    "desc": "A green \"Q\" to decorate the tree."
+  },
+  "3991043": {
+    "name": "Green \"R\"",
+    "desc": "A green \"R\" to decorate the tree."
+  },
+  "3991044": {
+    "name": "Green \"S\"",
+    "desc": "A green \"S\" to decorate the tree."
+  },
+  "3991045": {
+    "name": "Green \"T\"",
+    "desc": "A green \"T\" to decorate the tree."
+  },
+  "3991046": {
+    "name": "Green \"U\"",
+    "desc": "A green \"U\" to decorate the tree."
+  },
+  "3991047": {
+    "name": "Green \"V\"",
+    "desc": "A green \"V\" to decorate the tree."
+  },
+  "3991048": {
+    "name": "Green \"W\"",
+    "desc": "A green \"W\" to decorate the tree."
+  },
+  "3991049": {
+    "name": "Green \"X\"",
+    "desc": "A green \"X\" to decorate the tree."
+  },
+  "3991050": {
+    "name": "Green \"Y\"",
+    "desc": "A green \"Y\" to decorate the tree."
+  },
+  "3991051": {
+    "name": "Green \"Z\"",
+    "desc": "A green \"Z\" to decorate the tree."
+  },
+  "3992000": {
+    "name": "Santa Ornament",
+    "desc": "A santa ornament for the tree."
+  },
+  "3992001": {
+    "name": "Rudolph Ornament",
+    "desc": "A Rudolph ornament for the tree."
+  },
+  "3992002": {
+    "name": "Mushroom Ornament",
+    "desc": "A mushroom ornament for the tree."
+  },
+  "3992003": {
+    "name": "Pig Ornament",
+    "desc": "A pig ornament for the tree."
+  },
+  "3992004": {
+    "name": "Slime Ornament",
+    "desc": "A slime ornament for the tree."
+  },
+  "3992005": {
+    "name": "Red Gift-Box Ornament",
+    "desc": "A red gift-box ornament for the tree."
+  },
+  "3992006": {
+    "name": "Blue Gift-Box Ornament",
+    "desc": "A blue gift-box ornament for the tree."
+  },
+  "3992007": {
+    "name": "Yellow Gift-Box Ornament",
+    "desc": "A yellow gift-box ornament for the tree."
+  },
+  "3992008": {
+    "name": "Red Star Miniature Bulb",
+    "desc": "A red star miniature bulb for the tree."
+  },
+  "3992009": {
+    "name": "Blue Star Miniature Bulb",
+    "desc": "A blue star miniature bulb for the tree."
+  },
+  "3992010": {
+    "name": "Green Star Miniature Bulb",
+    "desc": "A green star miniature bulb for the tree."
+  },
+  "3992011": {
+    "name": "Pink Star Miniature Bulb",
+    "desc": "A pink star miniature bulb for the tree."
+  },
+  "3992012": {
+    "name": "Orange Star Miniature Bulb",
+    "desc": "An orange star miniature bulb for the tree."
+  },
+  "3992013": {
+    "name": "Red Miniature Bulb",
+    "desc": "A red miniature bulb for the tree."
+  },
+  "3992014": {
+    "name": "Blue Miniature Bulb",
+    "desc": "A blue miniature bulb for the tree."
+  },
+  "3992015": {
+    "name": "Yellow Miniature Bulb",
+    "desc": "A yellow miniature bulb for the tree."
+  },
+  "3992016": {
+    "name": "Green Miniature Bulb",
+    "desc": "A green miniature bulb for the tree."
+  },
+  "3992017": {
+    "name": "Red Ball Ornament",
+    "desc": "A red ball ornament for the tree."
+  },
+  "3992018": {
+    "name": "Blue Ball Ornament",
+    "desc": "A blue ball ornament for the tree."
+  },
+  "3992019": {
+    "name": "Yellow Ball Ornament",
+    "desc": "A yellow ball ornament for the tree."
+  },
+  "3992020": {
+    "name": "Red Sock",
+    "desc": "A red sock for the tree."
+  },
+  "3992021": {
+    "name": "The gingerbread man",
+    "desc": "The gingerbread man for the tree."
+  },
+  "3992022": {
+    "name": "The gingerbread woman",
+    "desc": "The gingerbread lady for the tree."
+  },
+  "3992023": {
+    "name": "Candy Cane",
+    "desc": "A candy cane for the tree."
+  },
+  "3992024": {
+    "name": "Circular Tree Ornament",
+    "desc": "A circular ornament for the tree."
+  },
+  "3992025": {
+    "name": "King-sized Star",
+    "desc": "A king-sized star for the tree."
+  },
+  "3992026": {
+    "name": "Christmas wreath",
+    "desc": "A christmas wreath for the tree."
+  },
+  "3992027": {
+    "name": "Red Candle",
+    "desc": "A red candle for the tree."
+  },
+  "3992028": {
+    "name": "Blue Candle",
+    "desc": "A blue candle for the tree."
+  },
+  "3992029": {
+    "name": "Yellow Candle",
+    "desc": "A yellow candle for the tree."
+  },
+  "3992030": {
+    "name": "Red Candy Canes",
+    "desc": "Red candy canes for the tree."
+  },
+  "3992031": {
+    "name": "Blue Candy Canes",
+    "desc": "Blue candy canes for the tree."
+  },
+  "3992032": {
+    "name": "Yellow Candy Canes",
+    "desc": "Yellow candy canes for the tree."
+  },
+  "3992033": {
+    "name": "Red Fruit Leaves",
+    "desc": "Red fruit leaves for the tree."
+  },
+  "3992034": {
+    "name": "Yellow Fruit Leaves",
+    "desc": "Yellow fruit leaves for the tree."
+  },
+  "3992035": {
+    "name": "Red-Ribboned Giftbox",
+    "desc": "A red-ribboned giftbox for the tree."
+  },
+  "3992036": {
+    "name": "Blue-Ribboned Giftbox",
+    "desc": "A blue-ribboned giftbox for the tree."
+  },
+  "3992037": {
+    "name": "Yellow-Ribboned Giftbox",
+    "desc": "A yellow-ribboned giftbox for the tree."
+  },
+  "3992038": {
+    "name": "Ruldolph Santa Boots",
+    "desc": "A Rudolph Santa Boots for the tree."
+  },
+  "3992039": {
+    "name": "Marker of Heroism",
+    "desc": "A small figurine embedded with a gem that emanates heroism.  This item allows you to activate and use the Heroic Statues in the Valley of Heroes."
+  },
+  "3992040": {
+    "name": "Map of Phantom Forest",
+    "desc": "This map marks the hidden paths of Phantom Forest, which  are now open to you."
+  },
+  "3992041": {
+    "name": "Crimsonwood Keystone",
+    "desc": "A magical stone that unlocks the gates to the Inner Sanctum of Crimsonwood Keep. "
+  },
+  "3993000": {
+    "name": "Lucky Dish",
+    "desc": "A pair of luck dish out of bamboos. Common in Korean culture"
+  },
+  "3993001": {
+    "name": "Luck Sack",
+    "desc": "A red luck sack common in Korean culture."
+  },
+  "3993002": {
+    "name": "Bamboo Luck Sack",
+    "desc": "A pair of luck sack made of bamboo."
+  },
+  "3993003": {
+    "name": "Red Luck Sack",
+    "desc": "A red luck sack with 'luck' written on it."
+  },
+  "3994000": {
+    "name": "Wooden Alphabet \"A\"",
+    "desc": "An alphabet \"A\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994001": {
+    "name": "Wooden Alphabet \"E\"",
+    "desc": "An alphabet \"E\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994002": {
+    "name": "Wooden Alphabet \"I\"",
+    "desc": "An alphabet \"I\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+  },
+  "3994003": {
+    "name": "Wooden Alphabet \"L\"",
+    "desc": "An alphabet \"L\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994004": {
+    "name": "Wooden Alphabet \"N\"",
+    "desc": "An alphabet \"N\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+  },
+  "3994005": {
+    "name": "Wooden Alphabet \"O\"",
+    "desc": "An alphabet \"O\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994006": {
+    "name": "Wooden Alphabet \"P\"",
+    "desc": "An alphabet \"P\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994007": {
+    "name": "Wooden Alphabet \"R\"",
+    "desc": "An alphabet \"R\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994008": {
+    "name": "Wooden Alphabet \"T\"",
+    "desc": "An alphabet \"T\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994009": {
+    "name": "Wooden Alphabet \"X\"",
+    "desc": "An alphabet \"X\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+  },
+  "3994010": {
+    "name": "Wooden Alphabet \"Y\"",
+    "desc": "An alphabet \"Y\" made out of a tree. Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994011": {
+    "name": "Wooden Alphabet \"Z\"",
+    "desc": "An alphabet \"Z\" made out of a tree. Gather up other alphabets, and bring them all to the GM to..."
+  },
+  "3994012": {
+    "name": "Special \"M\"",
+    "desc": "A special alphabet \"M\". Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994013": {
+    "name": "Special \"S\"",
+    "desc": "A special alphabet \"S\". Gather up other alphabets, and bring them all to the Maple Administrator."
+  },
+  "3994014": {
+    "name": "Special \"W\"",
+    "desc": "A special alphabet \"W\". Gather up other alphabets, and bring them all to the GM to..."
+  },
+  "3994015": {
+    "name": "Wooden Alphabet C",
+    "desc": ""
+  },
+  "3994016": {
+    "name": "Wooden Alphabet H",
+    "desc": ""
+  },
+  "3994017": {
+    "name": "Alphabet A",
+    "desc": "An alphabet A. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994018": {
+    "name": "Alphabet E",
+    "desc": "An alphabet E. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994019": {
+    "name": "Alphabet H",
+    "desc": "An alphabet H. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994020": {
+    "name": "Alphabet N",
+    "desc": "An alphabet N. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994021": {
+    "name": "Alphabet P",
+    "desc": "An alphabet P. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994022": {
+    "name": "Alphabet R",
+    "desc": "An alphabet R. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994023": {
+    "name": "Alphabet W",
+    "desc": "An alphabet W. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994024": {
+    "name": "Alphabet Y",
+    "desc": "An alphabet Y. Collect other alphabets and hand them to Maple Administrator to…"
+  },
+  "3994085": {
+    "name": "Admin's Candle",
+    "desc": "A small candle from the Admin. This candle will turn itself off when the game is ended."
+  },
+  "3994086": {
+    "name": "Birthday Cake Candle",
+    "desc": "A candle used on the birthday cake for the 5th anniversary of MapleStory. The fire will be blown out when the game is ended."
+  },
+  "3994089": {
+    "name": "Agent W's Memory Chip",
+    "desc": "A memory chip Agent W left with me.  Information regarding 'Master M' is said to be contained in it.  If I don't enter the secret code every hour, it will self-destruct."
+  },
+  "3994090": {
+    "name": "Spices",
+    "desc": "Mr. Oh sells these rare spices at the Maple 7th Day Market. You can sell them to Abdula for a profit."
+  },
+  "3994091": {
+    "name": "Memorabilia from Thailand",
+    "desc": "You can find these memorabilia from Thailand at the Maple 7th Day Market. You can sell them to Abdula for a profit."
+  },
+  "3994092": {
+    "name": "Unagi",
+    "desc": "Lena sells delicious unagi at the Maple  7th Day Market. You can sell it to Abdula for a profit. "
+  },
+  "3994093": {
+    "name": "Taxidermy Shark",
+    "desc": "This taxydermy shark, handmade by Tae Gong himself, can be found at the Maple 7th Day Market. You can sell it to Abdula for a profit. "
+  },
+  "3994094": {
+    "name": "Crow-feather Hat",
+    "desc": "Hanako sells this exquisite at the Maple 7th Day Market. You can sell it to Abdula for a profit. "
+  },
+  "3994096": {
+    "name": "Number 1",
+    "desc": "It is the number 1."
+  },
+  "3994097": {
+    "name": "Number 2",
+    "desc": "It is the number 2."
+  },
+  "3994098": {
+    "name": "Number 3",
+    "desc": "It is the number 3."
+  },
+  "3994099": {
+    "name": "Number 4",
+    "desc": "It is the number 4."
+  },
+  "3994100": {
+    "name": "Number 5",
+    "desc": "It is the number 5."
+  },
+  "3994101": {
+    "name": "Cassandra's Giant Star  ",
+    "desc": "A Giant Star that Cassandra made for you. If you hold it during the Starlight Festival, you can receive 1 Star Stamp every hour. \\n#cDisappears when you log out of the game."
+  },
+  "3994102": {
+    "name": "Letter N for Compass",
+    "desc": "A Letter N that looks like it would fit perfectly on the Empty Compass."
+  },
+  "3994103": {
+    "name": "Letter E for Compass",
+    "desc": "A Letter E that looks like it would fit perfectly on the Empty Compass."
+  },
+  "3994104": {
+    "name": "Letter W for Compass",
+    "desc": "A Letter W that looks like it would fit perfectly on the Empty Compass."
+  },
+  "3994105": {
+    "name": "Letter S for Compass",
+    "desc": "A Letter S that looks like it would fit perfectly on the Empty Compass."
+  },
+  "3994106": {
+    "name": "6th Anniversary Maple Leaf of Journey ",
+    "desc": "A Maple Leaf that signifies Maple Story's 6 year journey. Something good will happen if you hold onto it for 1 hour."
+  },
+  "3994115": {
+    "name": "Easy Mode ",
+    "desc": "Easy Mode"
+  },
+  "3994116": {
+    "name": "Normal Mode ",
+    "desc": "Normal Mode "
+  },
+  "3994117": {
+    "name": "Hard Mode",
+    "desc": "Hard Mode"
+  },
+  "3994118": {
+    "name": "Hell Mode  ",
+    "desc": "Hell Mode "
+  },
+  "3994120": {
+    "name": "Unknown",
+    "desc": "An unknown being that has yet to be explained."
+  },
+  "3994121": {
+    "name": "Agent M",
+    "desc": "An Agent. "
+  },
+  "3994122": {
+    "name": "Agent C",
+    "desc": "An Agent. "
+  },
+  "3994123": {
+    "name": "Agent E",
+    "desc": "An Agent. "
+  },
+  "3994124": {
+    "name": "Agent S",
+    "desc": "An Agent. "
+  },
+  "3994125": {
+    "name": "Agent O",
+    "desc": "An Agent. "
+  },
+  "3994126": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994127": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994128": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994129": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994130": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994131": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994132": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994133": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994134": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994135": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994136": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994137": {
+    "name": "Aran Memory Fragments",
+    "desc": "The Arans are reviving."
+  },
+  "3994138": {
+    "name": "Ice Crystal",
+    "desc": "A solid ice crystal that contains Maha Charm. Hold onto it for one hour and the crystal will melt, enabling you to acquire the Charm."
+  },
+  "3994139": {
+    "name": "Maha Charm",
+    "desc": "A charm that contains protection from Maha, the spirit of Polearm. Take this to Cassandra for a chance to answer questions and receive prizes."
+  },
+  "3994141": {
+    "name": "Cassandra's Candle",
+    "desc": "A small candle given by Cassandra. This candle will turn off automatically when the game ends."
+  },
+  "3995000": {
+    "name": ".",
+    "desc": ""
+  }
+}
