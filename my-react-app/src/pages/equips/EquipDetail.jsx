@@ -77,7 +77,7 @@ export default function EquipDetail() {
     const jobList = decodeReqJobToList(equipInfo.reqJob) || []
 
     if (!data_Eqp[equip_Id]) throw new Error("No such Equip Id")
-    console.log(equipInfo)
+    // console.log(equipInfo)
 
     return (
         <div className="equip-detail">

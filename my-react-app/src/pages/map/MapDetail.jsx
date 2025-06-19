@@ -14,7 +14,7 @@ import FormBS from "react-bootstrap/Form"
 import LabelledMap from "./LabelledMap.jsx";
 import RenderedMap from "./RenderedMap.jsx";
 // 
-import { RenderImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName, addMonsterBookSpawn, portalPtValueToTypeName } from "./utility.jsx"
+import { RenderImageWithMapId, convertMapIdToUrl, convertMapIdToName, parseBgmToName, addMonsterBookSpawn, portalPtValueToTypeName, resolveMapIdIfLink } from "./utility.jsx"
 
 import { renderImageWithMobId } from "../monster/utility.jsx"
 import { renderImageWithNPCId, convertNpcIdToName } from "../npc/utility.jsx"
@@ -40,13 +40,16 @@ export default function MapDetail() {
 
     const map_id = mapId.split("=")[1]
 
-    const hashMapId = Number(map_id)
-
+    const hashMapId = resolveMapIdIfLink(map_id)
+    // console.log({ map_id, hashMapId })
     let mapInfo = {
-        mapId: map_id,
+        mapId: hashMapId,
         mob: data_MapMobCount[hashMapId],
         ...data_Map[hashMapId],
         ...data_MapStats[hashMapId],
+        // link- related
+        originalMapId: Number(map_id),
+        link : hashMapId,
     }
     mapInfo = addMonsterBookSpawn(mapInfo)
 

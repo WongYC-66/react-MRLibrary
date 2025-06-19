@@ -329,6 +329,14 @@ export const portalPtValueToTypeName = {
     14: 'unknown PCIG',
 }
 
+export const resolveMapIdIfLink = (map_id) => {
+    map_id = Number(map_id)
+    if(data_MapStats?.[map_id]?.link){
+        map_id = Number(data_MapStats[map_id].link)
+    }
+    return map_id
+}
+
 // 
 export const updateSearchResultCount = (number) => {
     const countEl = document.getElementById("record-count")
