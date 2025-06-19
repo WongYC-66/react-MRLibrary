@@ -126,7 +126,7 @@ export const filterMobList = ({mobLibrary, searchParams}) => {
         })
         .filter(x => {
             if (filter === "any") return true
-            if (filter === "boss" && x[1]?.boss === "1") return true
+            if (filter === "boss" && x[1]?.boss == 1) return true
             if (filter === "monster" && !x[1].hasOwnProperty("boss")) return true
         })
         .filter(([_, { mapCategory: appearedMap }]) => {
