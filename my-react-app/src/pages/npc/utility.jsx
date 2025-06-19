@@ -38,7 +38,6 @@ export const filterNPCList = ({ npcLibrary, searchParams }) => {
 
     const filterOption = Object.fromEntries([...searchParams.entries()])
     // No filter at first loading or if URL don't have query param 
-    if (!Object.keys(filterOption).length) return filteredNPCLibrary
 
     const location = filterOption.location || 'all'
     const type = filterOption.type || 'all'
