@@ -178,7 +178,7 @@ export const renderImageWithMobId = (mobId) => {
     mobId = String(mobId)
 
     const handleError = e => {
-        const fileName = `${mobId.padStart(7, 0)}.png`
+        const fileName = `${mobId.toString().padStart(7, 0)}.png`
         const img = e.target
         // find suitable image src from:
         // 1: server file under /images/

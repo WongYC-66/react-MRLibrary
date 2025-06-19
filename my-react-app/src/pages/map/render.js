@@ -137,7 +137,7 @@ async function preloadAllReactors() {
     // ${id}.0.0
     // Get Path
     for (let id in data_RenderReactorOrigin) {
-        id = id.padStart(7, '0')
+        id = id.toString().padStart(7, '0')
         let imagePath = path.join(rootFolder, 'Reactor.wz', `${id}.img`, `${id}.img`, `0.0.png`)
         let key = generateCacheKey('reactor', { id })
         let link = data_RenderReactorOrigin[id]?.link
@@ -154,7 +154,7 @@ async function preloadAllNpcs() {
     // ${id}.stand.0
     // Get Path
     for (let id in data_RenderNpcOrigin) {
-        id = id.padStart(7, '0')
+        id = id.toString().padStart(7, '0')
         let imagePath = path.join(rootFolder, 'Npc.wz', `${id}.img`, `${id}.img`, `stand.0.png`)
         let key = generateCacheKey('npc', { id })
         allImage.push({ imagePath, key })
@@ -169,7 +169,7 @@ async function preloadAllMobs() {
     // ${id}.stand.0
     // Get Path
     for (let id in data_RenderMobOrigin) {
-        id = id.padStart(7, '0')
+        id = id.toString().padStart(7, '0')
         let imagePath = path.join(rootFolder, 'Mob.wz', `${id}.img`, `${id}.img`, `stand.0.png`)
         let key = generateCacheKey('mob', { id })
         allImage.push({ imagePath, key })

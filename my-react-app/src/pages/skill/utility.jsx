@@ -73,7 +73,7 @@ export const renderImageWithSkillId = (skill_id) => {
     if (!skill_id) return
 
     const handleError = e => {
-        const fileName = `${skill_id.padStart(7, 0)}.png`
+        const fileName = `${skill_id.toString().padStart(7, 0)}.png`
         const img = e.target
         // find suitable image src from:
         // 1: server file under /images/
