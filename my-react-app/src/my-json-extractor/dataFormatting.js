@@ -198,6 +198,7 @@ export function MapStatsDataFormatting(inputDataArr) {
 
     inputDataArr.forEach(data => {
         const id = Number(data.id)
+        if(isNaN(id)) return // 'AreaCode'
         const mapObj = {}
 
         // map info
