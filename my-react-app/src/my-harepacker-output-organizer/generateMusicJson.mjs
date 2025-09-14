@@ -7,7 +7,7 @@ import path from 'path';
 import { parseFile } from 'music-metadata';
 
 const folderPath = 'E:/TO DEL/harepacker_dump/output/audio';
-const outputFile = 'E:/TO DEL/harepacker_dump/output/data_music.json';
+const outputFile = 'E:/TO DEL/harepacker_dump/output/data_Music.json';
 
 const getAudioDuration = async (filePath) => {
     try {

@@ -55,7 +55,7 @@
     1. remove any mp3 shorter than 1 minute
    
     2. run `node ./my-harepacker-output-organizer/generateMusicJson.js`, update path for mainFolder and outputFile if necessary
-    3. copy the output to `./data/data_music.json`
+    3. copy the output to `./data/data_Music.json`
      
 4. Upload Audio/MapRenderer components to CDN:
     1. refer to this [repo](https://github.com/scotty66f/mapleroyals_library_related/tree/main)
