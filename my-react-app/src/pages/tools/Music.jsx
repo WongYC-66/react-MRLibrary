@@ -16,8 +16,9 @@ export default function Music() {
         setSelectedOST(name)
     }
 
-    const OST_URL = `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${selectedOST}`
-    const ALL_OST_URL = 'https://github.com/scotty66f/royals-ost/archive/refs/heads/main.zip'
+    // 
+    const OST_URL = `https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/${selectedOST}`
+    const ALL_OST_URL = 'https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fscotty66f%2Fmapleroyals_library_related%2Ftree%2Fmain%2Faudio'
 
     return (
         <div className="music d-flex p-3">
@@ -63,7 +64,7 @@ export default function Music() {
 
                     {/* Download All */}
                     <p>
-                        <a href={ALL_OST_URL} download={ALL_OST_URL} className="btn btn-primary mt-2"> Download All (360mb) </a>
+                        <a href={ALL_OST_URL} download={ALL_OST_URL} className="btn btn-primary mt-2"> Download All (360 MB) </a>
                     </p>
                 </div>
             }

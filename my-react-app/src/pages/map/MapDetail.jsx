@@ -269,7 +269,7 @@ const renderPortalTable = (mapInfo) => {
 const renderMP3 = (audioName) => {
     if (!audioName) return <></>
     audioName = parseBgmToName(audioName)
-    const OST_URL = `https://github.com/scotty66f/royals-ost/raw/refs/heads/main/audio/${audioName}.mp3`
+    const OST_URL = `https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/${audioName}.mp3`
     return <audio className="w-100" controls src={OST_URL} loop></audio>
 }
 

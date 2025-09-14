@@ -10,7 +10,12 @@ import data_RenderTileOrigin from '../../../data/data_RenderTileOrigin.json';
 
 import { portalPtValueToType } from './utility';
 
-const CDN_URL = `https://raw.githubusercontent.com/scotty66f/royals-map/refs/heads/main`
+// const CDN_URL = `https://raw.githubusercontent.com/scotty66f/royals-map/refs/heads/main`
+const CDN_URL = `https://raw.githubusercontent.com/scotty66f/mapleroyals_library_related/main`
+const MAP_JSON_CDN_URL = `${CDN_URL}/json/Map.wz/Map`
+const MAP_IMG_CDN_URL = `${CDN_URL}/img/Map.wz`
+const REACTOR_IMG_CDN_URL = `${CDN_URL}/img/Reactor.wz`
+
 const DOMAIN_URL = window.location.origin
 
 export default function RenderedMap({ mapId, canvasOption, onRenderComplete }) {
@@ -174,13 +179,13 @@ const generateFetchURL = (item) => {
       l1 = item.l1
       l2 = item.l2
       if (item.type == 'objRetry')
-        return `${CDN_URL}/Obj/Obj/${oS}.img/${oS}.img/${l0}.${l1}.${l2}.png`
-      return `${CDN_URL}/Obj/Obj/${oS}.img/${oS}.img/${l0}.${l1}.${l2}.0.png`
+        return `${MAP_IMG_CDN_URL}/Obj/Obj/${oS}.img/${oS}.img/${l0}.${l1}.${l2}.png`
+      return `${MAP_IMG_CDN_URL}/Obj/Obj/${oS}.img/${oS}.img/${l0}.${l1}.${l2}.0.png`
     case 'tile':
       tS = item.tS
       u = item.u
       no = item.no
-      return `${CDN_URL}/Tile/Tile/${tS}.img/${tS}.img/${u}.${no}.png`
+      return `${MAP_IMG_CDN_URL}/Tile/Tile/${tS}.img/${tS}.img/${u}.${no}.png`
     case 'mob':
       id = item.id
       return `${DOMAIN_URL}/images/monsters/${id}.png`
@@ -196,11 +201,11 @@ const generateFetchURL = (item) => {
       if (data_RenderReactorOrigin?.[id]?.link) {
         id = data_RenderReactorOrigin[id].link
       }
-      return `${CDN_URL}/Reactor.wz/${id}.img/${id}.img/0.0.png`
+      return `${REACTOR_IMG_CDN_URL}/${id}.img/${id}.img/0.0.png`
     case 'portal':
       pt = item.pt
       type = portalPtValueToType[pt]
-      return `${CDN_URL}/MapHelper.img/MapHelper.img/portal.editor.${type}.png`
+      return `${MAP_IMG_CDN_URL}/MapHelper.img/MapHelper.img/portal.editor.${type}.png`
     default:
       return 'undefined'
   }
@@ -272,7 +277,8 @@ function getAssetPriority(type) {
 const fetchMapJSON = async (mapId) => {
   try {
     let subMap = `Map${mapId[0]}`
-    let mapPath = `${CDN_URL}/MapJson/${subMap}/${mapId}.img.json` // get json from CDN
+    // let mapPath = `${CDN_URL}/MapJson/${subMap}/${mapId}.img.json` // get json from CDN
+    let mapPath = `${MAP_JSON_CDN_URL}/${subMap}/${mapId}.img.json` // get json from CDN
     let parsed = await fetch(mapPath);
     parsed = await parsed.json()
 
@@ -280,7 +286,8 @@ const fetchMapJSON = async (mapId) => {
     const linkedMapId = parsed?.info?.link?._value
     if (linkedMapId) {
       subMap = `Map${linkedMapId[0]}`
-      mapPath = `${CDN_URL}/MapJson/${subMap}/${linkedMapId}.img.json` // get json from CDN
+      // mapPath = `${CDN_URL}/MapJson/${subMap}/${linkedMapId}.img.json` // get json from CDN
+      let mapPath = `${MAP_JSON_CDN_URL}/${subMap}/${mapId}.img.json` // get json from CDN
       parsed = await fetch(mapPath);
       parsed = await parsed.json()
     }
