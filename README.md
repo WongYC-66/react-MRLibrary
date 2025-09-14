@@ -20,44 +20,59 @@
 
 ## Steps:
 
-1. Ready data_xxx.json for library:
-    1. wz files -> export as json with Harepacker, without MP3/PNG, as below:
+1. Ready **data_xxx.json** for library:
+    1. Use Harepacker to extract json out of wz files (without MP3/PNG), as below:
 
         ![alt text](dataFolderStructure.png)
 
-    1. Copy the json folder (Harepacker dump) under ./data, then run `node ./my-json-extractor/converter.js`, 
-    - or update the data_root_dir inside converter.js, if u wish to separate harepacker dump file
+    1. Copy the json folder (Harepacker dump) to `./data, `
+    1. Run `node ./my-json-extractor/converter.js`, 
+       - alternatively, if u wish to separate harepacker dump file from this project, update the data_root_dir inside converter.js,
+    1. Then your data for library is ready
+   
+       ![alt text](after_step1.png) 
 
-2. Ready images for library i.e. ./public/images/ , use harepacker export as PNG
+2. Ready **images** for library i.e. `./public/images/`:
+   1. Use Harepacker to extract image out of wz files (MP3/PNG) to a output folder, not all images would be used, run next step script to extract the main image
+       - Character.wz
 
-    1. Character.wz -> ./public/images/characters  
+           **Note: weapon 01702786.img crashed when export, delete it**
 
-    **Note: weapon 01702786.img crashed when export, delete it**
+           **only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon**
 
-    **only Accessory, Cap, Cape, Coat, Glove, Longcoat, Pants, Ring, Shield, Shoes, Weapon**
-
-    1. Item.wz -> ./public/images/items
-    1. Map.wz -> ./public/images/maps
-    1. Mob.wz -> ./public/images/monsters
-    1. Npc.wz -> ./public/images/npcs
-    1. Skill.wz -> ./public/images/skills
-    1. Map.wz -> ./public/images/worldmaps
-    1. run `node ./my-harepacker-output-organizer/dumpFileCentralizer.js`, and copy the output to ./public/images
-3. Ready MP3 files for library - extract with harepacker as Audio/mp3
-    1. Sound.wz  ->  filter out the short mp3, and upload it to your CDN, refer to [github repo](https://github.com/scotty66f/royals-ost/tree/refs/heads/main/audio)
-    1. run `node ./my-harepacker-output-organizer/generateMusicJson.js`, and copy the output to ./data
-    1. update ./src/pages/tools/Music.jsx, to point to your CDN
-    1. update ./src/pages/map/MapDetail.jsx, to point to your CDN
-4. Ready CDN for library map renderer
-    1. refer to this [repo](https://github.com/scotty66f/royals-map)
-    1. copy json/png dumped from Harepacker as below 5 folders, upload to your CDN
-        - image type - Map.wz/Obj
-        - image type - Map.wz/Tile
-        - image type - Map.wz/MapHelper.img
-        - image type - Reactor.wz
-        - json type - Map.wz/Map
-    1. update ./src/pages/map/RenderedMap.jsx, to point to your CDN
-
+       - Item.wz
+       - Map.wz
+       - Mob.wz 
+       - Npc.wz
+       - Skill.wz
+    
+    1. run `node ./my-harepacker-output-organizer/dumpFileCentralizer.js`, update path for mainFolder and outputFolder if necessary
+   
+    1. copy the output to `./public/images`
+   
+3. Ready **MP3** audio files for library:
+    - Use Harepacker to extract audio out of Sound.wz (MP3/PNG) to a output folder
+    1. remove any mp3 shorter than 1 minute
+   
+    2. run `node ./my-harepacker-output-organizer/generateMusicJson.js`, update path for mainFolder and outputFile if necessary
+    3. copy the output to `./data/data_music.json`
+     
+4. Upload Audio/MapRenderer components to CDN:
+    1. refer to this [repo](https://github.com/scotty66f/mapleroyals_library_related/tree/main)
+    2. upload remaining Audio.mp3 to CDN
+       - audio type - YOUR_CDN/audio/
+    3. upload JSON of Map to CDN
+       - json type - YOUR_CDN/json/Map.wz/Map
+    4. upload Image needed for MapRenderer to CDN:
+       - image type - YOUR_CDN/img/Map.wz/Map.wz/Obj
+       - image type - YOUR_CDN/img/Map.wz/Map.wz/Tile
+       - image type - YOUR_CDN/img/Map.wz/Map.wz/MapHelper
+       - image type - YOUR_CDN/img/Reactor.wz
+5. Update URL to your CDN:
+    1. update ./src/pages/tools/Music.jsx, to point to your audio CDN
+    2. update ./src/pages/map/MapDetail.jsx, to point to your audio CDN
+    3. update ./src/pages/map/RenderedMap.jsx, to point to your MapRenderer CDN
+   
 
 <hr>
 
@@ -224,7 +239,8 @@ png
 2. done - fix : Map page where NPC inaccurate /mob error, UI of NPC use grid-auto
 
 ## Log - Sept 14 2025
-1. todo - update library to v96
+1. done - update library to v96
+2. done - update CDN structure to ease the update hassle
 
 Next:
 - show path from map to map with graph data stuctrue ?
