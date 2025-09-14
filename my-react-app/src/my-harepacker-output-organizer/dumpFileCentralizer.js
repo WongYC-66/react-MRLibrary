@@ -6,8 +6,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const mainFolder = 'C:/Users/User/Desktop/TO DEL/harepacker_dump';       // enter your folder of harerepacker extraction as png/mp3
-const outputFolder = 'C:/Users/User/Desktop/TO DEL/harepacker_dump/output';     //  enter your output destination to centralize images/mp3
+const mainFolder = 'E:/TO DEL/harepacker_dump/img';       // enter your folder of harerepacker extraction as png/mp3
+const outputFolder = 'E:/TO DEL/harepacker_dump/output';     //  enter your output destination to centralize images/mp3
 
 const createFolderIfNotExist = (outputFolder) => {
     // Ensure output folder exists

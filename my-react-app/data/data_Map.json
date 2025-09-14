@@ -17327,7 +17327,7 @@
   "960000051": {
     "mapCategory": "etc",
     "streetName": "GM Event",
-    "mapName": "Sea Gorge Maze 2"
+    "mapName": "Sea Gorge Maze 911"
   },
   "960000052": {
     "mapCategory": "etc",
@@ -17428,6 +17428,141 @@
     "mapCategory": "etc",
     "streetName": "Maple Festival",
     "mapName": "Birthday Challenge"
+  },
+  "960000072": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Water Race Lobby"
+  },
+  "960000073": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Water Race"
+  },
+  "960000074": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "\"Henesys\""
+  },
+  "960000075": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Tree Trunk"
+  },
+  "960000076": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "\"Perion\" Lobby"
+  },
+  "960000077": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "\"Perion\""
+  },
+  "960000078": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Musical Chairs <Lobby>"
+  },
+  "960000079": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Musical Chairs <Stage 1>"
+  },
+  "960000080": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Musical Chairs <Stage 2>"
+  },
+  "960000081": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Musical Chairs <Stage 3>"
+  },
+  "960000082": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Musical Chairs <Stage 4>"
+  },
+  "960000083": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Musical Chairs <Stage 5>"
+  },
+  "960000084": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Lobby"
+  },
+  "960000085": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze 2"
+  },
+  "960000086": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Graveyard"
+  },
+  "960000087": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Lobby"
+  },
+  "960000088": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze 3"
+  },
+  "960000089": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Graveyard"
+  },
+  "960000090": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Lobby"
+  },
+  "960000091": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze 4"
+  },
+  "960000092": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Graveyard"
+  },
+  "960000093": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Lobby"
+  },
+  "960000094": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze 5"
+  },
+  "960000095": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Graveyard"
+  },
+  "960000096": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Lobby"
+  },
+  "960000097": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze 6"
+  },
+  "960000098": {
+    "mapCategory": "etc",
+    "streetName": "GM Event",
+    "mapName": "Sea Gorge Maze - Graveyard"
   },
   "960001000": {
     "mapCategory": "etc",

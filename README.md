@@ -223,5 +223,8 @@ png
 1. done - Add : Real Time Map Renderer
 2. done - fix : Map page where NPC inaccurate /mob error, UI of NPC use grid-auto
 
+## Log - Sept 14 2025
+1. todo - update library to v96
+
 Next:
 - show path from map to map with graph data stuctrue ?

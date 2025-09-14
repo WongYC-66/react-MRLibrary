@@ -21704,10 +21704,6 @@
     "recoveryHP": 50
   },
   "3012034": {
-    "direction": 21,
-    "distanceX": 400,
-    "distanceY": 0,
-    "maxDiff": 100,
     "price": 1,
     "recoveryHP": 100,
     "recoveryMP": 100,

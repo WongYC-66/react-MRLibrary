@@ -6,8 +6,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import { parseFile } from 'music-metadata';
 
-const folderPath = 'C:/Users/User/Desktop/TO DEL/harepacker_dump/output/audio';
-const outputFile = 'C:/Users/User/Desktop/TO DEL/harepacker_dump/output/data_music.json';
+const folderPath = 'E:/TO DEL/harepacker_dump/output/audio';
+const outputFile = 'E:/TO DEL/harepacker_dump/output/data_music.json';
 
 const getAudioDuration = async (filePath) => {
     try {

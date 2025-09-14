@@ -8164,21 +8164,7 @@
     "s1": "How's the Great Maple Tree doing?",
     "func": "12th Anniversary",
     "location": [
-      100000000,
-      200000000,
-      211000000,
-      220000000,
-      221000000,
       240000000,
-      250000000,
-      251000000,
-      260000000,
-      261000000,
-      270000000,
-      300000000,
-      540000000,
-      541000000,
-      600000000,
       960000004,
       960000005,
       960000016,
@@ -8666,8 +8652,24 @@
       960000060,
       960000062,
       960000064,
+      960000065,
       960000067,
       960000069,
+      960000072,
+      960000073,
+      960000075,
+      960000076,
+      960000078,
+      960000084,
+      960000086,
+      960000087,
+      960000089,
+      960000090,
+      960000092,
+      960000093,
+      960000095,
+      960000096,
+      960000098,
       970000200,
       970000201,
       970000202,
@@ -11478,14 +11480,20 @@
     "d0": "Are you interested in finding the Lost Miwok Artifacts?",
     "d1": "Hey, what's up?",
     "n0": "I love tacos more than artifacts.",
-    "n1": "Is anyone interested in me? I've been standing here for hours."
+    "n1": "Is anyone interested in me? I've been standing here for hours.",
+    "location": [
+      102000000
+    ]
   },
   "9201117": {
     "name": "Toh Relicseeker",
     "d0": "Hello, I'm Toh.",
     "d1": "Hello, I'm Toh.",
     "n0": "I'm looking for the Miwok Artifacts. Do you have any?",
-    "n1": "I can release the seal on the Miwok Artifact using the Enchant Scroll."
+    "n1": "I can release the seal on the Miwok Artifact using the Enchant Scroll.",
+    "location": [
+      102000000
+    ]
   },
   "9201118": {
     "name": "Hill",
@@ -11676,7 +11684,6 @@
     "n0": "Oh, what to do, I have to collect a lot of Dark Tokens to make Baba Yaga happy...what to do...",
     "n1": "Just wait 'til I get my hands on those deplorable cats and frogs.",
     "location": [
-      222000000,
       682000720,
       682000721
     ]
@@ -13522,10 +13529,7 @@
   },
   "9330115": {
     "name": "Vicky & Kecky",
-    "n0": "Want to attempt the Festival Challenge?!",
-    "location": [
-      1010000
-    ]
+    "n0": "Want to attempt the Festival Challenge?!"
   },
   "9390221": {
     "name": "Javert",
@@ -14863,10 +14867,7 @@
     "n1": "Found any Anniversary Coins on your travels?",
     "n0": "Happy 12th Anniversary!!",
     "func": "Coin Shop",
-    "name": "Cassandra",
-    "location": [
-      1010000
-    ]
+    "name": "Cassandra"
   },
   "9999900": {
     "func": "Pet Food Merchant",
