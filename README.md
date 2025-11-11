@@ -241,6 +241,9 @@ png
 ## Log - Sept 14 2025
 1. done - update library to v96
 2. done - update CDN structure to ease the update hassle
+3. 
+## Log - Nov 11 2025
+1. done - update library to v96.1
 
 Next:
 - show path from map to map with graph data stuctrue ?
