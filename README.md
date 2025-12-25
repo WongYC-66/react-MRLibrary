@@ -58,12 +58,14 @@
     3. copy the output to `./data/data_Music.json`
      
 4. Upload Audio/MapRenderer components to CDN:
-    1. refer to this [repo](https://github.com/scotty66f/mapleroyals_library_related/tree/main)
-    2. upload remaining Audio.mp3 to CDN
+    1. Use Harepacker to extract image out of wz files (MP3/PNG) to a output folder
+       - Reactor.wz
+    2. refer to this [repo](https://github.com/scotty66f/mapleroyals_library_related/tree/main)
+    3. upload remaining Audio.mp3 to CDN
        - audio type - YOUR_CDN/audio/
-    3. upload JSON of Map to CDN
+    4. upload JSON of Map to CDN
        - json type - YOUR_CDN/json/Map.wz/Map
-    4. upload Image needed for MapRenderer to CDN:
+    5. upload Image needed for MapRenderer to CDN:
        - image type - YOUR_CDN/img/Map.wz/Map.wz/Obj
        - image type - YOUR_CDN/img/Map.wz/Map.wz/Tile
        - image type - YOUR_CDN/img/Map.wz/Map.wz/MapHelper
@@ -244,6 +246,9 @@ png
 3. 
 ## Log - Nov 11 2025
 1. done - update library to v96.1
+   
+## Log - Dec 25 2025
+1. done - update library to v96.2
 
 Next:
 - show path from map to map with graph data stuctrue ?

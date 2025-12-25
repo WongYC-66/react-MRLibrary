@@ -3318,7 +3318,10 @@
   "2001002": {
     "name": "Metal Bucket Snowman",
     "n0": "Want to decorate a Maplemas Trees? Come talk to me!",
-    "n1": "Please hurry! There aren't many rooms left."
+    "n1": "Please hurry! There aren't many rooms left.",
+    "location": [
+      1010000
+    ]
   },
   "2001003": {
     "name": "Straw Hat Snowman",
@@ -3361,7 +3364,8 @@
     "n0": "Come talk to me if you want to head back.",
     "n1": "Welcome~!",
     "location": [
-      209000000
+      209000000,
+      910000000
     ]
   },
   "2002001": {
@@ -3370,6 +3374,7 @@
     "n0": "Looking for ornaments? Look no further!",
     "n1": "My ornaments are the best~!",
     "location": [
+      1010000,
       209000000
     ]
   },
@@ -8888,7 +8893,6 @@
       60000,
       100000000,
       104000000,
-      109050000,
       120000200,
       200000000,
       211000000,
@@ -10723,7 +10727,10 @@
     "n0": "I love to cook, but need ingredients! ",
     "n1": "If you help me, you'll get something delicious!",
     "d0": "I love to cook, but need ingredients! If you help me, you'll get something delicious!",
-    "d1": "Thanks for your help!"
+    "d1": "Thanks for your help!",
+    "location": [
+      100000000
+    ]
   },
   "9201030": {
     "name": "Maple Claws",
@@ -11276,7 +11283,10 @@
     "n0": "Excuse me!  I have a question!  I'm trying to make a very important decision.",
     "n1": "Hmmmmm...  Maplemas or Versalmas?",
     "d0": "Excuse me!  I have a question!  I'm trying to make a very important decision.",
-    "d1": "I can't wait to see what I'll be getting!"
+    "d1": "I can't wait to see what I'll be getting!",
+    "location": [
+      600000000
+    ]
   },
   "9201094": {
     "name": "Corine",
@@ -11678,30 +11688,9 @@
     "n0": "Oh, what to do, I have to collect a lot of Dark Tokens to make Baba Yaga happy...what to do...",
     "n1": "Just wait 'til I get my hands on those deplorable cats and frogs.",
     "location": [
-      1010000,
-      100000000,
-      103000000,
-      105040300,
-      200000000,
-      211000000,
-      220000000,
-      221000000,
-      222000000,
-      230000000,
-      240000000,
-      250000000,
-      251000000,
-      260000000,
-      261000000,
-      270000000,
-      300000000,
-      540000000,
-      541000000,
       682000720,
       682000721,
-      701000000,
-      702000000,
-      801000000
+      701000000
     ]
   },
   "9201143": {
@@ -11837,6 +11826,7 @@
     "n1": "Select the present you want.",
     "func": "Santa's Lost Stars",
     "location": [
+      1010000,
       209080100
     ]
   },
@@ -12206,6 +12196,7 @@
     "d0": "Need any help?",
     "d1": "Nobody's sewing skills are on par with mine! Not even close!",
     "location": [
+      1010000,
       209000000
     ]
   },
@@ -12214,7 +12205,10 @@
     "n0": "Breaking News!",
     "n1": "So many events are taking place in Maple world!",
     "d0": "Keep up with world events~",
-    "d1": "So many events are taking place in Maple world!"
+    "d1": "So many events are taking place in Maple world!",
+    "location": [
+      100000000
+    ]
   },
   "9250053": {
     "name": "Christmas Tree",
@@ -14735,7 +14729,10 @@
     "name": "Chocolate"
   },
   "9999802": {
-    "name": "Strawberry"
+    "name": "Strawberry",
+    "location": [
+      910000000
+    ]
   },
   "9999803": {
     "name": "Witch Kitty",
