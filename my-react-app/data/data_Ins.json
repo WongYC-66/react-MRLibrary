@@ -1887,6 +1887,10 @@
     "name": "Carrot Basket Chair",
     "desc": "An adorable basket of carrots that you can sit in, too! Restores 100 HP and 100 MP every 10 seconds. Designed by the China MapleStory player muzi."
   },
+  "3012043": {
+    "name": "Lovebulb Couples Chair",
+    "desc": "There's a spark between us! \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
+  },
   "3013000": {
     "name": "Cherry Blossoms Chair",
     "desc": "When you sit in Cherry Blossoms Chair, 30 HP and 30 MP are restored every 10 seconds."
@@ -2155,6 +2159,10 @@
     "name": "Choco Syringe Chair",
     "desc": "True love cannot be expressed through chocolate, but only a confession of the heart! Save the world from the chocolate onslaught by devouring it!\\r\\nRecovers 200 HP and 200 MP every 10 seconds. "
   },
+  "3015717": {
+    "name": "Valentine's Gift Chair",
+    "desc": "You are the best Valentine's gift of all. #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
   "3015747": {
     "name": "Pajama Party Chair",
     "desc": "Today&apos;s only plan: laying all comfy with my stuffies and chattering away! \\r\\n#cRestores 100 HP and 100 MP every 10 seconds.#"
@@ -2234,6 +2242,10 @@
   "3017049": {
     "name": "Chinese Zodiac Cube Chair: Snake",
     "desc": "A chair commemorating the Zodiac Snake! #cRestores 50 HP and 50 MP every 10 seconds.#"
+  },
+  "3017050": {
+    "name": "Chinese Zodiac Cube Chair: Horse",
+    "desc": "A chair commemorating the Zodiac Horse! #cRestores 50 HP and 50 MP every 10 seconds.#"
   },
   "3017056": {
     "name": "Lunar New Year Xing Cube Chair",

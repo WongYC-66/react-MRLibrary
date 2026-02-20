@@ -28630,6 +28630,22 @@
       }
     }
   },
+  "2091113": {
+    "info": {
+      "dcBottom": 4,
+      "dcRight": 182,
+      "dcTop": -400,
+      "dcLeft": -144,
+      "script": {
+        "0": {
+          "script": "lnyTroJan"
+        }
+      },
+      "default": {
+        "z": 0
+      }
+    }
+  },
   "2092000": {
     "info": {},
     "say": {

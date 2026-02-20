@@ -3318,10 +3318,7 @@
   "2001002": {
     "name": "Metal Bucket Snowman",
     "n0": "Want to decorate a Maplemas Trees? Come talk to me!",
-    "n1": "Please hurry! There aren't many rooms left.",
-    "location": [
-      1010000
-    ]
+    "n1": "Please hurry! There aren't many rooms left."
   },
   "2001003": {
     "name": "Straw Hat Snowman",
@@ -3364,8 +3361,7 @@
     "n0": "Come talk to me if you want to head back.",
     "n1": "Welcome~!",
     "location": [
-      209000000,
-      910000000
+      209000000
     ]
   },
   "2002001": {
@@ -3374,7 +3370,6 @@
     "n0": "Looking for ornaments? Look no further!",
     "n1": "My ornaments are the best~!",
     "location": [
-      1010000,
       209000000
     ]
   },
@@ -6291,14 +6286,20 @@
     "d0": "I am Wukong, the fastest and the swiftest!",
     "d1": "I am Wukong, the fastest and the swiftest!",
     "n0": "Bored!",
-    "n1": "Anything exciting going on?"
+    "n1": "Anything exciting going on?",
+    "location": [
+      910000000
+    ]
   },
   "2091105": {
     "name": "Sondal",
     "d0": "Are you feeling stiff? A good fight with me will loosen you up.",
     "d1": "Are you feeling stiff? A good fight with me will loosen you up.",
     "n0": "The wind is calm...",
-    "n1": "Ahem..."
+    "n1": "Ahem...",
+    "location": [
+      910000000
+    ]
   },
   "2091107": {
     "name": "Alang",
@@ -6332,11 +6333,7 @@
     "d0": "I want to be the strongest! Doesn't everyone?",
     "d1": "I want to be the strongest! Doesn't everyone?",
     "n0": "Whew...",
-    "n1": "SIGH...",
-    "location": [
-      706041003,
-      706041008
-    ]
+    "n1": "SIGH..."
   },
   "2091111": {
     "name": "Gold Dragon",
@@ -6356,6 +6353,15 @@
     "n1": "Anything special?",
     "location": [
       706041007
+    ]
+  },
+  "2091113": {
+    "d1": "I want to be the strongest! Doesn't everyone?",
+    "d0": "I want to be the strongest! Doesn't everyone?",
+    "name": "Tro-Jan",
+    "location": [
+      706041003,
+      706041008
     ]
   },
   "2091127": {
@@ -8427,7 +8433,7 @@
     ]
   },
   "9000054": {
-    "name": "Ranch Owner  ",
+    "name": "Ranch Owner",
     "s0": "Oh ho ho!",
     "s1": "Hahahahaha!",
     "location": [
@@ -8989,7 +8995,6 @@
     "d0": "Would you like me tell you what my Crystal Ball found out?",
     "d1": "Did you like the story I told you the other day?",
     "location": [
-      100000000,
       104000000,
       230000001,
       550000000,
@@ -10662,7 +10667,8 @@
     "n1": "I know the way to Amoria and can show you!",
     "location": [
       100000000,
-      680000000
+      680000000,
+      910000000
     ]
   },
   "9201023": {
@@ -10727,10 +10733,7 @@
     "n0": "I love to cook, but need ingredients! ",
     "n1": "If you help me, you'll get something delicious!",
     "d0": "I love to cook, but need ingredients! If you help me, you'll get something delicious!",
-    "d1": "Thanks for your help!",
-    "location": [
-      100000000
-    ]
+    "d1": "Thanks for your help!"
   },
   "9201030": {
     "name": "Maple Claws",
@@ -11688,6 +11691,7 @@
     "n0": "Oh, what to do, I have to collect a lot of Dark Tokens to make Baba Yaga happy...what to do...",
     "n1": "Just wait 'til I get my hands on those deplorable cats and frogs.",
     "location": [
+      1010000,
       682000720,
       682000721,
       701000000
@@ -11826,7 +11830,6 @@
     "n1": "Select the present you want.",
     "func": "Santa's Lost Stars",
     "location": [
-      1010000,
       209080100
     ]
   },
@@ -12196,7 +12199,6 @@
     "d0": "Need any help?",
     "d1": "Nobody's sewing skills are on par with mine! Not even close!",
     "location": [
-      1010000,
       209000000
     ]
   },
@@ -12205,10 +12207,7 @@
     "n0": "Breaking News!",
     "n1": "So many events are taking place in Maple world!",
     "d0": "Keep up with world events~",
-    "d1": "So many events are taking place in Maple world!",
-    "location": [
-      100000000
-    ]
+    "d1": "So many events are taking place in Maple world!"
   },
   "9250053": {
     "name": "Christmas Tree",
@@ -14729,10 +14728,7 @@
     "name": "Chocolate"
   },
   "9999802": {
-    "name": "Strawberry",
-    "location": [
-      910000000
-    ]
+    "name": "Strawberry"
   },
   "9999803": {
     "name": "Witch Kitty",

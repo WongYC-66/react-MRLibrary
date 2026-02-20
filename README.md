@@ -250,5 +250,8 @@ png
 ## Log - Dec 25 2025
 1. done - update library to v96.2
 
+## Log - Dec 25 2025
+1. done - update library to v96.3
+
 Next:
 - show path from map to map with graph data stuctrue ?

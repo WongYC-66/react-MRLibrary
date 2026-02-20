@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker-build": "npm run build &&  docker build . -t royals-library",
+    "docker-preview": "docker run -d -p 8080:80 --name royals-library royals-library"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
