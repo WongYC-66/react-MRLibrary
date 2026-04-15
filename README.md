@@ -253,5 +253,9 @@ png
 ## Log - Dec 25 2025
 1. done - update library to v96.3
 
+## Log - Apr 15 2026
+1. done - update library to v96.4
+2. Fix - some typo lightining -> lightning
+
 Next:
 - show path from map to map with graph data stuctrue ?

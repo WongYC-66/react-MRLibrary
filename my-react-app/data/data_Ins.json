@@ -2327,6 +2327,10 @@
     "name": "Do It Again! Chair",
     "desc": "N-no... I don't wanna... \\n#cRestores 100 HP and 100 MP every 10 seconds.#"
   },
+  "3018506": {
+    "name": "Bunny Impostor",
+    "desc": "These bunnies don't yet realize you're not a bunny. Restores 100 HP and 100 MP every 10 seconds."
+  },
   "3018520": {
     "name": "Green Pea",
     "desc": "The green peas look very happy. Restores 100 HP and 100 MP every 10 seconds."

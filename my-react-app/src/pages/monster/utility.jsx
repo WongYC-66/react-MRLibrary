@@ -310,7 +310,7 @@ export const renderImageWithItemIdType = (itemId, itemName, type) => {
 
 export const decodeElemAttr = (elemAttr) => {
     if (!elemAttr || elemAttr === "") return ["weak : none", "strong : none", "immune : none"]
-    const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
+    const elemList = { F: 'Fire', I: 'Ice', L: "Lightning", S: "Poison", H: "Holy" }
     let returnStrArr = elemAttr.match(/.{2}/g).map(x => {
         let element = elemList[x[0]]
         let word = x[1] === "2" ? "Take less damage:"

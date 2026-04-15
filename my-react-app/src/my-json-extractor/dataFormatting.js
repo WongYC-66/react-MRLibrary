@@ -198,7 +198,7 @@ export function MapStatsDataFormatting(inputDataArr) {
 
     inputDataArr.forEach(data => {
         const id = Number(data.id)
-        if(isNaN(id)) return // 'AreaCode'
+        if (isNaN(id)) return // 'AreaCode'
         const mapObj = {}
 
         // map info
@@ -639,7 +639,8 @@ export function NPCLocationFormatting(inputDataArr, inputData) {
             let subLife = life[no]
             if (subLife?.type?._value === 'n') {      // npc
                 let npcId = Number(subLife.id._value)
-                if (!outputData[npcId].location) outputData[npcId].location = []
+                if (!outputData[npcId]) continue
+                if (!outputData[npcId]?.location) outputData[npcId].location = []
                 outputData[npcId].location.push(mapId)
             }
         }

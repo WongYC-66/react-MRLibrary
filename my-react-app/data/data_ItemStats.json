@@ -22613,6 +22613,13 @@
     "sitEmotion": 6,
     "tradeBlock": 1
   },
+  "3018506": {
+    "price": 1,
+    "slotMax": 1,
+    "recoveryHP": 100,
+    "recoveryMP": 100,
+    "notSale": 1
+  },
   "3018520": {
     "price": 1,
     "slotMax": 1,

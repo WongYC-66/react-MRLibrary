@@ -709,7 +709,7 @@ export const translateMobStats = (returnMob) => {
     return returnMob
 }
 
-const elemList = { F: 'Fire', I: 'Ice', L: "Lightining", S: "Poison", H: "Holy" }
+const elemList = { F: 'Fire', I: 'Ice', L: "Lightning", S: "Poison", H: "Holy" }
 
 export const decodeElemAttr = (elemAttr) => {
     let elemRelation = {}
