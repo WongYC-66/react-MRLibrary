@@ -18,6 +18,9 @@ import data_Etc from "../../../data/data_Etc.json"
 import data_ItemStats from "../../../data/data_ItemStats.json"
 import data_Gacha from "../../../data/data_Gacha.json"
 import data_Crafting from "../../../data/data_Crafting.json"
+import data_Quest from "../../../data/data_Quest.json"
+// 
+import { renderNPC } from "../tools/Questline.jsx";
 
 export default function ItemDetail() {
 
@@ -63,12 +66,29 @@ export default function ItemDetail() {
                 obj.craft.isMaterial.push(itemName)
             }
         })
+        // Quests info, add questId to count: [['1003',[['0', 5],['1',10]]], ]         // [questId, [[seq, count]]]
+        obj.quests = []
+        Object.entries(data_Quest).forEach(([questId, questObj]) => {
+            const { Check } = questObj;
+            const noToCountArr = []     // within 1 Quest, has multiple sequence of needing same item ?
+            for (let no in Check) {
+                const items = Check?.[no]?.item
+                if (!items) continue
+                // console.log({ questId, no, items })
+                for (let seq in items) {
+                    const { id, count } = items[seq]
+                    if (id != item_Id) continue
+                    noToCountArr.push([seq, count])
+                }
+            }
+            if (noToCountArr.length) obj.quests.push([questId, noToCountArr])
+        })
 
         setItemInfo(obj)
     }, [])
 
-    const combinedCheck = {...data_Consume, ...data_Ins,...data_Etc,}
-    if(!combinedCheck[item_Id]) throw new Error("No such item id")
+    const combinedCheck = { ...data_Consume, ...data_Ins, ...data_Etc, }
+    if (!combinedCheck[item_Id]) throw new Error("No such item id")
     // console.log(itemInfo)
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
@@ -154,6 +174,11 @@ export default function ItemDetail() {
                                         <Link to={itemNameToCraftLink(itemInfo.name)} className="m-3">Click to see more</Link>
                                     </Tab>
                                 }
+
+                                {/* Quest Tab, showing which quest using this item*/}
+                                <Tab eventKey="Quests" title="Quests">
+                                    {renderRelatedQuests(itemInfo)}
+                                </Tab>
                             </Tabs>
 
                         </div>
@@ -213,4 +238,36 @@ const renderItemStats = (itemInfo) => {
 
 const itemNameToCraftLink = (name) => {
     return `../../craft-table?page=1&search=${name.replaceAll(" ", "%20")}`
+}
+
+
+const renderRelatedQuests = (itemInfo) => {
+    const quests = itemInfo.quests;
+    return (
+        <Table bordered hover className="text-center">
+            <tbody>
+                <tr>
+                    <td>NPC</td>
+                    <td>Quest</td>
+                    <td>Quantity</td>
+                </tr>
+                {quests && quests.map(renderQuestTableRow)}
+            </tbody>
+        </Table>
+    )
+}
+
+const renderQuestTableRow = ([questId, seqNCountArr]) => {
+    const quest = data_Quest[questId];
+    return (
+        <tr key={questId}>
+            <td>{renderNPC(quest.Check[0]?.npc || '')}</td>
+            <td>
+                <Link to={`../../quest/id=${questId}`}>
+                    {quest?.QuestInfo?.name ?? "quest-name-n/a"}
+                </Link>
+            </td>
+            <td>{seqNCountArr[0][1]}</td>
+        </tr>
+    )
 }

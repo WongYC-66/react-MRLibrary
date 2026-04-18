@@ -257,5 +257,9 @@ png
 1. done - update library to v96.4
 2. Fix - some typo lightining -> lightning
 
+## Log - Apr 18 2026
+1. done - enhance Monster/Item detail page with Quest Tab
+2. fix - minlevel of Quest not showing at quest detail page
+
 Next:
 - show path from map to map with graph data stuctrue ?

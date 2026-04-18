@@ -176,9 +176,9 @@ const renderTabByIndex = (questInfo, index) => {
         let obj = questInfo.Check[index]
         for (let k in obj) {
             if (k == 'npc') continue
-            if (obj[k] && typeof obj[k] == 'string') {
+            if (obj[k] && (typeof obj[k] == 'string' || typeof obj[k] == 'number')) {  // as long as not array
                 let propertyName = k
-                if (propertyName == 'lvmin') propertyName = 'level'
+                if (propertyName == 'lvmin') propertyName = 'Level'
                 needed.push({ type: propertyName, count: JSON.stringify(obj[k]) })
                 continue
             }
@@ -330,7 +330,7 @@ const renderReward = (rewards, randomRewards, totalProp) => {
 }
 
 const renderNeeded = (needed) => {
-    // console.log(needed)
+    console.log({ needed })
     return (
         <Accordion defaultActiveKey='0' flush className="my-3">
             <Accordion.Item eventKey="0">

@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
 import data_Mob from "../../../data/data_Mob.json"
+import data_Quest from "../../../data/data_Quest.json"
 // 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -21,7 +22,9 @@ import {
     itemIdToNavUrl,
 } from "./utility.jsx"
 
+// 
 import { convertMapIdToUrl, convertMapIdToName } from '../map/utility.jsx'
+import { renderNPC } from "../tools/Questline.jsx";
 
 export default function MonsterDetail() {
 
@@ -36,7 +39,7 @@ export default function MonsterDetail() {
 
     const numFormatter = num => Number(num).toLocaleString("en-US")
 
-    if(!data_Mob[targetMobId]) throw new Error("No such Mob Id")
+    if (!data_Mob[targetMobId]) throw new Error("No such Mob Id")
     // console.log(mobInfo)
 
     return (
@@ -124,6 +127,11 @@ export default function MonsterDetail() {
                                 {/* Stats Tab */}
                                 <Tab eventKey="Stats" title="Stats">
                                     {renderMobStats(mobInfo)}
+                                </Tab>
+
+                                {/* Quests Tab */}
+                                <Tab eventKey="Quests" title="Quests">
+                                    {renderRelatedQuests(mobInfo)}
                                 </Tab>
 
                             </Tabs>
@@ -264,3 +272,34 @@ const renderMobStats = (mobInfo) => {
     )
 }
 
+
+const renderRelatedQuests = (mobInfo) => {
+    const quests = mobInfo.quests;
+    return (
+        <Table bordered hover className="text-center">
+            <tbody>
+                <tr>
+                    <td>NPC</td>
+                    <td>Quest</td>
+                    <td>Quantity</td>
+                </tr>
+                {quests && quests.map(renderQuestTableRow)}
+            </tbody>
+        </Table>
+    )
+}
+
+const renderQuestTableRow = ([questId, seqNCountArr]) => {
+    const quest = data_Quest[questId];
+    return (
+        <tr key={questId}>
+            <td>{renderNPC(quest.Check[0]?.npc || '')}</td>
+            <td>
+                <Link to={`../../quest/id=${questId}`}>
+                    {quest?.QuestInfo?.name ?? "quest-name-n/a"}
+                </Link>
+            </td>
+            <td>{seqNCountArr[0][1]}</td>
+        </tr>
+    )
+}

@@ -271,7 +271,7 @@ const validQuestId = (questId) => {
     return questId in data_Questline && data_Questline[questId].isHead
 }
 
-const renderNPC = (npcId) => {
+export const renderNPC = (npcId) => {
     const npcName = data_NPC[npcId]?.name || ''
     return <Link to={generateNPCLink(npcId)}>
         {renderImageWithNPCId(npcId)} {npcName}

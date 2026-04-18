@@ -11,6 +11,7 @@ import data_MB_Drops from "../../../data/data_MB_Drops.json"
 import data_MobStats from "../../../data/data_MobStats.json"
 import data_MapMobCount from "../../../data/data_MapMobCount.json"
 import data_MB_Maps from "../../../data/data_MB_Maps.json"
+import data_Quest from "../../../data/data_Quest.json"
 // 
 import data_Map from "../../../data/data_Map.json"
 // 
@@ -37,7 +38,8 @@ export const generateMobInfo = (mobId) => {
         id: mobId,
         name: data_Mob[mobId],
         drops: data_MB_Drops[mobId],
-        spawnMap: getSpawnMap(mobId)
+        spawnMap: getSpawnMap(mobId),
+        quests: getMobRelatedQuest(mobId),
     }
 }
 
@@ -101,7 +103,7 @@ const getSpawnMap = (targetMobId) => {
 }
 
 
-export const filterMobList = ({mobLibrary, searchParams}) => {
+export const filterMobList = ({ mobLibrary, searchParams }) => {
     // const [searchParams] = useSearchParams()
     // if (searchParams.size <= 0) return Object.entries(mobLibrary)  // No filter at first loading or if URL don't have query param 
 
@@ -418,4 +420,23 @@ export const updateSearchResultCount = (number) => {
     if (countEl) countEl.textContent = `found ${number || 0} record${number >= 2 ? "s" : ""}`
 }
 
-/// don touch me
+const getMobRelatedQuest = (mobId) => {
+    // Quests info, add questId to count: [['1003',[['0', 5],['1',10]]], ]         // [questId, [[seq, count]]]
+    const relatedQuests = []
+    Object.entries(data_Quest).forEach(([questId, questObj]) => {
+        const { Check } = questObj;
+        const noToCountArr = []     // within 1 Quest, has multiple sequence of needing same item ?
+        for (let no in Check) {
+            const mobs = Check?.[no]?.mob
+            if (!mobs) continue
+            // console.log({ questId, no, items })
+            for (let seq in mobs) {
+                const { id, count } = mobs[seq]
+                if (id != mobId) continue
+                noToCountArr.push([seq, count])
+            }
+        }
+        if (noToCountArr.length) relatedQuests.push([questId, noToCountArr])
+    })
+    return relatedQuests
+}
