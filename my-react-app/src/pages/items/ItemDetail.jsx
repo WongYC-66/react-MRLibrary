@@ -243,18 +243,22 @@ const itemNameToCraftLink = (name) => {
 
 const renderRelatedQuests = (itemInfo) => {
     const quests = itemInfo.quests;
-    return (
-        <Table bordered hover className="text-center">
-            <tbody>
-                <tr>
-                    <td>NPC</td>
-                    <td>Quest</td>
-                    <td>Quantity</td>
-                </tr>
-                {quests && quests.map(renderQuestTableRow)}
-            </tbody>
-        </Table>
-    )
+    const hasQuests = quests && quests.length
+    return (<>
+        {hasQuests
+            ? < Table bordered hover className="text-center" >
+                <tbody>
+                    <tr>
+                        <td>NPC</td>
+                        <td>Quest</td>
+                        <td>Quantity</td>
+                    </tr>
+                    {quests && quests.map(renderQuestTableRow)}
+                </tbody>
+            </Table >
+            : <p>No related quest.</p>
+        }
+    </>)
 }
 
 const renderQuestTableRow = ([questId, seqNCountArr]) => {

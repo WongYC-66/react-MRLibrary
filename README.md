@@ -260,6 +260,11 @@ png
 ## Log - Apr 18 2026
 1. done - enhance Monster/Item detail page with Quest Tab
 2. fix - minlevel of Quest not showing at quest detail page
+ 
+## Log - Apr 20 2026
+1. done - enhance Equip detail page with Quest Tab
+2. UI - hide the table if no quest
+
 
 Next:
 - show path from map to map with graph data stuctrue ?
