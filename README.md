@@ -265,6 +265,8 @@ png
 1. done - enhance Equip detail page with Quest Tab
 2. UI - hide the table if no quest
 
+## Log - May 8 2026
+1. done - update library to v96.5
 
 Next:
 - show path from map to map with graph data stuctrue ?
