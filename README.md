@@ -268,5 +268,8 @@ png
 ## Log - May 8 2026
 1. done - update library to v96.5
 
+## Log - May 10 2026
+1. done - update library to v96.6
+
 Next:
 - show path from map to map with graph data stuctrue ?
