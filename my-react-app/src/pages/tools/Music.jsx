@@ -319,9 +319,9 @@ const loadPlaylistFromLocalStorage = () => {
     // default
     let playlist = JSON.parse(localStorage.getItem("playlist") ?? "[]")
     if (!playlist.length) {
-        // if no previous payload, populate with my default favorite :)
-        playlist = [
-            "Badguys.mp3",
+        // if no previous playlist or is empty, populate with my default favorite :)
+        return [
+            "BadGuys.mp3",
             "AboveTheTreetops.mp3",
         ]
     }
