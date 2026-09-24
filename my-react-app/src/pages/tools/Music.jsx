@@ -15,9 +15,7 @@ export default function Music() {
     const [previewOST, setPreviewOST] = useState('')
 
     // playlist & playlist-player states
-    const [playlist, setPlaylist] = useState([
-        "AbandonedMine.mp3", "AcientForest.mp3", "amoria.mp3", "Anniv1.mp3", "Ariant.mp3"
-    ])
+    const [playlist, setPlaylist] = useState(loadPlaylistFromLocalStorage())
     const [showPlayer, setShowPlayer] = useState(false);    // flag of whether to show
     const [loopPlaylist, setLoopPlalist] = useState(false)  // flag of whether to loop
     const [play, setPlay] = useState(false)                 // flag of whether to start/pause current playlist player
@@ -126,9 +124,12 @@ export default function Music() {
         setPlayIdx(nextIdx)
     }
 
+
     const OST_SOURCE_URL = "https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/"
     const PREVIEW_OST_URL = `${OST_SOURCE_URL}${previewOST}`        // e.g. "https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/amoria.mp3"
     const PLAYLIST_OST_URL = `${OST_SOURCE_URL}${playlist[playIdx]}`         // e.g. "https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/amoria.mp3"
+
+    savePlaylistToLocalStorage(playlist)
 
     return (
         <div className="music d-flex flex-column flex-md-row p-3 gap-3">
@@ -313,3 +314,20 @@ const renderTooltip = (props, text) => (
         {text}
     </Tooltip>
 );
+
+const loadPlaylistFromLocalStorage = () => {
+    // default
+    let playlist = JSON.parse(localStorage.getItem("playlist") ?? "[]")
+    if (!playlist.length) {
+        // if no previous payload, populate with my default favorite :)
+        playlist = [
+            "Badguys.mp3",
+            "AboveTheTreetops.mp3",
+        ]
+    }
+    return playlist
+}
+
+const savePlaylistToLocalStorage = (playlist) => {
+    localStorage.setItem("playlist", JSON.stringify(playlist))
+}
