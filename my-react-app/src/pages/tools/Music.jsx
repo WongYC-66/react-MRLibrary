@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 // 
+import { DragDropProvider } from '@dnd-kit/react';
+import { useSortable, isSortable } from '@dnd-kit/react/sortable';
 import Button from 'react-bootstrap/Button';
 import FormBS from "react-bootstrap/Form";
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -123,6 +125,26 @@ export default function Music() {
         setPlayIdx(nextIdx)
     }
 
+    const handleDragEnd = ({ operation }) => {
+        // https://dndkit.com/react/guides/sortable-state-management/
+        const { source } = operation;
+
+        if (!source) return;
+
+        const oldIndex = source.initialIndex;
+        const newIndex = source.index;
+
+        setPlaylist(items => {
+            const newPlaylist = [...items];
+
+            const [moved] = newPlaylist.splice(oldIndex, 1);
+            newPlaylist.splice(newIndex, 0, moved);
+
+            return newPlaylist;
+        });
+
+        setPlayIdx(0)   // reset to first song in the list
+    };
 
     const OST_SOURCE_URL = "https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/"
     const PREVIEW_OST_URL = `${OST_SOURCE_URL}${previewOST}`        // e.g. "https://github.com/scotty66f/mapleroyals_library_related/raw/refs/heads/main/audio/amoria.mp3"
@@ -229,29 +251,33 @@ export default function Music() {
                 </div>
 
                 {/* Playlist */}
-                <ListGroup variant="flush" className="mt-3" style={{ maxHeight: '60vh', overflowY: 'auto' }}>
-                    {playlist.map((ost, idx) => {
-                        let name = ost.replace(".mp3", "")
-                        {/* playlist - row item */ }
-                        return <ListGroup.Item key={ost} className="d-flex align-items-center justify-content-between m-1 py-2 border rounded-2 gap-3">
+                <DragDropProvider onDragEnd={handleDragEnd}>
+                    <ListGroup variant="flush" className="mt-3" style={{ maxHeight: '60vh', overflowY: 'auto' }}>
+                        {playlist.map((ost, idx) => {
+                            let name = ost.replace(".mp3", "")
+                            {/* playlist - row item */ }
+                            return <Sortable key={ost} id={ost} index={idx} >
+                                <ListGroup.Item key={ost} className="d-flex align-items-center justify-content-between m-1 py-2 border rounded-2 gap-3">
 
-                            {/* row - left */}
-                            <div className="d-flex align-items-center gap-3">
-                                <img className="rounded-1" style={{ height: '40px' }} src={`https://ui-avatars.com/api/?name=${name}&background=random`}></img>
-                                {name}
-                            </div>
+                                    {/* row - left */}
+                                    <div className="d-flex align-items-center gap-3">
+                                        <img className="rounded-1" style={{ height: '40px' }} src={`https://ui-avatars.com/api/?name=${name}&background=random`}></img>
+                                        {name}
+                                    </div>
 
-                            {/* row - right */}
-                            <div>
-                                {/* X button */}
-                                <IconToolTip text={"Remove"}>
-                                    <Button variant="outline-light" onClick={() => removeFromPlaylist(idx)}><i className="bi bi-trash"></i></Button>
-                                </IconToolTip>
-                            </div>
+                                    {/* row - right */}
+                                    <div>
+                                        {/* X button */}
+                                        <IconToolTip text={"Remove"}>
+                                            <Button variant="outline-light" onClick={() => removeFromPlaylist(idx)}><i className="bi bi-trash"></i></Button>
+                                        </IconToolTip>
+                                    </div>
 
-                        </ListGroup.Item >
-                    })}
-                </ListGroup>
+                                </ListGroup.Item >
+                            </Sortable>
+                        })}
+                    </ListGroup>
+                </DragDropProvider>
             </div>
 
 
@@ -315,4 +341,14 @@ const loadPlaylistFromLocalStorage = () => {
 
 const savePlaylistToLocalStorage = (playlist) => {
     localStorage.setItem("playlist", JSON.stringify(playlist))
+}
+
+function Sortable({ id, index, children }) {
+    const { ref } = useSortable({ id, index });
+
+    return (
+        <div ref={ref}>
+            {children}
+        </div>
+    );
 }
