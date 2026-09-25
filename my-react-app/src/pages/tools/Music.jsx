@@ -4,10 +4,9 @@ import Button from 'react-bootstrap/Button';
 import FormBS from "react-bootstrap/Form";
 import ListGroup from 'react-bootstrap/ListGroup';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
 // 
 import data_Music from "../../../data/data_Music.json";
+import IconToolTip from "../../components/ToolTip";
 
 export default function Music() {
     // search & preview OST states
@@ -300,20 +299,6 @@ export default function Music() {
         </div>
     )
 }
-
-function IconToolTip({ text, children }) {
-    return (
-        <OverlayTrigger placement="top" delay={{ show: 350, hide: 400 }} overlay={(props) => renderTooltip(props, text)}>
-            {children}
-        </OverlayTrigger>
-    )
-}
-
-const renderTooltip = (props, text) => (
-    <Tooltip {...props}>
-        {text}
-    </Tooltip>
-);
 
 const loadPlaylistFromLocalStorage = () => {
     // default
