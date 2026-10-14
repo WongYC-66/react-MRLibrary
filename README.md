@@ -271,5 +271,13 @@ png
 ## Log - May 10 2026
 1. done - update library to v96.6
 
+## Log - Sept 24 2026
+1. done - Revamp Music page into playlist player style
+
+## Log - Oct 14 2026
+1. done - Implement Drag to Sort at music page
+2. done - OST categorized and searchable via category
+3. done - Import/Export playlist feature
+
 Next:
 - show path from map to map with graph data stuctrue ?
